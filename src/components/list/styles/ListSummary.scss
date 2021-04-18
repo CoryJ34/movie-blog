@@ -1,0 +1,18 @@
+.list-summary {
+    margin: 10px;
+    padding: 10px;
+    border: solid 1px #555;
+    box-shadow: 4px 4px 16px #111;
+
+    .header {
+        font-size: 22px;
+        border-bottom: solid 1px #333;
+        padding-bottom: 4px;
+        margin-bottom: 8px;
+    }
+
+    .category {
+        margin-right: 10px;
+        margin-top: 8px;
+    }
+}

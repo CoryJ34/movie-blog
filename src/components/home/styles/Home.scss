@@ -1,0 +1,141 @@
+.home {
+  .home-background {
+    height: calc(100vh);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url("https://einysrentals.files.wordpress.com/2020/08/img_20200725_231634.jpg");
+    filter: blur(6px);
+  }
+
+  .home-content {
+    position: absolute;
+    color: white;
+    font-weight: bold;
+    // border: 3px solid #f1f1f1;
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    z-index: 2;
+    width: calc(100% - 40px);
+    padding: 20px;
+    max-height: calc(100vh - 60px);
+    overflow: hidden;
+    overflow-y: auto;
+  }
+
+  a {
+    color: white;
+    display: block;
+  }
+
+  .previews {
+    // width: 1200px;
+    // margin: 0 auto;
+
+    .preview {
+      display: inline-block;
+      cursor: pointer;
+      height: 160px;
+      width: 200px;
+      margin: 20px;
+
+      &:hover {
+        filter: brightness(1.25);
+      }
+
+      img {
+        height: 100%;
+        width: 100%;
+      }
+    }
+  }
+
+  .section-header {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+
+  .featured {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: flex;
+
+    .featured-card {
+      &.halloween_2020 {
+        background: linear-gradient(
+          to bottom,
+          rgb(221, 110, 31) 20%,
+          rgb(131, 64, 15) 100%
+        );
+      }
+
+      &.march_madness {
+        background: linear-gradient(
+          to bottom,
+          rgb(65, 34, 148) 20%,
+          rgb(35, 19, 77) 100%
+        );
+      }
+
+      &.genres {
+        background: linear-gradient(
+          to bottom,
+          #6a6a6e 20%,
+          #4a4a4e 100%
+        );
+      }
+
+      &.randomizer {
+        background: linear-gradient(
+          to bottom,
+          #703869 20%,
+          #501849 100%
+        );
+      }
+
+      &.gamera {
+        background: linear-gradient(
+          to bottom,
+          #2a9441 20%,
+          #0a7421 100%
+        );
+      }
+
+      &.nov_dec_2020 {
+        background: linear-gradient(
+          to bottom,
+          #194a81 20%,
+          #092a61 100%
+        );
+      }
+
+      &:hover {
+        filter: brightness(1.25);
+      }
+    }
+
+    a {
+      height: 160px;
+      width: 200px;
+    //   border: solid 1px #333;
+      border-radius: 3px;
+      margin: 20px;
+      text-align: center;
+      background-color: #335;
+      text-decoration: none;
+    }
+
+    .featured-preview {
+      margin-top: 10px;
+      font-size: 20px;
+    }
+
+    .date {
+      font-weight: 100;
+      font-size: 14px;
+      margin-top: 10px;
+      opacity: 0.7;
+    }
+  }
+}

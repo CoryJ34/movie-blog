@@ -1,0 +1,62 @@
+.bracket-container {
+    display: flex;
+
+    .bracket-round {
+        margin-right: 20px;
+
+        .round-title {
+            text-align: center;
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+    }
+
+    .bracket-matchup {
+        // margin-bottom: 20px;
+        cursor: pointer;
+
+        &.championship {
+            border: solid 2px rgb(201, 224, 119);
+            border-radius: 3px;
+            padding: 14px;
+            background: #134;
+        }
+
+        &:hover {
+            filter: brightness(1.25);
+        }
+    }
+
+    .team {
+        border: solid 3px #888;
+        filter: brightness(0.4);
+        overflow: hidden;
+
+        img {
+            width: 140px;
+        }
+
+        &.winner {
+            border: solid 3px #ffffff;
+            filter: brightness(1);
+        }
+    }
+}
+
+.MuiPaper-root {
+    .img-container {
+        filter: brightness(0.25);
+        background-color: #242022;
+    }
+
+    .bracket-blurb {
+        position: absolute;
+        border: none;
+        background: transparent;
+        color: white;
+        padding: 20px;
+        font-size: 18px;
+        font-weight: 300;
+        text-shadow: 1px 1px #111;
+    }
+}
