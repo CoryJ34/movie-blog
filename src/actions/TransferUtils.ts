@@ -1,3 +1,4 @@
+import { CATEGORIES } from "../common/constants";
 import { Movie } from "../models/Movie";
 import TitleBreakout from "../models/TitleBreakout";
 
@@ -34,7 +35,7 @@ export const breakoutTitleYearAndCategory = (rawTitle: string): TitleBreakout | 
         return {
             title: titleAndYear[0], 
             year: titleAndYear[1], 
-            category: 'Halloween 2020', 
+            category: CATEGORIES.HALLOWEEN_2020, 
             categoryCls: 'halloween_2020', 
             subCategory: week,
             order: num
@@ -48,7 +49,7 @@ export const breakoutTitleYearAndCategory = (rawTitle: string): TitleBreakout | 
         return {
             title: titleAndYear[0], 
             year: titleAndYear[1], 
-            category: 'Nov/Dec 2020', 
+            category: CATEGORIES.NOV_DEC_2020, 
             categoryCls: 'nov_dec_2020', 
             subCategory: parts[0].trim(),
             order: parts[1].trim()
@@ -61,7 +62,7 @@ export const breakoutTitleYearAndCategory = (rawTitle: string): TitleBreakout | 
         return {
             title: titleAndYear[0], 
             year: titleAndYear[1], 
-            category: 'Gamera', 
+            category: CATEGORIES.GAMERA, 
             categoryCls: 'gamera'
         };
     }
@@ -73,7 +74,7 @@ export const breakoutTitleYearAndCategory = (rawTitle: string): TitleBreakout | 
         return {
             title: titleAndYear[0], 
             year: titleAndYear[1], 
-            category: 'Randomizer', 
+            category: CATEGORIES.RANDOMIZER, 
             categoryCls: 'randomizer',
             order: parts[0].split('#')[1]
         };
@@ -86,7 +87,7 @@ export const breakoutTitleYearAndCategory = (rawTitle: string): TitleBreakout | 
         return {
             title: titleAndYear[0], 
             year: titleAndYear[1], 
-            category: 'March Madness', 
+            category: CATEGORIES.MARCH_MADNESS, 
             categoryCls: 'march_madness',
             order: parts[0].split('#')[1]
         };
@@ -101,10 +102,23 @@ export const breakoutTitleYearAndCategory = (rawTitle: string): TitleBreakout | 
         return {
             title: titleAndYear[0], 
             year: titleAndYear[1], 
-            category: 'Genres', 
+            category: CATEGORIES.GENRES, 
             categoryCls: 'genres', 
             subCategory: subParts[0].trim(),
             order: subParts[1].trim()
+        };
+    }
+    else if(rawTitle.indexOf('[Horror] Finish the Series') === 0) {
+        // [Horror] Finish the Series
+        const parts = rawTitle.split('–');
+        const titleAndYear = extractTitleAndYear(parts[1].trim());
+
+        return {
+            title: titleAndYear[0], 
+            year: titleAndYear[1], 
+            category: CATEGORIES.FINISH_THE_SERIES_HORROR, 
+            categoryCls: 'finish_the_series_horror',
+            order: parts[0].split('#')[1]
         };
     }
 

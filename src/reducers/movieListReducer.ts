@@ -3,7 +3,7 @@ import {
   extractRating,
 } from "../actions/TransferUtils";
 import { Movie } from "../models/Movie";
-import testData from "../test-data";
+import testData from "../data/test-data";
 
 const initialState: any = {};
 

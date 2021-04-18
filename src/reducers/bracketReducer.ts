@@ -1,4 +1,4 @@
-import mmData from "../march-madness-data";
+import mmData from "../data/march-madness-data";
 
 const initialState: any = {};
 

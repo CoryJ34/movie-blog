@@ -51,6 +51,7 @@ function App(props: Props) {
 
   const gameraMovies = movies.filter(m => m.titleBreakout.category === CATEGORIES.GAMERA).reverse();
   const randomizerMovies = movies.filter(m => m.titleBreakout.category === CATEGORIES.RANDOMIZER).reverse();
+  const finishTheSeriesHorrorMovies = movies.filter(m => m.titleBreakout.category === CATEGORIES.FINISH_THE_SERIES_HORROR).reverse();
 
   return (
     <div className="App">
@@ -109,6 +110,18 @@ function App(props: Props) {
               category={CATEGORIES.GENRES}
               movies={movies}
               openDetail={openDetail}
+            />
+          </Route>
+          <Route path="/finishtheserieshorror">
+            <MovieList
+              movies={finishTheSeriesHorrorMovies}
+              filteredMovies={finishTheSeriesHorrorMovies}
+              currentFilter={currentFilter}
+              filterByCategory={filterByCategory}
+              resetFilter={resetFilter}
+              sort={sort}
+              openDetail={openDetail}
+              disableFiltering={true}
             />
           </Route>
           <Route>

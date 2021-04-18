@@ -110,6 +110,14 @@
         );
       }
 
+      &.finish_the_series_horror {
+        background: linear-gradient(
+          to bottom,
+          #6a047c 20%,
+          #4a005c 100%
+        );
+      }
+
       &:hover {
         filter: brightness(1.25);
       }

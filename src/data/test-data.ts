@@ -1,8 +1,44 @@
 const data = [
   {
-    "img": "https://einysrentals.files.wordpress.com/2021/04/pxl_20210410_124723771.mp_.jpg?w=800&h=600&crop=1",
-    "title": "Genres – Heavy Drama #5 – Marriage Story (2019)",
-    "content": [
+    img:
+      "https://einysrentals.files.wordpress.com/2021/04/pxl_20210414_155744475.mp_.jpg?w=800&h=600&crop=1",
+    title:
+      "[Horror] Finish the Series #3 – Abbott and Costello Meet the Mummy (1955)",
+    content: [
+      "I don’t mean to Mummy-shame, but this is probably the worst-looking Mummy costume I’ve seen in.. anything.  Now, I don’t know if this is “officially” part of <strong>The Mummy</strong> series, but it’s included in the Universal Classic Monsters collection so that’s official enough for this guy.  The movie is about what I expected.. some goofy comedy with the backdrop of a Universal horror movie.  Some of the comedy bits fall a bit flat, like the medallion in the burger thing.  But in general, it’s enjoyable watching the duo, even when the comedy doesn’t work so well.  I am guessing they couldn’t use the name “Kharis” because everyone kept saying “Klaris”?  At least.. that’s what my earballs heard.  Anyway, it’s goofy but a bit charming and I’d watch it over most of the other Mummy movies in the series",
+      "6.5/10",
+      "I guess I can sum up my thoughts per “finished series” as I finish them.  As I said in another post, <strong>The Mummy</strong> series isn’t super high on my list of Universal horror franchises.  I’m much more of a dark castle, laboratory, small European village type of guy than a bright, hot Egyptian city guy.  Although the monster does (usually) look creepy, everything else about the movies just don’t quite do it for me.  But it’s ok, there is still some fun to be had in the series, even for me. ",
+    ],
+    date: "April 17, 2021",
+    id: 173,
+  },
+  {
+    img:
+      "https://einysrentals.files.wordpress.com/2021/04/pxl_20210414_155728861.mp_.jpg?w=800&h=600&crop=1",
+    title: "[Horror] Finish the Series #2 – The Mummy’s Curse (1944)",
+    content: [
+      "More Mummy.  I actually must have already randomly watched <strong>The Mummy’s Ghost (1944)</strong> some time ago (I keep track of what I’ve watched using Letterboxd), so I skipped it and went straight to Curse.  I feel this movie is a little more exciting than <strong>The Mummy’s Tomb</strong>, but not much.  It’s fairly outdated with some of its characters, but I guess that’s just a sign of the times..  The plot is pretty simple, two men are looking for the remains of the mummy, a girl awakens with no memory and in a daze, saying hte name Kharis and, of course, this mummy is looking for her too.  The mummy slowly shuffles, the people stand and scream.. it’s more of what you expect.  I feel similar to how I did when watching the <strong>Gamera</strong> series back-to-back.. it’s almost impossible to tell many of them apart and I don’t think they are meant to be watched in that way because, if you’ve seen one, you’ve seen most of them.  I cut the Universal horror movies a little slack due to their age, but I still can’t say these are must-watch movies.",
+      "6/10",
+    ],
+    date: "April 16, 2021",
+    id: 172,
+  },
+  {
+    img:
+      "https://einysrentals.files.wordpress.com/2021/04/pxl_20210414_155707602.jpg?w=800&h=600&crop=1",
+    title: "[Horror] Finish the Series #1 – The Mummy’s Tomb (1942)",
+    content: [
+      "And onto another watchlist.  To start, I’m finishing the original Universal Mummy series.  Let me start by saying that, as far as Universal monsters go, the Mummy character never really interested me, but I’m not sure why.. Dracula has the most charismatic monster, Frankenstein has the most sympathetic monster, the Wolfman has the most tragic monster, the Invisible Man has the most interesting premise.  After that, the Phantom, the Creature and the Mummy are just kind of… whatever to me.  <strong>The Mummy (1932)</strong> was one I watched a while ago, but my main memory was that it was just a little too slow and boring.  I will say that the Mummy is the coolest/creepiest-looking monster of the group, but I feel he is never used in a scary enough way.. maybe because, by nature, he is sooo slow.  The Mummy’s Tomb is really more of the same.. you have a villainous human who is trying to capture this girl for some ancient marriage ceremony or something to continue this mummy’s legacy blah blah.  So the mummy creature takes a bit of a backseat, although the main villain is still done pretty well.  Outside of that, if you’ve seen one Mummy movie, you’ve seen this one so it’s fine.  I know I liked it better than <strong>The Mummy’s Hand (1940)</strong>, which I recall having some C-rate Abbott and Costello duo.  This was just ok for me, but not the worst in the series.",
+      "6/10",
+    ],
+    date: "April 14, 2021",
+    id: 171,
+  },
+  {
+    img:
+      "https://einysrentals.files.wordpress.com/2021/04/pxl_20210410_124723771.mp_.jpg?w=800&h=600&crop=1",
+    title: "Genres – Heavy Drama #5 – Marriage Story (2019)",
+    content: [
       "On one hand, this is the “least” heavy drama of this category because it has some humor here and there, but on the other hand, it feels the heaviest.  I guess because it’s a more relatable situation, time and place for someone like me.  Every other drama I watched this time around was some period piece, mostly outside the US, so while I can appreciate the drama, it’s hard to put myself in those shoes.  Marriage Story is purely a personal drama about marriage, divorce, parenthood and custody.  It feels the most “real life” to me.. just normal people in normal circumstances.  The movie is smaller in scope and focuses entirely on the two main characters and it seems like watching a play (or maybe I just felt that due to them being a play director/actress).  It makes me think of <strong>Whiplash (2014)</strong> in a way.. the kind of movie that I’d rewatch just to enjoy the performances and the natural progression of the story.  Knowing <em>what</em> happens in these movies is fine to focus on the first watch, but after that, just rewatching for <em>how</em> it happens makes it worth revisiting.  Summing it all up.. really great acting, really good realistic portrayal of “normal” life, really good writing.",
       "9/10",
       "Heavy dramas are over and.. the watchlist is over!  Where does the time go…",
@@ -10,49 +46,57 @@ const data = [
       "Anyway.. that’s all for this genre and the genres overall.  Time to summarize it all and then start thinking about a new playlist.",
     ],
     date: "April 10, 2021",
-    id: 170
+    id: 170,
   },
   {
-    "img": "https://einysrentals.files.wordpress.com/2021/04/pxl_20210410_124637244.jpg?w=400&h=300&crop=1",
-    "title": "Genres – Heavy Drama #4 – Roma (2018)",
-    "content": [
+    img:
+      "https://einysrentals.files.wordpress.com/2021/04/pxl_20210410_124637244.jpg?w=400&h=300&crop=1",
+    title: "Genres – Heavy Drama #4 – Roma (2018)",
+    content: [
       "I remember hearing a lot of hype about this one.. mainly that a lot of people thought this should have been the 2018 Best Picture winner.  Although I’ve owned the movie for maybe a year, I just never felt in the “mood” for this style of movie, despite it having that hype.  It can be hard to sit down for 2 hr 15 min black and white foreign-language film.. I know, I know.. I’m weak.  It’s not to say I don’t like those, it’s just an investment.  Finally sitting down to watch it, I did find it very engaging and a little “hypnotic” in how slow the camera moved.  The movie is kind of one of those “slice of life” type movies where it’s really just about a time/place and someone’s experience in that time.. where the story and actions are less important.  The main character is a maid for a family in Mexico in the early 1970s.  Once I got used to the pace and the idea that not a lot “happens” (in terms of specific actions), I started to enjoy it better.  Visually, the movie is great… but.. I can’t help but wonder what it would look like in color.  Yeah, I’m one of those people.  Not anti-black&amp;white movies.. I just imagine this era would have had some really vibrant and distinct colors.  And some long-lasting shots must have taken forever to get right.  Also, this is another movie where the sound is really natural, no soundtrack over the top to try to heighten the drama.  Overall, I struggled a little with the pacing and got a little tired of seeing this family.. but I definitely can recognize how impressive the filmmaking is and I did enjoy it in the end.",
       "8.5/10",
     ],
     date: "April 10, 2021",
-    id: 169
+    id: 169,
   },
   {
-    "img": "https://einysrentals.files.wordpress.com/2021/04/pxl_20210408_144612807.mp_.jpg?w=800&h=600&crop=1",
-    "title": "Genres – Heavy Drama #3 – Hotel Rwanda (2004)",
-    "content": [
+    img:
+      "https://einysrentals.files.wordpress.com/2021/04/pxl_20210408_144612807.mp_.jpg?w=800&h=600&crop=1",
+    title: "Genres – Heavy Drama #3 – Hotel Rwanda (2004)",
+    content: [
       "So far the theme of this week is people’s cruelty to other people.. very uplifting.  This one hits a little harder given that it’s based on actual events.  The way the movie plays out is very straight.. not a lot of overdramatics or music to evoke emotion, just the events as they happen, so that makes it feel a little more brutal.  The premise is based on a real life hotel manager in Rwanda who gets caught up in the genocide and risks his own life (and money) to protect others.  It’s a little like <strong>Schindler’s List (1993)</strong> in some ways, but here, the main character is caught up in the chaos and confusion himself.  One thing I like in movies is when they capture an “as it happens” type thing.  For example (completely different movie..), <strong>Night of the Living Dead (1968)</strong> has that.  Maybe my favorite thing about that movie is that the viewer is watching everything go down as the characters are.. learning about things from the radio, from stories from other people, etc.   This movie has that to a degree and that makes it more interesting to me.  Overall, it’s a good movie, but I don’t know if it’s one that I’d go back and watch repeatedly just because of it’s depressing tone.",
-      "8/10"],
+      "8/10",
+    ],
     date: "April 9, 2021",
-    id: 168
+    id: 168,
   },
   {
-    "img": "https://einysrentals.files.wordpress.com/2021/04/pxl_20210408_144505248.jpg?w=800&h=600&crop=1",
-    "title": "Genres – Heavy Drama #2 – The Color Purple (1985)",
-    "content": [
+    img:
+      "https://einysrentals.files.wordpress.com/2021/04/pxl_20210408_144505248.jpg?w=800&h=600&crop=1",
+    title: "Genres – Heavy Drama #2 – The Color Purple (1985)",
+    content: [
       "Not as dark in tone as <strong>The Elephant Man</strong>, but it goes to some darker places.  I think the movie was pretty well-done, especially the acting.  I can’t say I’m too familiar with Whoopi Goldberg’s film roles (outside of the <strong>Sister Act</strong> movies) and less familiar with Oprah’s roles, but they were both really good in this.  Danny Glover was a bastard man.  Anyway, the movie’s story is not so well-structured for me.  It really just follows one character as she grows up in a household where she faces and witnesses racism, sexism, abuse, but also bonds with other girls.  From what I’ve read about the responses to this movie, a lot of people feel like it was Steven Spielberg Oscar-baiting hard.  I can kind of get that.. it’s a delicate subject matter and should evoke some strong emotions and that’s usually what gets those Oscar votes.  The difference is when it feels like the goal is to get Oscar attention vs to tell the story.  It’s hard to say if he is veering towards the former here, but there is a little bit of a “sugary” feel to the storytelling, style, music.. but anyway, it’s still good, but I wonder if the story could have been told in a “stronger” way to really emphasize the bad so that the good stands out more.  But I’m no filmmaker, just a filmwatcher.",
-      "7.5/10"],
+      "7.5/10",
+    ],
     date: "April 8, 2021",
-    id: 167
+    id: 167,
   },
   {
-    "img": "https://einysrentals.files.wordpress.com/2021/04/pxl_20210405_232637780.jpg?w=800&h=600&crop=1",
-    "title": "Genres – Heavy Drama #1 – The Elephant Man (1980)",
-    "content": [
+    img:
+      "https://einysrentals.files.wordpress.com/2021/04/pxl_20210405_232637780.jpg?w=800&h=600&crop=1",
+    title: "Genres – Heavy Drama #1 – The Elephant Man (1980)",
+    content: [
       "Oo all them crazy elephant bones.  Anyway, this is the start of the “Heavy Drama” week and this one is already pretty depressing.  Although, it does have its moments of hope and beauty and I guess that’s supposed to be the takeaway.  The Elephant Man was a real person, John Merrick, who had some pretty severe deformities.  I don’t know much else about his life, so I have no idea if much of this movie is based on truth.  Either way, it’s a pretty brutal look at how society treats those who are different.  From the start, you already sympathize with John, so seeing him treated like a freak already gets you upset.  It’s got a good cast and is directed by David Lynch, although this is probably the most “straight” David Lynch thing I’ve seen.  It has some surreal moments but otherwise it’s a pretty straightforward drama.  It’s a little too stark sometimes which kind of dimmed my enjoyment, but it’s still a solid movie.",
-      "7.5/10"],
+      "7.5/10",
+    ],
     date: "April 5, 2021",
-    id: 166
+    id: 166,
   },
   {
-    "img": "https://einysrentals.files.wordpress.com/2021/04/pxl_20210403_131648461.jpg?w=800&h=600&crop=1",
-    "title": "Genres – Classic Action #5 – The Fugitive (1993)",
-    "content": [
+    img:
+      "https://einysrentals.files.wordpress.com/2021/04/pxl_20210403_131648461.jpg?w=800&h=600&crop=1",
+    title: "Genres – Classic Action #5 – The Fugitive (1993)",
+    content: [
       "I’m a broken record, but I feel like I know this movie because of the references in other media, mainly The Simpsons.  Milhouse jumping from the tunnel, Homer escaping the police truck.  The actual movie is interesting, though.  The part that appeals to me the most is the “survival” aspect.  He has nothing but has to find the means to survive and escape, so as a viewer, you get that tension.  Of course, the movie probably wouldn’t be as well-remembered if it didn’t have Harrison Ford and Tommy Lee Jones as the leads.  It’s really a simple premise: a man is convicted of murdering his wife, but he didn’t do it.. he is imprisoned but gets an opportunity to escape the prison bus so he does and then works to prove his innocence, but while being pursued by a federal marshal.  Gets right to the point, I like it.  My main complaint is the length of the movie… 2 hr 10 min is quite a bit for this premise.  While it’s good, I think some things could have been condensed or cut to make it just a little tighter and move along better.  But I’m no movie critic, what do I know.  Still a good movie despite my complaint.",
       "7.5/10",
       "Classic action is done and here are the final thoughts:",
@@ -60,17 +104,18 @@ const data = [
       "One more round to go and it’s Heavy Drama.  This might take longer to get through than the others because dramas tend to be long and these heavier ones demand a little investment.  But there should be some really good, award-worthy (and award-winning?) films in there",
     ],
     date: "April 4, 2021",
-    id: 165
+    id: 165,
   },
   {
-    "img": "https://einysrentals.files.wordpress.com/2021/04/pxl_20210403_131620618.mp_.jpg?w=800&h=600&crop=1",
-    "title": "Genres – Classic Action #4 – Lethal Weapon (1987)",
-    "content": [
+    img:
+      "https://einysrentals.files.wordpress.com/2021/04/pxl_20210403_131620618.mp_.jpg?w=800&h=600&crop=1",
+    title: "Genres – Classic Action #4 – Lethal Weapon (1987)",
+    content: [
       "Another movie that’s I’ve surprisingly not seen.  I have seen <strong>National Lampoon’s Loaded Weapon 1 (1993)</strong> several times and I’ve seen It’s Always Sunny in Philadelphia’s “Lethal Weapon” movies… so I had a good idea of what this was all about.  Reliable, straight-edge cop is paired up with an unstable, unorthodox cop and they work together to take down some criminal organization.  This is one I always associated with <strong>Die Hard (1988)</strong> because of the time it was released as well as having several sequels through the late 80s and 90s.  They even both have Christmas backdrops.  So going into it with everything I already knew, there wasn’t too much in the way of surprises, but it’s an enjoyable movie, mainly because of the relationship between the two main characters.  I guess this is THE buddy cop movie, just like <strong>Dirty Harry</strong> is THE loose cannon movie.  Good acting by the leads, but the overall story feels a little “typical”.. maybe it’s just been emulated too much since, so it doesn’t stand out anymore.  But I think a Lethal Weapon + Die Hard Christmas double feature would be someday..",
-      "7.5/10"
+      "7.5/10",
     ],
     date: "April 4, 2021",
-    id: 164
+    id: 164,
   },
   {
     img:
