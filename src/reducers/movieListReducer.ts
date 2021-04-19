@@ -4,6 +4,7 @@ import {
 } from "../actions/TransferUtils";
 import { Movie } from "../models/Movie";
 import testData from "../data/test-data";
+import categoryMeta from '../data/category-meta';
 
 const initialState: any = {};
 
@@ -19,6 +20,7 @@ export default function movieListReducer(state = initialState, action: any) {
             titleBreakout: breakoutTitleYearAndCategory(original.title),
           };
         }),
+        categoryMeta
       };
     }
     case "movies/filterByCategory": {

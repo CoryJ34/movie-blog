@@ -159,7 +159,6 @@ const Bracket = (props: Props) => {
 
   return (
     <div className="bracket-container">
-      {/* {bracketData.rounds.map((round) => renderRound(movies, round))} */}
       {renderRoundRecur(movies, bracketData.rounds, 0)}
       <Dialog
         open={blurbOpen}

@@ -12,10 +12,10 @@
     &.backsplash {
       filter: brightness(0.25);
       background-color: #242022;
+      overflow: hidden;
     }
 
     img {
-      height: 100%;
       width: 100%;
       filter: blur(5px);
     }
@@ -76,11 +76,16 @@
         margin-left: 10px;
         font-style: italic;
       }
+    }
 
-      .detail-body .content-block {
-        font-size: 18px;
-        font-weight: 300;
-        text-shadow: 1px 1px #111;
+    .detail-body .content-block {
+      font-size: 16px;
+      font-weight: 300;
+      text-shadow: 1px 1px #111;
+      margin-bottom: 10px;
+
+      figure {
+        text-align: center;
       }
     }
 

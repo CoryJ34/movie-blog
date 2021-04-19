@@ -10,9 +10,12 @@ import Halloween2020 from "./components/Halloween2020";
 import SubCategorized from "./components/subcategorized/SubCategorized";
 import { CATEGORIES } from "./common/constants";
 import MovieList from "./components/list/MovieList";
+import { CategoryMeta } from "./models/CategoryMeta";
+import PageLayout from "./components/PageLayout";
 
 interface Props {
   movies: Movie[];
+  categoryMeta: CategoryMeta;
   filteredMovies: Movie[];
   currentFilter: string;
   selectedMovie: Movie;
@@ -25,6 +28,10 @@ interface Props {
   closeDetail: () => void;
 }
 
+interface CategoryMap {
+  [key: string]: any
+}
+
 function App(props: Props) {
   useEffect(() => {
     // Load movies on App load
@@ -33,6 +40,7 @@ function App(props: Props) {
 
   const {
     movies,
+    categoryMeta,
     filteredMovies,
     currentFilter,
     selectedMovie,
@@ -49,9 +57,17 @@ function App(props: Props) {
     return <div>Loading...</div>;
   }
 
-  const gameraMovies = movies.filter(m => m.titleBreakout.category === CATEGORIES.GAMERA).reverse();
-  const randomizerMovies = movies.filter(m => m.titleBreakout.category === CATEGORIES.RANDOMIZER).reverse();
-  const finishTheSeriesHorrorMovies = movies.filter(m => m.titleBreakout.category === CATEGORIES.FINISH_THE_SERIES_HORROR).reverse();
+  let moviesByCategory: CategoryMap = {};
+
+  movies.reverse().forEach(m => {
+    const category = m.titleBreakout.category;
+
+    if(!moviesByCategory[category]) {
+      moviesByCategory[category] = [];
+    }
+
+    moviesByCategory[category].push(m);
+  });
 
   return (
     <div className="App">
@@ -60,6 +76,7 @@ function App(props: Props) {
           <Route path="/movies">
             <MovieList
               movies={movies}
+              categoryMeta={categoryMeta}
               filteredMovies={filteredMovies}
               currentFilter={currentFilter}
               filterByCategory={filterByCategory}
@@ -69,60 +86,105 @@ function App(props: Props) {
             />
           </Route>
           <Route path="/gamera">
-            <MovieList
-              movies={gameraMovies}
-              filteredMovies={gameraMovies}
-              currentFilter={currentFilter}
-              filterByCategory={filterByCategory}
-              resetFilter={resetFilter}
-              sort={sort}
-              openDetail={openDetail}
-              disableFiltering={true}
-            />
+            <PageLayout
+              movies={moviesByCategory[CATEGORIES.GAMERA]}
+              categoryMeta={categoryMeta}
+              presetCategory={CATEGORIES.GAMERA}
+            >
+              <MovieList
+                movies={moviesByCategory[CATEGORIES.GAMERA]}
+                categoryMeta={categoryMeta}
+                filteredMovies={moviesByCategory[CATEGORIES.GAMERA]}
+                currentFilter={currentFilter}
+                filterByCategory={filterByCategory}
+                resetFilter={resetFilter}
+                sort={sort}
+                openDetail={openDetail}
+                presetCategory={CATEGORIES.GAMERA}
+              />
+            </PageLayout>
           </Route>
           <Route path="/randomizer">
-            <MovieList
-              movies={randomizerMovies}
-              filteredMovies={randomizerMovies}
-              currentFilter={currentFilter}
-              filterByCategory={filterByCategory}
-              resetFilter={resetFilter}
-              sort={sort}
-              openDetail={openDetail}
-              disableFiltering={true}
-            />
+            <PageLayout
+              movies={moviesByCategory[CATEGORIES.RANDOMIZER]}
+              categoryMeta={categoryMeta}
+              presetCategory={CATEGORIES.RANDOMIZER}
+            >
+              <MovieList
+                movies={moviesByCategory[CATEGORIES.RANDOMIZER]}
+                categoryMeta={categoryMeta}
+                filteredMovies={moviesByCategory[CATEGORIES.RANDOMIZER]}
+                currentFilter={currentFilter}
+                filterByCategory={filterByCategory}
+                resetFilter={resetFilter}
+                sort={sort}
+                openDetail={openDetail}
+                presetCategory={CATEGORIES.RANDOMIZER}
+              />
+            </PageLayout>
           </Route>
           <Route path="/bracket">
-            <Bracket />
+            <PageLayout
+              movies={moviesByCategory[CATEGORIES.MARCH_MADNESS]}
+              categoryMeta={categoryMeta}
+              presetCategory={CATEGORIES.MARCH_MADNESS}
+            >
+              <Bracket />
+            </PageLayout>
           </Route>
           <Route path="/halloween2020">
-            <Halloween2020 movies={movies} openDetail={openDetail} />
+            <PageLayout
+              movies={moviesByCategory[CATEGORIES.HALLOWEEN_2020]}
+              categoryMeta={categoryMeta}
+              presetCategory={CATEGORIES.HALLOWEEN_2020}
+            >
+              <Halloween2020 movies={movies} openDetail={openDetail} />
+            </PageLayout>
           </Route>
           <Route path="/novdec2020">
-            <SubCategorized
-              category={CATEGORIES.NOV_DEC_2020}
-              movies={movies}
-              openDetail={openDetail}
-            />
+            <PageLayout
+              movies={moviesByCategory[CATEGORIES.NOV_DEC_2020]}
+              categoryMeta={categoryMeta}
+              presetCategory={CATEGORIES.NOV_DEC_2020}
+            >
+              <SubCategorized
+                category={CATEGORIES.NOV_DEC_2020}
+                movies={movies}
+                openDetail={openDetail}
+              />
+            </PageLayout>
           </Route>
           <Route path="/genres">
-            <SubCategorized
-              category={CATEGORIES.GENRES}
-              movies={movies}
-              openDetail={openDetail}
-            />
+            <PageLayout
+              movies={moviesByCategory[CATEGORIES.GENRES]}
+              categoryMeta={categoryMeta}
+              presetCategory={CATEGORIES.GENRES}
+            >
+              <SubCategorized
+                category={CATEGORIES.GENRES}
+                movies={movies}
+                openDetail={openDetail}
+              />
+            </PageLayout>
           </Route>
           <Route path="/finishtheserieshorror">
-            <MovieList
-              movies={finishTheSeriesHorrorMovies}
-              filteredMovies={finishTheSeriesHorrorMovies}
-              currentFilter={currentFilter}
-              filterByCategory={filterByCategory}
-              resetFilter={resetFilter}
-              sort={sort}
-              openDetail={openDetail}
-              disableFiltering={true}
-            />
+            <PageLayout
+              movies={moviesByCategory[CATEGORIES.FINISH_THE_SERIES_HORROR]}
+              categoryMeta={categoryMeta}
+              presetCategory={CATEGORIES.FINISH_THE_SERIES_HORROR}
+            >
+              <MovieList
+                movies={moviesByCategory[CATEGORIES.FINISH_THE_SERIES_HORROR]}
+                categoryMeta={categoryMeta}
+                filteredMovies={moviesByCategory[CATEGORIES.FINISH_THE_SERIES_HORROR]}
+                currentFilter={currentFilter}
+                filterByCategory={filterByCategory}
+                resetFilter={resetFilter}
+                sort={sort}
+                openDetail={openDetail}
+                presetCategory={CATEGORIES.FINISH_THE_SERIES_HORROR}
+              />
+            </PageLayout>
           </Route>
           <Route>
             <Home movies={movies} openDetail={openDetail} />
@@ -141,6 +203,7 @@ function App(props: Props) {
 const mapStateToProps = (state: any) => {
   return {
     movies: state.movieStore?.movies,
+    categoryMeta: state.movieStore?.categoryMeta,
     filteredMovies: state.movieStore?.filteredMovies,
     currentFilter: state.movieStore?.currentFilter,
     selectedMovie: state.detailStore?.selectedMovie,

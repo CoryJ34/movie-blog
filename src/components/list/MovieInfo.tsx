@@ -25,7 +25,7 @@ const makeContentElement = (content: string, index: number) => {
 
 interface Props {
   movie: Movie;
-  disableFiltering?: boolean;
+  presetCategory?: string;
   currentFilter?: string;
   filterByCategory: (filter: string) => void;
   resetFilter: () => void;
@@ -35,7 +35,7 @@ interface Props {
 const MovieInfo = (props: Props) => {
   const {
     movie,
-    disableFiltering,
+    presetCategory,
     currentFilter,
     filterByCategory,
     resetFilter,
@@ -68,7 +68,7 @@ const MovieInfo = (props: Props) => {
           <img className="thumb" src={movie.img} onClick={onImgClick} />
         </div>
         <div className="col">
-          {!disableFiltering && (
+          {!presetCategory && (
             <div
               className={`category ${categoryInfo?.categoryCls}`}
               onClick={onCategoryClick}
@@ -82,7 +82,7 @@ const MovieInfo = (props: Props) => {
           {categoryInfo?.order && complexOrder && (
             <div className="category-order">{categoryInfo.order}</div>
           )}
-          {disableFiltering ? (
+          {presetCategory ? (
             <div className="movie-title">{categoryInfo?.title}</div>
           ) : (
             <div className="movie-title">{`#${movie.id} ${categoryInfo?.title}`}</div>

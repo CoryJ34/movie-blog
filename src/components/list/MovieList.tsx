@@ -2,12 +2,14 @@ import React, { useEffect } from "react";
 import ListSummary from "../list/ListSummary";
 import MovieInfo from "../list/MovieInfo";
 import { Movie } from "../../models/Movie";
+import { CategoryMeta } from "../../models/CategoryMeta";
 
 interface Props {
   movies: Movie[];
+  categoryMeta: CategoryMeta;
   filteredMovies: Movie[];
   currentFilter: string;
-  disableFiltering?: boolean;
+  presetCategory?: string;
   filterByCategory: (filter: string) => void;
   resetFilter: () => void;
   sort: (sortField: string, sortDir: string) => void;
@@ -17,13 +19,14 @@ interface Props {
 function MovieList(props: Props) {
   const {
     movies,
+    categoryMeta,
     filteredMovies,
-    disableFiltering,
+    presetCategory,
     currentFilter,
     filterByCategory,
     resetFilter,
     sort,
-    openDetail
+    openDetail,
   } = props;
 
   if (!movies) {
@@ -31,19 +34,22 @@ function MovieList(props: Props) {
   }
   return (
     <div className="movie-list">
-      <ListSummary
-        movies={filteredMovies || movies}
-        sort={sort}
-        disableFiltering={disableFiltering}
-        filter={currentFilter}
-        filterByCategory={filterByCategory}
-        resetFilter={resetFilter}
-      />
+      {!presetCategory && (
+        <ListSummary
+          movies={filteredMovies || movies}
+          categoryMeta={categoryMeta}
+          sort={sort}
+          presetCategory={presetCategory}
+          filter={currentFilter}
+          filterByCategory={filterByCategory}
+          resetFilter={resetFilter}
+        />
+      )}
       <div className="movie-list">
         {(filteredMovies || movies).map((m) => (
           <MovieInfo
             movie={m}
-            disableFiltering={disableFiltering}
+            presetCategory={presetCategory}
             currentFilter={currentFilter}
             filterByCategory={filterByCategory}
             resetFilter={resetFilter}
