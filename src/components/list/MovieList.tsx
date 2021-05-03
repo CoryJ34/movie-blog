@@ -11,6 +11,7 @@ interface Props {
   currentFilter: string;
   presetCategory?: string;
   filterByCategory: (filter: string) => void;
+  filterByTag: (tag: string) => void;
   resetFilter: () => void;
   sort: (sortField: string, sortDir: string) => void;
   openDetail: (movie: Movie) => void;
@@ -24,6 +25,7 @@ function MovieList(props: Props) {
     presetCategory,
     currentFilter,
     filterByCategory,
+    filterByTag,
     resetFilter,
     sort,
     openDetail,
@@ -42,6 +44,7 @@ function MovieList(props: Props) {
           presetCategory={presetCategory}
           filter={currentFilter}
           filterByCategory={filterByCategory}
+          filterByTag={filterByTag}
           resetFilter={resetFilter}
         />
       )}

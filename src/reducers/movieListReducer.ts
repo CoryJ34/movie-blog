@@ -32,6 +32,15 @@ export default function movieListReducer(state = initialState, action: any) {
         ),
       };
     }
+    case "movies/filterByTag": {
+      return {
+        ...state,
+        currentFilter: action.filter,
+        filteredMovies: state.movies.filter(
+          (m: Movie) => (m.tags || []).includes(action.filter)
+        ),
+      };
+    }
     case "movies/resetFilter": {
       return {
         ...state,

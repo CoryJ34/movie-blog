@@ -22,6 +22,7 @@ interface Props {
   detailOpen: boolean;
   loadMovies: () => void;
   filterByCategory: (filter: string) => void;
+  filterByTag: (filter: string) => void;
   resetFilter: () => void;
   sort: (sortField: string, sortDir: string) => void;
   openDetail: (movie: Movie) => void;
@@ -29,7 +30,7 @@ interface Props {
 }
 
 interface CategoryMap {
-  [key: string]: any
+  [key: string]: any;
 }
 
 function App(props: Props) {
@@ -46,6 +47,7 @@ function App(props: Props) {
     selectedMovie,
     detailOpen,
     filterByCategory,
+    filterByTag,
     resetFilter,
     sort,
     openDetail,
@@ -59,10 +61,10 @@ function App(props: Props) {
 
   let moviesByCategory: CategoryMap = {};
 
-  movies.reverse().forEach(m => {
+  movies.reverse().forEach((m) => {
     const category = m.titleBreakout.category;
 
-    if(!moviesByCategory[category]) {
+    if (!moviesByCategory[category]) {
       moviesByCategory[category] = [];
     }
 
@@ -80,6 +82,7 @@ function App(props: Props) {
               filteredMovies={filteredMovies}
               currentFilter={currentFilter}
               filterByCategory={filterByCategory}
+              filterByTag={filterByTag}
               resetFilter={resetFilter}
               sort={sort}
               openDetail={openDetail}
@@ -97,6 +100,7 @@ function App(props: Props) {
                 filteredMovies={moviesByCategory[CATEGORIES.GAMERA]}
                 currentFilter={currentFilter}
                 filterByCategory={filterByCategory}
+                filterByTag={filterByTag}
                 resetFilter={resetFilter}
                 sort={sort}
                 openDetail={openDetail}
@@ -116,6 +120,7 @@ function App(props: Props) {
                 filteredMovies={moviesByCategory[CATEGORIES.RANDOMIZER]}
                 currentFilter={currentFilter}
                 filterByCategory={filterByCategory}
+                filterByTag={filterByTag}
                 resetFilter={resetFilter}
                 sort={sort}
                 openDetail={openDetail}
@@ -176,9 +181,12 @@ function App(props: Props) {
               <MovieList
                 movies={moviesByCategory[CATEGORIES.FINISH_THE_SERIES_HORROR]}
                 categoryMeta={categoryMeta}
-                filteredMovies={moviesByCategory[CATEGORIES.FINISH_THE_SERIES_HORROR]}
+                filteredMovies={
+                  moviesByCategory[CATEGORIES.FINISH_THE_SERIES_HORROR]
+                }
                 currentFilter={currentFilter}
                 filterByCategory={filterByCategory}
+                filterByTag={filterByTag}
                 resetFilter={resetFilter}
                 sort={sort}
                 openDetail={openDetail}
@@ -216,6 +224,8 @@ const mapDispatchToProps = (dispatch: any) => {
     loadMovies: () => dispatch({ type: "movies/load" }),
     filterByCategory: (filter: string) =>
       dispatch({ type: "movies/filterByCategory", filter }),
+    filterByTag: (filter: string) =>
+      dispatch({ type: "movies/filterByTag", filter }),
     resetFilter: () => dispatch({ type: "movies/resetFilter" }),
     sort: (sortField: string, sortDir: string) =>
       dispatch({ type: "movies/sort", sortField, sortDir }),

@@ -17,6 +17,7 @@ interface Props {
   presetCategory?: string;
   filter?: string;
   filterByCategory?: (filter: string) => void;
+  filterByTag?: (tag: string) => void;
   resetFilter?: () => void;
   sort?: (sortField: string, sortDir: string) => void;
 }
@@ -27,6 +28,7 @@ const ListSummary = (props: Props) => {
     presetCategory,
     filter,
     filterByCategory,
+    filterByTag,
     resetFilter,
     sort,
   } = props;
@@ -37,6 +39,7 @@ const ListSummary = (props: Props) => {
 
   let averageRating = 0.0;
   let allCategories: any = {};
+  let allTags: string[] = [];
 
   // TODO: Find more statistics to display
   // let ratingsByCategory = {};
@@ -45,13 +48,20 @@ const ListSummary = (props: Props) => {
     averageRating += parseFloat(extractRating(movie).split("/")[0].trim());
     allCategories[movie.titleBreakout.categoryCls] =
       movie.titleBreakout.category;
+    if (movie.tags) {
+      movie.tags.forEach((tag) => {
+        if (!allTags.includes(tag)) {
+          allTags.push(tag);
+        }
+      });
+    }
   });
 
   averageRating = averageRating / movies.length;
 
   const meta: SingleCategoryMeta = presetCategory
-    // @ts-ignore
-    ? categoryMeta[presetCategory || "none"]
+    ? // @ts-ignore
+      categoryMeta[presetCategory || "none"]
     : null;
 
   // TODO: Fix sorting
@@ -61,42 +71,65 @@ const ListSummary = (props: Props) => {
     <div className="list-summary">
       <div className="header">
         <span>Summary</span>
-        {meta && <span className="remarks">
-          {meta && meta.opening && (
-            <a
-              onClick={() => setCurrentRemark(meta.opening)}
-              className="remark-link"
-            >
-              Opening Comments
-            </a>
-          )}
-          {meta && meta.closing && (
-            <a
-              onClick={() => setCurrentRemark(meta.closing)}
-              className="remark-link"
-            >
-              Closing Comments
-            </a>
-          )}
-        </span>}
+        {meta && (
+          <span className="remarks">
+            {meta && meta.opening && (
+              <a
+                onClick={() => setCurrentRemark(meta.opening)}
+                className="remark-link"
+              >
+                Opening Comments
+              </a>
+            )}
+            {meta && meta.closing && (
+              <a
+                onClick={() => setCurrentRemark(meta.closing)}
+                className="remark-link"
+              >
+                Closing Comments
+              </a>
+            )}
+          </span>
+        )}
       </div>
       <div>{`Total movies: ${movies.length}`}</div>
       <div>{`Average rating: ${averageRating.toFixed(2)}`}</div>
-      {!presetCategory &&
-        Object.keys(allCategories).map((k) => {
-          const onClick = () => {
-            if (filter) {
-              resetFilter && resetFilter();
-            } else {
-              filterByCategory && filterByCategory(allCategories[k]);
-            }
-          };
-          return (
-            <div className={`category ${k}`} onClick={onClick}>
-              {allCategories[k]}
-            </div>
-          );
-        })}
+      {!presetCategory && (
+        <div>
+          {Object.keys(allCategories).map((k) => {
+            const onClick = () => {
+              if (filter) {
+                resetFilter && resetFilter();
+              } else {
+                filterByCategory && filterByCategory(allCategories[k]);
+              }
+            };
+            return (
+              <div className={`category ${k}`} onClick={onClick}>
+                {allCategories[k]}
+              </div>
+            );
+          })}
+        </div>
+      )}
+      {!presetCategory && (
+        <div>
+          {allTags.map((tag) => {
+            const onClick = () => {
+              if (filter) {
+                resetFilter && resetFilter();
+              } else {
+                filterByTag && filterByTag(tag);
+              }
+            };
+            return (
+              <div className={`tag ${tag}`} onClick={onClick}>
+                {tag}
+              </div>
+            );
+          })}
+        </div>
+      )}
       {/* {!presetCategory && (
         <div onClick={onSortByRatings}>Sort by Ratings</div>
       )} */}

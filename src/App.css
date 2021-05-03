@@ -4,6 +4,10 @@ body {
   font-family: 'Noto Sans KR', sans-serif !important;
 }
 
+body.test {
+  font-family: 'Helvetica Neue', Helvetica, 'Arial', 'sans-serif' !important;
+}
+
 ::-webkit-scrollbar {
   width: 10px;
 }

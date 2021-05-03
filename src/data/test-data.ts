@@ -1,3 +1,18 @@
+const TAGS = {
+  SLASH80S: "80 Slasher",
+  GIALLO: "Giallo",
+  UNIVERSAL: "Universal",
+  JAPANESE: "Japanese",
+  WESTERN: "Western",
+  HAMMER: "Hammer",
+  VINCENT_PRICE: "Vincent Price",
+  SCI_FI: "Sci-Fi",
+  SCI_FI_HORROR: "Sci-Fi Horror",
+  ACTION: "Action",
+  DRAMA: "Drama",
+  COMEDY_HORROR: "Comedy Horror",
+};
+
 const data = [
   {
     img:
@@ -11,6 +26,7 @@ const data = [
     ],
     date: "April 17, 2021",
     id: 173,
+    tags: [TAGS.UNIVERSAL],
   },
   {
     img:
@@ -22,6 +38,7 @@ const data = [
     ],
     date: "April 16, 2021",
     id: 172,
+    tags: [TAGS.UNIVERSAL],
   },
   {
     img:
@@ -33,6 +50,7 @@ const data = [
     ],
     date: "April 14, 2021",
     id: 171,
+    tags: [TAGS.UNIVERSAL],
   },
   {
     img:
@@ -47,6 +65,7 @@ const data = [
     ],
     date: "April 10, 2021",
     id: 170,
+    tags: [TAGS.DRAMA],
   },
   {
     img:
@@ -58,6 +77,7 @@ const data = [
     ],
     date: "April 10, 2021",
     id: 169,
+    tags: [TAGS.DRAMA],
   },
   {
     img:
@@ -69,6 +89,7 @@ const data = [
     ],
     date: "April 9, 2021",
     id: 168,
+    tags: [TAGS.DRAMA],
   },
   {
     img:
@@ -80,6 +101,7 @@ const data = [
     ],
     date: "April 8, 2021",
     id: 167,
+    tags: [TAGS.DRAMA],
   },
   {
     img:
@@ -91,6 +113,7 @@ const data = [
     ],
     date: "April 5, 2021",
     id: 166,
+    tags: [TAGS.DRAMA],
   },
   {
     img:
@@ -105,6 +128,7 @@ const data = [
     ],
     date: "April 4, 2021",
     id: 165,
+    tags: [TAGS.ACTION],
   },
   {
     img:
@@ -116,6 +140,7 @@ const data = [
     ],
     date: "April 4, 2021",
     id: 164,
+    tags: [TAGS.ACTION],
   },
   {
     img:
@@ -129,6 +154,7 @@ const data = [
     title: "Genres – Classic Action #3 – Dirty Harry (1971)",
     date: "April 3, 2021",
     id: 163,
+    tags: [TAGS.ACTION],
   },
   {
     img:
@@ -140,6 +166,7 @@ const data = [
     title: "Genres – Classic Action #2 – Bullitt (1968)",
     date: "April 2, 2021",
     id: 162,
+    tags: [TAGS.ACTION],
   },
   {
     img:
@@ -151,6 +178,7 @@ const data = [
     title: "Genres – Classic Action #1 – Dr. No (1962)",
     date: "March 28, 2021",
     id: 161,
+    tags: [TAGS.ACTION],
   },
   {
     img:
@@ -166,6 +194,7 @@ const data = [
     title: "Genres – Serious Sci-Fi #5 – Liquid Sky (1982)",
     date: "March 28, 2021",
     id: 160,
+    tags: [TAGS.SCI_FI],
   },
   {
     img:
@@ -177,6 +206,7 @@ const data = [
     title: "Genres – Serious Sci-Fi #4 – Wizards (1977)",
     date: "March 27, 2021",
     id: 159,
+    tags: [TAGS.SCI_FI],
   },
   {
     img:
@@ -188,6 +218,7 @@ const data = [
     title: "Genres – Serious Sci-Fi #3 – Slaughterhouse Five (1972)",
     date: "March 26, 2021",
     id: 158,
+    tags: [TAGS.SCI_FI],
   },
   {
     img:
@@ -199,6 +230,7 @@ const data = [
     title: "Genres – Serious Sci-Fi #2 – Silent Running (1972)",
     date: "March 22, 2021",
     id: 157,
+    tags: [TAGS.SCI_FI],
   },
   {
     img:
@@ -210,6 +242,7 @@ const data = [
     title: "Genres – Serious Sci-Fi #1 – The Omega Man (1971)",
     date: "March 21, 2021",
     id: 156,
+    tags: [TAGS.SCI_FI],
   },
   {
     img:
@@ -285,6 +318,7 @@ const data = [
     title: "Genres – Old Westerns #5 – The Magnificent Seven Ride (1972)",
     date: "March 15, 2021",
     id: 150,
+    tags: [TAGS.WESTERN],
   },
   {
     img:
@@ -296,6 +330,7 @@ const data = [
     title: "Genres – Old Westerns #4 – Joe Kidd (1972)",
     date: "March 14, 2021",
     id: 149,
+    tags: [TAGS.WESTERN],
   },
   {
     img:
@@ -307,6 +342,7 @@ const data = [
     title: "Genres – Old Westerns #3 – Two Mules for Sister Sara (1970)",
     date: "March 14, 2021",
     id: 148,
+    tags: [TAGS.WESTERN],
   },
   {
     img:
@@ -319,6 +355,7 @@ const data = [
       "Genres – Old Westerns #2 – I am Sartana, Your Angel of Death (1969)",
     date: "March 13, 2021",
     id: 147,
+    tags: [TAGS.WESTERN],
   },
   {
     img:
@@ -330,6 +367,7 @@ const data = [
     title: "Genres – Old Westerns #1 – Giant (1956)",
     date: "March 12, 2021",
     id: 146,
+    tags: [TAGS.WESTERN],
   },
   {
     img:
@@ -349,6 +387,7 @@ const data = [
     title: "March Madness #32 – The Kiss of the Vampire (1963)",
     date: "March 7, 2021",
     id: 145,
+    tags: [TAGS.HAMMER],
   },
   {
     img:
@@ -360,6 +399,7 @@ const data = [
     title: "March Madness #31 – Nightmare Beach (1989)",
     date: "March 7, 2021",
     id: 144,
+    tags: [TAGS.SLASH80S],
   },
   {
     img:
@@ -373,6 +413,7 @@ const data = [
     title: "March Madness #30 – The Editor (2014)",
     date: "March 7, 2021",
     id: 143,
+    tags: [TAGS.COMEDY_HORROR],
   },
   {
     img:
@@ -423,6 +464,7 @@ const data = [
     title: "March Madness #26 – Trauma (1978)",
     date: "March 5, 2021",
     id: 139,
+    tags: [TAGS.GIALLO],
   },
   {
     img:
@@ -434,6 +476,7 @@ const data = [
     title: "March Madness #25 – Invisible Agent (1942)",
     date: "March 4, 2021",
     id: 138,
+    tags: [TAGS.UNIVERSAL],
   },
   {
     img:
@@ -451,6 +494,7 @@ const data = [
     title: "March Madness #24 – The Phantom of the Opera (1962)",
     date: "March 4, 2021",
     id: 137,
+    tags: [TAGS.HAMMER],
   },
   {
     img:
@@ -462,6 +506,7 @@ const data = [
     title: "March Madness #23 – Serial Mom (1994)",
     date: "March 4, 2021",
     id: 136,
+    tags: [TAGS.COMEDY_HORROR],
   },
   {
     img:
@@ -486,6 +531,7 @@ const data = [
     title: "March Madness #21 – The Black Cat (1941)",
     date: "March 1, 2021",
     id: 134,
+    tags: [TAGS.UNIVERSAL],
   },
   {
     img:
@@ -501,6 +547,7 @@ const data = [
     title: "March Madness #20 – Edge of the Axe (1988)",
     date: "February 28, 2021",
     id: 133,
+    tags: [TAGS.SLASH80S],
   },
   {
     img:
@@ -512,6 +559,7 @@ const data = [
     title: "March Madness #19 – The Police are Blundering in the Dark (1975)",
     date: "February 23, 2021",
     id: 132,
+    tags: [TAGS.GIALLO],
   },
   {
     img:
@@ -555,6 +603,7 @@ const data = [
     title: "March Madness #16 – The Curse of the Werewolf (1961)",
     date: "February 19, 2021",
     id: 129,
+    tags: [TAGS.HAMMER],
   },
   {
     img:
@@ -590,6 +639,7 @@ const data = [
     title: "March Madness #13 – Elvira, Mistress of the Dark (1988)",
     date: "February 16, 2021",
     id: 126,
+    tags: [TAGS.COMEDY_HORROR],
   },
   {
     img:
@@ -605,6 +655,7 @@ const data = [
     title: "March Madness #12 – Tower of London (1939)",
     date: "February 16, 2021",
     id: 125,
+    tags: [TAGS.UNIVERSAL],
   },
   {
     img:
@@ -616,6 +667,7 @@ const data = [
     title: "March Madness #11 – The Killer is One of Thirteen (1973)",
     date: "February 15, 2021",
     id: 124,
+    tags: [TAGS.GIALLO],
   },
   {
     img:
@@ -639,6 +691,7 @@ const data = [
     title: "March Madness #9 – Don’t Go in the Woods (1981)",
     date: "February 14, 2021",
     id: 122,
+    tags: [TAGS.SLASH80S],
   },
   {
     img:
@@ -657,6 +710,7 @@ const data = [
     title: "March Madness #8 – The Case of the Scorpion’s Tail (1971)",
     date: "February 5, 2021",
     id: 121,
+    tags: [TAGS.GIALLO],
   },
   {
     img:
@@ -668,6 +722,7 @@ const data = [
     title: "March Madness #7 – Attack of the Killer Tomatoes (1978)",
     date: "February 4, 2021",
     id: 120,
+    tags: [TAGS.COMEDY_HORROR],
   },
   {
     img:
@@ -680,6 +735,7 @@ const data = [
     title: "March Madness #6 – The Brides of Dracula (1960)",
     date: "February 4, 2021",
     id: 119,
+    tags: [TAGS.HAMMER],
   },
   {
     img:
@@ -705,6 +761,7 @@ const data = [
     title: "March Madness #4 – Dracula’s Daughter (1936)",
     date: "February 3, 2021",
     id: 117,
+    tags: [TAGS.UNIVERSAL],
   },
   {
     img:
@@ -739,6 +796,7 @@ const data = [
     title: "March Madness #1 – The Prey (1983)",
     date: "February 2, 2021",
     id: 114,
+    tags: [TAGS.SLASH80S],
   },
   {
     img:
@@ -750,6 +808,7 @@ const data = [
     title: "Randomizer #10 – Rainy Dog (1997)",
     date: "January 29, 2021",
     id: 113,
+    tags: [TAGS.JAPANESE],
   },
   {
     img:
@@ -772,6 +831,7 @@ const data = [
     title: "Randomizer #8 – The Wasp Woman (1959)",
     date: "January 27, 2021",
     id: 111,
+    tags: [TAGS.SCI_FI_HORROR],
   },
   {
     img:
@@ -861,6 +921,7 @@ const data = [
     title: "Gamera the Brave (2006)",
     date: "January 20, 2021",
     id: 103,
+    tags: [TAGS.JAPANESE],
   },
   {
     img:
@@ -872,6 +933,7 @@ const data = [
     title: "Gamera 3: Revenge of Iris (1999)",
     date: "January 20, 2021",
     id: 102,
+    tags: [TAGS.JAPANESE],
   },
   {
     img:
@@ -883,6 +945,7 @@ const data = [
     title: "Gamera 2: Attack of the Legion (1996)",
     date: "January 19, 2021",
     id: 101,
+    tags: [TAGS.JAPANESE],
   },
   {
     img:
@@ -894,6 +957,7 @@ const data = [
     title: "Gamera: Guardian of the Universe (1995)",
     date: "January 18, 2021",
     id: 100,
+    tags: [TAGS.JAPANESE],
   },
   {
     img:
@@ -905,6 +969,7 @@ const data = [
     title: "Gamera: Super Monster (1980)",
     date: "January 12, 2021",
     id: 99,
+    tags: [TAGS.JAPANESE],
   },
   {
     img:
@@ -916,6 +981,7 @@ const data = [
     title: "Gamera vs Zigra (1971)",
     date: "January 11, 2021",
     id: 98,
+    tags: [TAGS.JAPANESE],
   },
   {
     img:
@@ -927,6 +993,7 @@ const data = [
     title: "Gamera vs Jiger (1970)",
     date: "January 2, 2021",
     id: 97,
+    tags: [TAGS.JAPANESE],
   },
   {
     img:
@@ -938,6 +1005,7 @@ const data = [
     title: "Gamera vs Guiron (1969)",
     date: "January 2, 2021",
     id: 96,
+    tags: [TAGS.JAPANESE],
   },
   {
     img:
@@ -949,6 +1017,7 @@ const data = [
     title: "Gamera vs Viras (1968)",
     date: "December 30, 2020",
     id: 95,
+    tags: [TAGS.JAPANESE],
   },
   {
     img:
@@ -960,6 +1029,7 @@ const data = [
     title: "Gamera vs Gyaos (1967)",
     date: "December 30, 2020",
     id: 94,
+    tags: [TAGS.JAPANESE],
   },
   {
     img:
@@ -971,6 +1041,7 @@ const data = [
     title: "Gamera vs Barugon (1966)",
     date: "December 29, 2020",
     id: 93,
+    tags: [TAGS.JAPANESE],
   },
   {
     img:
@@ -982,6 +1053,7 @@ const data = [
     title: "Gamera (1965)",
     date: "December 26, 2020",
     id: 92,
+    tags: [TAGS.JAPANESE],
   },
   {
     img:
@@ -1039,6 +1111,7 @@ const data = [
     title: "Is It THAT Bad..? – Movie 2 – The Garbage Pail Kids Movie (1987)",
     date: "December 16, 2020",
     id: 87,
+    tags: [TAGS.COMEDY_HORROR],
   },
   {
     img:
@@ -1061,6 +1134,7 @@ const data = [
     title: "Stephen King Non-Horror – Movie 3 – Dolan’s Cadillac (2009)",
     date: "December 13, 2020",
     id: 85,
+    tags: [TAGS.ACTION],
   },
   {
     img:
@@ -1072,6 +1146,7 @@ const data = [
     title: "Stephen King Non-Horror – Movie 2 – Hearts in Atlantis (2001)",
     date: "December 12, 2020",
     id: 84,
+    tags: [TAGS.DRAMA],
   },
   {
     img:
@@ -1083,6 +1158,7 @@ const data = [
     title: "Stephen King Non-Horror – Movie 1 – Dolores Claiborne (1995)",
     date: "December 11, 2020",
     id: 83,
+    tags: [TAGS.DRAMA],
   },
   {
     img:
@@ -1094,6 +1170,7 @@ const data = [
     title: "Japanese Action – Movie 3 – Bullet Ballet (1998)",
     date: "December 7, 2020",
     id: 82,
+    tags: [TAGS.JAPANESE],
   },
   {
     img:
@@ -1105,6 +1182,7 @@ const data = [
     title: "Japanese Action – Movie 2 – Shinjuku Triad Society (1995)",
     date: "December 5, 2020",
     id: 81,
+    tags: [TAGS.JAPANESE],
   },
   {
     img:
@@ -1116,6 +1194,7 @@ const data = [
     title: "Japanese Action – Movie 1 – Outlaw: Gangster VIP II (1968)",
     date: "November 30, 2020",
     id: 80,
+    tags: [TAGS.JAPANESE],
   },
   {
     img:
@@ -1128,6 +1207,7 @@ const data = [
       "Westerns – Movie 3 – If You Meet Sartana, Pray For Your Death (1968)",
     date: "November 28, 2020",
     id: 79,
+    tags: [TAGS.WESTERN],
   },
   {
     img:
@@ -1139,6 +1219,7 @@ const data = [
     title: "Westerns – Movie 2 – The How the West Was Won (1962)",
     date: "November 22, 2020",
     id: 78,
+    tags: [TAGS.WESTERN],
   },
   {
     img:
@@ -1150,6 +1231,7 @@ const data = [
     title: "Westerns – Movie 1 – The Alamo (1960)",
     date: "November 22, 2020",
     id: 77,
+    tags: [TAGS.WESTERN],
   },
   {
     img:
@@ -1161,6 +1243,7 @@ const data = [
     title: "Arrow Crime – Movie 3 – Ronin (1998)",
     date: "November 18, 2020",
     id: 76,
+    tags: [TAGS.ACTION],
   },
   {
     img:
@@ -1173,6 +1256,7 @@ const data = [
     title: "Arrow Crime – Movie 2 – Stormy Monday (1988)",
     date: "November 16, 2020",
     id: 75,
+    tags: [TAGS.ACTION],
   },
   {
     img:
@@ -1184,6 +1268,7 @@ const data = [
     title: "Arrow Crime – Movie 1 – Cruising (1980)",
     date: "November 15, 2020",
     id: 74,
+    tags: [TAGS.ACTION],
   },
   {
     img:
@@ -1228,6 +1313,7 @@ const data = [
     title: "#70 – Week 9 – BONUS 2 – Comedy of Terrors (1963)",
     date: "October 28, 2020",
     id: 70,
+    tags: [TAGS.VINCENT_PRICE],
   },
   {
     img:
@@ -1239,6 +1325,7 @@ const data = [
     title: "#69 – Week 9 – BONUS 1 – The Tomb of Ligeia (1964)",
     date: "October 28, 2020",
     id: 69,
+    tags: [TAGS.VINCENT_PRICE],
   },
   {
     img:
@@ -1253,6 +1340,7 @@ const data = [
     title: "#68 – Week 9 – Movie 5 – The Oblong Box (1969)",
     date: "October 28, 2020",
     id: 68,
+    tags: [TAGS.VINCENT_PRICE],
   },
   {
     img:
@@ -1264,6 +1352,7 @@ const data = [
     title: "#67 – Week 9 – Movie 4 – The Masque of the Red Death (1964)",
     date: "October 27, 2020",
     id: 67,
+    tags: [TAGS.VINCENT_PRICE],
   },
   {
     img:
@@ -1275,6 +1364,7 @@ const data = [
     title: "#66 – Week 9 – Movie 3 – Twice Told Tales (1963)",
     date: "October 26, 2020",
     id: 66,
+    tags: [TAGS.VINCENT_PRICE],
   },
   {
     img:
@@ -1286,6 +1376,7 @@ const data = [
     title: "#65 – Week 9 – Movie 2 – The Pit and the Pendulum (1961)",
     date: "October 26, 2020",
     id: 65,
+    tags: [TAGS.VINCENT_PRICE],
   },
   {
     img:
@@ -1297,6 +1388,7 @@ const data = [
     title: "#64 – Week 9 – Movie 1 – House of Wax (1953)",
     date: "October 25, 2020",
     id: 64,
+    tags: [TAGS.VINCENT_PRICE],
   },
   {
     img:
@@ -1308,6 +1400,7 @@ const data = [
     title: "#63 – Week 8 – BONUS 2 – StageFright (1987)",
     date: "October 22, 2020",
     id: 63,
+    tags: [TAGS.SLASH80S],
   },
   {
     img:
@@ -1335,6 +1428,7 @@ const data = [
     title: "#61 – Week 8 – Movie 5 – Phenomena (1985)",
     date: "October 21, 2020",
     id: 61,
+    tags: [TAGS.SLASH80S],
   },
   {
     img:
@@ -1346,6 +1440,7 @@ const data = [
     title: "#60 – Week 8 – Movie 4 – Beyond the Door (1974)",
     date: "October 20, 2020",
     id: 60,
+    tags: [TAGS.GIALLO],
   },
   {
     img:
@@ -1358,6 +1453,7 @@ const data = [
       "#59 – Week 8 – Movie 3 – Your Vice Is a Locked Room and Only I Have the Key (1972)",
     date: "October 20, 2020",
     id: 59,
+    tags: [TAGS.GIALLO],
   },
   {
     img:
@@ -1369,6 +1465,7 @@ const data = [
     title: "#58 – Week 8 – Movie 2 – All the Colors of the Dark (1972)",
     date: "October 19, 2020",
     id: 58,
+    tags: [TAGS.GIALLO],
   },
   {
     img:
@@ -1380,6 +1477,7 @@ const data = [
     title: "#57 – Week 8 – Movie 1 – The Bloodstained Butterfly (1971)",
     date: "October 18, 2020",
     id: 57,
+    tags: [TAGS.GIALLO],
   },
   {
     img:
@@ -1392,6 +1490,7 @@ const data = [
     title: "#56 – Week 7 – BONUS 3 – The Undertaker (1988)",
     date: "October 16, 2020",
     id: 56,
+    tags: [TAGS.SLASH80S],
   },
   {
     img:
@@ -1403,6 +1502,7 @@ const data = [
     title: "#55 – Week 7 – BONUS 2 – I, Madman (1989)",
     date: "October 16, 2020",
     id: 55,
+    tags: [TAGS.SLASH80S],
   },
   {
     img:
@@ -1414,6 +1514,7 @@ const data = [
     title: "#54 – Week 7 – BONUS 1 – Amsterdamned (1988)",
     date: "October 16, 2020",
     id: 54,
+    tags: [TAGS.SLASH80S],
   },
   {
     img:
@@ -1428,6 +1529,7 @@ const data = [
     title: "#53 – Week 7 – Movie 5 – Night Train to Terror (1985)",
     date: "October 15, 2020",
     id: 53,
+    tags: [TAGS.SLASH80S],
   },
   {
     img:
@@ -1439,6 +1541,7 @@ const data = [
     title: "#52 – Week 7 – Movie 4 – Splatter University (1984)",
     date: "October 13, 2020",
     id: 52,
+    tags: [TAGS.SLASH80S],
   },
   {
     img:
@@ -1450,6 +1553,7 @@ const data = [
     title: "#51 – Week 7 – Movie 3 – The Dorm That Dripped Blood (1982)",
     date: "October 12, 2020",
     id: 51,
+    tags: [TAGS.SLASH80S],
   },
   {
     img:
@@ -1461,6 +1565,7 @@ const data = [
     title: "#50 – Week 7 – Movie 2 – Road Games (1981)",
     date: "October 11, 2020",
     id: 50,
+    tags: [TAGS.SLASH80S],
   },
   {
     img:
@@ -1473,6 +1578,7 @@ const data = [
     title: "#49 – Week 7 – Movie 1 – Graduation Day (1981)",
     date: "October 11, 2020",
     id: 49,
+    tags: [TAGS.SLASH80S],
   },
   {
     img:
@@ -1586,6 +1692,7 @@ const data = [
     title: "#39 – Week 5 – BONUS 6 – Black Friday (1940)",
     date: "October 4, 2020",
     id: 39,
+    tags: [TAGS.UNIVERSAL],
   },
   {
     img:
@@ -1597,6 +1704,7 @@ const data = [
     title: "#38 – Week 5 – BONUS 5 – The Invisible Ray (1936)",
     date: "October 3, 2020",
     id: 38,
+    tags: [TAGS.UNIVERSAL],
   },
   {
     img:
@@ -1608,6 +1716,7 @@ const data = [
     title: "#37 – Week 5 – BONUS 4 – Night Key (1937)",
     date: "October 2, 2020",
     id: 37,
+    tags: [TAGS.UNIVERSAL],
   },
   {
     img:
@@ -1619,6 +1728,7 @@ const data = [
     title: "#36 – Week 5 – BONUS 3 – The Strange Case of Dr Rx (1942)",
     date: "October 2, 2020",
     id: 36,
+    tags: [TAGS.UNIVERSAL],
   },
   {
     img:
@@ -1630,6 +1740,7 @@ const data = [
     title: "#35 – Week 5 – BONUS 2 – The Mad Doctor of Market Street (1942)",
     date: "October 1, 2020",
     id: 35,
+    tags: [TAGS.UNIVERSAL],
   },
   {
     img:
@@ -1641,6 +1752,7 @@ const data = [
     title: "#34 – Week 5 – BONUS 1 – The Invisible Woman (1940)",
     date: "September 30, 2020",
     id: 34,
+    tags: [TAGS.UNIVERSAL],
   },
   {
     img:
@@ -1655,6 +1767,7 @@ const data = [
     title: "#33 – Week 5 – Movie 5 – The Thing That Couldn’t Die (1958)",
     date: "September 29, 2020",
     id: 33,
+    tags: [TAGS.UNIVERSAL],
   },
   {
     img:
@@ -1666,6 +1779,7 @@ const data = [
     title: "#32 – Week 5 – Movie 4 – House of Horrors (1946)",
     date: "September 28, 2020",
     id: 32,
+    tags: [TAGS.UNIVERSAL],
   },
   {
     img:
@@ -1677,6 +1791,7 @@ const data = [
     title: "#31 – Week 5 – Movie 3 – The Mad Ghoul (1943)",
     date: "September 28, 2020",
     id: 31,
+    tags: [TAGS.UNIVERSAL],
   },
   {
     img:
@@ -1688,6 +1803,7 @@ const data = [
     title: "#30 – Week 5 – Movie 2 – Night Monster (1942)",
     date: "September 27, 2020",
     id: 30,
+    tags: [TAGS.UNIVERSAL],
   },
   {
     img:
@@ -1699,6 +1815,7 @@ const data = [
     title: "#29 – Week 5 – Movie 1 – Murders in the Zoo (1933)",
     date: "September 27, 2020",
     id: 29,
+    tags: [TAGS.UNIVERSAL],
   },
   {
     img:
@@ -1780,6 +1897,7 @@ const data = [
     title: "#22 – Week 3 – BONUS 1 – Haze (2005)",
     date: "September 19, 2020",
     id: 22,
+    tags: [TAGS.JAPANESE],
   },
   {
     img:
@@ -1794,6 +1912,7 @@ const data = [
     title: "#21 – Week 3 – Movie 5 – Kotoko (2011)",
     date: "September 17, 2020",
     id: 21,
+    tags: [TAGS.JAPANESE],
   },
   {
     img:
@@ -1805,6 +1924,7 @@ const data = [
     title: "#20 – Week 3 – Movie 4 – Tetsuo II: Body Hammer (1992)",
     date: "September 16, 2020",
     id: 20,
+    tags: [TAGS.JAPANESE],
   },
   {
     img:
@@ -1816,6 +1936,7 @@ const data = [
     title: "#19 – Week 3 – Movie 3 – Ringu 0 (2000)",
     date: "September 14, 2020",
     id: 19,
+    tags: [TAGS.JAPANESE],
   },
   {
     img:
@@ -1827,6 +1948,7 @@ const data = [
     title: "#18 – Week 3 – Movie 2 – Ringu 2 (1999)",
     date: "September 13, 2020",
     id: 18,
+    tags: [TAGS.JAPANESE],
   },
   {
     img:
@@ -1838,6 +1960,7 @@ const data = [
     title: "#17 – Week 3 – Movie 1 – Ringu (1998)",
     date: "September 13, 2020",
     id: 17,
+    tags: [TAGS.JAPANESE],
   },
   {
     img:
@@ -1849,6 +1972,7 @@ const data = [
     title: "#16 – Week 2 – BONUS 3 – The Lawnmower Man (1992)",
     date: "September 12, 2020",
     id: 16,
+    tags: [TAGS.SCI_FI_HORROR],
   },
   {
     img:
@@ -1918,6 +2042,7 @@ const data = [
     title: "#10 – Week 2 – Movie 2 – Species (1995)",
     date: "September 7, 2020",
     id: 10,
+    tags: [TAGS.SCI_FI_HORROR],
   },
   {
     img:
@@ -1940,6 +2065,7 @@ const data = [
     title: "#8 – Week 1 – BONUS 3 – The Fly II (1989)",
     date: "September 6, 2020",
     id: 8,
+    tags: [TAGS.SCI_FI_HORROR],
   },
   {
     img:
@@ -1951,6 +2077,7 @@ const data = [
     title: "#7 – Week 1 – BONUS 2 – The Brain (1988)",
     date: "September 4, 2020",
     id: 7,
+    tags: [TAGS.SCI_FI_HORROR],
   },
   {
     img:
@@ -1962,6 +2089,7 @@ const data = [
     title: "#6 – Week 1 – BONUS 1 – Curse of the Fly (1965)",
     date: "September 4, 2020",
     id: 6,
+    tags: [TAGS.SCI_FI_HORROR],
   },
   {
     img:
@@ -1976,6 +2104,7 @@ const data = [
     title: "#5 – Week 1 – Movie 5 – Leviathan (1989)",
     date: "September 2, 2020",
     id: 5,
+    tags: [TAGS.SCI_FI_HORROR],
   },
   {
     img:
@@ -1989,6 +2118,7 @@ const data = [
     title: "#4 – Week 1 – Movie 4 – Forbidden World (1982)",
     date: "September 1, 2020",
     id: 4,
+    tags: [TAGS.SCI_FI_HORROR],
   },
   {
     img:
@@ -2000,6 +2130,7 @@ const data = [
     title: "#3 – Week 1 – Movie 3 – Galaxy of Terror (1981)",
     date: "August 31, 2020",
     id: 3,
+    tags: [TAGS.SCI_FI_HORROR],
   },
   {
     img:
@@ -2011,6 +2142,7 @@ const data = [
     title: "#2 – Week 1 – Movie 2 – It Came From Beneath the Sea (1955)",
     date: "August 31, 2020",
     id: 2,
+    tags: [TAGS.SCI_FI_HORROR],
   },
   {
     img:
@@ -2022,6 +2154,7 @@ const data = [
     title: "#1 – Week 1 – Movie 1 – War of the Worlds (1953)",
     date: "August 30, 2020",
     id: 1,
+    tags: [TAGS.SCI_FI_HORROR],
   },
 ];
 
