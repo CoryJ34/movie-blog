@@ -1,0 +1,20 @@
+.sorter-container {
+    margin-top: 12px;
+
+    label {
+        color: white;
+
+        &.Mui-focused {
+            color: #eee;
+        }
+    }
+
+    .MuiSelect-root.MuiSelect-select {
+        color: white;
+    }
+
+    button.MuiIconButton-root {
+        padding-top: 28px;
+        color: white;
+    }
+}

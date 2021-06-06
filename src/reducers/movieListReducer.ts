@@ -8,18 +8,29 @@ import categoryMeta from '../data/category-meta';
 
 const initialState: any = {};
 
+const ratingComparator = (a: Movie, b: Movie): number => {
+  return parseFloat(b.rating) - parseFloat(a.rating);
+}
+
+const yearComparator = (a: Movie, b: Movie): number => {
+  return parseInt(b.titleBreakout.year.substring(1,5)) - parseInt(a.titleBreakout.year.substring(1,5));
+}
+
 export default function movieListReducer(state = initialState, action: any) {
   switch (action.type) {
     case "movies/load": {
+      const allMovies = testData.map((original: any) => {
+        return {
+          ...original,
+          rating: parseFloat(extractRating(original).split("/")[0].trim()),
+          titleBreakout: breakoutTitleYearAndCategory(original.title),
+        };
+      });
+
       return {
         ...state,
-        movies: testData.map((original: any) => {
-          return {
-            ...original,
-            rating: parseFloat(extractRating(original).split("/")[0].trim()),
-            titleBreakout: breakoutTitleYearAndCategory(original.title),
-          };
-        }),
+        movies: allMovies,
+        filteredMovies: [...allMovies],
         categoryMeta
       };
     }
@@ -45,22 +56,33 @@ export default function movieListReducer(state = initialState, action: any) {
       return {
         ...state,
         currentFilter: null,
-        filteredMovies: null,
+        filteredMovies: [...state.movies],
       };
     }
     case "movies/sort": {
+      let comparator = (a: Movie, b: Movie) => {
+        return parseInt(a.id, 10) - parseInt(b.id, 10);
+      }
+
+      if(action.sortField === 'Year') {
+        comparator = yearComparator;
+      }
+      else if(action.sortField === 'Rating') {
+        comparator = ratingComparator;
+      }
+
+      let sorted = [...state.filteredMovies].sort(comparator);
+
+      if(action.sortDir === 'DESC') {
+        sorted = sorted.reverse();
+      }
+
       return {
         ...state,
         sortField: action.sortField,
         sortDir: action.sortDir,
-        filteredMovies: [...(state.movies || state.filteredMovies)].sort(
-          (a, b) => {
-            if (action.sortDir === "ASC") {
-              return a[action.sortField] - b[action.sortField];
-            }
-            return b[action.sortField] - a[action.sortField];
-          }
-        ),
+        filteredMovies: sorted,
+        movies: sorted
       };
     }
     case "movies/resetSort": {

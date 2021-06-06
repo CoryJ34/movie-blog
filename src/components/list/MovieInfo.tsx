@@ -78,14 +78,14 @@ const MovieInfo = (props: Props) => {
           )}
           {categoryInfo?.subCategory && (
             <div className="sub-category">{categoryInfo.subCategory}</div>
-          )}
+          )}  
           {categoryInfo?.order && complexOrder && (
             <div className="category-order">{categoryInfo.order}</div>
           )}
           {presetCategory ? (
-            <div className="movie-title">{categoryInfo?.title}</div>
+            <div className="movie-title">{categoryInfo?.title}<span className="movie-year">{categoryInfo?.year}</span></div>
           ) : (
-            <div className="movie-title">{`#${movie.id} ${categoryInfo?.title}`}</div>
+            <div className="movie-title">{`#${movie.id} ${categoryInfo?.title}`}<span className="movie-year">{categoryInfo?.year}</span></div>
           )}
           <div className="published-date">{movie.date}</div>
           <div className="my-rating">My Rating: {extractRating(movie)}</div>

@@ -5,7 +5,6 @@ import { Movie } from "../../models/Movie";
 import { CategoryMeta } from "../../models/CategoryMeta";
 
 interface Props {
-  movies: Movie[];
   categoryMeta: CategoryMeta;
   filteredMovies: Movie[];
   currentFilter: string;
@@ -19,7 +18,6 @@ interface Props {
 
 function MovieList(props: Props) {
   const {
-    movies,
     categoryMeta,
     filteredMovies,
     presetCategory,
@@ -31,14 +29,14 @@ function MovieList(props: Props) {
     openDetail,
   } = props;
 
-  if (!movies) {
+  if (!filteredMovies) {
     return <div>Loading...</div>;
   }
   return (
     <div className="movie-list">
       {!presetCategory && (
         <ListSummary
-          movies={filteredMovies || movies}
+          movies={filteredMovies}
           categoryMeta={categoryMeta}
           sort={sort}
           presetCategory={presetCategory}
@@ -49,7 +47,7 @@ function MovieList(props: Props) {
         />
       )}
       <div className="movie-list">
-        {(filteredMovies || movies).map((m) => (
+        {filteredMovies.map((m) => (
           <MovieInfo
             movie={m}
             presetCategory={presetCategory}

@@ -149,6 +149,15 @@
         border: solid 3px #4a005c;
       }
 
+      &.decades_of_horror {
+        background: linear-gradient(
+          to bottom,
+          #778850 20%,
+          #3c4b22 100%
+        );
+        border: solid 3px #294429;
+      }
+
       &:hover {
         filter: brightness(1.25);
       }

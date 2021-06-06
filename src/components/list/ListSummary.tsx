@@ -1,4 +1,5 @@
 import { Dialog } from "@material-ui/core";
+import React from "react";
 import react, { useState } from "react";
 import { extractRating } from "../../actions/TransferUtils";
 import categoryMeta from "../../data/category-meta";
@@ -8,6 +9,7 @@ import {
   SingleCategoryMeta,
 } from "../../models/CategoryMeta";
 import { Movie } from "../../models/Movie";
+import Sort from "./Sort";
 
 import "./styles/ListSummary.scss";
 
@@ -130,9 +132,7 @@ const ListSummary = (props: Props) => {
           })}
         </div>
       )}
-      {/* {!presetCategory && (
-        <div onClick={onSortByRatings}>Sort by Ratings</div>
-      )} */}
+      <Sort />
       <Dialog
         open={!!currentRemark}
         onClose={() => setCurrentRemark(undefined)}

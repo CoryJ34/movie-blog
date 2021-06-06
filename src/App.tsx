@@ -77,7 +77,6 @@ function App(props: Props) {
         <Switch>
           <Route path="/movies">
             <MovieList
-              movies={movies}
               categoryMeta={categoryMeta}
               filteredMovies={filteredMovies}
               currentFilter={currentFilter}
@@ -95,7 +94,6 @@ function App(props: Props) {
               presetCategory={CATEGORIES.GAMERA}
             >
               <MovieList
-                movies={moviesByCategory[CATEGORIES.GAMERA]}
                 categoryMeta={categoryMeta}
                 filteredMovies={moviesByCategory[CATEGORIES.GAMERA]}
                 currentFilter={currentFilter}
@@ -115,7 +113,6 @@ function App(props: Props) {
               presetCategory={CATEGORIES.RANDOMIZER}
             >
               <MovieList
-                movies={moviesByCategory[CATEGORIES.RANDOMIZER]}
                 categoryMeta={categoryMeta}
                 filteredMovies={moviesByCategory[CATEGORIES.RANDOMIZER]}
                 currentFilter={currentFilter}
@@ -179,7 +176,6 @@ function App(props: Props) {
               presetCategory={CATEGORIES.FINISH_THE_SERIES_HORROR}
             >
               <MovieList
-                movies={moviesByCategory[CATEGORIES.FINISH_THE_SERIES_HORROR]}
                 categoryMeta={categoryMeta}
                 filteredMovies={
                   moviesByCategory[CATEGORIES.FINISH_THE_SERIES_HORROR]
@@ -191,6 +187,27 @@ function App(props: Props) {
                 sort={sort}
                 openDetail={openDetail}
                 presetCategory={CATEGORIES.FINISH_THE_SERIES_HORROR}
+              />
+            </PageLayout>
+          </Route>
+          <Route path="/decadesofhorror">
+            <PageLayout
+              movies={moviesByCategory[CATEGORIES.DECADES_OF_HORROR]}
+              categoryMeta={categoryMeta}
+              presetCategory={CATEGORIES.DECADES_OF_HORROR}
+            >
+              <MovieList
+                categoryMeta={categoryMeta}
+                filteredMovies={
+                  moviesByCategory[CATEGORIES.DECADES_OF_HORROR]
+                }
+                currentFilter={currentFilter}
+                filterByCategory={filterByCategory}
+                filterByTag={filterByTag}
+                resetFilter={resetFilter}
+                sort={sort}
+                openDetail={openDetail}
+                presetCategory={CATEGORIES.DECADES_OF_HORROR}
               />
             </PageLayout>
           </Route>

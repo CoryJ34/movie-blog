@@ -5,5 +5,6 @@ export const CATEGORIES = {
   RANDOMIZER: "Randomizer",
   MARCH_MADNESS: "March Madness",
   GENRES: "Genres",
-  FINISH_THE_SERIES_HORROR: '[Horror] Finish the Series'
+  FINISH_THE_SERIES_HORROR: '[Horror] Finish the Series',
+  DECADES_OF_HORROR: 'Decades of Horror'
 };

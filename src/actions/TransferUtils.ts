@@ -121,6 +121,19 @@ export const breakoutTitleYearAndCategory = (rawTitle: string): TitleBreakout | 
             order: parts[0].split('#')[1]
         };
     }
+    else if(rawTitle.indexOf('Decades of Horror') === 0) {
+        // Decades of Horror
+        const parts = rawTitle.split('–');
+        const titleAndYear = extractTitleAndYear(parts[1].trim());
+
+        return {
+            title: titleAndYear[0], 
+            year: titleAndYear[1], 
+            category: CATEGORIES.DECADES_OF_HORROR, 
+            categoryCls: 'decades_of_horror',
+            order: parts[0].split('#')[1]
+        };
+    }
 
     return null;
 }
