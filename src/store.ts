@@ -8,5 +8,6 @@ import rootReducer from './reducers/rootReducer';
 //   // other store enhancers if any
 // )
 
-const store = createStore(rootReducer)
+// @ts-ignore
+const store = createStore(rootReducer, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__())
 export default store

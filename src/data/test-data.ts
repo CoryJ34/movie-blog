@@ -15,6 +15,209 @@ const TAGS = {
 
 const data = [
   {
+    img: "https://einysrentals.files.wordpress.com/2021/06/pxl_20210630_191905518.jpg?w=800&h=600&crop=1",
+    title: "Decades of Horror #26 – Silent House (2011)",
+    content: [
+      "After the string of low/no budget movies, I was ready for something a little more standard.  When this started, I felt like the vibe was right.  A bit of <strong>A Dark Song (2016)</strong> for some reason.  But then as the movie got going, it got into the same old 2010s horror that just isn’t my groove.  Boring characters, lots of “use your imagination” moments where it’s just dark and you just have to imagine that something is happening to the main character.  It didn’t really pull me in, even though it started off looking like it was going to me moody and atmospheric.  It’s a pretty average movie, not one I’d watch again, but it’s still a bit of fresh air after the 2000s movies I endured.",
+      "5/10",
+    ],
+    date: "June 30, 2021",
+    id: 222,
+  },
+  {
+    img: "https://einysrentals.files.wordpress.com/2021/06/pxl_20210627_234343007.jpg?w=800&h=600&crop=1",
+    title: "Decades of Horror #25 – Dead Hooker in a Trunk (2009)",
+    content: [
+      "Hard to know what you’re getting with a title like this.  The third movie in a row where this was my only choice and the third in a row that’s pretty amateur-ish.. but this one is at a higher level than the two before.  That’s not to say it’s GOOD exactly, but it feels a little more like a “real movie”.  So the filmmaking aspect of it is not too terrible, but definitely limited by its budget.  The characters and the dialog were the areas where I found the movie kind of.. eh.  For such a small budget, the movie was still decently done, which is impressive.  If the characters and humor landed a bit better, I actually would have been fond of this.  It’s actually a fairly wild/fun adventure, just a little awkward in the writing.  Not great, but surprisingly decent for its insanely low budget.",
+      "5/10",
+      "For the 2000s:",
+      "<li><strong>Dark Water</strong> – Atmospheric and a little subtle, but also a little tame on the horror parts</li><li><strong>Jeepers Creepers</strong> – Standard post-2000s slasher/monster type of movie.  Not as creepy of a killer as I hoped</li><li><strong>Dead Hooker in a Trunk</strong> – Low budget but done decently well, the writing was a bit of a downside for me</li><li><strong>Harvest of Fear</strong> – Pretty bad and amateurish all around, but at least it had some twists and turns and tried to make an interesting story</li><li><strong>A Brush with Death</strong> – Similarly bad, but such a slow buildup</li>",
+      "That was a pretty rough decade for this set of movies.  I think one super low budget movie would have been a good sample from this decade since it represents the shift in technology to where anybody could slap together a movie with digital cameras.  However, three of these movies was pretty tough.  I just didn’t have any other options, I guess my horror collection is pretty light around this era.  Anyway, onto the last decade, which will probably have a clunker or two, but I expect the decade to be more interesting for me.",
+    ],
+    date: "June 29, 2021",
+    id: 221,
+  },
+  {
+    img: "https://einysrentals.files.wordpress.com/2021/06/pxl_20210627_234312849.jpg?w=800&h=600&crop=1",
+    title: "Decades of Horror #24 – A Brush with Death (2007)",
+    content: [
+      "And the second of this double pack.  I’m not even sure why I have this double pack.. maybe it came in the HorrorPack subscription I used to get..?  I don’t know that I’d buy this on a whim.  Anyway, this is really similar to <strong>Harvest of Fear</strong> in terms of quality.  This one goes a little crazier than the other, but has a lot more dumb non-horror time.  Most of the movie is just a group of girls hanging out at a house.  Again, bad acting, kind of aimless.  There isn’t much else to say that I didn’t already say in the previous post.  Points for effort and for going in some creepy directions, but overall just too low quality for me to like.",
+      "3/10",
+    ],
+    date: "June 28, 2021",
+    id: 220,
+  },
+  {
+    img: "https://einysrentals.files.wordpress.com/2021/06/pxl_20210627_234312849.jpg?w=800&h=600&crop=1",
+    title: "Decades of Horror #23 – Harvest of Fear (2004)",
+    content: [
+      "Hoo boy.. well for the 2004-2005 pick and 2006-2007 pick, I had no options but this one and the next movie (if you’re wondering what it is, hint hint, it’s in the cover art for this post).  According to Letterboxd, when sorting my owned Blu-Ray movies by film popularity, this is the LEAST popular movie I own (out of 1329 at this time).  That’s rough.. so the odds are kind of stacked against it.  No budget, bad acting, unoriginal plot (it’s a post-2000s slasher) and just an all around amateur production.  However, it’s got a little bit of heart.. it seems like they really <em>tried</em> to make a movie here and they made…something.  With some technical polish and fewer eye-roll moments, it could actually be a passable small-town slasher movie.  But as it is, it’s pretty rough. Some points for the effort, but it’s not a good end result.",
+      "3/10",
+    ],
+    date: "June 28, 2021",
+    id: 219,
+  },
+  {
+    img: "https://einysrentals.files.wordpress.com/2021/06/pxl_20210627_234245401.jpg?w=800&h=600&crop=1",
+    title: "Decades of Horror #22 – Dark Water (2002)",
+    content: [
+      "Next up is a Japanese horror movie from the director of <strong>Ringu (1998)</strong>.  A similar setup.. a mother and child, mother trying to protect the child, some kind of ghost or spirit from a prior incident involving water.. it’s fairly similar.  However, this movie is a little more drama about the mom, daughter, custody, her divorce and her sanity.  It’s got a creepy atmosphere and a very gray/beige kind of look and feel to it.  In the end, the horror level is pretty tame, but still a very interesting watch.  Despite the horror, there is something kind of cozy about movies in these small Japanese apartments.  Seems really comfortable, as long as the ceiling isn’t leaking..",
+      "7/10",
+    ],
+    date: "June 27, 2021",
+    id: 218,
+    tags: [TAGS.JAPANESE]
+  },
+  {
+    img: "https://einysrentals.files.wordpress.com/2021/06/pxl_20210627_234229193.jpg?w=800&h=600&crop=1",
+    title: "Decades of Horror #21 – Jeepers Creepers (2001)",
+    content: [
+      "Sigh… I know about the director’s past, which is one reason I never got around to watching it.  But this was my only option for 2000-2001 when making this list, so here we are.  I’ll try to just separate the movie from the director here.  I had heard this was a pretty decent early 2000s horror movie, so I thought it’d be worth a watch at some point.  I would say “decent” is about right.. it has some creepy moments but also some ridiculous stuff.  The killer creature here looks like the <strong>Wishmaster (1997)</strong> genie guy, but with some other animal features.  The premise itself is creepy, driving on an isolated road and being chased or hunted by someone.. that’s a bit of a fear of mine.  I mean, what can you really do there?  It has its moments, but it isn’t a classic really.. maybe with a creepier killer, it could work a little better.  It was like a mix of cheap rubber suit + CGI so it kind of undermined the intimidating factor.  An ok movie, but too bad it comes with the director’s baggage..",
+      "6/10",
+    ],
+    date: "June 27, 2021",
+    id: 217,
+  },
+  {
+    img: "https://einysrentals.files.wordpress.com/2021/06/pxl_20210617_134200324.jpg?w=800&h=600&crop=1",
+    title: "Decades of Horror #20 – Deep Rising (1998)",
+    content: [
+      "Ending the 90s similar to how I ended the 80s.  I felt like this would be a fun choice to pair with <strong>DeepStar Six (1989)</strong> since they seem similar from the outset.. both start with “Deep”, both blu-rays released by KL Studios with slipcover and both about underwater ship crews facing some threat.  In the end, they were actually pretty similar, but both fit their decade.  This one gets back to trying to add a little crew chemistry and a little humor, but I don’t think those worked too well.  At least the movie wasn’t afraid to show the monster, although it took a while to get to the “horror” part of the movie.  The first half just felt like any generic 90s action movie, but it eventually gets there.  This is that awkward period for CGI, but I’ve seen worse than the creature here, so it actually wasn’t too embarrassing.  It’s cheesy, it’s a little late 90s stank, but it’s all right for a horror action type of movie.  What really got on my nerve was the Joey character and the way he talked.  One of those unfunny comic relief characters with a voice that sounds almost like the pimple-faced teenager from The Simpsons.  ",
+      "After watching this, I find it funny that a lot of these “crew” movies have a very similar pairing.. <strong>Galaxy of Terror</strong> <strong>(1981)</strong> and <strong>Forbidden World (1982)</strong> both early 80s space crew movies.  <strong>Leviathan (1989) </strong>and <strong>DeepStar Six (1989)</strong>, both late 80s deep sea crew movies.  <strong>Deep Rising (1998)</strong> and <strong>Ghost Ship (2002)</strong> are sea crews who find a cruise ship with some.. problems.  For this movie in particular, it at least delivers on the action horror element, so when in need for that late 90s vibe, this is a possibility to go to.",
+      "6/10",
+      "Ranking the 90s films:",
+      "<li><strong>Event Horizon</strong> – Trippy, well-made and imaginative, but shows its age a little</li><li><strong>Night Breed</strong> – Even though it’s not really my “style” of horror movie, I appreciate the creativity and the world</li><li><strong>Deep Rising</strong> – A 90s action film and a 90s horror movie rolled into one, for better or worse</li><li><strong>Chill Factor</strong> – Felt like a slasher, technically was more of a supernatural/possession type movie, not really interesting though I liked the snow cabin setting</li><li><strong>Cruel Jaws</strong> – Not good.  It’s kind of in the realm of “so bad it’s good”.  Maybe it’s good for watching with friends, but watching alone.. it’s just a pretty bad movie</li>",
+      "As I mentioned before, I was pretty limited on my choices for 90s movies, so these were almost just the “default” options I had, but I ended up pretty happy with the results.  I got some of that late 90s stank, some early 80s-to-90s transitional horror and one of those bad video store rental type movies, so I feel like it was a good sampling of what the 90s had to offer.",
+    ],
+    date: "June 27, 2021",
+    id: 216,
+    tags: [TAGS.SCI_FI_HORROR]
+  },
+  {
+    img: "https://einysrentals.files.wordpress.com/2021/06/pxl_20210617_134148264.jpg?w=800&h=600&crop=1",
+    title: "Decades of Horror #19 – Event Horizon (1997)",
+    content: [
+      "Here’s one I was looking forward to as I’ve heard a bit about it in the past.  I knew it’d be a somewhat trippy space horror and that’s pretty much what it was.  Again, it’s another one of those “isolated crew” movies, but this time they don’t try to play up the crew in a jokey was with some forced chemistry.  It’s tone is a bit more serious throughout the movie.  The cast is decent and the setting and visuals are pretty cool.. but even this movie isn’t free of the late 90s stank with a little bit of noticeable bad CGI and things like that.  Although I would put it above the other “isolated crew” movies I’ve seen lately, it’s not <em>quite</em> my style.  There is a lot of psychological type of horror, which isn’t my thing, but it does get into more physical horror later, so it still is pretty good for my tastes.  All in all, pretty good and imaginative, interesting premise and decent acting.. but it doesn’t quite have a “timeless” feel due to its late 90s style.  Because of that late 90s stank on a spaceship, every once in a while, it feels like just a few steps away from <strong>Jason X (2001)</strong> and that’s somewhere you don’t want to be.",
+      "7.5/10",
+    ],
+    date: "June 25, 2021",
+    id: 215,
+    tags: [TAGS.SCI_FI_HORROR]
+  },
+  {
+    img: "https://einysrentals.files.wordpress.com/2021/06/pxl_20210617_134131942.jpg?w=800&h=600&crop=1",
+    title: "Decades of Horror #18 – Cruel Jaws (1995)",
+    content: [
+      "From what I’ve read, this movie is not affiliated with the <strong>Jaws</strong> series.. I wonder how there were no legality issues.  Speaking of rip-offs, there’s some <strong>Star Wars</strong> rip-off music here and there.  Anyway, this is a pretty bad movie.  Some of the worst acting I’ve seen and it feels a lot like those “SyFy” movies, just 15+ years earlier.  However, this one takes itself very seriously, which is kind of funny.  It’s the typical monster shark plot.  But there is a Hulk Hogan-looking guy.  Anyway, there’s not much to say, its a bad shark movie.  One thing I was thinking while I watched this was that it felt like the exact kind of movie my friends and I would rent back in high school, which is probably one of the big reasons I even like to collect these (sometimes) pretty bad horror movies and why I have an attachment to the video rental store.  Collecting movies, especially these bad, obscure horror and sci-fi movies, is a way for me to preserve that old video rental feeling.  I remember renting these classics:",
+      "<li><strong>Jack Frost (1997)</strong></li><li><strong>Jack Frost 2 (2000)</strong></li><li><strong>Uncle Sam (1996)</strong></li><li><strong>Ice Cream Man (1995)</strong></li><li><strong>Werewolf (1996)</strong></li><li><strong>Evil Ed (1995)</strong></li><li><strong>Steel (1997)</strong></li><li><strong>The Aurora Encounter (1986)</strong></li><li><strong>Monkey Shines (1988)</strong></li><li><strong>Ankle Biters (2002)</strong></li>",
+      "And more, I’m sure.  A lot of “A-Pix” films.  This movie would have fit right into that group and, even though it’s a pretty bad movie, at least it gave me this chance to reminisce, so I’ll give it that.",
+      "4/10",
+    ],
+    date: "June 21, 2021",
+    id: 214,
+  },
+  {
+    img: "https://einysrentals.files.wordpress.com/2021/06/pxl_20210617_134119421.jpg?w=800&h=600&crop=1",
+    title: "Decades of Horror #17 – The Chill Factor (1993)",
+    content: [
+      "I had no idea what this one was, although based on the cover art, it looked like it’d be a slasher in the snow.  It’s not that, unfortunately, although it kind of plays like one.  It’s more of a supernatural let’s summon demons type of movie.  It’s also a bad acting and awkward dialog type of movie.  There’s a little bit of casual racism thrown in the mix.. and some really strange narration, this is supposed to be the main girl narrating 30 years later?  Sounds like she took up smoking in those 30 years.  Anyway, it’s an ok premise.. a group of friends out skiing, one gets injured and they have to take shelter in a cabin until they can get help.  <em>Eventually</em> there’s the “let’s summon demons” part.  It’s just a little bit dated and, as I mentioned, pretty awkwardly executed.  It definitely feels more like a mid-80s movie rather than a 1993 movie.  It’s hard for me to believe that this movie and <strong>Jurassic Park (1993)</strong> could have come out in the same year.  It still has the 80s slasher feel anyway, despite not being one, because people are getting killed one by one, there is a final girl that discovers all of the bodies, etc.  There’s just not a “real” slasher.  But because of that similarity in its feel, I kind of rate it from that 80s slasher mindset, in which case, it’s like.. average or maybe even a bit below average.  The soundtrack’s funny too.. there is some weird 3 Blind Mice remix, not sure the relevance of that.",
+      "5/10",
+    ],
+    date: "June 19, 2021",
+    id: 213,
+  },
+  {
+    img: "https://einysrentals.files.wordpress.com/2021/06/pxl_20210617_134106186.mp_.jpg?w=800&h=600&crop=1",
+    title: "Decades of Horror #16 – Nightbreed (1990)",
+    content: [
+      "It’s 90s time.. a generally bad decade for horror, but I’ve got some at least interesting ones on my list.  The first is <strong>Nightbreed</strong>, which I actually have seen a little bit of years ago.  I just did the grunt work to dig through my Netflix viewing history and finally found that I started it in September of 2016.. so quite a while ago.  This time I committed to it and finished it.  I will say that I was not super interested in it previously, which explain why I watched maybe 45 minutes of it and never followed up.  I appreciate the creativity in the monster and world design, but the premise and the production somehow just don’t do much for me.  Maybe it’s that early 90s feel.. the soundtrack that is kind of too dramatic, I’m not sure.  After watching the whole thing, I still feel similar.. I think it’s a fine movie and it’s definitely imaginative, but it doesn’t really pull me in personally.  But it definitely gets points for the monsters and for doing something different.",
+      "6.5/10",
+    ],
+    date: "June 17, 2021",
+    id: 212,
+  },
+  {
+    img: "https://einysrentals.files.wordpress.com/2021/06/pxl_20210609_151223752.jpg?w=400&h=300&crop=1",
+    title: "Decades of Horror #15 – DeepStar Six (1989)",
+    content: [
+      "Of the movies in this watchlist, this was one of the ones I was most curious about.  I guess I was in the mood for some deep sea creature movie along the lines of <strong>Leviathan (1989)</strong>.  That’s probably a pretty common comparison to make since these came out the same year.  Just looking it up now, apparently this came out a couple months before Leviathan.  Unfortunately, I got a lot more “use your imagination” from this movie until the finale.  Most of the movie just felt like a crew dealing with technical issues and less about the threat of some creature.  As far as the crew goes, there are some noticeable actors here (two “Lloyds”.. Lloyd Braun from Seinfeld and Lloyd Henreid from The Stand 90s miniseries).  They’re fine but it feels like the movie tries a little too hard to make this crew feel like a worn-in crew who have a chemistry with each other.  It felt a little forced to me, but I guess that’s the problem with a lot of these crew-based movies.  I still do like these types of movies, as I know I’ve mentioned the similarities before.  In all these watchlists, I’ve gotten a handful of these movies.. off the top of my head: <strong>Galaxy of Terror (1981)</strong>, <strong>Forbidden World (1982)</strong>, <strong>Leviathan (1989)</strong> and <strong>Ghost Ship (2002)</strong>.  And now this one can join that pantheon.  I looked forward to this one and I was a little disappointed in the lack of “horror” elements for most of the movie, but it’s otherwise decent.",
+      "6.5/10",
+      "The 80s movies are done now and here’s how it shakes out for me:",
+      "<li><strong>Inferno</strong> – A little confusing or nonsensical sometimes, but it doesn’t matter, it’s a vibe</li><li><strong>Transylvania 6-5000</strong> – Goofy comedy, but it kind of comes together in the end</li><li><strong>DeepStar Six</strong> – Good “crew on an isolated ship” setup, just lacking a little in the horror</li><li><strong>Rest in Pieces</strong> – I had hoped for more of a zombie type film and it ended up more of a “crazy people in a small town” type of movie.  It ended up not being <em>super</em> interesting</li><li><strong>The Forest</strong> – A slasher without a ton of slashing and the typical uninteresting characters, except the killer was a little unsettling</li>",
+      "Now we enter into the dreaded 90s.  I’ll mention it now and probably several times in the future posts… the 90s, 2000s and 2010s were all pretty thin as far as my options for choosing movies in this watchlist.  At least a few times, I only had one option within a two year span, so I just had to pick it.  For the 70s and 80s especially, I got to pick a lot of stuff I was more interested in.  The 90s and on is probably going to get a little rough.. but I can handle it!",
+    ],
+    date: "June 14, 2021",
+    id: 211,
+    tags: [TAGS.SCI_FI_HORROR]
+  },
+  {
+    img: "https://einysrentals.files.wordpress.com/2021/06/pxl_20210609_151205113.mp_.jpg?w=800&h=600&crop=1",
+    title: "Decades of Horror #14 – Rest in Pieces (1987)",
+    content: [
+      "If I was rating this just on the cover art, this is a 10/10.  This is a great cover.. the movie itself is much less exciting.  In short, it’s one of those stories with a stranger in a town/area where the people are not what they seem.  I had no idea what the movie would be going into it, but by the cover art alone, I was hopeful for something zombie-ish.  I didn’t get that.  That’s all right, but still, the movie didn’t do much for me.  I will say, I had never seen a broken beer bottle over a dog’s head before, so that’s new.  Not much else to say other than it’s a little slow and I’m not particularly big on the premise, but it still has its moments.",
+      "6/10",
+    ],
+    date: "June 12, 2021",
+    id: 210,
+  },
+  {
+    img: "https://einysrentals.files.wordpress.com/2021/06/pxl_20210609_151149089.jpg?w=800&h=600&crop=1",
+    title: "Decades of Horror #13 – Transylvania 6-5000 (1985)",
+    content: [
+      "Last time was a slasher and now a comedy horror movie.  I think that fits the 80s well.. I always think of 80s horror in general being more fun than other decades.  Although this movie has a pretty impressive cast of well-known actors, a lot of them don’t quite nail it like I thought they would.  They have Michael Richards, but his character is just a little too goofy.  Jeff Goldblum and Ed Begley Jr are the leads and they are pretty likable.  Their jokes don’t always land but you root for them anyway.  For the first half of the movie, I was a little put off by the dumbness and predictability of the humor.. but about midway through, things start to get more interesting and it kind of won me over by the end.  It’s still not a great comedy, but it’s light and harmless.  How could I give this anything other than a 6.5… it’s practically in the title.",
+      "6.5/10",
+    ],
+    date: "June 10, 2021",
+    id: 209,
+    tags: [TAGS.COMEDY_HORROR]
+  },
+  {
+    img: "https://einysrentals.files.wordpress.com/2021/06/pxl_20210609_151134268.jpg?w=800&h=600&crop=1",
+    title: "Decades of Horror #12 – The Forest (1982)",
+    content: [
+      "What would the 80s portion of this watchlist be without a slasher.  This is a slasher, but there isn’t a ton of slashing.  It takes place in some woods/forest, but it’s more <strong>The Prey (1983)</strong> or <strong>Don’t Go in the Woods (1981) </strong>than the <strong>Friday the 13th</strong> movies.  There isn’t a very large cast of characters.. and the characters are pretty meh.  I know, it’s a slasher, who cares about characters, but still.. While the four main characters are pretty uninteresting, the killer (which is not some unknown mystery killer) is just off enough to be a little creepy.  There are also a couple of kid characters, son of this mountain man killer and somehow one of the two kids seems to have a British accent..?  Not sure where you’d pick that up in rural America.  This movie is probably right in the middle of the of the pack of 80s slashers.  The quality of the movie is a little better than some I’ve seen, but the slasher aspects are fairly lacking.",
+      "5.5/10",
+    ],
+    date: "June 10, 2021",
+    id: 208,
+    tags: [TAGS.SLASH80S]
+  },
+  {
+    img: "https://einysrentals.files.wordpress.com/2021/06/pxl_20210609_151112298.jpg?w=400&h=300&crop=1",
+    title: "Decades of Horror #11 – Inferno (1980)",
+    content: [
+      "80s time and the first one is a pretty good transition from 70s to 80s.  It’s a little giallo-like, but not quite.  It’s definitely Argento with the music and the colors, but there’s also some kind of.. awkward dialog.  Like, one part that stood out was this:",
+      "<p>Carol: It was your heart.</p><p>Mark: I don’t have heart problems.</p><p>Carol: We gave you some heart medicine just the same.</p>",
+      "“Heart medicine”.. is this common?  Anyway, that just sounded strange.  Aside from having that awkward/stiff feeling once in a while, it’s pretty good stylistically.  It’s one of those movies where I don’t really care <em>what</em> is going on, plot-wise, but I’m just enjoying the dark mood, the music, all that stuff.  So my very professional assessment of this movie is.. who cares or who knows what was going on, but it was pretty good.",
+      "7/10",
+    ],
+    date: "June 9, 2021",
+    id: 207,
+  },
+  {
+    img: "https://einysrentals.files.wordpress.com/2021/06/pxl_20210528_135347898.jpg?w=800&h=600&crop=1",
+    title: "Decades of Horror #10 – Piranha (1978)",
+    content: [
+      "The 70s have come to a close and it’s a post-<strong>Jaws (1976)</strong> underwater threat type of movie.  It’s a little cheap looking at times, like speeding up the film to make cars look like they are going faster, but it’s edited well enough to make the threat of killer piranhas somewhat believable.  What I actually kind of liked about the movie was the “buddy” aspect, with the two main characters teaming up and going on a journey to investigate and save people from the piranhas.  I also liked the summer camp aspect as well, but I’m a sucker for those kinds of movies.  Those things were nice, but the rest of it was a little cheap and a little clunky.. but it’s hard to make something like this work.  Jaws works through the power of suggestion.  Here, they try to show the fish more, but there’s something a little inherently silly about it sometimes.  But it’s fun, you can’t take a movie about piranhas too seriously.",
+      "6.5/10",
+      "Summing up the 70s, my ranking in order:",
+      "<li><strong>Shivers</strong> – Great premise, ok execution but finally ramps up at the end</li><li><strong>Sisters</strong> – The beginning was interesting, I started fading midway through but the ending was pretty wild</li><li><strong>Count Yorga, Vampire</strong> – Nothing new but a good 70s version of a Dracula-like story</li><li><strong>Piranha</strong> – Fun cheapness, kind of goofy premise but done surprisingly decently</li><li><strong>Burnt Offerings</strong> – Just a little too slow for me, even though it had some potential with its setup</li>",
+      "That’s all for the 70s, now to the 80s, my happy place.",
+    ],
+    date: "June 7, 2021",
+    id: 206,
+  },
+  {
+    img: "https://einysrentals.files.wordpress.com/2021/06/pxl_20210528_135302930.jpg?w=800&h=600&crop=1",
+    title: "Decades of Horror #9 – Burnt Offerings (1976)",
+    content: [
+      "This is a kind of supernatural, haunted house type movie, but one where there aren’t really ghosts, but instead just a “force” from the house.  It doesn’t sound too cool and that’s because it isn’t.  That premise can be cool though, just look at <strong>The Shining (1980)</strong>.. there are visions of ghosts, but it’s mostly just about the evil presence throughout the movie.  It’s funny, this movie is a little bit similar to that and with a bit of the atmosphere of <strong>The Changeling (1980)</strong>.  But this came before either movie, so it’s not a rip-off.. but it’s definitely much less interesting than either of those.  It just goes on way too long with a lot of nothing happening.  The ending finally has some interesting things happening, but I don’t know what sense it really makes.  The rest of the time, it just felt like a family drama with two parents and their son as caretakers of a big house with a pool.  It’s decently well-acted and has a familiar face from a few movies ago (<strong>Paranoiac</strong>) in Oliver Reed.  In the end, I had a hard time keeping interesting in it.",
+      "5.5/10",
+    ],
+    date: "June 6, 2021",
+    id: 205,
+  },
+  {
     img: "https://einysrentals.files.wordpress.com/2021/06/pxl_20210606_154658156.mp_.jpg?w=800&h=600&crop=1",
     title: "Decades of Horror #8 – Shivers (1975)",
     content: [

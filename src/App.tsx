@@ -12,6 +12,8 @@ import { CATEGORIES } from "./common/constants";
 import MovieList from "./components/list/MovieList";
 import { CategoryMeta } from "./models/CategoryMeta";
 import PageLayout from "./components/PageLayout";
+import CategorizedList from "./components/list/CategorizedList";
+import { Filter } from "./models/Filter";
 
 interface Props {
   movies: Movie[];
@@ -20,7 +22,10 @@ interface Props {
   currentFilter: string;
   selectedMovie: Movie;
   detailOpen: boolean;
+  filters: Filter[],
   loadMovies: () => void;
+  applyFilter: (filter: Filter) => void;
+  removeFilter: (filter: Filter) => void;
   filterByCategory: (filter: string) => void;
   filterByTag: (filter: string) => void;
   resetFilter: () => void;
@@ -46,6 +51,9 @@ function App(props: Props) {
     currentFilter,
     selectedMovie,
     detailOpen,
+    filters,
+    applyFilter,
+    removeFilter,
     filterByCategory,
     filterByTag,
     resetFilter,
@@ -61,6 +69,7 @@ function App(props: Props) {
 
   let moviesByCategory: CategoryMap = {};
 
+  // TODO: Should each list component have an onMount that triggers a filter action?
   movies.reverse().forEach((m) => {
     const category = m.titleBreakout.category;
 
@@ -83,6 +92,9 @@ function App(props: Props) {
               filterByCategory={filterByCategory}
               filterByTag={filterByTag}
               resetFilter={resetFilter}
+              // applyFilter={applyFilter}
+              // filters={filters}
+              // removeFilter={removeFilter}
               sort={sort}
               openDetail={openDetail}
             />
@@ -93,10 +105,11 @@ function App(props: Props) {
               categoryMeta={categoryMeta}
               presetCategory={CATEGORIES.GAMERA}
             >
-              <MovieList
+              <CategorizedList
                 categoryMeta={categoryMeta}
-                filteredMovies={moviesByCategory[CATEGORIES.GAMERA]}
+                filteredMovies={filteredMovies}
                 currentFilter={currentFilter}
+                applyFilter={applyFilter}
                 filterByCategory={filterByCategory}
                 filterByTag={filterByTag}
                 resetFilter={resetFilter}
@@ -112,10 +125,11 @@ function App(props: Props) {
               categoryMeta={categoryMeta}
               presetCategory={CATEGORIES.RANDOMIZER}
             >
-              <MovieList
+              <CategorizedList
                 categoryMeta={categoryMeta}
-                filteredMovies={moviesByCategory[CATEGORIES.RANDOMIZER]}
+                filteredMovies={filteredMovies}
                 currentFilter={currentFilter}
+                applyFilter={applyFilter}
                 filterByCategory={filterByCategory}
                 filterByTag={filterByTag}
                 resetFilter={resetFilter}
@@ -175,12 +189,11 @@ function App(props: Props) {
               categoryMeta={categoryMeta}
               presetCategory={CATEGORIES.FINISH_THE_SERIES_HORROR}
             >
-              <MovieList
+              <CategorizedList
                 categoryMeta={categoryMeta}
-                filteredMovies={
-                  moviesByCategory[CATEGORIES.FINISH_THE_SERIES_HORROR]
-                }
+                filteredMovies={filteredMovies}
                 currentFilter={currentFilter}
+                applyFilter={applyFilter}
                 filterByCategory={filterByCategory}
                 filterByTag={filterByTag}
                 resetFilter={resetFilter}
@@ -196,12 +209,11 @@ function App(props: Props) {
               categoryMeta={categoryMeta}
               presetCategory={CATEGORIES.DECADES_OF_HORROR}
             >
-              <MovieList
+              <CategorizedList
                 categoryMeta={categoryMeta}
-                filteredMovies={
-                  moviesByCategory[CATEGORIES.DECADES_OF_HORROR]
-                }
+                filteredMovies={filteredMovies}
                 currentFilter={currentFilter}
+                applyFilter={applyFilter}
                 filterByCategory={filterByCategory}
                 filterByTag={filterByTag}
                 resetFilter={resetFilter}
@@ -212,7 +224,7 @@ function App(props: Props) {
             </PageLayout>
           </Route>
           <Route>
-            <Home movies={movies} openDetail={openDetail} />
+            <Home movies={movies} openDetail={openDetail} resetFilters={resetFilter}/>
           </Route>
         </Switch>
       </Router>
@@ -233,6 +245,7 @@ const mapStateToProps = (state: any) => {
     currentFilter: state.movieStore?.currentFilter,
     selectedMovie: state.detailStore?.selectedMovie,
     detailOpen: state.detailStore?.detailOpen,
+    filters: state.movieStore?.filters
   };
 };
 
@@ -249,6 +262,10 @@ const mapDispatchToProps = (dispatch: any) => {
     openDetail: (movie: Movie) =>
       dispatch({ type: "detail/open", selectedMovie: movie }),
     closeDetail: () => dispatch({ type: "detail/close" }),
+    applyFilter: (filter: Filter) =>
+      dispatch({ type: "movies/applyFilter", filter }),
+    removeFilter: (filter: Filter) =>
+      dispatch({ type: "movies/removeFilter", filter }),
   };
 };
 

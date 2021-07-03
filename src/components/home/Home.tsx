@@ -10,13 +10,16 @@ import "./styles/Home.scss";
 interface Props {
   movies: Movie[];
   openDetail: (movie: Movie) => void;
+  resetFilters: () => void;
 }
 
 const Home = (props: Props) => {
-  const { movies, openDetail } = props;
+  const { movies, openDetail, resetFilters } = props;
   const [previews, setPreviews] = useState<Movie[]>([]);
 
   useEffect(() => {
+    resetFilters();
+
     let num = 5;
     let newPreviews = [];
     let moviesClone = [...props.movies];

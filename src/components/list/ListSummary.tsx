@@ -1,6 +1,7 @@
 import { Dialog } from "@material-ui/core";
 import React from "react";
 import react, { useState } from "react";
+import { connect } from "react-redux";
 import { extractRating } from "../../actions/TransferUtils";
 import categoryMeta from "../../data/category-meta";
 import {
@@ -8,6 +9,7 @@ import {
   RemarkObject,
   SingleCategoryMeta,
 } from "../../models/CategoryMeta";
+import { Filter, FilterType } from "../../models/Filter";
 import { Movie } from "../../models/Movie";
 import Sort from "./Sort";
 
@@ -18,6 +20,9 @@ interface Props {
   categoryMeta: CategoryMeta;
   presetCategory?: string;
   filter?: string;
+  filters: Filter[],
+  applyFilter: (filter: Filter) => void;
+  removeFilter: (filter: Filter) => void;
   filterByCategory?: (filter: string) => void;
   filterByTag?: (tag: string) => void;
   resetFilter?: () => void;
@@ -29,6 +34,9 @@ const ListSummary = (props: Props) => {
     movies,
     presetCategory,
     filter,
+    filters,
+    applyFilter,
+    removeFilter,
     filterByCategory,
     filterByTag,
     resetFilter,
@@ -100,10 +108,13 @@ const ListSummary = (props: Props) => {
         <div>
           {Object.keys(allCategories).map((k) => {
             const onClick = () => {
-              if (filter) {
-                resetFilter && resetFilter();
+              const val = allCategories[k];
+              const exists = (filters ||[]).find(f => f.type === FilterType.WATCHLIST && f.value === val);
+
+              if (exists) {
+                removeFilter({type: FilterType.WATCHLIST, value: val});
               } else {
-                filterByCategory && filterByCategory(allCategories[k]);
+                applyFilter({type: FilterType.WATCHLIST, value: val});
               }
             };
             return (
@@ -118,10 +129,12 @@ const ListSummary = (props: Props) => {
         <div>
           {allTags.map((tag) => {
             const onClick = () => {
-              if (filter) {
-                resetFilter && resetFilter();
+              const exists = (filters || []).find(f => f.type === FilterType.TAG && f.value === tag);
+
+              if (exists) {
+                removeFilter({type: FilterType.TAG, value: tag});
               } else {
-                filterByTag && filterByTag(tag);
+                applyFilter({type: FilterType.TAG, value: tag});
               }
             };
             return (
@@ -147,4 +160,19 @@ const ListSummary = (props: Props) => {
   );
 };
 
-export default ListSummary;
+const mapStateToProps = (state: any) => {
+  return {
+    filters: state.movieStore?.filters
+  };
+};
+
+const mapDispatchToProps = (dispatch: any) => {
+  return {
+    applyFilter: (filter: Filter) =>
+      dispatch({ type: "movies/applyFilter", filter }),
+    removeFilter: (filter: Filter) =>
+      dispatch({ type: "movies/removeFilter", filter }),
+  };
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(ListSummary);
