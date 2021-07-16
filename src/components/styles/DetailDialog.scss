@@ -3,8 +3,13 @@
 }
 
 .MuiPaper-root {
-  background-color: #242022 !important;
+  background-color: #121212 !important;
   border: solid 2px #777;
+
+  &.MuiDialog-paperWidthLg {
+    height: 480px;
+    position: relative;
+  }
 
   .img-container {
     height: 480px;
@@ -13,6 +18,17 @@
       filter: brightness(0.25);
       background-color: #242022;
       overflow: hidden;
+      // mask-image: linear-gradient(to bottom, black 40%, transparent 100%);
+      // -webkit-mask-image: linear-gradient(
+      //     to bottom,
+      //     black 40%,
+      //     transparent 100%
+      //   );
+
+      position: fixed;
+      width: calc(100% - 256px);
+      height: calc(100% - 64px);
+      max-height: 480px;
     }
 
     img {

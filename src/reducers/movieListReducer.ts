@@ -6,6 +6,8 @@ import { Movie } from "../models/Movie";
 import testData from "../data/test-data";
 import categoryMeta from "../data/category-meta";
 import { Filter, FilterType } from "../models/Filter";
+import ReferenceMap from "../models/ReferenceMap";
+import { buildChartData } from "../actions/ChartUtils";
 
 interface StateType {
   movies: Movie[] | null;
@@ -13,6 +15,8 @@ interface StateType {
   filters: Filter[] | null;
   sortField: string | null;
   sortDir: string | null;
+  chartData: any;
+  references: ReferenceMap | null;
 }
 
 const initialState: StateType = {
@@ -21,6 +25,8 @@ const initialState: StateType = {
   filters: null,
   sortField: null,
   sortDir: null,
+  chartData: null,
+  references: null,
 };
 
 const ratingComparator = (a: Movie, b: Movie): number => {
@@ -47,15 +53,75 @@ const filterMovies = (movies: Movie[], filters: Filter[]) => {
         if (m.titleBreakout.category !== f.value) {
           return false;
         }
-      }
-      // TODO: implement year/decade
-      else {
+      } else if (f.type === FilterType.YEAR) {
+        if (m.titleBreakout.year.substr(1, 4) !== f.value) {
+          return false;
+        }
+      } else if (f.type === FilterType.DECADE) {
+        if (m.titleBreakout.year.substr(1, 3) !== f.value.substr(0, 3)) {
+          return false;
+        }
+      } else {
         return false;
       }
     }
 
     return true;
   });
+};
+
+const sort = (
+  movies: Movie[] | null,
+  sortField: string | null,
+  sortDir: string | null
+) => {
+  if (!sortField) {
+    return movies;
+  }
+
+  let comparator = (a: Movie, b: Movie) => {
+    return parseInt(a.id, 10) - parseInt(b.id, 10);
+  };
+
+  if (sortField === "Year") {
+    comparator = yearComparator;
+  } else if (sortField === "Rating") {
+    comparator = ratingComparator;
+  }
+
+  let sorted = [...(movies || [])].sort(comparator);
+
+  if (sortDir === "DESC") {
+    sorted = sorted.reverse();
+  }
+
+  return sorted;
+};
+
+const findMovieReferences = (movies: Movie[]) => {
+  const referenceMap: any = {};
+
+  movies.forEach((m) => {
+    m.content.forEach((c) => {
+      const parts = c.split("<strong>");
+
+      parts.forEach((p) => {
+        const reference = p.split("</strong>")[0].trim();
+
+        if (reference.match(/^.* \([0-9]{4}\)$/)) {
+          if (referenceMap[reference]) {
+            if (referenceMap[reference].filter((r: Movie) => r.title === m.title).length === 0) {
+              referenceMap[reference].push(m);
+            }
+          } else {
+            referenceMap[reference] = [m];
+          }
+        }
+      });
+    });
+  });
+
+  return referenceMap;
 };
 
 export default function movieListReducer(state = initialState, action: any) {
@@ -69,11 +135,17 @@ export default function movieListReducer(state = initialState, action: any) {
         };
       });
 
+      const references = findMovieReferences(allMovies);
+
+      const filteredMovies = [...allMovies];
+
       return {
         ...state,
         movies: allMovies,
-        filteredMovies: [...allMovies],
+        filteredMovies,
+        chartData: buildChartData(filteredMovies),
         categoryMeta,
+        references,
       };
     }
     case "movies/applyFilter": {
@@ -87,10 +159,13 @@ export default function movieListReducer(state = initialState, action: any) {
         existingFilters.push({ type: filter.type, value: filter.value });
       }
 
+      const filtered = filterMovies(state.movies || [], existingFilters);
+
       return {
         ...state,
         filters: existingFilters,
-        filteredMovies: filterMovies(state.movies || [], existingFilters),
+        filteredMovies: sort(filtered, state.sortField, state.sortDir),
+        chartData: buildChartData(filtered),
       };
     }
     case "movies/removeFilter": {
@@ -100,28 +175,13 @@ export default function movieListReducer(state = initialState, action: any) {
         (f) => !(f.type === filter.type && f.value === filter.value)
       );
 
+      const filtered = filterMovies(state.movies || [], existingFilters);
+
       return {
         ...state,
         filters: existingFilters,
-        filteredMovies: filterMovies(state.movies || [], existingFilters),
-      };
-    }
-    case "movies/filterByCategory": {
-      return {
-        ...state,
-        currentFilter: action.filter,
-        filteredMovies: (state.movies || []).filter(
-          (m: Movie) => action.filter === m.titleBreakout.category
-        ),
-      };
-    }
-    case "movies/filterByTag": {
-      return {
-        ...state,
-        currentFilter: action.filter,
-        filteredMovies: (state.movies || []).filter((m: Movie) =>
-          (m.tags || []).includes(action.filter)
-        ),
+        filteredMovies: sort(filtered, state.sortField, state.sortDir),
+        chartData: buildChartData(filtered),
       };
     }
     case "movies/resetFilter": {
@@ -133,27 +193,15 @@ export default function movieListReducer(state = initialState, action: any) {
       };
     }
     case "movies/sort": {
-      let comparator = (a: Movie, b: Movie) => {
-        return parseInt(a.id, 10) - parseInt(b.id, 10);
-      };
-
-      if (action.sortField === "Year") {
-        comparator = yearComparator;
-      } else if (action.sortField === "Rating") {
-        comparator = ratingComparator;
-      }
-
-      let sorted = [...(state.filteredMovies || [])].sort(comparator);
-
-      if (action.sortDir === "DESC") {
-        sorted = sorted.reverse();
-      }
-
       return {
         ...state,
         sortField: action.sortField,
         sortDir: action.sortDir,
-        filteredMovies: sorted
+        filteredMovies: sort(
+          state.filteredMovies,
+          action.sortField,
+          action.sortDir
+        ),
       };
     }
     case "movies/resetSort": {
@@ -161,7 +209,7 @@ export default function movieListReducer(state = initialState, action: any) {
         ...state,
         sortField: null,
         sortDir: null,
-        filteredMovies: filterMovies((state.movies || []), (state.filters || []))
+        filteredMovies: filterMovies(state.movies || [], state.filters || []),
       };
     }
     default:

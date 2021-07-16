@@ -1,0 +1,33 @@
+.references-page {
+  .movie-reference {
+    .reference-name {
+      font-size: 18px;
+      font-weight: 600;
+      padding: 10px;
+      border-top: solid 2px #999;
+      border-bottom: solid 2px #999;
+      background: #171717;
+    }
+
+    .referencers {
+      display: flex;
+
+      .referencer {
+        display: inline-block;
+        cursor: pointer;
+        height: 160px;
+        width: 200px;
+        margin: 20px;
+
+        &:hover {
+          filter: brightness(1.25);
+        }
+
+        img {
+          height: 100%;
+          width: 100%;
+        }
+      }
+    }
+  }
+}

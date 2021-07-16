@@ -102,12 +102,24 @@
     margin: 20px auto;
 
     &.official {
-      background-color: #444;
+      // background-color: #444;
       border-radius: 4px;
+      background: linear-gradient(
+          to bottom,
+          #444 20%,
+          #333 60%
+        );
+      border: solid 2px #444;
 
-      .movie-card {
-        background-color: #777;
-      }
+      // .movie-card {
+      //   // background-color: #222;
+      //   // mask-image: linear-gradient(to bottom, black 50%, transparent 100%);
+      //   // background-color: linear-gradient(
+      //   //   to bottom,
+      //   //   #999 30%,
+      //   //   #222 100%
+      //   // );
+      // }
     }
   }
 

@@ -134,6 +134,19 @@ export const breakoutTitleYearAndCategory = (rawTitle: string): TitleBreakout | 
             order: parts[0].split('#')[1]
         };
     }
+    else if(rawTitle.indexOf('[Non-Horror] Finish the Series') === 0) {
+        // [Non-Horror] Finish the Series
+        const parts = rawTitle.split('–');
+        const titleAndYear = extractTitleAndYear(parts[1].trim());
+
+        return {
+            title: titleAndYear[0], 
+            year: titleAndYear[1], 
+            category: CATEGORIES.FINISH_THE_SERIES_NON_HORROR, 
+            categoryCls: 'finish_the_series_non_horror',
+            order: parts[0].split('#')[1]
+        };
+    }
 
     return null;
 }

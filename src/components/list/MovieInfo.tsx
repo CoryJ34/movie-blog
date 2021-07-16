@@ -26,29 +26,19 @@ const makeContentElement = (content: string, index: number) => {
 interface Props {
   movie: Movie;
   presetCategory?: string;
-  currentFilter?: string;
-  filterByCategory: (filter: string) => void;
-  resetFilter: () => void;
   openDetail: (selectedMovie: Movie) => void;
 }
 
 const MovieInfo = (props: Props) => {
-  const {
-    movie,
-    presetCategory,
-    currentFilter,
-    filterByCategory,
-    resetFilter,
-    openDetail,
-  } = props;
+  const { movie, presetCategory, openDetail } = props;
   const categoryInfo = movie.titleBreakout;
 
   const onCategoryClick = () => {
-    if (currentFilter) {
-      resetFilter();
-    } else {
-      filterByCategory(categoryInfo?.category);
-    }
+    // if (currentFilter) {
+    //   resetFilter();
+    // } else {
+    //   filterByCategory(categoryInfo?.category);
+    // }
   };
 
   const onImgClick = () => {
@@ -57,7 +47,7 @@ const MovieInfo = (props: Props) => {
 
   const order = categoryInfo?.order;
   let complexOrder = false;
-  if(order && !order.trim().match(/^[0-9]+$/)) {
+  if (order && !order.trim().match(/^[0-9]+$/)) {
     complexOrder = true;
   }
 
@@ -78,14 +68,20 @@ const MovieInfo = (props: Props) => {
           )}
           {categoryInfo?.subCategory && (
             <div className="sub-category">{categoryInfo.subCategory}</div>
-          )}  
+          )}
           {categoryInfo?.order && complexOrder && (
             <div className="category-order">{categoryInfo.order}</div>
           )}
           {presetCategory ? (
-            <div className="movie-title">{categoryInfo?.title}<span className="movie-year">{categoryInfo?.year}</span></div>
+            <div className="movie-title">
+              {categoryInfo?.title}
+              <span className="movie-year">{categoryInfo?.year}</span>
+            </div>
           ) : (
-            <div className="movie-title">{`#${movie.id} ${categoryInfo?.title}`}<span className="movie-year">{categoryInfo?.year}</span></div>
+            <div className="movie-title">
+              {`#${movie.id} ${categoryInfo?.title}`}
+              <span className="movie-year">{categoryInfo?.year}</span>
+            </div>
           )}
           <div className="published-date">{movie.date}</div>
           <div className="my-rating">My Rating: {extractRating(movie)}</div>

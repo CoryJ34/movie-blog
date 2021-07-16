@@ -11,6 +11,7 @@ import {
 } from "../../models/CategoryMeta";
 import { Filter, FilterType } from "../../models/Filter";
 import { Movie } from "../../models/Movie";
+import Charts from "./Charts";
 import Sort from "./Sort";
 
 import "./styles/ListSummary.scss";
@@ -19,40 +20,30 @@ interface Props {
   movies: Movie[];
   categoryMeta: CategoryMeta;
   presetCategory?: string;
-  filter?: string;
-  filters: Filter[],
+  filters: Filter[];
+  decades: number[];
+  hideSort?: boolean;
   applyFilter: (filter: Filter) => void;
   removeFilter: (filter: Filter) => void;
-  filterByCategory?: (filter: string) => void;
-  filterByTag?: (tag: string) => void;
-  resetFilter?: () => void;
-  sort?: (sortField: string, sortDir: string) => void;
 }
 
 const ListSummary = (props: Props) => {
   const {
     movies,
     presetCategory,
-    filter,
     filters,
+    decades,
+    hideSort,
     applyFilter,
-    removeFilter,
-    filterByCategory,
-    filterByTag,
-    resetFilter,
-    sort,
+    removeFilter
   } = props;
 
-  const [currentRemark, setCurrentRemark] = useState<RemarkObject | undefined>(
-    undefined
-  );
+  const [currentRemark, setCurrentRemark] =
+    useState<RemarkObject | undefined>(undefined);
 
   let averageRating = 0.0;
   let allCategories: any = {};
   let allTags: string[] = [];
-
-  // TODO: Find more statistics to display
-  // let ratingsByCategory = {};
 
   movies.forEach((movie) => {
     averageRating += parseFloat(extractRating(movie).split("/")[0].trim());
@@ -74,8 +65,25 @@ const ListSummary = (props: Props) => {
       categoryMeta[presetCategory || "none"]
     : null;
 
-  // TODO: Fix sorting
-  // const onSortByRatings = () => sort("rating", "ASC");
+  const renderDecades = () => {
+    return <div className="decades">
+      {decades.map(d => {
+        const onClick = () => {
+          const exists = (filters || []).find(
+            (f) => f.type === FilterType.DECADE && f.value === d.toString()
+          );
+
+          if (exists) {
+            removeFilter({ type: FilterType.DECADE, value: d.toString() });
+          } else {
+            applyFilter({ type: FilterType.DECADE, value: d.toString() });
+          }
+        };
+
+        return <div onClick={onClick} key={d} className="decade">{d}</div>
+      })}
+    </div>;
+  }
 
   return (
     <div className="list-summary">
@@ -109,12 +117,14 @@ const ListSummary = (props: Props) => {
           {Object.keys(allCategories).map((k) => {
             const onClick = () => {
               const val = allCategories[k];
-              const exists = (filters ||[]).find(f => f.type === FilterType.WATCHLIST && f.value === val);
+              const exists = (filters || []).find(
+                (f) => f.type === FilterType.WATCHLIST && f.value === val
+              );
 
               if (exists) {
-                removeFilter({type: FilterType.WATCHLIST, value: val});
+                removeFilter({ type: FilterType.WATCHLIST, value: val });
               } else {
-                applyFilter({type: FilterType.WATCHLIST, value: val});
+                applyFilter({ type: FilterType.WATCHLIST, value: val });
               }
             };
             return (
@@ -129,12 +139,14 @@ const ListSummary = (props: Props) => {
         <div>
           {allTags.map((tag) => {
             const onClick = () => {
-              const exists = (filters || []).find(f => f.type === FilterType.TAG && f.value === tag);
+              const exists = (filters || []).find(
+                (f) => f.type === FilterType.TAG && f.value === tag
+              );
 
               if (exists) {
-                removeFilter({type: FilterType.TAG, value: tag});
+                removeFilter({ type: FilterType.TAG, value: tag });
               } else {
-                applyFilter({type: FilterType.TAG, value: tag});
+                applyFilter({ type: FilterType.TAG, value: tag });
               }
             };
             return (
@@ -145,7 +157,9 @@ const ListSummary = (props: Props) => {
           })}
         </div>
       )}
-      <Sort />
+      {renderDecades()}
+      {!hideSort && <Sort />}
+      <Charts />
       <Dialog
         open={!!currentRemark}
         onClose={() => setCurrentRemark(undefined)}
@@ -161,8 +175,21 @@ const ListSummary = (props: Props) => {
 };
 
 const mapStateToProps = (state: any) => {
+  let decades: number[] = [];
+
+  (state.movieStore?.filteredMovies || []).forEach((m: Movie) => {
+    const decade = parseInt(m.titleBreakout.year.substr(1,3) + '0', 10);
+
+    if(decades.indexOf(decade) < 0) {
+      decades.push(decade);
+    }
+  });
+
+  decades.sort();
+
   return {
-    filters: state.movieStore?.filters
+    decades,
+    filters: state.movieStore?.filters,
   };
 };
 

@@ -7,27 +7,12 @@ import { CategoryMeta } from "../../models/CategoryMeta";
 interface Props {
   categoryMeta: CategoryMeta;
   filteredMovies: Movie[];
-  currentFilter: string;
   presetCategory?: string;
-  filterByCategory: (filter: string) => void;
-  filterByTag: (tag: string) => void;
-  resetFilter: () => void;
-  sort: (sortField: string, sortDir: string) => void;
   openDetail: (movie: Movie) => void;
 }
 
 function MovieList(props: Props) {
-  const {
-    categoryMeta,
-    filteredMovies,
-    presetCategory,
-    currentFilter,
-    filterByCategory,
-    filterByTag,
-    resetFilter,
-    sort,
-    openDetail,
-  } = props;
+  const { categoryMeta, filteredMovies, presetCategory, openDetail } = props;
 
   if (!filteredMovies) {
     return <div>Loading...</div>;
@@ -38,12 +23,7 @@ function MovieList(props: Props) {
         <ListSummary
           movies={filteredMovies}
           categoryMeta={categoryMeta}
-          sort={sort}
           presetCategory={presetCategory}
-          filter={currentFilter}
-          filterByCategory={filterByCategory}
-          filterByTag={filterByTag}
-          resetFilter={resetFilter}
         />
       )}
       <div className="movie-list">
@@ -51,9 +31,6 @@ function MovieList(props: Props) {
           <MovieInfo
             movie={m}
             presetCategory={presetCategory}
-            currentFilter={currentFilter}
-            filterByCategory={filterByCategory}
-            resetFilter={resetFilter}
             openDetail={openDetail}
             key={m.title}
           />

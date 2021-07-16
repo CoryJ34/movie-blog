@@ -3,6 +3,11 @@
     padding: 10px;
     border: solid 1px #555;
     box-shadow: 4px 4px 16px #111;
+    background: linear-gradient(
+          to bottom,
+          #222 70%,
+          #1C1C1C 100%
+        );
 
     .header {
         font-size: 22px;
@@ -25,6 +30,20 @@
         color: white;
         cursor: pointer;
         padding: 4px;
+    }
+
+    .decades {
+        display: flex;
+        margin-top: 10px;
+
+        .decade {
+            font-size: 12px;
+            padding: 3px;
+            border: solid 1px #aaa;
+            border-radius: 3px;
+            margin-right: 5px;
+            cursor: pointer;
+        }
     }
 
     .remarks {

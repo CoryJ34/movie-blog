@@ -8,13 +8,8 @@ import MovieInfo from "./MovieInfo";
 interface Props {
   categoryMeta: CategoryMeta;
   filteredMovies: Movie[];
-  currentFilter: string;
   presetCategory: string;
   applyFilter: (filter: Filter) => void;
-  filterByCategory: (filter: string) => void;
-  filterByTag: (tag: string) => void;
-  resetFilter: () => void;
-  sort: (sortField: string, sortDir: string) => void;
   openDetail: (movie: Movie) => void;
 }
 
@@ -23,12 +18,7 @@ function CategorizedList(props: Props) {
     categoryMeta,
     filteredMovies,
     presetCategory,
-    currentFilter,
     applyFilter,
-    filterByCategory,
-    filterByTag,
-    resetFilter,
-    sort,
     openDetail,
   } = props;
 
@@ -45,12 +35,7 @@ function CategorizedList(props: Props) {
         <ListSummary
           movies={filteredMovies}
           categoryMeta={categoryMeta}
-          sort={sort}
           presetCategory={presetCategory}
-          filter={currentFilter}
-          filterByCategory={filterByCategory}
-          filterByTag={filterByTag}
-          resetFilter={resetFilter}
         />
       )}
       <div className="movie-list">
@@ -58,9 +43,6 @@ function CategorizedList(props: Props) {
           <MovieInfo
             movie={m}
             presetCategory={presetCategory}
-            currentFilter={currentFilter}
-            filterByCategory={filterByCategory}
-            resetFilter={resetFilter}
             openDetail={openDetail}
             key={m.title}
           />

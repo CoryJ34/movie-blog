@@ -15,6 +15,60 @@ const TAGS = {
 
 const data = [
   {
+    img: "https://einysrentals.files.wordpress.com/2021/07/pxl_20210714_135404148.jpg?w=800&h=600&crop=1",
+    title: "[Non-Horror] Finish the Series #1 – Outlaw: Heartless (1968)",
+    content: [
+      "Starting off with the <strong>Outlaw</strong> series.  To be honest, this is one of the main reasons I decided to jump between series instead of finishing one and then going to the next.  It seemed a little bit daunting to watch four of these before watching something else.  Not because they are bad.. actually, they are pretty good.  Mainly it’s because, from what I’ve seen of them, they are so similar.  It’s a bit hard to differentiate between the movies in this series.  That’s not a knock against the movies, it’s just that they are all similarly structured.  I guess someone might say the same about a slasher series.. how many casual movie fans can tell the differences between the <strong>Friday the 13th</strong> movies?",
+      "In this one, it’s the typical “meets a girl/girls, tries to help and protect them, gets pissed off, fights a group of enemies with a knife” story that seems similar to the previous installments.  So nothing new there, but I did enjoy the visuals of the last fight.. in a kind of industrial building with lots of paint buckets getting needlessly spilled.  It added a lot of color and obstacles to the fight, so that was pretty fun.  Otherwise, it doesn’t stand out to me much but it’s basically just like watching a Japanese version of a Western, so it’s hard for me to dislike that.",
+      "6.5/10",
+    ],
+    date: "July 14, 2021",
+    id: 227,
+  },
+  {
+    img: "https://einysrentals.files.wordpress.com/2021/07/pxl_20210630_192009400.mp_.jpg?w=800&h=600&crop=1",
+    title: "Decades of Horror #30 – Depraved (2019)",
+    content: [
+      "And we’re at the end of the decades.  I was looking forward to this one the most but had to wait the whole watchlist to get there.  The reason I looked forward to it was because it is, as far as I can tell, one of only five movies written and directed by Larry Fessenden.  His other four I watched as part of my “March Madness” watchlist and I was impressed by all of them.  I was similarly impressed with this…mostly.  What I didn’t enjoy so much was the human drama, which felt a little forced to me and, unfortunately, the last third of the movie is mostly that.  So for most of the movie, I was pretty much on board.  It was still a pretty decent retelling of <strong>Frankenstein (1931)</strong> or a little bit like a serious <strong>Re-Animator (1985)</strong>.  Obviously, the movie is about resurrecting the dead through science and then it going wrong in the end.  Nothing new there, but the Larry Fessenden artistic style added a little bit for me.  If it were more about the “monster” and less about the “normal” people, it would have been a bit higher for me.  I still liked it though, so the Fessenden hitting streak continues for me.",
+      "7.5/10",
+      "Last of the watchlist, which also means last of the 2010s.  Here’s how it shakes out:",
+      "<li><strong>Depraved</strong> – Stylistic with some heart.  Even when the writing or acting doesn’t work, the “feel” still works for me</li><li><strong>Howl</strong> – My kind of premise, people trapped in a small location, but could have been a bit more interesting..</li><li><strong>Incarnate</strong> – Not bad if you get past the cheesy pseudoscience</li><li><strong>Silent House</strong> – Pretty forgettable but nothing too embarrassingly bad about it, just “meh”</li><li><strong>Chernobyl Diaries</strong> – Lame characters and setup for the premise, but an interesting location at least</li>",
+      "And that’s that.  I’ll sum up my thoughts on the whole watchlist soon!",
+    ],
+    date: "July 11, 2021",
+    id: 226,
+  },
+  {
+    img: "https://einysrentals.files.wordpress.com/2021/07/pxl_20210630_191959466.jpg?w=800&h=600&crop=1",
+    title: "Decades of Horror #29 – Incarnate (2016)",
+    content: [
+      "All right, back at it with another 2010s movie.  If this movie had an alternate title, it’d be “Exorception” because it’s basically <strong>The Exorcist (1973)</strong> meets <strong>Inception (2010)</strong>.  A guy can “go into the mind” of possessed people and is called on to help a possessed boy.  So yep, it’s basically what you’d expect.  It’s played 100% seriously but I’m sorry, I can’t take the pseudoscience and made up jargon so seriously.  The cast is decent and the movie is pretty polished, but the strongest thing in its favor was the “Inception” concept and I didn’t feel it did much with that.  Going into people’s minds had a lot more potential for creativity.  It wasn’t a terrible movie but it’s pretty cheesy in setting up its premise and the “techniques” for the inception stuff.  It could have been good if done a little differently, but for me, it’s just OK.",
+      "6/10",
+    ],
+    date: "July 11, 2021",
+    id: 225,
+  },
+  {
+    img: "https://einysrentals.files.wordpress.com/2021/07/pxl_20210630_191944602.jpg?w=800&h=600&crop=1",
+    title: "Decades of Horror #28 – Howl (2015)",
+    content: [
+      "Another movie with a pretty limited setting, this time a train.  Trains are cool settings and this eventually does ramp up towards the end, but most of the time on the train, there’s not much actually happening.  Take a movie like <strong>Train to Busan (2016)</strong> or even <strong>Snowpiercer (2013)</strong> and there is a lot happening within the train cars.  Here, there is a “mysterious” thread outside a train that suddenly stopped in the woods (hint, it might be a wolf creature), then there’s just the “threat” of the creature from the outside while everyone is inside the train, so the train could have been anything at this point.. it’s just shelter.  But eventually they actually start showing the wolf creature.. or creatures.. and things pick up.  It feels a little bit like they took some inspiration from <strong>Shaun of the Dead (2004)</strong> in some of the setup.. a typically “weak” guy who has to take charge and is trying to impress a woman, a chubby comedic relief guy, a guy who you love to hate, all trapped together inside this shelter.  Only these characters were much more bland.  Still though, it’s not a bad movie, enjoyable when things start to pick up.",
+      "6.5/10",
+    ],
+    date: "July 3, 2021",
+    id: 224,
+  },
+  {
+    img: "https://einysrentals.files.wordpress.com/2021/07/pxl_20210630_191931350.jpg?w=800&h=600&crop=1",
+    title: "Decades of Horror #27 – Chernobyl Diaries (2012)",
+    content: [
+      "This is a big “meh”.  It’s both an interesting premise and a dumb premise.  It’s interesting because at least it’s something different.. set in Chernobyl/Pripyat, it’s pretty unique compared to most horror movies.  However, why would anyone want to go there.. that’s the dumb part.  I find it hard to believe that anyone would get excited about going to Chernobyl, enough to suddenly rearrange their existing travel plans.  But however awkward it is to setup the fact that they are in the Chernobyl area, they are there.  Once there, it becomes a typical movie for the era… attempts at jump scares, uninteresting characters, forced drama, you know the routine.  So while I give it some props for a more unique setting, it’s still a pretty underwhelming movie for me and just another below average 2010s movie.",
+      "4.5/10",
+    ],
+    date: "July 3, 2021",
+    id: 223,
+  },
+  {
     img: "https://einysrentals.files.wordpress.com/2021/06/pxl_20210630_191905518.jpg?w=800&h=600&crop=1",
     title: "Decades of Horror #26 – Silent House (2011)",
     content: [
@@ -66,7 +120,7 @@ const data = [
     ],
     date: "June 27, 2021",
     id: 218,
-    tags: [TAGS.JAPANESE]
+    tags: [TAGS.JAPANESE],
   },
   {
     img: "https://einysrentals.files.wordpress.com/2021/06/pxl_20210627_234229193.jpg?w=800&h=600&crop=1",
@@ -83,7 +137,7 @@ const data = [
     title: "Decades of Horror #20 – Deep Rising (1998)",
     content: [
       "Ending the 90s similar to how I ended the 80s.  I felt like this would be a fun choice to pair with <strong>DeepStar Six (1989)</strong> since they seem similar from the outset.. both start with “Deep”, both blu-rays released by KL Studios with slipcover and both about underwater ship crews facing some threat.  In the end, they were actually pretty similar, but both fit their decade.  This one gets back to trying to add a little crew chemistry and a little humor, but I don’t think those worked too well.  At least the movie wasn’t afraid to show the monster, although it took a while to get to the “horror” part of the movie.  The first half just felt like any generic 90s action movie, but it eventually gets there.  This is that awkward period for CGI, but I’ve seen worse than the creature here, so it actually wasn’t too embarrassing.  It’s cheesy, it’s a little late 90s stank, but it’s all right for a horror action type of movie.  What really got on my nerve was the Joey character and the way he talked.  One of those unfunny comic relief characters with a voice that sounds almost like the pimple-faced teenager from The Simpsons.  ",
-      "After watching this, I find it funny that a lot of these “crew” movies have a very similar pairing.. <strong>Galaxy of Terror</strong> <strong>(1981)</strong> and <strong>Forbidden World (1982)</strong> both early 80s space crew movies.  <strong>Leviathan (1989) </strong>and <strong>DeepStar Six (1989)</strong>, both late 80s deep sea crew movies.  <strong>Deep Rising (1998)</strong> and <strong>Ghost Ship (2002)</strong> are sea crews who find a cruise ship with some.. problems.  For this movie in particular, it at least delivers on the action horror element, so when in need for that late 90s vibe, this is a possibility to go to.",
+      "After watching this, I find it funny that a lot of these “crew” movies have a very similar pairing.. <strong>Galaxy of Terror (1981)</strong> and <strong>Forbidden World (1982)</strong> both early 80s space crew movies.  <strong>Leviathan (1989) </strong>and <strong>DeepStar Six (1989)</strong>, both late 80s deep sea crew movies.  <strong>Deep Rising (1998)</strong> and <strong>Ghost Ship (2002)</strong> are sea crews who find a cruise ship with some.. problems.  For this movie in particular, it at least delivers on the action horror element, so when in need for that late 90s vibe, this is a possibility to go to.",
       "6/10",
       "Ranking the 90s films:",
       "<li><strong>Event Horizon</strong> – Trippy, well-made and imaginative, but shows its age a little</li><li><strong>Night Breed</strong> – Even though it’s not really my “style” of horror movie, I appreciate the creativity and the world</li><li><strong>Deep Rising</strong> – A 90s action film and a 90s horror movie rolled into one, for better or worse</li><li><strong>Chill Factor</strong> – Felt like a slasher, technically was more of a supernatural/possession type movie, not really interesting though I liked the snow cabin setting</li><li><strong>Cruel Jaws</strong> – Not good.  It’s kind of in the realm of “so bad it’s good”.  Maybe it’s good for watching with friends, but watching alone.. it’s just a pretty bad movie</li>",
@@ -91,7 +145,7 @@ const data = [
     ],
     date: "June 27, 2021",
     id: 216,
-    tags: [TAGS.SCI_FI_HORROR]
+    tags: [TAGS.SCI_FI_HORROR],
   },
   {
     img: "https://einysrentals.files.wordpress.com/2021/06/pxl_20210617_134148264.jpg?w=800&h=600&crop=1",
@@ -102,7 +156,7 @@ const data = [
     ],
     date: "June 25, 2021",
     id: 215,
-    tags: [TAGS.SCI_FI_HORROR]
+    tags: [TAGS.SCI_FI_HORROR],
   },
   {
     img: "https://einysrentals.files.wordpress.com/2021/06/pxl_20210617_134131942.jpg?w=800&h=600&crop=1",
@@ -148,7 +202,7 @@ const data = [
     ],
     date: "June 14, 2021",
     id: 211,
-    tags: [TAGS.SCI_FI_HORROR]
+    tags: [TAGS.SCI_FI_HORROR],
   },
   {
     img: "https://einysrentals.files.wordpress.com/2021/06/pxl_20210609_151205113.mp_.jpg?w=800&h=600&crop=1",
@@ -169,7 +223,7 @@ const data = [
     ],
     date: "June 10, 2021",
     id: 209,
-    tags: [TAGS.COMEDY_HORROR]
+    tags: [TAGS.COMEDY_HORROR],
   },
   {
     img: "https://einysrentals.files.wordpress.com/2021/06/pxl_20210609_151134268.jpg?w=800&h=600&crop=1",
@@ -180,7 +234,7 @@ const data = [
     ],
     date: "June 10, 2021",
     id: 208,
-    tags: [TAGS.SLASH80S]
+    tags: [TAGS.SLASH80S],
   },
   {
     img: "https://einysrentals.files.wordpress.com/2021/06/pxl_20210609_151112298.jpg?w=400&h=300&crop=1",
@@ -989,7 +1043,7 @@ const data = [
   {
     img: "https://einysrentals.files.wordpress.com/2021/03/pxl_20210304_213928214.jpg?w=800&h=600&crop=1",
     content: [
-      "We’re in the home stretch, the last group of 8.  First up is another of the <strong>Invisible Man</strong> series.  While it’s better than <strong>The Invisible Woman</strong> <strong>(1940)</strong>, I’m still not really into these Universal monster series being so non-horror.  This time, it’s a WW2-era movie, so of course it’s about fighting Nazis and a using the invisibility to help America win!  It’s pretty predictable and of course it has the romantic tension side story, so this isn’t a really unique movie.  The main props I would give it is for the special effects.  I think that’s the main thing these Invisible movies have going for them.  Anyway, some of it looks a little funny now but overall, some of the tricks they pulled off still work all right.  Otherwise, nothing too interesting here.",
+      "We’re in the home stretch, the last group of 8.  First up is another of the <strong>Invisible Man</strong> series.  While it’s better than <strong>The Invisible Woman (1940)</strong>, I’m still not really into these Universal monster series being so non-horror.  This time, it’s a WW2-era movie, so of course it’s about fighting Nazis and a using the invisibility to help America win!  It’s pretty predictable and of course it has the romantic tension side story, so this isn’t a really unique movie.  The main props I would give it is for the special effects.  I think that’s the main thing these Invisible movies have going for them.  Anyway, some of it looks a little funny now but overall, some of the tricks they pulled off still work all right.  Otherwise, nothing too interesting here.",
       "5.5/10",
     ],
     title: "March Madness #25 – Invisible Agent (1942)",
@@ -1188,7 +1242,7 @@ const data = [
   {
     img: "https://einysrentals.files.wordpress.com/2021/02/pxl_20210214_140212298.jpg?w=800&h=600&crop=1",
     content: [
-      "I’m back baby!  I didn’t die while skiing so I consider that a plus.  Back home now and stuck in a snowstorm, what better way to escape the cold than to watch a slasher-in-the-woods movie.  Aren’t woodsy slashers one of the most “summery” things out there?  In the world of slasher-in-the-woods, there is of course the <strong>Friday the 13th</strong> series and I have a soft spot for <strong>Sleepaway Camp (1983)</strong>.  <strong>The Burning (1981)</strong> is good and <strong>Madman</strong> <strong>(1981)</strong> is.. all right.  Below those is <strong>The Prey (1983)</strong> that I just watched in the first round of this March Madness.  And below that is <strong>Don’t Go in the Woods</strong>.  Why doesn’t it live up to the others?  Well its production quality is pretty low, even by 80s slasher standards, the characters have whatever the opposite of charisma is and the kills are pretty lame.  I’m sure a lot of it comes down to budget.. the kills are generally off-screen with just a splash of bright red blood after the fact.  There isn’t much else to this movie, just a few campers hiking in the wilderness and people go missing and the park rangers have to go investigate.  As an aside, I really prefer the slashers-in-the-woods that are based around campgrounds and cabins.  There’s something interesting about the contrast between the fun, cozy cabins and the threat of the killer.  Anyway, enough of my rambling, I guess because I didn’t watch and write about a movie for over a week, I couldn’t help myself.. although I barely talked about <em>this </em>particular movie at all.. and it makes sense, it’s not a very significant or memorable one.",
+      "I’m back baby!  I didn’t die while skiing so I consider that a plus.  Back home now and stuck in a snowstorm, what better way to escape the cold than to watch a slasher-in-the-woods movie.  Aren’t woodsy slashers one of the most “summery” things out there?  In the world of slasher-in-the-woods, there is of course the <strong>Friday the 13th</strong> series and I have a soft spot for <strong>Sleepaway Camp (1983)</strong>.  <strong>The Burning (1981)</strong> is good and <strong>Madman (1981)</strong> is.. all right.  Below those is <strong>The Prey (1983)</strong> that I just watched in the first round of this March Madness.  And below that is <strong>Don’t Go in the Woods</strong>.  Why doesn’t it live up to the others?  Well its production quality is pretty low, even by 80s slasher standards, the characters have whatever the opposite of charisma is and the kills are pretty lame.  I’m sure a lot of it comes down to budget.. the kills are generally off-screen with just a splash of bright red blood after the fact.  There isn’t much else to this movie, just a few campers hiking in the wilderness and people go missing and the park rangers have to go investigate.  As an aside, I really prefer the slashers-in-the-woods that are based around campgrounds and cabins.  There’s something interesting about the contrast between the fun, cozy cabins and the threat of the killer.  Anyway, enough of my rambling, I guess because I didn’t watch and write about a movie for over a week, I couldn’t help myself.. although I barely talked about <em>this </em>particular movie at all.. and it makes sense, it’s not a very significant or memorable one.",
       "4.5/10",
     ],
     title: "March Madness #9 – Don’t Go in the Woods (1981)",
@@ -2161,7 +2215,7 @@ const data = [
   {
     img: "https://einysrentals.files.wordpress.com/2020/09/pxl_20200930_134635333.portrait-01.cover_.jpg?w=800&h=600&crop=1",
     content: [
-      "This is a “horror” “comedy” and I really emphasize those quotation marks.  There is no horror and the comedy is… rough.  Maybe the humor is just too old-fashioned but it really doesn’t work for me.  I know the <strong>Invisible Man</strong> <strong>(1933) </strong>had some elements of comedy and some over-the-top moments, but at least it was more of a dark humor.  The Invisible Woman is a mix of slapstick comedy, romance and crime.  I’m not sure why I should be so offended by the cheesiness of it all when cheesiness is my jam most of the time.  I guess I’m forgiving of something that tries to be scary but fails than I am of something that tries to be funny but fails.",
+      "This is a “horror” “comedy” and I really emphasize those quotation marks.  There is no horror and the comedy is… rough.  Maybe the humor is just too old-fashioned but it really doesn’t work for me.  I know <strong>The Invisible Man (1933) </strong>had some elements of comedy and some over-the-top moments, but at least it was more of a dark humor.  The Invisible Woman is a mix of slapstick comedy, romance and crime.  I’m not sure why I should be so offended by the cheesiness of it all when cheesiness is my jam most of the time.  I guess I’m forgiving of something that tries to be scary but fails than I am of something that tries to be funny but fails.",
       "4/10",
     ],
     title: "#34 – Week 5 – BONUS 1 – The Invisible Woman (1940)",
@@ -2470,7 +2524,7 @@ const data = [
   {
     img: "https://einysrentals.files.wordpress.com/2020/09/00100lrportrait_00100_burst20200903222542437_cover_2.jpg?w=800&h=600&crop=1",
     content: [
-      "I’m doing extra movies already, the absolute madman.  Sticking with the week 1 theme of sci-fi.  So was there a fly somewhere and I missed it or..?  This could have been called anything, all the connections to <strong>The Fly</strong> <strong>(1958)</strong> were pretty useless.  The movie gets some points for some creepy experimental freaks or whatever, especially the one in the negative lighting shot, but otherwise it’s kind of long and pointless.  While <strong>The Fly</strong> and <strong>Return of the Fly</strong> <strong>(1959)</strong> (with Vincent Price, you guinea pig) were ok to me (not <em>great</em>), at least they had a FLY, and so they also have my respect.",
+      "I’m doing extra movies already, the absolute madman.  Sticking with the week 1 theme of sci-fi.  So was there a fly somewhere and I missed it or..?  This could have been called anything, all the connections to <strong>The Fly (1958)</strong> were pretty useless.  The movie gets some points for some creepy experimental freaks or whatever, especially the one in the negative lighting shot, but otherwise it’s kind of long and pointless.  While <strong>The Fly</strong> and <strong>Return of the Fly (1959)</strong> (with Vincent Price, you guinea pig) were ok to me (not <em>great</em>), at least they had a FLY, and so they also have my respect.",
       "5/10",
     ],
     title: "#6 – Week 1 – BONUS 1 – Curse of the Fly (1965)",

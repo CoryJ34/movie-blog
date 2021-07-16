@@ -54,6 +54,15 @@
   .section-header {
     font-size: 24px;
     margin-bottom: 20px;
+
+    .refresh-previews {
+      margin-left: 10px;
+      cursor: pointer;
+
+      &:hover {
+        filter: brightness(1.25);
+      }
+    }
   }
 
   .featured {
@@ -64,6 +73,7 @@
     .featured-card {
       overflow: hidden;
       position: relative;
+      box-shadow: 4px 4px 12px #000;
 
       .featured-card-content {
         position: absolute;
@@ -76,9 +86,15 @@
       }
 
       .featured-card-backsplash {
-        opacity: 0.2;
+        opacity: 0.4;
         width: 100%;
         height: 100%;
+        mask-image: linear-gradient(to bottom, black 50%, transparent 100%);
+        -webkit-mask-image: linear-gradient(
+          to bottom,
+          black 30%,
+          transparent 100%
+        );
 
         img {
           height: 100%;
@@ -87,75 +103,84 @@
       }
 
       &.halloween_2020 {
-        background: linear-gradient(
-          to bottom,
-          rgb(221, 110, 31) 20%,
-          rgb(131, 64, 15) 100%
-        );
-        border: solid 3px rgb(131, 64, 15);
+        // background: linear-gradient(
+        //   to bottom,
+        //   rgb(221, 110, 31) 20%,
+        //   rgb(131, 64, 15) 100%
+        // );
+        border: solid 2px rgb(131, 64, 15);
       }
 
       &.march_madness {
-        background: linear-gradient(
-          to bottom,
-          rgb(65, 34, 148) 20%,
-          rgb(35, 19, 77) 100%
-        );
-        border: solid 3px rgb(35, 19, 77);
+        // background: linear-gradient(
+        //   to bottom,
+        //   rgb(65, 34, 148) 20%,
+        //   rgb(35, 19, 77) 100%
+        // );
+        border: solid 2px rgb(35, 19, 77);
       }
 
       &.genres {
-        background: linear-gradient(
-          to bottom,
-          #6a6a6e 20%,
-          #4a4a4e 100%
-        );
-        border: solid 3px #4a4a4e;
+        // background: linear-gradient(
+        //   to bottom,
+        //   #6a6a6e 20%,
+        //   #4a4a4e 100%
+        // );
+        border: solid 2px #4a4a4e;
       }
 
       &.randomizer {
-        background: linear-gradient(
-          to bottom,
-          #703869 20%,
-          #501849 100%
-        );
-        border: solid 3px #501849;
+        // background: linear-gradient(
+        //   to bottom,
+        //   #703869 20%,
+        //   #501849 100%
+        // );
+        border: solid 2px #501849;
       }
 
       &.gamera {
-        background: linear-gradient(
-          to bottom,
-          #2a9441 20%,
-          #0a7421 100%
-        );
-        border: solid 3px #0a7421;
+        // background: linear-gradient(
+        //   to bottom,
+        //   #2a9441 20%,
+        //   #0a7421 100%
+        // );
+        border: solid 2px #0a7421;
       }
 
       &.nov_dec_2020 {
-        background: linear-gradient(
-          to bottom,
-          #194a81 20%,
-          #092a61 100%
-        );
-        border: solid 3px #092a61;
+        // background: linear-gradient(
+        //   to bottom,
+        //   #194a81 20%,
+        //   #092a61 100%
+        // );
+        border: solid 2px #092a61;
       }
 
       &.finish_the_series_horror {
-        background: linear-gradient(
-          to bottom,
-          #6a047c 20%,
-          #4a005c 100%
-        );
-        border: solid 3px #4a005c;
+        // background: linear-gradient(
+        //   to bottom,
+        //   #6a047c 20%,
+        //   #4a005c 100%
+        // );
+        border: solid 2px #4a005c;
       }
 
       &.decades_of_horror {
-        background: linear-gradient(
-          to bottom,
-          #b6a511 20%,
-          #3c4b22 100%
-        );
-        border: solid 3px #294429;
+        // background: linear-gradient(
+        //   to bottom,
+        //   #b6a511 20%,
+        //   #3c4b22 100%
+        // );
+        border: solid 2px #294429;
+      }
+
+      &.finish_the_series_non_horror {
+        // background: linear-gradient(
+        //   to bottom,
+        //   #6a047c 20%,
+        //   #4a005c 100%
+        // );
+        border: solid 2px #3c9682;
       }
 
       &:hover {
@@ -167,22 +192,32 @@
       height: 160px;
       width: 200px;
     //   border: solid 1px #333;
-      border-radius: 3px;
+      border-radius: 2px;
       margin: 20px;
       text-align: center;
-      background-color: #335;
+      // background-color: #335;
+      // background: transparent;
+      background-color: black;
       text-decoration: none;
     }
 
     .featured-preview {
-      margin-top: 10px;
       font-size: 20px;
+      border-bottom: solid 1px #bbb;
+      width: calc(100% - 20px);
+      margin: 8px auto;
     }
 
     .date {
       font-weight: 100;
       font-size: 14px;
       margin-top: 10px;
+      opacity: 0.8;
+    }
+
+    .featured-number {
+      font-size: 12px;
+      font-weight: 100;
       opacity: 0.7;
     }
   }

@@ -12,7 +12,7 @@ export default function detailReducer(state = initialState, action: any) {
     case "detail/close": {
       return {
         ...state,
-        selectedMovie: null,
+        // selectedMovie: null,
         detailOpen: false,
       };
     }

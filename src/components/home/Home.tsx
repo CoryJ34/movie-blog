@@ -1,4 +1,5 @@
 import { Grid } from "@material-ui/core";
+import { Refresh } from "@material-ui/icons";
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { CATEGORIES } from "../../common/constants";
@@ -17,9 +18,7 @@ const Home = (props: Props) => {
   const { movies, openDetail, resetFilters } = props;
   const [previews, setPreviews] = useState<Movie[]>([]);
 
-  useEffect(() => {
-    resetFilters();
-
+  const onRefreshPreviews = () => {
     let num = 5;
     let newPreviews = [];
     let moviesClone = [...props.movies];
@@ -32,6 +31,12 @@ const Home = (props: Props) => {
     }
 
     setPreviews(newPreviews);
+  };
+
+  useEffect(() => {
+    resetFilters();
+
+    onRefreshPreviews();
   }, []);
 
   return (
@@ -81,24 +86,41 @@ const Home = (props: Props) => {
               category={CATEGORIES.DECADES_OF_HORROR}
               movies={movies}
             />
+            <FeaturedCard
+              loc="/finishtheseriesnonhorror"
+              category={CATEGORIES.FINISH_THE_SERIES_NON_HORROR}
+              movies={movies}
+            />
           </Grid>
         </div>
-        <div className="section-header">Check out a random movie</div>
+        <div className="section-header">
+          <span>Check out a random movie</span>
+          <span className="refresh-previews" onClick={onRefreshPreviews}>
+            <Refresh fontSize="small" />
+          </span>
+        </div>
         <div className="previews">
           <Grid container justify="center" spacing={2}>
-          {previews.map((preview) => {
-            const onClick = () => openDetail(preview);
-            return (
-              <div className="preview" onClick={onClick}>
-                <img src={preview.img} />
-              </div>
-            );
-          })}
+            {previews.map((preview) => {
+              const onClick = () => openDetail(preview);
+              return (
+                <div className="preview" onClick={onClick}>
+                  <img src={preview.img} />
+                </div>
+              );
+            })}
           </Grid>
         </div>
-        <a>
-          <Link to="/movies">See All Movies</Link>
-        </a>
+        <div>
+          <a>
+            <Link to="/movies">See All Movies</Link>
+          </a>
+        </div>
+        <div>
+          <a>
+            <Link to="/references">See References to Other Movies</Link>
+          </a>
+        </div>
       </div>
     </div>
   );

@@ -14,22 +14,19 @@ import { CategoryMeta } from "./models/CategoryMeta";
 import PageLayout from "./components/PageLayout";
 import CategorizedList from "./components/list/CategorizedList";
 import { Filter } from "./models/Filter";
+import References from "./components/references/References";
 
 interface Props {
   movies: Movie[];
   categoryMeta: CategoryMeta;
   filteredMovies: Movie[];
-  currentFilter: string;
   selectedMovie: Movie;
   detailOpen: boolean;
-  filters: Filter[],
+  filters: Filter[];
   loadMovies: () => void;
   applyFilter: (filter: Filter) => void;
   removeFilter: (filter: Filter) => void;
-  filterByCategory: (filter: string) => void;
-  filterByTag: (filter: string) => void;
   resetFilter: () => void;
-  sort: (sortField: string, sortDir: string) => void;
   openDetail: (movie: Movie) => void;
   closeDetail: () => void;
 }
@@ -48,16 +45,10 @@ function App(props: Props) {
     movies,
     categoryMeta,
     filteredMovies,
-    currentFilter,
     selectedMovie,
     detailOpen,
-    filters,
     applyFilter,
-    removeFilter,
-    filterByCategory,
-    filterByTag,
     resetFilter,
-    sort,
     openDetail,
     closeDetail,
   } = props;
@@ -88,32 +79,18 @@ function App(props: Props) {
             <MovieList
               categoryMeta={categoryMeta}
               filteredMovies={filteredMovies}
-              currentFilter={currentFilter}
-              filterByCategory={filterByCategory}
-              filterByTag={filterByTag}
-              resetFilter={resetFilter}
-              // applyFilter={applyFilter}
-              // filters={filters}
-              // removeFilter={removeFilter}
-              sort={sort}
               openDetail={openDetail}
             />
           </Route>
           <Route path="/gamera">
             <PageLayout
               movies={moviesByCategory[CATEGORIES.GAMERA]}
-              categoryMeta={categoryMeta}
               presetCategory={CATEGORIES.GAMERA}
             >
               <CategorizedList
                 categoryMeta={categoryMeta}
                 filteredMovies={filteredMovies}
-                currentFilter={currentFilter}
                 applyFilter={applyFilter}
-                filterByCategory={filterByCategory}
-                filterByTag={filterByTag}
-                resetFilter={resetFilter}
-                sort={sort}
                 openDetail={openDetail}
                 presetCategory={CATEGORIES.GAMERA}
               />
@@ -122,18 +99,12 @@ function App(props: Props) {
           <Route path="/randomizer">
             <PageLayout
               movies={moviesByCategory[CATEGORIES.RANDOMIZER]}
-              categoryMeta={categoryMeta}
               presetCategory={CATEGORIES.RANDOMIZER}
             >
               <CategorizedList
                 categoryMeta={categoryMeta}
                 filteredMovies={filteredMovies}
-                currentFilter={currentFilter}
                 applyFilter={applyFilter}
-                filterByCategory={filterByCategory}
-                filterByTag={filterByTag}
-                resetFilter={resetFilter}
-                sort={sort}
                 openDetail={openDetail}
                 presetCategory={CATEGORIES.RANDOMIZER}
               />
@@ -142,8 +113,8 @@ function App(props: Props) {
           <Route path="/bracket">
             <PageLayout
               movies={moviesByCategory[CATEGORIES.MARCH_MADNESS]}
-              categoryMeta={categoryMeta}
               presetCategory={CATEGORIES.MARCH_MADNESS}
+              hideSort={true}
             >
               <Bracket />
             </PageLayout>
@@ -151,8 +122,8 @@ function App(props: Props) {
           <Route path="/halloween2020">
             <PageLayout
               movies={moviesByCategory[CATEGORIES.HALLOWEEN_2020]}
-              categoryMeta={categoryMeta}
               presetCategory={CATEGORIES.HALLOWEEN_2020}
+              hideSort={true}
             >
               <Halloween2020 movies={movies} openDetail={openDetail} />
             </PageLayout>
@@ -160,8 +131,8 @@ function App(props: Props) {
           <Route path="/novdec2020">
             <PageLayout
               movies={moviesByCategory[CATEGORIES.NOV_DEC_2020]}
-              categoryMeta={categoryMeta}
               presetCategory={CATEGORIES.NOV_DEC_2020}
+              hideSort={true}
             >
               <SubCategorized
                 category={CATEGORIES.NOV_DEC_2020}
@@ -173,8 +144,8 @@ function App(props: Props) {
           <Route path="/genres">
             <PageLayout
               movies={moviesByCategory[CATEGORIES.GENRES]}
-              categoryMeta={categoryMeta}
               presetCategory={CATEGORIES.GENRES}
+              hideSort={true}
             >
               <SubCategorized
                 category={CATEGORIES.GENRES}
@@ -186,45 +157,54 @@ function App(props: Props) {
           <Route path="/finishtheserieshorror">
             <PageLayout
               movies={moviesByCategory[CATEGORIES.FINISH_THE_SERIES_HORROR]}
-              categoryMeta={categoryMeta}
               presetCategory={CATEGORIES.FINISH_THE_SERIES_HORROR}
             >
               <CategorizedList
                 categoryMeta={categoryMeta}
                 filteredMovies={filteredMovies}
-                currentFilter={currentFilter}
                 applyFilter={applyFilter}
-                filterByCategory={filterByCategory}
-                filterByTag={filterByTag}
-                resetFilter={resetFilter}
-                sort={sort}
                 openDetail={openDetail}
                 presetCategory={CATEGORIES.FINISH_THE_SERIES_HORROR}
+              />
+            </PageLayout>
+          </Route>
+          <Route path="/finishtheseriesnonhorror">
+            <PageLayout
+              movies={moviesByCategory[CATEGORIES.FINISH_THE_SERIES_NON_HORROR]}
+              presetCategory={CATEGORIES.FINISH_THE_SERIES_NON_HORROR}
+            >
+              <CategorizedList
+                categoryMeta={categoryMeta}
+                filteredMovies={filteredMovies}
+                applyFilter={applyFilter}
+                openDetail={openDetail}
+                presetCategory={CATEGORIES.FINISH_THE_SERIES_NON_HORROR}
               />
             </PageLayout>
           </Route>
           <Route path="/decadesofhorror">
             <PageLayout
               movies={moviesByCategory[CATEGORIES.DECADES_OF_HORROR]}
-              categoryMeta={categoryMeta}
               presetCategory={CATEGORIES.DECADES_OF_HORROR}
             >
               <CategorizedList
                 categoryMeta={categoryMeta}
                 filteredMovies={filteredMovies}
-                currentFilter={currentFilter}
                 applyFilter={applyFilter}
-                filterByCategory={filterByCategory}
-                filterByTag={filterByTag}
-                resetFilter={resetFilter}
-                sort={sort}
                 openDetail={openDetail}
                 presetCategory={CATEGORIES.DECADES_OF_HORROR}
               />
             </PageLayout>
           </Route>
+          <Route path="/references">
+            <References />
+          </Route>
           <Route>
-            <Home movies={movies} openDetail={openDetail} resetFilters={resetFilter}/>
+            <Home
+              movies={movies}
+              openDetail={openDetail}
+              resetFilters={resetFilter}
+            />
           </Route>
         </Switch>
       </Router>
@@ -242,21 +222,15 @@ const mapStateToProps = (state: any) => {
     movies: state.movieStore?.movies,
     categoryMeta: state.movieStore?.categoryMeta,
     filteredMovies: state.movieStore?.filteredMovies,
-    currentFilter: state.movieStore?.currentFilter,
     selectedMovie: state.detailStore?.selectedMovie,
     detailOpen: state.detailStore?.detailOpen,
-    filters: state.movieStore?.filters
+    filters: state.movieStore?.filters,
   };
 };
 
 const mapDispatchToProps = (dispatch: any) => {
   return {
     loadMovies: () => dispatch({ type: "movies/load" }),
-    filterByCategory: (filter: string) =>
-      dispatch({ type: "movies/filterByCategory", filter }),
-    filterByTag: (filter: string) =>
-      dispatch({ type: "movies/filterByTag", filter }),
-    resetFilter: () => dispatch({ type: "movies/resetFilter" }),
     sort: (sortField: string, sortDir: string) =>
       dispatch({ type: "movies/sort", sortField, sortDir }),
     openDetail: (movie: Movie) =>
@@ -266,6 +240,7 @@ const mapDispatchToProps = (dispatch: any) => {
       dispatch({ type: "movies/applyFilter", filter }),
     removeFilter: (filter: Filter) =>
       dispatch({ type: "movies/removeFilter", filter }),
+    resetFilter: () => dispatch({ type: "movies/resetFilter" }),
   };
 };
 
