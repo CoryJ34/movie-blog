@@ -15,6 +15,42 @@ const TAGS = {
 
 const data = [
   {
+    img: "https://einysrentals.files.wordpress.com/2021/07/pxl_20210714_135447833.jpg?w=800&h=600&crop=1",
+    title:
+      "[Non-Horror] Finish the Series #4 – Sartana’s Here… Trade Your Pistol for a Coffin (1970)",
+    content: [
+      "Another series I’ve yet to finish.  I’ve seen a couple <strong>Sartana</strong> movies and there are three remaining.  Unfortunately for me, they’re not just called “Sartana 1”, “Sartana 2”, etc.. they have very elaborate names and it’s hard for me to keep straight which one comes before which.  In this one, Sartana is played by a different actor, which was confusing at first.  I have to say I prefer the first Sartana, although this new one isn’t too bad.  Otherwise, nothing much changes.. Sartana always has the upper hand, makes some ridiculous shots, all that good stuff.  There is a bathtub scene pretty similar to <strong>The Good, the Bad and the Ugly (1966)</strong>.  It’s an ok movie, kind of a “by the numbers” Western about multiple people after the same gold.  Like with giallos, you know what you’re getting with a spaghetti western.. not many stand out to me, but they are consistent.",
+      "6.5/10",
+    ],
+    date: "July 22, 2021",
+    tags: [TAGS.WESTERN],
+    id: 230,
+  },
+  {
+    img: "https://einysrentals.files.wordpress.com/2021/07/pxl_20210714_135656073.jpg?w=800&h=600&crop=1",
+    title:
+      "[Non-Horror] Finish the Series #3 – 1990: The Bronx Warriors (1982)",
+    content: [
+      "Back from vacation and onto this trilogy of action movies revolving around the Bronx.  I had seen the Mystery Science Theater version of <strong>Escape from the Bronx (1983)</strong> (LEAVE THE BRONX) so I’m a little out of order here.  This is apparently the first of the trilogy but I have a feeling it doesn’t really matter.  This movie has the cheese but also some notable actors, like Fred Williamson and Vic Morrow.  Otherwise, it’s a typical gang war, revenge plot type of movie.  I have no doubt this was modeled after <strong>The Warriors (1979)</strong> with all its unique brands of gangs.  It’s not good by any means, but it’s definitely not “Trash”.. sick reference bro.  I kind of liked it, but don’t tell anyone.",
+      "6/10",
+    ],
+    date: "July 21, 2021",
+    id: 229,
+  },
+  {
+    img: "https://einysrentals.files.wordpress.com/2021/07/pxl_20210714_135609032.jpg?w=400&h=300&crop=1",
+    title:
+      "[Non-Horror] Finish the Series #2 – Beneath the Planet of the Apes (1970)",
+    content: [
+      "<p>Blasting into Outer Space</p><p>The Planet of Apes</p><p>Evolution’s One Hero</p>",
+      "Working through the <strong>Planet of the Apes</strong> series now (original only, not the remakes and all that).  The first one was fine for me, but knowing the twist and seeing the references already, it didn’t pack much of a punch.  This one was not really any different.  There was Charlton Heston, then discount Charlton Heston, and a bunch of monkeys.  This one had a bit of an anti-nuclear weapon message to it.  It’s an ok little adventure but the humans are kind of lifeless.  Still, the monkey city is kind of cool.  Based on how this ends, I’m not sure where the series will be going from here..",
+      "6/10",
+      "",
+    ],
+    date: "July 16, 2021",
+    id: 228,
+  },
+  {
     img: "https://einysrentals.files.wordpress.com/2021/07/pxl_20210714_135404148.jpg?w=800&h=600&crop=1",
     title: "[Non-Horror] Finish the Series #1 – Outlaw: Heartless (1968)",
     content: [
@@ -23,6 +59,7 @@ const data = [
       "6.5/10",
     ],
     date: "July 14, 2021",
+    tags: [TAGS.JAPANESE],
     id: 227,
   },
   {
@@ -1737,7 +1774,7 @@ const data = [
   {
     img: "https://einysrentals.files.wordpress.com/2020/11/pxl_20201122_012533782.jpg?w=800&h=600&crop=1",
     content: [
-      "The new theme is Westerns.. pretty straightforward.  I’ve been a fan of Westerns since I was a kid, all because of a PC adventure game called <strong>Dust: A Tale of the Wired West</strong>.  Anyway, I like those “grey area” Westerns where it’s not so much “good guys” and “bad guys”… even the good guys aren’t really that good (<strong>The Good the Bad and the Ugly (1966) </strong>and <strong>Unforgiven (1992)</strong> are my favorites).  I’m not as into those old “fun” westerns before the Spaghetti western era, except I do really like <strong>The Magnificent Seven (1960)</strong>.  All that to say, The Alamo falls into that latter category.. a little bit too “heroic” and the good guys a little too good.  But even still, the characters were really enjoyable and it is fun.  Also, to be fair, I had issues with the disc so I missed a few chapters in the middle, so maybe I missed a few things.  Overall though, I still enjoyed the movie and might look into getting a blu-ray copy of this, if one exists, since this is a DVD that came in a giant collection of United Artists films.  So despite it being a little too old-fashioned and on-the-nose in its message, it’s still a good watch to me.",
+      "The new theme is Westerns.. pretty straightforward.  I’ve been a fan of Westerns since I was a kid, all because of a PC adventure game called <strong>Dust: A Tale of the Wired West</strong>.  Anyway, I like those “grey area” Westerns where it’s not so much “good guys” and “bad guys”… even the good guys aren’t really that good (<strong>The Good, the Bad and the Ugly (1966) </strong>and <strong>Unforgiven (1992)</strong> are my favorites).  I’m not as into those old “fun” westerns before the Spaghetti western era, except I do really like <strong>The Magnificent Seven (1960)</strong>.  All that to say, The Alamo falls into that latter category.. a little bit too “heroic” and the good guys a little too good.  But even still, the characters were really enjoyable and it is fun.  Also, to be fair, I had issues with the disc so I missed a few chapters in the middle, so maybe I missed a few things.  Overall though, I still enjoyed the movie and might look into getting a blu-ray copy of this, if one exists, since this is a DVD that came in a giant collection of United Artists films.  So despite it being a little too old-fashioned and on-the-nose in its message, it’s still a good watch to me.",
       "7.5/10",
     ],
     title: "Westerns – Movie 1 – The Alamo (1960)",

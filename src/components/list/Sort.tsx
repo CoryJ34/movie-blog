@@ -43,7 +43,7 @@ const Sort = (props: Props) => {
       <FormControl className={classes.formControl}>
         <InputLabel id="sorter-label">Sort By...</InputLabel>
         <Select labelId="sorter-label" value={props.sortField} onChange={onChange}>
-          <MenuItem value="None">None</MenuItem>
+          <MenuItem value="WatchedDate">Watched Date</MenuItem>
           <MenuItem value="Year">Year</MenuItem>
           <MenuItem value="Rating">Rating</MenuItem>
         </Select>

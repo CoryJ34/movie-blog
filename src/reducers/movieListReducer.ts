@@ -8,6 +8,7 @@ import categoryMeta from "../data/category-meta";
 import { Filter, FilterType } from "../models/Filter";
 import ReferenceMap from "../models/ReferenceMap";
 import { buildChartData } from "../actions/ChartUtils";
+import dateFormat from "dateformat";
 
 interface StateType {
   movies: Movie[] | null;
@@ -17,6 +18,7 @@ interface StateType {
   sortDir: string | null;
   chartData: any;
   references: ReferenceMap | null;
+  watchListRanges: any[] | null;
 }
 
 const initialState: StateType = {
@@ -27,6 +29,7 @@ const initialState: StateType = {
   sortDir: null,
   chartData: null,
   references: null,
+  watchListRanges: null,
 };
 
 const ratingComparator = (a: Movie, b: Movie): number => {
@@ -38,6 +41,10 @@ const yearComparator = (a: Movie, b: Movie): number => {
     parseInt(b.titleBreakout.year.substring(1, 5)) -
     parseInt(a.titleBreakout.year.substring(1, 5))
   );
+};
+
+const watchedDateComparator = (a: Movie, b: Movie): number => {
+  return parseInt(b.id, 10) - parseInt(a.id, 10);
 };
 
 const filterMovies = (movies: Movie[], filters: Filter[]) => {
@@ -87,6 +94,8 @@ const sort = (
     comparator = yearComparator;
   } else if (sortField === "Rating") {
     comparator = ratingComparator;
+  } else if (sortField === "WatchedDate") {
+    comparator = watchedDateComparator;
   }
 
   let sorted = [...(movies || [])].sort(comparator);
@@ -110,7 +119,10 @@ const findMovieReferences = (movies: Movie[]) => {
 
         if (reference.match(/^.* \([0-9]{4}\)$/)) {
           if (referenceMap[reference]) {
-            if (referenceMap[reference].filter((r: Movie) => r.title === m.title).length === 0) {
+            if (
+              referenceMap[reference].filter((r: Movie) => r.title === m.title)
+                .length === 0
+            ) {
               referenceMap[reference].push(m);
             }
           } else {
@@ -122,6 +134,55 @@ const findMovieReferences = (movies: Movie[]) => {
   });
 
   return referenceMap;
+};
+
+const offsetDate = (date: string, add: boolean) => {
+  let newDate = add
+    ? new Date(date).getTime() + 1000 * 60 * 60 * 4
+    : new Date(date).getTime() - 1000 * 60 * 60 * 20;
+
+  return dateFormat(newDate, "mmmm d, yyyy");
+};
+
+const makeWatchListRanges = (movies: Movie[]) => {
+  const watchListRanges: any[] = [];
+  const sortedByReverseID = [...movies];
+
+  // reverse ID order (reverse watched date)
+  sortedByReverseID.sort(
+    (a: Movie, b: Movie) => parseInt(b.id) - parseInt(a.id)
+  );
+
+  let currWL = null;
+
+  for (let i = sortedByReverseID.length - 1; i >= 0; i--) {
+    const currMovie = sortedByReverseID[i];
+
+    if (currMovie.titleBreakout.category !== currWL) {
+      if (currWL) {
+        watchListRanges[watchListRanges.length - 1].lastDate = offsetDate(
+          sortedByReverseID[i + 1].date,
+          true
+        );
+      }
+
+      watchListRanges.push({
+        title: currMovie.titleBreakout.category,
+        firstDate: currMovie.date,
+      });
+
+      currWL = currMovie.titleBreakout.category;
+    }
+
+    if (i === 0) {
+      watchListRanges[watchListRanges.length - 1].lastDate = offsetDate(
+        currMovie.date,
+        true
+      );
+    }
+  }
+
+  return watchListRanges;
 };
 
 export default function movieListReducer(state = initialState, action: any) {
@@ -137,7 +198,7 @@ export default function movieListReducer(state = initialState, action: any) {
 
       const references = findMovieReferences(allMovies);
 
-      const filteredMovies = [...allMovies];
+      const filteredMovies: Movie[] = [...allMovies];
 
       return {
         ...state,
@@ -146,6 +207,7 @@ export default function movieListReducer(state = initialState, action: any) {
         chartData: buildChartData(filteredMovies),
         categoryMeta,
         references,
+        watchListRanges: makeWatchListRanges(filteredMovies),
       };
     }
     case "movies/applyFilter": {
@@ -166,6 +228,7 @@ export default function movieListReducer(state = initialState, action: any) {
         filters: existingFilters,
         filteredMovies: sort(filtered, state.sortField, state.sortDir),
         chartData: buildChartData(filtered),
+        watchListRanges: makeWatchListRanges(filtered),
       };
     }
     case "movies/removeFilter": {
@@ -182,6 +245,7 @@ export default function movieListReducer(state = initialState, action: any) {
         filters: existingFilters,
         filteredMovies: sort(filtered, state.sortField, state.sortDir),
         chartData: buildChartData(filtered),
+        watchListRanges: makeWatchListRanges(filtered),
       };
     }
     case "movies/resetFilter": {
@@ -190,6 +254,7 @@ export default function movieListReducer(state = initialState, action: any) {
         currentFilter: null,
         filters: [],
         filteredMovies: [...(state.movies || [])],
+        watchListRanges: makeWatchListRanges(state.movies || []),
       };
     }
     case "movies/sort": {
