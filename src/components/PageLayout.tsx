@@ -1,6 +1,7 @@
-import react, { ReactElement } from "react";
+import react, { ReactElement, useEffect } from "react";
 import { connect } from "react-redux";
 import { CategoryMeta } from "../models/CategoryMeta";
+import { Filter, FilterType } from "../models/Filter";
 import { Movie } from "../models/Movie";
 import ListSummary from "./list/ListSummary";
 
@@ -9,11 +10,20 @@ interface Props {
   categoryMeta: CategoryMeta;
   hideSort?: boolean;
   presetCategory: string;
+  applyFilter: (filter: Filter) => void;
   children: any;
 }
 
 const PageLayout = (props: Props) => {
-  const { movies, categoryMeta, presetCategory, hideSort } = props;
+  const { movies, categoryMeta, presetCategory, applyFilter, hideSort } = props;
+
+  useEffect(() => {
+    applyFilter({
+      type: FilterType.WATCHLIST,
+      value: presetCategory,
+    });
+  }, []);
+  
   return (
     <div className="page">
       <ListSummary
@@ -33,4 +43,11 @@ const mapStateToProps = (state: any) => {
   };
 };
 
-export default connect(mapStateToProps)(PageLayout);
+const mapDispatchToProps = (dispatch: any) => {
+  return {
+    applyFilter: (filter: Filter) =>
+      dispatch({ type: "movies/applyFilter", filter })
+  };
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(PageLayout);

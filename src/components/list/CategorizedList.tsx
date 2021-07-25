@@ -1,7 +1,6 @@
 import React, { useEffect } from "react";
 import { Movie } from "../../models/Movie";
 import { CategoryMeta } from "../../models/CategoryMeta";
-import { Filter, FilterType } from "../../models/Filter";
 import ListSummary from "./ListSummary";
 import MovieInfo from "./MovieInfo";
 
@@ -9,7 +8,6 @@ interface Props {
   categoryMeta: CategoryMeta;
   filteredMovies: Movie[];
   presetCategory: string;
-  applyFilter: (filter: Filter) => void;
   openDetail: (movie: Movie) => void;
 }
 
@@ -18,16 +16,8 @@ function CategorizedList(props: Props) {
     categoryMeta,
     filteredMovies,
     presetCategory,
-    applyFilter,
     openDetail,
   } = props;
-
-  useEffect(() => {
-    applyFilter({
-      type: FilterType.WATCHLIST,
-      value: presetCategory,
-    });
-  }, []);
 
   return (
     <div className="movie-list">

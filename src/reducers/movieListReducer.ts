@@ -1,14 +1,19 @@
 import {
   breakoutTitleYearAndCategory,
   extractRating,
-} from "../actions/TransferUtils";
+} from "../util/TransferUtils";
 import { Movie } from "../models/Movie";
 import testData from "../data/test-data";
 import categoryMeta from "../data/category-meta";
-import { Filter, FilterType } from "../models/Filter";
+import milestoneData from "../data/milestones";
+import { Filter } from "../models/Filter";
 import ReferenceMap from "../models/ReferenceMap";
-import { buildChartData } from "../actions/ChartUtils";
-import dateFormat from "dateformat";
+import { buildChartData } from "../util/ChartUtils";
+import sort from "../util/SortUtils";
+import filterMovies from "../util/FilterUtils";
+import findMovieReferences from "../util/ReferenceUtils";
+import makeWatchListRanges from "../util/WatchListRangeUtils";
+import { Milestone } from "../models/Milestone";
 
 interface StateType {
   movies: Movie[] | null;
@@ -19,6 +24,7 @@ interface StateType {
   chartData: any;
   references: ReferenceMap | null;
   watchListRanges: any[] | null;
+  milestones: Milestone[] | null;
 }
 
 const initialState: StateType = {
@@ -30,159 +36,7 @@ const initialState: StateType = {
   chartData: null,
   references: null,
   watchListRanges: null,
-};
-
-const ratingComparator = (a: Movie, b: Movie): number => {
-  return parseFloat(b.rating) - parseFloat(a.rating);
-};
-
-const yearComparator = (a: Movie, b: Movie): number => {
-  return (
-    parseInt(b.titleBreakout.year.substring(1, 5)) -
-    parseInt(a.titleBreakout.year.substring(1, 5))
-  );
-};
-
-const watchedDateComparator = (a: Movie, b: Movie): number => {
-  return parseInt(b.id, 10) - parseInt(a.id, 10);
-};
-
-const filterMovies = (movies: Movie[], filters: Filter[]) => {
-  return movies.filter((m: Movie) => {
-    for (let i = 0; i < filters.length; i++) {
-      const f = filters[i];
-
-      if (f.type === FilterType.TAG) {
-        if ((m.tags || []).indexOf(f.value) < 0) {
-          return false;
-        }
-      } else if (f.type === FilterType.WATCHLIST) {
-        if (m.titleBreakout.category !== f.value) {
-          return false;
-        }
-      } else if (f.type === FilterType.YEAR) {
-        if (m.titleBreakout.year.substr(1, 4) !== f.value) {
-          return false;
-        }
-      } else if (f.type === FilterType.DECADE) {
-        if (m.titleBreakout.year.substr(1, 3) !== f.value.substr(0, 3)) {
-          return false;
-        }
-      } else {
-        return false;
-      }
-    }
-
-    return true;
-  });
-};
-
-const sort = (
-  movies: Movie[] | null,
-  sortField: string | null,
-  sortDir: string | null
-) => {
-  if (!sortField) {
-    return movies;
-  }
-
-  let comparator = (a: Movie, b: Movie) => {
-    return parseInt(a.id, 10) - parseInt(b.id, 10);
-  };
-
-  if (sortField === "Year") {
-    comparator = yearComparator;
-  } else if (sortField === "Rating") {
-    comparator = ratingComparator;
-  } else if (sortField === "WatchedDate") {
-    comparator = watchedDateComparator;
-  }
-
-  let sorted = [...(movies || [])].sort(comparator);
-
-  if (sortDir === "DESC") {
-    sorted = sorted.reverse();
-  }
-
-  return sorted;
-};
-
-const findMovieReferences = (movies: Movie[]) => {
-  const referenceMap: any = {};
-
-  movies.forEach((m) => {
-    m.content.forEach((c) => {
-      const parts = c.split("<strong>");
-
-      parts.forEach((p) => {
-        const reference = p.split("</strong>")[0].trim();
-
-        if (reference.match(/^.* \([0-9]{4}\)$/)) {
-          if (referenceMap[reference]) {
-            if (
-              referenceMap[reference].filter((r: Movie) => r.title === m.title)
-                .length === 0
-            ) {
-              referenceMap[reference].push(m);
-            }
-          } else {
-            referenceMap[reference] = [m];
-          }
-        }
-      });
-    });
-  });
-
-  return referenceMap;
-};
-
-const offsetDate = (date: string, add: boolean) => {
-  let newDate = add
-    ? new Date(date).getTime() + 1000 * 60 * 60 * 4
-    : new Date(date).getTime() - 1000 * 60 * 60 * 20;
-
-  return dateFormat(newDate, "mmmm d, yyyy");
-};
-
-const makeWatchListRanges = (movies: Movie[]) => {
-  const watchListRanges: any[] = [];
-  const sortedByReverseID = [...movies];
-
-  // reverse ID order (reverse watched date)
-  sortedByReverseID.sort(
-    (a: Movie, b: Movie) => parseInt(b.id) - parseInt(a.id)
-  );
-
-  let currWL = null;
-
-  for (let i = sortedByReverseID.length - 1; i >= 0; i--) {
-    const currMovie = sortedByReverseID[i];
-
-    if (currMovie.titleBreakout.category !== currWL) {
-      if (currWL) {
-        watchListRanges[watchListRanges.length - 1].lastDate = offsetDate(
-          sortedByReverseID[i + 1].date,
-          true
-        );
-      }
-
-      watchListRanges.push({
-        title: currMovie.titleBreakout.category,
-        firstDate: currMovie.date,
-      });
-
-      currWL = currMovie.titleBreakout.category;
-    }
-
-    if (i === 0) {
-      watchListRanges[watchListRanges.length - 1].lastDate = offsetDate(
-        currMovie.date,
-        true
-      );
-    }
-  }
-
-  return watchListRanges;
+  milestones: null
 };
 
 export default function movieListReducer(state = initialState, action: any) {
@@ -196,8 +50,6 @@ export default function movieListReducer(state = initialState, action: any) {
         };
       });
 
-      const references = findMovieReferences(allMovies);
-
       const filteredMovies: Movie[] = [...allMovies];
 
       return {
@@ -206,8 +58,9 @@ export default function movieListReducer(state = initialState, action: any) {
         filteredMovies,
         chartData: buildChartData(filteredMovies),
         categoryMeta,
-        references,
+        references: findMovieReferences(allMovies),
         watchListRanges: makeWatchListRanges(filteredMovies),
+        milestones: milestoneData.reverse()
       };
     }
     case "movies/applyFilter": {

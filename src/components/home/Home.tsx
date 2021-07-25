@@ -94,10 +94,10 @@ const Home = (props: Props) => {
           </Grid>
         </div>
         <div className="section-header">
-          <span>Check out a random movie</span>
-          <span className="refresh-previews" onClick={onRefreshPreviews}>
+          <div className="name">Check out a random movie</div>
+          <div className="refresh-previews" onClick={onRefreshPreviews}>
             <Refresh fontSize="small" />
-          </span>
+          </div>
         </div>
         <div className="previews">
           <Grid container justify="center" spacing={2}>
@@ -111,15 +111,24 @@ const Home = (props: Props) => {
             })}
           </Grid>
         </div>
-        <div>
-          <a>
-            <Link to="/movies">See All Movies</Link>
-          </a>
-        </div>
-        <div>
-          <a>
-            <Link to="/references">See References to Other Movies</Link>
-          </a>
+        <div className="links">
+          <div className="link">
+            <a>
+              <Link to="/movies">See All Movies</Link>
+            </a>
+          </div>
+          <div className="divider" />
+          <div className="link">
+            <a>
+              <Link to="/references">See References to Other Movies</Link>
+            </a>
+          </div>
+          <div className="divider" />
+          <div className="link">
+            <a>
+              <Link to="/milestones">Milestones</Link>
+            </a>
+          </div>
         </div>
       </div>
     </div>

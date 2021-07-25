@@ -15,6 +15,7 @@ import PageLayout from "./components/PageLayout";
 import CategorizedList from "./components/list/CategorizedList";
 import { Filter } from "./models/Filter";
 import References from "./components/references/References";
+import Milestones from "./components/milestones/Milestones";
 
 interface Props {
   movies: Movie[];
@@ -24,7 +25,6 @@ interface Props {
   detailOpen: boolean;
   filters: Filter[];
   loadMovies: () => void;
-  applyFilter: (filter: Filter) => void;
   removeFilter: (filter: Filter) => void;
   resetFilter: () => void;
   openDetail: (movie: Movie) => void;
@@ -47,7 +47,6 @@ function App(props: Props) {
     filteredMovies,
     selectedMovie,
     detailOpen,
-    applyFilter,
     resetFilter,
     openDetail,
     closeDetail,
@@ -90,7 +89,6 @@ function App(props: Props) {
               <CategorizedList
                 categoryMeta={categoryMeta}
                 filteredMovies={filteredMovies}
-                applyFilter={applyFilter}
                 openDetail={openDetail}
                 presetCategory={CATEGORIES.GAMERA}
               />
@@ -104,7 +102,6 @@ function App(props: Props) {
               <CategorizedList
                 categoryMeta={categoryMeta}
                 filteredMovies={filteredMovies}
-                applyFilter={applyFilter}
                 openDetail={openDetail}
                 presetCategory={CATEGORIES.RANDOMIZER}
               />
@@ -162,7 +159,6 @@ function App(props: Props) {
               <CategorizedList
                 categoryMeta={categoryMeta}
                 filteredMovies={filteredMovies}
-                applyFilter={applyFilter}
                 openDetail={openDetail}
                 presetCategory={CATEGORIES.FINISH_THE_SERIES_HORROR}
               />
@@ -176,7 +172,6 @@ function App(props: Props) {
               <CategorizedList
                 categoryMeta={categoryMeta}
                 filteredMovies={filteredMovies}
-                applyFilter={applyFilter}
                 openDetail={openDetail}
                 presetCategory={CATEGORIES.FINISH_THE_SERIES_NON_HORROR}
               />
@@ -190,7 +185,6 @@ function App(props: Props) {
               <CategorizedList
                 categoryMeta={categoryMeta}
                 filteredMovies={filteredMovies}
-                applyFilter={applyFilter}
                 openDetail={openDetail}
                 presetCategory={CATEGORIES.DECADES_OF_HORROR}
               />
@@ -198,6 +192,9 @@ function App(props: Props) {
           </Route>
           <Route path="/references">
             <References />
+          </Route>
+          <Route path="/milestones">
+            <Milestones />
           </Route>
           <Route>
             <Home
@@ -236,8 +233,6 @@ const mapDispatchToProps = (dispatch: any) => {
     openDetail: (movie: Movie) =>
       dispatch({ type: "detail/open", selectedMovie: movie }),
     closeDetail: () => dispatch({ type: "detail/close" }),
-    applyFilter: (filter: Filter) =>
-      dispatch({ type: "movies/applyFilter", filter }),
     removeFilter: (filter: Filter) =>
       dispatch({ type: "movies/removeFilter", filter }),
     resetFilter: () => dispatch({ type: "movies/resetFilter" }),

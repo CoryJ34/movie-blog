@@ -2,7 +2,7 @@ import { Dialog } from "@material-ui/core";
 import React from "react";
 import react, { useState } from "react";
 import { connect } from "react-redux";
-import { extractRating } from "../../actions/TransferUtils";
+import { extractRating } from "../../util/TransferUtils";
 import categoryMeta from "../../data/category-meta";
 import {
   CategoryMeta,

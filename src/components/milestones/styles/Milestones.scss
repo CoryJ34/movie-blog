@@ -1,0 +1,39 @@
+.milestones {
+  .milestone {
+      .header {
+          
+        padding: 10px;
+        border-top: solid 2px #999;
+        border-bottom: solid 2px #999;
+        background: #171717;
+
+        .title {
+            font-size: 22px;
+            font-weight: 600;
+            display: inline-block;
+        }
+
+        .date {
+            font-size: 12px;
+            margin-left: 20px;
+            color: #ddd;
+            display: inline-block;
+        }
+      }
+
+    .content {
+        padding: 10px;
+
+      .content-block {
+        font-size: 16px;
+        font-weight: 300;
+        text-shadow: 1px 1px #111;
+        margin-bottom: 10px;
+
+        figure {
+          text-align: center;
+        }
+      }
+    }
+  }
+}

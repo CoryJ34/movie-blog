@@ -1,6 +1,6 @@
 import { Dialog, Grid } from "@material-ui/core";
 import React, { useState } from "react";
-import { RATING_REGEX } from "../../actions/TransferUtils";
+import { RATING_REGEX } from "../../util/TransferUtils";
 import { Movie } from "../../models/Movie";
 
 import "./styles/SubCategorized.scss";

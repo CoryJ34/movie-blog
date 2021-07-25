@@ -1,6 +1,6 @@
 import { Dialog } from "@material-ui/core";
 import React from "react";
-import { RATING_REGEX } from "../actions/TransferUtils";
+import { RATING_REGEX } from "../util/TransferUtils";
 import { Movie } from "../models/Movie";
 
 import "./styles/DetailDialog.scss";

@@ -11,6 +11,7 @@ import {
   BarChart,
   Bar,
   ReferenceArea,
+  ResponsiveContainer,
 } from "recharts";
 import { Movie } from "../../models/Movie";
 import "./styles/Charts.scss";
@@ -174,7 +175,7 @@ const Charts = (props: Props) => {
       );
     } else if (chartTab === CHARTS.RATING_HISTOGRAM) {
       return (
-        <BarChart data={chartData.ratingsHistogram} width={1400} height={200}>
+        <BarChart data={chartData.ratingsHistogram} height={400}>
           <Tooltip />
           <YAxis />
           <XAxis dataKey="rating" />
@@ -246,6 +247,8 @@ const Charts = (props: Props) => {
         </BarChart>
       );
     }
+
+    return <div>No chart selected</div>
   };
 
   return (
@@ -274,7 +277,11 @@ const Charts = (props: Props) => {
         />
         <Tab value={CHARTS.RATING_HISTOGRAM} label="Rating Histogram" />
       </Tabs>
-      <div className="chart-content">{renderSelectedChart()}</div>
+      <div className="chart-content">
+        <ResponsiveContainer width="100%" height="100%">
+          {renderSelectedChart()}
+        </ResponsiveContainer>
+      </div>
     </div>
   );
 };

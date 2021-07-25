@@ -24,6 +24,34 @@
     overflow-y: auto;
   }
 
+  .links {
+    padding-top: 20px;
+    display: flex;
+    width: fit-content;
+    margin: auto;
+
+    .link {
+      padding: 3px;
+      margin: 0 20px;
+
+      a {
+        color: white;
+        font-size: 14px;
+        font-weight: 300;
+        text-shadow: 1px 1px 2px #222;
+        text-decoration: none;
+
+        &:hover {
+          filter: brightness(1.2);
+        }
+      }
+    }
+
+    .divider {
+      border-left: solid 1px #ccc;
+    }
+  }
+
   a {
     color: white;
     display: block;
@@ -55,9 +83,20 @@
     font-size: 24px;
     margin-bottom: 20px;
 
+    .name {
+      display: inline-block;
+    }
+
     .refresh-previews {
+      display: inline-block;
+      position: relative;
       margin-left: 10px;
       cursor: pointer;
+
+      svg {
+        position: absolute;
+        bottom: -4px;
+      }
 
       &:hover {
         filter: brightness(1.25);
@@ -191,7 +230,7 @@
     a {
       height: 160px;
       width: 200px;
-    //   border: solid 1px #333;
+      //   border: solid 1px #333;
       border-radius: 2px;
       margin: 20px;
       text-align: center;

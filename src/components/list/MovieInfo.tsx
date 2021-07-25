@@ -1,5 +1,5 @@
 import react from "react";
-import { extractRating, RATING_REGEX } from "../../actions/TransferUtils";
+import { extractRating, RATING_REGEX } from "../../util/TransferUtils";
 import { Movie } from "../../models/Movie";
 
 import "./styles/MovieInfo.scss";
