@@ -9,4 +9,6 @@ export interface Movie {
   rating: string;
   titleBreakout: TitleBreakout;
   tags: string[];
+  label: string;
+  format: string;
 }

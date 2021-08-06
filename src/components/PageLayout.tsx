@@ -18,10 +18,12 @@ const PageLayout = (props: Props) => {
   const { movies, categoryMeta, presetCategory, applyFilter, hideSort } = props;
 
   useEffect(() => {
-    applyFilter({
-      type: FilterType.WATCHLIST,
-      value: presetCategory,
-    });
+    if(presetCategory) {
+      applyFilter({
+        type: FilterType.WATCHLIST,
+        value: presetCategory,
+      });
+    }
   }, []);
   
   return (

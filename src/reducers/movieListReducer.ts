@@ -102,11 +102,13 @@ export default function movieListReducer(state = initialState, action: any) {
       };
     }
     case "movies/resetFilter": {
+      const unfiltered = [...(state.movies || [])];
+      
       return {
         ...state,
-        currentFilter: null,
         filters: [],
-        filteredMovies: [...(state.movies || [])],
+        filteredMovies: unfiltered,
+        chartData: buildChartData(unfiltered),
         watchListRanges: makeWatchListRanges(state.movies || []),
       };
     }

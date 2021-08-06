@@ -33,22 +33,6 @@ const CHARTS = {
   RATING_HISTOGRAM: "ratingHistogram",
 };
 
-interface RefLabelProps {
-  text: string;
-  x: number;
-  y: number;
-}
-
-const customLabel = (props: RefLabelProps) => {
-  return (
-    <g>
-      <foreignObject x={props.x} y={props.y} width={100} height={100}>
-        <div>Label</div>
-      </foreignObject>
-    </g>
-  );
-};
-
 const Charts = (props: Props) => {
   const [chartTab, setChartTab] = useState(CHARTS.VOL_BY_RELEASE_YEAR);
 
@@ -56,12 +40,20 @@ const Charts = (props: Props) => {
     return null;
   }
 
+  const refArea = (x1: string | number, x2: string | number, label: string) => {
+    return (
+      <ReferenceArea
+        x1={x1}
+        x2={x2}
+        y1={0}
+        stroke="#CCEE99"
+        opacity={0.2}
+        label={label}
+      />
+    );
+  };
+
   const { chartData } = props;
-  // Volume by year/decade
-  // Rating by year/decade
-  // Rating by watched date
-  // Volume by watched date
-  // Rating histogram
   // const allTicks = props.chartData.volumeByYear.map((v: any) => v.year);
   // let ticks: string[] = [];
   // let count = allTicks[0];
@@ -74,7 +66,7 @@ const Charts = (props: Props) => {
   const renderSelectedChart = () => {
     if (chartTab === CHARTS.VOL_BY_RELEASE_YEAR) {
       return (
-        <BarChart data={chartData.volumeByYear} width={1400} height={200}>
+        <BarChart data={chartData.volumeByYear}>
           <Tooltip payload={chartData.volumeByYear} />
           <YAxis />
           <XAxis dataKey="year" /*ticks={ticks} tickCount={ticks.length}*/ />
@@ -83,7 +75,7 @@ const Charts = (props: Props) => {
       );
     } else if (chartTab === CHARTS.RATING_BY_RELEASE_YEAR) {
       return (
-        <BarChart data={chartData.ratingAggByYear} width={1400} height={200}>
+        <BarChart data={chartData.ratingAggByYear}>
           <Tooltip payload={chartData.ratingAggByYear} />
           <YAxis domain={[0, 10]} />
           <XAxis dataKey="year" />
@@ -92,7 +84,7 @@ const Charts = (props: Props) => {
       );
     } else if (chartTab === CHARTS.VOL_BY_DECADE) {
       return (
-        <LineChart data={chartData.volumeByDecade} width={1400} height={200}>
+        <LineChart data={chartData.volumeByDecade}>
           <Tooltip payload={chartData.volumeByDecade} />
           <YAxis />
           <XAxis dataKey="decade" />
@@ -101,7 +93,7 @@ const Charts = (props: Props) => {
       );
     } else if (chartTab === CHARTS.RATING_BY_DECADE) {
       return (
-        <LineChart data={chartData.ratingAggByDecade} width={1400} height={200}>
+        <LineChart data={chartData.ratingAggByDecade}>
           <Tooltip payload={chartData.ratingAggByDecade} />
           <YAxis domain={[0, 10]} />
           <XAxis dataKey="decade" />
@@ -110,145 +102,60 @@ const Charts = (props: Props) => {
       );
     } else if (chartTab === CHARTS.VOL_BY_WATCHED_DATE) {
       return (
-        <BarChart data={chartData.volumeByWatchDate} width={1400} height={200}>
+        <BarChart data={chartData.volumeByWatchDate}>
           <Tooltip />
           <YAxis />
           <XAxis dataKey="date" />
           <Bar dataKey="count" fill="#5566AA" />
-          {props.watchListRanges.map((range: any) => (
-            <ReferenceArea
-              x1={range.firstDate}
-              x2={range.lastDate}
-              y1={0}
-              stroke="#CCEE99"
-              opacity={0.2}
-              label={range.title}
-            />
-          ))}
+          {props.watchListRanges.map((range: any) =>
+            refArea(range.firstDate, range.lastDate, range.title)
+          )}
         </BarChart>
       );
     } else if (chartTab === CHARTS.RATING_BY_WATCHED_DATE) {
       return (
-        <BarChart
-          data={chartData.ratingAggByWatchDate}
-          width={1400}
-          height={200}
-        >
+        <BarChart data={chartData.ratingAggByWatchDate}>
           <Tooltip />
           <YAxis domain={[0, 10]} />
           <XAxis dataKey="date" />
           <Bar dataKey="avg" fill="#5566AA" />
-          {props.watchListRanges.map((range: any) => (
-            <ReferenceArea
-              x1={range.firstDate}
-              x2={range.lastDate}
-              y1={0}
-              stroke="#CCEE99"
-              opacity={0.2}
-              label={range.title}
-            />
-          ))}
+          {props.watchListRanges.map((range: any) =>
+            refArea(range.firstDate, range.lastDate, range.title)
+          )}
         </BarChart>
       );
     } else if (chartTab === CHARTS.CUMULATIVE_BY_WATCHED_DATE) {
       return (
-        <LineChart
-          data={chartData.aggVolumeByWatchDate}
-          width={1400}
-          height={200}
-        >
+        <LineChart data={chartData.aggVolumeByWatchDate}>
           <Tooltip />
           <YAxis />
           <XAxis dataKey="date" />
           <Line dataKey="count" dot={false} />
-          {props.watchListRanges.map((range: any) => (
-            <ReferenceArea
-              x1={range.firstDate}
-              x2={range.lastDate}
-              y1={0}
-              stroke="#CCEE99"
-              opacity={0.2}
-              label={range.title}
-            />
-          ))}
+          {props.watchListRanges.map((range: any) =>
+            refArea(range.firstDate, range.lastDate, range.title)
+          )}
         </LineChart>
       );
     } else if (chartTab === CHARTS.RATING_HISTOGRAM) {
       return (
-        <BarChart data={chartData.ratingsHistogram} height={400}>
+        <BarChart data={chartData.ratingsHistogram}>
           <Tooltip />
           <YAxis />
           <XAxis dataKey="rating" />
           <Bar dataKey="count" fill="#5566AA" />
-          <ReferenceArea
-            x1={0}
-            x2={2.0}
-            y1={0}
-            stroke="#CCEE99"
-            opacity={0.2}
-            label="Woah.."
-          />
-          <ReferenceArea
-            x1={2.5}
-            x2={3.0}
-            y1={0}
-            stroke="#CCEE99"
-            opacity={0.2}
-            label="Awful"
-          />
-          <ReferenceArea
-            x1={3.5}
-            x2={4.0}
-            y1={0}
-            stroke="#CCEE99"
-            opacity={0.2}
-            label="Bad"
-          />
-          <ReferenceArea
-            x1={4.5}
-            x2={5.5}
-            y1={0}
-            stroke="#CCEE99"
-            opacity={0.2}
-            label="Average"
-          />
-          <ReferenceArea
-            x1={6.0}
-            x2={6.5}
-            y1={0}
-            stroke="#CCEE99"
-            opacity={0.2}
-            label="Decent"
-          />
-          <ReferenceArea
-            x1={7.0}
-            x2={7.5}
-            y1={0}
-            stroke="#CCEE99"
-            opacity={0.2}
-            label="Good"
-          />
-          <ReferenceArea
-            x1={8.0}
-            x2={8.5}
-            y1={0}
-            stroke="#CCEE99"
-            opacity={0.2}
-            label="Great"
-          />
-          <ReferenceArea
-            x1={9.0}
-            x2={10.0}
-            y1={0}
-            stroke="#99EEAA"
-            opacity={0.2}
-            label={"Amazing"}
-          />
+          {refArea(0, 2.0, "Woah..")}
+          {refArea(2.5, 3.0, "Awful")}
+          {refArea(3.5, 4.0, "Bad")}
+          {refArea(4.5, 5.5, "Average")}
+          {refArea(6.0, 6.5, "Decent")}
+          {refArea(7.0, 7.5, "Good")}
+          {refArea(8.0, 8.5, "Great")}
+          {refArea(9.0, 10.0, "Amazing")}
         </BarChart>
       );
     }
 
-    return <div>No chart selected</div>
+    return <div>No chart selected</div>;
   };
 
   return (

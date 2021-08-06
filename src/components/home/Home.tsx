@@ -111,25 +111,6 @@ const Home = (props: Props) => {
             })}
           </Grid>
         </div>
-        <div className="links">
-          <div className="link">
-            <a>
-              <Link to="/movies">See All Movies</Link>
-            </a>
-          </div>
-          <div className="divider" />
-          <div className="link">
-            <a>
-              <Link to="/references">See References to Other Movies</Link>
-            </a>
-          </div>
-          <div className="divider" />
-          <div className="link">
-            <a>
-              <Link to="/milestones">Milestones</Link>
-            </a>
-          </div>
-        </div>
       </div>
     </div>
   );

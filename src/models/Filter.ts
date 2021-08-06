@@ -2,7 +2,9 @@ export enum FilterType {
     TAG,
     YEAR,
     DECADE,
-    WATCHLIST
+    WATCHLIST,
+    LABEL,
+    FORMAT
 }
 
 export interface Filter {

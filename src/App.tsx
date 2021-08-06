@@ -16,6 +16,7 @@ import CategorizedList from "./components/list/CategorizedList";
 import { Filter } from "./models/Filter";
 import References from "./components/references/References";
 import Milestones from "./components/milestones/Milestones";
+import Footer from "./components/common/Footer/Footer";
 
 interface Props {
   movies: Movie[];
@@ -73,137 +74,142 @@ function App(props: Props) {
   return (
     <div className="App">
       <Router>
-        <Switch>
-          <Route path="/movies">
-            <MovieList
-              categoryMeta={categoryMeta}
-              filteredMovies={filteredMovies}
-              openDetail={openDetail}
-            />
-          </Route>
-          <Route path="/gamera">
-            <PageLayout
-              movies={moviesByCategory[CATEGORIES.GAMERA]}
-              presetCategory={CATEGORIES.GAMERA}
-            >
-              <CategorizedList
+        <div className="page-content">
+          <Switch>
+            <Route path="/movies">
+              <MovieList
                 categoryMeta={categoryMeta}
                 filteredMovies={filteredMovies}
                 openDetail={openDetail}
+              />
+            </Route>
+            <Route path="/gamera">
+              <PageLayout
+                movies={moviesByCategory[CATEGORIES.GAMERA]}
                 presetCategory={CATEGORIES.GAMERA}
-              />
-            </PageLayout>
-          </Route>
-          <Route path="/randomizer">
-            <PageLayout
-              movies={moviesByCategory[CATEGORIES.RANDOMIZER]}
-              presetCategory={CATEGORIES.RANDOMIZER}
-            >
-              <CategorizedList
-                categoryMeta={categoryMeta}
-                filteredMovies={filteredMovies}
-                openDetail={openDetail}
+              >
+                <CategorizedList
+                  categoryMeta={categoryMeta}
+                  filteredMovies={filteredMovies}
+                  openDetail={openDetail}
+                  presetCategory={CATEGORIES.GAMERA}
+                />
+              </PageLayout>
+            </Route>
+            <Route path="/randomizer">
+              <PageLayout
+                movies={moviesByCategory[CATEGORIES.RANDOMIZER]}
                 presetCategory={CATEGORIES.RANDOMIZER}
-              />
-            </PageLayout>
-          </Route>
-          <Route path="/bracket">
-            <PageLayout
-              movies={moviesByCategory[CATEGORIES.MARCH_MADNESS]}
-              presetCategory={CATEGORIES.MARCH_MADNESS}
-              hideSort={true}
-            >
-              <Bracket />
-            </PageLayout>
-          </Route>
-          <Route path="/halloween2020">
-            <PageLayout
-              movies={moviesByCategory[CATEGORIES.HALLOWEEN_2020]}
-              presetCategory={CATEGORIES.HALLOWEEN_2020}
-              hideSort={true}
-            >
-              <Halloween2020 movies={movies} openDetail={openDetail} />
-            </PageLayout>
-          </Route>
-          <Route path="/novdec2020">
-            <PageLayout
-              movies={moviesByCategory[CATEGORIES.NOV_DEC_2020]}
-              presetCategory={CATEGORIES.NOV_DEC_2020}
-              hideSort={true}
-            >
-              <SubCategorized
-                category={CATEGORIES.NOV_DEC_2020}
-                movies={movies}
-                openDetail={openDetail}
-              />
-            </PageLayout>
-          </Route>
-          <Route path="/genres">
-            <PageLayout
-              movies={moviesByCategory[CATEGORIES.GENRES]}
-              presetCategory={CATEGORIES.GENRES}
-              hideSort={true}
-            >
-              <SubCategorized
-                category={CATEGORIES.GENRES}
-                movies={movies}
-                openDetail={openDetail}
-              />
-            </PageLayout>
-          </Route>
-          <Route path="/finishtheserieshorror">
-            <PageLayout
-              movies={moviesByCategory[CATEGORIES.FINISH_THE_SERIES_HORROR]}
-              presetCategory={CATEGORIES.FINISH_THE_SERIES_HORROR}
-            >
-              <CategorizedList
-                categoryMeta={categoryMeta}
-                filteredMovies={filteredMovies}
-                openDetail={openDetail}
+              >
+                <CategorizedList
+                  categoryMeta={categoryMeta}
+                  filteredMovies={filteredMovies}
+                  openDetail={openDetail}
+                  presetCategory={CATEGORIES.RANDOMIZER}
+                />
+              </PageLayout>
+            </Route>
+            <Route path="/bracket">
+              <PageLayout
+                movies={moviesByCategory[CATEGORIES.MARCH_MADNESS]}
+                presetCategory={CATEGORIES.MARCH_MADNESS}
+                hideSort={true}
+              >
+                <Bracket />
+              </PageLayout>
+            </Route>
+            <Route path="/halloween2020">
+              <PageLayout
+                movies={moviesByCategory[CATEGORIES.HALLOWEEN_2020]}
+                presetCategory={CATEGORIES.HALLOWEEN_2020}
+                hideSort={true}
+              >
+                <Halloween2020 movies={movies} openDetail={openDetail} />
+              </PageLayout>
+            </Route>
+            <Route path="/novdec2020">
+              <PageLayout
+                movies={moviesByCategory[CATEGORIES.NOV_DEC_2020]}
+                presetCategory={CATEGORIES.NOV_DEC_2020}
+                hideSort={true}
+              >
+                <SubCategorized
+                  category={CATEGORIES.NOV_DEC_2020}
+                  movies={movies}
+                  openDetail={openDetail}
+                />
+              </PageLayout>
+            </Route>
+            <Route path="/genres">
+              <PageLayout
+                movies={moviesByCategory[CATEGORIES.GENRES]}
+                presetCategory={CATEGORIES.GENRES}
+                hideSort={true}
+              >
+                <SubCategorized
+                  category={CATEGORIES.GENRES}
+                  movies={movies}
+                  openDetail={openDetail}
+                />
+              </PageLayout>
+            </Route>
+            <Route path="/finishtheserieshorror">
+              <PageLayout
+                movies={moviesByCategory[CATEGORIES.FINISH_THE_SERIES_HORROR]}
                 presetCategory={CATEGORIES.FINISH_THE_SERIES_HORROR}
-              />
-            </PageLayout>
-          </Route>
-          <Route path="/finishtheseriesnonhorror">
-            <PageLayout
-              movies={moviesByCategory[CATEGORIES.FINISH_THE_SERIES_NON_HORROR]}
-              presetCategory={CATEGORIES.FINISH_THE_SERIES_NON_HORROR}
-            >
-              <CategorizedList
-                categoryMeta={categoryMeta}
-                filteredMovies={filteredMovies}
-                openDetail={openDetail}
+              >
+                <CategorizedList
+                  categoryMeta={categoryMeta}
+                  filteredMovies={filteredMovies}
+                  openDetail={openDetail}
+                  presetCategory={CATEGORIES.FINISH_THE_SERIES_HORROR}
+                />
+              </PageLayout>
+            </Route>
+            <Route path="/finishtheseriesnonhorror">
+              <PageLayout
+                movies={
+                  moviesByCategory[CATEGORIES.FINISH_THE_SERIES_NON_HORROR]
+                }
                 presetCategory={CATEGORIES.FINISH_THE_SERIES_NON_HORROR}
-              />
-            </PageLayout>
-          </Route>
-          <Route path="/decadesofhorror">
-            <PageLayout
-              movies={moviesByCategory[CATEGORIES.DECADES_OF_HORROR]}
-              presetCategory={CATEGORIES.DECADES_OF_HORROR}
-            >
-              <CategorizedList
-                categoryMeta={categoryMeta}
-                filteredMovies={filteredMovies}
-                openDetail={openDetail}
+              >
+                <CategorizedList
+                  categoryMeta={categoryMeta}
+                  filteredMovies={filteredMovies}
+                  openDetail={openDetail}
+                  presetCategory={CATEGORIES.FINISH_THE_SERIES_NON_HORROR}
+                />
+              </PageLayout>
+            </Route>
+            <Route path="/decadesofhorror">
+              <PageLayout
+                movies={moviesByCategory[CATEGORIES.DECADES_OF_HORROR]}
                 presetCategory={CATEGORIES.DECADES_OF_HORROR}
+              >
+                <CategorizedList
+                  categoryMeta={categoryMeta}
+                  filteredMovies={filteredMovies}
+                  openDetail={openDetail}
+                  presetCategory={CATEGORIES.DECADES_OF_HORROR}
+                />
+              </PageLayout>
+            </Route>
+            <Route path="/references">
+              <References />
+            </Route>
+            <Route path="/milestones">
+              <Milestones />
+            </Route>
+            <Route>
+              <Home
+                movies={movies}
+                openDetail={openDetail}
+                resetFilters={resetFilter}
               />
-            </PageLayout>
-          </Route>
-          <Route path="/references">
-            <References />
-          </Route>
-          <Route path="/milestones">
-            <Milestones />
-          </Route>
-          <Route>
-            <Home
-              movies={movies}
-              openDetail={openDetail}
-              resetFilters={resetFilter}
-            />
-          </Route>
-        </Switch>
+            </Route>
+          </Switch>
+        </div>
+        <Footer />
       </Router>
       <DetailDialog
         detailOpen={detailOpen}

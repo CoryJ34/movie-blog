@@ -14,6 +14,11 @@ body.test {
   font-family: 'Helvetica Neue', Helvetica, 'Arial', 'sans-serif' !important;
 }
 
+.page-content {
+  overflow-y: scroll;
+  max-height: calc(100vh - 50px);
+}
+
 ::-webkit-scrollbar {
   width: 10px;
 }

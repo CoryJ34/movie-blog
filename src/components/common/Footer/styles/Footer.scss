@@ -1,0 +1,35 @@
+.footer {
+  // position: sticky;
+  // bottom: 0;
+  background: #333;
+  border-top: solid 1px #fff;
+
+  .links {
+    padding: 10px 0;
+    display: flex;
+    width: fit-content;
+    margin: auto;
+
+    .link {
+      margin: 0 10px;
+      border-radius: 3px;
+      padding: 3px 10px;
+
+      &:hover {
+        background: rgb(62, 85, 134);
+      }
+
+      a {
+        color: white;
+        font-size: 14px;
+        font-weight: 300;
+        text-shadow: 1px 1px 2px #222;
+        text-decoration: none;
+      }
+    }
+
+    .divider {
+      border-left: solid 1px #ccc;
+    }
+  }
+}

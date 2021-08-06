@@ -15,6 +15,8 @@ import Charts from "./Charts";
 import Sort from "./Sort";
 
 import "./styles/ListSummary.scss";
+import { FORMATS, LABELS } from "../../common/constants";
+import FilterSection from "./FilterSection";
 
 interface Props {
   movies: Movie[];
@@ -27,6 +29,28 @@ interface Props {
   removeFilter: (filter: Filter) => void;
 }
 
+const makeFormatValues = () => {
+  return Object.keys(FORMATS).map((key) => {
+    // @ts-ignore
+    const value: string = FORMATS[key];
+    return {
+      value,
+      name: value,
+    };
+  });
+};
+
+const makeLabelValues = () => {
+  return Object.keys(LABELS).map((key) => {
+    // @ts-ignore
+    const value: string = LABELS[key];
+    return {
+      value,
+      name: value,
+    };
+  });
+};
+
 const ListSummary = (props: Props) => {
   const {
     movies,
@@ -35,7 +59,7 @@ const ListSummary = (props: Props) => {
     decades,
     hideSort,
     applyFilter,
-    removeFilter
+    removeFilter,
   } = props;
 
   const [currentRemark, setCurrentRemark] =
@@ -66,24 +90,30 @@ const ListSummary = (props: Props) => {
     : null;
 
   const renderDecades = () => {
-    return <div className="decades">
-      {decades.map(d => {
-        const onClick = () => {
-          const exists = (filters || []).find(
-            (f) => f.type === FilterType.DECADE && f.value === d.toString()
+    return (
+      <div className="decades">
+        {decades.map((d) => {
+          const onClick = () => {
+            const exists = (filters || []).find(
+              (f) => f.type === FilterType.DECADE && f.value === d.toString()
+            );
+
+            if (exists) {
+              removeFilter({ type: FilterType.DECADE, value: d.toString() });
+            } else {
+              applyFilter({ type: FilterType.DECADE, value: d.toString() });
+            }
+          };
+
+          return (
+            <div onClick={onClick} key={d} className="decade">
+              {d}
+            </div>
           );
-
-          if (exists) {
-            removeFilter({ type: FilterType.DECADE, value: d.toString() });
-          } else {
-            applyFilter({ type: FilterType.DECADE, value: d.toString() });
-          }
-        };
-
-        return <div onClick={onClick} key={d} className="decade">{d}</div>
-      })}
-    </div>;
-  }
+        })}
+      </div>
+    );
+  };
 
   return (
     <div className="list-summary">
@@ -136,28 +166,54 @@ const ListSummary = (props: Props) => {
         </div>
       )}
       {!presetCategory && (
-        <div>
-          {allTags.map((tag) => {
-            const onClick = () => {
-              const exists = (filters || []).find(
-                (f) => f.type === FilterType.TAG && f.value === tag
-              );
-
-              if (exists) {
-                removeFilter({ type: FilterType.TAG, value: tag });
-              } else {
-                applyFilter({ type: FilterType.TAG, value: tag });
-              }
-            };
-            return (
-              <div className={`tag ${tag}`} onClick={onClick}>
-                {tag}
-              </div>
-            );
+        <FilterSection
+          label="Tag"
+          //@ts-ignore
+          values={allTags.map((tag) => {
+            return { value: tag, name: tag };
           })}
-        </div>
+          filterType={FilterType.TAG}
+          filters={filters}
+          applyFilter={applyFilter}
+          removeFilter={removeFilter}
+        />
       )}
-      {renderDecades()}
+      {!presetCategory && (
+        <FilterSection
+          label="Decade"
+          //@ts-ignore
+          values={decades.map((d) => {
+            return { value: d.toString(), name: d.toString() };
+          })}
+          filterType={FilterType.DECADE}
+          filters={filters}
+          applyFilter={applyFilter}
+          removeFilter={removeFilter}
+        />
+      )}
+      {!presetCategory && (
+        <FilterSection
+          label="Label"
+          //@ts-ignore
+          values={makeLabelValues()}
+          filterType={FilterType.LABEL}
+          filters={filters}
+          applyFilter={applyFilter}
+          removeFilter={removeFilter}
+        />
+      )}
+      {!presetCategory && (
+        <FilterSection
+          label="Format"
+          //@ts-ignore
+          values={makeFormatValues()}
+          filterType={FilterType.FORMAT}
+          filters={filters}
+          applyFilter={applyFilter}
+          removeFilter={removeFilter}
+        />
+      )}
+      {/* {renderDecades()} */}
       {!hideSort && <Sort />}
       <Charts />
       <Dialog
@@ -178,9 +234,9 @@ const mapStateToProps = (state: any) => {
   let decades: number[] = [];
 
   (state.movieStore?.filteredMovies || []).forEach((m: Movie) => {
-    const decade = parseInt(m.titleBreakout.year.substr(1,3) + '0', 10);
+    const decade = parseInt(m.titleBreakout.year.substr(1, 3) + "0", 10);
 
-    if(decades.indexOf(decade) < 0) {
+    if (decades.indexOf(decade) < 0) {
       decades.push(decade);
     }
   });

@@ -10,6 +10,14 @@ const filterMovies = (movies: Movie[], filters: Filter[]) => {
         if ((m.tags || []).indexOf(f.value) < 0) {
           return false;
         }
+      } else if (f.type === FilterType.LABEL) {
+        if (m.label !== f.value) {
+          return false;
+        }
+      } else if (f.type === FilterType.FORMAT) {
+        if (m.format !== f.value) {
+          return false;
+        }
       } else if (f.type === FilterType.WATCHLIST) {
         if (m.titleBreakout.category !== f.value) {
           return false;
