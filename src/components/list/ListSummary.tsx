@@ -9,20 +9,31 @@ import {
   RemarkObject,
   SingleCategoryMeta,
 } from "../../models/CategoryMeta";
-import { Filter, FilterType } from "../../models/Filter";
+import {
+  AvailableFilters,
+  Filter,
+  FilterMap,
+  FilterType,
+} from "../../models/Filter";
 import { Movie } from "../../models/Movie";
 import Charts from "./Charts";
 import Sort from "./Sort";
 
 import "./styles/ListSummary.scss";
-import { FORMATS, LABELS } from "../../common/constants";
+import { CATEGORY_CLS_MAP, FORMATS, LABELS } from "../../common/constants";
 import FilterSection from "./FilterSection";
+import {
+  gatherAvailableFilters,
+  stringifyFilter,
+} from "../../util/FilterUtils";
 
 interface Props {
   movies: Movie[];
   categoryMeta: CategoryMeta;
   presetCategory?: string;
-  filters: Filter[];
+  filters: FilterMap;
+  availableFilters: AvailableFilters;
+  filteredMovies: Movie[];
   decades: number[];
   hideSort?: boolean;
   applyFilter: (filter: Filter) => void;
@@ -56,6 +67,8 @@ const ListSummary = (props: Props) => {
     movies,
     presetCategory,
     filters,
+    availableFilters,
+    filteredMovies,
     decades,
     hideSort,
     applyFilter,
@@ -92,11 +105,15 @@ const ListSummary = (props: Props) => {
   const renderDecades = () => {
     return (
       <div className="decades">
-        {decades.map((d) => {
+        {availableFilters[FilterType.DECADE].map((d) => {
           const onClick = () => {
-            const exists = (filters || []).find(
-              (f) => f.type === FilterType.DECADE && f.value === d.toString()
-            );
+            const exists =
+              !!filters[
+                stringifyFilter({
+                  type: FilterType.DECADE,
+                  value: d.toString(),
+                })
+              ];
 
             if (exists) {
               removeFilter({ type: FilterType.DECADE, value: d.toString() });
@@ -114,6 +131,10 @@ const ListSummary = (props: Props) => {
       </div>
     );
   };
+
+  const availableFromFiltered = gatherAvailableFilters(filteredMovies);
+  const availableWatchlists =
+    availableFromFiltered[FilterType.WATCHLIST.toString()];
 
   return (
     <div className="list-summary">
@@ -144,12 +165,14 @@ const ListSummary = (props: Props) => {
       <div>{`Average rating: ${averageRating.toFixed(2)}`}</div>
       {!presetCategory && (
         <div>
-          {Object.keys(allCategories).map((k) => {
+          {availableFilters[FilterType.WATCHLIST].map((k) => {
             const onClick = () => {
-              const val = allCategories[k];
-              const exists = (filters || []).find(
-                (f) => f.type === FilterType.WATCHLIST && f.value === val
-              );
+              const val = k;
+
+              const exists =
+                !!filters[
+                  stringifyFilter({ type: FilterType.WATCHLIST, value: val })
+                ];
 
               if (exists) {
                 removeFilter({ type: FilterType.WATCHLIST, value: val });
@@ -158,8 +181,21 @@ const ListSummary = (props: Props) => {
               }
             };
             return (
-              <div className={`category ${k}`} onClick={onClick}>
-                {allCategories[k]}
+              <div
+                className={`category ${CATEGORY_CLS_MAP[k]} ${
+                  !!(filters || {})[
+                    stringifyFilter({ type: FilterType.WATCHLIST, value: k })
+                  ]
+                    ? "selected"
+                    : ""
+                } ${
+                  !availableWatchlists || availableWatchlists.indexOf(k) < 0
+                    ? "na"
+                    : ""
+                }`}
+                onClick={onClick}
+              >
+                {k}
               </div>
             );
           })}
@@ -168,12 +204,10 @@ const ListSummary = (props: Props) => {
       {!presetCategory && (
         <FilterSection
           label="Tag"
-          //@ts-ignore
-          values={allTags.map((tag) => {
-            return { value: tag, name: tag };
-          })}
           filterType={FilterType.TAG}
           filters={filters}
+          availableFilters={availableFilters}
+          availableFromFiltered={availableFromFiltered}
           applyFilter={applyFilter}
           removeFilter={removeFilter}
         />
@@ -181,12 +215,10 @@ const ListSummary = (props: Props) => {
       {!presetCategory && (
         <FilterSection
           label="Decade"
-          //@ts-ignore
-          values={decades.map((d) => {
-            return { value: d.toString(), name: d.toString() };
-          })}
           filterType={FilterType.DECADE}
           filters={filters}
+          availableFilters={availableFilters}
+          availableFromFiltered={availableFromFiltered}
           applyFilter={applyFilter}
           removeFilter={removeFilter}
         />
@@ -194,10 +226,10 @@ const ListSummary = (props: Props) => {
       {!presetCategory && (
         <FilterSection
           label="Label"
-          //@ts-ignore
-          values={makeLabelValues()}
           filterType={FilterType.LABEL}
           filters={filters}
+          availableFilters={availableFilters}
+          availableFromFiltered={availableFromFiltered}
           applyFilter={applyFilter}
           removeFilter={removeFilter}
         />
@@ -205,10 +237,10 @@ const ListSummary = (props: Props) => {
       {!presetCategory && (
         <FilterSection
           label="Format"
-          //@ts-ignore
-          values={makeFormatValues()}
           filterType={FilterType.FORMAT}
           filters={filters}
+          availableFilters={availableFilters}
+          availableFromFiltered={availableFromFiltered}
           applyFilter={applyFilter}
           removeFilter={removeFilter}
         />
@@ -246,6 +278,8 @@ const mapStateToProps = (state: any) => {
   return {
     decades,
     filters: state.movieStore?.filters,
+    availableFilters: state.movieStore?.availableFilters,
+    filteredMovies: state.movieStore?.filteredMovies,
   };
 };
 

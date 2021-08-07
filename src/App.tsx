@@ -13,7 +13,7 @@ import MovieList from "./components/list/MovieList";
 import { CategoryMeta } from "./models/CategoryMeta";
 import PageLayout from "./components/PageLayout";
 import CategorizedList from "./components/list/CategorizedList";
-import { Filter } from "./models/Filter";
+import { Filter, FilterMap } from "./models/Filter";
 import References from "./components/references/References";
 import Milestones from "./components/milestones/Milestones";
 import Footer from "./components/common/Footer/Footer";
@@ -24,7 +24,6 @@ interface Props {
   filteredMovies: Movie[];
   selectedMovie: Movie;
   detailOpen: boolean;
-  filters: Filter[];
   loadMovies: () => void;
   removeFilter: (filter: Filter) => void;
   resetFilter: () => void;
@@ -227,7 +226,6 @@ const mapStateToProps = (state: any) => {
     filteredMovies: state.movieStore?.filteredMovies,
     selectedMovie: state.detailStore?.selectedMovie,
     detailOpen: state.detailStore?.detailOpen,
-    filters: state.movieStore?.filters,
   };
 };
 

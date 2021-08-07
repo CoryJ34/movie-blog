@@ -1,11 +1,18 @@
-import { Filter, FilterType } from "../../models/Filter";
-import './styles/FilterSection.scss'
+import {
+  AvailableFilters,
+  Filter,
+  FilterMap,
+  FilterType,
+} from "../../models/Filter";
+import { stringifyFilter } from "../../util/FilterUtils";
+import "./styles/FilterSection.scss";
 
 interface Props {
   label: string;
-  values: Value[];
   filterType: FilterType;
-  filters: Filter[];
+  filters: FilterMap;
+  availableFilters: AvailableFilters;
+  availableFromFiltered: AvailableFilters;
   applyFilter: (filter: Filter) => void;
   removeFilter: (filter: Filter) => void;
 }
@@ -16,13 +23,18 @@ interface Value {
 }
 
 const FilterSection = (props: Props) => {
-  const { label, values, filterType, filters, applyFilter, removeFilter } =
-    props;
+  const {
+    label,
+    filterType,
+    filters,
+    availableFilters,
+    availableFromFiltered,
+    applyFilter,
+    removeFilter,
+  } = props;
 
   const onClick = (val: string) => {
-    const exists = (filters || []).find(
-      (f) => f.type === filterType && f.value === val
-    );
+    const exists = !!filters[stringifyFilter({ type: filterType, value: val })];
 
     if (exists) {
       removeFilter({ type: filterType, value: val });
@@ -31,13 +43,26 @@ const FilterSection = (props: Props) => {
     }
   };
 
+  const availableForType = availableFromFiltered[filterType.toString()];
+
   return (
     <div className="filter-section">
       <div className="section-label">{label}</div>
       <div className="filters">
-        {values.map((v) => (
-          <div key={v.value} className={`tag ${v.value}`} onClick={() => onClick(v.value)}>
-            {v.name}
+        {availableFilters[filterType].map((v) => (
+          <div
+            key={v}
+            className={`tag ${v} ${
+              !!(filters || {})[
+                stringifyFilter({ type: filterType, value: v })
+              ] ? "selected" : ""
+            } ${
+              !availableForType || availableForType.indexOf(v) < 0 ? "na" : ""
+            }`}
+            onClick={() => onClick(v)}
+          >
+              {/* <div className="filter-count">34</div> */}
+            {v}
           </div>
         ))}
       </div>

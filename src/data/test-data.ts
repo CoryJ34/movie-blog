@@ -17,6 +17,39 @@ const TAGS = {
 
 const data = [
   {
+    img: "https://einysrentals.files.wordpress.com/2021/07/pxl_20210714_135609032.jpg?w=400&h=300&crop=1",
+    title:
+      "[Non-Horror] Finish the Series #14 – Battle for the Planet of the Apes (1973)",
+    content: [
+      "And now the final <strong>Planet of the Apes</strong> movie.  One thing I appreciate about these movies is that they are all fairly distinct.  I can actually differentiate between all of them because they tend to change settings and major characters.  This last one is..fine.  It’s about, unsurprisingly, the battle between apes and humans.  It’s really spurred on by the gorillas though.. those…horrible monkeys.. The chimps are mostly cool though.  It’s pretty cheesy in some parts but as a cap on the story of the whole series, it’s actually a decent way to bridge the gap from the near future to the distant future of the first two movies.  It was kind of a middle-of-the-road Apes movie for me.",
+      "6/10",
+      "Ok I can actually rank these, I think, since I can remember them more distinctly:",
+      "<li><strong>Planet of the Apes</strong> – An original and interesting concept with a famous twist</li><li><strong>Conquest of the Planet of the Apes</strong> – Something about the premise of the enslaved apes fighting back was appealing to me</li><li><strong>Battle for the Planet of the Apes</strong> – Again, interesting in the context of the whole story arc, but a little cheesy</li><li><strong>Beneath the Planet of the Apes</strong> – Really, this just felt like a lesser version of the original, but I still appreciate seeing more about the “ape planet”</li><li><strong>Escape from the Planet of the Apes</strong> – I didn’t dislike it but it’s a much less eventful movie sandwiched between more exciting movies</li>",
+      "So for the record, that’s 1 &gt; 4 &gt; 5 &gt; 2 &gt; 3.. so kind of all over the place.  Anyway, it’s an all right series but what really sells it for me is how the entire story fits together.  I don’t know how soon I’ll go back and revisit them.. maybe I’ll eventually get around to the more recent remakes..? Maybe",
+    ],
+    date: "August 6, 2021",
+    id: 240,
+    
+    tags: [TAGS.SCI_FI],
+    label: LABELS.OTHER,
+    format: FORMATS.BLU_RAY,
+  },
+  {
+    img: "https://einysrentals.files.wordpress.com/2021/07/pxl_20210714_135404148.jpg?w=800&h=600&crop=1",
+    title: "[Non-Horror] Finish the Series #13 – Outlaw: Kill! (1969)",
+    content: [
+      "Ending yet another series.  It’s funny to end this right after <strong>Sartana</strong> because I find these similar in a lot of ways.  Mysterious fighter who is like TOO indestructible, made around the same time (late 60s).. it’s just that one is an Italian western series and the other a Japanese action series.  The <strong>Outlaw</strong> series goes for emotion more than <strong>Sartana</strong> though, which is a big difference.  This movie in particular has a lot of quiet moments compared to the previous movies, at least based on my gut reaction.  But otherwise, it’s the same as ever, so it didn’t really leave a big impression on me.  I did enjoy the final fight with the psychedelic 60s rock band music.  It may be my favorite fight from anywhere in this series.  Another solid movie but also very similar, so it ends up kind of just falling in the middle for me.  If I had seen this as a one-off movie without the others in the series, I’d probably have been more impressed.",
+      "6.5/10",
+      "Now it’s all over.. I actually did enjoy this series quite a bit.  It’s repetitive and if I could pick and choose some scenes/locations from each of the six movies and make one super-movie, it’d be great.  The rock music fight scene, the spilled paint scene, things like that.  Like with <strong>Sartana</strong>, I really can’t rank these because they all blur in my mind.  As a series, it’s pretty good and I’d like to go back and rewatch some of them from time to time",
+    ],
+    date: "August 6, 2021",
+    id: 239,
+    
+    tags: [TAGS.JAPANESE],
+    label: LABELS.ARROW,
+    format: FORMATS.BLU_RAY,
+  },
+  {
     img: "https://einysrentals.files.wordpress.com/2021/08/pxl_20210714_135517520.jpg?w=800&h=600&crop=1",
     title:
       "[Non-Horror] Finish the Series #12 – Light the Fuse… Sartana is Coming (1970)",
@@ -29,7 +62,7 @@ const data = [
     id: 238,
     tags: [TAGS.WESTERN],
     label: LABELS.ARROW,
-    format: FORMATS.BLU_RAY
+    format: FORMATS.BLU_RAY,
   },
   {
     img: "https://einysrentals.files.wordpress.com/2021/08/pxl_20210714_135716910.mp_.jpg?w=400&h=300&crop=1",
@@ -43,7 +76,7 @@ const data = [
     id: 237,
     tags: [TAGS.JAPANESE],
     label: LABELS.ARROW,
-    format: FORMATS.BLU_RAY
+    format: FORMATS.BLU_RAY,
   },
   {
     img: "https://einysrentals.files.wordpress.com/2021/07/pxl_20210714_135609032.jpg?w=400&h=300&crop=1",
@@ -57,7 +90,7 @@ const data = [
     id: 236,
     tags: [TAGS.SCI_FI],
     label: LABELS.OTHER,
-    format: FORMATS.BLU_RAY
+    format: FORMATS.BLU_RAY,
   },
   {
     img: "https://einysrentals.files.wordpress.com/2021/07/pxl_20210714_135404148.jpg?w=800&h=600&crop=1",
@@ -70,7 +103,7 @@ const data = [
     id: 235,
     tags: [TAGS.JAPANESE],
     label: LABELS.ARROW,
-    format: FORMATS.BLU_RAY
+    format: FORMATS.BLU_RAY,
   },
   {
     img: "https://einysrentals.files.wordpress.com/2021/07/pxl_20210714_135500453.jpg?w=800&h=600&crop=1",
@@ -82,9 +115,9 @@ const data = [
     ],
     date: "July 27, 2021",
     id: 234,
-    tags: [TAGS.SCI_FI],
+    tags: [TAGS.WESTERN],
     label: LABELS.ARROW,
-    format: FORMATS.BLU_RAY
+    format: FORMATS.BLU_RAY,
   },
   {
     img: "https://einysrentals.files.wordpress.com/2021/07/pxl_20210714_135656073.jpg?w=800&h=600&crop=1",
@@ -98,7 +131,7 @@ const data = [
     id: 233,
     tags: [TAGS.ACTION],
     label: LABELS.BLUE_UNDERGROUND,
-    format: FORMATS.BLU_RAY
+    format: FORMATS.BLU_RAY,
   },
   {
     img: "https://einysrentals.files.wordpress.com/2021/07/pxl_20210714_135609032.jpg?w=400&h=300&crop=1",
@@ -112,7 +145,7 @@ const data = [
     id: 232,
     tags: [TAGS.SCI_FI],
     label: LABELS.OTHER,
-    format: FORMATS.BLU_RAY
+    format: FORMATS.BLU_RAY,
   },
   {
     img: "https://einysrentals.files.wordpress.com/2021/07/pxl_20210714_135404148.jpg?w=800&h=600&crop=1",
@@ -126,7 +159,7 @@ const data = [
     id: 231,
     tags: [TAGS.JAPANESE],
     label: LABELS.ARROW,
-    format: FORMATS.BLU_RAY
+    format: FORMATS.BLU_RAY,
   },
   {
     img: "https://einysrentals.files.wordpress.com/2021/07/pxl_20210714_135447833.jpg?w=800&h=600&crop=1",
@@ -154,7 +187,7 @@ const data = [
     id: 229,
     tags: [TAGS.ACTION],
     label: LABELS.BLUE_UNDERGROUND,
-    format: FORMATS.BLU_RAY
+    format: FORMATS.BLU_RAY,
   },
   {
     img: "https://einysrentals.files.wordpress.com/2021/07/pxl_20210714_135609032.jpg?w=400&h=300&crop=1",
@@ -170,7 +203,7 @@ const data = [
     id: 228,
     tags: [TAGS.SCI_FI],
     label: LABELS.OTHER,
-    format: FORMATS.BLU_RAY
+    format: FORMATS.BLU_RAY,
   },
   {
     img: "https://einysrentals.files.wordpress.com/2021/07/pxl_20210714_135404148.jpg?w=800&h=600&crop=1",
@@ -211,7 +244,7 @@ const data = [
     date: "July 11, 2021",
     id: 225,
     label: LABELS.OTHER,
-    format: FORMATS.BLU_RAY
+    format: FORMATS.BLU_RAY,
   },
   {
     img: "https://einysrentals.files.wordpress.com/2021/07/pxl_20210630_191944602.jpg?w=800&h=600&crop=1",
@@ -223,7 +256,7 @@ const data = [
     date: "July 3, 2021",
     id: 224,
     label: LABELS.OTHER,
-    format: FORMATS.BLU_RAY
+    format: FORMATS.BLU_RAY,
   },
   {
     img: "https://einysrentals.files.wordpress.com/2021/07/pxl_20210630_191931350.jpg?w=800&h=600&crop=1",
@@ -235,7 +268,7 @@ const data = [
     date: "July 3, 2021",
     id: 223,
     label: LABELS.OTHER,
-    format: FORMATS.BLU_RAY
+    format: FORMATS.BLU_RAY,
   },
   {
     img: "https://einysrentals.files.wordpress.com/2021/06/pxl_20210630_191905518.jpg?w=800&h=600&crop=1",
@@ -247,7 +280,7 @@ const data = [
     date: "June 30, 2021",
     id: 222,
     label: LABELS.OTHER,
-    format: FORMATS.BLU_RAY
+    format: FORMATS.BLU_RAY,
   },
   {
     img: "https://einysrentals.files.wordpress.com/2021/06/pxl_20210627_234343007.jpg?w=800&h=600&crop=1",
@@ -262,7 +295,7 @@ const data = [
     date: "June 29, 2021",
     id: 221,
     label: LABELS.OTHER,
-    format: FORMATS.BLU_RAY
+    format: FORMATS.BLU_RAY,
   },
   {
     img: "https://einysrentals.files.wordpress.com/2021/06/pxl_20210627_234312849.jpg?w=800&h=600&crop=1",
@@ -274,7 +307,7 @@ const data = [
     date: "June 28, 2021",
     id: 220,
     label: LABELS.OTHER,
-    format: FORMATS.BLU_RAY
+    format: FORMATS.BLU_RAY,
   },
   {
     img: "https://einysrentals.files.wordpress.com/2021/06/pxl_20210627_234312849.jpg?w=800&h=600&crop=1",
@@ -286,7 +319,7 @@ const data = [
     date: "June 28, 2021",
     id: 219,
     label: LABELS.OTHER,
-    format: FORMATS.BLU_RAY
+    format: FORMATS.BLU_RAY,
   },
   {
     img: "https://einysrentals.files.wordpress.com/2021/06/pxl_20210627_234245401.jpg?w=800&h=600&crop=1",
@@ -299,7 +332,7 @@ const data = [
     id: 218,
     tags: [TAGS.JAPANESE],
     label: LABELS.ARROW,
-    format: FORMATS.BLU_RAY
+    format: FORMATS.BLU_RAY,
   },
   {
     img: "https://einysrentals.files.wordpress.com/2021/06/pxl_20210627_234229193.jpg?w=800&h=600&crop=1",
@@ -311,7 +344,7 @@ const data = [
     date: "June 27, 2021",
     id: 217,
     label: LABELS.SCREAM_FACTORY_COLLECTORS,
-    format: FORMATS.BLU_RAY
+    format: FORMATS.BLU_RAY,
   },
   {
     img: "https://einysrentals.files.wordpress.com/2021/06/pxl_20210617_134200324.jpg?w=800&h=600&crop=1",
@@ -328,7 +361,7 @@ const data = [
     id: 216,
     tags: [TAGS.SCI_FI_HORROR],
     label: LABELS.KL,
-    format: FORMATS.BLU_RAY
+    format: FORMATS.BLU_RAY,
   },
   {
     img: "https://einysrentals.files.wordpress.com/2021/06/pxl_20210617_134148264.jpg?w=800&h=600&crop=1",
@@ -341,7 +374,7 @@ const data = [
     id: 215,
     tags: [TAGS.SCI_FI_HORROR],
     label: LABELS.SCREAM_FACTORY_COLLECTORS,
-    format: FORMATS.BLU_RAY
+    format: FORMATS.BLU_RAY,
   },
   {
     img: "https://einysrentals.files.wordpress.com/2021/06/pxl_20210617_134131942.jpg?w=800&h=600&crop=1",
@@ -355,7 +388,7 @@ const data = [
     date: "June 21, 2021",
     id: 214,
     label: LABELS.SEVERIN,
-    format: FORMATS.BLU_RAY
+    format: FORMATS.BLU_RAY,
   },
   {
     img: "https://einysrentals.files.wordpress.com/2021/06/pxl_20210617_134119421.jpg?w=800&h=600&crop=1",
@@ -367,7 +400,7 @@ const data = [
     date: "June 19, 2021",
     id: 213,
     label: LABELS.ARROW,
-    format: FORMATS.BLU_RAY
+    format: FORMATS.BLU_RAY,
   },
   {
     img: "https://einysrentals.files.wordpress.com/2021/06/pxl_20210617_134106186.mp_.jpg?w=800&h=600&crop=1",
@@ -379,7 +412,7 @@ const data = [
     date: "June 17, 2021",
     id: 212,
     label: LABELS.SCREAM_FACTORY_OTHER,
-    format: FORMATS.BLU_RAY
+    format: FORMATS.BLU_RAY,
   },
   {
     img: "https://einysrentals.files.wordpress.com/2021/06/pxl_20210609_151223752.jpg?w=400&h=300&crop=1",
@@ -395,7 +428,7 @@ const data = [
     id: 211,
     tags: [TAGS.SCI_FI_HORROR],
     label: LABELS.KL,
-    format: FORMATS.BLU_RAY
+    format: FORMATS.BLU_RAY,
   },
   {
     img: "https://einysrentals.files.wordpress.com/2021/06/pxl_20210609_151205113.mp_.jpg?w=800&h=600&crop=1",
@@ -407,7 +440,7 @@ const data = [
     date: "June 12, 2021",
     id: 210,
     label: LABELS.VINEGAR_SYNDROME,
-    format: FORMATS.BLU_RAY
+    format: FORMATS.BLU_RAY,
   },
   {
     img: "https://einysrentals.files.wordpress.com/2021/06/pxl_20210609_151149089.jpg?w=800&h=600&crop=1",
@@ -420,7 +453,7 @@ const data = [
     id: 209,
     tags: [TAGS.COMEDY_HORROR],
     label: LABELS.KL,
-    format: FORMATS.BLU_RAY
+    format: FORMATS.BLU_RAY,
   },
   {
     img: "https://einysrentals.files.wordpress.com/2021/06/pxl_20210609_151134268.jpg?w=800&h=600&crop=1",
@@ -433,7 +466,7 @@ const data = [
     id: 208,
     tags: [TAGS.SLASH80S],
     label: LABELS.CODE_RED,
-    format: FORMATS.BLU_RAY
+    format: FORMATS.BLU_RAY,
   },
   {
     img: "https://einysrentals.files.wordpress.com/2021/06/pxl_20210609_151112298.jpg?w=400&h=300&crop=1",
@@ -447,7 +480,7 @@ const data = [
     date: "June 9, 2021",
     id: 207,
     label: LABELS.BLUE_UNDERGROUND,
-    format: FORMATS.BLU_RAY
+    format: FORMATS.BLU_RAY,
   },
   {
     img: "https://einysrentals.files.wordpress.com/2021/06/pxl_20210528_135347898.jpg?w=800&h=600&crop=1",
@@ -462,7 +495,7 @@ const data = [
     date: "June 7, 2021",
     id: 206,
     label: LABELS.SCREAM_FACTORY_OTHER,
-    format: FORMATS.BLU_RAY
+    format: FORMATS.BLU_RAY,
   },
   {
     img: "https://einysrentals.files.wordpress.com/2021/06/pxl_20210528_135302930.jpg?w=800&h=600&crop=1",
@@ -474,7 +507,7 @@ const data = [
     date: "June 6, 2021",
     id: 205,
     label: LABELS.KL,
-    format: FORMATS.BLU_RAY
+    format: FORMATS.BLU_RAY,
   },
   {
     img: "https://einysrentals.files.wordpress.com/2021/06/pxl_20210606_154658156.mp_.jpg?w=800&h=600&crop=1",
@@ -486,7 +519,7 @@ const data = [
     date: "June 6, 2021",
     id: 204,
     label: LABELS.VESTRON,
-    format: FORMATS.BLU_RAY
+    format: FORMATS.BLU_RAY,
   },
   {
     img: "https://einysrentals.files.wordpress.com/2021/06/pxl_20210528_135116365.jpg?w=400&h=300&crop=1",
@@ -498,7 +531,7 @@ const data = [
     date: "June 5, 2021",
     id: 203,
     label: LABELS.CRITERION,
-    format: FORMATS.BLU_RAY
+    format: FORMATS.BLU_RAY,
   },
   {
     img: "https://einysrentals.files.wordpress.com/2021/06/pxl_20210528_135008874.jpg?w=800&h=600&crop=1",
@@ -510,7 +543,7 @@ const data = [
     date: "June 4, 2021",
     id: 202,
     label: LABELS.OTHER,
-    format: FORMATS.BLU_RAY
+    format: FORMATS.BLU_RAY,
   },
   {
     img: "https://einysrentals.files.wordpress.com/2021/06/pxl_20210528_134904093.jpg?w=800&h=600&crop=1",
@@ -525,7 +558,7 @@ const data = [
     date: "June 3, 2021",
     id: 201,
     label: LABELS.KL,
-    format: FORMATS.BLU_RAY
+    format: FORMATS.BLU_RAY,
   },
   {
     img: "https://einysrentals.files.wordpress.com/2021/05/pxl_20210528_134741047.jpg?w=800&h=600&crop=1",
@@ -538,7 +571,7 @@ const data = [
     date: "May 31, 2021",
     id: 200,
     label: LABELS.ARROW,
-    format: FORMATS.BLU_RAY
+    format: FORMATS.BLU_RAY,
   },
   {
     img: "https://einysrentals.files.wordpress.com/2021/05/pxl_20210528_134632441.jpg?w=800&h=600&crop=1",
@@ -550,7 +583,7 @@ const data = [
     date: "May 30, 2021",
     id: 199,
     label: LABELS.SEVERIN,
-    format: FORMATS.BLU_RAY
+    format: FORMATS.BLU_RAY,
   },
   {
     img: "https://einysrentals.files.wordpress.com/2021/05/pxl_20210528_134540409.jpg?w=800&h=600&crop=1",
@@ -563,7 +596,7 @@ const data = [
     tags: [TAGS.HAMMER],
     date: "May 29, 2021",
     label: LABELS.OTHER,
-    format: FORMATS.BLU_RAY
+    format: FORMATS.BLU_RAY,
   },
   {
     img: "https://einysrentals.files.wordpress.com/2021/05/pxl_20210528_134427215.jpg?w=800&h=600&crop=1",
@@ -576,7 +609,7 @@ const data = [
     tags: [TAGS.VINCENT_PRICE],
     date: "May 28, 2021",
     label: LABELS.SCREAM_FACTORY_OTHER,
-    format: FORMATS.BLU_RAY
+    format: FORMATS.BLU_RAY,
   },
   {
     img: "https://einysrentals.files.wordpress.com/2021/05/pxl_20210524_135255149.jpg?w=800&h=600&crop=1",
@@ -591,7 +624,7 @@ const data = [
     date: "May 27, 2021",
     tags: [TAGS.COMEDY_HORROR],
     label: LABELS.OTHER,
-    format: FORMATS.BLU_RAY
+    format: FORMATS.BLU_RAY,
   },
   {
     img: "https://einysrentals.files.wordpress.com/2021/05/pxl_20210524_135220411.jpg?w=400&h=300&crop=1",
@@ -604,7 +637,7 @@ const data = [
     id: 195,
     date: "May 26, 2021",
     label: LABELS.SCREAM_FACTORY_OTHER,
-    format: FORMATS.BLU_RAY
+    format: FORMATS.BLU_RAY,
   },
   {
     img: "https://einysrentals.files.wordpress.com/2021/05/pxl_20210524_135206436.mp_.jpg?w=800&h=600&crop=1",
@@ -618,7 +651,7 @@ const data = [
     date: "May 26, 2021",
     tags: [TAGS.COMEDY_HORROR],
     label: LABELS.MVD,
-    format: FORMATS.BLU_RAY
+    format: FORMATS.BLU_RAY,
   },
   {
     img: "https://einysrentals.files.wordpress.com/2021/05/pxl_20210524_135149127.jpg?w=800&h=600&crop=1",
@@ -632,7 +665,7 @@ const data = [
     date: "May 24, 2021",
     tags: [TAGS.COMEDY_HORROR],
     label: LABELS.SCREAM_FACTORY_COLLECTORS,
-    format: FORMATS.BLU_RAY
+    format: FORMATS.BLU_RAY,
   },
   {
     img: "https://einysrentals.files.wordpress.com/2021/05/pxl_20210524_020339792.jpg?w=800&h=600&crop=1",
@@ -645,7 +678,7 @@ const data = [
     id: 192,
     date: "May 23, 2021",
     label: LABELS.SCREAM_FACTORY_OTHER,
-    format: FORMATS.BLU_RAY
+    format: FORMATS.BLU_RAY,
   },
   {
     img: "https://einysrentals.files.wordpress.com/2021/05/pxl_20210523_173108192.jpg?w=800&h=600&crop=1",
@@ -660,7 +693,7 @@ const data = [
     date: "May 23, 2021",
     tags: [TAGS.SLASH80S],
     label: LABELS.ARROW,
-    format: FORMATS.BLU_RAY
+    format: FORMATS.BLU_RAY,
   },
   {
     img: "https://einysrentals.files.wordpress.com/2021/05/pxl_20210520_140242848.mp_.jpg?w=800&h=600&crop=1",
@@ -676,7 +709,7 @@ const data = [
     date: "May 21, 2021",
     tags: [TAGS.UNIVERSAL],
     label: LABELS.OTHER,
-    format: FORMATS.BLU_RAY
+    format: FORMATS.BLU_RAY,
   },
   {
     img: "https://einysrentals.files.wordpress.com/2021/05/pxl_20210520_140130681.jpg?w=800&h=600&crop=1",
@@ -690,7 +723,7 @@ const data = [
     date: "May 20, 2021",
     tags: [TAGS.UNIVERSAL],
     label: LABELS.OTHER,
-    format: FORMATS.BLU_RAY
+    format: FORMATS.BLU_RAY,
   },
   {
     img: "https://einysrentals.files.wordpress.com/2021/05/pxl_20210519_145614096.mp_.jpg?w=800&h=600&crop=1",
@@ -704,7 +737,7 @@ const data = [
     date: "May 19, 2021",
     tags: [TAGS.UNIVERSAL],
     label: LABELS.OTHER,
-    format: FORMATS.BLU_RAY
+    format: FORMATS.BLU_RAY,
   },
   {
     img: "https://einysrentals.files.wordpress.com/2021/05/pxl_20210517_142457574.mp_.jpg?w=800&h=600&crop=1",
@@ -718,7 +751,7 @@ const data = [
     date: "May 18, 2021",
     tags: [TAGS.UNIVERSAL],
     label: LABELS.OTHER,
-    format: FORMATS.BLU_RAY
+    format: FORMATS.BLU_RAY,
   },
   {
     img: "https://einysrentals.files.wordpress.com/2021/05/pxl_20210517_142428852.mp_.jpg?w=800&h=600&crop=1",
@@ -732,7 +765,7 @@ const data = [
     date: "May 17, 2021",
     tags: [TAGS.UNIVERSAL],
     label: LABELS.OTHER,
-    format: FORMATS.BLU_RAY
+    format: FORMATS.BLU_RAY,
   },
   {
     img: "https://einysrentals.files.wordpress.com/2021/05/pxl_20210511_132817812.jpg?w=800&h=600&crop=1",
@@ -746,7 +779,7 @@ const data = [
     id: 185,
     date: "May 16, 2021",
     label: LABELS.SCREAM_FACTORY_OTHER,
-    format: FORMATS.BLU_RAY
+    format: FORMATS.BLU_RAY,
   },
   {
     title: "[Horror] Finish the Series #14 – [REC]³ Genesis (2012)",
@@ -758,7 +791,7 @@ const data = [
     id: 184,
     date: "May 15, 2021",
     label: LABELS.SCREAM_FACTORY_OTHER,
-    format: FORMATS.BLU_RAY
+    format: FORMATS.BLU_RAY,
   },
   {
     title: "[Horror] Finish the Series #13 – [REC]² (2009)",
@@ -770,7 +803,7 @@ const data = [
     id: 183,
     date: "May 11, 2021",
     label: LABELS.SCREAM_FACTORY_OTHER,
-    format: FORMATS.BLU_RAY
+    format: FORMATS.BLU_RAY,
   },
   {
     img: "https://einysrentals.files.wordpress.com/2021/05/pxl_20210502_201406830.mp_.jpg?w=800&h=600&crop=1",
@@ -785,7 +818,7 @@ const data = [
     id: 182,
     date: "May 5, 2021",
     label: LABELS.VESTRON,
-    format: FORMATS.BLU_RAY
+    format: FORMATS.BLU_RAY,
   },
   {
     img: "https://einysrentals.files.wordpress.com/2021/05/pxl_20210502_201406830.mp_.jpg?w=800&h=600&crop=1",
@@ -797,7 +830,7 @@ const data = [
     id: 181,
     date: "May 2, 2021",
     label: LABELS.VESTRON,
-    format: FORMATS.BLU_RAY
+    format: FORMATS.BLU_RAY,
   },
   {
     img: "https://einysrentals.files.wordpress.com/2021/05/pxl_20210428_173449661.jpg?w=800&h=600&crop=1",
@@ -810,7 +843,7 @@ const data = [
     id: 180,
     date: "May 2, 2021",
     label: LABELS.SCREAM_FACTORY_OTHER,
-    format: FORMATS.BLU_RAY
+    format: FORMATS.BLU_RAY,
   },
   {
     img: "https://einysrentals.files.wordpress.com/2021/04/pxl_20210428_173431883.jpg?w=800&h=600&crop=1",
@@ -822,7 +855,7 @@ const data = [
     id: 179,
     date: "April 29, 2021",
     label: LABELS.SCREAM_FACTORY_OTHER,
-    format: FORMATS.BLU_RAY
+    format: FORMATS.BLU_RAY,
   },
   {
     img: "https://einysrentals.files.wordpress.com/2021/04/pxl_20210428_173412721.jpg?w=800&h=600&crop=1",
@@ -834,7 +867,7 @@ const data = [
     id: 178,
     date: "April 28, 2021",
     label: LABELS.SCREAM_FACTORY_OTHER,
-    format: FORMATS.BLU_RAY
+    format: FORMATS.BLU_RAY,
   },
   {
     img: "https://einysrentals.files.wordpress.com/2021/04/pxl_20210426_002159684.jpg?w=800&h=600&crop=1",
@@ -847,7 +880,7 @@ const data = [
     id: 177,
     date: "April 26, 2021",
     label: LABELS.SCREAM_FACTORY_OTHER,
-    format: FORMATS.BLU_RAY
+    format: FORMATS.BLU_RAY,
   },
   {
     img: "https://einysrentals.files.wordpress.com/2021/04/pxl_20210426_002137241.jpg?w=800&h=600&crop=1",
@@ -860,7 +893,7 @@ const data = [
     id: 176,
     date: "April 25, 2021",
     label: LABELS.SCREAM_FACTORY_OTHER,
-    format: FORMATS.BLU_RAY
+    format: FORMATS.BLU_RAY,
   },
   {
     img: "https://einysrentals.files.wordpress.com/2021/04/pxl_20210418_225340345.mp_.jpg?w=800&h=600&crop=1",
@@ -875,7 +908,7 @@ const data = [
     date: "April 25, 2021",
     tags: [TAGS.UNIVERSAL],
     label: LABELS.OTHER,
-    format: FORMATS.BLU_RAY
+    format: FORMATS.BLU_RAY,
   },
   {
     img: "https://einysrentals.files.wordpress.com/2021/04/pxl_20210418_225322792.mp_.jpg?w=800&h=600&crop=1",
@@ -888,7 +921,7 @@ const data = [
     date: "April 23, 2021",
     tags: [TAGS.UNIVERSAL],
     label: LABELS.OTHER,
-    format: FORMATS.BLU_RAY
+    format: FORMATS.BLU_RAY,
   },
   {
     img: "https://einysrentals.files.wordpress.com/2021/04/pxl_20210414_155744475.mp_.jpg?w=800&h=600&crop=1",
@@ -903,7 +936,7 @@ const data = [
     id: 173,
     tags: [TAGS.UNIVERSAL],
     label: LABELS.OTHER,
-    format: FORMATS.BLU_RAY
+    format: FORMATS.BLU_RAY,
   },
   {
     img: "https://einysrentals.files.wordpress.com/2021/04/pxl_20210414_155728861.mp_.jpg?w=800&h=600&crop=1",
@@ -916,7 +949,7 @@ const data = [
     id: 172,
     tags: [TAGS.UNIVERSAL],
     label: LABELS.OTHER,
-    format: FORMATS.BLU_RAY
+    format: FORMATS.BLU_RAY,
   },
   {
     img: "https://einysrentals.files.wordpress.com/2021/04/pxl_20210414_155707602.jpg?w=800&h=600&crop=1",
@@ -929,7 +962,7 @@ const data = [
     id: 171,
     tags: [TAGS.UNIVERSAL],
     label: LABELS.OTHER,
-    format: FORMATS.BLU_RAY
+    format: FORMATS.BLU_RAY,
   },
   {
     img: "https://einysrentals.files.wordpress.com/2021/04/pxl_20210410_124723771.mp_.jpg?w=800&h=600&crop=1",
@@ -945,7 +978,7 @@ const data = [
     id: 170,
     tags: [TAGS.DRAMA],
     label: LABELS.CRITERION,
-    format: FORMATS.BLU_RAY
+    format: FORMATS.BLU_RAY,
   },
   {
     img: "https://einysrentals.files.wordpress.com/2021/04/pxl_20210410_124637244.jpg?w=400&h=300&crop=1",
@@ -958,7 +991,7 @@ const data = [
     id: 169,
     tags: [TAGS.DRAMA],
     label: LABELS.CRITERION,
-    format: FORMATS.BLU_RAY
+    format: FORMATS.BLU_RAY,
   },
   {
     img: "https://einysrentals.files.wordpress.com/2021/04/pxl_20210408_144612807.mp_.jpg?w=800&h=600&crop=1",
@@ -971,7 +1004,7 @@ const data = [
     id: 168,
     tags: [TAGS.DRAMA],
     label: LABELS.OTHER,
-    format: FORMATS.DVD
+    format: FORMATS.DVD,
   },
   {
     img: "https://einysrentals.files.wordpress.com/2021/04/pxl_20210408_144505248.jpg?w=800&h=600&crop=1",
@@ -984,7 +1017,7 @@ const data = [
     id: 167,
     tags: [TAGS.DRAMA],
     label: LABELS.OTHER,
-    format: FORMATS.DVD
+    format: FORMATS.DVD,
   },
   {
     img: "https://einysrentals.files.wordpress.com/2021/04/pxl_20210405_232637780.jpg?w=800&h=600&crop=1",
@@ -997,7 +1030,7 @@ const data = [
     id: 166,
     tags: [TAGS.DRAMA],
     label: LABELS.CRITERION,
-    format: FORMATS.BLU_RAY
+    format: FORMATS.BLU_RAY,
   },
   {
     img: "https://einysrentals.files.wordpress.com/2021/04/pxl_20210403_131648461.jpg?w=800&h=600&crop=1",
@@ -1013,7 +1046,7 @@ const data = [
     id: 165,
     tags: [TAGS.ACTION],
     label: LABELS.OTHER,
-    format: FORMATS.DVD
+    format: FORMATS.DVD,
   },
   {
     img: "https://einysrentals.files.wordpress.com/2021/04/pxl_20210403_131620618.mp_.jpg?w=800&h=600&crop=1",
@@ -1026,7 +1059,7 @@ const data = [
     id: 164,
     tags: [TAGS.ACTION],
     label: LABELS.OTHER,
-    format: FORMATS.DVD
+    format: FORMATS.DVD,
   },
   {
     img: "https://einysrentals.files.wordpress.com/2021/04/pxl_20210403_131509206.mp_.jpg?w=800&h=600&crop=1",
@@ -1041,7 +1074,7 @@ const data = [
     id: 163,
     tags: [TAGS.ACTION],
     label: LABELS.OTHER,
-    format: FORMATS.DVD
+    format: FORMATS.DVD,
   },
   {
     img: "https://einysrentals.files.wordpress.com/2021/04/pxl_20210402_133712021.mp_.jpg?w=800&h=600&crop=1",
@@ -1054,7 +1087,7 @@ const data = [
     id: 162,
     tags: [TAGS.ACTION],
     label: LABELS.OTHER,
-    format: FORMATS.DVD
+    format: FORMATS.DVD,
   },
   {
     img: "https://einysrentals.files.wordpress.com/2021/03/pxl_20210329_005729790.mp_.jpg?w=800&h=600&crop=1",
@@ -1067,7 +1100,7 @@ const data = [
     id: 161,
     tags: [TAGS.ACTION],
     label: LABELS.OTHER,
-    format: FORMATS.DVD
+    format: FORMATS.DVD,
   },
   {
     img: "https://einysrentals.files.wordpress.com/2021/03/pxl_20210328_125138879.jpg?w=800&h=600&crop=1",
@@ -1084,7 +1117,7 @@ const data = [
     id: 160,
     tags: [TAGS.SCI_FI],
     label: LABELS.ARROW,
-    format: FORMATS.BLU_RAY
+    format: FORMATS.BLU_RAY,
   },
   {
     img: "https://einysrentals.files.wordpress.com/2021/03/pxl_20210327_130336104.jpg?w=800&h=600&crop=1",
@@ -1097,7 +1130,7 @@ const data = [
     id: 159,
     tags: [TAGS.SCI_FI],
     label: LABELS.OTHER,
-    format: FORMATS.BLU_RAY
+    format: FORMATS.BLU_RAY,
   },
   {
     img: "https://einysrentals.files.wordpress.com/2021/03/pxl_20210326_135831875.jpg?w=800&h=600&crop=1",
@@ -1110,7 +1143,7 @@ const data = [
     id: 158,
     tags: [TAGS.SCI_FI],
     label: LABELS.ARROW,
-    format: FORMATS.BLU_RAY
+    format: FORMATS.BLU_RAY,
   },
   {
     img: "https://einysrentals.files.wordpress.com/2021/03/pxl_20210321_221000708.jpg?w=400&h=300&crop=1",
@@ -1123,7 +1156,7 @@ const data = [
     id: 157,
     tags: [TAGS.SCI_FI],
     label: LABELS.ARROW,
-    format: FORMATS.BLU_RAY
+    format: FORMATS.BLU_RAY,
   },
   {
     img: "https://einysrentals.files.wordpress.com/2021/03/pxl_20210321_134843536.jpg?w=800&h=600&crop=1",
@@ -1136,7 +1169,7 @@ const data = [
     id: 156,
     tags: [TAGS.SCI_FI],
     label: LABELS.OTHER,
-    format: FORMATS.BLU_RAY
+    format: FORMATS.BLU_RAY,
   },
   {
     img: "https://einysrentals.files.wordpress.com/2021/03/pxl_20210321_023013463.mp_.jpg?w=400&h=300&crop=1",
@@ -1152,7 +1185,7 @@ const data = [
     date: "March 20, 2021",
     id: 155,
     label: LABELS.OTHER,
-    format: FORMATS.BLU_RAY
+    format: FORMATS.BLU_RAY,
   },
   {
     img: "https://einysrentals.files.wordpress.com/2021/03/pxl_20210320_145128693.jpg?w=800&h=600&crop=1",
@@ -1164,7 +1197,7 @@ const data = [
     date: "March 20, 2021",
     id: 154,
     label: LABELS.OTHER,
-    format: FORMATS.BLU_RAY
+    format: FORMATS.BLU_RAY,
   },
   {
     img: "https://einysrentals.files.wordpress.com/2021/03/pxl_20210317_234130011.jpg?w=800&h=600&crop=1",
@@ -1177,7 +1210,7 @@ const data = [
     date: "March 18, 2021",
     id: 153,
     label: LABELS.OTHER,
-    format: FORMATS.BLU_RAY
+    format: FORMATS.BLU_RAY,
   },
   {
     img: "https://einysrentals.files.wordpress.com/2021/03/pxl_20210315_234533672.jpg?w=800&h=600&crop=1",
@@ -1189,7 +1222,7 @@ const data = [
     date: "March 17, 2021",
     id: 152,
     label: LABELS.OTHER,
-    format: FORMATS.DVD
+    format: FORMATS.DVD,
   },
   {
     img: "https://einysrentals.files.wordpress.com/2021/03/pxl_20210315_234519336.jpg?w=800&h=600&crop=1",
@@ -1201,7 +1234,7 @@ const data = [
     date: "March 16, 2021",
     id: 151,
     label: LABELS.OTHER,
-    format: FORMATS.DVD
+    format: FORMATS.DVD,
   },
   {
     img: "https://einysrentals.files.wordpress.com/2021/03/pxl_20210313_014954041.jpg?w=800&h=600&crop=1",
@@ -1218,7 +1251,7 @@ const data = [
     id: 150,
     tags: [TAGS.WESTERN],
     label: LABELS.OTHER,
-    format: FORMATS.BLU_RAY
+    format: FORMATS.BLU_RAY,
   },
   {
     img: "https://einysrentals.files.wordpress.com/2021/03/pxl_20210313_014849183.jpg?w=800&h=600&crop=1",
@@ -1231,7 +1264,7 @@ const data = [
     id: 149,
     tags: [TAGS.WESTERN],
     label: LABELS.KL,
-    format: FORMATS.BLU_RAY
+    format: FORMATS.BLU_RAY,
   },
   {
     img: "https://einysrentals.files.wordpress.com/2021/03/pxl_20210313_014907765.jpg?w=400&h=300&crop=1",
@@ -1244,7 +1277,7 @@ const data = [
     id: 148,
     tags: [TAGS.WESTERN],
     label: LABELS.KL,
-    format: FORMATS.BLU_RAY
+    format: FORMATS.BLU_RAY,
   },
   {
     img: "https://einysrentals.files.wordpress.com/2021/03/pxl_20210313_014653985.jpg?w=800&h=600&crop=1",
@@ -1258,7 +1291,7 @@ const data = [
     id: 147,
     tags: [TAGS.WESTERN],
     label: LABELS.ARROW,
-    format: FORMATS.BLU_RAY
+    format: FORMATS.BLU_RAY,
   },
   {
     img: "https://einysrentals.files.wordpress.com/2021/03/pxl_20210313_014546348.jpg?w=800&h=600&crop=1",
@@ -1271,7 +1304,7 @@ const data = [
     id: 146,
     tags: [TAGS.WESTERN],
     label: LABELS.OTHER,
-    format: FORMATS.DVD
+    format: FORMATS.DVD,
   },
   {
     img: "https://einysrentals.files.wordpress.com/2021/03/pxl_20210307_210519940.mp_.jpg?w=800&h=600&crop=1",
@@ -1292,7 +1325,7 @@ const data = [
     id: 145,
     tags: [TAGS.HAMMER],
     label: LABELS.SCREAM_FACTORY_COLLECTORS,
-    format: FORMATS.BLU_RAY
+    format: FORMATS.BLU_RAY,
   },
   {
     img: "https://einysrentals.files.wordpress.com/2021/03/pxl_20210307_210355582.jpg?w=800&h=600&crop=1",
@@ -1305,7 +1338,7 @@ const data = [
     id: 144,
     tags: [TAGS.SLASH80S],
     label: LABELS.KL,
-    format: FORMATS.BLU_RAY
+    format: FORMATS.BLU_RAY,
   },
   {
     img: "https://einysrentals.files.wordpress.com/2021/03/pxl_20210307_151153364.mp_.jpg?w=400&h=300&crop=1",
@@ -1320,7 +1353,7 @@ const data = [
     id: 143,
     tags: [TAGS.COMEDY_HORROR],
     label: LABELS.OTHER,
-    format: FORMATS.BLU_RAY
+    format: FORMATS.BLU_RAY,
   },
   {
     img: "https://einysrentals.files.wordpress.com/2021/03/pxl_20210307_133145879.jpg?w=800&h=600&crop=1",
@@ -1332,7 +1365,7 @@ const data = [
     date: "March 7, 2021",
     id: 142,
     label: LABELS.SCREAM_FACTORY_OTHER,
-    format: FORMATS.BLU_RAY
+    format: FORMATS.BLU_RAY,
   },
   {
     img: "https://einysrentals.files.wordpress.com/2021/03/pxl_20210306_014847621.jpg?w=800&h=600&crop=1",
@@ -1348,7 +1381,7 @@ const data = [
     date: "March 6, 2021",
     id: 141,
     label: LABELS.SCREAM_FACTORY_COLLECTORS,
-    format: FORMATS.BLU_RAY
+    format: FORMATS.BLU_RAY,
   },
   {
     img: "https://einysrentals.files.wordpress.com/2021/03/pxl_20210305_160304824.jpg?w=800&h=600&crop=1",
@@ -1360,7 +1393,7 @@ const data = [
     date: "March 5, 2021",
     id: 140,
     label: LABELS.ARROW,
-    format: FORMATS.BLU_RAY
+    format: FORMATS.BLU_RAY,
   },
   {
     img: "https://einysrentals.files.wordpress.com/2021/03/pxl_20210305_160152788.jpg?w=800&h=600&crop=1",
@@ -1375,7 +1408,7 @@ const data = [
     id: 139,
     tags: [TAGS.GIALLO],
     label: LABELS.VINEGAR_SYNDROME,
-    format: FORMATS.BLU_RAY
+    format: FORMATS.BLU_RAY,
   },
   {
     img: "https://einysrentals.files.wordpress.com/2021/03/pxl_20210304_213928214.jpg?w=800&h=600&crop=1",
@@ -1388,7 +1421,7 @@ const data = [
     id: 138,
     tags: [TAGS.UNIVERSAL],
     label: LABELS.OTHER,
-    format: FORMATS.BLU_RAY
+    format: FORMATS.BLU_RAY,
   },
   {
     img: "https://einysrentals.files.wordpress.com/2021/03/pxl_20210304_145722572.jpg?w=800&h=600&crop=1",
@@ -1407,7 +1440,7 @@ const data = [
     id: 137,
     tags: [TAGS.HAMMER],
     label: LABELS.SCREAM_FACTORY_COLLECTORS,
-    format: FORMATS.BLU_RAY
+    format: FORMATS.BLU_RAY,
   },
   {
     img: "https://einysrentals.files.wordpress.com/2021/03/pxl_20210304_034047234.jpg?w=800&h=600&crop=1",
@@ -1420,7 +1453,7 @@ const data = [
     id: 136,
     tags: [TAGS.COMEDY_HORROR],
     label: LABELS.SCREAM_FACTORY_COLLECTORS,
-    format: FORMATS.BLU_RAY
+    format: FORMATS.BLU_RAY,
   },
   {
     img: "https://einysrentals.files.wordpress.com/2021/03/pxl_20210302_010621851.jpg?w=800&h=600&crop=1",
@@ -1434,7 +1467,7 @@ const data = [
     date: "March 1, 2021",
     id: 135,
     label: LABELS.ARROW,
-    format: FORMATS.BLU_RAY
+    format: FORMATS.BLU_RAY,
   },
   {
     img: "https://einysrentals.files.wordpress.com/2021/03/pxl_20210301_133714308.jpg?w=800&h=600&crop=1",
@@ -1447,7 +1480,7 @@ const data = [
     id: 134,
     tags: [TAGS.UNIVERSAL],
     label: LABELS.SCREAM_FACTORY_OTHER,
-    format: FORMATS.BLU_RAY
+    format: FORMATS.BLU_RAY,
   },
   {
     img: "https://einysrentals.files.wordpress.com/2021/02/pxl_20210228_194407542.mp_.jpg?w=800&h=600&crop=1",
@@ -1464,7 +1497,7 @@ const data = [
     id: 133,
     tags: [TAGS.SLASH80S],
     label: LABELS.ARROW,
-    format: FORMATS.BLU_RAY
+    format: FORMATS.BLU_RAY,
   },
   {
     img: "https://einysrentals.files.wordpress.com/2021/02/pxl_20210221_230018866.jpg?w=800&h=600&crop=1",
@@ -1477,7 +1510,7 @@ const data = [
     id: 132,
     tags: [TAGS.GIALLO],
     label: LABELS.VINEGAR_SYNDROME,
-    format: FORMATS.BLU_RAY
+    format: FORMATS.BLU_RAY,
   },
   {
     img: "https://einysrentals.files.wordpress.com/2021/02/pxl_20210221_211721891.jpg?w=800&h=600&crop=1",
@@ -1491,7 +1524,7 @@ const data = [
     date: "February 21, 2021",
     id: 131,
     label: LABELS.SCREAM_FACTORY_OTHER,
-    format: FORMATS.BLU_RAY
+    format: FORMATS.BLU_RAY,
   },
   {
     img: "https://einysrentals.files.wordpress.com/2021/02/pxl_20210219_210633344.mp_.jpg?w=800&h=600&crop=1",
@@ -1503,7 +1536,7 @@ const data = [
     date: "February 19, 2021",
     id: 130,
     label: LABELS.SCREAM_FACTORY_COLLECTORS,
-    format: FORMATS.BLU_RAY
+    format: FORMATS.BLU_RAY,
   },
   {
     img: "https://einysrentals.files.wordpress.com/2021/02/pxl_20210219_151141703.jpg?w=800&h=600&crop=1",
@@ -1524,7 +1557,7 @@ const data = [
     id: 129,
     tags: [TAGS.HAMMER],
     label: LABELS.SCREAM_FACTORY_COLLECTORS,
-    format: FORMATS.BLU_RAY
+    format: FORMATS.BLU_RAY,
   },
   {
     img: "https://einysrentals.files.wordpress.com/2021/02/pxl_20210218_204010587.jpg?w=800&h=600&crop=1",
@@ -1536,7 +1569,7 @@ const data = [
     date: "February 18, 2021",
     id: 128,
     label: LABELS.ARROW,
-    format: FORMATS.BLU_RAY
+    format: FORMATS.BLU_RAY,
   },
   {
     img: "https://einysrentals.files.wordpress.com/2021/02/pxl_20210217_184932404.mp_.jpg?w=400&h=300&crop=1",
@@ -1550,7 +1583,7 @@ const data = [
     date: "February 17, 2021",
     id: 127,
     label: LABELS.OTHER,
-    format: FORMATS.BLU_RAY
+    format: FORMATS.BLU_RAY,
   },
   {
     img: "https://einysrentals.files.wordpress.com/2021/02/pxl_20210217_003313783.jpg?w=400&h=300&crop=1",
@@ -1563,7 +1596,7 @@ const data = [
     id: 126,
     tags: [TAGS.COMEDY_HORROR],
     label: LABELS.ARROW,
-    format: FORMATS.BLU_RAY
+    format: FORMATS.BLU_RAY,
   },
   {
     img: "https://einysrentals.files.wordpress.com/2021/02/pxl_20210216_013319318.jpg?w=800&h=600&crop=1",
@@ -1580,7 +1613,7 @@ const data = [
     id: 125,
     tags: [TAGS.UNIVERSAL],
     label: LABELS.SCREAM_FACTORY_OTHER,
-    format: FORMATS.BLU_RAY
+    format: FORMATS.BLU_RAY,
   },
   {
     img: "https://einysrentals.files.wordpress.com/2021/02/pxl_20210215_135834491.jpg?w=800&h=600&crop=1",
@@ -1593,7 +1626,7 @@ const data = [
     id: 124,
     tags: [TAGS.GIALLO],
     label: LABELS.VINEGAR_SYNDROME,
-    format: FORMATS.BLU_RAY
+    format: FORMATS.BLU_RAY,
   },
   {
     img: "https://einysrentals.files.wordpress.com/2021/02/pxl_20210214_190833935.jpg?w=800&h=600&crop=1",
@@ -1606,7 +1639,7 @@ const data = [
     date: "February 14, 2021",
     id: 123,
     label: LABELS.SCREAM_FACTORY_OTHER,
-    format: FORMATS.BLU_RAY
+    format: FORMATS.BLU_RAY,
   },
   {
     img: "https://einysrentals.files.wordpress.com/2021/02/pxl_20210214_140212298.jpg?w=800&h=600&crop=1",
@@ -1619,7 +1652,7 @@ const data = [
     id: 122,
     tags: [TAGS.SLASH80S],
     label: LABELS.VINEGAR_SYNDROME,
-    format: FORMATS.BLU_RAY
+    format: FORMATS.BLU_RAY,
   },
   {
     img: "https://einysrentals.files.wordpress.com/2021/02/pxl_20210205_053046263.jpg?w=800&h=600&crop=1",
@@ -1639,7 +1672,7 @@ const data = [
     id: 121,
     tags: [TAGS.GIALLO],
     label: LABELS.ARROW,
-    format: FORMATS.BLU_RAY
+    format: FORMATS.BLU_RAY,
   },
   {
     img: "https://einysrentals.files.wordpress.com/2021/02/pxl_20210204_212152970.jpg?w=800&h=600&crop=1",
@@ -1652,7 +1685,7 @@ const data = [
     id: 120,
     tags: [TAGS.COMEDY_HORROR],
     label: LABELS.MVD,
-    format: FORMATS.BLU_RAY
+    format: FORMATS.BLU_RAY,
   },
   {
     img: "https://einysrentals.files.wordpress.com/2021/02/pxl_20210204_191247225.jpg?w=800&h=600&crop=1",
@@ -1666,7 +1699,7 @@ const data = [
     id: 119,
     tags: [TAGS.HAMMER],
     label: LABELS.SCREAM_FACTORY_COLLECTORS,
-    format: FORMATS.BLU_RAY
+    format: FORMATS.BLU_RAY,
   },
   {
     img: "https://einysrentals.files.wordpress.com/2021/02/pxl_20210204_152302574.jpg?w=800&h=600&crop=1",
@@ -1678,7 +1711,7 @@ const data = [
     date: "February 4, 2021",
     id: 118,
     label: LABELS.SCREAM_FACTORY_OTHER,
-    format: FORMATS.BLU_RAY
+    format: FORMATS.BLU_RAY,
   },
   {
     img: "https://einysrentals.files.wordpress.com/2021/02/pxl_20210203_221000474.jpg?w=800&h=600&crop=1",
@@ -1694,7 +1727,7 @@ const data = [
     id: 117,
     tags: [TAGS.UNIVERSAL],
     label: LABELS.SCREAM_FACTORY_COLLECTORS,
-    format: FORMATS.BLU_RAY
+    format: FORMATS.BLU_RAY,
   },
   {
     img: "https://einysrentals.files.wordpress.com/2021/02/pxl_20210203_153004064.jpg?w=800&h=600&crop=1",
@@ -1706,7 +1739,7 @@ const data = [
     date: "February 3, 2021",
     id: 116,
     label: LABELS.SCREAM_FACTORY_COLLECTORS,
-    format: FORMATS.BLU_RAY
+    format: FORMATS.BLU_RAY,
   },
   {
     img: "https://einysrentals.files.wordpress.com/2021/02/pxl_20210202_192616465.jpg?w=800&h=600&crop=1",
@@ -1719,7 +1752,7 @@ const data = [
     date: "February 2, 2021",
     id: 115,
     label: LABELS.ARROW,
-    format: FORMATS.BLU_RAY
+    format: FORMATS.BLU_RAY,
   },
   {
     img: "https://einysrentals.files.wordpress.com/2021/02/pxl_20210202_150536193.jpg?w=800&h=600&crop=1",
@@ -1732,7 +1765,7 @@ const data = [
     id: 114,
     tags: [TAGS.SLASH80S],
     label: LABELS.ARROW,
-    format: FORMATS.BLU_RAY
+    format: FORMATS.BLU_RAY,
   },
   {
     img: "https://einysrentals.files.wordpress.com/2021/01/pxl_20210129_143656931.jpg?w=800&h=600&crop=1",
@@ -1745,7 +1778,7 @@ const data = [
     id: 113,
     tags: [TAGS.JAPANESE],
     label: LABELS.ARROW,
-    format: FORMATS.BLU_RAY
+    format: FORMATS.BLU_RAY,
   },
   {
     img: "https://einysrentals.files.wordpress.com/2021/01/pxl_20210128_145103779.jpg?w=400&h=300&crop=1",
@@ -1757,7 +1790,7 @@ const data = [
     date: "January 28, 2021",
     id: 112,
     label: LABELS.OTHER,
-    format: FORMATS.VHS
+    format: FORMATS.VHS,
   },
   {
     img: "https://einysrentals.files.wordpress.com/2021/01/pxl_20210127_201637950.jpg?w=800&h=600&crop=1",
@@ -1770,7 +1803,7 @@ const data = [
     id: 111,
     tags: [TAGS.SCI_FI_HORROR],
     label: LABELS.OTHER,
-    format: FORMATS.VHS
+    format: FORMATS.VHS,
   },
   {
     img: "https://einysrentals.files.wordpress.com/2021/01/pxl_20210127_150424836.jpg?w=800&h=600&crop=1",
@@ -1782,7 +1815,7 @@ const data = [
     date: "January 27, 2021",
     id: 110,
     label: LABELS.VINEGAR_SYNDROME,
-    format: FORMATS.BLU_RAY
+    format: FORMATS.BLU_RAY,
   },
   {
     img: "https://einysrentals.files.wordpress.com/2021/01/pxl_20210126_151033195.jpg?w=800&h=600&crop=1",
@@ -1795,7 +1828,7 @@ const data = [
     date: "January 26, 2021",
     id: 109,
     label: LABELS.MVD,
-    format: FORMATS.BLU_RAY
+    format: FORMATS.BLU_RAY,
   },
   {
     img: "https://einysrentals.files.wordpress.com/2021/01/pxl_20210125_011458321.mp_.jpg?w=800&h=600&crop=1",
@@ -1807,7 +1840,7 @@ const data = [
     date: "January 24, 2021",
     id: 108,
     label: LABELS.SEVERIN,
-    format: FORMATS.BLU_RAY
+    format: FORMATS.BLU_RAY,
   },
   {
     img: "https://einysrentals.files.wordpress.com/2021/01/pxl_20210124_145007839.jpg?w=800&h=600&crop=1",
@@ -1819,7 +1852,7 @@ const data = [
     date: "January 24, 2021",
     id: 107,
     label: LABELS.OTHER,
-    format: FORMATS.VHS
+    format: FORMATS.VHS,
   },
   {
     img: "https://einysrentals.files.wordpress.com/2021/01/pxl_20210124_013632211.jpg?w=800&h=600&crop=1",
@@ -1831,7 +1864,7 @@ const data = [
     date: "January 23, 2021",
     id: 106,
     label: LABELS.OTHER,
-    format: FORMATS.BLU_RAY
+    format: FORMATS.BLU_RAY,
   },
   {
     img: "https://einysrentals.files.wordpress.com/2021/01/pxl_20210123_153344598.jpg?w=400&h=300&crop=1",
@@ -1843,7 +1876,7 @@ const data = [
     date: "January 23, 2021",
     id: 105,
     label: LABELS.SCREAM_FACTORY_OTHER,
-    format: FORMATS.BLU_RAY
+    format: FORMATS.BLU_RAY,
   },
   {
     img: "https://einysrentals.files.wordpress.com/2021/01/pxl_20210121_174108159.jpg?w=800&h=600&crop=1",
@@ -1855,7 +1888,7 @@ const data = [
     date: "January 21, 2021",
     id: 104,
     label: LABELS.OTHER,
-    format: FORMATS.DVD
+    format: FORMATS.DVD,
   },
   {
     img: "https://einysrentals.files.wordpress.com/2021/01/gamera12.jpg?w=1200&h=900&crop=1",
@@ -1868,7 +1901,7 @@ const data = [
     id: 103,
     tags: [TAGS.JAPANESE],
     label: LABELS.ARROW,
-    format: FORMATS.BLU_RAY
+    format: FORMATS.BLU_RAY,
   },
   {
     img: "https://einysrentals.files.wordpress.com/2021/01/gamera11.jpg?w=1200&h=900&crop=1",
@@ -1881,7 +1914,7 @@ const data = [
     id: 102,
     tags: [TAGS.JAPANESE],
     label: LABELS.ARROW,
-    format: FORMATS.BLU_RAY
+    format: FORMATS.BLU_RAY,
   },
   {
     img: "https://einysrentals.files.wordpress.com/2021/01/gamera10.jpg?w=1200&h=900&crop=1",
@@ -1894,7 +1927,7 @@ const data = [
     id: 101,
     tags: [TAGS.JAPANESE],
     label: LABELS.ARROW,
-    format: FORMATS.BLU_RAY
+    format: FORMATS.BLU_RAY,
   },
   {
     img: "https://einysrentals.files.wordpress.com/2021/01/gamera9.jpg?w=1200&h=900&crop=1",
@@ -1907,7 +1940,7 @@ const data = [
     id: 100,
     tags: [TAGS.JAPANESE],
     label: LABELS.ARROW,
-    format: FORMATS.BLU_RAY
+    format: FORMATS.BLU_RAY,
   },
   {
     img: "https://einysrentals.files.wordpress.com/2021/01/gamera8.jpg?w=1200&h=900&crop=1",
@@ -1920,7 +1953,7 @@ const data = [
     id: 99,
     tags: [TAGS.JAPANESE],
     label: LABELS.ARROW,
-    format: FORMATS.BLU_RAY
+    format: FORMATS.BLU_RAY,
   },
   {
     img: "https://einysrentals.files.wordpress.com/2021/01/gamera7.jpg?w=1200&h=900&crop=1",
@@ -1933,7 +1966,7 @@ const data = [
     id: 98,
     tags: [TAGS.JAPANESE],
     label: LABELS.ARROW,
-    format: FORMATS.BLU_RAY
+    format: FORMATS.BLU_RAY,
   },
   {
     img: "https://einysrentals.files.wordpress.com/2021/01/gamera6.jpg?w=1200&h=900&crop=1",
@@ -1946,7 +1979,7 @@ const data = [
     id: 97,
     tags: [TAGS.JAPANESE],
     label: LABELS.ARROW,
-    format: FORMATS.BLU_RAY
+    format: FORMATS.BLU_RAY,
   },
   {
     img: "https://einysrentals.files.wordpress.com/2021/01/gamera5.jpg?w=1200&h=900&crop=1",
@@ -1959,7 +1992,7 @@ const data = [
     id: 96,
     tags: [TAGS.JAPANESE],
     label: LABELS.ARROW,
-    format: FORMATS.BLU_RAY
+    format: FORMATS.BLU_RAY,
   },
   {
     img: "https://einysrentals.files.wordpress.com/2020/12/gamera4.jpg?w=1200&h=900&crop=1",
@@ -1972,7 +2005,7 @@ const data = [
     id: 95,
     tags: [TAGS.JAPANESE],
     label: LABELS.ARROW,
-    format: FORMATS.BLU_RAY
+    format: FORMATS.BLU_RAY,
   },
   {
     img: "https://einysrentals.files.wordpress.com/2020/12/gamera3.jpg?w=1200&h=900&crop=1",
@@ -1985,7 +2018,7 @@ const data = [
     id: 94,
     tags: [TAGS.JAPANESE],
     label: LABELS.ARROW,
-    format: FORMATS.BLU_RAY
+    format: FORMATS.BLU_RAY,
   },
   {
     img: "https://einysrentals.files.wordpress.com/2020/12/gamera2.jpg?w=1200&h=900&crop=1",
@@ -1998,7 +2031,7 @@ const data = [
     id: 93,
     tags: [TAGS.JAPANESE],
     label: LABELS.ARROW,
-    format: FORMATS.BLU_RAY
+    format: FORMATS.BLU_RAY,
   },
   {
     img: "https://einysrentals.files.wordpress.com/2020/12/gamera1.jpg?w=1200&h=900&crop=1",
@@ -2011,7 +2044,7 @@ const data = [
     id: 92,
     tags: [TAGS.JAPANESE],
     label: LABELS.ARROW,
-    format: FORMATS.BLU_RAY
+    format: FORMATS.BLU_RAY,
   },
   {
     img: "https://einysrentals.files.wordpress.com/2020/12/pxl_20201221_150027543.jpg?w=400&h=300&crop=1",
@@ -2024,7 +2057,7 @@ const data = [
     date: "December 22, 2020",
     id: 91,
     label: LABELS.OTHER,
-    format: FORMATS.VHS
+    format: FORMATS.VHS,
   },
   {
     img: "https://einysrentals.files.wordpress.com/2020/12/pxl_20201221_150012923.jpg?w=400&h=300&crop=1",
@@ -2037,7 +2070,7 @@ const data = [
     date: "December 21, 2020",
     id: 90,
     label: LABELS.OTHER,
-    format: FORMATS.VHS
+    format: FORMATS.VHS,
   },
   {
     img: "https://einysrentals.files.wordpress.com/2020/12/pxl_20201219_020444949.jpg?w=400&h=300&crop=1",
@@ -2049,7 +2082,7 @@ const data = [
     date: "December 19, 2020",
     id: 89,
     label: LABELS.VINEGAR_SYNDROME,
-    format: FORMATS.BLU_RAY
+    format: FORMATS.BLU_RAY,
   },
   {
     img: "https://einysrentals.files.wordpress.com/2020/12/pxl_20201218_013313668.mp_.jpg?w=400&h=300&crop=1",
@@ -2061,7 +2094,7 @@ const data = [
     date: "December 17, 2020",
     id: 88,
     label: LABELS.OTHER,
-    format: FORMATS.BLU_RAY
+    format: FORMATS.BLU_RAY,
   },
   {
     img: "https://einysrentals.files.wordpress.com/2020/12/pxl_20201217_011533128.jpg?w=400&h=300&crop=1",
@@ -2074,7 +2107,7 @@ const data = [
     id: 87,
     tags: [TAGS.COMEDY_HORROR],
     label: LABELS.SCREAM_FACTORY_COLLECTORS,
-    format: FORMATS.BLU_RAY
+    format: FORMATS.BLU_RAY,
   },
   {
     img: "https://einysrentals.files.wordpress.com/2020/12/pxl_20201215_062242397.mp_.jpg?w=800&h=600&crop=1",
@@ -2086,7 +2119,7 @@ const data = [
     date: "December 15, 2020",
     id: 86,
     label: LABELS.SEVERIN,
-    format: FORMATS.BLU_RAY
+    format: FORMATS.BLU_RAY,
   },
   {
     img: "https://einysrentals.files.wordpress.com/2020/12/pxl_20201213_155346188.mp_.jpg?w=800&h=600&crop=1",
@@ -2099,7 +2132,7 @@ const data = [
     id: 85,
     tags: [TAGS.ACTION],
     label: LABELS.OTHER,
-    format: FORMATS.DVD
+    format: FORMATS.DVD,
   },
   {
     img: "https://einysrentals.files.wordpress.com/2020/12/pxl_20201212_191744804.jpg?w=800&h=600&crop=1",
@@ -2112,7 +2145,7 @@ const data = [
     id: 84,
     tags: [TAGS.DRAMA],
     label: LABELS.OTHER,
-    format: FORMATS.DVD
+    format: FORMATS.DVD,
   },
   {
     img: "https://einysrentals.files.wordpress.com/2020/12/pxl_20201211_003455283.jpg?w=400&h=300&crop=1",
@@ -2125,7 +2158,7 @@ const data = [
     id: 83,
     tags: [TAGS.DRAMA],
     label: LABELS.OTHER,
-    format: FORMATS.DVD
+    format: FORMATS.DVD,
   },
   {
     img: "https://einysrentals.files.wordpress.com/2020/12/pxl_20201207_051007911.jpg?w=800&h=600&crop=1",
@@ -2138,7 +2171,7 @@ const data = [
     id: 82,
     tags: [TAGS.JAPANESE],
     label: LABELS.ARROW,
-    format: FORMATS.BLU_RAY
+    format: FORMATS.BLU_RAY,
   },
   {
     img: "https://einysrentals.files.wordpress.com/2020/12/pxl_20201205_214648879.mp_.jpg?w=800&h=600&crop=1",
@@ -2151,7 +2184,7 @@ const data = [
     id: 81,
     tags: [TAGS.JAPANESE],
     label: LABELS.ARROW,
-    format: FORMATS.BLU_RAY
+    format: FORMATS.BLU_RAY,
   },
   {
     img: "https://einysrentals.files.wordpress.com/2020/11/pxl_20201129_192916929.jpg?w=800&h=600&crop=1",
@@ -2164,7 +2197,7 @@ const data = [
     id: 80,
     tags: [TAGS.JAPANESE],
     label: LABELS.ARROW,
-    format: FORMATS.BLU_RAY
+    format: FORMATS.BLU_RAY,
   },
   {
     img: "https://einysrentals.files.wordpress.com/2020/11/pxl_20201126_182455751.jpg?w=800&h=600&crop=1",
@@ -2178,7 +2211,7 @@ const data = [
     id: 79,
     tags: [TAGS.WESTERN],
     label: LABELS.ARROW,
-    format: FORMATS.BLU_RAY
+    format: FORMATS.BLU_RAY,
   },
   {
     img: "https://einysrentals.files.wordpress.com/2020/11/pxl_20201122_213311146.jpg?w=800&h=600&crop=1",
@@ -2191,7 +2224,7 @@ const data = [
     id: 78,
     tags: [TAGS.WESTERN],
     label: LABELS.OTHER,
-    format: FORMATS.DVD
+    format: FORMATS.DVD,
   },
   {
     img: "https://einysrentals.files.wordpress.com/2020/11/pxl_20201122_012533782.jpg?w=800&h=600&crop=1",
@@ -2204,7 +2237,7 @@ const data = [
     id: 77,
     tags: [TAGS.WESTERN],
     label: LABELS.OTHER,
-    format: FORMATS.DVD
+    format: FORMATS.DVD,
   },
   {
     img: "https://einysrentals.files.wordpress.com/2020/11/pxl_20201119_025319817.jpg?w=400&h=300&crop=1",
@@ -2217,7 +2250,7 @@ const data = [
     id: 76,
     tags: [TAGS.ACTION],
     label: LABELS.ARROW,
-    format: FORMATS.BLU_RAY
+    format: FORMATS.BLU_RAY,
   },
   {
     img: "https://einysrentals.files.wordpress.com/2020/11/pxl_20201116_223521110.jpg?w=800&h=600&crop=1",
@@ -2231,7 +2264,7 @@ const data = [
     id: 75,
     tags: [TAGS.ACTION],
     label: LABELS.ARROW,
-    format: FORMATS.BLU_RAY
+    format: FORMATS.BLU_RAY,
   },
   {
     img: "https://einysrentals.files.wordpress.com/2020/11/pxl_20201115_182424916.jpg?w=800&h=600&crop=1",
@@ -2244,7 +2277,7 @@ const data = [
     id: 74,
     tags: [TAGS.ACTION],
     label: LABELS.ARROW,
-    format: FORMATS.BLU_RAY
+    format: FORMATS.BLU_RAY,
   },
   {
     img: "https://einysrentals.files.wordpress.com/2020/11/pxl_20201115_053750711.jpg?w=800&h=600&crop=1",
@@ -2256,7 +2289,7 @@ const data = [
     date: "November 15, 2020",
     id: 73,
     label: LABELS.ARROW,
-    format: FORMATS.BLU_RAY
+    format: FORMATS.BLU_RAY,
   },
   {
     img: "https://einysrentals.files.wordpress.com/2020/11/pxl_20201112_021406593.jpg?w=800&h=600&crop=1",
@@ -2268,7 +2301,7 @@ const data = [
     date: "November 13, 2020",
     id: 72,
     label: LABELS.ARROW,
-    format: FORMATS.BLU_RAY
+    format: FORMATS.BLU_RAY,
   },
   {
     img: "https://einysrentals.files.wordpress.com/2020/11/pxl_20201112_021226721.jpg?w=800&h=600&crop=1",
@@ -2280,7 +2313,7 @@ const data = [
     date: "November 11, 2020",
     id: 71,
     label: LABELS.ARROW,
-    format: FORMATS.BLU_RAY
+    format: FORMATS.BLU_RAY,
   },
   {
     img: "https://einysrentals.files.wordpress.com/2020/10/pxl_20201028_205821987.portrait-01.cover_.jpg?w=400&h=300&crop=1",
@@ -2293,7 +2326,7 @@ const data = [
     id: 70,
     tags: [TAGS.VINCENT_PRICE],
     label: LABELS.SCREAM_FACTORY_OTHER,
-    format: FORMATS.BLU_RAY
+    format: FORMATS.BLU_RAY,
   },
   {
     img: "https://einysrentals.files.wordpress.com/2020/10/pxl_20201028_160852116.portrait-01.cover_.jpg?w=800&h=600&crop=1",
@@ -2306,7 +2339,7 @@ const data = [
     id: 69,
     tags: [TAGS.VINCENT_PRICE],
     label: LABELS.SCREAM_FACTORY_OTHER,
-    format: FORMATS.BLU_RAY
+    format: FORMATS.BLU_RAY,
   },
   {
     img: "https://einysrentals.files.wordpress.com/2020/10/pxl_20201028_132714525.portrait-01.cover_.jpg?w=800&h=600&crop=1",
@@ -2322,7 +2355,7 @@ const data = [
     id: 68,
     tags: [TAGS.VINCENT_PRICE],
     label: LABELS.KL,
-    format: FORMATS.BLU_RAY
+    format: FORMATS.BLU_RAY,
   },
   {
     img: "https://einysrentals.files.wordpress.com/2020/10/pxl_20201027_141446128.portrait-01.cover_.jpg?w=400&h=300&crop=1",
@@ -2335,7 +2368,7 @@ const data = [
     id: 67,
     tags: [TAGS.VINCENT_PRICE],
     label: LABELS.SCREAM_FACTORY_OTHER,
-    format: FORMATS.BLU_RAY
+    format: FORMATS.BLU_RAY,
   },
   {
     img: "https://einysrentals.files.wordpress.com/2020/10/pxl_20201026_140821503.portrait-01.cover_.jpg?w=800&h=600&crop=1",
@@ -2348,7 +2381,7 @@ const data = [
     id: 66,
     tags: [TAGS.VINCENT_PRICE],
     label: LABELS.KL,
-    format: FORMATS.BLU_RAY
+    format: FORMATS.BLU_RAY,
   },
   {
     img: "https://einysrentals.files.wordpress.com/2020/10/pxl_20201026_123123494.portrait-01.cover_.jpg?w=800&h=600&crop=1",
@@ -2361,7 +2394,7 @@ const data = [
     id: 65,
     tags: [TAGS.VINCENT_PRICE],
     label: LABELS.SCREAM_FACTORY_OTHER,
-    format: FORMATS.BLU_RAY
+    format: FORMATS.BLU_RAY,
   },
   {
     img: "https://einysrentals.files.wordpress.com/2020/10/pxl_20201026_003106671.portrait-01.cover_.jpg?w=800&h=600&crop=1",
@@ -2374,7 +2407,7 @@ const data = [
     id: 64,
     tags: [TAGS.VINCENT_PRICE],
     label: LABELS.OTHER,
-    format: FORMATS.BLU_RAY
+    format: FORMATS.BLU_RAY,
   },
   {
     img: "https://einysrentals.files.wordpress.com/2020/10/pxl_20201023_004414842.portrait-01.cover_.jpg?w=800&h=600&crop=1",
@@ -2387,7 +2420,7 @@ const data = [
     id: 63,
     tags: [TAGS.SLASH80S],
     label: LABELS.OTHER,
-    format: FORMATS.BLU_RAY
+    format: FORMATS.BLU_RAY,
   },
   {
     img: "https://einysrentals.files.wordpress.com/2020/10/pxl_20201022_014319156.portrait-01.cover_.jpg?w=800&h=600&crop=1",
@@ -2401,7 +2434,7 @@ const data = [
     date: "October 21, 2020",
     id: 62,
     label: LABELS.SEVERIN,
-    format: FORMATS.BLU_RAY
+    format: FORMATS.BLU_RAY,
   },
   {
     img: "https://einysrentals.files.wordpress.com/2020/10/pxl_20201021_014040224.portrait-01.cover_.jpg?w=800&h=600&crop=1",
@@ -2417,7 +2450,7 @@ const data = [
     id: 61,
     tags: [TAGS.SLASH80S],
     label: LABELS.SYNAPSE,
-    format: FORMATS.BLU_RAY
+    format: FORMATS.BLU_RAY,
   },
   {
     img: "https://einysrentals.files.wordpress.com/2020/10/pxl_20201020_191056369.portrait-01.cover_.jpg?w=800&h=600&crop=1",
@@ -2430,7 +2463,7 @@ const data = [
     id: 60,
     tags: [TAGS.GIALLO],
     label: LABELS.ARROW,
-    format: FORMATS.BLU_RAY
+    format: FORMATS.BLU_RAY,
   },
   {
     img: "https://einysrentals.files.wordpress.com/2020/10/pxl_20201019_233845804.portrait-01.cover_.jpg?w=800&h=600&crop=1",
@@ -2444,7 +2477,7 @@ const data = [
     id: 59,
     tags: [TAGS.GIALLO],
     label: LABELS.ARROW,
-    format: FORMATS.BLU_RAY
+    format: FORMATS.BLU_RAY,
   },
   {
     img: "https://einysrentals.files.wordpress.com/2020/10/pxl_20201019_012519602.portrait-01.cover_.jpg?w=800&h=600&crop=1",
@@ -2457,7 +2490,7 @@ const data = [
     id: 58,
     tags: [TAGS.GIALLO],
     label: LABELS.SEVERIN,
-    format: FORMATS.BLU_RAY
+    format: FORMATS.BLU_RAY,
   },
   {
     img: "https://einysrentals.files.wordpress.com/2020/10/pxl_20201018_214212069.portrait_2.jpg?w=800&h=600&crop=1",
@@ -2470,7 +2503,7 @@ const data = [
     id: 57,
     tags: [TAGS.GIALLO],
     label: LABELS.ARROW,
-    format: FORMATS.BLU_RAY
+    format: FORMATS.BLU_RAY,
   },
   {
     img: "https://einysrentals.files.wordpress.com/2020/10/pxl_20201017_004204617.portrait-01.cover_.jpg?w=800&h=600&crop=1",
@@ -2484,7 +2517,7 @@ const data = [
     id: 56,
     tags: [TAGS.SLASH80S],
     label: LABELS.VINEGAR_SYNDROME,
-    format: FORMATS.BLU_RAY
+    format: FORMATS.BLU_RAY,
   },
   {
     img: "https://einysrentals.files.wordpress.com/2020/10/pxl_20201016_182953407.portrait-01.cover_.jpg?w=400&h=300&crop=1",
@@ -2497,7 +2530,7 @@ const data = [
     id: 55,
     tags: [TAGS.SLASH80S],
     label: LABELS.SCREAM_FACTORY_OTHER,
-    format: FORMATS.BLU_RAY
+    format: FORMATS.BLU_RAY,
   },
   {
     img: "https://einysrentals.files.wordpress.com/2020/10/pxl_20201016_045223633.portrait-01.cover_.jpg?w=400&h=300&crop=1",
@@ -2510,7 +2543,7 @@ const data = [
     id: 54,
     tags: [TAGS.SLASH80S],
     label: LABELS.BLUE_UNDERGROUND,
-    format: FORMATS.BLU_RAY
+    format: FORMATS.BLU_RAY,
   },
   {
     img: "https://einysrentals.files.wordpress.com/2020/10/pxl_20201014_213457831.portrait-01.cover_.jpg?w=800&h=600&crop=1",
@@ -2526,7 +2559,7 @@ const data = [
     id: 53,
     tags: [TAGS.SLASH80S],
     label: LABELS.VINEGAR_SYNDROME,
-    format: FORMATS.BLU_RAY
+    format: FORMATS.BLU_RAY,
   },
   {
     img: "https://einysrentals.files.wordpress.com/2020/10/pxl_20201013_213819715.portrait-01.cover_.jpg?w=800&h=600&crop=1",
@@ -2539,7 +2572,7 @@ const data = [
     id: 52,
     tags: [TAGS.SLASH80S],
     label: LABELS.VINEGAR_SYNDROME,
-    format: FORMATS.BLU_RAY
+    format: FORMATS.BLU_RAY,
   },
   {
     img: "https://einysrentals.files.wordpress.com/2020/10/pxl_20201013_005941376.portrait.jpg?w=800&h=600&crop=1",
@@ -2552,7 +2585,7 @@ const data = [
     id: 51,
     tags: [TAGS.SLASH80S],
     label: LABELS.VINEGAR_SYNDROME,
-    format: FORMATS.BLU_RAY
+    format: FORMATS.BLU_RAY,
   },
   {
     img: "https://einysrentals.files.wordpress.com/2020/10/pxl_20201011_204812273.jpg?w=800&h=600&crop=1",
@@ -2565,7 +2598,7 @@ const data = [
     id: 50,
     tags: [TAGS.SLASH80S],
     label: LABELS.SCREAM_FACTORY_COLLECTORS,
-    format: FORMATS.BLU_RAY
+    format: FORMATS.BLU_RAY,
   },
   {
     img: "https://einysrentals.files.wordpress.com/2020/10/pxl_20201011_145852232.portrait-01.cover_.jpg?w=800&h=600&crop=1",
@@ -2579,7 +2612,7 @@ const data = [
     id: 49,
     tags: [TAGS.SLASH80S],
     label: LABELS.VINEGAR_SYNDROME,
-    format: FORMATS.BLU_RAY
+    format: FORMATS.BLU_RAY,
   },
   {
     img: "https://einysrentals.files.wordpress.com/2020/10/pxl_20201010_205124772.jpg?w=800&h=600&crop=1",
@@ -2591,7 +2624,7 @@ const data = [
     date: "October 10, 2020",
     id: 48,
     label: LABELS.SCREAM_FACTORY_OTHER,
-    format: FORMATS.BLU_RAY
+    format: FORMATS.BLU_RAY,
   },
   {
     img: "https://einysrentals.files.wordpress.com/2020/10/pxl_20201009_231757508.portrait-01.cover_.jpg?w=800&h=600&crop=1",
@@ -2603,7 +2636,7 @@ const data = [
     date: "October 9, 2020",
     id: 47,
     label: LABELS.SCREAM_FACTORY_OTHER,
-    format: FORMATS.BLU_RAY
+    format: FORMATS.BLU_RAY,
   },
   {
     img: "https://einysrentals.files.wordpress.com/2020/10/pxl_20201008_235521161.portrait-01.cover_.jpg?w=800&h=600&crop=1",
@@ -2615,7 +2648,7 @@ const data = [
     date: "October 8, 2020",
     id: 46,
     label: LABELS.OTHER,
-    format: FORMATS.BLU_RAY
+    format: FORMATS.BLU_RAY,
   },
   {
     img: "https://einysrentals.files.wordpress.com/2020/10/pxl_20201007_035723324.portrait-01.cover_.jpg?w=800&h=600&crop=1",
@@ -2627,7 +2660,7 @@ const data = [
     date: "October 7, 2020",
     id: 45,
     label: LABELS.OTHER,
-    format: FORMATS.BLU_RAY
+    format: FORMATS.BLU_RAY,
   },
   {
     img: "https://einysrentals.files.wordpress.com/2020/10/pxl_20201006_174115835.portrait-01.cover_.jpg?w=800&h=600&crop=1",
@@ -2642,7 +2675,7 @@ const data = [
     date: "October 6, 2020",
     id: 44,
     label: LABELS.OTHER,
-    format: FORMATS.BLU_RAY
+    format: FORMATS.BLU_RAY,
   },
   {
     img: "https://einysrentals.files.wordpress.com/2020/10/pxl_20201006_040423923.portrait-01.cover_.jpg?w=800&h=600&crop=1",
@@ -2654,7 +2687,7 @@ const data = [
     date: "October 6, 2020",
     id: 43,
     label: LABELS.OTHER,
-    format: FORMATS.BLU_RAY
+    format: FORMATS.BLU_RAY,
   },
   {
     img: "https://einysrentals.files.wordpress.com/2020/10/pxl_20201006_015514767.portrait-01.cover_.jpg?w=800&h=600&crop=1",
@@ -2666,7 +2699,7 @@ const data = [
     date: "October 5, 2020",
     id: 42,
     label: LABELS.OTHER,
-    format: FORMATS.BLU_RAY
+    format: FORMATS.BLU_RAY,
   },
   {
     img: "https://einysrentals.files.wordpress.com/2020/10/pxl_20201005_184450314.portrait-01.cover_.jpg?w=800&h=600&crop=1",
@@ -2678,7 +2711,7 @@ const data = [
     date: "October 5, 2020",
     id: 41,
     label: LABELS.OTHER,
-    format: FORMATS.BLU_RAY
+    format: FORMATS.BLU_RAY,
   },
   {
     img: "https://einysrentals.files.wordpress.com/2020/10/pxl_20201004_202343613.portrait-01.cover_.jpg?w=800&h=600&crop=1",
@@ -2690,7 +2723,7 @@ const data = [
     date: "October 4, 2020",
     id: 40,
     label: LABELS.SCREAM_FACTORY_OTHER,
-    format: FORMATS.BLU_RAY
+    format: FORMATS.BLU_RAY,
   },
   {
     img: "https://einysrentals.files.wordpress.com/2020/10/pxl_20201004_034031519.portrait-01.cover_.jpg?w=800&h=600&crop=1",
@@ -2703,7 +2736,7 @@ const data = [
     id: 39,
     tags: [TAGS.UNIVERSAL],
     label: LABELS.SCREAM_FACTORY_OTHER,
-    format: FORMATS.BLU_RAY
+    format: FORMATS.BLU_RAY,
   },
   {
     img: "https://einysrentals.files.wordpress.com/2020/10/pxl_20201003_152622926.portrait-01.cover_.jpg?w=800&h=600&crop=1",
@@ -2716,7 +2749,7 @@ const data = [
     id: 38,
     tags: [TAGS.UNIVERSAL],
     label: LABELS.SCREAM_FACTORY_OTHER,
-    format: FORMATS.BLU_RAY
+    format: FORMATS.BLU_RAY,
   },
   {
     img: "https://einysrentals.files.wordpress.com/2020/10/pxl_20201002_192000336.portrait-01.cover_.jpg?w=800&h=600&crop=1",
@@ -2729,7 +2762,7 @@ const data = [
     id: 37,
     tags: [TAGS.UNIVERSAL],
     label: LABELS.SCREAM_FACTORY_OTHER,
-    format: FORMATS.BLU_RAY
+    format: FORMATS.BLU_RAY,
   },
   {
     img: "https://einysrentals.files.wordpress.com/2020/10/pxl_20201002_043008365.portrait-01.cover_.jpg?w=800&h=600&crop=1",
@@ -2742,7 +2775,7 @@ const data = [
     id: 36,
     tags: [TAGS.UNIVERSAL],
     label: LABELS.SCREAM_FACTORY_OTHER,
-    format: FORMATS.BLU_RAY
+    format: FORMATS.BLU_RAY,
   },
   {
     img: "https://einysrentals.files.wordpress.com/2020/10/pxl_20201001_135457733.portrait-01.cover_.jpg?w=800&h=600&crop=1",
@@ -2755,7 +2788,7 @@ const data = [
     id: 35,
     tags: [TAGS.UNIVERSAL],
     label: LABELS.SCREAM_FACTORY_OTHER,
-    format: FORMATS.BLU_RAY
+    format: FORMATS.BLU_RAY,
   },
   {
     img: "https://einysrentals.files.wordpress.com/2020/09/pxl_20200930_134635333.portrait-01.cover_.jpg?w=800&h=600&crop=1",
@@ -2768,7 +2801,7 @@ const data = [
     id: 34,
     tags: [TAGS.UNIVERSAL],
     label: LABELS.OTHER,
-    format: FORMATS.BLU_RAY
+    format: FORMATS.BLU_RAY,
   },
   {
     img: "https://einysrentals.files.wordpress.com/2020/09/pxl_20200930_020607110.portrait-01.cover_2.jpg?w=800&h=600&crop=1",
@@ -2784,7 +2817,7 @@ const data = [
     id: 33,
     tags: [TAGS.UNIVERSAL],
     label: LABELS.SCREAM_FACTORY_OTHER,
-    format: FORMATS.BLU_RAY
+    format: FORMATS.BLU_RAY,
   },
   {
     img: "https://einysrentals.files.wordpress.com/2020/09/pxl_20200928_145820604.portrait-01.cover_.jpg?w=800&h=600&crop=1",
@@ -2797,7 +2830,7 @@ const data = [
     id: 32,
     tags: [TAGS.UNIVERSAL],
     label: LABELS.SCREAM_FACTORY_OTHER,
-    format: FORMATS.BLU_RAY
+    format: FORMATS.BLU_RAY,
   },
   {
     img: "https://einysrentals.files.wordpress.com/2020/09/pxl_20200928_131356170.portrait-01.cover_.jpg?w=400&h=300&crop=1",
@@ -2810,7 +2843,7 @@ const data = [
     id: 31,
     tags: [TAGS.UNIVERSAL],
     label: LABELS.SCREAM_FACTORY_OTHER,
-    format: FORMATS.BLU_RAY
+    format: FORMATS.BLU_RAY,
   },
   {
     img: "https://einysrentals.files.wordpress.com/2020/09/00000img_00000_burst20200927195706003_cover.jpg?w=800&h=600&crop=1",
@@ -2823,7 +2856,7 @@ const data = [
     id: 30,
     tags: [TAGS.UNIVERSAL],
     label: LABELS.SCREAM_FACTORY_OTHER,
-    format: FORMATS.BLU_RAY
+    format: FORMATS.BLU_RAY,
   },
   {
     img: "https://einysrentals.files.wordpress.com/2020/09/00100lrportrait_00100_burst20200927143943627_cover.jpg?w=800&h=600&crop=1",
@@ -2836,7 +2869,7 @@ const data = [
     id: 29,
     tags: [TAGS.UNIVERSAL],
     label: LABELS.SCREAM_FACTORY_OTHER,
-    format: FORMATS.BLU_RAY
+    format: FORMATS.BLU_RAY,
   },
   {
     img: "https://einysrentals.files.wordpress.com/2020/09/00100lrportrait_00100_burst20200927015206059_cover.jpg?w=800&h=600&crop=1",
@@ -2849,7 +2882,7 @@ const data = [
     date: "September 27, 2020",
     id: 28,
     label: LABELS.SEVERIN,
-    format: FORMATS.BLU_RAY
+    format: FORMATS.BLU_RAY,
   },
   {
     img: "https://einysrentals.files.wordpress.com/2020/09/00000img_00000_burst20200925143426571_cover.jpg?w=800&h=600&crop=1",
@@ -2864,7 +2897,7 @@ const data = [
     date: "September 25, 2020",
     id: 27,
     label: LABELS.SEVERIN,
-    format: FORMATS.BLU_RAY
+    format: FORMATS.BLU_RAY,
   },
   {
     img: "https://einysrentals.files.wordpress.com/2020/09/00100lrportrait_00100_burst20200924172922376_cover.jpg?w=800&h=600&crop=1",
@@ -2876,7 +2909,7 @@ const data = [
     date: "September 24, 2020",
     id: 26,
     label: LABELS.SEVERIN,
-    format: FORMATS.BLU_RAY
+    format: FORMATS.BLU_RAY,
   },
   {
     img: "https://einysrentals.files.wordpress.com/2020/09/00100lrportrait_00100_burst20200923143051901_cover.jpg?w=800&h=600&crop=1",
@@ -2888,7 +2921,7 @@ const data = [
     date: "September 23, 2020",
     id: 25,
     label: LABELS.SEVERIN,
-    format: FORMATS.BLU_RAY
+    format: FORMATS.BLU_RAY,
   },
   {
     img: "https://einysrentals.files.wordpress.com/2020/09/00100lrportrait_00100_burst20200921221258349_cover.jpg?w=800&h=600&crop=1",
@@ -2900,7 +2933,7 @@ const data = [
     date: "September 21, 2020",
     id: 24,
     label: LABELS.SEVERIN,
-    format: FORMATS.BLU_RAY
+    format: FORMATS.BLU_RAY,
   },
   {
     img: "https://einysrentals.files.wordpress.com/2020/09/00100lrportrait_00100_burst20200920132855998_cover.jpg?w=800&h=600&crop=1",
@@ -2912,7 +2945,7 @@ const data = [
     date: "September 20, 2020",
     id: 23,
     label: LABELS.SEVERIN,
-    format: FORMATS.BLU_RAY
+    format: FORMATS.BLU_RAY,
   },
   {
     img: "https://einysrentals.files.wordpress.com/2020/09/00100lrportrait_00100_burst20200919173035741_cover.jpg?w=800&h=600&crop=1",
@@ -2925,7 +2958,7 @@ const data = [
     id: 22,
     tags: [TAGS.JAPANESE],
     label: LABELS.ARROW,
-    format: FORMATS.BLU_RAY
+    format: FORMATS.BLU_RAY,
   },
   {
     img: "https://einysrentals.files.wordpress.com/2020/09/00100lrportrait_00100_burst20200917195801740_cover.jpg?w=800&h=600&crop=1",
@@ -2941,7 +2974,7 @@ const data = [
     id: 21,
     tags: [TAGS.JAPANESE],
     label: LABELS.ARROW,
-    format: FORMATS.BLU_RAY
+    format: FORMATS.BLU_RAY,
   },
   {
     img: "https://einysrentals.files.wordpress.com/2020/09/00100lrportrait_00100_burst20200916214436828_cover.jpg?w=800&h=600&crop=1",
@@ -2954,7 +2987,7 @@ const data = [
     id: 20,
     tags: [TAGS.JAPANESE],
     label: LABELS.ARROW,
-    format: FORMATS.BLU_RAY
+    format: FORMATS.BLU_RAY,
   },
   {
     img: "https://einysrentals.files.wordpress.com/2020/09/00100lrportrait_00100_burst20200914142728344_cover.jpg?w=800&h=600&crop=1",
@@ -2967,7 +3000,7 @@ const data = [
     id: 19,
     tags: [TAGS.JAPANESE],
     label: LABELS.ARROW,
-    format: FORMATS.BLU_RAY
+    format: FORMATS.BLU_RAY,
   },
   {
     img: "https://einysrentals.files.wordpress.com/2020/09/00100lrportrait_00100_burst20200913210705720_cover.jpg?w=800&h=600&crop=1",
@@ -2980,7 +3013,7 @@ const data = [
     id: 18,
     tags: [TAGS.JAPANESE],
     label: LABELS.ARROW,
-    format: FORMATS.BLU_RAY
+    format: FORMATS.BLU_RAY,
   },
   {
     img: "https://einysrentals.files.wordpress.com/2020/09/00100lrportrait_00100_burst20200913131504797_cover.jpg?w=800&h=600&crop=1",
@@ -2993,7 +3026,7 @@ const data = [
     id: 17,
     tags: [TAGS.JAPANESE],
     label: LABELS.ARROW,
-    format: FORMATS.BLU_RAY
+    format: FORMATS.BLU_RAY,
   },
   {
     img: "https://einysrentals.files.wordpress.com/2020/09/00100lrportrait_00100_burst20200912124919724_cover.jpg?w=800&h=600&crop=1",
@@ -3006,7 +3039,7 @@ const data = [
     id: 16,
     tags: [TAGS.SCI_FI_HORROR],
     label: LABELS.SCREAM_FACTORY_COLLECTORS,
-    format: FORMATS.BLU_RAY
+    format: FORMATS.BLU_RAY,
   },
   {
     img: "https://einysrentals.files.wordpress.com/2020/09/00100lrportrait_00100_burst20200911224125569_cover.jpg?w=800&h=600&crop=1",
@@ -3018,7 +3051,7 @@ const data = [
     date: "September 12, 2020",
     id: 15,
     label: LABELS.SYNAPSE,
-    format: FORMATS.BLU_RAY
+    format: FORMATS.BLU_RAY,
   },
   {
     img: "https://einysrentals.files.wordpress.com/2020/09/00100lrportrait_00100_burst20200910193730825_cover.jpg?w=800&h=600&crop=1",
@@ -3030,7 +3063,7 @@ const data = [
     date: "September 10, 2020",
     id: 14,
     label: LABELS.SYNAPSE,
-    format: FORMATS.BLU_RAY
+    format: FORMATS.BLU_RAY,
   },
   {
     img: "https://einysrentals.files.wordpress.com/2020/09/00100lrportrait_00100_burst20200909211547373_cover.jpg?w=800&h=600&crop=1",
@@ -3045,7 +3078,7 @@ const data = [
     date: "September 9, 2020",
     id: 13,
     label: LABELS.SCREAM_FACTORY_COLLECTORS,
-    format: FORMATS.BLU_RAY
+    format: FORMATS.BLU_RAY,
   },
   {
     img: "https://einysrentals.files.wordpress.com/2020/09/00100lrportrait_00100_burst20200908104555982_cover.jpg?w=800&h=600&crop=1",
@@ -3057,7 +3090,7 @@ const data = [
     date: "September 8, 2020",
     id: 12,
     label: LABELS.SEVERIN,
-    format: FORMATS.BLU_RAY
+    format: FORMATS.BLU_RAY,
   },
   {
     img: "https://einysrentals.files.wordpress.com/2020/09/00100lrportrait_00100_burst20200907202615954_cover.jpg?w=800&h=600&crop=1",
@@ -3069,7 +3102,7 @@ const data = [
     date: "September 7, 2020",
     id: 11,
     label: LABELS.SCREAM_FACTORY_COLLECTORS,
-    format: FORMATS.BLU_RAY
+    format: FORMATS.BLU_RAY,
   },
   {
     img: "https://einysrentals.files.wordpress.com/2020/09/00100lrportrait_00100_burst20200906235728620_cover.jpg?w=800&h=600&crop=1",
@@ -3082,7 +3115,7 @@ const data = [
     id: 10,
     tags: [TAGS.SCI_FI_HORROR],
     label: LABELS.SCREAM_FACTORY_COLLECTORS,
-    format: FORMATS.BLU_RAY
+    format: FORMATS.BLU_RAY,
   },
   {
     img: "https://einysrentals.files.wordpress.com/2020/09/00000img_00000_burst20200906110936962_cover.jpg?w=800&h=600&crop=1",
@@ -3094,7 +3127,7 @@ const data = [
     date: "September 6, 2020",
     id: 9,
     label: LABELS.BLUE_UNDERGROUND,
-    format: FORMATS.BLU_RAY
+    format: FORMATS.BLU_RAY,
   },
   {
     img: "https://einysrentals.files.wordpress.com/2020/09/00100lrportrait_00100_burst20200905235344406_cover.jpg?w=800&h=600&crop=1",
@@ -3107,7 +3140,7 @@ const data = [
     id: 8,
     tags: [TAGS.SCI_FI_HORROR],
     label: LABELS.SCREAM_FACTORY_OTHER,
-    format: FORMATS.BLU_RAY
+    format: FORMATS.BLU_RAY,
   },
   {
     img: "https://einysrentals.files.wordpress.com/2020/09/00100lrportrait_00100_burst20200904200612989_cover.jpg?w=800&h=600&crop=1",
@@ -3120,7 +3153,7 @@ const data = [
     id: 7,
     tags: [TAGS.SCI_FI_HORROR],
     label: LABELS.SCREAM_FACTORY_OTHER,
-    format: FORMATS.BLU_RAY
+    format: FORMATS.BLU_RAY,
   },
   {
     img: "https://einysrentals.files.wordpress.com/2020/09/00100lrportrait_00100_burst20200903222542437_cover_2.jpg?w=800&h=600&crop=1",
@@ -3133,7 +3166,7 @@ const data = [
     id: 6,
     tags: [TAGS.SCI_FI_HORROR],
     label: LABELS.SCREAM_FACTORY_OTHER,
-    format: FORMATS.BLU_RAY
+    format: FORMATS.BLU_RAY,
   },
   {
     img: "https://einysrentals.files.wordpress.com/2020/09/00100lrportrait_00100_burst20200902195113736_cover.jpg?w=800&h=600&crop=1",
@@ -3149,7 +3182,7 @@ const data = [
     id: 5,
     tags: [TAGS.SCI_FI_HORROR],
     label: LABELS.SCREAM_FACTORY_OTHER,
-    format: FORMATS.BLU_RAY
+    format: FORMATS.BLU_RAY,
   },
   {
     img: "https://einysrentals.files.wordpress.com/2020/09/00100lrportrait_00100_burst20200901111848124_cover.jpg?w=800&h=600&crop=1",
@@ -3164,7 +3197,7 @@ const data = [
     id: 4,
     tags: [TAGS.SCI_FI_HORROR],
     label: LABELS.SCREAM_FACTORY_OTHER,
-    format: FORMATS.BLU_RAY
+    format: FORMATS.BLU_RAY,
   },
   {
     img: "https://einysrentals.files.wordpress.com/2020/08/00100lrportrait_00100_burst20200831122019959_cover.jpg?w=800&h=600&crop=1",
@@ -3177,7 +3210,7 @@ const data = [
     id: 3,
     tags: [TAGS.SCI_FI_HORROR],
     label: LABELS.SCREAM_FACTORY_OTHER,
-    format: FORMATS.BLU_RAY
+    format: FORMATS.BLU_RAY,
   },
   {
     img: "https://einysrentals.files.wordpress.com/2020/08/00100lrportrait_00100_burst20200831100900833_cover-2.jpg?w=800&h=600&crop=1",
@@ -3190,7 +3223,7 @@ const data = [
     id: 2,
     tags: [TAGS.SCI_FI_HORROR],
     label: LABELS.OTHER,
-    format: FORMATS.BLU_RAY
+    format: FORMATS.BLU_RAY,
   },
   {
     img: "https://einysrentals.files.wordpress.com/2020/08/00100lrportrait_00100_burst20200830212207505_cover.jpg?w=800&h=600&crop=1",
@@ -3203,7 +3236,7 @@ const data = [
     id: 1,
     tags: [TAGS.SCI_FI_HORROR],
     label: LABELS.CRITERION,
-    format: FORMATS.BLU_RAY
+    format: FORMATS.BLU_RAY,
   },
 ];
 

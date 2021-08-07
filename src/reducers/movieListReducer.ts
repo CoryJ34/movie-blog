@@ -6,11 +6,19 @@ import { Movie } from "../models/Movie";
 import testData from "../data/test-data";
 import categoryMeta from "../data/category-meta";
 import milestoneData from "../data/milestones";
-import { Filter } from "../models/Filter";
+import {
+  AvailableFilters,
+  Filter,
+  FilterMap,
+  FilterType,
+} from "../models/Filter";
 import ReferenceMap from "../models/ReferenceMap";
 import { buildChartData } from "../util/ChartUtils";
 import sort from "../util/SortUtils";
-import filterMovies from "../util/FilterUtils";
+import filterMovies, {
+  gatherAvailableFilters,
+  stringifyFilter,
+} from "../util/FilterUtils";
 import findMovieReferences from "../util/ReferenceUtils";
 import makeWatchListRanges from "../util/WatchListRangeUtils";
 import { Milestone } from "../models/Milestone";
@@ -18,7 +26,8 @@ import { Milestone } from "../models/Milestone";
 interface StateType {
   movies: Movie[] | null;
   filteredMovies: Movie[] | null;
-  filters: Filter[] | null;
+  filters: FilterMap | null;
+  availableFilters: AvailableFilters;
   sortField: string | null;
   sortDir: string | null;
   chartData: any;
@@ -30,13 +39,14 @@ interface StateType {
 const initialState: StateType = {
   movies: null,
   filteredMovies: null,
+  availableFilters: {},
   filters: null,
   sortField: null,
   sortDir: null,
   chartData: null,
   references: null,
   watchListRanges: null,
-  milestones: null
+  milestones: null,
 };
 
 export default function movieListReducer(state = initialState, action: any) {
@@ -56,23 +66,19 @@ export default function movieListReducer(state = initialState, action: any) {
         ...state,
         movies: allMovies,
         filteredMovies,
+        availableFilters: gatherAvailableFilters(allMovies),
         chartData: buildChartData(filteredMovies),
         categoryMeta,
         references: findMovieReferences(allMovies),
         watchListRanges: makeWatchListRanges(filteredMovies),
-        milestones: milestoneData.reverse()
+        milestones: milestoneData.reverse(),
       };
     }
     case "movies/applyFilter": {
       const { filter } = action;
-      let existingFilters = state.filters || [];
-      if (
-        !existingFilters.find(
-          (f: Filter) => f.type === filter.type && f.value === filter.value
-        )
-      ) {
-        existingFilters.push({ type: filter.type, value: filter.value });
-      }
+      let existingFilters = state.filters || {};
+
+      existingFilters[stringifyFilter(filter)] = filter;
 
       const filtered = filterMovies(state.movies || [], existingFilters);
 
@@ -86,10 +92,10 @@ export default function movieListReducer(state = initialState, action: any) {
     }
     case "movies/removeFilter": {
       const { filter } = action;
-      let existingFilters = state.filters || [];
-      existingFilters = existingFilters.filter(
-        (f) => !(f.type === filter.type && f.value === filter.value)
-      );
+      let existingFilters = state.filters || {};
+
+      // @ts-ignore
+      delete existingFilters[stringifyFilter(filter)];
 
       const filtered = filterMovies(state.movies || [], existingFilters);
 
@@ -103,7 +109,7 @@ export default function movieListReducer(state = initialState, action: any) {
     }
     case "movies/resetFilter": {
       const unfiltered = [...(state.movies || [])];
-      
+
       return {
         ...state,
         filters: [],
@@ -129,7 +135,7 @@ export default function movieListReducer(state = initialState, action: any) {
         ...state,
         sortField: null,
         sortDir: null,
-        filteredMovies: filterMovies(state.movies || [], state.filters || []),
+        filteredMovies: filterMovies(state.movies || [], state.filters || {}),
       };
     }
     default:

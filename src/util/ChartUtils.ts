@@ -4,6 +4,10 @@ import dateFormat from "dateformat";
 const DAY_MS = 1000 * 60 * 60 * 24;
 
 export const buildChartData = (movies: Movie[]) => {
+  if(!movies.length) {
+    return {};
+  }
+  
   let chartData: any = {};
 
   let volumeByYear: any = {};

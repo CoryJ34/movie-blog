@@ -10,6 +10,22 @@ export const CATEGORIES = {
   DECADES_OF_HORROR: "Decades of Horror",
 };
 
+interface SimpleMap {
+  [key: string]: string;
+}
+
+export const CATEGORY_CLS_MAP: SimpleMap = {
+  [CATEGORIES.HALLOWEEN_2020]: 'halloween_2020',
+  [CATEGORIES.NOV_DEC_2020]: 'nov_dec_2020',
+  [CATEGORIES.GAMERA]: "gamera",
+  [CATEGORIES.RANDOMIZER]: "randomizer",
+  [CATEGORIES.MARCH_MADNESS]: "march_madness",
+  [CATEGORIES.GENRES]: "genres",
+  [CATEGORIES.FINISH_THE_SERIES_HORROR]: "finish_the_series_horror",
+  [CATEGORIES.FINISH_THE_SERIES_NON_HORROR]: 'finish_the_series_non_horror',
+  [CATEGORIES.DECADES_OF_HORROR]: "decades_of_horror",
+}
+
 export const LABELS = {
   ARROW: "Arrow",
   CRITERION: "Criterion",

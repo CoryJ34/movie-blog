@@ -58,6 +58,7 @@ const MovieInfo = (props: Props) => {
           <img className="thumb" src={movie.img} onClick={onImgClick} />
         </div>
         <div className="col">
+          <div className="my-rating">{extractRating(movie)}</div>
           {!presetCategory && (
             <div
               className={`category ${categoryInfo?.categoryCls}`}
@@ -84,7 +85,6 @@ const MovieInfo = (props: Props) => {
             </div>
           )}
           <div className="published-date">{movie.date}</div>
-          <div className="my-rating">My Rating: {extractRating(movie)}</div>
         </div>
       </div>
       <div className="movie-content">
