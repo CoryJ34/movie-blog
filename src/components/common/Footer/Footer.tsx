@@ -10,9 +10,7 @@ const Footer = () => {
   const link = (path: string, label: string) => {
     return (
       <div className="link">
-        <a>
-          <Link to={path}>{label}</Link>
-        </a>
+        <Link to={path}>{label}</Link>
       </div>
     );
   };
@@ -22,9 +20,9 @@ const Footer = () => {
       <div className="links">
         {link("/", "Home")}
         {divider()}
-        {link("/movies", "See All Movies")}
+        {link("/movies", "All Movies")}
         {divider()}
-        {link("/references", "See References to Other Movies")}
+        {link("/references", "Movie References")}
         {divider()}
         {link("/milestones", "Milestones")}
       </div>

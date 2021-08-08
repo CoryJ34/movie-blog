@@ -17,6 +17,49 @@ const TAGS = {
 
 const data = [
   {
+    img: "https://einysrentals.files.wordpress.com/2021/08/img_20210808_144250.jpg?w=800&h=600&crop=1",
+    title: "[Non-Horror] Finish the Series #17 – Ley Lines (1999)",
+    content: [
+      "This is the last film of the <strong>Black Society Trilogy</strong>, also directed by Takashi Miike, who did the <strong>Dead or Alive</strong> trilogy.  This trilogy is a lot more down-to-earth, but similar in some things, like gang violence and some weird/messed up people.  This is the wholesome tale of three men and a prostitute.  And their involvement with crime organizations.  While there is a lot of human drama and not as much crime drama, it’s still pretty bleak feeling.  I can’t say I got too attached to the characters.. if I did, this movie might impact me more.  Overall, coming off of a couple <strong>Dead or Alive</strong> movies, I like this more subtle style, but its interpersonal drama was a little hit or miss for me.",
+      "Also, side note, I only just added this to the watchlist the day before watching it.  I totally forgot I hadn’t seen the last movie of this trilogy and it was only while watching the third <strong>Dead or Alive</strong> movie that it occurred to me.  Just got it in under the wire..",
+      "7/10",
+      "If I’m ranking these, it’s probably 2 &gt; 1 &gt; 3, although I don’t remember the first one so well, but I do remember liking 2 a bit better.  Overall, much more consistent in tone and style than <strong>Dead or Alive</strong>, but if I wanted to rewatch any of these movies someday, I’d probably go back to the second film in each trilogy",
+    ],
+    date: "August 8, 2021",
+    id: 243,
+    tags: [TAGS.JAPANESE],
+    label: LABELS.ARROW,
+    format: FORMATS.BLU_RAY,
+  },
+  {
+    img: "https://einysrentals.files.wordpress.com/2021/08/pxl_20210714_135743555.mp_.jpg?w=800&h=600&crop=1",
+    title: "[Non-Horror] Finish the Series #16 – Police Story 2 (1988)",
+    content: [
+      "Ok this isn’t really “finishing” the series since apparently there are quite a few more movies in the series than these two.  However, I only own these two thanks to Criterion, so I’ll consider it “finishing” for my case.  I watched the first sometime within the past year and I liked it.  Of course the stunts are insane, but the comedy and overall style were fun too.  The second movie doesn’t quite have the same level of stunts, but still some good ones.  There isn’t as much comedy either, but it still has a fun style.  I’m weird because my mind starts to drift during the action scenes in a lot of action movies.. but in these movies, I’m just waiting for the next action/stunt sequence.  It’s fun, but not quite as memorable as the first.",
+      "7/10",
+      "I don’t know what else there is to say about this series that I didn’t just say above.  I like the first a bit more than the second, but they are both fun.  I don’t know if it’s worth trying to watch the others in the series.. based on their titles, they seem like loose sequels rather than direct sequels.. but who knows.",
+    ],
+    date: "August 8, 2021",
+    id: 242,
+    tags: [TAGS.ACTION],
+    label: LABELS.CRITERION,
+    format: FORMATS.BLU_RAY,
+  },
+  {
+    img: "https://einysrentals.files.wordpress.com/2021/08/pxl_20210714_135716910.mp_.jpg?w=400&h=300&crop=1",
+    title: "[Non-Horror] Finish the Series #15 – Dead or Alive: Final (2002)",
+    content: [
+      "I said I didn’t know what to expect from the final movie in the series and.. I was right.  This is a completely different direction.. some futuristic story about some kind of dystopia with force birth control medication and replicants and..what?  Technically, the film looks a little rough, being shot digitally instead of film, apparently.  It still has some CGI but it’s a bit cheesy.  At least it had a super weird ending.  I can’t really say I “got” this movie but it at least gets credit for being interesting.",
+      "5/10",
+      "This trilogy was all over the map.. I can pretty easily say my ranking is <strong>Dead or Alive 2: Birds</strong>, <strong>Dead or Alive</strong>, then <strong>Dead or Alive: Final</strong>.  The second had some strange moments but it had more heart.  The first was more crime action with some super weird moments and the last one was just.. strange, at least in the context of the first two.  I’d go back and rewatch 2 and maybe 1 someday though.",
+    ],
+    date: "August 7, 2021",
+    id: 241,
+    tags: [TAGS.JAPANESE],
+    label: LABELS.ARROW,
+    format: FORMATS.BLU_RAY,
+  },
+  {
     img: "https://einysrentals.files.wordpress.com/2021/07/pxl_20210714_135609032.jpg?w=400&h=300&crop=1",
     title:
       "[Non-Horror] Finish the Series #14 – Battle for the Planet of the Apes (1973)",
@@ -29,7 +72,7 @@ const data = [
     ],
     date: "August 6, 2021",
     id: 240,
-    
+
     tags: [TAGS.SCI_FI],
     label: LABELS.OTHER,
     format: FORMATS.BLU_RAY,
@@ -44,7 +87,7 @@ const data = [
     ],
     date: "August 6, 2021",
     id: 239,
-    
+
     tags: [TAGS.JAPANESE],
     label: LABELS.ARROW,
     format: FORMATS.BLU_RAY,
@@ -3077,6 +3120,7 @@ const data = [
     title: "#13 – Week 2 – Movie 5 – Idle Hands (1999)",
     date: "September 9, 2020",
     id: 13,
+    tags: [TAGS.COMEDY_HORROR],
     label: LABELS.SCREAM_FACTORY_COLLECTORS,
     format: FORMATS.BLU_RAY,
   },

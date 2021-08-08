@@ -1,7 +1,9 @@
+import { CATEGORY_CLS_MAP, SimpleMap } from "../common/constants";
 import {
   AvailableFilters,
   Filter,
   FilterMap,
+  FilterMeta,
   FilterType,
 } from "../models/Filter";
 import { Movie } from "../models/Movie";
@@ -10,85 +12,80 @@ export const stringifyFilter = (f: Filter): string => {
   return f.type + "_-_" + f.value;
 };
 
+const metaComparator = (a: FilterMeta, b: FilterMeta) => {
+  return a.value > b.value ? 1 : a.value === b.value ? 0 : -1;
+};
+
+const pushOrIncrement = (
+  existing: FilterMeta[],
+  value: string,
+  map?: SimpleMap
+): FilterMeta[] => {
+  let found = false;
+  for (let i = 0; i < existing.length; i++) {
+    if (existing[i].value === value) {
+      found = true;
+      existing[i].count++;
+      break;
+    }
+  }
+
+  if (!found) {
+    existing.push({ value, cls: map ? map[value] : value, count: 1 });
+  }
+
+  return existing;
+};
+
 export const gatherAvailableFilters = (movies: Movie[]): AvailableFilters => {
   let availableFilters: AvailableFilters = {};
 
   movies.forEach((movie: Movie) => {
-    // @ts-ignore
-    let watchLists: string[] =
-      availableFilters[FilterType.WATCHLIST.toString()] || [];
-    if (watchLists.indexOf(movie.titleBreakout.category) < 0) {
-      watchLists.push(movie.titleBreakout.category);
-
-      // @ts-ignore
-      availableFilters[FilterType.WATCHLIST.toString()] = watchLists;
-    }
-
-    // @ts-ignore
-    let tags: string[] = availableFilters[FilterType.TAG.toString()] || [];
-
     (movie.tags || []).forEach((tag) => {
-      if (tags.indexOf(tag) < 0) {
-        tags.push(tag);
-
-        // @ts-ignore
-        availableFilters[FilterType.TAG.toString()] = tags;
-      }
+      availableFilters[FilterType.TAG.toString()] = pushOrIncrement(
+        availableFilters[FilterType.TAG.toString()] || [],
+        tag
+      );
     });
 
-    let years: string[] = availableFilters[FilterType.YEAR.toString()] || [];
-    const year = movie.titleBreakout.year.substring(1, 5);
-    if (years.indexOf(year) < 0) {
-      years.push(year);
+    availableFilters[FilterType.WATCHLIST.toString()] = pushOrIncrement(
+      availableFilters[FilterType.WATCHLIST.toString()] || [],
+      movie.titleBreakout.category,
+      CATEGORY_CLS_MAP
+    );
+    availableFilters[FilterType.YEAR.toString()] = pushOrIncrement(
+      availableFilters[FilterType.YEAR.toString()] || [],
+      movie.titleBreakout.year.substring(1, 5)
+    );
+    availableFilters[FilterType.DECADE.toString()] = pushOrIncrement(
+      availableFilters[FilterType.DECADE.toString()] || [],
+      movie.titleBreakout.year.substring(1, 4) + "0"
+    );
 
-      // @ts-ignore
-      availableFilters[FilterType.YEAR.toString()] = years;
-    }
-
-    let decades: string[] =
-      availableFilters[FilterType.DECADE.toString()] || [];
-    const decade = movie.titleBreakout.year.substring(1, 4) + "0";
-    if (decades.indexOf(decade) < 0) {
-      decades.push(decade);
-
-      // @ts-ignore
-      availableFilters[FilterType.DECADE.toString()] = decades;
-    }
-
-    let labels: string[] = availableFilters[FilterType.LABEL.toString()] || [];
-    const label = movie.label;
-    if (labels.indexOf(label) < 0) {
-      labels.push(label);
-
-      // @ts-ignore
-      availableFilters[FilterType.LABEL.toString()] = labels;
-    }
-
-    let formats: string[] =
-      availableFilters[FilterType.FORMAT.toString()] || [];
-    const format = movie.format;
-    if (formats.indexOf(format) < 0) {
-      formats.push(format);
-
-      // @ts-ignore
-      availableFilters[FilterType.FORMAT.toString()] = formats;
-    }
+    availableFilters[FilterType.LABEL.toString()] = pushOrIncrement(
+      availableFilters[FilterType.LABEL.toString()] || [],
+      movie.label
+    );
+    availableFilters[FilterType.FORMAT.toString()] = pushOrIncrement(
+      availableFilters[FilterType.FORMAT.toString()] || [],
+      movie.format
+    );
   });
 
   if (availableFilters[FilterType.YEAR]) {
-    availableFilters[FilterType.YEAR].sort();
+    availableFilters[FilterType.YEAR].sort(metaComparator);
   }
   if (availableFilters[FilterType.DECADE]) {
-    availableFilters[FilterType.DECADE].sort();
+    availableFilters[FilterType.DECADE].sort(metaComparator);
   }
   if (availableFilters[FilterType.FORMAT]) {
-    availableFilters[FilterType.FORMAT].sort();
+    availableFilters[FilterType.FORMAT].sort(metaComparator);
   }
   if (availableFilters[FilterType.LABEL]) {
-    availableFilters[FilterType.LABEL].sort();
+    availableFilters[FilterType.LABEL].sort(metaComparator);
   }
   if (availableFilters[FilterType.TAG]) {
-    availableFilters[FilterType.TAG].sort();
+    availableFilters[FilterType.TAG].sort(metaComparator);
   }
 
   return availableFilters;

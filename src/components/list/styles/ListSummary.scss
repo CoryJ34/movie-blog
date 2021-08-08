@@ -17,10 +17,11 @@
     }
 
     .category {
-        margin-right: 8px;
+        margin-right: 18px;
         margin-top: 6px;
         border: solid 2px transparent;
         font-size: 13px;
+        position: relative;
 
         &.selected {
             border: solid 2px #ccc;
@@ -29,10 +30,22 @@
         &.na {
             opacity: 0.3;
         }
+
+        .filter-count {
+            position: absolute;
+            font-size: 10px;
+            top: -6px;
+            right: -10px;
+            border: solid 1px white;
+            background: #555;
+            border-radius: 50%;
+            width: 16px;
+            text-align: center;
+        }
     }
 
     .tag {
-        margin-right: 8px;
+        margin-right: 18px;
         margin-top: 6px;
         display: inline-block;
         font-size: 13px;
@@ -59,12 +72,13 @@
 
         .filter-count {
             position: absolute;
-            font-size: 9px;
+            font-size: 10px;
             top: -6px;
             right: -10px;
-            border: solid 1px white;
+            // border: solid 1px white;
+            background: #555;
             border-radius: 50%;
-            width: 14px;
+            width: 16px;
             text-align: center;
         }
     }

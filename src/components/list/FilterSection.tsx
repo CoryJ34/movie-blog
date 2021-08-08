@@ -13,13 +13,9 @@ interface Props {
   filters: FilterMap;
   availableFilters: AvailableFilters;
   availableFromFiltered: AvailableFilters;
+  cls?: string;
   applyFilter: (filter: Filter) => void;
   removeFilter: (filter: Filter) => void;
-}
-
-interface Value {
-  name: string;
-  value: string;
 }
 
 const FilterSection = (props: Props) => {
@@ -29,6 +25,7 @@ const FilterSection = (props: Props) => {
     filters,
     availableFilters,
     availableFromFiltered,
+    cls,
     applyFilter,
     removeFilter,
   } = props;
@@ -49,22 +46,28 @@ const FilterSection = (props: Props) => {
     <div className="filter-section">
       <div className="section-label">{label}</div>
       <div className="filters">
-        {availableFilters[filterType].map((v) => (
-          <div
-            key={v}
-            className={`tag ${v} ${
-              !!(filters || {})[
-                stringifyFilter({ type: filterType, value: v })
-              ] ? "selected" : ""
-            } ${
-              !availableForType || availableForType.indexOf(v) < 0 ? "na" : ""
-            }`}
-            onClick={() => onClick(v)}
-          >
-              {/* <div className="filter-count">34</div> */}
-            {v}
-          </div>
-        ))}
+        {availableFilters[filterType].map((v) => {
+          let matching = (availableForType || []).find((a) => a.value === v.value);
+
+          return (
+            <div
+              key={v.value}
+              className={`${cls || 'tag'} ${v.cls} ${
+                !!(filters || {})[
+                  stringifyFilter({ type: filterType, value: v.value })
+                ]
+                  ? "selected"
+                  : ""
+              } ${!availableForType || !matching ? "na" : ""}`}
+              onClick={() => onClick(v.value)}
+            >
+              <div className="filter-count">
+                {matching ? matching.count : 0}
+              </div>
+              {v.value}
+            </div>
+          );
+        })}
       </div>
     </div>
   );

@@ -51,6 +51,9 @@ const MovieInfo = (props: Props) => {
     complexOrder = true;
   }
 
+  const ratingDisplay = extractRating(movie);
+  const ratingCls = `rating_${parseFloat(ratingDisplay) * 10}`;
+
   return (
     <div className="movie-info">
       <div className="movie-header">
@@ -58,7 +61,7 @@ const MovieInfo = (props: Props) => {
           <img className="thumb" src={movie.img} onClick={onImgClick} />
         </div>
         <div className="col">
-          <div className="my-rating">{extractRating(movie)}</div>
+          <div className={`my-rating ${ratingCls}`}>{ratingDisplay}</div>
           {!presetCategory && (
             <div
               className={`category ${categoryInfo?.categoryCls}`}

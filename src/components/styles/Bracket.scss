@@ -17,7 +17,7 @@
 
         &.championship {
             border: solid 2px rgb(201, 224, 119);
-            border-radius: 3px;
+            border-radius: 6px;
             padding: 14px;
             background: #134;
         }
@@ -28,16 +28,24 @@
     }
 
     .team {
-        border: solid 3px #888;
+        border: solid 3px #777;
         filter: brightness(0.4);
         overflow: hidden;
+
+        &:nth-of-type(1) {
+            border-radius: 6px 6px 0 0;
+        }
+
+        &:nth-of-type(2) {
+            border-radius: 0 0 6px 6px;
+        }
 
         img {
             width: 140px;
         }
 
         &.winner {
-            border: solid 3px #ffffff;
+            border: solid 3px #aaa;
             filter: brightness(1);
         }
     }

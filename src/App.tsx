@@ -59,7 +59,6 @@ function App(props: Props) {
 
   let moviesByCategory: CategoryMap = {};
 
-  // TODO: Should each list component have an onMount that triggers a filter action?
   movies.reverse().forEach((m) => {
     const category = m.titleBreakout.category;
 
@@ -69,6 +68,35 @@ function App(props: Props) {
 
     moviesByCategory[category].push(m);
   });
+
+  const categorizedPage = (category: string) => {
+    return (
+      <PageLayout movies={moviesByCategory[category]} presetCategory={category}>
+        <CategorizedList
+          categoryMeta={categoryMeta}
+          filteredMovies={filteredMovies}
+          openDetail={openDetail}
+          presetCategory={category}
+        />
+      </PageLayout>
+    );
+  };
+
+  const subCategorizedPage = (category: string) => {
+    return (
+      <PageLayout
+        movies={moviesByCategory[category]}
+        presetCategory={category}
+        hideSort={true}
+      >
+        <SubCategorized
+          category={category}
+          movies={movies}
+          openDetail={openDetail}
+        />
+      </PageLayout>
+    );
+  };
 
   return (
     <div className="App">
@@ -82,31 +110,9 @@ function App(props: Props) {
                 openDetail={openDetail}
               />
             </Route>
-            <Route path="/gamera">
-              <PageLayout
-                movies={moviesByCategory[CATEGORIES.GAMERA]}
-                presetCategory={CATEGORIES.GAMERA}
-              >
-                <CategorizedList
-                  categoryMeta={categoryMeta}
-                  filteredMovies={filteredMovies}
-                  openDetail={openDetail}
-                  presetCategory={CATEGORIES.GAMERA}
-                />
-              </PageLayout>
-            </Route>
+            <Route path="/gamera">{categorizedPage(CATEGORIES.GAMERA)}</Route>
             <Route path="/randomizer">
-              <PageLayout
-                movies={moviesByCategory[CATEGORIES.RANDOMIZER]}
-                presetCategory={CATEGORIES.RANDOMIZER}
-              >
-                <CategorizedList
-                  categoryMeta={categoryMeta}
-                  filteredMovies={filteredMovies}
-                  openDetail={openDetail}
-                  presetCategory={CATEGORIES.RANDOMIZER}
-                />
-              </PageLayout>
+              {categorizedPage(CATEGORIES.RANDOMIZER)}
             </Route>
             <Route path="/bracket">
               <PageLayout
@@ -127,71 +133,19 @@ function App(props: Props) {
               </PageLayout>
             </Route>
             <Route path="/novdec2020">
-              <PageLayout
-                movies={moviesByCategory[CATEGORIES.NOV_DEC_2020]}
-                presetCategory={CATEGORIES.NOV_DEC_2020}
-                hideSort={true}
-              >
-                <SubCategorized
-                  category={CATEGORIES.NOV_DEC_2020}
-                  movies={movies}
-                  openDetail={openDetail}
-                />
-              </PageLayout>
+              {subCategorizedPage(CATEGORIES.NOV_DEC_2020)}
             </Route>
             <Route path="/genres">
-              <PageLayout
-                movies={moviesByCategory[CATEGORIES.GENRES]}
-                presetCategory={CATEGORIES.GENRES}
-                hideSort={true}
-              >
-                <SubCategorized
-                  category={CATEGORIES.GENRES}
-                  movies={movies}
-                  openDetail={openDetail}
-                />
-              </PageLayout>
+              {subCategorizedPage(CATEGORIES.GENRES)}
             </Route>
             <Route path="/finishtheserieshorror">
-              <PageLayout
-                movies={moviesByCategory[CATEGORIES.FINISH_THE_SERIES_HORROR]}
-                presetCategory={CATEGORIES.FINISH_THE_SERIES_HORROR}
-              >
-                <CategorizedList
-                  categoryMeta={categoryMeta}
-                  filteredMovies={filteredMovies}
-                  openDetail={openDetail}
-                  presetCategory={CATEGORIES.FINISH_THE_SERIES_HORROR}
-                />
-              </PageLayout>
+              {categorizedPage(CATEGORIES.FINISH_THE_SERIES_HORROR)}
             </Route>
             <Route path="/finishtheseriesnonhorror">
-              <PageLayout
-                movies={
-                  moviesByCategory[CATEGORIES.FINISH_THE_SERIES_NON_HORROR]
-                }
-                presetCategory={CATEGORIES.FINISH_THE_SERIES_NON_HORROR}
-              >
-                <CategorizedList
-                  categoryMeta={categoryMeta}
-                  filteredMovies={filteredMovies}
-                  openDetail={openDetail}
-                  presetCategory={CATEGORIES.FINISH_THE_SERIES_NON_HORROR}
-                />
-              </PageLayout>
+              {categorizedPage(CATEGORIES.FINISH_THE_SERIES_NON_HORROR)}
             </Route>
             <Route path="/decadesofhorror">
-              <PageLayout
-                movies={moviesByCategory[CATEGORIES.DECADES_OF_HORROR]}
-                presetCategory={CATEGORIES.DECADES_OF_HORROR}
-              >
-                <CategorizedList
-                  categoryMeta={categoryMeta}
-                  filteredMovies={filteredMovies}
-                  openDetail={openDetail}
-                  presetCategory={CATEGORIES.DECADES_OF_HORROR}
-                />
-              </PageLayout>
+              {categorizedPage(CATEGORIES.DECADES_OF_HORROR)}
             </Route>
             <Route path="/references">
               <References />

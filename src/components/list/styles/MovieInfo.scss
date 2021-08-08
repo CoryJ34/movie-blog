@@ -1,15 +1,55 @@
 .movie-info {
   padding: 10px;
+  padding-top: 8px;
+  padding-bottom: 4px;
   margin: 10px;
   /* border-bottom: solid 1px #555; */
-  border-left: solid 3px #ccc;
+  // border-left: solid 3px #ccc;
+
+  background: #333;
+  box-shadow: 1px 2px 3px #000;
 
   .my-rating {
     display: inline-block;
-    border: solid 2px #ccc;
+    // border: solid 2px #ccc;
     border-radius: 4px;
-    padding: 4px 4px 3px 4px;
+    // padding: 2px 3px 2px 3px;
+    padding: 4px 6px 4px 6px;
     margin-right: 6px;
+    font-weight: 600;
+
+    &.rating_90,
+    &.rating_85,
+    &.rating_80 {
+      background: #2b962b;
+    }
+
+    &.rating_75,
+    &.rating_70 {
+      background: #42c442;
+    }
+
+    &.rating_65,
+    &.rating_60 {
+      background: #bebc2a;
+    }
+
+    &.rating_55,
+    &.rating_50,
+    &.rating_45 {
+      background: #d89d1e;
+    }
+
+    &.rating_40,
+    &.rating_35 {
+      background: #c44910;
+    }
+
+    &.rating_30,
+    &.rating_25,
+    &.rating_20 {
+      background: #a11b16;
+    }
   }
 
   .sub-category {
@@ -53,22 +93,26 @@
     color: #ccc;
   }
 
-  .my-rating {
-    font-size: 14px;
-    margin-top: 6px;
-  }
+  // .my-rating {
+  //   font-size: 14px;
+  //   margin-top: 6px;
+  // }
 
-  .content-block {
-    font-size: 14px;
-    margin-top: 10px;
-    margin-bottom: 10px;
+  .movie-content {
+    display: none;
 
-    &.complex {
-      margin-left: 6px;
-    }
+    .content-block {
+      font-size: 14px;
+      margin-top: 10px;
+      margin-bottom: 10px;
 
-    figure {
-      text-align: center;
+      &.complex {
+        margin-left: 6px;
+      }
+
+      figure {
+        text-align: center;
+      }
     }
   }
 
@@ -84,7 +128,7 @@
   padding: 4px;
   display: inline-block;
   border-radius: 3px;
-  cursor: pointer;
+  // cursor: pointer;
 }
 
 .category.genres {

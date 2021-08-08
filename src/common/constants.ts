@@ -10,7 +10,7 @@ export const CATEGORIES = {
   DECADES_OF_HORROR: "Decades of Horror",
 };
 
-interface SimpleMap {
+export interface SimpleMap {
   [key: string]: string;
 }
 

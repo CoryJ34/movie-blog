@@ -1,6 +1,5 @@
 import { Dialog } from "@material-ui/core";
-import React from "react";
-import react, { useState } from "react";
+import { useState } from "react";
 import { connect } from "react-redux";
 import { extractRating } from "../../util/TransferUtils";
 import categoryMeta from "../../data/category-meta";
@@ -20,11 +19,9 @@ import Charts from "./Charts";
 import Sort from "./Sort";
 
 import "./styles/ListSummary.scss";
-import { CATEGORY_CLS_MAP, FORMATS, LABELS } from "../../common/constants";
 import FilterSection from "./FilterSection";
 import {
   gatherAvailableFilters,
-  stringifyFilter,
 } from "../../util/FilterUtils";
 
 interface Props {
@@ -34,33 +31,34 @@ interface Props {
   filters: FilterMap;
   availableFilters: AvailableFilters;
   filteredMovies: Movie[];
-  decades: number[];
   hideSort?: boolean;
   applyFilter: (filter: Filter) => void;
   removeFilter: (filter: Filter) => void;
 }
 
-const makeFormatValues = () => {
-  return Object.keys(FORMATS).map((key) => {
-    // @ts-ignore
-    const value: string = FORMATS[key];
-    return {
-      value,
-      name: value,
-    };
-  });
-};
-
-const makeLabelValues = () => {
-  return Object.keys(LABELS).map((key) => {
-    // @ts-ignore
-    const value: string = LABELS[key];
-    return {
-      value,
-      name: value,
-    };
-  });
-};
+const FILTERABLES: { type: FilterType; label: string; cls?: string }[] = [
+  {
+    type: FilterType.WATCHLIST,
+    label: "Watchlist",
+    cls: "category",
+  },
+  {
+    type: FilterType.TAG,
+    label: "Tag",
+  },
+  {
+    type: FilterType.DECADE,
+    label: "Decade",
+  },
+  {
+    type: FilterType.LABEL,
+    label: "Label",
+  },
+  {
+    type: FilterType.FORMAT,
+    label: "Format",
+  },
+];
 
 const ListSummary = (props: Props) => {
   const {
@@ -69,7 +67,6 @@ const ListSummary = (props: Props) => {
     filters,
     availableFilters,
     filteredMovies,
-    decades,
     hideSort,
     applyFilter,
     removeFilter,
@@ -102,39 +99,7 @@ const ListSummary = (props: Props) => {
       categoryMeta[presetCategory || "none"]
     : null;
 
-  const renderDecades = () => {
-    return (
-      <div className="decades">
-        {availableFilters[FilterType.DECADE].map((d) => {
-          const onClick = () => {
-            const exists =
-              !!filters[
-                stringifyFilter({
-                  type: FilterType.DECADE,
-                  value: d.toString(),
-                })
-              ];
-
-            if (exists) {
-              removeFilter({ type: FilterType.DECADE, value: d.toString() });
-            } else {
-              applyFilter({ type: FilterType.DECADE, value: d.toString() });
-            }
-          };
-
-          return (
-            <div onClick={onClick} key={d} className="decade">
-              {d}
-            </div>
-          );
-        })}
-      </div>
-    );
-  };
-
   const availableFromFiltered = gatherAvailableFilters(filteredMovies);
-  const availableWatchlists =
-    availableFromFiltered[FilterType.WATCHLIST.toString()];
 
   return (
     <div className="list-summary">
@@ -164,88 +129,21 @@ const ListSummary = (props: Props) => {
       <div>{`Total movies: ${movies.length}`}</div>
       <div>{`Average rating: ${averageRating.toFixed(2)}`}</div>
       {!presetCategory && (
-        <div>
-          {availableFilters[FilterType.WATCHLIST].map((k) => {
-            const onClick = () => {
-              const val = k;
-
-              const exists =
-                !!filters[
-                  stringifyFilter({ type: FilterType.WATCHLIST, value: val })
-                ];
-
-              if (exists) {
-                removeFilter({ type: FilterType.WATCHLIST, value: val });
-              } else {
-                applyFilter({ type: FilterType.WATCHLIST, value: val });
-              }
-            };
-            return (
-              <div
-                className={`category ${CATEGORY_CLS_MAP[k]} ${
-                  !!(filters || {})[
-                    stringifyFilter({ type: FilterType.WATCHLIST, value: k })
-                  ]
-                    ? "selected"
-                    : ""
-                } ${
-                  !availableWatchlists || availableWatchlists.indexOf(k) < 0
-                    ? "na"
-                    : ""
-                }`}
-                onClick={onClick}
-              >
-                {k}
-              </div>
-            );
-          })}
+        <div className="filters">
+          {FILTERABLES.map((f) => (
+            <FilterSection
+              label={f.label}
+              filterType={f.type}
+              filters={filters}
+              availableFilters={availableFilters}
+              availableFromFiltered={availableFromFiltered}
+              cls={f.cls}
+              applyFilter={applyFilter}
+              removeFilter={removeFilter}
+            />
+          ))}
         </div>
       )}
-      {!presetCategory && (
-        <FilterSection
-          label="Tag"
-          filterType={FilterType.TAG}
-          filters={filters}
-          availableFilters={availableFilters}
-          availableFromFiltered={availableFromFiltered}
-          applyFilter={applyFilter}
-          removeFilter={removeFilter}
-        />
-      )}
-      {!presetCategory && (
-        <FilterSection
-          label="Decade"
-          filterType={FilterType.DECADE}
-          filters={filters}
-          availableFilters={availableFilters}
-          availableFromFiltered={availableFromFiltered}
-          applyFilter={applyFilter}
-          removeFilter={removeFilter}
-        />
-      )}
-      {!presetCategory && (
-        <FilterSection
-          label="Label"
-          filterType={FilterType.LABEL}
-          filters={filters}
-          availableFilters={availableFilters}
-          availableFromFiltered={availableFromFiltered}
-          applyFilter={applyFilter}
-          removeFilter={removeFilter}
-        />
-      )}
-      {!presetCategory && (
-        <FilterSection
-          label="Format"
-          filterType={FilterType.FORMAT}
-          filters={filters}
-          availableFilters={availableFilters}
-          availableFromFiltered={availableFromFiltered}
-          applyFilter={applyFilter}
-          removeFilter={removeFilter}
-        />
-      )}
-      {/* {renderDecades()} */}
       {!hideSort && <Sort />}
       <Charts />
       <Dialog
@@ -263,20 +161,7 @@ const ListSummary = (props: Props) => {
 };
 
 const mapStateToProps = (state: any) => {
-  let decades: number[] = [];
-
-  (state.movieStore?.filteredMovies || []).forEach((m: Movie) => {
-    const decade = parseInt(m.titleBreakout.year.substr(1, 3) + "0", 10);
-
-    if (decades.indexOf(decade) < 0) {
-      decades.push(decade);
-    }
-  });
-
-  decades.sort();
-
   return {
-    decades,
     filters: state.movieStore?.filters,
     availableFilters: state.movieStore?.availableFilters,
     filteredMovies: state.movieStore?.filteredMovies,
