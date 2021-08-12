@@ -11,4 +11,11 @@ export interface Movie {
   tags: string[];
   label: string;
   format: string;
+  ratingDiff: number;
+  lbox: {
+    cast: string[],
+    directors: string[],
+    genres: string[],
+    rating: string
+  }
 }

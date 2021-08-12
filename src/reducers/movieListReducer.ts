@@ -4,13 +4,12 @@ import {
 } from "../util/TransferUtils";
 import { Movie } from "../models/Movie";
 import testData from "../data/test-data";
+import lboxData from "../data/lbox-data";
 import categoryMeta from "../data/category-meta";
 import milestoneData from "../data/milestones";
 import {
   AvailableFilters,
-  Filter,
   FilterMap,
-  FilterType,
 } from "../models/Filter";
 import ReferenceMap from "../models/ReferenceMap";
 import { buildChartData } from "../util/ChartUtils";
@@ -52,11 +51,24 @@ const initialState: StateType = {
 export default function movieListReducer(state = initialState, action: any) {
   switch (action.type) {
     case "movies/load": {
+      let lboxMap = {};
+
+      lboxData.forEach((lb: any) => {
+        // @ts-ignore
+        lboxMap[lb.id] = lb;
+      });
+
       const allMovies = testData.map((original: any) => {
+        const rating = parseFloat(extractRating(original).split("/")[0].trim());
+
         return {
           ...original,
-          rating: parseFloat(extractRating(original).split("/")[0].trim()),
+          rating,
           titleBreakout: breakoutTitleYearAndCategory(original.title),
+          // @ts-ignore
+          lbox: lboxMap[original.id],
+          // @ts-ignore
+          ratingDiff: (rating - (parseFloat(lboxMap[original.id].rating) * 2)).toFixed(2)
         };
       });
 

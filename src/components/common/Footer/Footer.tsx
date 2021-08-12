@@ -25,6 +25,8 @@ const Footer = () => {
         {link("/references", "Movie References")}
         {divider()}
         {link("/milestones", "Milestones")}
+        {divider()}
+        {link("/ratings", "Ratings")}
       </div>
     </div>
   );

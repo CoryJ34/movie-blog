@@ -91,6 +91,11 @@ const Home = (props: Props) => {
               category={CATEGORIES.FINISH_THE_SERIES_NON_HORROR}
               movies={movies}
             />
+            <FeaturedCard
+              loc="/genresampler"
+              category={CATEGORIES.GENRE_SAMPLER}
+              movies={movies}
+            />
           </Grid>
         </div>
         <div className="section-header">

@@ -8,6 +8,7 @@ export const CATEGORIES = {
   FINISH_THE_SERIES_HORROR: "[Horror] Finish the Series",
   FINISH_THE_SERIES_NON_HORROR: "[Non-Horror] Finish the Series",
   DECADES_OF_HORROR: "Decades of Horror",
+  GENRE_SAMPLER: "Genre Sampler"
 };
 
 export interface SimpleMap {
@@ -24,6 +25,7 @@ export const CATEGORY_CLS_MAP: SimpleMap = {
   [CATEGORIES.FINISH_THE_SERIES_HORROR]: "finish_the_series_horror",
   [CATEGORIES.FINISH_THE_SERIES_NON_HORROR]: 'finish_the_series_non_horror',
   [CATEGORIES.DECADES_OF_HORROR]: "decades_of_horror",
+  [CATEGORIES.GENRE_SAMPLER]: "genre_sampler",
 }
 
 export const LABELS = {

@@ -13,9 +13,37 @@ const TAGS = {
   ACTION: "Action",
   DRAMA: "Drama",
   COMEDY_HORROR: "Comedy Horror",
+  DOCUMENTARY: "Documentary"
 };
 
 const data = [
+  {
+    img: "https://einysrentals.files.wordpress.com/2021/08/img_20210809_085536.jpg?w=800&h=600&crop=1",
+    title: "Genre Sampler #1 – The El Duce Tapes (2019)",
+    content: [
+      "First stop on the genre sampler tour: documentary.  This movie and this band was not on my radar at all, but I randomly saw this Arrow blu-ray used at a movie store so I figured, why not.  It’s definitely worth the watch… but this El Duce guy was about as disgusting as you could imagine.  I’m aware of the “shock rock” type of music, but I’ve never been big into stuff like GG Allin where it’s just shock for the sake of shock.  I do like old school Misfits, but really for the horror aspect.. when they veer a little bit into shock territory, it loses me.  El Duce is basically an alcoholic with mental issues.. either that or a very dedicated troll.  Despite he and the band being pretty disgusting, I’m a sucker for the raw footage and documentaries about old rock bands.  I really like <strong>We Are Twisted Fucking Sister! (2014)</strong> and one of my all-time favorite movies is <strong>Anvil! The Story of Anvil (2008)</strong>.  So this kind of hit that note for me, but in a different way.  It’s just fascinating to watch such a weird dude self-destruct over time.  He himself didn’t seem specifically cruel to others but he promoted some pretty vile stuff that probably influenced way too many guys out there, so it’s hard to sympathize with him.. but it is still sad to see how his life turned out either way.  All in all, really interesting movie and a really unique subject matter for a documentary.  I appreciate the straight footage-based doc with minimal narration (only text-based narration)",
+      "8/10",
+    ],
+    date: "August 9, 2021",
+    id: 245,
+    tags: [TAGS.DOCUMENTARY],
+    label: LABELS.ARROW,
+    format: FORMATS.BLU_RAY,
+  },
+  {
+    img: "https://einysrentals.files.wordpress.com/2021/08/pxl_20210714_135758758.mp_.jpg?w=800&h=600&crop=1",
+    title: "[Non-Horror] Finish the Series #18 – Gods and Generals (2003)",
+    content: [
+      "To finish this list, I decided to include a prequel to <strong>Gettysburg (1993)</strong>.  That was an ok movie but dragged a lot.  I was always hesitant to watch the prequel because I knew it’d be a long time commitment and because I had read a lot of criticism about how it was kind of a Confederate-sympathizing movie.  Well.. they weren’t wrong about that.  I don’t want to get into the politics of it, but it felt kind of.. gross to be trying to root for these characters, even though, in the movie, they were portrayed as these romanticized “aw shucks, we’re just good old fashioned Southerners” type people.  But in reality.. they were pretty much just cool with slavery?  Anyway.. it is interesting to see movies told from the perspective of the “other” side of a conflict (<strong>Letters from Iwo Jima (2006)</strong> is a good one) and not everything is so black and white, good and evil, etc… but it’s hard to get past this “heroic” portrayal.  Anyway.. putting all that aside, the movie was still too overly dramatic in a kind of Oscar-baity way.  The cast had some good actors in it, the sets and costumes I guess were all pretty good but the content and the “on-the-nose” writing is just too much of a turn off for me.",
+      "4/10",
+      "I like Civil War history and <strong>Gettysburg</strong> is probably the biggest Civil War drama out there (<strong>Glory (1989)</strong> is a big one too), but it’s still didn’t really grab me as much as I’d hoped.  <strong>Gods and Generals</strong> was just too.. underwhelming.  So overall, not a “series” at the top of my list, but I’d go back and rewatch <strong>Gettysburg</strong> sometime, probably.",
+    ],
+    date: "August 8, 2021",
+    id: 244,
+    tags: [TAGS.DRAMA],
+    label: LABELS.OTHER,
+    format: FORMATS.BLU_RAY,
+  },
   {
     img: "https://einysrentals.files.wordpress.com/2021/08/img_20210808_144250.jpg?w=800&h=600&crop=1",
     title: "[Non-Horror] Finish the Series #17 – Ley Lines (1999)",
@@ -2924,6 +2952,7 @@ const data = [
       "#28 – Week 4 – BONUS 1 – Blood & Flesh: The Reel Life & Ghastly Death of Al Adamson (2019)",
     date: "September 27, 2020",
     id: 28,
+    tags: [TAGS.DOCUMENTARY],
     label: LABELS.SEVERIN,
     format: FORMATS.BLU_RAY,
   },

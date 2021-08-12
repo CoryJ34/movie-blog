@@ -152,6 +152,18 @@ export const breakoutTitleYearAndCategory = (
       categoryCls: "finish_the_series_non_horror",
       order: parts[0].split("#")[1],
     };
+  } else if (rawTitle.indexOf("Genre Sampler") === 0) {
+    // Genre Sampler
+    const parts = rawTitle.split("–");
+    const titleAndYear = extractTitleAndYear(parts[1].trim());
+
+    return {
+      title: titleAndYear[0],
+      year: titleAndYear[1],
+      category: CATEGORIES.GENRE_SAMPLER,
+      categoryCls: "genre_sampler",
+      order: parts[0].split("#")[1],
+    };
   }
 
   return null;

@@ -190,6 +190,10 @@
         border: solid 2px #3c9682;
       }
 
+      &.genre_sampler {
+        border: solid 2px #b62f6e;
+      }
+
       &:hover {
         filter: brightness(1.25);
       }

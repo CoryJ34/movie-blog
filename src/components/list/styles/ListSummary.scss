@@ -22,6 +22,7 @@
         border: solid 2px transparent;
         font-size: 13px;
         position: relative;
+        cursor: pointer;
 
         &.selected {
             border: solid 2px #ccc;

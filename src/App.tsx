@@ -17,6 +17,7 @@ import { Filter, FilterMap } from "./models/Filter";
 import References from "./components/references/References";
 import Milestones from "./components/milestones/Milestones";
 import Footer from "./components/common/Footer/Footer";
+import Ratings from "./components/ratings/Ratings";
 
 interface Props {
   movies: Movie[];
@@ -147,11 +148,17 @@ function App(props: Props) {
             <Route path="/decadesofhorror">
               {categorizedPage(CATEGORIES.DECADES_OF_HORROR)}
             </Route>
+            <Route path="/genresampler">
+              {categorizedPage(CATEGORIES.GENRE_SAMPLER)}
+            </Route>
             <Route path="/references">
               <References />
             </Route>
             <Route path="/milestones">
               <Milestones />
+            </Route>
+            <Route path="/ratings">
+              <Ratings />
             </Route>
             <Route>
               <Home

@@ -1,4 +1,33 @@
 const categoryMeta = {
+  "Genre Sampler": {
+    opening: {
+      content: [
+        "Ok one really small watchlist before Halloween season starts.  Why?  Because, so far I’ve watched 244 movies through these watchlists.  It would bother me if I didn’t make it an even 250 by the time I hit the one year anniversary of the blog.  So of course, this will be a 6-movie watchlist, just to get me to the 250 milestone.  Instead of picking 6 movies in a theme, I decided I’d just knock out a few random movies across non-horror genres.  Those genres are:",
+        "<li>Documentary</li><li>Mystery/thriller</li><li>Comedy</li><li>Drama</li><li>Animated</li><li>Classic/Epic</li>",
+        "I have about three weeks before starting Halloween 2021, so I’ve got a lot of spare time to get these six in.  Again, these are all non-horror since I’m getting ready for the big Halloween horror binge.  It will also be the 10th watchlist, which is nice.. I like those round numbers.. 10 and 250.  On to this watchlist now, and then it will be time to take a look back at the first year of this blog and then, of course.. Halloween 2021!",
+      ],
+      date: "August 9, 2021",
+    },
+  },
+  "[Non-Horror] Finish the Series": {
+    opening: {
+      content: [
+        "I knew I’d get to this eventually and now is as good a time as any before I go full horror mode for the (extended) Halloween season.  Some of these movies might be borderline horror, but not close enough that I felt like putting them in the previous Horror-based “Finish the Series” watchlist.  I’m going to try something a little different this time compared to that previous list.  In that one, if I was going to watch movies from the A, B, C and D series, I would watch all the A, then all the B, and so on.  This time, I’m going to rotate.. so one from A, one from B, one from C, etc, and then back to the next from A and so on.  I feel like that will keep it fresh so that I can distinguish between movies a bit better.  I don’t know if it will really help down the line when I think back on these movies, but it’s worth a try.   As I’m writing this, there are 17 movies in the list, but I may end up thinking of a movie or two that qualifies as a sequel to other movies I’ve seen, so I’ll keep an eye out.   That gives me about 7 weeks for 17 movies.. so I can go at a pretty leisurely pace.  Just the calm before the Halloween storm..",
+      ],
+      date: "July 12, 2021",
+    },
+    closing: {
+      content: [
+        "Another playlist down and many (non-horror) series finished.  I enjoyed the format I chose this time of rotating between the series movies instead of doing each series all at once.  The extra bit of variety helps.  Looking back, it was a mostly mediocre or above-average movies, but for sequels, that’s better than I expected.  Some of those horror sequels I watched were pretty rough.  Here’s a look at my best and worst:",
+        "<strong>Top 5</strong>",
+        "<li><strong>Dead or Alive 2: Birds</strong> – A lot of contrast but the flashbacks and island scenes sold me on it</li><li><strong>Police Story 2</strong> – Not as memorable as the first, but still a lot of good stunts</li><li><strong>Light the Fuse… Sartana is Coming</strong> – I could probably pick from a couple in this series, but I’ll throw one in as representation for the series</li><li><strong>Ley Lines</strong> – The quiet style is cool, but I wish I connected with the characters a bit more</li><li><strong>Outlaw: Goro the Assassin</strong> – Again, throwing one in from the <strong>Outlaw</strong> series to represent</li>",
+        "<strong>Bottom 5</strong>",
+        "<li><strong>Gods and Generals</strong> – A little too pro-Confederacy and just very long..</li><li><strong>Dead or Alive: Final</strong> – I’m still not sure what this was..</li><li><strong>Escape from the Planet of the Apes</strong> – Not <em>terrible </em>but just not much going on in this one</li><li><strong>The New Barbarians</strong> – Pretty generic <strong>Mad Max</strong> clone</li><li><strong>1990: The Bronx Warriors</strong> – Cheesy action but at least it had that ruined city backdrop</li>",
+        "There it is.. like I said, pretty middle-of-the-road movies, but overall and enjoyable experience.  It was a good non-horror watchlist to start getting prepped for Halloween 2021… can’t wait.  I still have three weeks, so I may squeeze a small watchlist in between, spoiler alert.",
+      ],
+      date: "August 8, 2021",
+    },
+  },
   "Decades of Horror": {
     closing: {
       content: [
