@@ -7,21 +7,26 @@
   }
 
   .meta {
-      font-size: 14px;
-      display: flex;
-      padding: 10px;
-      margin: 10px;
+    font-size: 14px;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    margin: 10px;
     //   border-bottom: solid 1px #ccc;
-      background: #333;
-      box-shadow: 4px 4px 12px #111;
+    background: #333;
+    box-shadow: 4px 4px 12px #111;
 
-      .item {
-          margin-right: 20px;
+    .item {
+      margin-right: 20px;
 
-          .label {
-              margin-right: 6px;
-              font-weight: 600;
-          }
+      .label {
+        margin-right: 6px;
+        font-weight: 600;
       }
+    }
+  }
+
+  td.MuiTableCell-root.MuiTableCell-body.num {
+    max-width: 10px;
   }
 }

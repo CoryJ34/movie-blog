@@ -101,13 +101,13 @@ const mapStateToProps = (state: any) => {
   sortedByRatingDiff.forEach((m: Movie) => {
     if (m.ratingDiff < -1.5) {
       numWayUnder++;
-    } else if (m.ratingDiff < -0.5) {
+    } else if (m.ratingDiff < -0.25) {
       numUnder++;
     } else if (m.ratingDiff < -0.1) {
       numBarelyUnder++;
     } else if (m.ratingDiff < 0.1) {
       numClose++;
-    } else if (m.ratingDiff < 0.5) {
+    } else if (m.ratingDiff < 0.25) {
       numBarelyOver++;
     } else if (m.ratingDiff < 1.5) {
       numOver++;

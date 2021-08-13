@@ -42,8 +42,10 @@ const FeaturedCard = (props: Props) => {
       <div className="featured-card-content">
         <div className="featured-preview">{category}</div>
         <div className="featured-number">{filteredAndSorted.length} movies</div>
-        <div className="date">{firstDate}</div>
-        <div className="date">{lastDate}</div>
+        <div className="dates-container">
+          <div className="date">{firstDate}</div>
+          <div className="date">{lastDate}</div>
+        </div>
       </div>
     </Link>
   );

@@ -30,8 +30,18 @@
         text-shadow: 1px 1px #111;
         margin-bottom: 10px;
 
+        iframe {
+          max-width: 100%;
+        }
+
         figure {
           text-align: center;
+
+          max-width: 100%;
+
+          img {
+            max-width: 100%;
+          }
         }
       }
     }
