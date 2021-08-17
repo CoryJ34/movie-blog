@@ -8,6 +8,14 @@ const categoryMeta = {
       ],
       date: "August 9, 2021",
     },
+    closing: {
+      content: [
+        "And just like that, the short watchlist is over.  Also, we’re at 250 movies exactly now, which is wild.  It’s been <em>almost</em> a full year since I started.  Anyway, about the watchlist itself.. short but sweet.  I liked all six movies.  If I had to rank them, it’s something like:",
+        "<li><strong>The Ides of March</strong> – Good cast, intriguing story.. </li><li><strong>The El Duce Tapes</strong> – Probably the most memorable and, maybe if it wasn’t quite so off-putting (not the movie’s fault..), it’d be my top movie for this list</li><li><strong>Ben-Hur</strong> – Not perfect and it especially loses momentum towards the end, but it’s still a pretty good journey</li><li><strong>Porco Rosso</strong> – Light-hearted fun, but not quite on the level as some other Miyazaki movies</li><li><strong>Lost Highway</strong>– I didn’t really understand what was going on, but the style and the mood were enjoyable anyway</li><li><strong>Mr Mom</strong> – Not really fair to be at the bottom of this list as I still liked it.  It’s just an 80s comedy with some funny moments, but nothing much beyond that</li>",
+        "Of course, by the numbers, this has to be the highest rated watchlist I did, given the small number of good quality movies.  It was a good excuse to watch a lot of these random movies that didn’t fit other watchlists so easily and of course a better excuse to get to #250 for Year One.  I’ll start the Halloween watchlist at the end of August, which will be almost exactly a full year since I started the first watchlist.. where does the time go!  Until then, I won’t log any new movies, but I’ll definitely have some year-end summary posts to look back at the movies, the watchlists, the numbers, etc.  It’ll will be some fun nerding out for me..",
+      ],
+      date: "August 16, 2021",
+    },
   },
   "[Non-Horror] Finish the Series": {
     opening: {

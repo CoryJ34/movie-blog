@@ -120,9 +120,18 @@ const lboxData = [
     directors: ["Byron Haskin"],
     genres: ["science-fiction", "action"],
     id: 1,
+    tagline:
+      "Mighty panorama of Earth-shaking fury as an army from Mars invades!",
+    summary:
+      "The residents of a small town are excited when a flaming meteor lands in the hills, until they discover it is the first of many transport devices from Mars bringing an army of invaders invincible to any man-made weapon, even the atomic bomb.",
+    runtime: "85 mins",
     title: "The War of the Worlds",
     year: "1953",
     rating: "3.40",
+    poster:
+      "https://a.ltrbxd.com/resized/film-poster/4/7/4/6/2/47462-the-war-of-the-worlds-0-230-0-345-crop.jpg?k=4314fe4050",
+    backdrop:
+      "https://a.ltrbxd.com/resized/sm/upload/fq/i8/ee/vv/war%20of%20the%20worlds-1200-1200-675-675-crop-000000.jpg?k=59ab741a51",
   },
   {
     cast: [
@@ -138,9 +147,15 @@ const lboxData = [
     directors: ["Robert Gordon"],
     genres: ["adventure", "science-fiction", "horror"],
     id: 2,
+    tagline: "IT CRUSHES! KILLS! DESTROYS!",
+    summary:
+      "A giant octopus, whose feeding habits have been affected by radiation from H-Bomb tests, rises from the Mindanao Deep to terrorize the California Coast.",
+    runtime: "79 mins",
     title: "It Came from Beneath the Sea",
     year: "1955",
     rating: "2.82",
+    poster:
+      "https://a.ltrbxd.com/resized/film-poster/3/2/3/9/1/32391-it-came-from-beneath-the-sea-0-230-0-345-crop.jpg?k=e0c35c50b2",
   },
   {
     cast: [
@@ -159,9 +174,17 @@ const lboxData = [
     directors: ["Bruce D. Clark"],
     genres: ["adventure", "horror", "action", "science-fiction"],
     id: 3,
+    tagline: "ALIEN was the beginning… Hell Has Just Been Relocated!",
+    summary:
+      "As a lone spaceship proceeds on its long voyage across space, the crew are surprised to encounter a strange pyramid form. Surprise turns to horror as one by one, they discover that their darkest nightmares are all starting to become real. The pyramid has to be behind it all somehow, but how can they save themselves from its influence?",
+    runtime: "81 mins",
     title: "Galaxy of Terror",
     year: "1981",
     rating: "2.61",
+    poster:
+      "https://a.ltrbxd.com/resized/film-poster/3/3/2/8/9/33289-galaxy-of-terror-0-230-0-345-crop.jpg?k=cfd7d2f042",
+    backdrop:
+      "https://a.ltrbxd.com/resized/sm/upload/b9/dg/wj/x4/galaxy%20of%20terror-1200-1200-675-675-crop-000000.jpg?k=0f2f581766",
   },
   {
     cast: [
@@ -179,9 +202,17 @@ const lboxData = [
     directors: ["Allan Holzman"],
     genres: ["science-fiction", "horror"],
     id: 4,
+    tagline: "Part alien … part human …  all nightmare.",
+    summary:
+      "In the distant future, a federation marshal arrives at a research lab on a remote planet where a genetic experiment has gotten loose and begins feeding on the dwindling scientific group.",
+    runtime: "77 mins",
     title: "Forbidden World",
     year: "1982",
     rating: "2.79",
+    poster:
+      "https://a.ltrbxd.com/resized/film-poster/2/2/8/2/0/22820-forbidden-world-0-230-0-345-crop.jpg?k=8f258576a2",
+    backdrop:
+      "https://a.ltrbxd.com/resized/sm/upload/cw/zc/n1/up/forbidden-world-1200-1200-675-675-crop-000000.jpg?k=058d931a8b",
   },
   {
     cast: [
@@ -203,9 +234,17 @@ const lboxData = [
     directors: ["George P. Cosmatos"],
     genres: ["horror", "action", "thriller", "adventure", "science-fiction"],
     id: 5,
+    tagline: "The true meaning of fear",
+    summary:
+      "Underwater deep-sea miners encounter a Soviet wreck and bring back a dangerous cargo to their base on the ocean floor with horrifying results. The crew of the mining base must fight to survive against a genetic mutation that hunts them down one by one.",
+    runtime: "98 mins",
     title: "Leviathan",
     year: "1989",
     rating: "2.89",
+    poster:
+      "https://a.ltrbxd.com/resized/film-poster/4/3/1/4/3/43143-leviathan-0-230-0-345-crop.jpg?k=9a4000e559",
+    backdrop:
+      "https://a.ltrbxd.com/resized/sm/upload/j9/ex/50/2w/leviathan-1200-1200-675-675-crop-000000.jpg?k=939b5443a5",
   },
   {
     cast: [
@@ -227,9 +266,16 @@ const lboxData = [
     directors: ["Don Sharp"],
     genres: ["science-fiction", "horror"],
     id: 6,
+    tagline:
+      "Piece by Piece...Atom by Atom...Humans Invisibly Teleported Through Time and Space!!!",
+    summary:
+      "The son of the inventor of a matter-transporter, which turned him into a monster when he tried to transport himself along with a tiny housefly, continues to pursue his father's experiment, while his own two sons attempt to extricate him, themselves and the family name from further disaster and scandal.",
+    runtime: "86 mins",
     title: "Curse of the Fly",
     year: "1965",
     rating: "2.48",
+    poster:
+      "https://a.ltrbxd.com/resized/film-poster/2/6/4/1/3/26413-curse-of-the-fly-0-230-0-345-crop.jpg?k=04825d4ce3",
   },
   {
     cast: [
@@ -248,9 +294,15 @@ const lboxData = [
     directors: ["Ed Hunt"],
     genres: ["science-fiction", "horror"],
     id: 7,
+    tagline: "Mind over matter",
+    summary:
+      "Dr. Blake runs a TV show called \"Independent Thinkers\", which is sort of a Scientology-like self-help/religion program. But he's not making his audience think any more independently - with the help of an alien organism he calls The Brain, he's using brainwashing and mind control. The only thing that stands between them and world domination is a brilliant but troubled high school student with a penchant for pranks...",
+    runtime: "94 mins",
     title: "The Brain",
     year: "1988",
     rating: "2.75",
+    poster:
+      "https://a.ltrbxd.com/resized/film-poster/2/4/6/7/7/24677-the-brain-0-230-0-345-crop.jpg?k=78131ffbdc",
   },
   {
     cast: [
@@ -274,9 +326,17 @@ const lboxData = [
     directors: ["Chris Walas"],
     genres: ["thriller", "horror", "science-fiction"],
     id: 8,
+    tagline: "Like Father Like Son",
+    summary:
+      "Martin Brundle, born of the human/fly, is adopted by his father's place of employment (Bartok Inc.) while the employees simply wait for his mutant chromosomes to come out of their dormant state.",
+    runtime: "105 mins",
     title: "The Fly II",
     year: "1989",
     rating: "2.58",
+    poster:
+      "https://a.ltrbxd.com/resized/sm/upload/ef/n6/v0/uy/tzSmahyUQ8jAkpbWbdq3qry5hEs-0-230-0-345-crop.jpg?k=b2c584bda9",
+    backdrop:
+      "https://a.ltrbxd.com/resized/sm/upload/0b/18/t7/xx/fly%202-1200-1200-675-675-crop-000000.jpg?k=e17e3a5b11",
   },
   {
     cast: [
@@ -304,9 +364,17 @@ const lboxData = [
     directors: ["George A. Romero", "Dario Argento"],
     genres: ["horror"],
     id: 9,
+    tagline: "When I Wake You... You'll Be Dead.",
+    summary:
+      'Two horror segments based on Edgar Allan Poe stories set in and around the city of Pittsburgh. "The Facts in the Case of M. Valdemar" concerns a cheating wife who is trying to scam her dying husband out of millions by having her doctor/hypnotist lover hypnotize the geezer into signing his dough over to her. The old man dies while under hypnosis and is stuck in the limbo between the here and the hereafter. The door to the physical world is opened and the undead attempt to enter it. "Black Cat" is the story of Rodd Usher, an alcoholic photographer/artist, who descends into madness after he kills a stray cat that his live-in girlfriend Annabelle brings home. One murder leads to another, and the complex cover-ups begin.',
+    runtime: "120 mins",
     title: "Two Evil Eyes",
     year: "1990",
     rating: "3.03",
+    poster:
+      "https://a.ltrbxd.com/resized/film-poster/3/2/7/9/3/32793-two-evil-eyes-0-230-0-345-crop.jpg?k=1ac97adcfc",
+    backdrop:
+      "https://a.ltrbxd.com/resized/sm/upload/jc/pg/sa/l7/two%20evil%20eyes-1200-1200-675-675-crop-000000.jpg?k=3e22366eee",
   },
   {
     cast: [
@@ -368,9 +436,17 @@ const lboxData = [
     directors: ["Roger Donaldson"],
     genres: ["action", "science-fiction", "horror"],
     id: 10,
+    tagline: "Our time is up.",
+    summary:
+      "In 1993, the Search for Extra Terrestrial Intelligence Project receives a transmission detailing an alien DNA structure, along with instructions on how to splice it with human DNA. The result is Sil, a sensual but deadly creature who can change from a beautiful woman to an armour-plated killing machine in the blink of an eye.",
+    runtime: "108 mins",
     title: "Species",
     year: "1995",
     rating: "2.63",
+    poster:
+      "https://a.ltrbxd.com/resized/sm/upload/4c/ck/0y/d3/zIVdkdxnUVM0JII7BJ1F9dHQ2eq-0-230-0-345-crop.jpg?k=4fb9a2d7e8",
+    backdrop:
+      "https://a.ltrbxd.com/resized/sm/upload/x8/ph/pc/dy/species-1200-1200-675-675-crop-000000.jpg?k=9c6294ff3f",
   },
   {
     cast: [
@@ -407,9 +483,17 @@ const lboxData = [
     directors: ["Andrew Fleming"],
     genres: ["thriller", "horror", "drama", "fantasy"],
     id: 11,
+    tagline: "Welcome to the witching hour.",
+    summary:
+      "A Catholic school newcomer falls in with a clique of teen witches who wield their powers against all who dare to cross them -- be they teachers, rivals or meddlesome parents.",
+    runtime: "101 mins",
     title: "The Craft",
     year: "1996",
-    rating: "3.51",
+    rating: "3.52",
+    poster:
+      "https://a.ltrbxd.com/resized/film-poster/4/7/3/4/5/47345-the-craft-0-230-0-345-crop.jpg?k=6a7e08d25a",
+    backdrop:
+      "https://a.ltrbxd.com/resized/sm/upload/rz/8z/7u/s0/the-craft-1200-1200-675-675-crop-000000.jpg?k=d8429a0b0d",
   },
   {
     cast: [
@@ -430,9 +514,16 @@ const lboxData = [
     directors: ["Sergio Stivaletti"],
     genres: ["thriller", "horror"],
     id: 12,
+    summary:
+      "Paris, 1900: a couple are horribly murdered by a masked man with a metal claw who rips their hearts out. The sole survivor and witness to the massacre is a young girl. Twelve years later in Rome a new wax museum is opened, whose main attractions are lifelike recreations of gruesome murder scenes. A young man bets that he will spend the night in the museum but is found dead the morning after. Soon, people start disappearing from the streets of Rome and the wax museum halls begin filling with new figures...",
+    runtime: "98 mins",
     title: "The Wax Mask",
     year: "1996",
     rating: "2.94",
+    poster:
+      "https://a.ltrbxd.com/resized/film-poster/3/3/6/2/2/33622-the-wax-mask-0-230-0-345-crop.jpg?k=b31278fe2d",
+    backdrop:
+      "https://a.ltrbxd.com/resized/sm/upload/sh/en/zh/np/wax%20mask-1200-1200-675-675-crop-000000.jpg?k=da46dae4a2",
   },
   {
     cast: [
@@ -463,11 +554,19 @@ const lboxData = [
       "Tom DeLonge",
     ],
     directors: ["Rodman Flender"],
-    genres: ["comedy", "horror", "fantasy"],
+    genres: ["horror", "comedy", "fantasy"],
     id: 13,
+    tagline: "The touching story of a boy and his right hand.",
+    summary:
+      "Anton is a cheerful but exceedingly non-ambitious 17-year-old stoner who lives to stay buzzed, watch TV, and moon over Molly, the beautiful girl who lives next door. However, it turns out that the old cliché about idle hands being the devil's playground has a kernel of truth after all.",
+    runtime: "92 mins",
     title: "Idle Hands",
     year: "1999",
     rating: "3.03",
+    poster:
+      "https://a.ltrbxd.com/resized/film-poster/4/8/2/5/9/48259-idle-hands-0-230-0-345-crop.jpg?k=01ae51c3ce",
+    backdrop:
+      "https://a.ltrbxd.com/resized/sm/upload/we/bi/bf/ww/idle%20hands-1200-1200-675-675-crop-000000.jpg?k=2e7237aad0",
   },
   {
     cast: [
@@ -486,9 +585,17 @@ const lboxData = [
     directors: ["Mark Herrier"],
     genres: ["horror"],
     id: 14,
+    tagline: "Buy a bag... Go home in a box.",
+    summary:
+      "A horror film festival, held in a theater which was once the scene of a tragic fire, turns into a real life horror show.",
+    runtime: "91 mins",
     title: "Popcorn",
     year: "1991",
     rating: "3.17",
+    poster:
+      "https://a.ltrbxd.com/resized/film-poster/2/4/9/9/6/24996-popcorn-0-230-0-345-crop.jpg?k=b43017b45b",
+    backdrop:
+      "https://a.ltrbxd.com/resized/sm/upload/fo/2t/8d/uy/hPCNdu73zWtnpyYbEtANNzt6L3U-1200-1200-675-675-crop-000000.jpg?k=87724abcfc",
   },
   {
     cast: [
@@ -507,9 +614,17 @@ const lboxData = [
     directors: ["Frank Henenlotter"],
     genres: ["horror", "comedy"],
     id: 15,
+    tagline: "This time he's not alone.",
+    summary:
+      'Having eluded the authorities after a series of grisly murders, the pair find sanctuary at the palatial home of Granny Ruth, an eccentric philanthropist who rallies the cause of "Unique Individuals". But even amongst "friends" the pair soon find themselves having to confront their murderous past.',
+    runtime: "90 mins",
     title: "Basket Case 2",
     year: "1990",
     rating: "2.93",
+    poster:
+      "https://a.ltrbxd.com/resized/film-poster/3/4/1/7/9/34179-basket-case-2-0-230-0-345-crop.jpg?k=d8770899d4",
+    backdrop:
+      "https://a.ltrbxd.com/resized/sm/upload/29/ie/h0/x3/basketcase2-1200-1200-675-675-crop-000000.jpg?k=3a17af5154",
   },
   {
     cast: [
@@ -529,9 +644,17 @@ const lboxData = [
     directors: ["Brett Leonard"],
     genres: ["science-fiction"],
     id: 16,
+    tagline: "God made him simple. Science made him a god.",
+    summary:
+      "A simple man is turned into a genius through the application of computer science.",
+    runtime: "108 mins",
     title: "The Lawnmower Man",
     year: "1992",
     rating: "2.42",
+    poster:
+      "https://a.ltrbxd.com/resized/film-poster/4/6/4/8/6/46486-the-lawnmower-man-0-230-0-345-crop.jpg?k=eb30fe6e22",
+    backdrop:
+      "https://a.ltrbxd.com/resized/sm/upload/gz/1s/sx/6q/the-lawnmower-man-1200-1200-675-675-crop-000000.jpg?k=5a2e5ecaab",
   },
   {
     cast: [
@@ -551,9 +674,17 @@ const lboxData = [
     directors: ["Hideo Nakata"],
     genres: ["thriller", "horror"],
     id: 17,
+    tagline: "One curse, one cure, one week to find it",
+    summary:
+      "A mysterious video has been linked to a number of deaths, and when an inquisitive journalist finds the tape and views it herself, she sets in motion a chain of events that puts her own life in danger.",
+    runtime: "96 mins",
     title: "Ringu",
     year: "1998",
     rating: "3.54",
+    poster:
+      "https://a.ltrbxd.com/resized/film-poster/5/0/1/5/5/50155-ringu-0-230-0-345-crop.jpg?k=9e448585e7",
+    backdrop:
+      "https://a.ltrbxd.com/resized/sm/upload/o0/09/fq/hs/ringu-1200-1200-675-675-crop-000000.jpg?k=6a6b0719ce",
   },
   {
     cast: [
@@ -580,9 +711,16 @@ const lboxData = [
     directors: ["Hideo Nakata"],
     genres: ["horror", "mystery", "science-fiction"],
     id: 18,
+    summary:
+      "While investigating the horrifying death of her boyfriend, Mai Takano learns about a videotape haunted by the spirit of a disturbing girl named Sadako, which kills anyone who watches it exactly one week later. When her boyfriend’s son, Yoichi, starts to develop the same psychic abilities as Sadako, Takano must find a way to keep the boy and herself from becoming the next victims.",
+    runtime: "92 mins",
     title: "Ringu 2",
     year: "1999",
     rating: "2.84",
+    poster:
+      "https://a.ltrbxd.com/resized/film-poster/4/6/9/3/4/46934-ring-2-0-230-0-345-crop.jpg?k=c42946df2b",
+    backdrop:
+      "https://a.ltrbxd.com/resized/sm/upload/pf/id/cu/1t/ring-2-1200-1200-675-675-crop-000000.jpg?k=eb372516c2",
   },
   {
     cast: [
@@ -603,9 +741,17 @@ const lboxData = [
     directors: ["Norio Tsuruta"],
     genres: ["horror", "thriller"],
     id: 19,
+    tagline: "Discover the secret...",
+    summary:
+      "Taking place thirty years before the events of Ringu, Ringu 0 provides the shocking background story of how the girl on the video became a deadly, vengeful spirit.",
+    runtime: "99 mins",
     title: "Ringu 0",
     year: "2000",
     rating: "2.81",
+    poster:
+      "https://a.ltrbxd.com/resized/film-poster/4/6/9/3/0/46930-ringu-0-0-230-0-345-crop.jpg?k=c171a4d912",
+    backdrop:
+      "https://a.ltrbxd.com/resized/sm/upload/ad/ti/ga/b3/ring-0-birthday-1200-1200-675-675-crop-000000.jpg?k=9a514a54f1",
   },
   {
     cast: [
@@ -622,9 +768,16 @@ const lboxData = [
     directors: ["Shinya Tsukamoto"],
     genres: ["horror", "drama", "science-fiction", "thriller"],
     id: 20,
+    summary:
+      "A Japanese salaryman, finds his body transforming into a weapon through sheer rage after his son is kidnapped by a gang of violent thugs.",
+    runtime: "81 mins",
     title: "Tetsuo II: Body Hammer",
     year: "1992",
-    rating: "3.42",
+    rating: "3.41",
+    poster:
+      "https://a.ltrbxd.com/resized/sm/upload/r7/hx/kd/6j/xZh9BOhps8LFVe2cigj9D1NNZDF-0-230-0-345-crop.jpg?k=7f1725c67e",
+    backdrop:
+      "https://a.ltrbxd.com/resized/sm/upload/41/se/d9/d9/tetsuo-ii-body-hammer-1200-1200-675-675-crop-000000.jpg?k=df63dd5b25",
   },
   {
     cast: [
@@ -637,9 +790,16 @@ const lboxData = [
     directors: ["Shinya Tsukamoto"],
     genres: ["drama", "horror"],
     id: 21,
+    summary:
+      "Suffering from double vision, a single mother (Cocco) tries to take care of her baby in the grip of terrifying hallucinations. Experiencing a nervous breakdown, she is deemed unfit to take care of her child and has it taken away from her. The only respite the mother has from her visions is when she sings. An award-winning novelist (Tsukamoto) overhears her singing whilst riding the bus and the pair subsequently develop a volatile relationship.",
+    runtime: "91 mins",
     title: "Kotoko",
     year: "2011",
     rating: "3.78",
+    poster:
+      "https://a.ltrbxd.com/resized/film-poster/7/1/5/1/7/71517-kotoko-0-230-0-345-crop.jpg?k=a8acc94b6a",
+    backdrop:
+      "https://a.ltrbxd.com/resized/sm/upload/qa/k0/59/lb/kotoko-1200-1200-675-675-crop-000000.jpg?k=886c48627f",
   },
   {
     cast: [
@@ -653,9 +813,16 @@ const lboxData = [
     directors: ["Shinya Tsukamoto"],
     genres: ["horror"],
     id: 22,
+    summary:
+      "A man awakes to find himself trapped in a dirty, confined crawlspace. He barely has enough room to move. He also has no memory of why he’s there, or why he’s bleeding from a stomach wound. Apparently drugged, he occasionally ‘zones out’ of his surroundings as he tries to edge towards his way to freedom. But the more he explores, the more pain he has to endure, and the more frightening his predicament becomes.",
+    runtime: "49 mins",
     title: "Haze",
     year: "2005",
     rating: "3.50",
+    poster:
+      "https://a.ltrbxd.com/resized/film-poster/3/5/5/9/1/35591-haze-0-230-0-345-crop.jpg?k=b1d1259e19",
+    backdrop:
+      "https://a.ltrbxd.com/resized/sm/upload/5l/f8/ts/cs/haze-1200-1200-675-675-crop-000000.jpg?k=87df9dbc31",
   },
   {
     cast: [
@@ -673,9 +840,15 @@ const lboxData = [
     directors: ["Al Adamson"],
     genres: ["horror"],
     id: 23,
+    tagline: "ONCE THE GATE CLOSES YOU'LL NEVER GET OUT!",
+    summary:
+      "Count Dracula and his wife capture beautiful young women and chain them in their dungeon, to be used when they need to satisfy their thirst for blood.",
+    runtime: "84 mins",
     title: "Blood of Dracula's Castle",
     year: "1970",
     rating: "2.27",
+    poster:
+      "https://a.ltrbxd.com/resized/film-poster/3/3/1/1/9/33119-blood-of-dracula-s-castle-0-230-0-345-crop.jpg?k=7075f0f813",
   },
   {
     cast: [
@@ -697,9 +870,15 @@ const lboxData = [
     directors: ["Al Adamson"],
     genres: ["science-fiction", "horror", "action"],
     id: 24,
+    tagline: "You'll scream yourself into a state of shock!",
+    summary:
+      "Astronauts land on a planet with prehistoric creatures and a war between a human-like tribe and a race of vampires.",
+    runtime: "85 mins",
     title: "Horror of the Blood Monsters",
     year: "1970",
     rating: "2.19",
+    poster:
+      "https://a.ltrbxd.com/resized/film-poster/3/2/8/8/2/32882-horror-of-the-blood-monsters-0-230-0-345-crop.jpg?k=a7d3504078",
   },
   {
     cast: [
@@ -720,9 +899,16 @@ const lboxData = [
     directors: ["Al Adamson"],
     genres: ["horror", "science-fiction"],
     id: 25,
+    tagline:
+      "A Blood-dripping Brain Transplant turns a Maniac into a Monster...",
+    summary:
+      "Amir, the benevolent ruler of Kalid, is dying, but there is hope. Freshly deceased, he is flown to the United States where Dr. Trenton transplants his brain into the body of a simpleton in a classic \"assistant got the wrong kind of body\" plot line. Dr. Trenton has a few nefarious plot twists of his own in mind, and then there's the thing with the dwarf and the women chained in the basement. It's up to Amir's friend Bob and wife Tracey to try and salvage this tale.",
+    runtime: "87 mins",
     title: "Brain of Blood",
     year: "1971",
     rating: "2.29",
+    poster:
+      "https://a.ltrbxd.com/resized/film-poster/2/2/6/0/6/22606-brain-of-blood-0-230-0-345-crop.jpg?k=f755b71191",
   },
   {
     cast: [
@@ -749,9 +935,14 @@ const lboxData = [
     directors: ["Al Adamson"],
     genres: ["science-fiction", "horror"],
     id: 26,
+    summary:
+      "Dracula conspires with a mad doctor to resurrect the Frankenstein Monster.",
+    runtime: "91 mins",
     title: "Dracula vs. Frankenstein",
     year: "1971",
     rating: "2.37",
+    poster:
+      "https://a.ltrbxd.com/resized/film-poster/4/9/8/4/9/49849-dracula-vs-frankenstein-0-230-0-345-crop.jpg?k=181536aecf",
   },
   {
     cast: [
@@ -775,9 +966,15 @@ const lboxData = [
     directors: ["Al Adamson"],
     genres: ["science-fiction", "horror"],
     id: 27,
+    tagline: "Human zombies rise from their coffins as living corpses!",
+    summary:
+      "A mad scientist implants an electronic device into the brain of an injured soldier, which turns him into a psychotic killer.  A revision of the film PSYCHO A GO-GO, edited and with added principle footage and characters.",
+    runtime: "87 mins",
     title: "Blood of Ghastly Horror",
     year: "1967",
     rating: "2.31",
+    poster:
+      "https://a.ltrbxd.com/resized/film-poster/9/6/5/8/9/96589-blood-of-ghastly-horror-0-230-0-345-crop.jpg?k=1e92a5edef",
   },
   {
     cast: [
@@ -805,9 +1002,14 @@ const lboxData = [
     directors: ["David Gregory"],
     genres: ["documentary"],
     id: 28,
+    summary:
+      "Brought to life through archival material and the reflections of over 40 colleagues, friends and fans, BLOOD & FLESH is much more than the story of a moviemaking life most unusual. It beautifully captures the worlds of outsider filmmaker communities that existed in California in the ’70s, and the weird ways they intersected with Hollywood mainstream and union indies. On Adamson shoots, regular Orson Welles crew and cinematographers like Gary Graver, Vilmos Szigmond and Lazlo Kovaks worked alongside Bud Cardos — and at one point, Charles Manson! Director David Gregory (founder of Severin Films, director of LOST SOUL: THE DOOMED JOURNEY OF RICHARD STANLEY’S ISLAND OF DR. MOREAU) spent years making this film, speaking to everyone down to the cops who investigated Adamson’s murder, vividly encapsulating both a bold life and tragic demise, with alien conspiracies, go-go dancers and Colonel Sanders coming in along the way. If you’ve got even a passing interest in cinema, you want to see this",
+    runtime: "100 mins",
     title: "Blood & Flesh: The Reel Life & Ghastly Death of Al Adamson",
     year: "2019",
     rating: "3.62",
+    poster:
+      "https://a.ltrbxd.com/resized/film-poster/5/3/8/6/1/0/538610-blood-flesh-the-reel-life-ghastly-death-of-al-adamson-0-230-0-345-crop.jpg?k=7dc2e1eeea",
   },
   {
     cast: [
@@ -841,9 +1043,14 @@ const lboxData = [
     directors: ["A. Edward Sutherland"],
     genres: ["horror", "crime"],
     id: 29,
+    summary:
+      "Dr. Gorman is a millionaire adventurer, traveling the world in search of dangerous game. His bored, beautiful, much younger wife entertains herself in the arms of other men. In turn, Gorman uses his animals to kill these men. When a New York City zoo suggests a fundraising gala, Gorman sees a prime opportunity to dispatch the dashing Roger and anyone else who might cross him.",
+    runtime: "62 mins",
     title: "Murders in the Zoo",
     year: "1933",
     rating: "3.19",
+    poster:
+      "https://a.ltrbxd.com/resized/film-poster/2/5/3/6/1/25361-murders-in-the-zoo-0-230-0-345-crop.jpg?k=5cf63c77ec",
   },
   {
     cast: [
@@ -866,9 +1073,15 @@ const lboxData = [
     directors: ["Ford Beebe"],
     genres: ["thriller", "mystery", "horror"],
     id: 30,
+    tagline: "What kind of a thing is it?!",
+    summary:
+      "Kurt Ingston, a rich recluse, invites the doctors who left him a hopeless cripple to his desolate mansion in the swamps as one by one they meet horrible deaths.",
+    runtime: "72 mins",
     title: "Night Monster",
     year: "1942",
     rating: "2.81",
+    poster:
+      "https://a.ltrbxd.com/resized/film-poster/8/1/3/8/7/81387-night-monster-0-230-0-345-crop.jpg?k=4f9cd618fd",
   },
   {
     cast: [
@@ -899,9 +1112,15 @@ const lboxData = [
     directors: ["James P. Hogan"],
     genres: ["science-fiction", "horror"],
     id: 31,
+    tagline: "A Sensation in Horror!",
+    summary:
+      'Dr. Alfred Morris, a university chemistry professor, rediscovers an ancient Mayan formula for a gas which turns men into pliant, obedient, zombie-like ghouls. After medical student Ted Allison becomes a guinea pig for Morris, the professor imagines that Allison\'s fiancée, a beautiful concert singer Isabel Lewis, wants to break off the engagement because she prefers the professor as a more "mature" lover but in reality loves Eric, her accompanist. In order to bring Ted back from his trance-like states, Morris commands him to perform a cardiectomy on recently deceased or living bodies in order to use serum from their hearts as a temporary antidote. When the serial murders seem to coincide with Isabel\'s touring schedule, ace reporter "Scoop" McClure gets on the mad scientist\'s trail.',
+    runtime: "65 mins",
     title: "The Mad Ghoul",
     year: "1943",
     rating: "2.78",
+    poster:
+      "https://a.ltrbxd.com/resized/film-poster/7/0/6/7/5/70675-the-mad-ghoul-0-230-0-345-crop.jpg?k=356c873552",
   },
   {
     cast: [
@@ -920,9 +1139,15 @@ const lboxData = [
     directors: ["Jean Yarbrough"],
     genres: ["horror", "mystery", "thriller"],
     id: 32,
+    tagline: "Meet...The CREEPER!",
+    summary:
+      'An unsuccessful sculptor saves a madman named "The Creeper" from drowning. Seeing an opportunity for revenge, he tricks the psycho into murdering his critics.',
+    runtime: "65 mins",
     title: "House of Horrors",
     year: "1946",
     rating: "2.97",
+    poster:
+      "https://a.ltrbxd.com/resized/film-poster/7/0/8/5/8/70858-house-of-horrors-0-230-0-345-crop.jpg?k=471e539012",
   },
   {
     cast: [
@@ -942,9 +1167,15 @@ const lboxData = [
     directors: ["Will Cowan"],
     genres: ["horror"],
     id: 33,
+    tagline: "The grave can't hold it ...nothing human can stop it!",
+    summary:
+      "A psychically gifted young woman discovers a centuries-old crate buried on her aunt's ranch. Opening it, her family discovers the living head of Gideon Drew, a 16th century devil worshiper who was beheaded by Sir Francis Drake.",
+    runtime: "69 mins",
     title: "The Thing That Couldn't Die",
     year: "1958",
     rating: "2.34",
+    poster:
+      "https://a.ltrbxd.com/resized/film-poster/1/8/3/6/9/18369-the-thing-that-couldn-t-die-0-230-0-345-crop.jpg?k=7c2ec00753",
   },
   {
     cast: [
@@ -975,9 +1206,14 @@ const lboxData = [
     directors: ["A. Edward Sutherland"],
     genres: ["comedy", "romance", "science-fiction"],
     id: 34,
+    summary:
+      "Kitty Carroll, an attractive store model, volunteers to become a test subject for a machine that will make her invisible so that she can use her invisibility to exact revenge on her ex-boss.",
+    runtime: "72 mins",
     title: "The Invisible Woman",
     year: "1940",
     rating: "2.76",
+    poster:
+      "https://a.ltrbxd.com/resized/film-poster/3/3/6/8/5/33685-the-invisible-woman-0-230-0-345-crop.jpg?k=58e69f0205",
   },
   {
     cast: [
@@ -1002,9 +1238,15 @@ const lboxData = [
     directors: ["Joseph H. Lewis"],
     genres: ["horror", "thriller"],
     id: 35,
+    tagline: "Genius -- or Fiend?",
+    summary:
+      "A fugitive doctor (Lionel Atwill) tries to raise the dead for South Sea Islanders.",
+    runtime: "61 mins",
     title: "The Mad Doctor of Market Street",
     year: "1942",
     rating: "2.70",
+    poster:
+      "https://a.ltrbxd.com/resized/film-poster/2/7/8/8/5/27885-the-mad-doctor-of-market-street-0-230-0-345-crop.jpg?k=02b6e619cb",
   },
   {
     cast: [
@@ -1028,9 +1270,16 @@ const lboxData = [
     directors: ["William Nigh"],
     genres: ["horror", "mystery"],
     id: 36,
+    tagline:
+      "FOLLOW HIM -- at Risk of Insanity! FIND HIM -- and You'll Never Return!",
+    summary:
+      "Private eye Jerry Church is hired by a criminal defense lawyer after five mobsters he has gotten acquitted are apparently strangled by a serial killer.",
+    runtime: "66 mins",
     title: "The Strange Case of Doctor Rx",
     year: "1942",
-    rating: "2.58",
+    rating: "2.57",
+    poster:
+      "https://a.ltrbxd.com/resized/film-poster/7/0/6/7/9/70679-the-strange-case-of-doctor-rx-0-230-0-345-crop.jpg?k=4ec218168c",
   },
   {
     cast: [
@@ -1054,9 +1303,14 @@ const lboxData = [
     directors: ["Lloyd Corrigan"],
     genres: ["crime", "science-fiction"],
     id: 37,
+    summary:
+      "The inventor of a new top-of-the-line burglar alarm system is kidnapped by a gang in order to get him to help them commit robberies.",
+    runtime: "68 mins",
     title: "Night Key",
     year: "1937",
     rating: "3.05",
+    poster:
+      "https://a.ltrbxd.com/resized/film-poster/3/3/9/7/5/33975-night-key-0-230-0-345-crop.jpg?k=34aadbf9c5",
   },
   {
     cast: [
@@ -1079,9 +1333,15 @@ const lboxData = [
     directors: ["Lambert Hillyer"],
     genres: ["science-fiction", "thriller", "horror"],
     id: 38,
+    tagline: "Delving into new, strange fields of mystery!",
+    summary:
+      "Dr. Janos Rukh discovers a certain type of radium that has almost magical healing properties. But the element has a dangerous side, too, and it has already started affecting Rukh. Consumed by paranoia, he begins to suspect that his wife is having an affair. Wild for revenge, Rukh hatches a deadly plot...using his own poisoned body as a weapon to kill.",
+    runtime: "79 mins",
     title: "The Invisible Ray",
     year: "1936",
-    rating: "3.08",
+    rating: "3.07",
+    poster:
+      "https://a.ltrbxd.com/resized/film-poster/3/4/0/8/5/34085-the-invisible-ray-0-230-0-345-crop.jpg?k=323b8e9598",
   },
   {
     cast: [
@@ -1125,9 +1385,15 @@ const lboxData = [
     directors: ["Arthur Lubin"],
     genres: ["crime", "horror", "science-fiction"],
     id: 39,
+    tagline: "A Reign Of HORROR... a man-made monster on the loose!",
+    summary:
+      "University professor George Kingsley is struck by gangsters while crossing the street, leaving him with brain damage and one of the gangsters, Cannon, paralyzed. Kingsley's friend Dr. Sovac attends to both men, and when Cannon offers him a reward for aiding his recovery, Kovac transplants part of Cannon's brain into the dying Kingsley's skull, creating a dual personality.",
+    runtime: "70 mins",
     title: "Black Friday",
     year: "1940",
     rating: "3.01",
+    poster:
+      "https://a.ltrbxd.com/resized/film-poster/4/3/6/0/2/43602-black-friday-0-230-0-345-crop.jpg?k=0cbc184349",
   },
   {
     cast: [
@@ -1173,9 +1439,17 @@ const lboxData = [
     directors: ["John Irvin"],
     genres: ["horror", "drama", "thriller"],
     id: 40,
+    tagline: "The Time Has Come to Tell the Tale",
+    summary:
+      "Four successful elderly gentlemen, members of the Chowder Society, share a gruesome, 50-year old secret. When one of Edward Wanderley's twin sons dies in a bizarre accident, the group begins to see a pattern of frightening events developing.",
+    runtime: "110 mins",
     title: "Ghost Story",
     year: "1981",
     rating: "3.01",
+    poster:
+      "https://a.ltrbxd.com/resized/sm/upload/69/jp/un/1n/rd3XTvKxtoY7Um8zNYJVi2pwXsw-0-230-0-345-crop.jpg?k=10d4fd84de",
+    backdrop:
+      "https://a.ltrbxd.com/resized/sm/upload/ew/9e/76/wx/ghost-story-1200-1200-675-675-crop-000000.jpg?k=8521e1c370",
   },
   {
     cast: [
@@ -1199,9 +1473,17 @@ const lboxData = [
     directors: ["John Erick Dowdle"],
     genres: ["horror", "mystery", "thriller"],
     id: 41,
+    tagline: "Bad Things Happen For A Reason",
+    summary:
+      "A group of people are trapped in an elevator high above Philadelphia, and one of them is the devil.",
+    runtime: "80 mins",
     title: "Devil",
     year: "2010",
     rating: "2.56",
+    poster:
+      "https://a.ltrbxd.com/resized/film-poster/2/1/1/2/4/21124-devil-0-230-0-345-crop.jpg?k=85b73247a6",
+    backdrop:
+      "https://a.ltrbxd.com/resized/sm/upload/5i/eu/5e/ym/devil-2010-1200-1200-675-675-crop-000000.jpg?k=9dea678801",
   },
   {
     cast: [
@@ -1222,9 +1504,17 @@ const lboxData = [
     directors: ["Mikael Håfström"],
     genres: ["thriller", "drama", "horror"],
     id: 42,
+    tagline: "You can only defeat it when you believe.",
+    summary:
+      "Seminary student Michael Kovak reluctantly attends exorcism school at the Vatican. While he’s in Rome, Michael meets an unorthodox priest who introduces him to the darker side of his faith, uncovering the devil’s reach even to one of the holiest places on Earth.",
+    runtime: "114 mins",
     title: "The Rite",
     year: "2011",
     rating: "2.59",
+    poster:
+      "https://a.ltrbxd.com/resized/film-poster/1/7/3/4/4/17344-the-rite-0-230-0-345-crop.jpg?k=e3b8bfa19e",
+    backdrop:
+      "https://a.ltrbxd.com/resized/sm/upload/7o/02/bl/ap/mHpgl8C9VSIICogbh4uil1N3382-1200-1200-675-675-crop-000000.jpg?k=71f3c2cc14",
   },
   {
     cast: [
@@ -1254,9 +1544,17 @@ const lboxData = [
     directors: ["Marcus Nispel"],
     genres: ["horror", "thriller"],
     id: 43,
+    tagline: "An excellent day for an exorcism",
+    summary:
+      "During an all-night, drug-fueled party at an abandoned asylum known for the horrific treatment of its patients, a group of ordinary teens decide to experiment with the occult, mysteriously leading to a violent possession. In an effort to find help, the group rushes to escape, only to find themselves locked inside with no means of communication. Tempers flare, trusts are broken and in attempt to save one of their friends possessed by the demon, the amateurs try to perform an exorcism. Instead of solving the problem, and unbeknownst to them, they unleash an even more powerful and vengeful spirit, one with a distinct motive and which wants them all dead. The teen's only chance of survival is to uncover the asylum's deep mysteries and find a way out before it's too late.",
+    runtime: "91 mins",
     title: "Exeter",
     year: "2015",
     rating: "2.21",
+    poster:
+      "https://a.ltrbxd.com/resized/film-poster/1/5/9/4/4/6/159446-exeter-0-230-0-345-crop.jpg?k=ef164563a5",
+    backdrop:
+      "https://a.ltrbxd.com/resized/sm/upload/c3/10/xi/2k/exeter-1200-1200-675-675-crop-000000.jpg?k=871dd296c5",
   },
   {
     cast: [
@@ -1272,9 +1570,17 @@ const lboxData = [
     directors: ["Liam Gavin"],
     genres: ["horror", "fantasy", "drama", "mystery"],
     id: 44,
+    tagline: "Not everything can be forgiven.",
+    summary:
+      "A determined young woman and a damaged occultist risk their lives and souls to perform a dangerous ritual that will grant them what they want.",
+    runtime: "100 mins",
     title: "A Dark Song",
     year: "2016",
     rating: "3.38",
+    poster:
+      "https://a.ltrbxd.com/resized/film-poster/3/4/3/4/1/8/343418-a-dark-song-0-230-0-345-crop.jpg?k=71efb33e4c",
+    backdrop:
+      "https://a.ltrbxd.com/resized/sm/upload/eh/6b/1m/0t/dark%20song-1200-1200-675-675-crop-000000.jpg?k=0c15fdecfc",
   },
   {
     cast: [
@@ -1293,9 +1599,17 @@ const lboxData = [
     directors: ["Todd Lincoln"],
     genres: ["horror", "thriller"],
     id: 45,
+    tagline: "Once You Believe You Die",
+    summary:
+      "Plagued by frightening occurrences in their home, Kelly and Ben learn that a university's parapsychology experiment produced an entity that is now haunting them. The malevolent spirit feeds on fear and torments the couple no matter where they run. Desperate, Kelly and Ben turn to a paranormal researcher, but even with his aid, it may already be too late to save themselves from the terrifying presence.",
+    runtime: "82 mins",
     title: "The Apparition",
     year: "2012",
     rating: "1.54",
+    poster:
+      "https://a.ltrbxd.com/resized/film-poster/6/6/1/4/0/66140-the-apparition-0-230-0-345-crop.jpg?k=ca4beb9d5f",
+    backdrop:
+      "https://a.ltrbxd.com/resized/sm/upload/0e/m8/jv/hv/the-apparition-1200-1200-675-675-crop-000000.jpg?k=5ade763760",
   },
   {
     cast: [
@@ -1319,9 +1633,17 @@ const lboxData = [
     directors: ["Matt Bettinelli-Olpin", "Tyler Gillett"],
     genres: ["horror"],
     id: 46,
+    tagline: "The Devil Always Gets His Due",
+    summary:
+      "An unexpected pregnancy takes a terrifying turn for newlyweds Zach and Samantha McCall.",
+    runtime: "89 mins",
     title: "Devil's Due",
     year: "2014",
     rating: "1.82",
+    poster:
+      "https://a.ltrbxd.com/resized/film-poster/6/5/8/1/9/65819-devil-s-due-0-230-0-345-crop.jpg?k=95968d13ae",
+    backdrop:
+      "https://a.ltrbxd.com/resized/sm/upload/8a/nr/xc/5g/devilsdue-1200-1200-675-675-crop-000000.jpg?k=604ddb759e",
   },
   {
     cast: [
@@ -1361,9 +1683,18 @@ const lboxData = [
     directors: ["Damiano Damiani"],
     genres: ["horror"],
     id: 47,
+    tagline:
+      'In "The Amityville Horror", the Lutzes got out of this house alive. This family was not so lucky.',
+    summary:
+      "Eager to start afresh, the unsuspecting couple of Anthony and Dolores Montelli, along with their four children, move into their dream house in Amityville. However, right from the very first night, strange paranormal experiences shatter the Montellis' fantasy, as the restless spirits of the dead and the new home's dark secrets open the unfathomable black portal of hell. Now, the family's older child, Sonny, has become the perfect vessel of destruction, as the invisible demonic forces claim his soul. Can Father Frank Adamsky cleanse the infernal Amityville House?",
+    runtime: "104 mins",
     title: "Amityville II: The Possession",
     year: "1982",
     rating: "2.92",
+    poster:
+      "https://a.ltrbxd.com/resized/film-poster/4/1/7/1/8/41718-amityville-ii-the-possession-0-230-0-345-crop.jpg?k=ecbbaa04f1",
+    backdrop:
+      "https://a.ltrbxd.com/resized/sm/upload/pn/mn/91/o0/image0-1200-1200-675-675-crop-000000.jpg?k=17097a4ba9",
   },
   {
     cast: [
@@ -1386,9 +1717,17 @@ const lboxData = [
     directors: ["Richard Fleischer"],
     genres: ["thriller", "horror"],
     id: 48,
+    tagline: "WARNING: in this movie you are the victim.",
+    summary:
+      "To debunk the Amityville house's infamous reputation and take advantage of a rock-bottom asking price, skeptical journalist John Baxter buys the place and settles in to write his first novel. But as soon as the ink on the deed has dried, people who have come into contact with John and the house begin to meet with shocking fates. Is it all just coincidence, or is the house really the gateway to hell?",
+    runtime: "105 mins",
     title: "Amityville 3-D",
     year: "1983",
     rating: "2.21",
+    poster:
+      "https://a.ltrbxd.com/resized/film-poster/3/4/7/1/3/34713-amityville-3-d-0-230-0-345-crop.jpg?k=41538ff8aa",
+    backdrop:
+      "https://a.ltrbxd.com/resized/sm/upload/ma/7e/yr/ed/amityville-3d-1200-1200-675-675-crop-000000.jpg?k=e287b9cef4",
   },
   {
     cast: [
@@ -1419,9 +1758,15 @@ const lboxData = [
     directors: ["Herb Freed"],
     genres: ["horror"],
     id: 49,
+    tagline: "Some kids are dying to graduate...",
+    summary:
+      "After a high school track runner, named Laura, suddenly dies from a heart attack after finishing a 30-second 200-meter race, a killer wearing a sweat suit and a fencing mask begins killing off her friends on the school track team one by one. The suspects include the track coach Michaels, Laura's sister Anne who arrives in town for the funeral, the creepy school principal Mr. Guglione, and Laura's strange boyfriend Kevin.",
+    runtime: "96 mins",
     title: "Graduation Day",
     year: "1981",
     rating: "2.63",
+    poster:
+      "https://a.ltrbxd.com/resized/sm/upload/5m/id/9z/53/bxg98VKp0tUA2U3AUuM2Ej9Yc4S-0-230-0-345-crop.jpg?k=8d4a279b29",
   },
   {
     cast: [
@@ -1447,9 +1792,17 @@ const lboxData = [
     directors: ["Richard Franklin"],
     genres: ["horror", "thriller", "mystery"],
     id: 50,
+    tagline: "On the world's loneliest highway it's not a game - it's murder!",
+    summary:
+      "A truck driver plays a cat-and-mouse game with a mysterious serial killer who uses a young female hitchhiker as bait to lure victims on a desolate Australian highway.",
+    runtime: "101 mins",
     title: "Roadgames",
     year: "1981",
     rating: "3.53",
+    poster:
+      "https://a.ltrbxd.com/resized/film-poster/2/2/0/3/3/22033-roadgames-0-230-0-345-crop.jpg?k=c47d6f0e2e",
+    backdrop:
+      "https://a.ltrbxd.com/resized/sm/upload/tu/9o/m6/i8/roadgames-1200-1200-675-675-crop-000000.jpg?k=d293ae892a",
   },
   {
     cast: [
@@ -1471,9 +1824,15 @@ const lboxData = [
     directors: ["Stephen Carpenter", "Jeffrey Obrow"],
     genres: ["mystery", "thriller", "horror"],
     id: 51,
+    tagline: "When the kidding stops… the killing starts!",
+    summary:
+      "A crazed killer stalks college students who gave up their vacation to clean a deserted dormitory.",
+    runtime: "88 mins",
     title: "The Dorm That Dripped Blood",
     year: "1982",
     rating: "2.74",
+    poster:
+      "https://a.ltrbxd.com/resized/film-poster/1/1/9/1/1/11911-the-dorm-that-dripped-blood-0-230-0-345-crop.jpg?k=1cb95dc7e6",
   },
   {
     cast: [
@@ -1497,9 +1856,15 @@ const lboxData = [
     directors: ["Richard W. Haines"],
     genres: ["horror", "mystery", "thriller"],
     id: 52,
+    tagline: "Earn a higher degree in terror!",
+    summary:
+      "A sociology instructor finds her new teaching duties at a private college interrupted by the presence of a killer.",
+    runtime: "77 mins",
     title: "Splatter University",
     year: "1984",
-    rating: "2.34",
+    rating: "2.33",
+    poster:
+      "https://a.ltrbxd.com/resized/film-poster/3/1/5/6/1/31561-splatter-university-0-230-0-345-crop.jpg?k=843301f972",
   },
   {
     cast: [
@@ -1561,9 +1926,15 @@ const lboxData = [
     ],
     genres: ["horror"],
     id: 53,
+    tagline: "A one-way ticket to Hell...and beyond.",
+    summary:
+      "God and Satan are on a train discussing the fate of three individuals. The stories of the people in question are told in a trio of very strange vignettes. One involves an insane asylum with some very interesting treatment plans. Another involves a 'death club'. The final story shows us the adventures of a server of Satan.",
+    runtime: "98 mins",
     title: "Night Train to Terror",
     year: "1985",
     rating: "2.64",
+    poster:
+      "https://a.ltrbxd.com/resized/film-poster/1/6/2/4/6/16246-night-train-to-terror-0-230-0-345-crop.jpg?k=0972c26521",
   },
   {
     cast: [
@@ -1584,9 +1955,17 @@ const lboxData = [
     directors: ["Dick Maas"],
     genres: ["horror", "thriller", "action"],
     id: 54,
+    tagline: "The danger lies just below the surface",
+    summary:
+      "A mysterious diver hiding in Amsterdam's canal system embarks on a rampage of gruesome murders, terrifying city officials and leaving few clues for the city's best detective, who doesn't suspect that both his new girlfriend and twelve-year-old daughter may be closer than he is to finding the killer.",
+    runtime: "105 mins",
     title: "Amsterdamned",
     year: "1988",
     rating: "3.32",
+    poster:
+      "https://a.ltrbxd.com/resized/film-poster/5/0/5/3/3/50533-amsterdamned-0-230-0-345-crop.jpg?k=5802ccaf65",
+    backdrop:
+      "https://a.ltrbxd.com/resized/sm/upload/d5/9t/tt/7x/iEgSYtZIhW5f6A4U7WJlf7e9lMc-1200-1200-675-675-crop-000000.jpg?k=0b11be613c",
   },
   {
     cast: [
@@ -1608,9 +1987,14 @@ const lboxData = [
     directors: ["Tibor Takács"],
     genres: ["horror", "thriller"],
     id: 55,
+    summary:
+      "Virginia works at a used book store. She's really into horror novels and discovers a really good book. It's called \"I, Madman\" and it's about an insane doctor who cuts off people's noses, ears, and hair and puts them on his face to please a girl he likes. Only Virginia discovers that the book is nonfiction, and every time she picks up the book to read it, she sees him. The insane doctor from the book has escaped the book into our reality.",
+    runtime: "89 mins",
     title: "I, Madman",
     year: "1989",
     rating: "3.11",
+    poster:
+      "https://a.ltrbxd.com/resized/film-poster/2/4/6/0/7/24607-i-madman-0-230-0-345-crop.jpg?k=60f77bc3b3",
   },
   {
     cast: [
@@ -1637,9 +2021,14 @@ const lboxData = [
     directors: ["Franco Steffanino"],
     genres: ["horror"],
     id: 56,
+    summary:
+      "A deranged undertaker kills various people to keep as his friends in his seedy funeral home.",
+    runtime: "89 mins",
     title: "The Undertaker",
     year: "1988",
     rating: "2.79",
+    poster:
+      "https://a.ltrbxd.com/resized/film-poster/1/0/6/3/7/3/106373-the-undertaker-0-230-0-345-crop.jpg?k=bc4c72f9e1",
   },
   {
     cast: [
@@ -1662,9 +2051,16 @@ const lboxData = [
     directors: ["Duccio Tessari"],
     genres: ["thriller", "horror", "mystery"],
     id: 57,
+    summary:
+      "When a young female student is savagely killed in a park during a thunderstorm, the culprit seems obvious:  TV sports personality Alessandro Marchi, seen fleeing the scene of the crime by numerous eyewitnesses.  The evidence against him is damning... but is it all too convenient?  And when the killer strikes again while Marchi is in custody, it quickly becomes apparent that there's more to the case than meets the eye...",
+    runtime: "99 mins",
     title: "The Bloodstained Butterfly",
     year: "1971",
     rating: "3.22",
+    poster:
+      "https://a.ltrbxd.com/resized/film-poster/3/2/8/2/4/32824-the-bloodstained-butterfly-0-230-0-345-crop.jpg?k=e6b4b85692",
+    backdrop:
+      "https://a.ltrbxd.com/resized/sm/upload/8o/d7/3g/qm/bloodstained%20butterfly-1200-1200-675-675-crop-000000.jpg?k=8d06b2f37b",
   },
   {
     cast: [
@@ -1685,11 +2081,20 @@ const lboxData = [
       "George Oliver",
     ],
     directors: ["Sergio Martino"],
-    genres: ["mystery", "horror", "thriller"],
+    genres: ["thriller", "mystery", "horror"],
     id: 58,
+    tagline:
+      "Something is out there... coming CLOSER... CLOSER... CLOSER. Don't be afraid to be afraid—",
+    summary:
+      "Jane lives in London with her boyfriend Richard. Her mother was murdered when she was young, she recently lost a baby in a car crash and she's plagued by nightmares of a knife-wielding man. Richard thinks that the cure is vitamins, while Jane's sister recommends psychiatric help. But a new neighbour promises that if she participates in a Black Mass, all her fears will disappear, instead it just seems to bring her nightmares to life.",
+    runtime: "94 mins",
     title: "All the Colors of the Dark",
     year: "1972",
     rating: "3.55",
+    poster:
+      "https://a.ltrbxd.com/resized/sm/upload/ds/nd/8h/k6/6eh5n7OuZuxoqvEDuXzb46mIlxv-0-230-0-345-crop.jpg?k=48e3365990",
+    backdrop:
+      "https://a.ltrbxd.com/resized/sm/upload/fr/pv/1e/a3/v21fHE9E2ukyi4mRNbkYEdbU8F5-1200-1200-675-675-crop-000000.jpg?k=02943ed0ea",
   },
   {
     cast: [
@@ -1717,9 +2122,16 @@ const lboxData = [
     directors: ["Sergio Martino"],
     genres: ["horror", "mystery", "thriller"],
     id: 59,
+    summary:
+      "A burned out, abusive, alcoholic writer named Oliviero lives with his wife, Irina, at their estate in Venice, along with his late mother's mysterious black cat, Satan. To pass the time, Oliviero hosts parties for the local hippies, humiliating Irina in front of his guests. When his mistress is murdered, police suspect Oliviero, and things get complicated when his young, beautiful and self-confident niece, Floriana, pays an unexpected visit.",
+    runtime: "97 mins",
     title: "Your Vice Is a Locked Room and Only I Have the Key",
     year: "1972",
     rating: "3.47",
+    poster:
+      "https://a.ltrbxd.com/resized/film-poster/5/9/5/3/9/59539-your-vice-is-a-locked-room-and-only-i-have-the-key-0-230-0-345-crop.jpg?k=844519eab7",
+    backdrop:
+      "https://a.ltrbxd.com/resized/sm/upload/wh/1x/ec/4w/your-vice-is-a-locked-room-and-only-i-have-the-key-1200-1200-675-675-crop-000000.jpg?k=fda689cec0",
   },
   {
     cast: [
@@ -1735,9 +2147,15 @@ const lboxData = [
     directors: ["Ovidio G. Assonitis", "Robert Barrett"],
     genres: ["horror"],
     id: 60,
+    tagline: "Evil grows beyond the door!",
+    summary:
+      "Jessica Barrett, wife and mother of two young children, begins to show signs of demonic possession while pregnant with her third child. As she seeks help from her husband and doctor, a mysterious man approaches her and seems to have some answers.",
+    runtime: "109 mins",
     title: "Beyond the Door",
     year: "1974",
     rating: "2.77",
+    poster:
+      "https://a.ltrbxd.com/resized/film-poster/2/9/5/3/4/29534-beyond-the-door-0-230-0-345-crop.jpg?k=0f350e571c",
   },
   {
     cast: [
@@ -1768,9 +2186,17 @@ const lboxData = [
     directors: ["Dario Argento"],
     genres: ["thriller", "horror"],
     id: 61,
+    tagline: "When Insects Attack!",
+    summary:
+      "A young girl, with an amazing ability to communicate with insects, is transferred to an exclusive Swiss boarding school, where her unusual capability might help solve a string of murders.",
+    runtime: "116 mins",
     title: "Phenomena",
     year: "1985",
     rating: "3.58",
+    poster:
+      "https://a.ltrbxd.com/resized/film-poster/3/3/0/8/6/33086-phenomena-0-230-0-345-crop.jpg?k=1c3c42ae73",
+    backdrop:
+      "https://a.ltrbxd.com/resized/sm/upload/ah/y3/h7/gg/phenomena-1200-1200-675-675-crop-000000.jpg?k=d6279d41cc",
   },
   {
     cast: [
@@ -1788,9 +2214,15 @@ const lboxData = [
     directors: ["Andrea Bianchi"],
     genres: ["horror"],
     id: 62,
+    tagline: "When the moon turns red, the dead shall rise!",
+    summary:
+      "Professor Ayres discovers a secret in an ancient stone and when he opens a crypt, he revives zombies that kill him. He had invited three couples to visit him in his manor to reveal his discovery. However, they never get around to meeting the professor. Out of the blue, the zombies attack them and they seek shelter in the mansion.",
+    runtime: "85 mins",
     title: "Burial Ground",
     year: "1981",
     rating: "3.12",
+    poster:
+      "https://a.ltrbxd.com/resized/film-poster/3/6/4/3/5/36435-burial-ground-the-nights-of-terror-0-230-0-345-crop.jpg?k=eb74ff3f61",
   },
   {
     cast: [
@@ -1808,9 +2240,17 @@ const lboxData = [
     directors: ["Michele Soavi"],
     genres: ["horror"],
     id: 63,
+    tagline: "The theatre of death",
+    summary:
+      "A troupe of struggling stage actors is rehearsing for a small-town production of a play. Everything seems to be as it should until one of the cast members turns up dead. In a panic, the others try to get out, only to find they are now locked in the theater with the killer! Which one of them committed the murder, and who will get out alive?",
+    runtime: "90 mins",
     title: "StageFright: Aquarius",
     year: "1987",
     rating: "3.53",
+    poster:
+      "https://a.ltrbxd.com/resized/film-poster/3/8/9/9/4/38994-stagefright-aquarius-0-230-0-345-crop.jpg?k=63d3cd48ee",
+    backdrop:
+      "https://a.ltrbxd.com/resized/sm/upload/q0/oo/6t/al/f95yAkT9oXJejqJP3RtG2abzO51-1200-1200-675-675-crop-000000.jpg?k=649c589b44",
   },
   {
     cast: [
@@ -1831,9 +2271,17 @@ const lboxData = [
     directors: ["André De Toth"],
     genres: ["mystery", "horror"],
     id: 64,
+    tagline: "UNLIKE ANYTHING YOU'VE SEEN BEFORE!",
+    summary:
+      "A New York sculptor who opens a wax museum to showcase the likenesses of famous historical figures runs into trouble with his business partner, who demands that the exhibits become more extreme in order to increase profits.",
+    runtime: "90 mins",
     title: "House of Wax",
     year: "1953",
     rating: "3.49",
+    poster:
+      "https://a.ltrbxd.com/resized/sm/upload/in/uj/47/lp/leaSCH8YvWhAA9WhMdRKCVNBDwy-0-230-0-345-crop.jpg?k=96e81ce215",
+    backdrop:
+      "https://a.ltrbxd.com/resized/sm/upload/sh/0b/x7/yk/house-of-wax-1200-1200-675-675-crop-000000.jpg?k=c420e75c37",
   },
   {
     cast: [
@@ -1851,9 +2299,17 @@ const lboxData = [
     directors: ["Roger Corman"],
     genres: ["horror", "thriller", "mystery"],
     id: 65,
+    tagline: "Betrayal cuts both ways!",
+    summary:
+      "Francis Barnard goes to Spain, when he hears his sister Elizabeth has died. Her husband Nicholas Medina, the son of the most brutal torturer of the Spanish Inquisition, tells him she has died of a blood disease, but Francis finds this hard to believe. After some investigating he finds out that it was extreme fear that was fatal to his sister and that she may have been buried alive!",
+    runtime: "80 mins",
     title: "The Pit and the Pendulum",
     year: "1961",
     rating: "3.49",
+    poster:
+      "https://a.ltrbxd.com/resized/film-poster/3/3/6/1/5/33615-the-pit-and-the-pendulum-0-230-0-345-crop.jpg?k=fcc7ba59a7",
+    backdrop:
+      "https://a.ltrbxd.com/resized/sm/upload/j6/0x/of/dy/pit-1200-1200-675-675-crop-000000.jpg?k=596b4037e5",
   },
   {
     cast: [
@@ -1873,9 +2329,15 @@ const lboxData = [
     directors: ["Sidney Salkow"],
     genres: ["mystery", "science-fiction", "horror", "romance"],
     id: 66,
+    tagline: "A trio of terror!",
+    summary:
+      '3 horror stories based on the writings of Nathaniel Hawthorne. In the 1st story titled "Dr. Heidegger\'s Experiment", Heidegger attempts to restore the youth of three elderly friends. In "Rappaccini\'s Daughter", a demented father is innoculating his daughter with poison so she may never leave her garden of poisonous plants. In the final story "The House of the Seven Gables", The Pyncheon family suffers from a hundred year old curse and while in the midst of arguing over inheritance, the Pyncheon brother kills his sister.',
+    runtime: "120 mins",
     title: "Twice-Told Tales",
     year: "1963",
     rating: "3.13",
+    poster:
+      "https://a.ltrbxd.com/resized/film-poster/1/7/8/5/4/17854-twice-told-tales-0-230-0-345-crop.jpg?k=d8157e07c1",
   },
   {
     cast: [
@@ -1901,9 +2363,17 @@ const lboxData = [
     directors: ["Roger Corman"],
     genres: ["horror", "drama"],
     id: 67,
+    tagline: "Horror has a face.",
+    summary:
+      'A European prince terrorizes the local peasantry while using his castle as a refuge against the "Red Death" plague that stalks the land.',
+    runtime: "90 mins",
     title: "The Masque of the Red Death",
     year: "1964",
     rating: "3.58",
+    poster:
+      "https://a.ltrbxd.com/resized/film-poster/3/6/1/4/0/36140-the-masque-of-the-red-death-0-230-0-345-crop.jpg?k=d22ca4cdff",
+    backdrop:
+      "https://a.ltrbxd.com/resized/sm/upload/60/3f/wg/ju/masque-of-red-death-1200-1200-675-675-crop-000000.jpg?k=b2519a4c78",
   },
   {
     cast: [
@@ -1956,9 +2426,15 @@ const lboxData = [
     directors: ["Gordon Hessler"],
     genres: ["horror"],
     id: 68,
+    tagline: "Some things are better left buried.",
+    summary:
+      "Aristocrat Julian Markham keeps his disfigured brother, Sir Edward, locked in a tower of his house. Occasionaly Sir Edward escapes and causes havoc around the town.",
+    runtime: "91 mins",
     title: "The Oblong Box",
     year: "1969",
     rating: "2.91",
+    poster:
+      "https://a.ltrbxd.com/resized/film-poster/1/0/9/6/3/10963-the-oblong-box-0-230-0-345-crop.jpg?k=1277306140",
   },
   {
     cast: [
@@ -1976,9 +2452,16 @@ const lboxData = [
     directors: ["Roger Corman"],
     genres: ["drama", "horror", "thriller"],
     id: 69,
+    tagline:
+      'Even on her wedding night she must share the man she loved with the "female thing" that lived in the Tomb of the Cat!',
+    summary:
+      "Verden Fell is shattered after the death of his lovely wife. But, after an unexpected encounter with Lady Rowena Trevanion, Fell soon finds himself married again. Nevertheless, his late wife's spirit seems to hang over the dilapidated abbey that Fell shares with his new bride. Lady Rowena senses that something is amiss and, when she investigates, makes a horrifying discovery -- learning that Fell's dead wife is closer than she ever imagined possible.",
+    runtime: "81 mins",
     title: "The Tomb of Ligeia",
     year: "1964",
     rating: "3.25",
+    poster:
+      "https://a.ltrbxd.com/resized/film-poster/3/3/1/9/5/33195-the-tomb-of-ligeia-0-230-0-345-crop.jpg?k=fa132a7e6b",
   },
   {
     cast: [
@@ -1993,9 +2476,14 @@ const lboxData = [
     directors: ["Jacques Tourneur"],
     genres: ["comedy", "horror"],
     id: 70,
+    summary:
+      "An undertaker who hasn't had any 'customers' in a long time is forced to pay one year's back-rent. To get money he starts to kill people, which brings absurd results.",
+    runtime: "84 mins",
     title: "The Comedy of Terrors",
     year: "1963",
     rating: "3.21",
+    poster:
+      "https://a.ltrbxd.com/resized/film-poster/3/2/8/2/0/32820-the-comedy-of-terrors-0-230-0-345-crop.jpg?k=b8448d778d",
   },
   {
     cast: [
@@ -2013,9 +2501,16 @@ const lboxData = [
     directors: ["Brian De Palma"],
     genres: ["comedy"],
     id: 71,
+    summary:
+      "An offbeat, episodic film about three friends, Paul, a shy love-seeker, Lloyd, a vibrant conspiracy nut, and Jon, an aspiring filmmaker and peeping tom. The film satirizes free-love, the Kennedy assassination, Vietnam, and amateur film-making.",
+    runtime: "88 mins",
     title: "Greetings",
     year: "1968",
     rating: "2.97",
+    poster:
+      "https://a.ltrbxd.com/resized/film-poster/5/9/7/3/1/59731-greetings-0-230-0-345-crop.jpg?k=a204874a63",
+    backdrop:
+      "https://a.ltrbxd.com/resized/sm/upload/65/go/qv/mr/greetings-1200-1200-675-675-crop-000000.jpg?k=7bbacdb3ee",
   },
   {
     cast: [
@@ -2044,9 +2539,15 @@ const lboxData = [
     directors: ["Brian De Palma", "Wilford Leach", "Cynthia Munroe"],
     genres: ["comedy", "romance"],
     id: 72,
+    tagline: "You are cordially invited to join the confusion at...",
+    summary:
+      "Young Charlie begins to develop a case of cold feet as his upcoming wedding looms nearer. Desperate to throw the wedding plans off the track, Charlie tries a variety of tactics, including attempting to rekindle the relationship between his fiancée Josephine and her former boyfriend.",
+    runtime: "92 mins",
     title: "The Wedding Party",
     year: "1969",
     rating: "2.31",
+    poster:
+      "https://a.ltrbxd.com/resized/film-poster/6/1/3/4/9/61349-the-wedding-party-0-230-0-345-crop.jpg?k=2f1c86b996",
   },
   {
     cast: [
@@ -2070,9 +2571,18 @@ const lboxData = [
     directors: ["Brian De Palma"],
     genres: ["comedy", "drama"],
     id: 73,
+    tagline:
+      "God bless our humble upper-middle-class high-rise co-op and keep it free from smut peddlers, militants, urban guerrillas and Greenwich Village liberals.",
+    summary:
+      "Vietnam vet Jon Rubin returns to New York and rents a rundown flat in Greenwich Village. It is in this flat that he begins to film, 'Peeping Tom' style, the people in the apartment across the street. His obsession with making films leads him to fall in with a radical 'Black Power' group, which in turn leads him to carry out a bizarre act of urban terrorism.",
+    runtime: "87 mins",
     title: "Hi, Mom!",
     year: "1970",
     rating: "3.53",
+    poster:
+      "https://a.ltrbxd.com/resized/film-poster/2/2/4/9/7/22497-hi-mom--0-230-0-345-crop.jpg?k=cc0d047bf2",
+    backdrop:
+      "https://a.ltrbxd.com/resized/sm/upload/3z/7g/7g/cb/hi%20mom-1200-1200-675-675-crop-000000.jpg?k=c1514ec323",
   },
   {
     cast: [
@@ -2101,9 +2611,17 @@ const lboxData = [
     directors: ["William Friedkin"],
     genres: ["thriller", "crime", "mystery", "drama", "horror"],
     id: 74,
+    tagline: "Al Pacino is Cruising for a killer.",
+    summary:
+      "A serial killer brutally slays and dismembers several gay men in New York's S/M and leather districts. The young police officer Steve Burns is sent undercover onto the streets as decoy for the murderer. Working almost completely isolated from his department, he has to learn and practice the complex rules and signals of this little society.",
+    runtime: "102 mins",
     title: "Cruising",
     year: "1980",
     rating: "3.50",
+    poster:
+      "https://a.ltrbxd.com/resized/film-poster/3/4/0/5/0/34050-cruising-0-230-0-345-crop.jpg?k=b4fa32adae",
+    backdrop:
+      "https://a.ltrbxd.com/resized/sm/upload/ry/nf/oh/5h/cruising-1200-1200-675-675-crop-000000.jpg?k=0f0ecf831b",
   },
   {
     cast: [
@@ -2143,9 +2661,14 @@ const lboxData = [
     directors: ["Mike Figgis"],
     genres: ["thriller"],
     id: 75,
+    summary:
+      "When a corrupt American businessman tries to strong arm his way into businesses in Newcastle, England, he is thwarted by a club attendant and his waitress girlfriend.",
+    runtime: "93 mins",
     title: "Stormy Monday",
     year: "1988",
     rating: "3.05",
+    poster:
+      "https://a.ltrbxd.com/resized/film-poster/3/6/0/2/1/36021-stormy-monday-0-230-0-345-crop.jpg?k=d5d632e8c8",
   },
   {
     cast: [
@@ -2200,9 +2723,17 @@ const lboxData = [
     directors: ["John Frankenheimer"],
     genres: ["action", "adventure", "crime", "thriller"],
     id: 76,
+    tagline: "Your ally could become your enemy.",
+    summary:
+      "A briefcase with undisclosed contents – sought by Irish terrorists and the Russian mob – makes its way into criminals' hands. An Irish liaison assembles a squad of mercenaries, or 'ronin', and gives them the thorny task of recovering the case.",
+    runtime: "122 mins",
     title: "Ronin",
     year: "1998",
     rating: "3.46",
+    poster:
+      "https://a.ltrbxd.com/resized/film-poster/4/7/8/6/5/47865-ronin-0-230-0-345-crop.jpg?k=e600b45220",
+    backdrop:
+      "https://a.ltrbxd.com/resized/sm/upload/cd/yi/eq/1g/ronin-1200-1200-675-675-crop-000000.jpg?k=30f4f689a3",
   },
   {
     cast: [
@@ -2239,9 +2770,18 @@ const lboxData = [
     directors: ["John Wayne"],
     genres: ["western"],
     id: 77,
+    tagline:
+      "The Mission That Became a Fortress! The Fortress That Became a Shrine!",
+    summary:
+      "The legendary true story of a small band of soldiers who sacrificed their lives in hopeless combat against a massive army in order to prevent a tyrant from smashing the new Republic of Texas.",
+    runtime: "167 mins",
     title: "The Alamo",
     year: "1960",
     rating: "3.09",
+    poster:
+      "https://a.ltrbxd.com/resized/film-poster/4/5/5/0/0/45500-the-alamo-0-230-0-345-crop.jpg?k=847ee350fe",
+    backdrop:
+      "https://a.ltrbxd.com/resized/sm/upload/om/rt/v5/io/alamo-1200-1200-675-675-crop-000000.jpg?k=f76992368e",
   },
   {
     cast: [
@@ -2289,9 +2829,17 @@ const lboxData = [
     directors: ["John Ford", "George Marshall", "Henry Hathaway"],
     genres: ["western"],
     id: 78,
+    tagline: "It's here! The mightiest adventure ever filmed!",
+    summary:
+      "The epic tale of the development of the American West from the 1830s through the Civil War to the end of the century, as seen through the eyes of one pioneer family.",
+    runtime: "162 mins",
     title: "How the West Was Won",
     year: "1962",
     rating: "3.36",
+    poster:
+      "https://a.ltrbxd.com/resized/film-poster/4/4/9/0/9/44909-how-the-west-was-won-0-230-0-345-crop.jpg?k=0056116ee7",
+    backdrop:
+      "https://a.ltrbxd.com/resized/sm/upload/c4/a3/4j/e9/mJt4QDEZfGNOcNVf9u16Euq7sn7-1200-1200-675-675-crop-000000.jpg?k=987f6032d8",
   },
   {
     cast: [
@@ -2311,9 +2859,17 @@ const lboxData = [
     directors: ["Gianfranco Parolini"],
     genres: ["western"],
     id: 79,
+    tagline: "The gunman with the deadliest arsenal in the West",
+    summary:
+      "After a stagecoach is robbed and the passengers murdered, a long and tangled series of surprise attacks and murderous double-crosses, leaves the coach's strongbox in the hands of the killer Lasky. It is up to the legendary hero Sartana to track down the missing money and determine just who is ultimately behind the grisly robberies and killings.",
+    runtime: "95 mins",
     title: "If You Meet Sartana Pray for Your Death",
     year: "1968",
     rating: "3.35",
+    poster:
+      "https://a.ltrbxd.com/resized/film-poster/6/9/5/2/7/69527-if-you-meet-sartana-pray-for-your-death-0-230-0-345-crop.jpg?k=23182bed33",
+    backdrop:
+      "https://a.ltrbxd.com/resized/sm/upload/rb/15/r4/1x/oE95NgNDIU64ckjZNweuCIXZw2C-1200-1200-675-675-crop-000000.jpg?k=aadc2594a1",
   },
   {
     cast: [
@@ -2356,9 +2912,16 @@ const lboxData = [
     directors: ["Keiichi Ozawa"],
     genres: ["crime", "thriller", "action"],
     id: 80,
+    summary:
+      "Goro (Tetsuya Watari) wants to put his dark past behind. He heads to Hirosaki City to offer his condolences to Yumeko and to reunite with Yukiko (Chieko Matsubara), but finds that Yumeko is fatally ill. Although Yukiko was taking care of her, she is pressed for money. Goro wants to help and knows that there is only one way to come up with fast money.",
+    runtime: "97 mins",
     title: "Outlaw: Gangster VIP 2",
     year: "1968",
     rating: "3.43",
+    poster:
+      "https://a.ltrbxd.com/resized/film-poster/2/9/6/6/6/1/296661-outlaw-gangster-vip-2-0-230-0-345-crop.jpg?k=e126454395",
+    backdrop:
+      "https://a.ltrbxd.com/resized/sm/upload/jl/lh/wp/iy/gangster%20vip%202-1200-1200-675-675-crop-000000.jpg?k=3b1bd89de0",
   },
   {
     cast: [
@@ -2378,11 +2941,16 @@ const lboxData = [
       "Yoji Tanaka",
     ],
     directors: ["Takashi Miike"],
-    genres: ["action", "crime", "thriller"],
+    genres: ["crime", "thriller", "action"],
     id: 81,
+    summary:
+      "Tatsuhito, a cop, pursues Chinese warlord Wang through the underworld of Shinjuku and over to Taiwan.",
+    runtime: "100 mins",
     title: "Shinjuku Triad Society",
     year: "1995",
     rating: "3.32",
+    poster:
+      "https://a.ltrbxd.com/resized/film-poster/2/8/0/5/6/28056-shinjuku-triad-society-0-230-0-345-crop.jpg?k=eb0edbe294",
   },
   {
     cast: [
@@ -2402,11 +2970,18 @@ const lboxData = [
       "Yutaka Mishima",
     ],
     directors: ["Shinya Tsukamoto"],
-    genres: ["drama", "thriller", "crime"],
+    genres: ["thriller", "crime", "drama"],
     id: 82,
+    summary:
+      "After his girlfriend commits suicide, a man becomes embroiled in gang warfare attempting to obtain a gun in hopes to kill himself.",
+    runtime: "87 mins",
     title: "Bullet Ballet",
     year: "1998",
-    rating: "3.78",
+    rating: "3.79",
+    poster:
+      "https://a.ltrbxd.com/resized/film-poster/3/5/6/6/4/35664-bullet-ballet-0-230-0-345-crop.jpg?k=850177df3c",
+    backdrop:
+      "https://a.ltrbxd.com/resized/sm/upload/7s/10/xf/i7/bullet-ballet-1200-1200-675-675-crop-000000.jpg?k=d6ff5c58fc",
   },
   {
     cast: [
@@ -2436,9 +3011,17 @@ const lboxData = [
     directors: ["Taylor Hackford"],
     genres: ["drama", "crime", "mystery"],
     id: 83,
+    tagline: "Sometimes, an accident can be an unhappy woman's best friend.",
+    summary:
+      "Dolores Claiborne was accused of killing her abusive husband twenty years ago, but the court's findings were inconclusive and she was allowed to walk free. Now she has been accused of killing her employer, Vera Donovan, and this time there is a witness who can place her at the scene of the crime. Things look bad for Dolores when her daughter Selena, a successful Manhattan magazine writer, returns to cover the story.",
+    runtime: "132 mins",
     title: "Dolores Claiborne",
     year: "1995",
     rating: "3.59",
+    poster:
+      "https://a.ltrbxd.com/resized/film-poster/4/4/8/7/8/44878-dolores-claiborne-0-230-0-345-crop.jpg?k=a0acc43b33",
+    backdrop:
+      "https://a.ltrbxd.com/resized/sm/upload/3p/rw/nw/p7/dolores-claiborne-1200-1200-675-675-crop-000000.jpg?k=fceceb9cc2",
   },
   {
     cast: [
@@ -2460,9 +3043,17 @@ const lboxData = [
     directors: ["Scott Hicks"],
     genres: ["mystery", "drama"],
     id: 84,
+    tagline: "What if one of life's great mysteries moved in upstairs?",
+    summary:
+      "A widowed mother and her son change when a mysterious stranger enters their lives.",
+    runtime: "101 mins",
     title: "Hearts in Atlantis",
     year: "2001",
     rating: "3.08",
+    poster:
+      "https://a.ltrbxd.com/resized/film-poster/4/5/4/2/0/45420-hearts-in-atlantis-0-230-0-345-crop.jpg?k=c8b4d9aacd",
+    backdrop:
+      "https://a.ltrbxd.com/resized/sm/upload/c5/w2/u6/gr/hearts-in-atlantis-1200-1200-675-675-crop-000000.jpg?k=0f00a8978f",
   },
   {
     cast: [
@@ -2480,9 +3071,15 @@ const lboxData = [
     directors: ["Jeff Beesley"],
     genres: ["drama", "thriller"],
     id: 85,
+    tagline: "An eight-cylinder fuel-injected coffin.",
+    summary:
+      "A young man attempts to seek to avenge his wife's death after she is murdered by a Las Vegas mobster.",
+    runtime: "81 mins",
     title: "Dolan's Cadillac",
     year: "2009",
     rating: "2.42",
+    poster:
+      "https://a.ltrbxd.com/resized/film-poster/3/9/3/9/3/39393-dolan-s-cadillac-0-230-0-345-crop.jpg?k=651ae4bd48",
   },
   {
     cast: [
@@ -2499,9 +3096,14 @@ const lboxData = [
     directors: ["Al Adamson"],
     genres: ["drama", "fantasy"],
     id: 86,
+    summary:
+      "A magician in a carnival--who actually can read minds and levitate people and objects--works with a superintelligent chimp named Alex, who can also talk. The magician and the chimp soon become the stars of the carnival, drawing in big crowds. However, the wild-animal trainer, who has been displaced by the team as the carnival's top act, decides to kidnap Alex and sell him to a medical laboratory for experimentation, thereby getting rid of his competition.",
+    runtime: "86 mins",
     title: "Carnival Magic",
     year: "1981",
     rating: "1.70",
+    poster:
+      "https://a.ltrbxd.com/resized/film-poster/3/2/8/7/9/32879-carnival-magic-0-230-0-345-crop.jpg?k=12d12f26c5",
   },
   {
     cast: [
@@ -2541,9 +3143,15 @@ const lboxData = [
     directors: ["Rod Amateau"],
     genres: ["adventure", "science-fiction", "comedy"],
     id: 87,
+    tagline: "It doesn't get any grosser than this!",
+    summary:
+      "Seven disgusting kids but nevertheless of interesting personality are being made of the green mud coming out of garbage can. Once alive their master gives them rules to obey although they think that life is funnier without following stupid regulations like no television or no candy. Naturally this will cause some conflicts.",
+    runtime: "100 mins",
     title: "The Garbage Pail Kids Movie",
     year: "1987",
     rating: "1.45",
+    poster:
+      "https://a.ltrbxd.com/resized/sm/upload/4k/t0/kl/dh/1uQDHrPSPv6DfLJkJvfNstDA2s1-0-230-0-345-crop.jpg?k=8bba496f54",
   },
   {
     cast: [
@@ -2576,9 +3184,15 @@ const lboxData = [
     directors: ["Jared Cohn"],
     genres: ["horror", "thriller"],
     id: 88,
+    tagline: "Hold Your Breath",
+    summary:
+      "There is an old wives tale that you should hold your breath when passing by a cemetery because an evil spirit rejected by both heaven and hell can get inside of you when you inhale. Somewhere in a carload of college kids on holiday doesn't follow the rules when driving by a graveyard, allowing a spirit of a recently executed serial killer to get inside him/her to begin a killing spree of body-jumping carnage.",
+    runtime: "87 mins",
     title: "Hold Your Breath",
     year: "2012",
     rating: "1.72",
+    poster:
+      "https://a.ltrbxd.com/resized/film-poster/9/9/5/3/1/99531-hold-your-breath-0-230-0-345-crop.jpg?k=e811167bc8",
   },
   {
     cast: [
@@ -2604,9 +3218,15 @@ const lboxData = [
     directors: ["Lewis Jackson"],
     genres: ["horror", "drama", "thriller"],
     id: 89,
+    tagline: "Better Watch Out... Better Not Cry... Or You May DIE!",
+    summary:
+      "A toy factory worker, mentally scarred as a child upon learning Santa Claus is not real, suffers a nervous breakdown after being belittled at work, and embarks on a Yuletide killing spree.",
+    runtime: "100 mins",
     title: "Christmas Evil",
     year: "1980",
     rating: "3.24",
+    poster:
+      "https://a.ltrbxd.com/resized/film-poster/3/4/6/9/8/34698-christmas-evil-0-230-0-345-crop.jpg?k=68816de39e",
   },
   {
     cast: [
@@ -2628,9 +3248,15 @@ const lboxData = [
     directors: ["Brian Yuzna"],
     genres: ["horror"],
     id: 90,
+    tagline: "If I die before I wake... thank you.",
+    summary:
+      "A reporter investigating the bizarre death of a woman who leaped from a building in flames finds herself mixed up in a cult of witches who are making her part of their sacrificial ceremony during the Christmas season.",
+    runtime: "90 mins",
     title: "Silent Night Deadly Night 4: Initiation",
     year: "1990",
     rating: "2.46",
+    poster:
+      "https://a.ltrbxd.com/resized/film-poster/6/7/5/2/6752-silent-night-deadly-night-4-initiation-0-230-0-345-crop.jpg?k=10801799ab",
   },
   {
     cast: [
@@ -2653,9 +3279,15 @@ const lboxData = [
     directors: ["Martin Kitrosser"],
     genres: ["science-fiction", "horror"],
     id: 91,
+    tagline: "He's home... but he's not alone.",
+    summary:
+      "A young boy sees his father killed by a toy that was anonymously delivered to his house. After that, he is too traumatized to speak, and his mother must deal with both him and the loss of her husband. Meanwhile, a toy maker named Joe Peto builds some suspicious-looking toys, and a mysterious man creeps around both the toy store and the boy's house...but who is responsible for the killer toys?",
+    runtime: "90 mins",
     title: "Silent Night, Deadly Night 5: The Toy Maker",
     year: "1991",
     rating: "2.50",
+    poster:
+      "https://a.ltrbxd.com/resized/film-poster/5/8/4/8/3/58483-silent-night-deadly-night-5-the-toy-maker-0-230-0-345-crop.jpg?k=ae160f6343",
   },
   {
     cast: [
@@ -2685,11 +3317,20 @@ const lboxData = [
       "Tetsurô Takeuchi",
     ],
     directors: ["Noriaki Yuasa"],
-    genres: ["action", "science-fiction", "horror"],
+    genres: ["action", "horror", "science-fiction"],
     id: 92,
+    tagline:
+      "Striking down jets, grabbing hold of the Tokyo Tower, flying through the air breathing fire, the giant monster of the century!",
+    summary:
+      "A nuclear explosion in the far north unleashes Gamera, the legendary flying turtle, from his sleep under the ice. In his search for energy, Gamera wreaks havoc over the entire world, and it's up to the scientists, assisted by a young boy with a strange sympathic link to the monster, to put a stop to Gamera's rampage.",
+    runtime: "79 mins",
     title: "Gamera, the Giant Monster",
     year: "1965",
     rating: "2.94",
+    poster:
+      "https://a.ltrbxd.com/resized/film-poster/3/8/1/6/8/38168-gamera-0-230-0-345-crop.jpg?k=e991242827",
+    backdrop:
+      "https://a.ltrbxd.com/resized/sm/upload/7m/m1/tm/lw/af2NRHoBUNKrPTQCBQ33yuv4Mw8-1200-1200-675-675-crop-000000.jpg?k=8818706f5b",
   },
   {
     cast: [
@@ -2723,9 +3364,16 @@ const lboxData = [
     directors: ["Shigeo Tanaka"],
     genres: ["fantasy", "adventure", "science-fiction", "action", "horror"],
     id: 93,
+    tagline:
+      "Gamera burns the streets of Osaka in an instant! Barugon freezes Osaka Castle with a single gust! An underwater clash at Lake Biwa!",
+    summary:
+      "Gamera escapes from his rocket enclosure and makes his way back to Earth as a giant opal from New Guinea is brought back to Japan. The opal is discovered to have been an egg that births a new monster called Barugon. The creature attacks the city of Osaka by emitting a destructive rainbow ray from his back, along with a freezing spray capable of incapacitating Gamera.",
+    runtime: "106 mins",
     title: "Gamera vs. Barugon",
     year: "1966",
     rating: "2.93",
+    poster:
+      "https://a.ltrbxd.com/resized/film-poster/3/7/6/3/8/37638-gamera-vs-barugon-0-230-0-345-crop.jpg?k=42082bfaf1",
   },
   {
     cast: [
@@ -2747,9 +3395,15 @@ const lboxData = [
     directors: ["Noriaki Yuasa"],
     genres: ["adventure", "horror", "action", "science-fiction"],
     id: 94,
+    tagline: "Giant Monster Dogfight",
+    summary:
+      "Unusual volcanic activity in Japan awakens Gyaos, a bloodthirsty flying monster with the power to slice things in half with an ultrasonic ray. While scientists and the military scramble to devise a way to stop this new threat, a young boy forms an alliance with Gamera; a monster no one else seems to trust.",
+    runtime: "86 mins",
     title: "Gamera vs. Gyaos",
     year: "1967",
     rating: "2.97",
+    poster:
+      "https://a.ltrbxd.com/resized/film-poster/1/3/1/7/6/13176-gamera-vs-gyaos-0-230-0-345-crop.jpg?k=754efb14eb",
   },
   {
     cast: [
@@ -2773,11 +3427,16 @@ const lboxData = [
       "Teruo Aragaki",
     ],
     directors: ["Noriaki Yuasa"],
-    genres: ["action", "family", "science-fiction", "adventure"],
+    genres: ["family", "science-fiction", "action", "adventure"],
     id: 95,
+    summary:
+      "As alien invaders plot to conquer the Earth, two Boy Scouts steal a mini-submarine and discover Gamera in their midst. Transported to the alien's spaceship, the Scouts are menaced by the evil inhabitants, including Viras, a squid-like monster that grows to colossal size to battle Gamera.",
+    runtime: "81 mins",
     title: "Gamera vs. Viras",
     year: "1968",
     rating: "2.48",
+    poster:
+      "https://a.ltrbxd.com/resized/film-poster/2/9/3/2/4/29324-gamera-vs-viras-0-230-0-345-crop.jpg?k=36934d70c1",
   },
   {
     cast: [
@@ -2799,9 +3458,18 @@ const lboxData = [
     directors: ["Noriaki Yuasa"],
     genres: ["adventure", "family", "action", "science-fiction"],
     id: 96,
+    tagline:
+      "Controlled from the mysterious tenth planet, the immensely powerful Giant Demon Beast! The Earth is in danger! Launch the counter strategy, Gamera, you can do it!",
+    summary:
+      "Two young boys sneak aboard a spaceship and find themselves whisked away to the mysterious planet Terra. There, they encounter Gamera's old foe Gyaos and two female aliens with a taste for human brains. Gamera must save the children and battle the new monster Guiron, whose entire body is a deadly living weapon.",
+    runtime: "82 mins",
     title: "Gamera vs. Guiron",
     year: "1969",
     rating: "2.76",
+    poster:
+      "https://a.ltrbxd.com/resized/film-poster/3/4/9/1/3/34913-gamera-vs-guiron-0-230-0-345-crop.jpg?k=5209171e0f",
+    backdrop:
+      "https://a.ltrbxd.com/resized/sm/upload/xd/or/b8/dr/yFC72NT2tNv6AUonYj1IpYHflMl-1200-1200-675-675-crop-000000.jpg?k=17ae15de3e",
   },
   {
     cast: [
@@ -2818,9 +3486,15 @@ const lboxData = [
     directors: ["Noriaki Yuasa"],
     genres: ["science-fiction", "adventure", "action", "family"],
     id: 97,
+    tagline: "Watch out for extreme ultrasound!",
+    summary:
+      "When a giant stone statue on Wester Island is disturbed, the legendary monster Jiger appears and heads for Japan. Gamera tries to stop this new rival, only to be injured when Jiger lays eggs inside of him. As two boys in a submarine go on a dangerous quest inside of Gamera's body to save him, Jiger threatens the Expo '70 world's fair in Osaka.",
+    runtime: "83 mins",
     title: "Gamera vs. Jiger",
     year: "1970",
     rating: "2.77",
+    poster:
+      "https://a.ltrbxd.com/resized/film-poster/5/9/1/2/3/59123-gamera-vs-jiger-0-230-0-345-crop.jpg?k=628d6002b1",
   },
   {
     cast: [
@@ -2838,9 +3512,15 @@ const lboxData = [
     directors: ["Noriaki Yuasa"],
     genres: ["science-fiction", "family", "action", "adventure"],
     id: 98,
+    tagline: "Deep-Sea Monster Zigra!",
+    summary:
+      "A moon base is destroyed by a spaceship with a cluster of gumballs on its head. Later, at Sea World, dolphins are dying mysteriously. Zigra kidnaps two men and two children (one of whom is a Coke addict - Coca-Cola that is) and starts causing earthquakes. The two six year olds somehow outwit Zigra and help their incapacitated fathers escape. The Zigra Woman, who can use her eyes to put people into comas, then chases them all over Sea World like an extended Benny Hill skit. Somewhere in this movie Gamera finally shows up, fights Zigra, who turns into a giant swordfish.",
+    runtime: "87 mins",
     title: "Gamera vs. Zigra",
     year: "1971",
     rating: "2.25",
+    poster:
+      "https://a.ltrbxd.com/resized/film-poster/5/9/1/2/8/59128-gamera-vs-zigra-0-230-0-345-crop.jpg?k=8f768c6e9b",
   },
   {
     cast: [
@@ -2856,9 +3536,16 @@ const lboxData = [
     directors: ["Noriaki Yuasa"],
     genres: ["family", "science-fiction"],
     id: 99,
+    tagline:
+      "A titanic struggle for supremacy as starship Zanon invades the planet Earth!",
+    summary:
+      "As a massive alien craft heads to Earth to do evil, three good and powerful superwomen befriend a young boy who has a special connection to Gamera.  The alien Zanon launches a battery of familiar foes against Gamera, who might have to give the ultimate sacrifice to defeat the alien invader.",
+    runtime: "92 mins",
     title: "Gamera: Super Monster",
     year: "1980",
     rating: "1.70",
+    poster:
+      "https://a.ltrbxd.com/resized/film-poster/5/9/0/9/3/59093-gamera-super-monster-0-230-0-345-crop.jpg?k=6aa5f8cc46",
   },
   {
     cast: [
@@ -2897,11 +3584,18 @@ const lboxData = [
     directors: ["Shusuke Kaneko"],
     genres: ["fantasy", "horror", "science-fiction", "adventure"],
     id: 100,
+    tagline: "A great duel of supersonic speed.",
+    summary:
+      "A ship runs aground on a mysterious atoll leading to an investigation by insurance representative Kusanagi, who discovers an ancient bead that he gives to his daughter Asagi. Meanwhile, ornithologist Nagamine investigates reports of a new species of large bird named Gyaos. As the Gyaos begin to attack, an ancient guardian with a bond to Asagi emerges.",
+    runtime: "96 mins",
     title: "Gamera: Guardian of the Universe",
     year: "1995",
     rating: "3.62",
+    poster:
+      "https://a.ltrbxd.com/resized/film-poster/1/1/6/4/7/11647-gamera-guardian-of-the-universe-0-230-0-345-crop.jpg?k=d459e32ccc",
+    backdrop:
+      "https://a.ltrbxd.com/resized/sm/upload/xi/oi/io/hi/ey5Tl2xyJsRrv1fIQ04a12CRoLE-1200-1200-675-675-crop-000000.jpg?k=e34f818e6c",
   },
-
   {
     cast: [
       "Toshiyuki Nagashima",
@@ -2952,11 +3646,19 @@ const lboxData = [
       "Akihiro Nakata",
     ],
     directors: ["Shusuke Kaneko"],
-    genres: ["horror", "science-fiction", "fantasy", "drama"],
+    genres: ["science-fiction", "horror", "fantasy", "drama"],
     id: 101,
+    tagline: "Who will be extinct, Japan, or Legion?",
+    summary:
+      'A strange meteor lands in Japan and unleashes hundreds of insect-like "Legion" creatures bent on colonizing the Earth. When the military fails to control the situation, Gamera shows up to deal with the ever-evolving space adversary. However the battle may result in Gamera losing his bond with both Asagi and humanity.',
+    runtime: "99 mins",
     title: "Gamera 2: Attack of the Legion",
     year: "1996",
     rating: "3.74",
+    poster:
+      "https://a.ltrbxd.com/resized/film-poster/6/9/0/9/6909-gamera-2-attack-of-the-legion-0-230-0-345-crop.jpg?k=33fb1e12f4",
+    backdrop:
+      "https://a.ltrbxd.com/resized/sm/upload/ag/fb/lc/uh/gamera-2-1200-1200-675-675-crop-000000.jpg?k=8d8fe4052e",
   },
   {
     cast: [
@@ -3009,11 +3711,17 @@ const lboxData = [
       "Akira Ohashi",
     ],
     directors: ["Shusuke Kaneko"],
-    genres: ["fantasy", "science-fiction", "horror"],
+    genres: ["science-fiction", "fantasy", "horror"],
     id: 102,
+    tagline: "I will not forgive Gamera",
+    summary:
+      "With the Gyaos re-emerging, Gamera's ties to humanity have been severed with his bond to Asagi broken. Nagamine and Asagi investigate while an orphaned girl named Ayana discovers a new creature she names Iris. Nagamine and Asagi must reach Ayana before she takes her revenge on Gamera, who she blames for the death of her family.",
+    runtime: "108 mins",
     title: "Gamera 3: Revenge of Iris",
     year: "1999",
     rating: "3.86",
+    poster:
+      "https://a.ltrbxd.com/resized/film-poster/6/4/2/1/6421-gamera-3-revenge-of-iris-0-230-0-345-crop.jpg?k=20026f302f",
   },
   {
     cast: [
@@ -3042,9 +3750,17 @@ const lboxData = [
       "action",
     ],
     id: 103,
+    tagline: "Gamera for the boys, the boys for Gamera!",
+    summary:
+      "A young boy in a peaceful seaside town gets more than he bargained for when he takes home a mysterious egg. When it hatches, out comes a baby turtle that grows into a new version of Gamera. But will it become powerful enough in time to defeat the rampaging monster Zedus?",
+    runtime: "96 mins",
     title: "Gamera the Brave",
     year: "2006",
     rating: "3.41",
+    poster:
+      "https://a.ltrbxd.com/resized/film-poster/6/4/2/0/6420-gamera-the-brave-0-230-0-345-crop.jpg?k=2798261154",
+    backdrop:
+      "https://a.ltrbxd.com/resized/sm/upload/pp/ju/y2/j2/OfIkqTTAagwIlaHZDliF0Q0yFz-1200-1200-675-675-crop-000000.jpg?k=92ac1340f7",
   },
   {
     cast: [
@@ -3069,9 +3785,17 @@ const lboxData = [
     directors: ["Peter Askin"],
     genres: ["thriller"],
     id: 104,
+    tagline: "Two can keep a secret... if one of them is dead.",
+    summary:
+      "After 25 years of a good marriage, what will Darcy do once she discovers her husband's sinister secret?",
+    runtime: "103 mins",
     title: "A Good Marriage",
     year: "2014",
     rating: "2.35",
+    poster:
+      "https://a.ltrbxd.com/resized/film-poster/2/1/3/3/7/1/213371-a-good-marriage-0-230-0-345-crop.jpg?k=ec67f93c52",
+    backdrop:
+      "https://a.ltrbxd.com/resized/sm/upload/l5/kt/aw/fd/good-marriage-1200-1200-675-675-crop-000000.jpg?k=5fb8c58b6d",
   },
   {
     cast: [
@@ -3105,9 +3829,15 @@ const lboxData = [
     directors: ["John Gilling"],
     genres: ["horror"],
     id: 105,
+    tagline: "Only The Lord Of The Dead Could Unleash Them!",
+    summary:
+      "Sir James Forbes arrives in a remote Cornish village to identify a mysterious plague afflicting the population. Local squire Charles, a disciple of Haitian witchcraft, is using the voodoo magic to resurrect the dead to work in his decrepit and unsafe tin mines that are shunned by the local population. But his magic relies on human sacrifice and he unleashes his army of the undead on the unsuspecting village with horrific consequences.",
+    runtime: "91 mins",
     title: "The Plague of the Zombies",
     year: "1966",
-    rating: "3.29",
+    rating: "3.30",
+    poster:
+      "https://a.ltrbxd.com/resized/film-poster/3/3/1/8/4/33184-the-plague-of-the-zombies-0-230-0-345-crop.jpg?k=0ebb1faf0e",
   },
   {
     cast: [
@@ -3127,9 +3857,15 @@ const lboxData = [
     directors: ["Víctor García"],
     genres: ["thriller", "mystery", "horror"],
     id: 106,
+    tagline: "Behind the world you know is a darkness you never imagined.",
+    summary:
+      "When Max, who is recovering from a traumatic accident, takes a job as a nighttime security guard, he begins to see visions of a young mysterious woman in the store's mirror.",
+    runtime: "86 mins",
     title: "Mirrors 2",
     year: "2010",
     rating: "2.09",
+    poster:
+      "https://a.ltrbxd.com/resized/film-poster/1/8/9/0/0/18900-mirrors-2-0-230-0-345-crop.jpg?k=b9cfbe4522",
   },
   {
     cast: [
@@ -3159,11 +3895,19 @@ const lboxData = [
       "Tom Woodruff Jr.",
     ],
     directors: ["David Fincher"],
-    genres: ["horror", "science-fiction", "action"],
+    genres: ["science-fiction", "horror", "action"],
     id: 107,
+    tagline: "The bitch is back.",
+    summary:
+      "After escaping with Newt and Hicks from the alien planet, Ripley crash lands on Fiorina 161, a prison planet and host to a correctional facility. Unfortunately, although Newt and Hicks do not survive the crash, a more unwelcome visitor does. The prison does not allow weapons of any kind, and with aid being a long time away, the prisoners must simply survive in any way they can.",
+    runtime: "114 mins",
     title: "Alien³",
     year: "1992",
     rating: "2.88",
+    poster:
+      "https://a.ltrbxd.com/resized/film-poster/4/7/8/8/8/47888-alien-0-230-0-345-crop.jpg?k=63ac698131",
+    backdrop:
+      "https://a.ltrbxd.com/resized/sm/upload/fy/ri/h5/hy/alien3-1200-1200-675-675-crop-000000.jpg?k=cd6aae3421",
   },
   {
     cast: [
@@ -3185,9 +3929,16 @@ const lboxData = [
     directors: ["Al Adamson"],
     genres: ["action", "comedy"],
     id: 108,
+    tagline:
+      "The Black Cat from Watts..The Kung fu Cat from Hong Kong..Even chained together-Nobody can handle them!",
+    summary:
+      "Young black man teams up with a Chinese kung-fu expert to fight a drug ring.",
+    runtime: "90 mins",
     title: "Dynamite Brothers",
     year: "1974",
     rating: "2.79",
+    poster:
+      "https://a.ltrbxd.com/resized/film-poster/6/8/3/8/0/68380-dynamite-brothers-0-230-0-345-crop.jpg?k=f2b60b50c4",
   },
   {
     cast: [
@@ -3214,9 +3965,15 @@ const lboxData = [
     directors: ["Ryan Schifrin"],
     genres: ["thriller", "horror"],
     id: 109,
+    tagline: "Think Big.",
+    summary:
+      "A man, crippled in an accident, returns to the woods after rehabilitation, certain that he'll not see Bigfoot again.",
+    runtime: "94 mins",
     title: "Abominable",
     year: "2006",
     rating: "2.78",
+    poster:
+      "https://a.ltrbxd.com/resized/film-poster/4/6/6/3/1/46631-abominable-0-230-0-345-crop.jpg?k=24bda9afc7",
   },
   {
     cast: [
@@ -3235,9 +3992,14 @@ const lboxData = [
     directors: ["Jeff Kwitny"],
     genres: ["horror"],
     id: 110,
+    summary:
+      "A shy co-ed and her classmates travel to Europe to see a ritual. With a satanist/professor with them, he lures them into deadly traps to become sacrifices to Satan. One co-ed is a virgin, the main key to bring Satan back to life. But can the co-ed lose her virginity before Satan controls the world?",
+    runtime: "94 mins",
     title: "Beyond the Door III",
     year: "1989",
     rating: "3.14",
+    poster:
+      "https://a.ltrbxd.com/resized/film-poster/2/9/5/5/6/29556-beyond-the-door-iii-0-230-0-345-crop.jpg?k=ccbc9bf5ba",
   },
   {
     cast: [
@@ -3261,9 +4023,15 @@ const lboxData = [
     directors: ["Roger Corman"],
     genres: ["horror", "science-fiction"],
     id: 111,
+    tagline: "Horror Of The Winged Menace !",
+    summary:
+      "The head of a major cosmetics company experiments on herself with a youth formula made from royal jelly extracted from wasps, but the formula's side effects have deadly consequences.",
+    runtime: "61 mins",
     title: "The Wasp Woman",
     year: "1959",
     rating: "2.40",
+    poster:
+      "https://a.ltrbxd.com/resized/film-poster/3/4/4/2/2/34422-the-wasp-woman-0-230-0-345-crop.jpg?k=5ee0941e17",
   },
   {
     cast: [
@@ -3282,9 +4050,15 @@ const lboxData = [
     directors: ["Tim Kincaid"],
     genres: ["science-fiction", "thriller", "horror"],
     id: 112,
+    tagline: "Anything this hideous must be stopped from breeding.",
+    summary:
+      "An otherwordly perpetrator has been attacking female virgins in Manhattan. As Dr. Pace and Detective Andriotti work together to identify the strange organic materials found on the women, the victims begin arising in a trance and leaving the hospital.",
+    runtime: "77 mins",
     title: "Breeders",
     year: "1986",
     rating: "2.43",
+    poster:
+      "https://a.ltrbxd.com/resized/film-poster/2/4/8/0/5/24805-breeders-0-230-0-345-crop.jpg?k=d2833d41ce",
   },
   {
     cast: [
@@ -3303,9 +4077,16 @@ const lboxData = [
     directors: ["Takashi Miike"],
     genres: ["crime", "drama", "action"],
     id: 113,
+    summary:
+      "A Japanese assassin stranded in Taiwan must take work from a local crime boss to make ends meet when suddenly a woman from his past delivers a son to him.",
+    runtime: "95 mins",
     title: "Rainy Dog",
     year: "1997",
     rating: "3.54",
+    poster:
+      "https://a.ltrbxd.com/resized/film-poster/2/8/0/6/2/28062-rainy-dog-0-230-0-345-crop.jpg?k=667a5ef51d",
+    backdrop:
+      "https://a.ltrbxd.com/resized/sm/upload/1a/u6/qd/vr/rainy%20day-1200-1200-675-675-crop-000000.jpg?k=40a226fce1",
   },
   {
     cast: [
@@ -3328,9 +4109,15 @@ const lboxData = [
     directors: ["Edwin Brown"],
     genres: ["horror"],
     id: 114,
+    tagline: "It's not human, and it's got an axe!",
+    summary:
+      "Six campers jaunt off to North Point, where they're promptly stalked and killed by a ghoulish man who ultimately is just looking for a little love.",
+    runtime: "80 mins",
     title: "The Prey",
     year: "1983",
     rating: "2.37",
+    poster:
+      "https://a.ltrbxd.com/resized/film-poster/5/9/3/4/3/59343-the-prey-0-230-0-345-crop.jpg?k=cf06ca4e58",
   },
   {
     cast: [
@@ -3354,9 +4141,15 @@ const lboxData = [
     directors: ["Herschell Gordon Lewis"],
     genres: ["horror"],
     id: 115,
+    tagline: "Madmen crazed for carnage!",
+    summary:
+      "Six people are lured into a small Deep South town for a Centennial celebration where the residents proceed to kill them one by one as revenge for the town's destruction during the Civil War.",
+    runtime: "87 mins",
     title: "Two Thousand Maniacs!",
     year: "1964",
     rating: "3.06",
+    poster:
+      "https://a.ltrbxd.com/resized/film-poster/3/3/8/5/4/33854-two-thousand-maniacs--0-230-0-345-crop.jpg?k=136602535d",
   },
   {
     cast: [
@@ -3385,11 +4178,20 @@ const lboxData = [
       "Jo-Ann Fernandes",
     ],
     directors: ["Jamie Blanks"],
-    genres: ["horror", "thriller"],
+    genres: ["thriller", "horror"],
     id: 116,
+    tagline:
+      "Remember that kid everyone ignored on Valentine’s Day? — He remembers you.",
+    summary:
+      "Five friends are stalked and murdered by a masked assailant while preparing for Valentine's Day.",
+    runtime: "96 mins",
     title: "Valentine",
     year: "2001",
     rating: "2.47",
+    poster:
+      "https://a.ltrbxd.com/resized/film-poster/4/5/7/1/7/45717-valentine-0-230-0-345-crop.jpg?k=02e713db6c",
+    backdrop:
+      "https://a.ltrbxd.com/resized/sm/upload/08/hv/jy/80/camzCNHmBQqTvFPBDmUVrxILolK-1200-1200-675-675-crop-000000.jpg?k=85d2a3c7d9",
   },
   {
     cast: [
@@ -3440,9 +4242,15 @@ const lboxData = [
     directors: ["Lambert Hillyer"],
     genres: ["drama", "horror", "fantasy"],
     id: 117,
+    tagline: "She gives you that WEIRD FEELING",
+    summary:
+      "A countess from Transylvania seeks a psychiatrist’s help to cure her vampiric cravings.",
+    runtime: "71 mins",
     title: "Dracula's Daughter",
     year: "1936",
     rating: "3.17",
+    poster:
+      "https://a.ltrbxd.com/resized/film-poster/3/7/8/9/1/37891-dracula-s-daughter-0-230-0-345-crop.jpg?k=6ee58a1d02",
   },
   {
     cast: [
@@ -3457,9 +4265,14 @@ const lboxData = [
     directors: ["Larry Fessenden"],
     genres: ["horror"],
     id: 118,
+    summary:
+      "Geoffrey (Stephen Ramsey) and Lillian (Miriam Healy-Louie) are a couple spending the summer in the country in hopes of smoothing over some rough patches in their relationship. However, Geoffrey, who is a research scientist, has brought his work with him, which hardly helps, since Lillian's biggest problem with him is that he doesn't spend any time with her, and he seems more concerned with his career than his marriage. This is all the more galling for Lillian because she has given up her career as an artist in order to be more supportive of Geoffrey's work. Geoffrey is also upset because he's only been able to use mice for his lab experiments with new medications, and he is eager to begin working with larger animals; in his impatience, he begins trapping dogs, and he eventually catches the pet of a little girl named Frances (Ashley Arcemont).",
+    runtime: "93 mins",
     title: "No Telling",
     year: "1991",
     rating: "3.38",
+    poster:
+      "https://a.ltrbxd.com/resized/film-poster/4/9/7/9/6/49796-no-telling-0-230-0-345-crop.jpg?k=c01624f70b",
   },
   {
     cast: [
@@ -3489,9 +4302,17 @@ const lboxData = [
     directors: ["Terence Fisher"],
     genres: ["horror"],
     id: 119,
+    tagline: "He Turned Innocent Beauty Into Unspeakable Horror.",
+    summary:
+      "A young teacher on her way to a position in Transylvania helps a young man escape the shackles his mother has put on him. In so doing she innocently unleashes the horrors of the undead once again on the populace, including those at her school for ladies. Luckily for some, Dr. Van Helsing is already on his way.",
+    runtime: "85 mins",
     title: "The Brides of Dracula",
     year: "1960",
     rating: "3.39",
+    poster:
+      "https://a.ltrbxd.com/resized/sm/upload/6q/vr/gh/8g/zO3v1I1CEGVoerS1nD0wTMULr6d-0-230-0-345-crop.jpg?k=092ee21cfd",
+    backdrop:
+      "https://a.ltrbxd.com/resized/sm/upload/06/ou/tr/uz/brides-of-dracula-1200-1200-675-675-crop-000000.jpg?k=2cfb49e3dc",
   },
   {
     cast: [
@@ -3513,9 +4334,17 @@ const lboxData = [
     directors: ["John De Bello"],
     genres: ["comedy", "science-fiction", "horror"],
     id: 120,
+    tagline: "Aaargh!...",
+    summary:
+      "Attack of the Killer Tomatoes is a 1978 comedy film directed by John De Bello and starring David Miller. The film is a spoof of B-movies. Made on a budget of less than USD $100,000, the story involves tomatoes becoming sentient by unknown means and revolting against humanity.",
+    runtime: "87 mins",
     title: "Attack of the Killer Tomatoes!",
     year: "1978",
-    rating: "2.44",
+    rating: "2.45",
+    poster:
+      "https://a.ltrbxd.com/resized/film-poster/5/0/4/5/5/50455-attack-of-the-killer-tomatoes--0-230-0-345-crop.jpg?k=7a8503e456",
+    backdrop:
+      "https://a.ltrbxd.com/resized/sm/upload/3d/3b/gr/7j/attack-of-the-killer-tomatoes-1200-1200-675-675-crop-000000.jpg?k=a4c99291ed",
   },
   {
     cast: [
@@ -3534,9 +4363,16 @@ const lboxData = [
     directors: ["Sergio Martino"],
     genres: ["thriller", "mystery"],
     id: 121,
+    summary:
+      "After her husband dies in a freak plane accident, a woman leaves London for Athens to collect his generous life insurance policy. She soon discovers that others besides herself are keen to get their hands on the money - and are willing to kill for it. Meanwhile, a private investigator arrives to investigate irregularities in the claim, teaming up with a beautiful reporter.",
+    runtime: "96 mins",
     title: "The Case of the Scorpion's Tail",
     year: "1971",
-    rating: "3.44",
+    rating: "3.45",
+    poster:
+      "https://a.ltrbxd.com/resized/film-poster/4/1/3/7/7/41377-the-case-of-the-scorpion-s-tail-0-230-0-345-crop.jpg?k=793401f3c4",
+    backdrop:
+      "https://a.ltrbxd.com/resized/sm/upload/76/5a/y8/08/pAn9WglQTDmsjF2lOsiz5Mi9oYM-1200-1200-675-675-crop-000000.jpg?k=ddc2fdcb81",
   },
   {
     cast: [
@@ -3554,9 +4390,17 @@ const lboxData = [
     directors: ["James Bryan"],
     genres: ["horror"],
     id: 122,
+    tagline: "Everyone has nightmares about the ugliest way to die.",
+    summary:
+      "Four backpackers decide to take a hike in the mountains of Utah. But within the woods lurks a killer. But who...or what...is it? The lazy local sheriff blames bears. But the escalating body count seems to point to a human killer. Ignoring the warning signs, our campers remain lost in the woods...alone...awaiting their fate.",
+    runtime: "82 mins",
     title: "Don't Go in the Woods",
     year: "1981",
     rating: "2.24",
+    poster:
+      "https://a.ltrbxd.com/resized/film-poster/2/0/2/7/4/20274-don-t-go-in-the-woods-0-230-0-345-crop.jpg?k=0b8b6cf46e",
+    backdrop:
+      "https://a.ltrbxd.com/resized/sm/upload/56/mk/69/6x/dDpPBrdZNuMVmjnTDJntQUsKRCi-1200-1200-675-675-crop-000000.jpg?k=8a542e3328",
   },
   {
     cast: [
@@ -3571,9 +4415,16 @@ const lboxData = [
     directors: ["Larry Fessenden"],
     genres: ["thriller", "horror"],
     id: 123,
+    summary:
+      "It's autumn in New York. Sam has broken up with his girlfriend and his father has recently died. World-weary and sloppy drunk, he finds temporary solace in the arms of Anna, a mysterious vampire who draws him away from his friends and into a web of addiction and madness.",
+    runtime: "112 mins",
     title: "Habit",
     year: "1995",
     rating: "3.51",
+    poster:
+      "https://a.ltrbxd.com/resized/film-poster/3/3/4/7/1/33471-habit-0-230-0-345-crop.jpg?k=20e2840c1e",
+    backdrop:
+      "https://a.ltrbxd.com/resized/sm/upload/dm/ml/2l/31/e8G0YZYDAUtFrGqs2jNzTLoS0Rp-1200-1200-675-675-crop-000000.jpg?k=568638289f",
   },
   {
     cast: [
@@ -3599,9 +4450,14 @@ const lboxData = [
     directors: ["Javier Aguirre"],
     genres: ["thriller", "horror", "mystery"],
     id: 124,
+    summary:
+      "A recent widow has invited a group of family friends to her large and secluded country home. However, what the guests don't know is that the reason they've been assembled is that their host suspects one of them might be her husband's killer and she's intent on uncovering the identity of his murderer. As the guests begin to suspect each other, revealing long-kept and sinister secrets in the process, an unknown, black-gloved killer begins bumping them off in a variety of nasty ways.",
+    runtime: "93 mins",
     title: "The Killer Is One of Thirteen",
     year: "1973",
     rating: "2.76",
+    poster:
+      "https://a.ltrbxd.com/resized/film-poster/3/2/0/4/5/32045-the-killer-is-one-of-thirteen-0-230-0-345-crop.jpg?k=c2be5bee8c",
   },
   {
     cast: [
@@ -3621,7 +4477,7 @@ const lboxData = [
       "John Herbert-Bond",
       "Ralph Forbes",
       "Frances Robinson",
-      "G. P. Huntley",
+      "G.P. Huntley",
       "John Rodion",
       "Walter Tetley",
       "Donnie Dunagan",
@@ -3683,9 +4539,16 @@ const lboxData = [
     directors: ["Rowland V. Lee"],
     genres: ["history"],
     id: 125,
+    tagline:
+      "See: VAST ARMIES CLASH BEFORE YOUR EYES! See: AX-COLD MASTERS OF TREACHERY! See: DARK SECRETS BEHIND GRIM TOWERS! See: CRUELTY, COLD AS A HEADSMAN'S AX! See: BLOOD BOILING, LUSTY EXCITEMENT!",
+    summary:
+      "In the 15th century Richard Duke of Gloucester, aided by his club-footed executioner Mord, eliminates those ahead of him in succession to the throne, then occupied by his brother King Edward IV of England. As each murder is accomplished he takes particular delight in removing small figurines, each resembling one of the successors, from a throne-room dollhouse, until he alone remains. After the death of Edward he becomes Richard III, King of England, and need only defeat the exiled Henry Tudor to retain power.",
+    runtime: "92 mins",
     title: "Tower of London",
     year: "1939",
-    rating: "3.13",
+    rating: "3.12",
+    poster:
+      "https://a.ltrbxd.com/resized/film-poster/3/3/7/3/4/33734-tower-of-london-0-230-0-345-crop.jpg?k=3813c1e2f4",
   },
   {
     cast: [
@@ -3720,9 +4583,16 @@ const lboxData = [
     directors: ["James Signorelli"],
     genres: ["fantasy", "horror", "comedy"],
     id: 126,
+    summary:
+      "When her great aunt dies, famed horror hostess Elvira heads for the uptight new England town of Falwell to claim her inheritance of a haunted house, a witch's cookbook and a punk rock poodle. But once the stuffy locals get an eyeful of the scream queen's ample assets, all hell busts out & breaks loose.",
+    runtime: "96 mins",
     title: "Elvira, Mistress of the Dark",
     year: "1988",
     rating: "3.43",
+    poster:
+      "https://a.ltrbxd.com/resized/film-poster/4/8/7/3/0/48730-elvira-mistress-of-the-dark-0-230-0-345-crop.jpg?k=78711124eb",
+    backdrop:
+      "https://a.ltrbxd.com/resized/sm/upload/p4/ql/eu/v9/zYKG3AiUUqSvQSYsy4JP0qJ2IlL-1200-1200-675-675-crop-000000.jpg?k=f7b58c1cc6",
   },
   {
     cast: [
@@ -3759,9 +4629,17 @@ const lboxData = [
     directors: ["John Dahl"],
     genres: ["mystery", "drama", "thriller"],
     id: 127,
+    tagline: "It was just a joke, just for fun.",
+    summary:
+      "Three young people on a road trip from Colorado to New Jersey talk to a trucker on their CB radio, then must escape when he turns out to be a psychotic killer.",
+    runtime: "97 mins",
     title: "Joy Ride",
     year: "2001",
     rating: "3.13",
+    poster:
+      "https://a.ltrbxd.com/resized/sm/upload/nw/2c/8o/8i/q8y2T2LvJV0mvia1RA9pS1K33GR-0-230-0-345-crop.jpg?k=c124317193",
+    backdrop:
+      "https://a.ltrbxd.com/resized/sm/upload/ow/nq/4v/0n/joy-ride-1200-1200-675-675-crop-000000.jpg?k=9ed47d6fd7",
   },
   {
     cast: [
@@ -3781,9 +4659,17 @@ const lboxData = [
     directors: ["Herschell Gordon Lewis"],
     genres: ["horror"],
     id: 128,
+    tagline: "Is It Magic? Or Wholesale Slaughter?",
+    summary:
+      "A TV talk-show hostess and her boyfriend investigate a shady magician whom has the ability to hypnotize and control the thoughts of people in order to stage gory on-stage illusions using his powers of mind bending.",
+    runtime: "95 mins",
     title: "The Wizard of Gore",
     year: "1970",
     rating: "2.85",
+    poster:
+      "https://a.ltrbxd.com/resized/film-poster/3/7/3/4/3/37343-the-wizard-of-gore-0-230-0-345-crop.jpg?k=83825dd69d",
+    backdrop:
+      "https://a.ltrbxd.com/resized/sm/upload/xv/ga/2j/5u/mh2FGo2Ov6W4KEl8ICu47RmTf7I-1200-1200-675-675-crop-000000.jpg?k=17eeef296a",
   },
   {
     cast: [
@@ -3817,9 +4703,16 @@ const lboxData = [
     directors: ["Terence Fisher"],
     genres: ["horror"],
     id: 129,
+    tagline:
+      "HALF-MAN... HALF-WOLF... COMPELLED BY THE HIDEOUS CURSE OF HIS EVIL BIRTH TO DESTROY - EVEN THOSE WHO LOVED HIM!",
+    summary:
+      "A child conceived after a demented beggar rapes a mute servant girl is raised by a wealthy but kindly bachelor gentleman and his woman servant who learn, years later, that he is a werewolf. His only chance for normalcy is to find a woman who will love him for himself, which will release him from the curse.",
+    runtime: "93 mins",
     title: "The Curse of the Werewolf",
     year: "1961",
     rating: "3.25",
+    poster:
+      "https://a.ltrbxd.com/resized/sm/upload/vg/ol/bw/1b/iZfGpI6uf7VDHZFQnTz9UH5FKGl-0-230-0-345-crop.jpg?k=aa57d85c32",
   },
   {
     cast: [
@@ -3845,9 +4738,17 @@ const lboxData = [
     directors: ["Steve Beck"],
     genres: ["thriller", "horror"],
     id: 130,
+    tagline: "Misery loves company.",
+    summary:
+      "Arthur and his two children, Kathy and Bobby, inherit his Uncle Cyrus's estate: a glass house that serves as a prison to 12 ghosts. When the family, accompanied by Bobby's Nanny and an attorney, enter the house they find themselves trapped inside an evil machine \"designed by the devil and powered by the dead\" to open the Eye of Hell. Aided by Dennis, a ghost hunter, and his rival Kalina, a ghost rights activist out to set the ghosts free, the group must do what they can to get out of the house alive.",
+    runtime: "91 mins",
     title: "Thir13en Ghosts",
     year: "2001",
     rating: "2.63",
+    poster:
+      "https://a.ltrbxd.com/resized/film-poster/4/7/2/1/8/47218-thir13en-ghosts-0-230-0-345-crop.jpg?k=6271c16f70",
+    backdrop:
+      "https://a.ltrbxd.com/resized/sm/upload/3l/b5/zn/ql/thirteen%20ghosts-1200-1200-675-675-crop-000000.jpg?k=95bb631287",
   },
   {
     cast: [
@@ -3868,9 +4769,16 @@ const lboxData = [
     directors: ["Larry Fessenden"],
     genres: ["drama", "thriller", "horror"],
     id: 131,
+    summary:
+      "A family from the city decide to spend a weekend away at a friend's country farmhouse. But a fluke accident sets off a chain of events that alters their lives forever and conjures up the ferocious spirit of the Wendigo.",
+    runtime: "91 mins",
     title: "Wendigo",
     year: "2001",
     rating: "2.86",
+    poster:
+      "https://a.ltrbxd.com/resized/film-poster/2/0/8/3/5/20835-wendigo-0-230-0-345-crop.jpg?k=c9c8139545",
+    backdrop:
+      "https://a.ltrbxd.com/resized/sm/upload/5v/oi/om/ta/v5QbzUkzCKzkTPbO50GvaI18gzD-1200-1200-675-675-crop-000000.jpg?k=0f82c590c4",
   },
   {
     cast: [
@@ -3893,9 +4801,14 @@ const lboxData = [
     directors: ["Helia Colombo"],
     genres: ["science-fiction", "horror", "crime", "thriller", "mystery"],
     id: 132,
+    summary:
+      "Reporter Giorgio D'Amato agrees to meet his friend Enrichetta at Edmondo Parisi's villa, but when he arrives the model has been stabbed to death with a pair of scissors.  Her presence at the villa had been requested by the crippled and neurotic Parisi who had invented a device which allows him to photograph thoughts.  The other guests are a strange bunch:  there is Eleonora, Parisi's lesbian wife; Alberto, the omnipresent butler and Lucia, the uninhibited housekeeper.  The only normal person seems to be young Sara, Edmondo's niece, who enlists D'Amato to find the murderer.  Soon the mysterious hand strikes again and this time it's Lucia's turn...",
+    runtime: "87 mins",
     title: "The Police Are Blundering in the Dark",
     year: "1975",
     rating: "2.72",
+    poster:
+      "https://a.ltrbxd.com/resized/film-poster/8/5/2/5/5/85255-the-police-are-blundering-in-the-dark-0-230-0-345-crop.jpg?k=53d9b0a842",
   },
   {
     cast: [
@@ -3916,9 +4829,14 @@ const lboxData = [
     directors: ["José Ramón Larraz"],
     genres: ["mystery", "horror", "thriller"],
     id: 133,
+    summary:
+      "An axe murderer terrorizes a small Northern California mountain community, while two young computer-obsessed adults attempt to solve the killings.",
+    runtime: "90 mins",
     title: "Edge of the Axe",
     year: "1988",
     rating: "2.85",
+    poster:
+      "https://a.ltrbxd.com/resized/film-poster/3/1/7/3/8/31738-edge-of-the-axe-0-230-0-345-crop.jpg?k=6e3c0dcdeb",
   },
   {
     cast: [
@@ -3941,9 +4859,15 @@ const lboxData = [
     directors: ["Albert S. Rogell"],
     genres: ["adventure", "horror", "mystery", "comedy", "romance"],
     id: 134,
+    tagline: "Even Ladd is scared!",
+    summary:
+      "Greedy heirs wait in a mansion for a rich cat lover to die, only to learn her cats come first.",
+    runtime: "70 mins",
     title: "The Black Cat",
     year: "1941",
-    rating: "2.90",
+    rating: "2.91",
+    poster:
+      "https://a.ltrbxd.com/resized/film-poster/3/2/9/9/1/32991-the-black-cat-0-230-0-345-crop.jpg?k=948be5796b",
   },
   {
     cast: [
@@ -3967,11 +4891,19 @@ const lboxData = [
       "Ray Sager",
     ],
     directors: ["Herschell Gordon Lewis"],
-    genres: ["horror", "comedy", "mystery"],
+    genres: ["comedy", "horror", "mystery"],
     id: 135,
+    tagline: "In screaming color",
+    summary:
+      "A ditsy reporter enlists the help of a sleazy private eye to solve a series of gory killings of female strippers at a Chicago nightclub.",
+    runtime: "81 mins",
     title: "The Gore Gore Girls",
     year: "1972",
     rating: "2.87",
+    poster:
+      "https://a.ltrbxd.com/resized/film-poster/3/3/8/6/1/33861-the-gore-gore-girls-0-230-0-345-crop.jpg?k=8711ed881f",
+    backdrop:
+      "https://a.ltrbxd.com/resized/sm/upload/67/zj/7s/tn/q99gHVkcH6Q5WHa7qjOjREkyD8c-1200-1200-675-675-crop-000000.jpg?k=1d2c890766",
   },
   {
     cast: [
@@ -4046,9 +4978,17 @@ const lboxData = [
     directors: ["John Waters"],
     genres: ["thriller", "crime", "comedy"],
     id: 136,
+    tagline: "Every Mom Wants to Be Wanted, But Not For Murder!",
+    summary:
+      "A picture perfect middle class family is shocked when they find out that one of their neighbors is receiving obscene phone calls. The mom takes slights against her family very personally, and it turns out she is indeed the one harassing the neighbor. As other slights befall her beloved family, the body count begins to increase.",
+    runtime: "94 mins",
     title: "Serial Mom",
     year: "1994",
     rating: "3.63",
+    poster:
+      "https://a.ltrbxd.com/resized/sm/upload/fv/k2/57/qf/rH1TpgzOuZcjf6SpNTVMLs9GZUm-0-230-0-345-crop.jpg?k=06eb5ea313",
+    backdrop:
+      "https://a.ltrbxd.com/resized/sm/upload/w6/h2/7u/kl/serial-mom-1200-1200-675-675-crop-000000.jpg?k=06eb5ea313",
   },
   {
     cast: [
@@ -4074,9 +5014,16 @@ const lboxData = [
     directors: ["Terence Fisher"],
     genres: ["horror", "mystery", "drama"],
     id: 137,
+    tagline:
+      "BENEATH HIS MASK...the Grotesque Face of Horror Unimaginable! INSIDE HIS HEART...the Desperate Desire for Beauty and Love!",
+    summary:
+      "The corrupt Lord Ambrose D'Arcy steals the life's work of the poor musical Professor Petry. In an attempt to stop the printing of music with D'Arcy's name on it, Petry breaks into the printing office and accidentally starts a fire, leaving him severely disfigured. Years later, Petry returns to terrorize a London opera house that is about to perform one of his stolen operas.",
+    runtime: "84 mins",
     title: "The Phantom of the Opera",
     year: "1962",
     rating: "3.12",
+    poster:
+      "https://a.ltrbxd.com/resized/film-poster/1/8/9/9/9/18999-the-phantom-of-the-opera-0-230-0-345-crop.jpg?k=641560bf78",
   },
   {
     cast: [
@@ -4097,9 +5044,15 @@ const lboxData = [
     directors: ["Edwin L. Marin"],
     genres: ["adventure", "science-fiction", "war", "romance", "comedy"],
     id: 138,
+    tagline: "Today's most amazing sensation!",
+    summary:
+      "The Invisible Man's grandson uses his secret formula to spy on Nazi Germany in this comedy-thriller.",
+    runtime: "81 mins",
     title: "Invisible Agent",
     year: "1942",
     rating: "2.88",
+    poster:
+      "https://a.ltrbxd.com/resized/film-poster/3/3/6/8/2/33682-invisible-agent-0-230-0-345-crop.jpg?k=50f1c2d93a",
   },
   {
     cast: [
@@ -4116,9 +5069,14 @@ const lboxData = [
     directors: ["León Klimovsky"],
     genres: ["drama", "horror"],
     id: 139,
+    summary:
+      "Daniel, a writer seeking seclusion to work on his new book, finds himself stranded at a rural bed and breakfast run by a strange and prudish young woman and her ailing, wheelchair-bound husband who remains shut in his room all day. As night falls, a psychotic, razor-wielding killer begins stalking the bed and breakfast, brutally slashing the throats of its most sex-crazed guests, whose bodies and luggage then mysteriously disappear the following morning...",
+    runtime: "82 mins",
     title: "Trauma",
     year: "1978",
-    rating: "2.92",
+    rating: "2.93",
+    poster:
+      "https://a.ltrbxd.com/resized/film-poster/3/3/6/2/8/33628-trauma-0-230-0-345-crop.jpg?k=ccbbd19b03",
   },
   {
     cast: [
@@ -4136,9 +5094,15 @@ const lboxData = [
     directors: ["Herschell Gordon Lewis"],
     genres: ["comedy", "horror"],
     id: 140,
+    tagline: "Fiendish is the word for it!",
+    summary:
+      "Gore specialist H.G. Lewis' gruesome tale of an artist who becomes a success after using human blood in his paintings.",
+    runtime: "79 mins",
     title: "Color Me Blood Red",
     year: "1965",
     rating: "2.79",
+    poster:
+      "https://a.ltrbxd.com/resized/film-poster/3/3/8/5/1/33851-color-me-blood-red-0-230-0-345-crop.jpg?k=e6416d5819",
   },
   {
     cast: [
@@ -4157,9 +5121,17 @@ const lboxData = [
     directors: ["Steve Beck"],
     genres: ["horror", "thriller", "mystery"],
     id: 141,
+    tagline: "Sea Evil",
+    summary:
+      "After discovering a passenger ship missing since 1962 floating adrift on the Bering Sea, salvagers claim the vessel as their own. Once they begin towing the ghost ship towards harbor, a series of bizarre occurrences happen and the group becomes trapped inside the ship, which they soon learn is inhabited by a demonic creature.",
+    runtime: "91 mins",
     title: "Ghost Ship",
     year: "2002",
     rating: "2.37",
+    poster:
+      "https://a.ltrbxd.com/resized/film-poster/4/6/9/5/6/46956-ghost-ship-0-230-0-345-crop.jpg?k=4a76667822",
+    backdrop:
+      "https://a.ltrbxd.com/resized/sm/upload/ui/3p/e6/ov/ghost%20ship-1200-1200-675-675-crop-000000.jpg?k=0418108d54",
   },
   {
     cast: [
@@ -4175,9 +5147,15 @@ const lboxData = [
     directors: ["Larry Fessenden"],
     genres: ["horror", "thriller"],
     id: 142,
+    tagline: "What if mankind only had one season left on Earth?",
+    summary:
+      "In the Arctic region of Northern Alaska, an oil company's advance team struggles to establish a drilling base that will forever alter the pristine land. After one team member is found dead, a disorientation slowly claims the sanity of the others as each of them succumbs to a mysterious fear.",
+    runtime: "101 mins",
     title: "The Last Winter",
     year: "2006",
     rating: "2.82",
+    poster:
+      "https://a.ltrbxd.com/resized/film-poster/4/2/2/0/1/42201-the-last-winter-0-230-0-345-crop.jpg?k=c2b6ab629d",
   },
   {
     cast: [
@@ -4204,11 +5182,16 @@ const lboxData = [
       "Jennifer Kowalchuk",
     ],
     directors: ["Adam Brooks", "Matthew Kennedy"],
-    genres: ["horror", "comedy", "mystery"],
+    genres: ["mystery", "horror", "comedy"],
     id: 143,
+    summary:
+      "A one-time (and now one-handed) master film editor toiling in the cinematic sweatshops of 1970s Italy becomes the prime suspect in a series of brutal murders.",
+    runtime: "95 mins",
     title: "The Editor",
     year: "2014",
     rating: "3.23",
+    poster:
+      "https://a.ltrbxd.com/resized/film-poster/2/1/1/1/3/3/211133-the-editor-0-230-0-345-crop.jpg?k=1c59b7cec9",
   },
   {
     cast: [
@@ -4262,9 +5245,16 @@ const lboxData = [
     directors: ["Umberto Lenzi", "James Justice"],
     genres: ["horror", "thriller"],
     id: 144,
+    summary:
+      'Florida:  Biker Edward Santer, known as "Diablo", is electrocuted for murder.  He goes to the chair protesting his innocence, claiming he was set up by the local police chief and vowing vengeance from beyond the grave.  Several teenagers are soon discovered dead, having been electrocuted.  It seems Diablo\'s curse has come true.  The mayor keeps the murders quiet because the town is celebrating "Spring Break", an annual festival in which thousands of students spend all their dollars having a good time.  Suspects include the town\'s alcoholic doctor, the fascist police chief and Reverend Bates, whose wayward daughter is having sex with every young man in sight.',
+    runtime: "90 mins",
     title: "Nightmare Beach",
     year: "1989",
     rating: "2.88",
+    poster:
+      "https://a.ltrbxd.com/resized/film-poster/6/1/7/0/4/61704-nightmare-beach-0-230-0-345-crop.jpg?k=c14f5a1238",
+    backdrop:
+      "https://a.ltrbxd.com/resized/sm/upload/r9/ce/ud/x6/nightmare-beach-1200-1200-675-675-crop-000000.jpg?k=6c98bb6d38",
   },
   {
     cast: [
@@ -4286,9 +5276,15 @@ const lboxData = [
     directors: ["Don Sharp"],
     genres: ["horror"],
     id: 145,
+    tagline: "Shocking! - Horrifying! - Macabre!",
+    summary:
+      "Honeymooning in Bavaria, the young couple become stranded and are forced to stay the night in the area. Doctor Ravna, owner of the impressive chateau that sits imposingly above the village, invites them to dinner that evening. Their association with Ravna and his charming, beautiful family is to prove disastrous as they become unwittingly embroiled with this family of vampires who seek to initiate them into their diabolical creed.",
+    runtime: "88 mins",
     title: "The Kiss of the Vampire",
     year: "1963",
     rating: "3.08",
+    poster:
+      "https://a.ltrbxd.com/resized/film-poster/5/5/7/1/5/55715-the-kiss-of-the-vampire-0-230-0-345-crop.jpg?k=cc9d80b677",
   },
   {
     cast: [
@@ -4332,9 +5328,17 @@ const lboxData = [
     directors: ["George Stevens"],
     genres: ["western", "drama"],
     id: 146,
+    tagline: "NOW HE'S TOO RICH TO KILL.",
+    summary:
+      '"Giant" is a movie of huge scale and grandeur in which three generations of land-rich Texans love, swagger, connive and clash in a saga of family strife, racial bigotry and conflict between cattle barons and newly rich oil tycoons.',
+    runtime: "201 mins",
     title: "Giant",
     year: "1956",
     rating: "3.78",
+    poster:
+      "https://a.ltrbxd.com/resized/film-poster/5/0/8/3/9/50839-giant-0-230-0-345-crop.jpg?k=46b5342d68",
+    backdrop:
+      "https://a.ltrbxd.com/resized/sm/upload/u6/gl/h7/s4/giant-1200-1200-675-675-crop-000000.jpg?k=c73205d20f",
   },
   {
     cast: [
@@ -4354,9 +5358,14 @@ const lboxData = [
     directors: ["Giuliano Carnimeo"],
     genres: ["mystery", "western"],
     id: 147,
+    summary:
+      "Sartana is falsely accused of robbing a bank, and must find the real robbers and clear his name.",
+    runtime: "102 mins",
     title: "Sartana the Gravedigger",
     year: "1969",
     rating: "3.34",
+    poster:
+      "https://a.ltrbxd.com/resized/film-poster/3/1/6/316-sartana-the-gravedigger-0-230-0-345-crop.jpg?k=8de044109e",
   },
   {
     cast: [
@@ -4384,9 +5393,18 @@ const lboxData = [
     directors: ["Don Siegel"],
     genres: ["western"],
     id: 148,
+    tagline:
+      "CLINT EASTWOOD...the deadliest man alive...takes on a whole army with two guns and a fistful of dynamite!",
+    summary:
+      "Hogan, on his way to do some reconnaissance for a future mission to capture a French fort, encounters Sister Sara, a nun in trouble. Before he knows it, Hogan is accompanying Sister Sara in the dangerous frontier while she seeks to achieve a hidden goal.",
+    runtime: "114 mins",
     title: "Two Mules for Sister Sara",
     year: "1970",
     rating: "3.42",
+    poster:
+      "https://a.ltrbxd.com/resized/film-poster/4/4/8/9/0/44890-two-mules-for-sister-sara-0-230-0-345-crop.jpg?k=fb6e7aa126",
+    backdrop:
+      "https://a.ltrbxd.com/resized/sm/upload/ym/o6/aa/su/two%20mules-1200-1200-675-675-crop-000000.jpg?k=f9c710e8c8",
   },
   {
     cast: [
@@ -4408,9 +5426,17 @@ const lboxData = [
     directors: ["John Sturges"],
     genres: ["western"],
     id: 149,
+    tagline: "If you're looking for trouble - - - he's JOE KIDD",
+    summary:
+      "A band of Mexicans find their U. S. land claims denied and all the records destroyed in a courthouse fire. Their leader, Louis Chama, encourages them to use force to regain their land. A wealthy landowner wanting the same decides to hire a gang of killers with Joe Kidd to track Chama.",
+    runtime: "88 mins",
     title: "Joe Kidd",
     year: "1972",
     rating: "3.06",
+    poster:
+      "https://a.ltrbxd.com/resized/film-poster/4/2/7/4/2/42742-joe-kidd-0-230-0-345-crop.jpg?k=32076182f6",
+    backdrop:
+      "https://a.ltrbxd.com/resized/sm/upload/ep/un/po/t2/joekidd-1200-1200-675-675-crop-000000.jpg?k=a5254b1c90",
   },
   {
     cast: [
@@ -4437,9 +5463,16 @@ const lboxData = [
     directors: ["George McCowan"],
     genres: ["western"],
     id: 150,
+    tagline:
+      "A Brand New Seven -- Doing Their Number! They put their lives on the line and let it ride!",
+    summary:
+      "Marshal Chris Adams turns down a friend's request to help stop the depredations of a gang of Mexican bandits. When his wife is killed by bank robbers and his friend is killed capturing the last thief, Chris feels obligated to take up his friend's cause and recruits a writer and five prisoners to destroy the desperadoes.The last in the original series of four \"Magnificent Seven\" movies.",
+    runtime: "100 mins",
     title: "The Magnificent Seven Ride!",
     year: "1972",
     rating: "2.63",
+    poster:
+      "https://a.ltrbxd.com/resized/film-poster/2/1/7/3/2/21732-the-magnificent-seven-ride--0-230-0-345-crop.jpg?k=3da6db00a1",
   },
   {
     cast: [
@@ -4544,9 +5577,17 @@ const lboxData = [
     directors: ["Richard Donner"],
     genres: ["science-fiction", "action", "adventure"],
     id: 151,
+    tagline: "You'll Believe a Man Can Fly!",
+    summary:
+      "Mild-mannered Clark Kent works as a reporter at the Daily Planet alongside his crush, Lois Lane. Clark must summon his superhero alter-ego when the nefarious Lex Luthor launches a plan to take over the world.",
+    runtime: "143 mins",
     title: "Superman",
     year: "1978",
     rating: "3.62",
+    poster:
+      "https://a.ltrbxd.com/resized/film-poster/5/0/6/8/1/50681-superman-0-230-0-345-crop.jpg?k=0480937fe6",
+    backdrop:
+      "https://a.ltrbxd.com/resized/sm/upload/tk/8z/fn/pl/superman-1200-1200-675-675-crop-000000.jpg?k=ff25b75b92",
   },
   {
     cast: [
@@ -4572,11 +5613,20 @@ const lboxData = [
       "Ferdinando Poggi",
     ],
     directors: ["Desmond Davis"],
-    genres: ["family", "adventure", "fantasy"],
+    genres: ["fantasy", "family", "adventure"],
     id: 152,
+    tagline:
+      "You will feel the power. Live the adventure. Experience the fantastic.",
+    summary:
+      "To win the right to marry his love, the beautiful princess Andromeda, and fulfil his destiny, Perseus must complete various tasks including taming Pegasus, capturing Medusa's head, and battling the Kraken monster.",
+    runtime: "118 mins",
     title: "Clash of the Titans",
     year: "1981",
     rating: "3.28",
+    poster:
+      "https://a.ltrbxd.com/resized/sm/upload/hk/vx/1t/fr/77simLQEJDvTKfRNirihyUYwMEv-0-230-0-345-crop.jpg?k=8e1ff196ed",
+    backdrop:
+      "https://a.ltrbxd.com/resized/sm/upload/9l/92/x1/ot/clash-of-the-titans-1200-1200-675-675-crop-000000.jpg?k=697377c73a",
   },
   {
     cast: [
@@ -4667,9 +5717,17 @@ const lboxData = [
     directors: ["David Yates"],
     genres: ["mystery", "fantasy", "adventure"],
     id: 153,
+    tagline: "Evil Must Be Confronted.",
+    summary:
+      "Returning for his fifth year of study at Hogwarts, Harry is stunned to find that his warnings about the return of Lord Voldemort have been ignored. Left with no choice, Harry takes matters into his own hands, training a small group of students – dubbed 'Dumbledore's Army' – to defend themselves against the dark arts.",
+    runtime: "138 mins",
     title: "Harry Potter and the Order of the Phoenix",
     year: "2007",
     rating: "3.63",
+    poster:
+      "https://a.ltrbxd.com/resized/sm/upload/wd/w4/n0/yj/g6n8G0xPnBVUIKKK41sNmbZB5h4-0-230-0-345-crop.jpg?k=eb5926dcb8",
+    backdrop:
+      "https://a.ltrbxd.com/resized/sm/upload/z2/u4/ow/ba/harry-potter-order-phoenix-80-1200-1200-675-675-crop-000000.jpg?k=4024cf7e26",
   },
   {
     cast: [
@@ -4716,9 +5774,17 @@ const lboxData = [
     directors: ["Jordan Vogt-Roberts"],
     genres: ["action", "fantasy", "adventure"],
     id: 154,
+    tagline: "All hail the king",
+    summary:
+      "Explore the mysterious and dangerous home of the king of the apes as a team of explorers ventures deep inside the treacherous, primordial island.",
+    runtime: "118 mins",
     title: "Kong: Skull Island",
     year: "2017",
     rating: "3.06",
+    poster:
+      "https://a.ltrbxd.com/resized/film-poster/2/2/0/0/8/0/220080-kong-skull-island-0-230-0-345-crop.jpg?k=175fd66c0d",
+    backdrop:
+      "https://a.ltrbxd.com/resized/sm/upload/xm/xm/sp/lj/kong-skull-island-1200-1200-675-675-crop-000000.jpg?k=b51da35a41",
   },
   {
     cast: [
@@ -4791,7 +5857,6 @@ const lboxData = [
       "Kierra Luv",
       "Bill Prady",
       "Nicolas Bosc",
-      "Patti Brindley",
       "Daniel Dorr",
       "Doug Gagnon",
       "Gregory Hobson",
@@ -4804,9 +5869,17 @@ const lboxData = [
     directors: ["Dean Parisot"],
     genres: ["adventure", "comedy", "science-fiction"],
     id: 155,
+    tagline: "The future awaits",
+    summary:
+      "Yet to fulfill their rock and roll destiny, the now middle-aged best friends Bill and Ted set out on a new adventure when a visitor from the future warns them that only their song can save life as we know it. Along the way, they are helped by their daughters, a new batch of historical figures and a few music legends—to seek the song that will set their world right and bring harmony to the universe.",
+    runtime: "92 mins",
     title: "Bill & Ted Face the Music",
     year: "2020",
     rating: "3.19",
+    poster:
+      "https://a.ltrbxd.com/resized/film-poster/4/3/1/9/1/5/431915-bill-ted-face-the-music-0-230-0-345-crop.jpg?k=8fd38ae807",
+    backdrop:
+      "https://a.ltrbxd.com/resized/sm/upload/nb/gs/nt/4z/bill-ted-face-the-music-1200-1200-675-675-crop-000000.jpg?k=eda0082fc8",
   },
   {
     cast: [
@@ -4829,9 +5902,17 @@ const lboxData = [
     directors: ["Boris Sagal"],
     genres: ["thriller", "drama", "science-fiction", "action"],
     id: 156,
+    tagline: "The last man alive... is not alone!",
+    summary:
+      "Due to an experimental vaccine, Dr. Robert Neville is the only human survivor of an apocalyptic war waged with biological weapons. Besides him, only a few hundred deformed, nocturnal people remain - sensitive to light, and homicidally psychotic.",
+    runtime: "98 mins",
     title: "The Omega Man",
     year: "1971",
     rating: "3.06",
+    poster:
+      "https://a.ltrbxd.com/resized/film-poster/4/5/4/7/5/45475-the-omega-man-0-230-0-345-crop.jpg?k=46d75df516",
+    backdrop:
+      "https://a.ltrbxd.com/resized/sm/upload/jh/lo/p7/hi/omega%20man-1200-1200-675-675-crop-000000.jpg?k=46d75df516",
   },
   {
     cast: [
@@ -4846,9 +5927,18 @@ const lboxData = [
     directors: ["Douglas Trumbull"],
     genres: ["science-fiction", "adventure"],
     id: 157,
+    tagline:
+      "Amazing companions on an incredible journey...that journeys beyond imagination!",
+    summary:
+      "In a future Earth barren of all flora and fauna, the planet's ecosystems exist only in large pods attached to spacecraft. When word comes in that the pods are to be jettisoned into space and destroyed so that the spacecraft can be reused for commercial purposes, most of the crew of the Valley Forge rejoice at the prospect of going home. Not so for botanist Freeman Lowell who loves the forest and its creatures, so decides to take matters into his own hands to protect what he loves.",
+    runtime: "89 mins",
     title: "Silent Running",
     year: "1972",
     rating: "3.28",
+    poster:
+      "https://a.ltrbxd.com/resized/sm/upload/kf/uj/0a/4x/kyEljmcf7YYmp85BdZffqiuRLfV-0-230-0-345-crop.jpg?k=656721ee44",
+    backdrop:
+      "https://a.ltrbxd.com/resized/sm/upload/qs/5j/z8/zj/silent-running-1200-1200-675-675-crop-000000.jpg?k=12b0935571",
   },
   {
     cast: [
@@ -4877,9 +5967,17 @@ const lboxData = [
     directors: ["George Roy Hill"],
     genres: ["war", "drama", "science-fiction"],
     id: 158,
+    tagline: "Billy Pilgrim lives - from time to time to time…",
+    summary:
+      "Billy Pilgrim, a veteran of the Second World War, finds himself mysteriously detached from time, so that he is able to travel, without being able to help it, from the days of his childhood to those of his peculiar life on a distant planet called Tralfamadore, passing through his bitter experience as a prisoner of war in the German city of Dresden, over which looms the inevitable shadow of an unspeakable tragedy.",
+    runtime: "100 mins",
     title: "Slaughterhouse-Five",
     year: "1972",
     rating: "3.35",
+    poster:
+      "https://a.ltrbxd.com/resized/film-poster/3/6/6/9/1/36691-slaughterhouse-five-0-230-0-345-crop.jpg?k=95f98ca286",
+    backdrop:
+      "https://a.ltrbxd.com/resized/sm/upload/sh/gs/95/pn/slagutherhousefive-1200-1200-675-675-crop-000000.jpg?k=9a649e3b37",
   },
   {
     cast: [
@@ -4911,9 +6009,17 @@ const lboxData = [
     directors: ["Ralph Bakshi"],
     genres: ["fantasy", "animation", "science-fiction"],
     id: 159,
+    tagline: "An epic fantasy of peace and magic.",
+    summary:
+      "After the death of his mother, the evil mutant wizard Blackwolf discovers some long-lost military technologies. Full of ego and ambition, Blackwolf claims his mother's throne, assembles an army and sets out to brainwash and conquer Earth. Meanwhile, Blackwolf's gentle twin brother, the bearded and sage Avatar, calls upon his own magical abilities to foil Blackwolf's plans for world domination -- even if it means destroying his own flesh and blood.",
+    runtime: "80 mins",
     title: "Wizards",
     year: "1977",
     rating: "3.21",
+    poster:
+      "https://a.ltrbxd.com/resized/sm/upload/fg/j2/h8/r6/wDnuXtSyX6oUWWBILreVBUDn8Ci-0-230-0-345-crop.jpg?k=596796f3ae",
+    backdrop:
+      "https://a.ltrbxd.com/resized/sm/upload/b3/bn/8c/tz/wizards-1200-1200-675-675-crop-000000.jpg?k=8d1eef6dc2",
   },
   {
     cast: [
@@ -4981,9 +6087,16 @@ const lboxData = [
     directors: ["Slava Tsukerman"],
     genres: ["science-fiction", "comedy"],
     id: 160,
+    summary:
+      "Invisible aliens in a tiny flying saucer come to Earth looking for heroin. They land on top of a New York apartment inhabited by a drug dealer and her female, androgynous, bisexual nymphomaniac lover, a fashion model. The aliens soon find the human pheromones created in the brain during orgasm preferable to heroin, and the model's casual sex partners begin to disappear. This increasingly bizarre scenario is observed by a lonely woman in the building across the street, a German scientist who is following the aliens, and an equally androgynous, drug-addicted male model.",
+    runtime: "112 mins",
     title: "Liquid Sky",
     year: "1982",
     rating: "3.42",
+    poster:
+      "https://a.ltrbxd.com/resized/film-poster/3/8/6/7/3/38673-liquid-sky-0-230-0-345-crop.jpg?k=c0f37b3fdb",
+    backdrop:
+      "https://a.ltrbxd.com/resized/sm/upload/8r/i5/wc/in/liquid-sky-1200-1200-675-675-crop-000000.jpg?k=154ad9ee92",
   },
   {
     cast: [
@@ -5018,9 +6131,17 @@ const lboxData = [
     directors: ["Terence Young"],
     genres: ["thriller", "action", "adventure"],
     id: 161,
+    tagline: "Now meet the most extraordinary gentleman spy in all fiction!",
+    summary:
+      "In the film that launched the James Bond saga, Agent 007 battles mysterious Dr. No, a scientific genius bent on destroying the U.S. space program. As the countdown to disaster begins, Bond must go to Jamaica, where he encounters beautiful Honey Ryder, to confront a megalomaniacal villain in his massive island headquarters.",
+    runtime: "110 mins",
     title: "Dr. No",
     year: "1962",
     rating: "3.44",
+    poster:
+      "https://a.ltrbxd.com/resized/film-poster/5/1/4/7/8/51478-dr-no-0-230-0-345-crop.jpg?k=a637aa9ea4",
+    backdrop:
+      "https://a.ltrbxd.com/resized/sm/upload/pf/z0/9x/ff/dr-no-1200-1200-675-675-crop-000000.jpg?k=d729c3f878",
   },
   {
     cast: [
@@ -5047,9 +6168,17 @@ const lboxData = [
     directors: ["Peter Yates"],
     genres: ["thriller", "action", "drama", "crime"],
     id: 162,
+    tagline: "There are bad cops, good cops - and then there's Bullitt.",
+    summary:
+      "Senator Walter Chalmers is aiming to take down mob boss Pete Ross with the help of testimony from the criminal's hothead brother Johnny, who is in protective custody in San Francisco under the watch of police lieutenant Frank Bullitt. When a pair of mob hitmen enter the scene, Bullitt follows their trail through a maze of complications and double-crosses. This thriller includes one of the most famous car chases ever filmed.",
+    runtime: "113 mins",
     title: "Bullitt",
     year: "1968",
     rating: "3.63",
+    poster:
+      "https://a.ltrbxd.com/resized/film-poster/5/1/2/3/7/51237-bullitt-0-230-0-345-crop.jpg?k=7ce6471fb6",
+    backdrop:
+      "https://a.ltrbxd.com/resized/sm/upload/85/iu/0t/oy/bullitt-1200-1200-675-675-crop-000000.jpg?k=dadeb5514d",
   },
   {
     cast: [
@@ -5114,9 +6243,18 @@ const lboxData = [
     directors: ["Don Siegel"],
     genres: ["thriller", "action", "crime"],
     id: 163,
+    tagline:
+      "Detective Harry Callahan. He doesn't break murder cases. He smashes them.",
+    summary:
+      "When a madman dubbed 'Scorpio' terrorizes San Francisco, hard-nosed cop, Harry Callahan – famous for his take-no-prisoners approach to law enforcement – is tasked with hunting down the psychopath. Harry eventually collars Scorpio in the process of rescuing a kidnap victim, only to see him walk on technicalities. Now, the maverick detective is determined to nail the maniac himself.",
+    runtime: "102 mins",
     title: "Dirty Harry",
     year: "1971",
     rating: "3.73",
+    poster:
+      "https://a.ltrbxd.com/resized/film-poster/5/1/1/8/5/51185-dirty-harry-0-230-0-345-crop.jpg?k=3bb68c818a",
+    backdrop:
+      "https://a.ltrbxd.com/resized/sm/upload/2f/0x/2k/z0/dirty-harry-1200-1200-675-675-crop-000000.jpg?k=1c8dfec16e",
   },
   {
     cast: [
@@ -5188,11 +6326,20 @@ const lboxData = [
       "Norman D. Wilson",
     ],
     directors: ["Richard Donner"],
-    genres: ["thriller", "comedy", "adventure", "crime", "action"],
+    genres: ["comedy", "thriller", "adventure", "crime", "action"],
     id: 164,
+    tagline:
+      "If these two can learn to stand each other... the bad guys don't stand a chance.",
+    summary:
+      "Veteran buttoned-down LAPD detective Roger Murtaugh is partnered with unhinged cop Martin Riggs, who -- distraught after his wife's death -- has a death wish and takes unnecessary risks with criminals at every turn. The odd couple embark on their first homicide investigation as partners, involving a young woman known to Murtaugh with ties to a drug and prostitution ring.",
+    runtime: "110 mins",
     title: "Lethal Weapon",
     year: "1987",
     rating: "3.67",
+    poster:
+      "https://a.ltrbxd.com/resized/sm/upload/zv/vc/5m/ax/mF2bTqJuxbZPeEJRIMrA2WeQVxu-0-230-0-345-crop.jpg?k=19ea48623b",
+    backdrop:
+      "https://a.ltrbxd.com/resized/sm/upload/9v/h5/ld/93/lethal-weapon-1200-1200-675-675-crop-000000.jpg?k=4a865e324e",
   },
   {
     cast: [
@@ -5264,9 +6411,18 @@ const lboxData = [
     directors: ["Andrew Davis"],
     genres: ["drama", "thriller", "action"],
     id: 165,
+    tagline:
+      "A murdered wife. A one-armed man. An obsessed detective. The chase begins.",
+    summary:
+      "Wrongfully convicted of murdering his wife and sentenced to death, Richard Kimble escapes from the law in an attempt to find her killer and clear his name. Pursuing him is a team of U.S. marshals led by Deputy Samuel Gerard, a determined detective who will not rest until Richard is captured. As Kimble leads the marshals through a series of intricate chases, he uncovers the secret behind his wife's death and struggles to expose the killer before he is recaptured, or killed.",
+    runtime: "131 mins",
     title: "The Fugitive",
     year: "1993",
     rating: "3.80",
+    poster:
+      "https://a.ltrbxd.com/resized/film-poster/4/8/8/2/3/48823-the-fugitive-0-230-0-345-crop.jpg?k=4ae2124c82",
+    backdrop:
+      "https://a.ltrbxd.com/resized/sm/upload/e1/dg/mb/km/the-fugitive-1200-1200-675-675-crop-000000.jpg?k=82a9e6fa63",
   },
   {
     cast: [
@@ -5357,9 +6513,17 @@ const lboxData = [
     directors: ["David Lynch"],
     genres: ["drama", "history"],
     id: 166,
+    tagline: "I am not an animal! I am a human being! I … am … a man!",
+    summary:
+      'A Victorian surgeon rescues a heavily disfigured man being mistreated by his "owner" as a side-show freak. Behind his monstrous façade, there is revealed a person of great intelligence and sensitivity. Based on the true story of Joseph Merrick (called John Merrick in the film), a severely deformed man in 19th century London.',
+    runtime: "124 mins",
     title: "The Elephant Man",
     year: "1980",
     rating: "4.12",
+    poster:
+      "https://a.ltrbxd.com/resized/film-poster/5/0/6/5/3/50653-the-elephant-man-0-230-0-345-crop.jpg?k=90aabaafe0",
+    backdrop:
+      "https://a.ltrbxd.com/resized/sm/upload/lu/9f/xa/m8/elephant-man-1200-1200-675-675-crop-000000.jpg?k=b3148a7b31",
   },
   {
     cast: [
@@ -5423,9 +6587,17 @@ const lboxData = [
     directors: ["Steven Spielberg"],
     genres: ["drama"],
     id: 167,
+    tagline: "It's about life. It's about love. It's about us.",
+    summary:
+      'An epic tale spanning forty years in the life of Celie, an African-American woman living in the South who survives incredible abuse and bigotry.  After Celie\'s abusive father marries her off to the equally debasing "Mister" Albert Johnson, things go from bad to worse, leaving Celie to find companionship anywhere she can.  She perseveres, holding on to her dream of one day being reunited with her sister in Africa. Based on the novel by Alice Walker.',
+    runtime: "154 mins",
     title: "The Color Purple",
     year: "1985",
     rating: "3.81",
+    poster:
+      "https://a.ltrbxd.com/resized/film-poster/5/1/2/7/9/51279-the-color-purple-0-230-0-345-crop.jpg?k=529635a338",
+    backdrop:
+      "https://a.ltrbxd.com/resized/sm/upload/ej/v5/ey/40/the-color-purple-1200-1200-675-675-crop-000000.jpg?k=bee7fe359c",
   },
   {
     cast: [
@@ -5461,9 +6633,17 @@ const lboxData = [
     directors: ["Terry George"],
     genres: ["war", "drama", "history"],
     id: 168,
+    tagline: "When the world closed its eyes, he opened his arms.",
+    summary:
+      "Inspired by true events, this film takes place in Rwanda in the 1990s when more than a million Tutsis were killed in a genocide that went mostly unnoticed by the rest of the world. Hotel owner Paul Rusesabagina houses over a thousand refuges in his hotel in attempt to save their lives.",
+    runtime: "121 mins",
     title: "Hotel Rwanda",
     year: "2004",
     rating: "3.71",
+    poster:
+      "https://a.ltrbxd.com/resized/film-poster/5/1/8/4/8/51848-hotel-rwanda-0-230-0-345-crop.jpg?k=cfcff9d98e",
+    backdrop:
+      "https://a.ltrbxd.com/resized/sm/upload/re/nv/re/y2/hotel-rwanda-1200-1200-675-675-crop-000000.jpg?k=117b87ac9d",
   },
   {
     cast: [
@@ -5491,9 +6671,16 @@ const lboxData = [
     directors: ["Alfonso Cuarón"],
     genres: ["drama"],
     id: 169,
+    summary:
+      "In 1970s Mexico City, two domestic workers help a mother of four while her husband is away for an extended period of time.",
+    runtime: "135 mins",
     title: "Roma",
     year: "2018",
     rating: "4.09",
+    poster:
+      "https://a.ltrbxd.com/resized/film-poster/3/5/9/8/5/9/359859-roma-0-230-0-345-crop.jpg?k=c88283239d",
+    backdrop:
+      "https://a.ltrbxd.com/resized/sm/upload/kq/s9/tp/d3/roma-1200-1200-675-675-crop-000000.jpg?k=3d098ad7b2",
   },
   {
     cast: [
@@ -5558,9 +6745,17 @@ const lboxData = [
     directors: ["Noah Baumbach"],
     genres: ["drama"],
     id: 170,
+    tagline: "Where there's a love, there's a way.",
+    summary:
+      "A stage director and an actress struggle through a grueling, coast-to-coast divorce that pushes them to their personal extremes.",
+    runtime: "137 mins",
     title: "Marriage Story",
     year: "2019",
     rating: "4.00",
+    poster:
+      "https://a.ltrbxd.com/resized/film-poster/4/2/2/6/8/2/422682-marriage-story-0-230-0-345-crop.jpg?k=2823e98a0b",
+    backdrop:
+      "https://a.ltrbxd.com/resized/sm/upload/q9/0n/be/sq/marriage-story-1200-1200-675-675-crop-000000.jpg?k=3594974081",
   },
   {
     cast: [
@@ -5581,35 +6776,49 @@ const lboxData = [
     directors: ["Harold Young"],
     genres: ["thriller", "fantasy", "horror", "mystery"],
     id: 171,
+    tagline: "The FEAR of the Year!",
+    summary:
+      "A high priest of Karnak travels to America with the living mummy Kharis (Lon Chaney Jr.) to kill all those who had desecrated the tomb of the Egyptian princess Ananka thirty years earlier.",
+    runtime: "61 mins",
     title: "The Mummy's Tomb",
     year: "1942",
     rating: "2.56",
+    poster:
+      "https://a.ltrbxd.com/resized/film-poster/3/3/0/2/4/33024-the-mummy-s-tomb-0-230-0-345-crop.jpg?k=85fd886021",
   },
   {
     cast: [
       "Lon Chaney Jr.",
-      "Dennis Moore",
-      "Kay Harding",
-      "Virginia Christine",
       "Peter Coe",
+      "Virginia Christine",
+      "Kay Harding",
+      "Dennis Moore",
       "Martin Kosleck",
+      "Kurt Katch",
       "Addison Richards",
       "Holmes Herbert",
       "Ann Codee",
-      "Kurt Katch",
       "Napoleon Simpson",
       "William Farnum",
       "Charles Stevens",
       "Tony Santoro",
       "Nina Bara",
       "Budd Buster",
+      "Hector V. Sarno",
+      "Al Ferguson",
     ],
     directors: ["Leslie Goodwins"],
-    genres: ["horror"],
+    genres: ["thriller", "romance", "fantasy", "horror"],
     id: 172,
+    tagline: "Egypt's ancient loves live again in evil!",
+    summary:
+      "After being buried in quicksand for the past 25 years, Kharis is set free to roam the rural bayous of Louisiana, as is the soul of his beloved Princess Ananka, still housed in the body of Amina Mansouri, who seeks help and protection at a swamp draining project.",
+    runtime: "60 mins",
     title: "The Mummy's Curse",
     year: "1944",
     rating: "2.48",
+    poster:
+      "https://a.ltrbxd.com/resized/film-poster/3/3/0/2/2/33022-the-mummy-s-curse-0-230-0-345-crop.jpg?k=1805c6c60f",
   },
   {
     cast: [
@@ -5622,13 +6831,28 @@ const lboxData = [
       "Kurt Katch",
       "Richard Karlan",
       "Peggy King",
+      "Mel Welles",
+      "George Khoury",
+      "Eddie Parker",
+      "Jan Arvan",
+      "Carole Costello",
+      "Ted Hecht",
+      "Hank Mann",
+      "Michael Vallon",
+      "Veola Vonn",
     ],
     directors: ["Charles Lamont"],
-    genres: ["horror", "comedy"],
+    genres: ["horror", "comedy", "fantasy", "adventure"],
     id: 173,
+    tagline: "They're back -- in their mummy's arms!",
+    summary:
+      "When the murder of an archaeologist puts a valuable medallion into their hands, Abbott and Costello waste little time in trying to sell it, only to find themselves pursued by police, a slinky adventuress, an Egyptian high priest, and the mummy himself.",
+    runtime: "79 mins",
     title: "Abbott and Costello Meet the Mummy",
     year: "1955",
     rating: "2.92",
+    poster:
+      "https://a.ltrbxd.com/resized/film-poster/3/5/1/4/5/35145-abbott-and-costello-meet-the-mummy-0-230-0-345-crop.jpg?k=9a4bbd8780",
   },
   {
     cast: [
@@ -5657,9 +6881,15 @@ const lboxData = [
     directors: ["Ford Beebe"],
     genres: ["science-fiction", "horror"],
     id: 174,
+    tagline: "A Trail Of Terror!",
+    summary:
+      "An eccentric scientist helps a fugitive from the law become invisible, unwittingly giving him the power to exact revenge on his former friends.",
+    runtime: "78 mins",
     title: "The Invisible Man's Revenge",
     year: "1944",
     rating: "2.75",
+    poster:
+      "https://a.ltrbxd.com/resized/film-poster/3/3/6/8/3/33683-the-invisible-man-s-revenge-0-230-0-345-crop.jpg?k=c9d7053467",
   },
   {
     cast: [
@@ -5681,9 +6911,15 @@ const lboxData = [
     directors: ["Charles Lamont"],
     genres: ["comedy", "horror"],
     id: 175,
+    tagline: "You'll shiver... You'll shudder... You'll shout with laughter!",
+    summary:
+      "Boxer Tommy Nelson is accused of killing his manager. While detectives Bud and Lou investigate they come across an invisibility formula with which Tommy injects himself rather than face the police. This sparks an idea for trapping gangster Morgan by having Lou fight champ Rocky Hanlon, with Tommy's invisible help",
+    runtime: "82 mins",
     title: "Abbott and Costello Meet the Invisible Man",
     year: "1951",
     rating: "3.16",
+    poster:
+      "https://a.ltrbxd.com/resized/film-poster/2/9/7/5/8/29758-abbott-and-costello-meet-the-invisible-man-0-230-0-345-crop.jpg?k=3950a244a2",
   },
   {
     cast: [
@@ -5725,9 +6961,17 @@ const lboxData = [
     directors: ["Graham Baker"],
     genres: ["horror"],
     id: 176,
+    tagline: "The power of evil is no longer in the hands of a child.",
+    summary:
+      "Damien Thorn has helped rescue the world from a recession, appearing to be a benign corporate benefactor. When he then becomes U.S. Ambassador to England, Damien fulfils a terrifying biblical prophecy. He also faces his own potential demise as an astronomical event brings about the second coming of Christ.",
+    runtime: "108 mins",
     title: "Omen III: The Final Conflict",
     year: "1981",
     rating: "2.56",
+    poster:
+      "https://a.ltrbxd.com/resized/film-poster/4/5/9/1/5/45915-omen-iii-the-final-conflict-0-230-0-345-crop.jpg?k=54b777ea02",
+    backdrop:
+      "https://a.ltrbxd.com/resized/sm/upload/8x/lr/h7/y7/aGYM0HFT2ioIhCmOxhgkLcqlsP2-1200-1200-675-675-crop-000000.jpg?k=6437f97e19",
   },
   {
     cast: [
@@ -5776,9 +7020,14 @@ const lboxData = [
     directors: ["Dominique Othenin-Girard", "Jorge Montesi"],
     genres: ["horror"],
     id: 177,
+    summary:
+      "Damien Thorn is dead, but his prophecy is reborn in a girl named Delia, who is adopted by two attorneys, Gene and Karen York. When Karen realizes her baby was born under suspicious circumstances, she hires a private investigator to find Delia's real parents. A series of bizarre accidents occur, and Karen begins to suspect everyone of conspiring against her as she unravels the truth about her baby.",
+    runtime: "97 mins",
     title: "Omen IV: The Awakening",
     year: "1991",
     rating: "1.89",
+    poster:
+      "https://a.ltrbxd.com/resized/film-poster/4/0/7/7/6/40776-omen-iv-the-awakening-0-230-0-345-crop.jpg?k=e5cc48a3ea",
   },
   {
     cast: [
@@ -5802,9 +7051,17 @@ const lboxData = [
     directors: ["Mick Garris"],
     genres: ["horror", "comedy", "science-fiction"],
     id: 178,
+    tagline: "Get Ready for Seconds... They're Back",
+    summary:
+      "A batch of unhatched critter eggs are mistaken for Easter eggs by the country-folk inhabitants of Grover's Bend and, before long, the ferocious furballs are on the rampage again.",
+    runtime: "86 mins",
     title: "Critters 2",
     year: "1988",
     rating: "2.98",
+    poster:
+      "https://a.ltrbxd.com/resized/film-poster/4/6/5/2/2/46522-critters-2-0-230-0-345-crop.jpg?k=3758af5ed7",
+    backdrop:
+      "https://a.ltrbxd.com/resized/sm/upload/10/8f/xs/dn/q7gPXI8wvXIUVD9XTSRoqtWfHve-1200-1200-675-675-crop-000000.jpg?k=cdd17bc90f",
   },
   {
     cast: [
@@ -5827,9 +7084,18 @@ const lboxData = [
     directors: ["Kristine Peterson"],
     genres: ["science-fiction", "comedy", "horror"],
     id: 179,
+    tagline:
+      "First they destroyed a farm. Then they terrorised a town. Now they're ready to do some real damage!",
+    summary:
+      "In what appears to be a cross between Critters and The Towering Inferno, the residents of a shoddy L.A. apartment block are chased up to the roof by hoards of the eponymous hairy horrors.",
+    runtime: "86 mins",
     title: "Critters 3",
     year: "1991",
     rating: "2.32",
+    poster:
+      "https://a.ltrbxd.com/resized/film-poster/4/4/3/5/4/44354-critters-3-0-230-0-345-crop.jpg?k=c36b919433",
+    backdrop:
+      "https://a.ltrbxd.com/resized/sm/upload/er/y7/6r/fj/critters-1200-1200-675-675-crop-000000.jpg?k=95284a9c51",
   },
   {
     cast: [
@@ -5846,9 +7112,17 @@ const lboxData = [
     directors: ["Rupert Harvey"],
     genres: ["horror", "science-fiction", "comedy"],
     id: 180,
+    tagline: "In Space... They love to hear you scream",
+    summary:
+      "Just before bounty hunter Charile triggers his gun to destroy the last two Critter-eggs, he gets a message that it would be illegal to extinguish the race from the galaxy. He's sent a transporter where he puts the eggs - unfortunately the transporter takes him with it and then gets lost in space.",
+    runtime: "100 mins",
     title: "Critters 4",
     year: "1992",
     rating: "2.04",
+    poster:
+      "https://a.ltrbxd.com/resized/film-poster/4/4/5/1/1/44511-critters-4-0-230-0-345-crop.jpg?k=3c5cc8de05",
+    backdrop:
+      "https://a.ltrbxd.com/resized/sm/upload/gc/v6/m8/99/kiJJkKqdk6mI7zO1zeZsyIzuJYx-1200-1200-675-675-crop-000000.jpg?k=8d0999cf05",
   },
   {
     cast: [
@@ -5905,9 +7179,14 @@ const lboxData = [
     directors: ["Anthony Hickox"],
     genres: ["science-fiction", "fantasy", "horror"],
     id: 181,
+    summary:
+      "Every six hundred years, a great evil has the opportunity to escape and unleash Armageddon. A group of five stones has the power to either free the evil, or banish it for another six hundred years. An order of Druids battles with a Warlock determined to unleash his father upon the world.",
+    runtime: "98 mins",
     title: "Warlock: The Armageddon",
     year: "1993",
     rating: "2.71",
+    poster:
+      "https://a.ltrbxd.com/resized/film-poster/3/7/0/0/6/37006-warlock-the-armageddon-0-230-0-345-crop.jpg?k=470f56b624",
   },
   {
     cast: [
@@ -5928,9 +7207,15 @@ const lboxData = [
     directors: ["Eric Freiser"],
     genres: ["fantasy", "horror"],
     id: 182,
+    tagline: "He'll take your soul... if you let him",
+    summary:
+      "A college student unexpectedly finds that she has inherited a derelict house. Accompanied by a group of friends...",
+    runtime: "94 mins",
     title: "Warlock III: The End of Innocence",
     year: "1999",
     rating: "1.86",
+    poster:
+      "https://a.ltrbxd.com/resized/film-poster/3/5/5/8/9/35589-warlock-iii-the-end-of-innocence-0-230-0-345-crop.jpg?k=b58307dca2",
   },
   {
     cast: [
@@ -5975,9 +7260,17 @@ const lboxData = [
     directors: ["Jaume Balagueró", "Paco Plaza"],
     genres: ["thriller", "horror"],
     id: 183,
+    tagline: "Fear Revisited",
+    summary:
+      "The action continues from [REC], with the medical officer and a SWAT team outfitted with video cameras are sent into the sealed off apartment to control the situation.",
+    runtime: "85 mins",
     title: "[REC]²",
     year: "2009",
     rating: "3.13",
+    poster:
+      "https://a.ltrbxd.com/resized/sm/upload/xd/n3/o5/mv/g2Dk8ud1KpXt2RWzvcgsuuPkPuJ-0-230-0-345-crop.jpg?k=92decae7e2",
+    backdrop:
+      "https://a.ltrbxd.com/resized/sm/upload/vj/2u/m5/3r/rec-2-1200-1200-675-675-crop-000000.jpg?k=333709b0df",
   },
   {
     cast: [
@@ -6035,9 +7328,17 @@ const lboxData = [
     directors: ["Paco Plaza"],
     genres: ["horror"],
     id: 184,
+    tagline: "You may kiss the bride.",
+    summary:
+      "A pair of newlyweds must fight to survive when their wedding reception descends into chaos and carnage when their guests become infected by a virus that turns them into hungry zombies.",
+    runtime: "80 mins",
     title: "[REC]³ Genesis",
     year: "2012",
     rating: "2.42",
+    poster:
+      "https://a.ltrbxd.com/resized/film-poster/6/6/5/5/7/66557--rec-genesis-0-230-0-345-crop.jpg?k=d1552ba917",
+    backdrop:
+      "https://a.ltrbxd.com/resized/sm/upload/4a/0q/hl/3r/rec-3-1200-1200-675-675-crop-000000.jpg?k=d51dd1abb3",
   },
   {
     cast: [
@@ -6066,11 +7367,19 @@ const lboxData = [
       "Javier Botet",
     ],
     directors: ["Jaume Balagueró"],
-    genres: ["thriller", "horror"],
+    genres: ["horror", "thriller"],
     id: 185,
+    tagline: "It’s time to leave.",
+    summary:
+      "Ángela Vidal, the young television reporter who entered the building with the firemen, manages to make it out alive. But what the soldiers don't know is that she carries the seed of the strange infection. She is to be taken to a provisional quarantine facility, a high-security installation where she will have to stay in isolation for several days. An old oil tanker, miles off shore and surrounded by water on all sides, has been especially equipped for the quarantine.",
+    runtime: "95 mins",
     title: "[REC]⁴ Apocalypse",
     year: "2014",
     rating: "2.31",
+    poster:
+      "https://a.ltrbxd.com/resized/film-poster/1/3/4/0/2/0/134020--rec-apocalypse-0-230-0-345-crop.jpg?k=92b2b05663",
+    backdrop:
+      "https://a.ltrbxd.com/resized/sm/upload/ul/2q/cn/zs/rec-4-1200-1200-675-675-crop-000000.jpg?k=cabbfef439",
   },
   {
     cast: [
@@ -6106,9 +7415,16 @@ const lboxData = [
     directors: ["Erle C. Kenton"],
     genres: ["horror", "science-fiction"],
     id: 186,
+    tagline:
+      "All the Screen's Titans of Terror - Together in the Greatest of All SCREEN SENSATIONS!",
+    summary:
+      "An evil scientist and a hunchback escape from prison and encounter Dracula, the Wolf Man and Frankenstein's Monster.",
+    runtime: "71 mins",
     title: "House of Frankenstein",
     year: "1944",
     rating: "3.03",
+    poster:
+      "https://a.ltrbxd.com/resized/film-poster/4/9/8/6/9/49869-house-of-frankenstein-0-230-0-345-crop.jpg?k=908dbdd181",
   },
   {
     cast: [
@@ -6134,9 +7450,15 @@ const lboxData = [
     directors: ["Erle C. Kenton"],
     genres: ["science-fiction", "horror", "fantasy"],
     id: 187,
+    tagline: "HORROR UPON HORROR in the HOUSE OF DRACULA",
+    summary:
+      "A scientist working on cures for rare afflictions, such as a bone softening agent made from molds to allow him to correct the spinal deformity of his nurse, finds the physical causes of lycanthropy in wolf-man Larry Talbot and of vampirism in Count Dracula, but himself becomes afflicted with homicidal madness while exchanging blood with Dracula.",
+    runtime: "67 mins",
     title: "House of Dracula",
     year: "1945",
     rating: "2.76",
+    poster:
+      "https://a.ltrbxd.com/resized/film-poster/3/1/7/3/9/31739-house-of-dracula-0-230-0-345-crop.jpg?k=457efc103f",
   },
   {
     cast: [
@@ -6158,9 +7480,14 @@ const lboxData = [
     directors: ["Enrique Tovar Ávalos", "George Melford"],
     genres: ["horror"],
     id: 188,
+    summary:
+      "In the early days of sound, it was common for Hollywood studios to produce Hollywood foreign-language versions of their films (usually in French, Spanish and German) using the same sets, costumes and etc. Unfortunately, most of these foreign language versions no longer exist. The Spanish version of Dracula is an exception. In recent years this version has become more highly praised by some than the English language version. The Spanish crew had the advantage of watching the dailies from the English crew's version when they came in for the evening and they would figure out better camera angles and more effective use of lighting in an attempt to \"top\" it. As a result, this version's supporters consider it to be much more artistically effective.",
+    runtime: "104 mins",
     title: "Drácula",
     year: "1931",
     rating: "3.51",
+    poster:
+      "https://a.ltrbxd.com/resized/film-poster/2/5/4/1/2/25412-dracula-0-230-0-345-crop.jpg?k=19a375347b",
   },
   {
     cast: [
@@ -6177,9 +7504,15 @@ const lboxData = [
     directors: ["Jean Yarbrough"],
     genres: ["crime", "mystery", "horror"],
     id: 189,
+    tagline: "A woman whose hatred knew no bounds!",
+    summary:
+      "A young heiress finds evidence suggesting that at night she acts under the influence of a family curse and has begun committing ghastly murders in a nearby park.",
+    runtime: "61 mins",
     title: "She-Wolf of London",
     year: "1946",
     rating: "2.42",
+    poster:
+      "https://a.ltrbxd.com/resized/film-poster/1/9/9/1/6/19916-she-wolf-of-london-0-230-0-345-crop.jpg?k=be37d90e86",
   },
   {
     cast: [
@@ -6200,9 +7533,17 @@ const lboxData = [
     directors: ["John Sherwood"],
     genres: ["horror", "science-fiction"],
     id: 190,
+    tagline: "A City Screams in Terror!",
+    summary:
+      'The third film in The "Creature From The Black Lagoon" franchise sees the Gill Man suspicious turned into an air-breather by a mad scientist.',
+    runtime: "79 mins",
     title: "The Creature Walks Among Us",
     year: "1956",
     rating: "2.71",
+    poster:
+      "https://a.ltrbxd.com/resized/film-poster/2/5/2/7/4/25274-the-creature-walks-among-us-0-230-0-345-crop.jpg?k=2b39aab93b",
+    backdrop:
+      "https://a.ltrbxd.com/resized/sm/upload/kv/pp/20/di/creaturewalks5923-1200-1200-675-675-crop-000000.jpg?k=67876dc0f3",
   },
   {
     cast: [
@@ -6221,9 +7562,17 @@ const lboxData = [
     directors: ["Wes Craven"],
     genres: ["horror"],
     id: 191,
+    tagline: "So you think you're lucky to be alive...",
+    summary:
+      "A motocross team on their way to trial a new super-fuel head out across the desert lead by Rachel, who, unbeknownst to the rest of the group, is a survivor of the cannibal clan which menaced the Carter family several years before. Opting to take an ill-advised shortcut, the busload of youngsters drive straight into the path of the remnants of Rachel’s demented cannibal kin - the menacing Pluto, and a hulking, blood-hungry brute by the name of The Reaper.",
+    runtime: "86 mins",
     title: "The Hills Have Eyes Part II",
     year: "1984",
     rating: "1.97",
+    poster:
+      "https://a.ltrbxd.com/resized/film-poster/4/0/3/1/8/40318-the-hills-have-eyes-part-ii-0-230-0-345-crop.jpg?k=f720c04142",
+    backdrop:
+      "https://a.ltrbxd.com/resized/sm/upload/bs/eg/2g/xg/a9F2cldYpiwyOvR528D66wZ4git-1200-1200-675-675-crop-000000.jpg?k=82d02ae077",
   },
   {
     cast: [
@@ -6248,9 +7597,15 @@ const lboxData = [
     directors: ["Albert Band"],
     genres: ["comedy", "horror"],
     id: 192,
+    tagline: "They'll get you in the end ... Again!",
+    summary:
+      "Ghoulies II picks up a short time after the first movie, a few of the little nasties stow away on an amusement park ride and bring big bucks to a dying fair. The creatures are mad after an attempt to kill them, so the creatures go on a rampage through the fairgrounds, ultimately leading to an explosive conclusion!",
+    runtime: "89 mins",
     title: "Ghoulies II",
     year: "1987",
     rating: "2.74",
+    poster:
+      "https://a.ltrbxd.com/resized/film-poster/3/3/5/2/2/33522-ghoulies-ii-0-230-0-345-crop.jpg?k=4661dd6caf",
   },
   {
     cast: [
@@ -6293,9 +7648,15 @@ const lboxData = [
     directors: ["Christopher Leitch"],
     genres: ["fantasy", "comedy", "family"],
     id: 193,
+    tagline: "High school was easy. But college is a whole different ANIMAL.",
+    summary:
+      "Although awkward college student Todd Howard is particularly adept at science, he's paying for school with an athletic scholarship that he will lose should he not fare well in an upcoming boxing tournament. Luckily for Todd, he has inherited the same family curse that once turned his cousin into a werewolf. As he transforms into the hairy, fanged, howling monster, he finds both his physical agility and his popularity skyrocketing -- but at what cost?",
+    runtime: "95 mins",
     title: "Teen Wolf Too",
     year: "1987",
     rating: "1.90",
+    poster:
+      "https://a.ltrbxd.com/resized/film-poster/4/2/2/6/2/42262-teen-wolf-too-0-230-0-345-crop.jpg?k=c0f36bf214",
   },
   {
     cast: [
@@ -6323,9 +7684,15 @@ const lboxData = [
     directors: ["Jim Wynorski"],
     genres: ["science-fiction", "horror"],
     id: 194,
+    tagline: "Why can't men be more like plants?",
+    summary:
+      "The Swamp Thing returns to battle the evil Dr. Arcane, who has a new science lab full of creatures transformed by genetic mutation, and chooses Heather Locklear as his new object of affection.",
+    runtime: "84 mins",
     title: "The Return of Swamp Thing",
     year: "1989",
     rating: "2.60",
+    poster:
+      "https://a.ltrbxd.com/resized/film-poster/3/9/8/2/9/39829-the-return-of-swamp-thing-0-230-0-345-crop.jpg?k=446c3b4193",
   },
   {
     cast: [
@@ -6349,11 +7716,19 @@ const lboxData = [
       "Ron Smith",
     ],
     directors: ["Sally Mattison"],
-    genres: ["comedy", "horror"],
+    genres: ["horror", "comedy"],
     id: 195,
+    tagline: "It's Driller Time... And This Bits For You!",
+    summary:
+      "After a hard day of volleyball at the beach, a teen whose parents are away decides to have a slumber party with her girlfriends. Their boyfriends predictably show up to scare them, but a stranger from the beach is also seen lurking around the house. Soon the group begins experiencing an attrition problem.",
+    runtime: "87 mins",
     title: "Slumber Party Massacre III",
     year: "1990",
     rating: "2.42",
+    poster:
+      "https://a.ltrbxd.com/resized/film-poster/3/4/2/1/9/34219-slumber-party-massacre-iii-0-230-0-345-crop.jpg?k=57c56a3748",
+    backdrop:
+      "https://a.ltrbxd.com/resized/sm/upload/mz/so/dw/8f/buUfnQVzjvXXYrz2K4Ckm0ddQyL-1200-1200-675-675-crop-000000.jpg?k=acf8a33387",
   },
   {
     cast: [
@@ -6369,11 +7744,17 @@ const lboxData = [
       "Drew Marvick",
     ],
     directors: ["Lowell Dean"],
-    genres: ["comedy", "horror"],
+    genres: ["horror", "comedy"],
     id: 196,
+    tagline: "The hairy arm of the law.",
+    summary:
+      "An alcoholic cop experiences blackouts and starts turning into a werewolf when the full moon appears in the sky.",
+    runtime: "82 mins",
     title: "Another WolfCop",
     year: "2016",
     rating: "2.89",
+    poster:
+      "https://a.ltrbxd.com/resized/film-poster/2/7/7/0/2/7/277027-another-wolfcop-0-230-0-345-crop.jpg?k=6b88bdf94d",
   },
   {
     cast: [
@@ -6385,11 +7766,20 @@ const lboxData = [
       "Bill Borzage",
     ],
     directors: ["Roger Corman"],
-    genres: ["horror", "drama"],
+    genres: ["drama", "horror"],
     id: 197,
+    tagline:
+      "Edgar Allan Poe's demonic tale of The Ungodly... The Evil House of Usher",
+    summary:
+      "After a long journey, Philip arrives at the Usher mansion seeking his loved one, Madeline. Upon arriving, however, he discovers that Madeline and her brother Roderick Usher have been afflicted with a mysterious malady: Roderick's senses have become painfully acute, while Madeline has become catatonic. That evening, Roderick tells his guest of an old Usher family curse: any time there has been more than one Usher child, all of the siblings have gone insane and died horrible deaths. As the days wear on, the effects of the curse reach their terrifying climax.",
+    runtime: "79 mins",
     title: "House of Usher",
     year: "1960",
     rating: "3.47",
+    poster:
+      "https://a.ltrbxd.com/resized/sm/upload/ib/e4/4f/n2/d5mtkURuKuszmN4cXeyp1cxf11Y-0-230-0-345-crop.jpg?k=606b8f3078",
+    backdrop:
+      "https://a.ltrbxd.com/resized/sm/upload/74/ss/4a/ki/house%20of%20usher-1200-1200-675-675-crop-000000.jpg?k=73a664cff2",
   },
   {
     cast: [
@@ -6410,9 +7800,15 @@ const lboxData = [
     directors: ["Freddie Francis"],
     genres: ["mystery", "drama", "horror", "thriller"],
     id: 198,
+    tagline: "Shocking! Horrifying! Macabre!",
+    summary:
+      "Simon Ashby is a wealthy psychotic who is is coddled by his aunt in their palatial mansion outside of London. One day, Ashby's long lost brother mysteriously arrives at the house, but events prove that he is an impostor, sent by Keith Kossett, son of the attorney for the family estate, who has been dipping into the family trust fund.",
+    runtime: "80 mins",
     title: "Paranoiac",
     year: "1963",
     rating: "3.41",
+    poster:
+      "https://a.ltrbxd.com/resized/film-poster/2/2/7/2/9/22729-paranoiac-0-230-0-345-crop.jpg?k=d5f1819373",
   },
   {
     cast: [
@@ -6428,9 +7824,15 @@ const lboxData = [
     directors: ["Al Adamson"],
     genres: ["science-fiction", "crime", "horror"],
     id: 199,
+    tagline: "Shattering Impact! Frenzied Flesh and MURDER",
+    summary:
+      "Jewel thieves quickly dispose of the loot when the alarm is raised, then track down the family upon whose truck they threw them, meanly interrogating them in the hope of getting them back.",
+    runtime: "85 mins",
     title: "Psycho a Go-Go",
     year: "1965",
     rating: "2.69",
+    poster:
+      "https://a.ltrbxd.com/resized/film-poster/3/3/1/2/2/33122-psycho-a-go-go-0-230-0-345-crop.jpg?k=c40631c8b0",
   },
   {
     cast: [
@@ -6447,9 +7849,17 @@ const lboxData = [
     directors: ["Jack Hill"],
     genres: ["comedy", "horror"],
     id: 200,
+    tagline: "Come into my parlor, said the spider to the...",
+    summary:
+      "A caretaker devotes himself to three demented siblings after their father's death. But then money-hungry relatives show up to usurp their inheritance.",
+    runtime: "81 mins",
     title: "Spider Baby",
     year: "1967",
     rating: "3.57",
+    poster:
+      "https://a.ltrbxd.com/resized/film-poster/3/3/6/1/2/33612-spider-baby-0-230-0-345-crop.jpg?k=a1224b3fec",
+    backdrop:
+      "https://a.ltrbxd.com/resized/sm/upload/dx/j9/rf/a5/icDYw7BphDSj4OUQH9meWvadphg-1200-1200-675-675-crop-000000.jpg?k=23f4029d93",
   },
   {
     cast: [
@@ -6471,9 +7881,14 @@ const lboxData = [
     directors: ["Paul Wendkos"],
     genres: ["mystery", "horror", "tv-movie"],
     id: 201,
+    summary:
+      "A psychiatrist specializing in the occult becomes involved in the case of a man who is possessed by a spirit in an antique mirror. The man's fiance discovers that the mirror is able to bring back her former boyfriend, who had been killed in a car accident, from the dead.",
+    runtime: "97 mins",
     title: "Fear No Evil",
     year: "1969",
     rating: "3.34",
+    poster:
+      "https://a.ltrbxd.com/resized/film-poster/2/0/9/5/8/7/209587-fear-no-evil-0-230-0-345-crop.jpg?k=a7901ac68f",
   },
   {
     cast: [
@@ -6491,9 +7906,15 @@ const lboxData = [
     directors: ["Bob Kelljan"],
     genres: ["horror"],
     id: 202,
+    tagline: "Dashing, Dark and Deadly.",
+    summary:
+      "Sixties couples Michael and Donna and Paul and Erica become involved with the intense Count Yorga at a Los Angeles séance, the Count having latterly been involved with Erica's just-dead mother. After taking the Count home, Paul and Erica are waylayed, and next day a listless Erica is diagnosed by their doctor as having lost a lot of blood. When she is later found feasting on the family cat the doctor becomes convinced vampirism is at work, and that its focus is Count Yorga and his large isolated house.",
+    runtime: "93 mins",
     title: "Count Yorga, Vampire",
     year: "1970",
     rating: "2.93",
+    poster:
+      "https://a.ltrbxd.com/resized/film-poster/3/3/4/1/6/33416-count-yorga-vampire-0-230-0-345-crop.jpg?k=a8d41eeb5e",
   },
   {
     cast: [
@@ -6509,11 +7930,20 @@ const lboxData = [
       "Catherine Gaffigan",
     ],
     directors: ["Brian De Palma"],
-    genres: ["thriller", "horror", "mystery"],
+    genres: ["mystery", "thriller", "horror"],
     id: 203,
+    tagline:
+      "They were joined at birth by the devil and the evil never left them!",
+    summary:
+      "Inquisitive journalist Grace Collier is horrified when she witnesses her neighbor, fashion model Danielle Breton, violently murder a man. Panicking, she calls the police. But when the detective arrives at the scene and finds nothing amiss, Grace is forced to take matters into her own hands. Her first move is to recruit private investigator Joseph Larch, who helps her to uncover a secret about Danielle's past that has them both seeing double.",
+    runtime: "93 mins",
     title: "Sisters",
     year: "1972",
     rating: "3.54",
+    poster:
+      "https://a.ltrbxd.com/resized/film-poster/3/7/9/7/0/37970-sisters-0-230-0-345-crop.jpg?k=0f82f17e6c",
+    backdrop:
+      "https://a.ltrbxd.com/resized/sm/upload/35/k6/6r/lg/sisters-1200-1200-675-675-crop-000000.jpg?k=0fd1f61314",
   },
   {
     cast: [
@@ -6536,9 +7966,17 @@ const lboxData = [
     directors: ["David Cronenberg"],
     genres: ["horror"],
     id: 204,
+    tagline: "Going mad is just the beginning of the terror …",
+    summary:
+      "The residents of a suburban high-rise apartment building are being infected by a strain of parasites that turn them into mindless, sex-crazed fiends out to infect others by the slightest sexual contact.",
+    runtime: "88 mins",
     title: "Shivers",
     year: "1975",
     rating: "3.24",
+    poster:
+      "https://a.ltrbxd.com/resized/sm/upload/za/sg/mf/8e/a9w5pMzS4xh9itERx3mlWjnf3Zt-0-230-0-345-crop.jpg?k=9a81edecaa",
+    backdrop:
+      "https://a.ltrbxd.com/resized/sm/upload/ul/8u/m3/yc/shivers-1200-1200-675-675-crop-000000.jpg?k=de21f977af",
   },
   {
     cast: [
@@ -6558,9 +7996,18 @@ const lboxData = [
     directors: ["Dan Curtis"],
     genres: ["horror", "mystery", "thriller"],
     id: 205,
+    tagline:
+      "Up the ancient stairs, behind the locked door, something lives, something evil, from which no one has ever returned.",
+    summary:
+      "A couple and their 12-year-old son move into a giant house for the summer. Things start acting strange almost immediately. It seems that every time some gets hurt on the grounds the beat-up house seems to repair itself.",
+    runtime: "116 mins",
     title: "Burnt Offerings",
     year: "1976",
     rating: "3.30",
+    poster:
+      "https://a.ltrbxd.com/resized/film-poster/4/3/7/9/5/43795-burnt-offerings-0-230-0-345-crop.jpg?k=1a92e4ea9d",
+    backdrop:
+      "https://a.ltrbxd.com/resized/sm/upload/vl/qw/7a/gz/qkqS6r7QmMUunVHLCyUm0ds5Egv-1200-1200-675-675-crop-000000.jpg?k=a365f7f3f9",
   },
   {
     cast: [
@@ -6601,11 +8048,19 @@ const lboxData = [
       "Phil Tippett",
     ],
     directors: ["Joe Dante"],
-    genres: ["comedy", "horror"],
+    genres: ["horror", "comedy"],
     id: 206,
+    tagline: "A hideous death lurked unseen in the river...",
+    summary:
+      "When flesh-eating piranhas are accidently released into a summer resort's rivers, the guests become their next meal.",
+    runtime: "94 mins",
     title: "Piranha",
     year: "1978",
     rating: "3.00",
+    poster:
+      "https://a.ltrbxd.com/resized/film-poster/3/6/4/7/9/36479-piranha-0-230-0-345-crop.jpg?k=327550728f",
+    backdrop:
+      "https://a.ltrbxd.com/resized/sm/upload/l7/ho/0k/x8/piranha-1200-1200-675-675-crop-000000.jpg?k=9ce147b323",
   },
   {
     cast: [
@@ -6632,9 +8087,17 @@ const lboxData = [
     directors: ["Dario Argento"],
     genres: ["thriller", "horror"],
     id: 207,
+    tagline: "Before tenebrae, beyond suspiria there is... Inferno",
+    summary:
+      "A young man returns from Rome to his sister's satanic New York apartment house.",
+    runtime: "107 mins",
     title: "Inferno",
     year: "1980",
     rating: "3.46",
+    poster:
+      "https://a.ltrbxd.com/resized/film-poster/4/1/5/8/8/41588-inferno-0-230-0-345-crop.jpg?k=7f79ef13fa",
+    backdrop:
+      "https://a.ltrbxd.com/resized/sm/upload/ok/82/b9/yo/inferno-1200-1200-675-675-crop-000000.jpg?k=43d701d835",
   },
   {
     cast: [
@@ -6655,9 +8118,15 @@ const lboxData = [
     directors: ["Don Jones"],
     genres: ["horror"],
     id: 208,
+    tagline: "Daddy's Gone A Hunting",
+    summary:
+      "A cannibal hermit living in the woods preys on campers and hikers for his food supply.",
+    runtime: "85 mins",
     title: "The Forest",
     year: "1982",
     rating: "2.38",
+    poster:
+      "https://a.ltrbxd.com/resized/film-poster/7/1/5/9/3/71593-the-forest-0-230-0-345-crop.jpg?k=e9915685e4",
   },
   {
     cast: [
@@ -6683,9 +8152,16 @@ const lboxData = [
     directors: ["Rudy De Luca"],
     genres: ["horror", "comedy"],
     id: 209,
+    tagline:
+      "WANTED: Two thrill-seeking reporters, brains optional, looking to dig up the story of the century. For information call...",
+    summary:
+      "Two reporters travel to a strange castle in Transylvania to investigate the apparent reappearance of Frankenstein, and encounter the sensitive Wolfman, the horny Vampiress Odette and a whole cast of other weirdos.",
+    runtime: "93 mins",
     title: "Transylvania 6-5000",
     year: "1985",
     rating: "2.48",
+    poster:
+      "https://a.ltrbxd.com/resized/film-poster/3/6/2/6/3/36263-transylvania-6-5000-0-230-0-345-crop.jpg?k=ff0c49f7bb",
   },
   {
     cast: [
@@ -6706,9 +8182,16 @@ const lboxData = [
     directors: ["José Ramón Larraz"],
     genres: ["horror"],
     id: 210,
+    tagline:
+      "Their dream house brought them together...Their neighbors are tearing them apart!",
+    summary:
+      "A newlywed couple move into the mansion of the bride's recently dead aunt. Soon strange things begin to happen when the various tenants and servants of the mansion don't want to leave and the bride and groom are in a deadly predicament.",
+    runtime: "90 mins",
     title: "Rest in Pieces",
     year: "1987",
     rating: "2.77",
+    poster:
+      "https://a.ltrbxd.com/resized/film-poster/3/1/7/3/6/31736-rest-in-pieces-0-230-0-345-crop.jpg?k=11b4f074be",
   },
   {
     cast: [
@@ -6727,9 +8210,18 @@ const lboxData = [
     directors: ["Sean S. Cunningham"],
     genres: ["action", "thriller", "horror", "science-fiction"],
     id: 211,
+    tagline:
+      "Not All Aliens Come From Space. Save Your Last Breath... To Scream.",
+    summary:
+      "The crew of an experimental underwater nuclear base are forced to struggle for their lives when their explorations disturb a creature who threatens to destroy their base.",
+    runtime: "105 mins",
     title: "DeepStar Six",
     year: "1989",
     rating: "2.61",
+    poster:
+      "https://a.ltrbxd.com/resized/sm/upload/20/rt/iw/5h/vLY0zwabldQLGfN3cXv8mE1XSRM-0-230-0-345-crop.jpg?k=a9f2f4522f",
+    backdrop:
+      "https://a.ltrbxd.com/resized/sm/upload/im/xo/3v/ru/hAzybCtEScM835k9c5TfSUmT4w1-1200-1200-675-675-crop-000000.jpg?k=7fb52e08d7",
   },
   {
     cast: [
@@ -6779,9 +8271,17 @@ const lboxData = [
     directors: ["Clive Barker"],
     genres: ["action", "horror", "fantasy"],
     id: 212,
+    tagline: "Come meet the dead of night.",
+    summary:
+      "A troubled young man is drawn to a mythical place called Midian where a variety of monsters are hiding from humanity.",
+    runtime: "102 mins",
     title: "Nightbreed",
     year: "1990",
     rating: "3.24",
+    poster:
+      "https://a.ltrbxd.com/resized/film-poster/3/8/9/8/6/38986-nightbreed-0-230-0-345-crop.jpg?k=ef6267bf71",
+    backdrop:
+      "https://a.ltrbxd.com/resized/sm/upload/vs/dg/y8/16/nightbreed-1200-1200-675-675-crop-000000.jpg?k=1f612071c8",
   },
   {
     cast: [
@@ -6801,9 +8301,15 @@ const lboxData = [
     directors: ["Christopher Webster"],
     genres: ["horror"],
     id: 213,
+    tagline: "When you thought it was safe to go back on the slopes...",
+    summary:
+      "A group of snowmobilers become trapped on a lake, and hole up in an abandoned camp once used by a satanic cult for its rituals.",
+    runtime: "90 mins",
     title: "The Chill Factor",
     year: "1993",
     rating: "2.15",
+    poster:
+      "https://a.ltrbxd.com/resized/film-poster/9/7/7/7/6/97776-demon-possessed-0-230-0-345-crop.jpg?k=f10ba555b4",
   },
   {
     cast: [
@@ -6818,11 +8324,17 @@ const lboxData = [
       "Jay Colligan",
     ],
     directors: ["Bruno Mattei"],
-    genres: ["adventure", "horror", "thriller"],
+    genres: ["horror", "adventure", "thriller"],
     id: 214,
+    tagline: "This Time It's Even More Personal Than Last Time!",
+    summary:
+      "A tiger shark bred by the Navy as a killing machine is wreaking havoc in the sleepy tourist town of Hampton Bay.",
+    runtime: "93 mins",
     title: "Cruel Jaws",
     year: "1995",
     rating: "2.43",
+    poster:
+      "https://a.ltrbxd.com/resized/film-poster/7/0/4/6/2/70462-cruel-jaws-0-230-0-345-crop.jpg?k=04d33dc1b8",
   },
   {
     cast: [
@@ -6845,9 +8357,17 @@ const lboxData = [
     directors: ["Paul W. S. Anderson"],
     genres: ["horror", "science-fiction", "mystery"],
     id: 215,
+    tagline: "Infinite Space - Infinite Terror",
+    summary:
+      "In 2047 a group of astronauts are sent to investigate and salvage the starship 'Event Horizon' which disappeared mysteriously 7 years before on its maiden voyage. With its return, the crew of the 'Lewis and Clark' discovers the real truth behind the disappearance of the 'Event Horizon' – and something even more terrifying.",
+    runtime: "96 mins",
     title: "Event Horizon",
     year: "1997",
     rating: "3.23",
+    poster:
+      "https://a.ltrbxd.com/resized/sm/upload/ee/z5/lx/dc/vo02iJLsem3VCJ2TNvSzRiJMpAE-0-230-0-345-crop.jpg?k=3170afca7a",
+    backdrop:
+      "https://a.ltrbxd.com/resized/sm/upload/v8/k7/j8/vp/event-horizon-1200-1200-675-675-crop-000000.jpg?k=b263be421f",
   },
   {
     cast: [
@@ -6876,9 +8396,17 @@ const lboxData = [
     directors: ["Stephen Sommers"],
     genres: ["horror", "science-fiction", "adventure", "action"],
     id: 216,
+    tagline: "Full scream ahead",
+    summary:
+      "A group of heavily armed hijackers board a luxury ocean liner in the South Pacific Ocean to loot it, only to do battle with a series of large-sized, tentacled, man-eating sea creatures who have taken over the ship first.",
+    runtime: "106 mins",
     title: "Deep Rising",
     year: "1998",
     rating: "3.01",
+    poster:
+      "https://a.ltrbxd.com/resized/film-poster/4/7/1/4/0/47140-deep-rising-0-230-0-345-crop.jpg?k=cda021a29a",
+    backdrop:
+      "https://a.ltrbxd.com/resized/sm/upload/g9/ej/wk/65/deep-rising-1200-1200-675-675-crop-000000.jpg?k=cba0e07c5b",
   },
   {
     cast: [
@@ -6902,9 +8430,17 @@ const lboxData = [
     directors: ["Victor Salva"],
     genres: ["thriller", "horror"],
     id: 217,
+    tagline: "What’s eating you?",
+    summary:
+      'A college-age brother and sister get more than they bargained for on their road trip home from spring break. When the bickering siblings witness a creepy truck driver tossing body bags into a sewer near an abandoned church, they investigate. Bad move! Opening a Pandora\'s Box of unspeakable evil, the pair must flee for their lives -- with a monstrous "shape" in hot pursuit.',
+    runtime: "90 mins",
     title: "Jeepers Creepers",
     year: "2001",
     rating: "2.98",
+    poster:
+      "https://a.ltrbxd.com/resized/film-poster/4/7/5/0/6/47506-jeepers-creepers-0-230-0-345-crop.jpg?k=8c02682425",
+    backdrop:
+      "https://a.ltrbxd.com/resized/sm/upload/l2/9k/6l/gy/jeepers-creepers-1200-1200-675-675-crop-000000.jpg?k=58fa889e76",
   },
   {
     cast: [
@@ -6918,9 +8454,16 @@ const lboxData = [
     directors: ["Hideo Nakata"],
     genres: ["horror", "mystery", "thriller"],
     id: 218,
+    summary:
+      "A woman in the midst of an unpleasant divorce moves to an eerie apartment building with her young daughter. The ceiling of their apartment has a dark and active leak.",
+    runtime: "101 mins",
     title: "Dark Water",
     year: "2002",
     rating: "3.38",
+    poster:
+      "https://a.ltrbxd.com/resized/film-poster/4/4/7/0/4/44704-dark-water-0-230-0-345-crop.jpg?k=2326f075e5",
+    backdrop:
+      "https://a.ltrbxd.com/resized/sm/upload/eb/1m/rd/p3/dark%20water-1200-1200-675-675-crop-000000.jpg?k=20be69176a",
   },
   {
     cast: [
@@ -6946,9 +8489,15 @@ const lboxData = [
     directors: ["Brad Goodman"],
     genres: ["horror"],
     id: 219,
+    tagline: "Killing is in the air",
+    summary:
+      "Who's killing the college students during the annual Harvest Festival?",
+    runtime: "88 mins",
     title: "Harvest Of Fear",
     year: "2004",
     rating: "2.81",
+    poster:
+      "https://a.ltrbxd.com/resized/film-poster/1/4/1/8/2/8/141828-harvest-of-fear-0-230-0-345-crop.jpg?k=f0eb98bf35",
   },
   {
     cast: [
@@ -6975,9 +8524,16 @@ const lboxData = [
     directors: ["Brad Wiebe"],
     genres: ["horror"],
     id: 220,
+    tagline:
+      "They just wanted to get away for the weekend. He just wanted a family.",
+    summary:
+      "Five high school cheerleaders drive out to a rural mansion to spend the weekend. They hear a thirty year-old urban legend about a young boy who killed his family and used their blood in his juvenile artwork. While exploring an old farmhouse on the property they discover that the boy never left his home and has grown into a sick and twisted man.",
+    runtime: "83 mins",
     title: "A Brush With Death",
     year: "2007",
     rating: "2.19",
+    poster:
+      "https://a.ltrbxd.com/resized/film-poster/6/1/1/8/6118-a-brush-with-death-0-230-0-345-crop.jpg?k=c1426c4c4c",
   },
   {
     cast: [
@@ -6995,9 +8551,15 @@ const lboxData = [
     directors: ["Jen Soska", "Sylvia Soska"],
     genres: ["horror"],
     id: 221,
+    tagline: "The debut film from the Soska sisters.",
+    summary:
+      "Set in beautiful Vancouver, four friends set out on an everyday errand and end up in a fight for their lives when they discover the body of a dead hooker left in their trunk.",
+    runtime: "92 mins",
     title: "Dead Hooker in a Trunk",
     year: "2009",
     rating: "2.63",
+    poster:
+      "https://a.ltrbxd.com/resized/film-poster/1/6/1/4/1614-dead-hooker-in-a-trunk-0-230-0-345-crop.jpg?k=608ddb4dc9",
   },
   {
     cast: [
@@ -7011,9 +8573,17 @@ const lboxData = [
     directors: ["Chris Kentis", "Laura Lau", "Robert Levi"],
     genres: ["horror", "mystery"],
     id: 222,
+    tagline: "Experience 88 minutes of real fear, captured In real time",
+    summary:
+      "Sarah returns with her father and uncle to fix up the family's longtime summerhouse after it was violated by squatters in the off-season. As they work in the dark, Sarah begins to hear sounds from within the walls of the boarded-up building. Although she barely remembers the place, Sarah senses the past may still haunt the home.",
+    runtime: "85 mins",
     title: "Silent House",
     year: "2011",
     rating: "2.55",
+    poster:
+      "https://a.ltrbxd.com/resized/sm/upload/1h/r4/69/h8/44XqWUcNxYruBXh0lSDvk3vEfuR-0-230-0-345-crop.jpg?k=505dbf482c",
+    backdrop:
+      "https://a.ltrbxd.com/resized/sm/upload/bn/8k/vu/fc/slient-house-1200-1200-675-675-crop-000000.jpg?k=7899949d87",
   },
   {
     cast: [
@@ -7033,9 +8603,17 @@ const lboxData = [
     directors: ["Bradley Parker"],
     genres: ["thriller", "horror"],
     id: 223,
+    tagline: "Experience the fallout",
+    summary:
+      "A group of six tourists looking to go off the beaten path, hire an 'extreme tour guide' who, ignoring warnings, takes them into the city of Pripyat, the former home to the workers of the Chernobyl nuclear reactor, but now a deserted town since the disaster more than 25 years earlier. After a brief exploration of the abandoned city, the group members find themselves stranded, only to discover that they are not alone.",
+    runtime: "88 mins",
     title: "Chernobyl Diaries",
     year: "2012",
     rating: "2.08",
+    poster:
+      "https://a.ltrbxd.com/resized/film-poster/7/8/0/5/9/78059-chernobyl-diaries-0-230-0-345-crop.jpg?k=7aa2390883",
+    backdrop:
+      "https://a.ltrbxd.com/resized/sm/upload/a0/8n/16/8x/chernobyl-diaries-1200-1200-675-675-crop-000000.jpg?k=981205ed31",
   },
   {
     cast: [
@@ -7060,9 +8638,17 @@ const lboxData = [
     directors: ["Paul Hyett"],
     genres: ["horror"],
     id: 224,
+    tagline: "Last Train. Full Moon. All Change.",
+    summary:
+      "When passengers on a train are attacked by a creature, they must band together in order to survive until morning.",
+    runtime: "89 mins",
     title: "Howl",
     year: "2015",
     rating: "2.70",
+    poster:
+      "https://a.ltrbxd.com/resized/sm/upload/x3/aj/87/fr/2afk5u3h8Ll6GykQNuEhX7Sp9J7-0-230-0-345-crop.jpg?k=bc24cd3acd",
+    backdrop:
+      "https://a.ltrbxd.com/resized/sm/upload/0j/86/t6/hi/howl-1200-1200-675-675-crop-000000.jpg?k=59b9646dbe",
   },
   {
     cast: [
@@ -7093,9 +8679,15 @@ const lboxData = [
     directors: ["Brad Peyton"],
     genres: ["horror", "thriller"],
     id: 225,
+    tagline: "Faith Has Failed Us",
+    summary:
+      "An exorcist comes up against an evil from his past when he uses his skills to enter the mind of a nine year old boy.",
+    runtime: "91 mins",
     title: "Incarnate",
     year: "2016",
     rating: "2.07",
+    poster:
+      "https://a.ltrbxd.com/resized/film-poster/1/6/9/1/2/5/169125-incarnate-0-230-0-345-crop.jpg?k=ccd94a1012",
   },
   {
     cast: [
@@ -7124,9 +8716,14 @@ const lboxData = [
     directors: ["Larry Fessenden"],
     genres: ["science-fiction", "drama", "horror"],
     id: 226,
+    summary:
+      "A field surgeon suffering from PTSD after combat in the Middle East creates a living human out of body parts in his Brooklyn lab.",
+    runtime: "114 mins",
     title: "Depraved",
     year: "2019",
     rating: "3.11",
+    poster:
+      "https://a.ltrbxd.com/resized/film-poster/4/3/1/9/1/2/431912-depraved-0-230-0-345-crop.jpg?k=5745b63db1",
   },
   {
     cast: [
@@ -7165,9 +8762,16 @@ const lboxData = [
     directors: ["Mio Ezaki"],
     genres: ["thriller", "crime", "action"],
     id: 227,
+    summary:
+      "Goro Fujikawa (Tetsuya Watari) was indebted to Mitsugimoto. Sawada, a low rank yakuza with a gambling problem owed Mitsugimoto three million yen. This equation can only lead to one answer. Mitsugimoto needs to pay and Goro's coming to collect.",
+    runtime: "92 mins",
     title: "Outlaw: Heartless",
     year: "1968",
     rating: "3.30",
+    poster:
+      "https://a.ltrbxd.com/resized/film-poster/3/1/1/8/6/1/311861-outlaw-heartless-0-230-0-345-crop.jpg?k=6c5b5a51fc",
+    backdrop:
+      "https://a.ltrbxd.com/resized/sm/upload/x6/az/yo/ue/heartless-1200-1200-675-675-crop-000000.jpg?k=2ab18e2b25",
   },
   {
     cast: [
@@ -7204,9 +8808,18 @@ const lboxData = [
     directors: ["Ted Post"],
     genres: ["adventure", "mystery", "science-fiction"],
     id: 228,
+    tagline:
+      'The bizarre world of "Planet of the Apes" was only the beginning...',
+    summary:
+      "The sole survivor of an interplanetary rescue mission discovers a planet ruled by apes, and an underground city run by telepathic humans.",
+    runtime: "95 mins",
     title: "Beneath the Planet of the Apes",
     year: "1970",
     rating: "2.83",
+    poster:
+      "https://a.ltrbxd.com/resized/sm/upload/uh/ji/bf/oa/t7uNeDyWszBxLSshlDT8oN1Uy4a-0-230-0-345-crop.jpg?k=2cdc907bb3",
+    backdrop:
+      "https://a.ltrbxd.com/resized/sm/upload/9l/nm/mr/vh/x9yGcJLz5SsV9FunY1CaadMIDYD-1200-1200-675-675-crop-000000.jpg?k=498d2354f8",
   },
   {
     cast: [
@@ -7239,9 +8852,17 @@ const lboxData = [
     directors: ["Enzo G. Castellari"],
     genres: ["science-fiction", "action"],
     id: 229,
+    tagline: "The first to die were the lucky ones!",
+    summary:
+      "In post-apocalyptic New York City a policeman infiltrates the Bronx which has become a battleground for several murderous street gangs.",
+    runtime: "89 mins",
     title: "1990: The Bronx Warriors",
     year: "1982",
     rating: "2.87",
+    poster:
+      "https://a.ltrbxd.com/resized/film-poster/4/9/8/1/4981-1990-the-bronx-warriors-0-230-0-345-crop.jpg?k=c46dbead83",
+    backdrop:
+      "https://a.ltrbxd.com/resized/sm/upload/9s/0l/13/du/1990-the-bronx-warriors-1200-1200-675-675-crop-000000.jpg?k=fb4c9235f9",
   },
   {
     cast: [
@@ -7260,9 +8881,15 @@ const lboxData = [
     directors: ["Giuliano Carnimeo"],
     genres: ["western"],
     id: 230,
+    tagline: "Fistful of Lead",
+    summary:
+      "Sartana, bounty hunter and gunfighter, witnesses the robbery of a shipment of gold. He finds his way into town where he meets with a lot of suspicious stares from the locals. He also meets with Samuel Spencer, who seems to own the company in this company town. The gold shipments are being stolen, so Spencer agrees to hire Sartana to protect the next gold shipment. Numerous dull-witted villains make attempts on Sartana's life, but he survives. Eventually, Sartana's nemesis Sabbath (he of the white coat and parasol) rides into town. With a showdown inevitable, Sartana and Sabbath square off to settle the score.",
+    runtime: "93 mins",
     title: "Sartana's Here... Trade Your Pistol for a Coffin",
     year: "1970",
     rating: "3.19",
+    poster:
+      "https://a.ltrbxd.com/resized/film-poster/6/9/5/8/7/69587-sartana-s-here-trade-your-pistol-for-a-coffin-0-230-0-345-crop.jpg?k=be132ef971",
   },
   {
     cast: [
@@ -7305,9 +8932,16 @@ const lboxData = [
     directors: ["Keiichi Ozawa"],
     genres: ["crime", "thriller", "action"],
     id: 231,
+    summary:
+      'On a cold winter day, Goro Fujikawa (Tetsuya Watari) and Masahiko murder the mob boss of Meishin-Kai. The deed costs them time in prison, but Goro had no shred of regret. When Goro is released 2 years later, Masahiko is dying in prison hospital and entrusts his last wish; "find my sister and take care of her." Goro leaves as a free man with a mission, but soon finds that he might have been better off in jail.',
+    runtime: "87 mins",
     title: "Outlaw: Goro the Assassin",
     year: "1968",
     rating: "3.34",
+    poster:
+      "https://a.ltrbxd.com/resized/film-poster/3/1/1/8/6/3/311863-outlaw-goro-the-assassin-0-230-0-345-crop.jpg?k=b1a892eeac",
+    backdrop:
+      "https://a.ltrbxd.com/resized/sm/upload/ga/62/z9/qu/goro-1200-1200-675-675-crop-000000.jpg?k=6c8e10a960",
   },
   {
     cast: [
@@ -7371,9 +9005,17 @@ const lboxData = [
     directors: ["Don Taylor"],
     genres: ["action", "science-fiction"],
     id: 232,
+    tagline: "Meet baby Milo who has Washington terrified.",
+    summary:
+      "The world is shocked by the appearance of three talking chimpanzees, who arrived mysteriously in a spacecraft. Intrigued by their intelligence, humans use them for research - until the apes attempt to escape.",
+    runtime: "98 mins",
     title: "Escape from the Planet of the Apes",
     year: "1971",
     rating: "3.14",
+    poster:
+      "https://a.ltrbxd.com/resized/film-poster/5/0/8/5/7/50857-escape-from-the-planet-of-the-apes-0-230-0-345-crop.jpg?k=f1afc03f3a",
+    backdrop:
+      "https://a.ltrbxd.com/resized/sm/upload/l3/sa/aq/0g/5Y2V0yEI8w9xr8Jge6fkFKDILrI-1200-1200-675-675-crop-000000.jpg?k=6ad744adbb",
   },
   {
     cast: [
@@ -7406,11 +9048,17 @@ const lboxData = [
       "Enrica Saltutti",
     ],
     directors: ["Enzo G. Castellari"],
-    genres: ["action", "thriller", "science-fiction"],
+    genres: ["thriller", "action", "science-fiction"],
     id: 233,
+    tagline: "Dealers in death... exterminators in the 21st century...",
+    summary:
+      "Two mercenaries help wandering caravans fight off an evil and aimless band of white-clad bikers after the nuclear holocaust.",
+    runtime: "91 mins",
     title: "The New Barbarians",
     year: "1983",
     rating: "2.72",
+    poster:
+      "https://a.ltrbxd.com/resized/film-poster/1/7/0/4/5/17045-the-new-barbarians-0-230-0-345-crop.jpg?k=d75ddf4c7f",
   },
   {
     cast: [
@@ -7428,9 +9076,15 @@ const lboxData = [
     directors: ["Giuliano Carnimeo"],
     genres: ["western"],
     id: 234,
+    tagline: "A present for you, amigo… A coffin from Sartana",
+    summary:
+      "After witnessing a brutal massacre, the legendary hero Sartana is ready to do some investigating. Almost everyone in the tiny town of Indian Creek seems eager to buy up the property left behind by the murder victims, and one of them could well be behind the killings. The sheriff himself is not above suspicion, so Sartana must uncover the culprit all on his own.",
+    runtime: "91 mins",
     title: "Have a Good Funeral, My Friend… Sartana Will Pay",
     year: "1970",
     rating: "3.33",
+    poster:
+      "https://a.ltrbxd.com/resized/film-poster/6/9/5/9/1/69591-have-a-good-funeral-my-friend-sartana-will-pay-0-230-0-345-crop.jpg?k=de396dea5f",
   },
   {
     cast: [
@@ -7467,9 +9121,14 @@ const lboxData = [
     directors: ["Keiichi Ozawa"],
     genres: ["action", "thriller", "crime"],
     id: 235,
+    summary:
+      "A street war breaks loose between two rival gangs in the Kansai region of Japan. Goro is in the middle of action. Through a knife fight against Sueo, a high profile gangster from Busou-kai, Goro notices a familiar face approaching him from amidst the chaos - his girlfriend, Yuri. Goro had sent her to safety, but she had returned, aching to see him. Caught between Goro and his enemy knife, she reunites with her love - the price was her life.",
+    runtime: "86 mins",
     title: "Outlaw: Black Dagger",
     year: "1968",
     rating: "3.22",
+    poster:
+      "https://a.ltrbxd.com/resized/film-poster/3/1/1/8/6/4/311864-outlaw-black-dagger-0-230-0-345-crop.jpg?k=2a8aa50441",
   },
   {
     cast: [
@@ -7506,9 +9165,18 @@ const lboxData = [
     directors: ["J. Lee Thompson"],
     genres: ["action", "science-fiction"],
     id: 236,
+    tagline:
+      "All new! The revolt of the apes. The most awesome spectacle in the annals of science fiction!",
+    summary:
+      "In a futuristic world that has embraced ape slavery, a chimpanzee named Caesar resurfaces after almost twenty years of hiding from the authorities, and prepares for a revolt against humanity.",
+    runtime: "88 mins",
     title: "Conquest of the Planet of the Apes",
     year: "1972",
     rating: "3.09",
+    poster:
+      "https://a.ltrbxd.com/resized/sm/upload/x6/46/zc/2i/on17x2fLwokUhpnyAzzof2RW8lL-0-230-0-345-crop.jpg?k=5bed71a851",
+    backdrop:
+      "https://a.ltrbxd.com/resized/sm/upload/sa/tj/22/zk/sSoFyfKCcNlKJj1AkKLkHQG3VDD-1200-1200-675-675-crop-000000.jpg?k=d357bafa36",
   },
   {
     cast: [
@@ -7531,9 +9199,16 @@ const lboxData = [
     directors: ["Takashi Miike"],
     genres: ["drama", "crime", "thriller"],
     id: 237,
+    summary:
+      "Two contract killers cross paths in the middle of the same job and realize they are childhood friends. Together they take a break from killing and visit the small island they once called home. After reflecting on their past lives they decided to team up and use their talents in killing for good... much to the upset of the crime syndicates.",
+    runtime: "97 mins",
     title: "Dead or Alive 2: Birds",
     year: "2000",
     rating: "3.63",
+    poster:
+      "https://a.ltrbxd.com/resized/film-poster/4/3/5/0/8/43508-dead-or-alive-2-birds-0-230-0-345-crop.jpg?k=efecc3af9b",
+    backdrop:
+      "https://a.ltrbxd.com/resized/sm/upload/bf/ir/9k/37/birds-1200-1200-675-675-crop-000000.jpg?k=66524e5167",
   },
   {
     cast: [
@@ -7554,9 +9229,15 @@ const lboxData = [
     directors: ["Giuliano Carnimeo"],
     genres: ["western"],
     id: 238,
+    tagline: "Cloud of dust… Cry of death… Sartana is coming",
+    summary:
+      "Wily roving gunslinger Sartana arrives in a small town and tries to find a hidden fortune of half a million dollars in gold and two million dollars in counterfeit money. Naturally, a bunch of other treacherous folks who include conniving widow Senora Manassas, shrewd fellow gunslinger Grand Full, and the vicious and unhinged General Monk are also looking to get their greedy hands on said fortune.",
+    runtime: "99 mins",
     title: "Light the Fuse… Sartana Is Coming",
     year: "1970",
-    rating: "3.38",
+    rating: "3.37",
+    poster:
+      "https://a.ltrbxd.com/resized/film-poster/6/9/6/0/3/69603-light-the-fuse-sartana-is-coming-0-230-0-345-crop.jpg?k=f6b9274bbc",
   },
   {
     cast: [
@@ -7604,9 +9285,16 @@ const lboxData = [
     directors: ["Keiichi Ozawa"],
     genres: ["thriller", "action", "crime"],
     id: 239,
+    summary:
+      "Goro has always been a lone wolf. When he arrives at an industrial city in Keihin, there is certain restlessness in the air. The Iriezaki family and the Kanto Touyu-kai were in the midst of a territorial dispute. Goro was quick to notice, but had no intent to take sides. At a department store nearby, he sees an elevator lady being harassed by a couple of hoodlums. Goro decides to intervene. Unbeknownst to him, the hoodlums are Touyu-kai members – and the girl has strong ties with the opposing family.",
+    runtime: "85 mins",
     title: "Outlaw: Kill!",
     year: "1969",
     rating: "3.29",
+    poster:
+      "https://a.ltrbxd.com/resized/film-poster/3/1/1/8/6/7/311867-outlaw-kill--0-230-0-345-crop.jpg?k=f5eacefdde",
+    backdrop:
+      "https://a.ltrbxd.com/resized/sm/upload/4t/go/80/pg/kill-1200-1200-675-675-crop-000000.jpg?k=80955dcddd",
   },
   {
     cast: [
@@ -7631,9 +9319,18 @@ const lboxData = [
     directors: ["J. Lee Thompson"],
     genres: ["action", "science-fiction"],
     id: 240,
+    tagline:
+      "The final chapter in the incredible Apes saga. The most suspenseful showdown ever filmed as two civilizations battle for the right to inherit what's left of the earth!",
+    summary:
+      "The fifth and final episode in the Planet of the Apes series. After the collapse of human civilization, a community of intelligent apes led by Caesar lives in harmony with a group of humans. Gorilla General Aldo tries to cause an ape civil war and a community of human mutants who live beneath a destroyed city try to conquer those whom they perceive as enemies. All leading to the finale.",
+    runtime: "93 mins",
     title: "Battle for the Planet of the Apes",
     year: "1973",
     rating: "2.60",
+    poster:
+      "https://a.ltrbxd.com/resized/film-poster/5/0/8/4/3/50843-battle-for-the-planet-of-the-apes-0-230-0-345-crop.jpg?k=d772876de7",
+    backdrop:
+      "https://a.ltrbxd.com/resized/sm/upload/m6/vi/9q/ob/iaBdA9XwDXvN3xlfPfPwdK2XNL6-1200-1200-675-675-crop-000000.jpg?k=5f2d3eab79",
   },
   {
     cast: [
@@ -7653,11 +9350,18 @@ const lboxData = [
       "William Tuen",
     ],
     directors: ["Takashi Miike"],
-    genres: ["science-fiction", "crime", "comedy", "action"],
+    genres: ["comedy", "action", "science-fiction", "crime"],
     id: 241,
+    summary:
+      "Set in a post apocalyptic Yokohama where the population is kept under rigid control by a homosexual megalomaniac mayor. The citizens are administered drugs to suppress heterosexual urges. Officer Takeshi Honda (Riki Takeuchi) is a hard boiled cop enforcing the mayor's agenda, and Ryō (Show Aikawa) is a mellowed out drifter that hooks up with a gang of rebels. When the gang kidnap Takeshi's son, it begins a series of events leading to an inevitable showdown.",
+    runtime: "89 mins",
     title: "Dead or Alive: Final",
     year: "2002",
     rating: "2.82",
+    poster:
+      "https://a.ltrbxd.com/resized/film-poster/2/8/0/8/1/28081-dead-or-alive-final-0-230-0-345-crop.jpg?k=1ab8c2b1ca",
+    backdrop:
+      "https://a.ltrbxd.com/resized/sm/upload/j1/gq/00/e6/dead%20or%20alive-1200-1200-675-675-crop-000000.jpg?k=c6f17dddca",
   },
   {
     cast: [
@@ -7684,9 +9388,17 @@ const lboxData = [
     directors: ["Jackie Chan"],
     genres: ["thriller", "crime", "action"],
     id: 242,
+    tagline: "Jackie Chan escalates his one-man war on crime.",
+    summary:
+      "The Hong Kong super-cop must stop a group of blackmailing bombers at the same time that the villains of the first Police Story are out for revenge.",
+    runtime: "122 mins",
     title: "Police Story 2",
     year: "1988",
     rating: "3.51",
+    poster:
+      "https://a.ltrbxd.com/resized/film-poster/4/5/9/2/9/45929-police-story-2-0-230-0-345-crop.jpg?k=f946c7af5a",
+    backdrop:
+      "https://a.ltrbxd.com/resized/sm/upload/e9/ry/ao/x2/police-story-2-1200-1200-675-675-crop-000000.jpg?k=c75cae9e3e",
   },
   {
     cast: [
@@ -7712,9 +9424,16 @@ const lboxData = [
     directors: ["Takashi Miike"],
     genres: ["thriller", "crime", "action"],
     id: 243,
+    summary:
+      "The story follows a trio of Japanese youths of Chinese descent who escape their semi-rural upbringing and relocate to Shinjuku, Tokyo, where they befriend a troubled Shanghai prostitute and fall foul of a local crime syndicate. Like many of Miike's works, the film examines the underbelly of respectable Japanese society and the problems of assimilation faced by non-ethnically Japanese people in Japan.",
+    runtime: "105 mins",
     title: "Ley Lines",
     year: "1999",
     rating: "3.56",
+    poster:
+      "https://a.ltrbxd.com/resized/film-poster/3/9/6/9/7/39697-ley-lines-0-230-0-345-crop.jpg?k=b82943a0e0",
+    backdrop:
+      "https://a.ltrbxd.com/resized/sm/upload/3w/1t/xm/9m/ley%20lines-1200-1200-675-675-crop-000000.jpg?k=d548cda147",
   },
   {
     cast: [
@@ -7750,9 +9469,15 @@ const lboxData = [
     directors: ["Ronald F. Maxwell"],
     genres: ["drama", "history", "war"],
     id: 244,
+    tagline: "The nations heart was touched by...",
+    summary:
+      'The film centers mostly around the personal and professional life of Thomas "Stonewall" Jackson, a brilliant if eccentric Confederate general, from the outbreak of the American Civil War until its halfway point when Jackson is killed accidentally by his own soldiers in May 1863 during his greatest victory.',
+    runtime: "214 mins",
     title: "Gods and Generals",
     year: "2003",
     rating: "2.67",
+    poster:
+      "https://a.ltrbxd.com/resized/film-poster/4/1/8/5/7/41857-gods-and-generals-0-230-0-345-crop.jpg?k=2d755c9295",
   },
   {
     cast: [
@@ -7766,9 +9491,14 @@ const lboxData = [
     directors: ["Rodney Ascher", "David Lawrence"],
     genres: ["documentary", "music"],
     id: 245,
+    summary:
+      "A wilfully offensive band, The Mentors gained infamy for performing in black executioner hoods and spewing cartoonishly racist, homophobic and misogynistic lyrics in the 1980s and ‘90s—but was their use of shock meant to propagate hate or confront it?",
+    runtime: "106 mins",
     title: "The El Duce Tapes",
     year: "2019",
-    rating: "3.45",
+    rating: "3.46",
+    poster:
+      "https://a.ltrbxd.com/resized/film-poster/5/2/5/6/7/5/525675-the-el-duce-tapes-0-230-0-345-crop.jpg?k=48b341262c",
   },
   {
     cast: [
@@ -7818,9 +9548,16 @@ const lboxData = [
     directors: ["David Lynch"],
     genres: ["drama", "mystery", "thriller"],
     id: 246,
+    summary:
+      "A tormented jazz musician finds himself lost in an enigmatic story involving murder, surveillance, gangsters, doppelgangers, and an impossible transformation inside a prison cell.",
+    runtime: "134 mins",
     title: "Lost Highway",
     year: "1997",
     rating: "3.93",
+    poster:
+      "https://a.ltrbxd.com/resized/sm/upload/25/5e/r1/3t/z6yhgEzGUJaBBgAxoyggRzwLnVM-0-230-0-345-crop.jpg?k=d025ff5164",
+    backdrop:
+      "https://a.ltrbxd.com/resized/sm/upload/t0/s8/e7/s3/lost-highway-1200-1200-675-675-crop-000000.jpg?k=2792b729f6",
   },
   {
     cast: [
@@ -7848,9 +9585,17 @@ const lboxData = [
     directors: ["Stan Dragoti"],
     genres: ["family", "drama", "comedy"],
     id: 247,
+    tagline: "When mom goes to work, dad goes berserk!",
+    summary:
+      "Jack and Caroline are a couple making a decent living When Jack suddenly loses his job. They agree that he should stay at home and look after the house while Caroline works. It's just that he's never done it before, and really doesn't have a clue...",
+    runtime: "91 mins",
     title: "Mr. Mom",
     year: "1983",
     rating: "3.12",
+    poster:
+      "https://a.ltrbxd.com/resized/film-poster/4/4/1/4/0/44140-mr-mom-0-230-0-345-crop.jpg?k=2957c6ca0f",
+    backdrop:
+      "https://a.ltrbxd.com/resized/sm/upload/ey/7i/rb/jj/mr%20mom-1200-1200-675-675-crop-000000.jpg?k=9feb85136a",
   },
   {
     cast: [
@@ -7914,9 +9659,17 @@ const lboxData = [
     directors: ["George Clooney"],
     genres: ["drama"],
     id: 248,
+    tagline: "Ambition seduces. Power corrupts.",
+    summary:
+      "Dirty tricks stand to soil an ambitious young press spokesman's idealism in a cutthroat presidential campaign where 'victory' is relative.",
+    runtime: "101 mins",
     title: "The Ides of March",
     year: "2011",
     rating: "3.29",
+    poster:
+      "https://a.ltrbxd.com/resized/sm/upload/u2/xm/l2/xq/ncAdjHs58NhPWkwZRtqd9nXzBg4-0-230-0-345-crop.jpg?k=1e46afca73",
+    backdrop:
+      "https://a.ltrbxd.com/resized/sm/upload/to/3r/gq/el/the-ides-of-march-1200-1200-675-675-crop-000000.jpg?k=9ebf39e383",
   },
   {
     cast: [
@@ -7935,11 +9688,19 @@ const lboxData = [
       "Yoko Soumi",
     ],
     directors: ["Hayao Miyazaki"],
-    genres: ["adventure", "comedy", "animation", "family"],
+    genres: ["adventure", "comedy", "family", "animation"],
     id: 249,
+    tagline: "A Pig's Got to Fly",
+    summary:
+      'Porco Rosso, known in Japan as Crimson Pig (Kurenai no Buta) is the sixth animated film by Hayao Miyazaki and released in 1992. You\'re introduced to an Italian World War I fighter ace, now living as a freelance bounty hunter chasing "air pirates" in the Adriatic Sea. He has been given a curse that changed his head to that of a pig. Once called Marco Pagot, he is now known to the world as "Porco Rosso", Italian for "Red Pig."',
+    runtime: "94 mins",
     title: "Porco Rosso",
     year: "1992",
     rating: "3.90",
+    poster:
+      "https://a.ltrbxd.com/resized/sm/upload/pf/lk/cj/4e/nCx0EESDNxwXGn7rkCU6cvXTpIB-0-230-0-345-crop.jpg?k=01002a549e",
+    backdrop:
+      "https://a.ltrbxd.com/resized/sm/upload/r3/z7/nh/bl/porco-rosso-1200-1200-675-675-crop-000000.jpg?k=5cfb4560b4",
   },
   {
     cast: [
@@ -8006,9 +9767,17 @@ const lboxData = [
     directors: ["William Wyler"],
     genres: ["drama", "history", "action"],
     id: 250,
+    tagline: "The entertainment experience of a lifetime.",
+    summary:
+      "Judah Ben-Hur, a Jew in ancient Judea, is battling the Roman empire at the time of Christ. His actions send him and his family into slavery, but an inspirational encounter with Jesus changes everything. He finally meets his rival in a justly famous chariot race and rescues his suffering family.",
+    runtime: "222 mins",
     title: "Ben-Hur",
     year: "1959",
     rating: "3.87",
+    poster:
+      "https://a.ltrbxd.com/resized/film-poster/5/1/4/5/9/51459-ben-hur-0-230-0-345-crop.jpg?k=06d1a8a817",
+    backdrop:
+      "https://a.ltrbxd.com/resized/sm/upload/mn/xu/62/t9/ben-hur-1959-1200-1200-675-675-crop-000000.jpg?k=f4e060d608",
   },
 ];
 

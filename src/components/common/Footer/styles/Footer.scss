@@ -6,10 +6,33 @@
 
   .links {
     padding: 10px 0;
-    display: flex;
-    flex-wrap: wrap;
     width: fit-content;
     margin: auto;
+
+    .full {
+      display: flex;
+      flex-wrap: wrap;
+
+      @media only screen and (max-width: 600px) {
+        display: none;
+      }
+    }
+
+    .condensed {
+      display: flex;
+
+      @media only screen and (min-width: 601px) {
+        display: none;
+      }
+
+      a {
+        color: white;
+      }
+
+      svg {
+        margin: 0 10px;
+      }
+    }
 
     .link {
       margin: 0 10px;
@@ -31,6 +54,27 @@
 
     .divider {
       border-left: solid 1px #ccc;
+    }
+  }
+}
+
+.MuiDrawer-root.MuiDrawer-modal {
+  ul {
+    padding: 0;
+
+    li {
+      border-bottom: solid 1px #777;
+      background: #333;
+      text-align: center;
+  
+      .link {
+        width: 100%;
+  
+        a {
+          color: white;
+          text-decoration: unset;
+        }
+      }
     }
   }
 }

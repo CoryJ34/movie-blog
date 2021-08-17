@@ -18,6 +18,7 @@ import References from "./components/references/References";
 import Milestones from "./components/milestones/Milestones";
 import Footer from "./components/common/Footer/Footer";
 import Ratings from "./components/ratings/Ratings";
+import VHSShelf from "./components/vhs/VHSShelf";
 
 interface Props {
   movies: Movie[];
@@ -159,6 +160,9 @@ function App(props: Props) {
             </Route>
             <Route path="/ratings">
               <Ratings />
+            </Route>
+            <Route path="/shelf">
+              <VHSShelf />
             </Route>
             <Route>
               <Home

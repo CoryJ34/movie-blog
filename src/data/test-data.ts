@@ -13,10 +13,72 @@ const TAGS = {
   ACTION: "Action",
   DRAMA: "Drama",
   COMEDY_HORROR: "Comedy Horror",
-  DOCUMENTARY: "Documentary"
+  DOCUMENTARY: "Documentary",
 };
 
 const data = [
+  {
+    img: "https://einysrentals.files.wordpress.com/2021/08/img_20210809_085738.jpg?w=800&h=600&crop=1",
+    title: "Genre Sampler #6 – Ben-Hur (1959)",
+    content: [
+      "This is it, #250 of my watchlist movies!  I decided to make this one a big one, a historical/biblical epic.  It definitely lives up to the “epic” label.  It’s about 3 hr 45 min, so it was an investment of time, but it’s worth it.  It’s not quite a masterpiece but it has some good moments.  The chariot scene is of course famous and it is a good scene.. but after that, the movie kind of loses steam.  The very ending is a little.. hokey.. but up until then, I appreciated it for just telling a story and not getting overly fixated on the religious aspect.  So it was still good overall, but a lot like <strong>The Alamo (1960)</strong>, it’s epic and enjoyable, but has this old sugar-coated kind of sentiment in there that brings it down just a bit for me.",
+      "7.5/10",
+    ],
+    date: "August 16, 2021",
+    id: 250,
+    label: LABELS.OTHER,
+    format: FORMATS.DVD,
+  },
+  {
+    img: "https://einysrentals.files.wordpress.com/2021/08/img_20210809_085647.jpg?w=800&h=600&crop=1",
+    title: "Genre Sampler #5 – Porco Rosso (1992)",
+    content: [
+      "Another movie, another genre.. this time animation.  Well maybe “animation” isn’t exactly a genre, but in general I mean a for-all-ages type of animation.  I’ve seen a handful of Hiayo Miyazaki movies now and they’re always good, but some stand out more than others.  This one probably isn’t near the top tier for me, but that doesn’t mean it’s not good.  It’s a lot more “reality-based” than some others.. if you ignore the pig-man curse.  But otherwise, it’s a bounty hunter pilot vs some other pilots/pirates and some American rival.  It has some good moments, like the flashback telling the story of when he became pig-man, although it isn’t very clear HOW he was cursed.  But still, a fun movie.",
+      "7.5/10",
+    ],
+    date: "August 15, 2021",
+    id: 249,
+    tags: [TAGS.JAPANESE],
+    label: LABELS.OTHER,
+    format: FORMATS.BLU_RAY,
+  },
+  {
+    img: "https://einysrentals.files.wordpress.com/2021/08/img_20210809_085631.jpg?w=800&h=600&crop=1",
+    title: "Genre Sampler #4 – The Ides of March (2011)",
+    content: [
+      "Documentary, mystery, comedy and now a drama.  I wasn’t really sure what this movie was about other than I knew it was a drama with a good cast.  So for that reason, it was worth checking out for me.  Of course the acting is good and the story is basically like a House of Cards story condensed into a movie.  Not the specific plotline itself, but the tone and all the typical elements of political strategy, scandal, betrayal.  Some might find it a little slow… but I found it engaging.  Maybe I’m just slowing down in my old age.  Even though I’m not too big on political intrigue types of stories (they’re <em>ok</em>), I liked this one.",
+      "8/10",
+    ],
+    date: "August 15, 2021",
+    id: 248,
+    tags: [TAGS.DRAMA],
+    label: LABELS.OTHER,
+    format: FORMATS.BLU_RAY,
+  },
+  {
+    img: "https://einysrentals.files.wordpress.com/2021/08/img_20210809_085613.jpg?w=800&h=600&crop=1",
+    title: "Genre Sampler #3 – Mr. Mom (1983)",
+    content: [
+      "It’s comedy time.  In all these watchlists, aside from some horror comedy (or comedy horror, depending on how you look at it), I really haven’t touched on comedies at all.  Most of the comedies I own, I’ve already watched.  However, I had this DVD 4-pack that I bought when I was buying random Robin Williams movies (I bought this pack just for <strong>The Birdcage (1996)</strong>) and so I thought I’d toss one in from here.  I may have seen this, or parts of it, a looong time ago because I’m pretty sure my dad had this VHS tape sitting on the shelf at home.  I definitely have some random memory of the dad in the movie dying the baby with the air dryer in the bathroom.  Anyway, it’s a fairly fun movie with a premise that is very.. 80s, I guess.  A dad loses his job, the stay-at-home mom goes back to work and now the dad becomes the stay-at-home parent.  It’s a little outdated to call it “Mr Mom” since it implies stay-at-home parents are strictly moms.  But anyway, different times and all that.  Most of the comedy isn’t exactly hilarious, but there are some fun moments here and there.  I liked the obsession with soap operas.  Michael Keaton is pretty good in it, one of his earlier big movies, but the star of the movie for me is that comfy 80s suburban home vibe.  If I had a time machine..",
+      "7/10",
+    ],
+    date: "August 14, 2021",
+    id: 247,
+    label: LABELS.OTHER,
+    format: FORMATS.DVD,
+  },
+  {
+    img: "https://einysrentals.files.wordpress.com/2021/08/img_20210809_085554.jpg?w=400&h=300&crop=1",
+    title: "Genre Sampler #2 – Lost Highway (1997)",
+    content: [
+      "The genre for this one I guess is mostly “thriller” with some mystery, drama and horror mixed in.  It’s David Lynch so I suspected it to be in that wheelhouse.  Anyway, of course this was a weird one.  I think I enjoyed it, mostly.. but I couldn’t really tell you the true meaning of it.  Like with any Lynch thing, it’s more about appreciating the surreal-ness of it all.  I’m not one who has to scour a movie for clues and try to find the real meaning of a movie.  But it was a pretty disjointed movie, at first a very slow and dark drama/horror, then all of a sudden a kind of nightmare version of a Tarantino movie with a Wal-Mart-brand Charlie Sheen.  I liked both, but they definitely felt like two separate movies.  So for me, it’s a pretty good movie, but for others it could be too weird an incoherent.. or for others who like the mystery solving aspect, maybe it’s a masterpiece?",
+      "7.5/10",
+    ],
+    date: "August 13, 2021",
+    id: 246,
+    label: LABELS.KL,
+    format: FORMATS.BLU_RAY,
+  },
   {
     img: "https://einysrentals.files.wordpress.com/2021/08/img_20210809_085536.jpg?w=800&h=600&crop=1",
     title: "Genre Sampler #1 – The El Duce Tapes (2019)",
@@ -1797,7 +1859,7 @@ const data = [
     date: "February 3, 2021",
     id: 117,
     tags: [TAGS.UNIVERSAL],
-    label: LABELS.SCREAM_FACTORY_COLLECTORS,
+    label: LABELS.SCREAM_FACTORY_OTHER,
     format: FORMATS.BLU_RAY,
   },
   {
@@ -2490,7 +2552,7 @@ const data = [
     date: "October 22, 2020",
     id: 63,
     tags: [TAGS.SLASH80S],
-    label: LABELS.OTHER,
+    label: LABELS.BLUE_UNDERGROUND,
     format: FORMATS.BLU_RAY,
   },
   {
@@ -2655,7 +2717,7 @@ const data = [
     date: "October 12, 2020",
     id: 51,
     tags: [TAGS.SLASH80S],
-    label: LABELS.VINEGAR_SYNDROME,
+    label: LABELS.SYNAPSE,
     format: FORMATS.BLU_RAY,
   },
   {

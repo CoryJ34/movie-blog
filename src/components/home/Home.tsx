@@ -4,6 +4,7 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { CATEGORIES } from "../../common/constants";
 import { Movie } from "../../models/Movie";
+import VHS from "../vhs/VHS";
 import FeaturedCard from "./FeaturedCard";
 
 import "./styles/Home.scss";
@@ -114,6 +115,13 @@ const Home = (props: Props) => {
                 </div>
               );
             })}
+          </Grid>
+        </div>
+        <div className="tapes">
+          <Grid container justify="center" spacing={2}>
+            {previews.map((preview) => (
+              <VHS movie={preview} />
+            ))}
           </Grid>
         </div>
       </div>

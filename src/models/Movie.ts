@@ -16,6 +16,11 @@ export interface Movie {
     cast: string[],
     directors: string[],
     genres: string[],
-    rating: string
+    rating: string,
+    tagline: string,
+    summary: string,
+    runtime: string,
+    poster: string,
+    backdrop: string
   }
 }

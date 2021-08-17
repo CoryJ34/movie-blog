@@ -1,0 +1,191 @@
+.vhs-shelf-container {
+  //   background-image: url(../Shelf.png);
+  //   background-size: stretch;
+  height: calc(100vh - 56px);
+  width: calc(100vw - 16px);
+  position: relative;
+
+  &.has-focused {
+    .html-shelf {
+      filter: blur(7px);
+    }
+  }
+
+  .html-shelf {
+    height: 514px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    $text-border: #000;
+    $text-color: rgb(255, 204, 0);
+    $background-color: rgb(16, 48, 173);
+    $banner-height: 100px;
+
+    .banner-wrapper {
+      .banner {
+        height: $banner-height;
+        width: 100%;
+        background: $background-color;
+        color: $text-color;
+        text-shadow: -1px -1px 0 $text-border, 1px -1px 0 $text-border,
+          -1px 1px 0 $text-border, 1px 1px 0 $text-border;
+        text-align: center;
+        line-height: $banner-height;
+        font-size: 36px;
+        font-weight: 600;
+        // font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+      }
+
+      .banner-texture {
+        background-color: $background-color;
+        background-image: url("https://www.transparenttextures.com/patterns/rice-paper-3.png");
+        height: $banner-height;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0.2;
+        /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+      }
+    }
+
+    .top {
+      width: 100%;
+      height: 12px;
+      background: linear-gradient(#bbb, #aaa);
+      border: solid 1px #999;
+    }
+
+    .bottom {
+      width: 100%;
+      height: 40px;
+      background: linear-gradient(#777, #aaa 90%);
+      border-top: solid 1px #555;
+    }
+
+    .middle {
+      display: flex;
+
+      .shelf-pane {
+        height: 100%;
+
+        .back {
+          width: 100%;
+          height: 140px;
+          background: linear-gradient(#bbb, #aaa);
+        }
+
+        .plank-face {
+          height: 20px;
+          width: 100%;
+          background: linear-gradient(rgb(170, 153, 76), rgb(112, 101, 57));
+        }
+
+        .plank {
+          height: 10px;
+          width: 100%;
+          background: linear-gradient(rgb(95, 90, 37), rgb(170, 153, 76));
+        }
+      }
+
+      .left,
+      .right {
+        width: 100px;
+        display: flex;
+
+        .side {
+          .vert {
+            width: 20px;
+            height: calc(100% + 7px);
+            background: linear-gradient(#ccc, #aaa);
+            border: solid 1px #aaa;
+          }
+
+          .vert-top {
+            width: 20px;
+            height: 30px;
+            background: linear-gradient(#ccc, #bbb);
+            border: solid 1px #aaa;
+          }
+        }
+
+        .edge {
+          width: 100%;
+          height: 100%;
+        }
+      }
+
+      .center {
+        width: 100%;
+        background-color: #aaa;
+      }
+    }
+  }
+
+  &.has-focused .background-image {
+    filter: blur(7px);
+  }
+
+  .background-image {
+    position: fixed;
+    left: 0;
+    right: 0;
+    z-index: 0;
+    display: block;
+    background-image: url(../Shelf.png);
+    background-size: stretch;
+    height: calc(100vh - 60px);
+    width: calc(100vw - 16px);
+  }
+}
+
+.vhs-shelf {
+  //   min-height: calc(100vh - 52px);
+  width: 100%;
+  //   position: absolute;
+  padding-top: 130px;
+  max-width: calc(100% - 80px);
+  padding-left: 78px;
+  height: 500px;
+  max-height: 500px;
+  overflow: hidden;
+  //   background: #555;
+
+  display: flex;
+  flex-wrap: wrap;
+
+  // .placeholder {
+  //     transition: all 1s;
+  //     // width: 0px;
+  //     // height: 0px;
+  // }
+
+  &.has-focused {
+    .vhs-tape.preview {
+      filter: blur(7px);
+      pointer-events: none;
+    }
+
+    .focused {
+      .placeholder {
+        // width: 135px;
+        // height: 184px;
+
+        width: 105px;
+        height: 100px;
+      }
+    }
+  }
+
+  &:not(.has-focused) {
+    .vhs-tape-wrapper.preview {
+      transition: all 0.5s;
+
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+}

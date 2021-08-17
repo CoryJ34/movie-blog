@@ -1,0 +1,294 @@
+.vhs-tape {
+  // font-family: "Helvetica Neue", Helvetica, "Arial", "sans-serif" !important;
+  // font-family: "Arimo", sans-serif !important;
+  font-family: "IBM Plex Sans", sans-serif !important;
+  width: 380px;
+  height: 570px;
+  //   border: solid 1px #ccc;
+  position: relative;
+  background-color: #111;
+  border-radius: 3px;
+  cursor: pointer;
+  //   transition: all 1s;
+
+  &.focused {
+    z-index: 10;
+    // transition: all 2s;
+    position: absolute;
+    // animation: center 1s forwards;
+    top: 5%;
+    left: calc(50% - 190px);
+    // box-shadow: 0 10px 10px 1px #222;
+    box-shadow: 0 0px 10px 4px #222;
+
+    .box-top {
+      height: 0px;
+
+      // for trying to show some perspective in focused mode
+      // height: 24px;
+      // margin-bottom: 20px;
+    }
+
+    // border: solid 2px #111;
+    border-radius: 3px;
+
+    img {
+      border-radius: 3px;
+    }
+  }
+
+  .contents {
+    height: 100%;
+
+    // for trying to show some perspective in focused mode
+    // transform: perspective(92px) rotateX(-1deg);
+  }
+
+  @keyframes center {
+    0% {
+      top: 0%;
+      left: 0%;
+    }
+    100% {
+      top: 5%;
+      left: calc(50% - 190px);
+      //   -webkit-transform: rotateY(180deg);
+      //     transform: rotateY(180deg);
+    }
+  }
+
+  .box-top {
+    background-color: #151515;
+    // box-shadow: 0px 2px 8px 2px #222;
+
+    //   transition: all 1s;
+    // mask-image: -webkit-gradient(
+    //   linear,
+    //   left 10%,
+    //   left bottom,
+    //   from(rgba(0, 0, 0, 1)),
+    //   to(rgba(0, 0, 0, 1))
+    // );
+    // transform: perspective(12px) rotateX(1deg);
+
+    // span {
+    //   overflow: hidden;
+    //   text-overflow: ellipsis;
+    //   font-size: 11px;
+    //   text-align: center;
+    //   line-height: 20px;
+    //   color: rgb(63, 78, 26);
+    //   display: block;
+    //   // font-weight: 600;
+    //   // font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    //   // text-transform: uppercase;
+    //   filter: blur(1px);
+    // }
+  }
+
+  .close {
+    position: absolute;
+    top: -12px;
+    right: -12px;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    border: solid 3px #111;
+    background: white;
+    color: #111;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+    // margin-top: 10px;
+    font-size: 16px;
+    line-height: 16px;
+  }
+
+  &.preview {
+    // transition: all 1s;
+    // width: 95px;
+    // height: 142px;
+    // margin-bottom: 170px;
+
+    width: 65px;
+    height: 114px;
+    box-shadow: 0px 6px 10px 4px #222;
+
+    margin: 20px;
+    margin-bottom: 34px;
+
+    .box-top {
+      // width: 99px;
+      // height: 19px;
+      // margin-left: -3px;
+      // margin-bottom: 5px;
+
+      width: 63px;
+      height: 10px;
+      margin-left: 0px;
+      margin-bottom: 2px;
+
+      border-radius: 2px;
+      border: solid 1px #777;
+      background-position-y: center;
+      // transform: scaleY(-1);
+      // background-size: 99px 890px,
+    }
+
+    .contents {
+      // transform: perspective(20px) rotateX(-1deg);
+      // height: 140px;
+      height: 100px;
+      // width: 95px;
+      width: 65px;
+      border-radius: 2px;
+      background: #111;
+      // box-shadow: 0 10px 10px 2px #222;
+    }
+
+    .overlay,
+    .overlay-2 {
+      background-size: 280px 95px;
+      opacity: 0;
+    }
+
+    .vhs-front {
+      mask-image: -webkit-gradient(
+        linear,
+        left 20%,
+        left bottom,
+        from(rgba(0, 0, 0, 1)),
+        to(rgba(0, 0, 0, 0.2))
+      );
+
+      border: solid 1px #777;
+      border-top: none;
+      height: 100%;
+    }
+  }
+
+  .vhs-front {
+    img {
+      width: 100%;
+      height: 100%;
+      // border-radius: 3px;
+    }
+  }
+
+  .overlay {
+    position: absolute;
+    //   background-image: url("https://img.freepik.com/free-vector/abstract-vector-grunge-surface-texture-background_54178-1229.jpg?size=626&ext=jpg");
+    background-image: url("https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/i/f109f2d9-4473-4c28-9204-29284492e7c1/d4j66bs-c2e5832e-2395-4288-9977-68ababc13b14.jpg");
+    background-position-x: -18px;
+    background-position-y: -2px;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0.15;
+    // transition: all 1s;
+    // filter: invert(1);
+    /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+  }
+
+  .overlay-2 {
+    position: absolute;
+    background-image: url("https://img.freepik.com/free-vector/abstract-vector-grunge-surface-texture-background_54178-1229.jpg?size=626&ext=jpg");
+    // background-image: url("https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/i/f109f2d9-4473-4c28-9204-29284492e7c1/d4j66bs-c2e5832e-2395-4288-9977-68ababc13b14.jpg");
+    // background-position-x: -18px;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0.05;
+    // transition: all 1s;
+    filter: invert(1);
+    /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+  }
+
+  .vhs-back {
+    height: calc(100% - 10px);
+
+    .top-section {
+      .img-container {
+        margin: 10px;
+        // border: solid 1px #ccc;
+        box-shadow: 0px 0px 3px 2px #555;
+        height: 201px;
+        overflow: hidden;
+
+        img {
+          max-width: 360px;
+
+          &.mine {
+            transform: scale(1.8);
+          }
+          //   max-height: 201px;
+        }
+      }
+    }
+
+    .bottom-section {
+      text-align: center;
+      padding: 10px;
+      word-break: break-word;
+      display: flex;
+      flex-direction: column;
+      height: calc(100% - 230px);
+      justify-content: space-between;
+      overflow: hidden;
+
+      .tagline {
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif !important;
+        font-size: 18px;
+        margin-bottom: 12px;
+        font-weight: 600;
+        text-transform: uppercase;
+        color: rgb(219, 136, 27);
+        text-shadow: 0px 2px 5px rgb(95, 59, 13);
+      }
+
+      .summary {
+        font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+          "Lucida Sans", Arial, sans-serif;
+        font-size: 14px;
+        font-weight: 600;
+        margin-bottom: 12px;
+        color: #eef;
+        text-shadow: 0px 2px 5px #777;
+      }
+
+      .other-info {
+        font-size: 12px;
+        text-align: center;
+        margin-bottom: 12px;
+
+        span {
+          margin: 0 10px;
+        }
+      }
+
+      .crew {
+        font-family: "Bebas Neue", cursive;
+        color: #aaa;
+        text-shadow: 0px 2px 5px #333;
+        font-weight: 600;
+
+        .sub-text {
+          font-size: 8px;
+          margin-left: 5px;
+          margin-right: 5px;
+          font-weight: 300;
+        }
+
+        .super-text {
+          font-size: 14px;
+          text-transform: uppercase;
+          margin-left: 5px;
+          margin-right: 5px;
+        }
+      }
+    }
+  }
+}

@@ -270,4 +270,14 @@
       }
     }
   }
+
+  .tapes {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+
+    .vhs-tape {
+      margin: 10px 10px;
+    }
+  }
 }
