@@ -2214,6 +2214,7 @@ const data = [
     title: "Christmas Horror – Movie 1 – Christmas Evil (1980)",
     date: "December 19, 2020",
     id: 89,
+    tags: [TAGS.SLASH80S],
     label: LABELS.VINEGAR_SYNDROME,
     format: FORMATS.BLU_RAY,
   },

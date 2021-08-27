@@ -20,9 +20,7 @@ import Sort from "./Sort";
 
 import "./styles/ListSummary.scss";
 import FilterSection from "./FilterSection";
-import {
-  gatherAvailableFilters,
-} from "../../util/FilterUtils";
+import { gatherAvailableFilters } from "../../util/FilterUtils";
 
 interface Props {
   movies: Movie[];
@@ -72,12 +70,14 @@ const ListSummary = (props: Props) => {
     removeFilter,
   } = props;
 
-  const [currentRemark, setCurrentRemark] =
-    useState<RemarkObject | undefined>(undefined);
+  const [currentRemark, setCurrentRemark] = useState<RemarkObject | undefined>(
+    undefined
+  );
 
   let averageRating = 0.0;
   let allCategories: any = {};
   let allTags: string[] = [];
+  let totalRuntimeMins: number = 0;
 
   movies.forEach((movie) => {
     averageRating += parseFloat(extractRating(movie).split("/")[0].trim());
@@ -90,9 +90,12 @@ const ListSummary = (props: Props) => {
         }
       });
     }
+
+    totalRuntimeMins += movie.runtimeMins;
   });
 
   averageRating = averageRating / movies.length;
+  const minsPerMovie = Math.round(totalRuntimeMins / movies.length);
 
   const meta: SingleCategoryMeta = presetCategory
     ? // @ts-ignore
@@ -128,6 +131,12 @@ const ListSummary = (props: Props) => {
       </div>
       <div>{`Total movies: ${movies.length}`}</div>
       <div>{`Average rating: ${averageRating.toFixed(2)}`}</div>
+      <div>{`Total runtime: ${Math.floor(totalRuntimeMins / 60)} hr ${
+        totalRuntimeMins % 60
+      } min`}</div>
+      <div>{`Average runtime: ${Math.floor(minsPerMovie / 60)} hr ${
+        minsPerMovie % 60
+      } min`}</div>
       {!presetCategory && (
         <div className="filters">
           {FILTERABLES.map((f) => (

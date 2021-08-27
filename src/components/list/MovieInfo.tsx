@@ -85,6 +85,7 @@ const MovieInfo = (props: Props) => {
             <div className="movie-title">
               {`#${movie.id} ${categoryInfo?.title}`}
               <span className="movie-year">{categoryInfo?.year}</span>
+              <span className="movie-runtime">{movie.lbox.runtime}</span>
             </div>
           )}
           <div className="published-date">{movie.date}</div>

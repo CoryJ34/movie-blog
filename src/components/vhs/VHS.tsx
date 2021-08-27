@@ -1,6 +1,7 @@
 import { transform } from "@babel/core";
 import { useState } from "react";
 import { Movie } from "../../models/Movie";
+import { shuffleArray } from "../../util/ListUtils";
 import "./styles/VHS.scss";
 
 interface Props {
@@ -23,15 +24,6 @@ const makeRandomColor = (min?: number, max?: number) => {
 
   return 0;
 };
-
-function shuffleArray(array: number[]) {
-  for (var i = array.length - 1; i > 0; i--) {
-    var j = Math.floor(Math.random() * (i + 1));
-    var temp = array[i];
-    array[i] = array[j];
-    array[j] = temp;
-  }
-}
 
 const makeRandomRGB = (min?: number, max?: number, appliedTo?: number) => {
   let arr = [];

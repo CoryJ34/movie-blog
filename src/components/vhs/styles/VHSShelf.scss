@@ -19,8 +19,10 @@
     left: 0;
 
     $text-border: #000;
-    $text-color: rgb(255, 204, 0);
-    $background-color: rgb(16, 48, 173);
+    // $text-color: rgb(255, 204, 0);
+    // $background-color: rgb(16, 48, 173);
+    $text-color: rgb(223, 224, 160);
+    $background-color: rgb(21, 45, 68);
     $banner-height: 100px;
 
     .banner-wrapper {
@@ -63,6 +65,9 @@
       height: 40px;
       background: linear-gradient(#777, #aaa 90%);
       border-top: solid 1px #555;
+      text-align: center;
+      padding-top: 6px;
+      color: black;
     }
 
     .middle {
@@ -143,11 +148,12 @@
 
 .vhs-shelf {
   //   min-height: calc(100vh - 52px);
-  width: 100%;
+  // width: 100%;
   //   position: absolute;
   padding-top: 130px;
-  max-width: calc(100% - 80px);
+  // max-width: calc(100% - 80px);
   padding-left: 78px;
+  padding-right: 78px;
   height: 500px;
   max-height: 500px;
   overflow: hidden;

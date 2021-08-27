@@ -1,7 +1,7 @@
 import TitleBreakout from "./TitleBreakout";
 
 export interface Movie {
-  id: string,
+  id: string;
   title: string;
   img: string;
   date: string;
@@ -12,15 +12,16 @@ export interface Movie {
   label: string;
   format: string;
   ratingDiff: number;
+  runtimeMins: number;
   lbox: {
-    cast: string[],
-    directors: string[],
-    genres: string[],
-    rating: string,
-    tagline: string,
-    summary: string,
-    runtime: string,
-    poster: string,
-    backdrop: string
-  }
+    cast: string[];
+    directors: string[];
+    genres: string[];
+    rating: string;
+    tagline: string;
+    summary: string;
+    runtime: string;
+    poster: string;
+    backdrop: string;
+  };
 }

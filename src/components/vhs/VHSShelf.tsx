@@ -2,26 +2,30 @@ import { connect } from "react-redux";
 import { Movie } from "../../models/Movie";
 import VHS from "./VHS";
 import "./styles/VHSShelf.scss";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { Grid, IconButton } from "@material-ui/core";
+import { shuffleArray } from "../../util/ListUtils";
+import { Refresh } from "@material-ui/icons";
 
 const VHSShelf = (props: { movies: Movie[] }) => {
   const [hasFocused, setHasFocused] = useState(false);
+  const [randomizedMovies, setRandomizedMovies] = useState<Movie[]>([]);
 
   const { movies } = props;
 
-  if (!movies) {
-    return <div>Loading...</div>;
-  }
+  const shuffle = () => {
+    if (!movies) {
+      return;
+    }
 
-  let previews: Movie[] = [];
+    let randomized = [...movies];
+    shuffleArray(randomized);
+    setRandomizedMovies(randomized);
+  };
 
-  movies.forEach((m, i) => {
-    // if (i >= 30) {
-    //   return;
-    // }
-
-    previews.push(m);
-  });
+  useEffect(() => {
+    shuffle();
+  }, [movies]);
 
   const makeShelves = () => {
     return (
@@ -65,18 +69,24 @@ const VHSShelf = (props: { movies: Movie[] }) => {
             <div className="edge">{makeShelves()}</div>
           </div>
         </div>
-        <div className="bottom"></div>
+        <div className="bottom">
+          <IconButton size="small" onClick={() => shuffle()}>
+            <Refresh />
+          </IconButton>
+        </div>
       </div>
       <div className={`vhs-shelf ${hasFocused ? "has-focused" : ""}`}>
-        {previews.map((p) => (
-          <VHS
-            movie={p}
-            onFocused={(value: boolean) => {
-              setHasFocused(value);
-            }}
-          />
-        ))}
-        {/* <VHS movie={movies[0]} /> */}
+        <Grid container justify="center" spacing={2}>
+          {randomizedMovies.map((p: Movie) => (
+            <VHS
+              movie={p}
+              onFocused={(value: boolean) => {
+                setHasFocused(value);
+              }}
+            />
+          ))}
+          {/* <VHS movie={movies[0]} /> */}
+        </Grid>
       </div>
     </div>
   );
