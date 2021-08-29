@@ -1,3 +1,9 @@
+import {
+  Accordion,
+  AccordionDetails,
+  AccordionSummary,
+  Typography,
+} from "@material-ui/core";
 import { connect } from "react-redux";
 import { Milestone } from "../../models/Milestone";
 import ContentElement from "../common/ContentElement";
@@ -17,17 +23,23 @@ const Milestones = (props: Props) => {
 
   const renderMilestone = (milestone: Milestone) => {
     return (
-      <div className="milestone">
-        <div className="header">
-          <div className="title">{milestone.title}</div>
-          <div className="date">{milestone.date}</div>
-        </div>
-        <div className="content">
-          {milestone.content.map((c, i) => (
-            <ContentElement content={c} index={i} />
-          ))}
-        </div>
-      </div>
+      <Accordion className="milestone">
+        <AccordionSummary aria-controls="panel1d-content" id="panel1d-header">
+          {/* <Typography> */}
+          <div className="header">
+            <div className="title">{milestone.title}</div>
+            <div className="date">{milestone.date}</div>
+          </div>
+          {/* </Typography> */}
+        </AccordionSummary>
+        <AccordionDetails>
+          <div className="content">
+            {milestone.content.map((c, i) => (
+              <ContentElement content={c} index={i} />
+            ))}
+          </div>
+        </AccordionDetails>
+      </Accordion>
     );
   };
 

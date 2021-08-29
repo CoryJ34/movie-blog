@@ -11,7 +11,7 @@ interface Props {
 
 const MAX_COLOR = 125;
 
-const randomizeColors = true;
+const randomizeColors = false;
 
 const makeRandomColor = (min?: number, max?: number) => {
   if (min && max) {
@@ -71,10 +71,6 @@ const VHS = (props: Props) => {
       setShowFront(!showFront);
     }
   };
-
-  // let r = Math.random() * MAX_COLOR;
-  // let g = Math.random() * MAX_COLOR;
-  // let b = Math.random() * MAX_COLOR;
 
   return (
     <div className={`vhs-tape-wrapper ${inPreview ? "preview" : "focused"}`}>
