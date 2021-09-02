@@ -19,6 +19,7 @@ import Milestones from "./components/milestones/Milestones";
 import Footer from "./components/common/Footer/Footer";
 import Ratings from "./components/ratings/Ratings";
 import VHSShelf from "./components/vhs/VHSShelf";
+import Halloween2021 from "./components/Halloween2021";
 
 interface Props {
   movies: Movie[];
@@ -132,6 +133,15 @@ function App(props: Props) {
                 hideSort={true}
               >
                 <Halloween2020 movies={movies} openDetail={openDetail} />
+              </PageLayout>
+            </Route>
+            <Route path="/halloween2021">
+              <PageLayout
+                movies={moviesByCategory[CATEGORIES.HALLOWEEN_2021]}
+                presetCategory={CATEGORIES.HALLOWEEN_2021}
+                hideSort={true}
+              >
+                <Halloween2021 movies={movies} openDetail={openDetail} />
               </PageLayout>
             </Route>
             <Route path="/novdec2020">

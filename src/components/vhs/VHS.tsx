@@ -96,13 +96,19 @@ const VHS = (props: Props) => {
           )} */}
         </div>
         <div className="contents">
-          {showFront && (
-            <div className="vhs-front">
+          {
+            <div
+              className="vhs-front"
+              style={showFront ? {} : { display: "none" }}
+            >
               <img src={movie.lbox.poster} />
             </div>
-          )}
-          {!showFront && (
-            <div className="vhs-back">
+          }
+          {
+            <div
+              className="vhs-back"
+              style={showFront ? { display: "none" } : {}}
+            >
               <div className="top-section">
                 <div className="img-container">
                   {movie.lbox.backdrop ? (
@@ -171,7 +177,7 @@ const VHS = (props: Props) => {
                 </div>
               </div>
             </div>
-          )}
+          }
           <div className="overlay" />
           <div className="overlay-2" />
         </div>

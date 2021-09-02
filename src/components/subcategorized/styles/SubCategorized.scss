@@ -105,11 +105,7 @@
     &.official {
       // background-color: #444;
       border-radius: 4px;
-      background: linear-gradient(
-          to bottom,
-          #444 20%,
-          #333 60%
-        );
+      background: linear-gradient(to bottom, #444 20%, #333 60%);
       border: solid 2px #444;
 
       // .movie-card {
@@ -164,6 +160,10 @@
     color: black;
   }
 
+  .week.godzilla .header {
+    background-color: #2a5;
+  }
+
   &.nov_dec_2020 {
     .week {
       .movie-list {
@@ -172,7 +172,7 @@
 
         &.official {
           background: none;
-          
+
           .movie-card {
             background-color: #777;
           }

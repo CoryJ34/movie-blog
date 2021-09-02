@@ -14,12 +14,11 @@ export const extractRating = (movie: Movie) => {
 
       if (parts[0].length === 1) {
         return parts[0] + ".0";
-      }
-      else {
-          return parts[0];
+      } else {
+        return parts[0];
       }
 
-    //   return content;
+      //   return content;
     }
   }
 
@@ -163,6 +162,21 @@ export const breakoutTitleYearAndCategory = (
       category: CATEGORIES.GENRE_SAMPLER,
       categoryCls: "genre_sampler",
       order: parts[0].split("#")[1],
+    };
+  } else if (rawTitle.indexOf("Halloween 2021") === 0) {
+    // Halloween 2021
+    const parts = rawTitle.split("–");
+    const titleAndYear = extractTitleAndYear(parts[2].trim());
+    const week = parts[1].trim();
+    const num = parts[0].split("#")[1];
+
+    return {
+      title: titleAndYear[0],
+      year: titleAndYear[1],
+      category: CATEGORIES.HALLOWEEN_2021,
+      categoryCls: "halloween_2021",
+      subCategory: week,
+      order: num,
     };
   }
 

@@ -10,15 +10,21 @@ const toCls = (raw: string) => {
   return fixed.replaceAll(" ", "-").replaceAll("/", "-").toLowerCase();
 };
 
+interface NumericMap {
+  [key: string]: number;
+}
+
 interface Props {
   category: string;
   subCategoryMap?: any;
   movies: Movie[];
+  customWeekCounts?: NumericMap;
   openDetail: (selectedMovie: Movie) => void;
 }
 
 const SubCategorized = (props: Props) => {
-  const { category, subCategoryMap, movies, openDetail } = props;
+  const { category, subCategoryMap, movies, customWeekCounts, openDetail } =
+    props;
   const [selectedWeek, setSelectedWeek] = useState<any>(null);
 
   if (!movies) {
@@ -44,13 +50,15 @@ const SubCategorized = (props: Props) => {
       return;
     }
 
+    const count = (customWeekCounts && customWeekCounts[week]) || 5;
+
     if (grouped[week]) {
-      if (grouped[week].official.length === 5) {
+      if (grouped[week].official.length === count) {
         grouped[week].bonus.push(m);
       } else {
         grouped[week].official.push(m);
 
-        if (grouped[week].official.length === 5) {
+        if (grouped[week].official.length === count) {
           let capture = false;
           m.content.forEach((content) => {
             if (capture) {

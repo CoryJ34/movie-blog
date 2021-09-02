@@ -97,6 +97,11 @@ const Home = (props: Props) => {
               category={CATEGORIES.GENRE_SAMPLER}
               movies={movies}
             />
+            <FeaturedCard
+              loc="/halloween2021"
+              category={CATEGORIES.HALLOWEEN_2021}
+              movies={movies}
+            />
           </Grid>
         </div>
         <div className="section-header">
@@ -117,13 +122,13 @@ const Home = (props: Props) => {
             })}
           </Grid>
         </div>
-        <div className="tapes">
+        {/* <div className="tapes">
           <Grid container justify="center" spacing={2}>
             {previews.map((preview) => (
               <VHS movie={preview} />
             ))}
           </Grid>
-        </div>
+        </div> */}
       </div>
     </div>
   );
