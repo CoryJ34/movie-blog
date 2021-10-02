@@ -5,6 +5,8 @@ export enum FilterType {
   WATCHLIST,
   LABEL,
   FORMAT,
+  START_DATE,
+  END_DATE,
 }
 
 export interface Filter {
@@ -17,9 +19,9 @@ export interface FilterMap {
 }
 
 export interface FilterMeta {
-  value: string,
-  cls: string,
-  count: number
+  value: string;
+  cls: string;
+  count: number;
 }
 
 export interface AvailableFilters {

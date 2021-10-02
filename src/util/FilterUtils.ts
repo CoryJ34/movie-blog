@@ -7,6 +7,7 @@ import {
   FilterType,
 } from "../models/Filter";
 import { Movie } from "../models/Movie";
+import sort from "./SortUtils";
 
 export const stringifyFilter = (f: Filter): string => {
   return f.type + "_-_" + f.value;
@@ -35,6 +36,27 @@ const pushOrIncrement = (
   }
 
   return existing;
+};
+
+export const makeDefaultDateFilters = (movies: Movie[]): FilterMap => {
+  const sortedCopy = sort(movies, "id", null) || [];
+
+  const startDateFilter: Filter = {
+    type: FilterType.START_DATE,
+    value: new Date(sortedCopy[0].date).getTime().toString(),
+  };
+
+  const endDateFilter: Filter = {
+    type: FilterType.END_DATE,
+    value: new Date(sortedCopy[sortedCopy.length - 1].date)
+      .getTime()
+      .toString(),
+  };
+
+  return {
+    [stringifyFilter(startDateFilter)]: startDateFilter,
+    [stringifyFilter(endDateFilter)]: endDateFilter,
+  };
 };
 
 export const gatherAvailableFilters = (movies: Movie[]): AvailableFilters => {
@@ -165,6 +187,20 @@ const filterMovies = (movies: Movie[], filters: FilterMap) => {
           filtersByType[k].indexOf(m.titleBreakout.year.substring(1, 4) + "0") <
           0
         ) {
+          res = false;
+        }
+      }
+
+      if (k === FilterType.START_DATE.toString()) {
+        // only one startDate, assume 0 index
+        if (parseInt(filtersByType[k][0]) > new Date(m.date).getTime()) {
+          res = false;
+        }
+      }
+
+      if (k === FilterType.END_DATE.toString()) {
+        // only one endDate, assume 0 index
+        if (parseInt(filtersByType[k][0]) < new Date(m.date).getTime()) {
           res = false;
         }
       }

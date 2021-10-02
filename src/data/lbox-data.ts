@@ -9779,6 +9779,7 @@ const lboxData = [
     backdrop:
       "https://a.ltrbxd.com/resized/sm/upload/mn/xu/62/t9/ben-hur-1959-1200-1200-675-675-crop-000000.jpg?k=f4e060d608",
   },
+
   {
     cast: [
       "Raymond Burr",
@@ -10028,7 +10029,7 @@ const lboxData = [
       "Tatsuhito Go",
     ],
     directors: ["Yoshimitsu Banno"],
-    genres: ["science-fiction", "action"],
+    genres: ["action", "science-fiction"],
     id: 256,
     tagline: "The Smog Monster Hedorah arrives in a shooting star!",
     summary:
@@ -10036,7 +10037,7 @@ const lboxData = [
     runtime: "85 mins",
     title: "Godzilla vs. Hedorah",
     year: "1971",
-    rating: "3.38",
+    rating: "3.39",
     poster:
       "https://a.ltrbxd.com/resized/film-poster/2/5/2/2/2/25222-godzilla-vs-hedorah-0-230-0-345-crop.jpg?k=d20702bcfb",
     backdrop:
@@ -10150,7 +10151,7 @@ const lboxData = [
     runtime: "84 mins",
     title: "Godzilla vs. Mechagodzilla",
     year: "1974",
-    rating: "3.30",
+    rating: "3.31",
     poster:
       "https://a.ltrbxd.com/resized/sm/upload/hy/9o/b2/q2/wUAFFe2cphVjoiUWbQHD0RfRIVb-0-230-0-345-crop.jpg?k=ebc6e24643",
     backdrop:
@@ -10223,7 +10224,7 @@ const lboxData = [
     runtime: "72 mins",
     title: "The Gruesome Twosome",
     year: "1967",
-    rating: "2.65",
+    rating: "2.64",
     poster:
       "https://a.ltrbxd.com/resized/film-poster/1/6/6/7/6/16676-the-gruesome-twosome-0-230-0-345-crop.jpg?k=6b6dfb23e8",
   },
@@ -10259,7 +10260,7 @@ const lboxData = [
     runtime: "84 mins",
     title: "Seeds",
     year: "1968",
-    rating: "3.49",
+    rating: "3.48",
     poster:
       "https://a.ltrbxd.com/resized/film-poster/7/4/6/0/7/74607-seeds-0-230-0-345-crop.jpg?k=68a27ea5c0",
   },
@@ -10308,7 +10309,7 @@ const lboxData = [
       "Jesús Franco",
     ],
     directors: ["Jesús Franco"],
-    genres: ["thriller", "mystery", "horror"],
+    genres: ["mystery", "thriller", "horror"],
     id: 264,
     tagline: "Don't Panic... It only happens once in a... Bloody Moon.",
     summary:
@@ -10316,7 +10317,7 @@ const lboxData = [
     runtime: "90 mins",
     title: "Bloody Moon",
     year: "1981",
-    rating: "3.01",
+    rating: "3.02",
     poster:
       "https://a.ltrbxd.com/resized/film-poster/2/4/9/5/4/24954-bloody-moon-0-230-0-345-crop.jpg?k=b64a8093e5",
     backdrop:
@@ -10394,7 +10395,7 @@ const lboxData = [
     year: "1941",
     rating: "2.91",
     poster:
-      "https://a.ltrbxd.com/resized/film-poster/7/1/1/5/5/71155-man-made-monster-0-230-0-345-crop.jpg?k=eb75d1efc4",
+      "https://a.ltrbxd.com/resized/film-poster/7/1/1/5/5/71155-man-made-monster-0-230-0-345-crop.jpg?k=5a892f8078",
   },
   {
     cast: [
@@ -10513,7 +10514,7 @@ const lboxData = [
     runtime: "65 mins",
     title: "The Monster and the Girl",
     year: "1941",
-    rating: "2.86",
+    rating: "2.85",
     poster:
       "https://a.ltrbxd.com/resized/film-poster/8/5/8/1/9/85819-the-monster-and-the-girl-0-230-0-345-crop.jpg?k=b621264461",
   },
@@ -10575,9 +10576,30 @@ const lboxData = [
     runtime: "80 mins",
     title: "The Shower",
     year: "2013",
-    rating: "2.78",
+    rating: "2.79",
     poster:
-      "https://a.ltrbxd.com/resized/film-poster/2/4/3/6/0/7/243607-the-shower-0-230-0-345-crop.jpg?k=4cb290ad65",
+      "https://a.ltrbxd.com/resized/film-poster/2/4/3/6/0/7/243607-the-shower-0-230-0-345-crop.jpg?k=3531d95275",
+  },
+  {
+    cast: [
+      "Angelica Chitwood",
+      "Deniele Cloutier",
+      "Melissa Elena Jones",
+      "Aubrey Wakeling",
+      "Vince Peagler III",
+      "Will Ahrens",
+    ],
+    directors: ["Sandy Chukhadarian"],
+    genres: [],
+    id: 272,
+    summary:
+      "When three young women receive shocking videos anonymously, a nightmare is reawakened that ignites a thirst for bloody vengeance. They embark on a journey to locate the house, their sadistic captor and to discover the truth behind those locked doors. But, the most shocking revelation of this chilling tale is the identities of the victims.",
+    runtime: "80 mins",
+    title: "Psychos",
+    year: "2017",
+    rating: "2.34",
+    poster:
+      "https://a.ltrbxd.com/resized/film-poster/3/8/1/1/5/5/381155-psychos-0-230-0-345-crop.jpg?k=2c8e1072a3",
   },
   {
     cast: [
@@ -10597,14 +10619,14 @@ const lboxData = [
     ],
     directors: ["Chris Ethridge"],
     genres: ["horror"],
-    id: 274,
+    id: 273,
     tagline: "There's a monster inside everyone.",
     summary:
       "When desecrated corpses and ritualistic symbols start appearing, the residents of Morningside, New Jeresey, are thrust into an unreal world of darkness.",
     runtime: "93 mins",
     title: "The Morningside Monster",
     year: "2014",
-    rating: "2.90",
+    rating: "2.87",
     poster:
       "https://a.ltrbxd.com/resized/film-poster/2/2/3/7/6/7/223767-attack-of-the-morningside-monster-0-230-0-345-crop.jpg?k=cf36a1ea38",
   },
@@ -10620,13 +10642,13 @@ const lboxData = [
     ],
     directors: ["Joe Maggio"],
     genres: ["thriller", "horror"],
-    id: 275,
+    id: 274,
     summary:
       "A celebrity chef exacts revenge on a food blogger who torpedoes his career.",
     runtime: "105 mins",
     title: "Bitter Feast",
     year: "2010",
-    rating: "2.83",
+    rating: "2.84",
     poster:
       "https://a.ltrbxd.com/resized/film-poster/1/3/0/9/5/13095-bitter-feast-0-230-0-345-crop.jpg?k=20122c2e88",
   },
@@ -10642,7 +10664,7 @@ const lboxData = [
     ],
     directors: ["Scott Schirmer"],
     genres: ["comedy", "horror"],
-    id: 276,
+    id: 275,
     summary:
       "A man is taken captive by a feral family in the deep woods. They are determined to transform him, body and mind, into one of their own -- whether he likes it or not.",
     runtime: "91 mins",
@@ -10685,7 +10707,7 @@ const lboxData = [
     ],
     directors: ["Vernon Zimmerman"],
     genres: ["horror", "drama", "thriller"],
-    id: 277,
+    id: 276,
     tagline:
       "Meet Eric Binford, the ultimate movie buff. If you know someone like him… run!",
     summary:
@@ -10693,7 +10715,7 @@ const lboxData = [
     runtime: "102 mins",
     title: "Fade to Black",
     year: "1980",
-    rating: "3.24",
+    rating: "3.25",
     poster:
       "https://a.ltrbxd.com/resized/sm/upload/0y/nz/92/r2/xbBtcEtTNxTmT8AridpkTO6pZ5N-0-230-0-345-crop.jpg?k=e9098910b4",
     backdrop:
@@ -10716,7 +10738,7 @@ const lboxData = [
     ],
     directors: ["Jeff Lieberman"],
     genres: ["horror", "thriller"],
-    id: 278,
+    id: 277,
     tagline: "Will Anyone Survive Those Hours Just Before Dawn?",
     summary:
       "In the Oregon mountains, a pair of hunters encounter a machete-wielding killer in an abandoned church. Meanwhile, five campers arrive to examine some property one of them has inherited but are warned by the forest ranger not to venture forth. Soon after they set up camp, they begin hearing strange noises, encounter a mysterious singing girl and start disappearing one by one.",
@@ -10744,7 +10766,7 @@ const lboxData = [
     ],
     directors: ["J.S. Cardone"],
     genres: ["horror"],
-    id: 279,
+    id: 278,
     tagline:
       "She searched through the dark corridors of the unknown only to find ... The Slayer",
     summary:
@@ -10769,8 +10791,8 @@ const lboxData = [
       "Mark Metcalf",
     ],
     directors: ["Andrew Davis"],
-    genres: ["horror", "thriller"],
-    id: 280,
+    genres: ["thriller", "horror"],
+    id: 279,
     tagline:
       "Without knowing they have awakened an unknown force. Can anyone survive?",
     summary:
@@ -10808,7 +10830,7 @@ const lboxData = [
     ],
     directors: ["Lucio Fulci"],
     genres: ["thriller", "mystery"],
-    id: 281,
+    id: 280,
     tagline: "Save the last dance... for hell!",
     summary:
       "The world of dance can be brutal.  The rehearsals are grueling.  The competition is fierce.  At the Arts for Living Centre in New York City, the best of the best are dying for a part in a major production.  But only a select few will be chosen.  The selection process seems to be at the hands of mysterious killer who pierces women's bare breasts with a hatpin, puncturing their hearts.  Ambition and jealousy appear to be the motive, which makes everybody a suspect!",
@@ -10844,13 +10866,13 @@ const lboxData = [
     ],
     directors: ["Rubén Galindo Jr."],
     genres: ["horror"],
-    id: 282,
+    id: 281,
     summary:
       "A professor suspects that a vicious killer may have discovered a way to return from the grave and continue his violent spree. His fears are proved true when a group of teenagers decide to pull a Halloween prank by stealing the killer's body from the morgue. When the teens recite an incantation from an old magic book over the corpse, it begins to come back to life, along with all of the bodies from the nearby cemetery.",
     runtime: "91 mins",
     title: "Cemetery of Terror",
     year: "1985",
-    rating: "3.32",
+    rating: "3.31",
     poster:
       "https://a.ltrbxd.com/resized/film-poster/7/1/4/2/9/71429-cemetery-of-terror-0-230-0-345-crop.jpg?k=ca017885e0",
   },
@@ -10870,7 +10892,7 @@ const lboxData = [
     ],
     directors: ["David Schmoeller"],
     genres: ["thriller", "horror"],
-    id: 283,
+    id: 282,
     tagline: "Someone is watching ...",
     summary:
       "A man who runs an apartment house for women is the demented son of a Nazi surgeon who has the house equipped with secret passageways, hidden rooms and torture and murder devices.",
@@ -10897,14 +10919,14 @@ const lboxData = [
     ],
     directors: ["John Hough"],
     genres: ["horror"],
-    id: 284,
+    id: 283,
     tagline: "The family that slays together stays together.",
     summary:
       "When six friends fly off on a weekend getaway and are suddenly plagued by engine trouble, they're forced to land on a remote island. Looking for shelter, they're grateful to encounter Ma and Pa and their children - an eccentric family living in the island's backwoods. But what begins as simple hospitality turns into a terrifying race for survival as the friends start disappearing one by one ... and turning up dead.",
     runtime: "90 mins",
     title: "American Gothic",
     year: "1987",
-    rating: "2.98",
+    rating: "2.99",
     poster:
       "https://a.ltrbxd.com/resized/film-poster/1/4/3/7/9/14379-american-gothic-0-230-0-345-crop.jpg?k=4b1bcc7c3f",
   },
@@ -10937,7 +10959,7 @@ const lboxData = [
     ],
     directors: ["Andrew Fleming"],
     genres: ["horror", "thriller"],
-    id: 285,
+    id: 284,
     tagline: "When Cynthia wakes up. She'll wish she were dead...",
     summary:
       'Unity Field, a "free love" cult from the \'70s, is mostly remembered for its notorious mass suicide led by Harris, its charismatic leader. While all members are supposed to burn in a fire together, young Cynthia is spared by chance. Years later, the nightmare of Unity Field remains buried in her mind. But when those around Cynthia start killing themselves, and she begins having visions of Harris, she may be forced to confront the past -- before it confronts her.',
@@ -10970,7 +10992,7 @@ const lboxData = [
     ],
     directors: ["Rospo Pallenberg"],
     genres: ["horror"],
-    id: 286,
+    id: 285,
     tagline: "No one said surviving high school would be easy.",
     summary:
       'High school student Paula Carson\'s affections are being sought after by two of her classmates: Dwight, the "bad boy", and Brian, a disturbed young man who has just been released from a mental hospital where he was committed following the suspicious death of his father. Soon after being released, more murders start happening. Is Brian back to his old tricks, or is Dwight just trying to eliminate the competition?',
@@ -11002,7 +11024,7 @@ const lboxData = [
     ],
     directors: ["Javier Aguirre"],
     genres: ["horror"],
-    id: 287,
+    id: 286,
     summary:
       "Paul Naschy plays a hunchback with below average intelligence who works at the morgue. He is in love with a sickly girl who happens to be the only person who is kind to him. Each day he brings her flowers until the day she dies.",
     runtime: "87 mins",
@@ -11033,13 +11055,13 @@ const lboxData = [
     ],
     directors: ["Carlos Aured"],
     genres: ["horror"],
-    id: 288,
+    id: 287,
     summary:
       "In Medieval France a warlock is be-headed and his wife tortured and executed. Hundreds of years later an isolated group of people discover his head buried on their property. Soon it comes back to life, possessing people and using them to commit sacrifices and to search for the rest of his body.",
     runtime: "88 mins",
     title: "Horror Rises from the Tomb",
     year: "1973",
-    rating: "3.25",
+    rating: "3.26",
     poster:
       "https://a.ltrbxd.com/resized/film-poster/3/4/5/5/4/34554-horror-rises-from-the-tomb-0-230-0-345-crop.jpg?k=0da32ce6a6",
   },
@@ -11066,7 +11088,7 @@ const lboxData = [
     ],
     directors: ["León Klimovsky"],
     genres: ["horror"],
-    id: 289,
+    id: 288,
     tagline: "A Modern Day Gothic Tale Of Horror And Fear",
     summary:
       "An Indian mystic uses magical chants to raise women from the dead, then sends them out to perform revenge killings for him.",
@@ -11111,13 +11133,13 @@ const lboxData = [
     ],
     directors: ["León Klimovsky"],
     genres: ["horror", "adventure"],
-    id: 290,
+    id: 289,
     summary:
       "An evil ruler uses witchcraft and evil spirits to keep his subjects in line, but the his reign of terror prompts the people to revolt.",
     runtime: "95 mins",
     title: "Devil's Possessed",
     year: "1974",
-    rating: "2.81",
+    rating: "2.80",
     poster:
       "https://a.ltrbxd.com/resized/film-poster/3/2/8/8/9/32889-devil-s-possessed-0-230-0-345-crop.jpg?k=a6db4089a2",
   },
@@ -11136,7 +11158,7 @@ const lboxData = [
     ],
     directors: ["Carlos Aured"],
     genres: ["thriller", "mystery", "horror"],
-    id: 291,
+    id: 290,
     summary:
       "An ex-convict, troubled by dreams that he strangles women, is hired as the caretaker on an estate owned by three very strange sisters. Soon after his arrival, a serial killer begins slaughtering blonde, blue-eyed women - and leaving their eyeballs in a bowl of water.",
     runtime: "89 mins",
@@ -11168,7 +11190,7 @@ const lboxData = [
     ],
     directors: ["Umberto Lenzi"],
     genres: ["mystery", "thriller", "crime"],
-    id: 292,
+    id: 291,
     summary:
       "Industrialist Jean is living a jet set life in late sixties Paris. Things are not so well at home with his frigid wife Danielle. He meets their new neighbour, Nicole, and they become lovers. But she has a sadistic ex-boyfriend, Klaus, which keeps showing up. It soon transpires that Danielle and Nicole are conspiring against Jean, Klaus being the hitman hired to murder him.",
     runtime: "89 mins",
@@ -11215,13 +11237,13 @@ const lboxData = [
     ],
     directors: ["Tonino Valerii"],
     genres: ["thriller", "drama", "horror"],
-    id: 293,
+    id: 292,
     summary:
       "Following the mysterious decapitation of an insurance investigator, Police Inspector Peretti is put onto the case, but all the clues lead to an unsolved case of kidnapping and murder.",
     runtime: "96 mins",
     title: "My Dear Killer",
     year: "1972",
-    rating: "3.26",
+    rating: "3.27",
     poster:
       "https://a.ltrbxd.com/resized/film-poster/5/4/5/3/5/54535-my-dear-killer-0-230-0-345-crop.jpg?k=eb0914e520",
   },
@@ -11251,7 +11273,7 @@ const lboxData = [
     ],
     directors: ["Ferdinando Merighi"],
     genres: ["horror", "mystery"],
-    id: 294,
+    id: 293,
     summary:
       "After a French prostitute is found dead, one of her regular clients is tried and convicted for her murder. He is eventually sentenced to death but dies in a high speed pursuit after attempting to escape custody. Soon, the witnesses that testified against him end up being systematically murdered by a mysterious killer wearing black gloves.",
     runtime: "83 mins",
@@ -11282,14 +11304,14 @@ const lboxData = [
     ],
     directors: ["Francisco Lara Polop"],
     genres: ["horror"],
-    id: 295,
+    id: 294,
     tagline: "Welcome to Home Bloody Home",
     summary:
       "A group of travelers, stranded at an isolated, fog-bound mansion, are beset upon by the living dead from the adjoining cemetery.",
     runtime: "83 mins",
     title: "Murder Mansion",
     year: "1972",
-    rating: "2.88",
+    rating: "2.89",
     poster:
       "https://a.ltrbxd.com/resized/film-poster/8/5/0/4/4/85044-murder-mansion-0-230-0-345-crop.jpg?k=262c40e0ff",
   },
@@ -11320,7 +11342,7 @@ const lboxData = [
     ],
     directors: ["Umberto Lenzi"],
     genres: ["mystery", "horror"],
-    id: 296,
+    id: 295,
     summary:
       "As a thirteen year old, Martha Caldwell witnessed the death of her parents in a terrible railway accident. Barely surviving the tragedy herself, Martha was struck dumb due to the shock. Now an adult, the still mute Martha lives with her uncle Ralph in the Spanish countryside. Martha's cousing Jenny arrives to be with the family but is quickly stabbed to death. It appears that a sex maniac is roaming the countryside; killing pretty young girls. The already traumatized Martha seems likely to be the next victim but the case turns out to be far more complicated than it would first seem.",
     runtime: "91 mins",
@@ -11347,14 +11369,14 @@ const lboxData = [
     ],
     directors: ["Reginald Le Borg"],
     genres: ["thriller", "horror"],
-    id: 297,
+    id: 296,
     tagline: "The most terrifying motion picture ever!",
     summary:
       'Simon Cordier, a French magistrate and amateur sculptor comes into contact with a malevolent entity. The invisible - yet corporeal - being, called a "horla" is capable of limited psychokinesis and complete mind control.',
     runtime: "96 mins",
     title: "Diary of a Madman",
     year: "1963",
-    rating: "3.10",
+    rating: "3.11",
     poster:
       "https://a.ltrbxd.com/resized/film-poster/3/3/1/7/5/33175-diary-of-a-madman-0-230-0-345-crop.jpg?k=4b4f16928c",
   },
@@ -11375,11 +11397,12 @@ const lboxData = [
       "Harry Ellerbe",
       "Darlene Lucht",
       "Bruno VeSota",
+      "Jack Tornek",
     ],
     directors: ["Roger Corman"],
     genres: ["horror"],
-    id: 298,
-    tagline: "A warlock's home is his castle...Forever!",
+    id: 297,
+    tagline: "A warlock's home is his castle...forever!",
     summary:
       "A warlock burned at the stake comes back and takes over the body of his great grandson to take his revenge on the descendents of the villages that burned him.",
     runtime: "87 mins",
@@ -11438,14 +11461,14 @@ const lboxData = [
     ],
     directors: ["Gordon Hessler"],
     genres: ["horror"],
-    id: 299,
+    id: 298,
     tagline: "Hell hath no fury like a sorceress scorned!",
     summary:
       "In seventeenth century England Lord Whitman wages unending war on what he sees as the ever-present scourge of witchcraft, and many local villagers have suffered at his hands. But one victim uses her occult powers to curse his family, enlisting unknowing help from one of the household.",
     runtime: "91 mins",
     title: "Cry of the Banshee",
     year: "1970",
-    rating: "2.72",
+    rating: "2.73",
     poster:
       "https://a.ltrbxd.com/resized/film-poster/3/8/1/1/2/38112-cry-of-the-banshee-0-230-0-345-crop.jpg?k=a9778b98fc",
   },
@@ -11472,14 +11495,14 @@ const lboxData = [
     ],
     directors: ["Robert Fuest"],
     genres: ["horror", "comedy", "adventure"],
-    id: 300,
+    id: 299,
     tagline: "Flesh crawls! Blood curdles! Phibes lives!",
     summary:
       "The vengeful Doctor rises again, seeking the Scrolls of Life in an attempt to resurrect his deceased wife.",
     runtime: "89 mins",
     title: "Dr. Phibes Rises Again",
     year: "1972",
-    rating: "3.16",
+    rating: "3.17",
     poster:
       "https://a.ltrbxd.com/resized/film-poster/4/0/4/7/3/40473-dr-phibes-rises-again-0-230-0-345-crop.jpg?k=cd266ca847",
   },
@@ -11499,7 +11522,7 @@ const lboxData = [
     ],
     directors: ["Pete Walker"],
     genres: ["horror", "mystery", "comedy"],
-    id: 301,
+    id: 300,
     tagline: "Room for every nightmare… A nightmare in every room.",
     summary:
       "An American writer goes to a remote Welsh manor on a $20,000 bet that he can write a classic novel like 'Wuthering Heights' in 24 hours. However, upon his arrival he discovers that the apparently empty manor has several rather odd inhabitants.",

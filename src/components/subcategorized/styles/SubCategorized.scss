@@ -164,6 +164,14 @@
     background-color: #2a5;
   }
 
+  .week.exploitation .header {
+    background-color: rgb(82, 17, 62);
+  }
+
+  .week.horror-pack .header {
+    background-color: rgb(9, 46, 80);
+  }
+
   &.nov_dec_2020 {
     .week {
       .movie-list {

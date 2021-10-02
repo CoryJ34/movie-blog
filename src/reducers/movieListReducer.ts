@@ -7,12 +7,18 @@ import testData from "../data/test-data";
 import lboxData from "../data/lbox-data";
 import categoryMeta from "../data/category-meta";
 import milestoneData from "../data/milestones";
-import { AvailableFilters, FilterMap } from "../models/Filter";
+import {
+  AvailableFilters,
+  Filter,
+  FilterMap,
+  FilterType,
+} from "../models/Filter";
 import ReferenceMap from "../models/ReferenceMap";
 import { buildChartData } from "../util/ChartUtils";
 import sort from "../util/SortUtils";
 import filterMovies, {
   gatherAvailableFilters,
+  makeDefaultDateFilters,
   stringifyFilter,
 } from "../util/FilterUtils";
 import findMovieReferences from "../util/ReferenceUtils";
@@ -84,11 +90,28 @@ export default function movieListReducer(state = initialState, action: any) {
         references: findMovieReferences(allMovies),
         watchListRanges: makeWatchListRanges(filteredMovies),
         milestones: milestoneData.reverse(),
+        filters: makeDefaultDateFilters(allMovies),
       };
     }
     case "movies/applyFilter": {
       const { filter } = action;
-      let existingFilters = state.filters || {};
+      let existingFilters: FilterMap = {};
+      const filtersFromState = state.filters || {};
+
+      Object.keys(filtersFromState).forEach((fk) => {
+        // special case to ensure only one start/end date
+        // remove start dates or end dates if a new one is coming in
+        // otherwise just add the filters normally to existingFilters
+        if (filter.type === FilterType.START_DATE) {
+          if (filtersFromState[fk].type !== FilterType.START_DATE) {
+            existingFilters[fk] = filtersFromState[fk];
+          }
+        } else if (filter.type === FilterType.END_DATE) {
+          if (filtersFromState[fk].type !== FilterType.END_DATE) {
+            existingFilters[fk] = filtersFromState[fk];
+          }
+        }
+      });
 
       existingFilters[stringifyFilter(filter)] = filter;
 
@@ -109,6 +132,16 @@ export default function movieListReducer(state = initialState, action: any) {
       // @ts-ignore
       delete existingFilters[stringifyFilter(filter)];
 
+      if (filter.type === FilterType.START_DATE) {
+        const defaultFilters = makeDefaultDateFilters(state.movies || []);
+        const firstKey = Object.keys(defaultFilters)[0];
+        existingFilters[firstKey] = defaultFilters[firstKey];
+      } else if (filter.type === FilterType.END_DATE) {
+        const defaultFilters = makeDefaultDateFilters(state.movies || []);
+        const secondKey = Object.keys(defaultFilters)[1];
+        existingFilters[secondKey] = defaultFilters[secondKey];
+      }
+
       const filtered = filterMovies(state.movies || [], existingFilters);
 
       return {
@@ -124,7 +157,7 @@ export default function movieListReducer(state = initialState, action: any) {
 
       return {
         ...state,
-        filters: [],
+        filters: makeDefaultDateFilters(unfiltered),
         filteredMovies: unfiltered,
         chartData: buildChartData(unfiltered),
         watchListRanges: makeWatchListRanges(state.movies || []),

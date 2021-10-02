@@ -3,6 +3,8 @@ import { useState } from "react";
 import { connect } from "react-redux";
 import { extractRating } from "../../util/TransferUtils";
 import categoryMeta from "../../data/category-meta";
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
 import {
   CategoryMeta,
   RemarkObject,
@@ -104,6 +106,21 @@ const ListSummary = (props: Props) => {
 
   const availableFromFiltered = gatherAvailableFilters(filteredMovies);
 
+  let startDateFilterValue = new Date();
+  let endDateFilterValue = new Date();
+  let startDateFilter: Filter | null = null;
+  let endDateFilter: Filter | null = null;
+
+  Object.keys(filters).forEach((fk) => {
+    if (filters[fk].type === FilterType.START_DATE) {
+      startDateFilterValue = new Date(parseInt(filters[fk].value, 10));
+      startDateFilter = filters[fk];
+    } else if (filters[fk].type === FilterType.END_DATE) {
+      endDateFilterValue = new Date(parseInt(filters[fk].value, 10));
+      endDateFilter = filters[fk];
+    }
+  });
+
   return (
     <div className="list-summary">
       <div className="header">
@@ -137,6 +154,44 @@ const ListSummary = (props: Props) => {
       <div>{`Average runtime: ${Math.floor(minsPerMovie / 60)} hr ${
         minsPerMovie % 60
       } min`}</div>
+      <div className="date-range-container">
+        <DatePicker
+          selected={startDateFilterValue}
+          onChange={(d: Date) =>
+            applyFilter({
+              type: FilterType.START_DATE,
+              value: d.getTime().toString(),
+            })
+          }
+        />
+        <a
+          onClick={() => {
+            if (startDateFilter) {
+              removeFilter(startDateFilter);
+            }
+          }}
+        >
+          Reset
+        </a>
+        <DatePicker
+          selected={endDateFilterValue}
+          onChange={(d: Date) =>
+            applyFilter({
+              type: FilterType.END_DATE,
+              value: d.getTime().toString(),
+            })
+          }
+        />
+        <a
+          onClick={() => {
+            if (endDateFilter) {
+              removeFilter(endDateFilter);
+            }
+          }}
+        >
+          Reset
+        </a>
+      </div>
       {!presetCategory && (
         <div className="filters">
           {FILTERABLES.map((f) => (
