@@ -172,6 +172,15 @@
     background-color: rgb(9, 46, 80);
   }
 
+  .week.paul-naschy .header {
+    background-color: rgb(56, 8, 52);
+  }
+
+  .week.giallo .header {
+    background-color: rgb(253, 249, 30);
+    color: black;
+  }
+
   &.nov_dec_2020 {
     .week {
       .movie-list {

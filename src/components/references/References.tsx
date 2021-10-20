@@ -1,3 +1,8 @@
+import {
+  Accordion,
+  AccordionDetails,
+  AccordionSummary,
+} from "@material-ui/core";
 import React, { ReactElement } from "react";
 import { connect } from "react-redux";
 import { Movie } from "../../models/Movie";
@@ -31,12 +36,18 @@ const References = (props: Props) => {
   const renderRef = (movieRef: string) => {
     return (
       <div key={movieRef} className="movie-reference">
-        <div className="reference-name">{movieRef}</div>
-        <div className="referencers">
-          {references[movieRef].map((referencer) =>
-            renderReference(referencer)
-          )}
-        </div>
+        <Accordion className="milestone">
+          <AccordionSummary>
+            <div className="reference-name">{`${movieRef} - [${references[movieRef].length}]`}</div>
+          </AccordionSummary>
+          <AccordionDetails>
+            <div className="referencers">
+              {references[movieRef].map((referencer) =>
+                renderReference(referencer)
+              )}
+            </div>
+          </AccordionDetails>
+        </Accordion>
       </div>
     );
   };

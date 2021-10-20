@@ -168,9 +168,9 @@ const VHS = (props: Props) => {
 
                     return superText(c);
                   })}
-                  {subText("Runtime")}
-                  {superText(movie.titleBreakout.year.substring(1, 5))}
                   {subText("Year")}
+                  {superText(movie.titleBreakout.year.substring(1, 5))}
+                  {subText("Runtime")}
                   {superText(movie.lbox.runtime)}
                   {subText("Ratings")}
                   {superText(`${movie.lbox.rating}/5`)}

@@ -19,9 +19,31 @@
     a {
       font-size: 11px;
       padding: 0 20px 0 5px;
-      line-height: 36px;
+      // line-height: 36px;
       cursor: pointer;
       text-decoration: underline;
+    }
+  }
+
+  .year-range-container {
+    .MuiInputBase-root {
+      margin-right: 20px;
+    }
+
+    .MuiSelect-root.MuiSelect-select {
+      color: white;
+    }
+
+    svg {
+      color: white;
+    }
+
+    .MuiInput-underline:before {
+      border-bottom: solid 1px #777;
+    }
+
+    .MuiInput-underline:hover:not(.Mui-disabled):before {
+      border-bottom: solid 1px white;
     }
   }
 

@@ -36,6 +36,8 @@ interface StateType {
   references: ReferenceMap | null;
   watchListRanges: any[] | null;
   milestones: Milestone[] | null;
+  earliestMovieYear: number;
+  latestMovieYear: number;
 }
 
 const initialState: StateType = {
@@ -49,6 +51,8 @@ const initialState: StateType = {
   references: null,
   watchListRanges: null,
   milestones: null,
+  earliestMovieYear: 1800,
+  latestMovieYear: 3000,
 };
 
 export default function movieListReducer(state = initialState, action: any) {
@@ -80,6 +84,18 @@ export default function movieListReducer(state = initialState, action: any) {
 
       const filteredMovies: Movie[] = [...allMovies];
 
+      let earliestMovieYear = 3000;
+      let latestMovieYear = 1800;
+
+      allMovies.forEach((m) => {
+        if (m.titleBreakout.rawYear < earliestMovieYear) {
+          earliestMovieYear = m.titleBreakout.rawYear;
+        }
+        if (m.titleBreakout.rawYear > latestMovieYear) {
+          latestMovieYear = m.titleBreakout.rawYear;
+        }
+      });
+
       return {
         ...state,
         movies: allMovies,
@@ -91,6 +107,8 @@ export default function movieListReducer(state = initialState, action: any) {
         watchListRanges: makeWatchListRanges(filteredMovies),
         milestones: milestoneData.reverse(),
         filters: makeDefaultDateFilters(allMovies),
+        earliestMovieYear,
+        latestMovieYear,
       };
     }
     case "movies/applyFilter": {
@@ -110,6 +128,16 @@ export default function movieListReducer(state = initialState, action: any) {
           if (filtersFromState[fk].type !== FilterType.END_DATE) {
             existingFilters[fk] = filtersFromState[fk];
           }
+        } else if (filter.type === FilterType.YEAR_START) {
+          if (filtersFromState[fk].type !== FilterType.YEAR_START) {
+            existingFilters[fk] = filtersFromState[fk];
+          }
+        } else if (filter.type === FilterType.YEAR_END) {
+          if (filtersFromState[fk].type !== FilterType.YEAR_END) {
+            existingFilters[fk] = filtersFromState[fk];
+          }
+        } else {
+          existingFilters[fk] = filtersFromState[fk];
         }
       });
 

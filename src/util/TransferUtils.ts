@@ -33,6 +33,10 @@ const extractTitleAndYear = (rawTitle: string): string[] => {
   ];
 };
 
+const getRawYear = (year: string) => {
+  return parseInt(year.substr(1, 5), 10);
+};
+
 export const breakoutTitleYearAndCategory = (
   rawTitle: string
 ): TitleBreakout | null => {
@@ -47,6 +51,7 @@ export const breakoutTitleYearAndCategory = (
 
     return {
       title: titleAndYear[0],
+      rawYear: getRawYear(titleAndYear[1]),
       year: titleAndYear[1],
       category: CATEGORIES.HALLOWEEN_2020,
       categoryCls: "halloween_2020",
@@ -60,6 +65,7 @@ export const breakoutTitleYearAndCategory = (
 
     return {
       title: titleAndYear[0],
+      rawYear: getRawYear(titleAndYear[1]),
       year: titleAndYear[1],
       category: CATEGORIES.NOV_DEC_2020,
       categoryCls: "nov_dec_2020",
@@ -72,6 +78,7 @@ export const breakoutTitleYearAndCategory = (
 
     return {
       title: titleAndYear[0],
+      rawYear: getRawYear(titleAndYear[1]),
       year: titleAndYear[1],
       category: CATEGORIES.GAMERA,
       categoryCls: "gamera",
@@ -83,6 +90,7 @@ export const breakoutTitleYearAndCategory = (
 
     return {
       title: titleAndYear[0],
+      rawYear: getRawYear(titleAndYear[1]),
       year: titleAndYear[1],
       category: CATEGORIES.RANDOMIZER,
       categoryCls: "randomizer",
@@ -95,6 +103,7 @@ export const breakoutTitleYearAndCategory = (
 
     return {
       title: titleAndYear[0],
+      rawYear: getRawYear(titleAndYear[1]),
       year: titleAndYear[1],
       category: CATEGORIES.MARCH_MADNESS,
       categoryCls: "march_madness",
@@ -109,6 +118,7 @@ export const breakoutTitleYearAndCategory = (
 
     return {
       title: titleAndYear[0],
+      rawYear: getRawYear(titleAndYear[1]),
       year: titleAndYear[1],
       category: CATEGORIES.GENRES,
       categoryCls: "genres",
@@ -122,6 +132,7 @@ export const breakoutTitleYearAndCategory = (
 
     return {
       title: titleAndYear[0],
+      rawYear: getRawYear(titleAndYear[1]),
       year: titleAndYear[1],
       category: CATEGORIES.FINISH_THE_SERIES_HORROR,
       categoryCls: "finish_the_series_horror",
@@ -134,6 +145,7 @@ export const breakoutTitleYearAndCategory = (
 
     return {
       title: titleAndYear[0],
+      rawYear: getRawYear(titleAndYear[1]),
       year: titleAndYear[1],
       category: CATEGORIES.DECADES_OF_HORROR,
       categoryCls: "decades_of_horror",
@@ -146,6 +158,7 @@ export const breakoutTitleYearAndCategory = (
 
     return {
       title: titleAndYear[0],
+      rawYear: getRawYear(titleAndYear[1]),
       year: titleAndYear[1],
       category: CATEGORIES.FINISH_THE_SERIES_NON_HORROR,
       categoryCls: "finish_the_series_non_horror",
@@ -158,6 +171,7 @@ export const breakoutTitleYearAndCategory = (
 
     return {
       title: titleAndYear[0],
+      rawYear: getRawYear(titleAndYear[1]),
       year: titleAndYear[1],
       category: CATEGORIES.GENRE_SAMPLER,
       categoryCls: "genre_sampler",
@@ -172,6 +186,7 @@ export const breakoutTitleYearAndCategory = (
 
     return {
       title: titleAndYear[0],
+      rawYear: getRawYear(titleAndYear[1]),
       year: titleAndYear[1],
       category: CATEGORIES.HALLOWEEN_2021,
       categoryCls: "halloween_2021",

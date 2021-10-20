@@ -7,6 +7,8 @@ export enum FilterType {
   FORMAT,
   START_DATE,
   END_DATE,
+  YEAR_START,
+  YEAR_END,
 }
 
 export interface Filter {

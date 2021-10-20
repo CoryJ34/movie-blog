@@ -1,4 +1,4 @@
-import { Dialog } from "@material-ui/core";
+import { Dialog, MenuItem, Select } from "@material-ui/core";
 import { useState } from "react";
 import { connect } from "react-redux";
 import { extractRating } from "../../util/TransferUtils";
@@ -32,6 +32,8 @@ interface Props {
   availableFilters: AvailableFilters;
   filteredMovies: Movie[];
   hideSort?: boolean;
+  earliestMovieYear: number;
+  latestMovieYear: number;
   applyFilter: (filter: Filter) => void;
   removeFilter: (filter: Filter) => void;
 }
@@ -68,6 +70,8 @@ const ListSummary = (props: Props) => {
     availableFilters,
     filteredMovies,
     hideSort,
+    earliestMovieYear,
+    latestMovieYear,
     applyFilter,
     removeFilter,
   } = props;
@@ -110,6 +114,8 @@ const ListSummary = (props: Props) => {
   let endDateFilterValue = new Date();
   let startDateFilter: Filter | null = null;
   let endDateFilter: Filter | null = null;
+  let minYearFilterValue = 1800;
+  let maxYearFilterValue = 3000;
 
   Object.keys(filters).forEach((fk) => {
     if (filters[fk].type === FilterType.START_DATE) {
@@ -118,8 +124,18 @@ const ListSummary = (props: Props) => {
     } else if (filters[fk].type === FilterType.END_DATE) {
       endDateFilterValue = new Date(parseInt(filters[fk].value, 10));
       endDateFilter = filters[fk];
+    } else if (filters[fk].type === FilterType.YEAR_START) {
+      minYearFilterValue = parseInt(filters[fk].value, 10);
+    } else if (filters[fk].type === FilterType.YEAR_END) {
+      maxYearFilterValue = parseInt(filters[fk].value, 10);
     }
   });
+
+  let availableYears = [];
+
+  for (var i = earliestMovieYear; i <= latestMovieYear; i++) {
+    availableYears.push(i);
+  }
 
   return (
     <div className="list-summary">
@@ -154,44 +170,84 @@ const ListSummary = (props: Props) => {
       <div>{`Average runtime: ${Math.floor(minsPerMovie / 60)} hr ${
         minsPerMovie % 60
       } min`}</div>
-      <div className="date-range-container">
-        <DatePicker
-          selected={startDateFilterValue}
-          onChange={(d: Date) =>
-            applyFilter({
-              type: FilterType.START_DATE,
-              value: d.getTime().toString(),
-            })
-          }
-        />
-        <a
-          onClick={() => {
-            if (startDateFilter) {
-              removeFilter(startDateFilter);
-            }
-          }}
-        >
-          Reset
-        </a>
-        <DatePicker
-          selected={endDateFilterValue}
-          onChange={(d: Date) =>
-            applyFilter({
-              type: FilterType.END_DATE,
-              value: d.getTime().toString(),
-            })
-          }
-        />
-        <a
-          onClick={() => {
-            if (endDateFilter) {
-              removeFilter(endDateFilter);
-            }
-          }}
-        >
-          Reset
-        </a>
-      </div>
+      {!presetCategory && (
+        <div className="filter-section">
+          <div className="section-label">Watched Date</div>
+          <div className="date-range-container">
+            <DatePicker
+              selected={startDateFilterValue}
+              onChange={(d: Date) =>
+                applyFilter({
+                  type: FilterType.START_DATE,
+                  value: d.getTime().toString(),
+                })
+              }
+            />
+            <a
+              onClick={() => {
+                if (startDateFilter) {
+                  removeFilter(startDateFilter);
+                }
+              }}
+            >
+              Reset
+            </a>
+            <DatePicker
+              selected={endDateFilterValue}
+              onChange={(d: Date) =>
+                applyFilter({
+                  type: FilterType.END_DATE,
+                  value: d.getTime().toString(),
+                })
+              }
+            />
+            <a
+              onClick={() => {
+                if (endDateFilter) {
+                  removeFilter(endDateFilter);
+                }
+              }}
+            >
+              Reset
+            </a>
+          </div>
+        </div>
+      )}
+      {!presetCategory && (
+        <div className="filter-section">
+          <div className="section-label">Release Year</div>
+          <div className="year-range-container">
+            <Select
+              value={minYearFilterValue}
+              label="Min Year"
+              onChange={(event: any) => {
+                applyFilter({
+                  type: FilterType.YEAR_START,
+                  value: event.target.value.toString(),
+                });
+              }}
+            >
+              {availableYears.map((v) => (
+                <MenuItem value={v}>{v}</MenuItem>
+              ))}
+            </Select>
+            <Select
+              value={maxYearFilterValue}
+              label="Max Year"
+              onChange={(event: any) => {
+                applyFilter({
+                  type: FilterType.YEAR_END,
+                  value: event.target.value.toString(),
+                });
+              }}
+            >
+              {availableYears.map((v) => (
+                <MenuItem value={v}>{v}</MenuItem>
+              ))}
+            </Select>
+          </div>
+        </div>
+      )}
       {!presetCategory && (
         <div className="filters">
           {FILTERABLES.map((f) => (
@@ -229,6 +285,8 @@ const mapStateToProps = (state: any) => {
     filters: state.movieStore?.filters,
     availableFilters: state.movieStore?.availableFilters,
     filteredMovies: state.movieStore?.filteredMovies,
+    earliestMovieYear: state.movieStore?.earliestMovieYear,
+    latestMovieYear: state.movieStore?.latestMovieYear,
   };
 };
 

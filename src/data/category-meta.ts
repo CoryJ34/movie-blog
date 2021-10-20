@@ -10,6 +10,25 @@ const categoryMeta = {
       ],
       date: "August 28, 2021",
     },
+    closing: {
+      content: [
+        "We’ve reached the end of another Halloween season (for the watchlists anyway, I still have 11 days left to soak in the season and I’m gonna use them dammit!)  It was definitely a fun watchlist.  Maybe not the highest quality of movies but.. fun, and that’s what matters, right?",
+        "Let’s just pick the top 5, and then the bottom 5.. maybe with some honorable/dishonorable mentions",
+        "<strong>Top</strong>",
+        "<li><strong>Fade to Black</strong> – Some might find it annoying but for a horror nerd, it’s a lot of fun, although still a bit cheesy at times</li><li><strong>Cemetery of Terror</strong> – Slashers + zombies + Halloween.. it’s a lot of fun for my sensibilities</li><li><strong>The Haunted Palace</strong> – Lovecraftian New England vibes with Vincent Price.. that’s a recipe for a good time</li><li><strong>Murder Mansion</strong> – A classic premise but in a giallo style</li><li><strong>Diary of a Madman</strong> – Another good Vincent Price movie, even with narration by him in parts of the movie</li>",
+        "<strong>Honorable mentions</strong>: <strong>Dr. Phibes Rises Again</strong>, <strong>Bitter Feast</strong>, <strong>My Dear Killer</strong>",
+        "<strong>Bottom</strong>",
+        "<li><strong>All Monsters Attack</strong> –  A little boy and baby Godzilla… yeesh.  Not a recipe for success in my book</li><li><strong>Psychos</strong> – Poorly acted and technically not great, just not a very entertaining movie</li><li><strong>Son of Godzilla</strong> – More baby Godzilla.. it’s just not what I’m looking for in a GODZILLA movie</li><li><strong>The Morningside Monster</strong> – Another pretty cheap one with some suspect acting and a laughable monster mask</li><li><strong>The Gruesome Twosome</strong> – Just a bit too cheap for my tastes.. the lead actress’s acting.. some awkward editing.  But it’s still a <em>little</em> fun</li>",
+        "<strong>Dishonorable mentions</strong>: <strong>Bloody Moon</strong>, <strong>The Monster and the Girl</strong>, <strong>Seeds</strong>",
+        "<strong>Weeks</strong>",
+        "Let’s look at the individual weeks, ranked by average rating:",
+        "<li><strong>Vincent Price</strong> (Week 8) [Avg: <strong>6.90</strong>] – A good run of VP movies this time.  They usually are the right vibe for late October and that was definitely true this time.  I’d like to make it a tradition but I’m running out of VP horror movies to watch..</li><li><strong>Giallo</strong> (Week 7) [Avg: <strong>6.60</strong>] – Giallos (or gialli..) are always pretty solid.  They are just murder mysteries with a little extra horror and violence</li><li><strong>80s Slashers</strong> (Week 5) [Avg: <strong>6.30</strong>] – A surprisingly good week of slashers.  Last Halloween, the 80s slashers week was one of the lowest.  There were a handful of mediocre movies here, but two or three that were actually a lot of fun for me</li><li><strong>Paul Naschy</strong> (Week 6) [Avg: <strong>5.90</strong>] – I’m still not quite sure where I stand on this guy’s movies, but these were a weird mix of things like Hammer and giallo films that pushed the boundaries a bit.  So they were interesting, I’ll give them that</li><li><strong>Universal</strong> (Week 3) [Avg: <strong>5.70</strong>] – This group of Universal movies wasn’t so great, a lot of forgettable stuff in there.  I guess I’m scraping the barrel on my remaining Universal movies</li><li><strong>Horror Pack </strong>(Week 4) [Avg: <strong>5.60</strong>] – I didn’t expect much from this week, but I was pleasantly surprised with a couple.  They ranged from artsy to almost amateur homemade movies</li><li><strong>Godzilla</strong> (Week 1) [Avg: <strong>5.45</strong>] – As fun as they are, it’s safe to say that the older Godzilla movies aren’t really for me.  I’m glad to have seen them but they are a bit repetitive</li><li><strong>Exploitation</strong> (Week 2) [Avg: <strong>5.10</strong>] – It’s not surprising that this one was last.  They weren’t too bad, actually, just kind of underwhelming, but I’m looking forward to watching more Grefé and Rebane</li>",
+        "<strong>Other Notable Stuff</strong>",
+        "This list was interesting compared to a lot of others because there were no movies from the 1990s or 2000s… just a big gap from 1989 to 2010.  Also, there were 6 movies from 1972 alone.  The total runtime of these movies combined was about 71.5 hours.  Surprisingly, not that much.  That’s about 9 hours per week on average.  It was also a Scream Factory-heavy list with 18 of the 50 movies being released by them.  Mostly the Vincent Price, Paul Naschy and Universal Horror sets.",
+        "Anyway, that’s it.. sad that it’s over, but it was fun and I’m already looking forward to the next watchlist.  Until then!",
+      ],
+      date: "October 20, 2021",
+    },
   },
   "Genre Sampler": {
     opening: {

@@ -35,7 +35,7 @@ export const LABELS = {
   CRITERION: "Criterion",
   BLUE_UNDERGROUND: "Blue Underground",
   SYNAPSE: "Synapse",
-  SCREAM_FACTORY_COLLECTORS: "Scream Factory",
+  SCREAM_FACTORY_COLLECTORS: "Scream Factory (Collector's Edition)",
   SCREAM_FACTORY_OTHER: "Scream Factory (Other)",
   VINEGAR_SYNDROME: "Vinegar Syndrome",
   SEVERIN: "Severin",

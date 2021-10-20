@@ -41,6 +41,28 @@ const pushOrIncrement = (
 export const makeDefaultDateFilters = (movies: Movie[]): FilterMap => {
   const sortedCopy = sort(movies, "id", null) || [];
 
+  let minYear = 3000;
+  let maxYear = 1800;
+
+  sortedCopy.forEach((m) => {
+    if (m.titleBreakout.rawYear < minYear) {
+      minYear = m.titleBreakout.rawYear;
+    }
+    if (m.titleBreakout.rawYear > maxYear) {
+      maxYear = m.titleBreakout.rawYear;
+    }
+  });
+
+  const yearStart: Filter = {
+    type: FilterType.YEAR_START,
+    value: minYear.toString(),
+  };
+
+  const yearEnd: Filter = {
+    type: FilterType.YEAR_END,
+    value: maxYear.toString(),
+  };
+
   const startDateFilter: Filter = {
     type: FilterType.START_DATE,
     value: new Date(sortedCopy[0].date).getTime().toString(),
@@ -56,6 +78,8 @@ export const makeDefaultDateFilters = (movies: Movie[]): FilterMap => {
   return {
     [stringifyFilter(startDateFilter)]: startDateFilter,
     [stringifyFilter(endDateFilter)]: endDateFilter,
+    [stringifyFilter(yearStart)]: yearStart,
+    [stringifyFilter(yearEnd)]: yearEnd,
   };
 };
 
@@ -201,6 +225,20 @@ const filterMovies = (movies: Movie[], filters: FilterMap) => {
       if (k === FilterType.END_DATE.toString()) {
         // only one endDate, assume 0 index
         if (parseInt(filtersByType[k][0]) < new Date(m.date).getTime()) {
+          res = false;
+        }
+      }
+
+      if (k === FilterType.YEAR_START.toString()) {
+        // only one yearStart, assume 0 index
+        if (parseInt(filtersByType[k][0], 10) > m.titleBreakout.rawYear) {
+          res = false;
+        }
+      }
+
+      if (k === FilterType.YEAR_END.toString()) {
+        // only one yearEnd, assume 0 index
+        if (parseInt(filtersByType[k][0], 10) < m.titleBreakout.rawYear) {
           res = false;
         }
       }

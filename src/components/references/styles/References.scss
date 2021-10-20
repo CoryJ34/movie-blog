@@ -1,12 +1,34 @@
 .references-page {
   .movie-reference {
+    .MuiAccordion-root.Mui-expanded {
+      margin: 0;
+    }
+
+    .MuiAccordionSummary-content.Mui-expanded {
+      margin: 12px 0;
+    }
+
+    .MuiAccordionSummary-root.Mui-expanded {
+      min-height: 0;
+    }
+
+    .reference-name {
+      // padding: 10px;
+      // border-top: solid 2px #999;
+      // border-bottom: solid 2px #999;
+      // background: #171717;
+      width: 100%;
+      display: inline-block;
+      color: white;
+    }
+
     .reference-name {
       font-size: 18px;
       font-weight: 600;
-      padding: 10px;
-      border-top: solid 2px #999;
-      border-bottom: solid 2px #999;
-      background: #171717;
+      // padding: 10px;
+      // border-top: solid 2px #999;
+      // border-bottom: solid 2px #999;
+      // background: #171717;
     }
 
     .referencers {
