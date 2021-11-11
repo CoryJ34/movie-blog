@@ -13,6 +13,10 @@ app.get("/api", (req, res) => {
   res.json({ message: "Hello from server123!" });
 });
 
+app.get("*", (req, res) => {
+  res.sendFile(path.resolve(__dirname, "../client/build", "index.html"));
+});
+
 const PORT = process.env.PORT || 3001;
 
 app.listen(PORT, console.log(`Server started on port ${PORT}`));
