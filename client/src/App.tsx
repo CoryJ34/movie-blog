@@ -41,6 +41,11 @@ interface CategoryMap {
 
 function App(props: Props) {
   useEffect(() => {
+    fetch("/api")
+      .then((res) => res.json())
+      .then((data) => {
+        alert(data.message);
+      });
     // Load movies on App load
     props.loadMovies();
   }, []);

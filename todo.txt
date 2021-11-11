@@ -1,6 +1,0 @@
-* March Madness page
-* Halloween 2020 page
-* Better sorting/filtering
-* Better list page
-* Distribution charts (ratings, years)
-* Sass?
