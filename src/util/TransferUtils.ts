@@ -193,6 +193,22 @@ export const breakoutTitleYearAndCategory = (
       subCategory: week,
       order: num,
     };
+  } else if (rawTitle.indexOf("Days of Listmas") === 0) {
+    // Days of Listmas
+    const parts = rawTitle.split("–");
+    const titleAndYear = extractTitleAndYear(parts[2].trim());
+    const week = parts[1].trim();
+    const num = parts[0].split("#")[1];
+
+    return {
+      title: titleAndYear[0],
+      rawYear: getRawYear(titleAndYear[1]),
+      year: titleAndYear[1],
+      category: CATEGORIES.DAYS_OF_LISTMAS,
+      categoryCls: "days_of_listmas",
+      subCategory: week,
+      order: num,
+    };
   }
 
   return null;

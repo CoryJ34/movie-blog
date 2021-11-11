@@ -20,6 +20,7 @@ import Footer from "./components/common/Footer/Footer";
 import Ratings from "./components/ratings/Ratings";
 import VHSShelf from "./components/vhs/VHSShelf";
 import Halloween2021 from "./components/Halloween2021";
+import DaysOfListmas from "./components/DaysOfListmas";
 
 interface Props {
   movies: Movie[];
@@ -161,6 +162,15 @@ function App(props: Props) {
             </Route>
             <Route path="/genresampler">
               {categorizedPage(CATEGORIES.GENRE_SAMPLER)}
+            </Route>
+            <Route path="/daysoflistmas">
+              <PageLayout
+                movies={moviesByCategory[CATEGORIES.DAYS_OF_LISTMAS]}
+                presetCategory={CATEGORIES.DAYS_OF_LISTMAS}
+                hideSort={true}
+              >
+                <DaysOfListmas movies={movies} openDetail={openDetail} />
+              </PageLayout>
             </Route>
             <Route path="/references">
               <References />

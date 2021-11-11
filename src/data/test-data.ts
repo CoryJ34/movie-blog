@@ -18,6 +18,74 @@ const TAGS = {
 
 const data = [
   {
+    title: "Days of Listmas #5 – 80s Slashers – Opera (1987)",
+    img: "https://einysrentals.files.wordpress.com/2021/11/pxl_20211105_200602212.jpg?w=800&h=600&crop=1",
+    content: [
+      "Jumping ahead a few years to the later part of the 80s.  This one is considered an 80s slasher but, being Dario Argento, it feels kind of half slasher / half giallo.  I’m usually not a big fan of movies set with opera/musicals as the background.. like any of the <strong>Phantom of the Opera</strong> movies or even <strong>Stage Fright (1987)</strong>.  I don’t dislike them, it’s just that the musical aspect doesn’t really do anything for me.  This is similar, but I do appreciate the opera house setting and the actual “opera scenes” are fairly limited.  So this time it was actually a pro instead of a con.  Otherwise, it’s a typical mystery killer type of movie with the standard Argento style, some good colorful shots here and there and a bit of blood.  The cast is kind of forgettable, but still a pretty fun slasher with a cool setting.",
+      "7/10",
+    ],
+    date: "November 11, 2021",
+    id: 305,
+    tags: [TAGS.SLASH80S],
+    label: LABELS.OTHER,
+    format: FORMATS.BLU_RAY,
+  },
+  {
+    title:
+      "Days of Listmas #4 – 80s Slashers – Butcher, Baker, Nightmare Maker (1981)",
+    img: "https://einysrentals.files.wordpress.com/2021/11/pxl_20211105_200530759.mp_.jpg?w=800&h=600&crop=1",
+    content: [
+      "When I was in middle school, I remember this commercial coming on all the time around here for what seemed like some local store and it would say something like “Hear ye hear ye!  Get thee to Butcher Baker Candlestick Makers!”.  For some reason, I found that so funny and talked to my friend about it and somehow he’d never seen it.  Then it became a thing.. I would continue to see it at home and he still hadn’t.  Then one evening, our phone rings and it’s for me.  I think I was playing Riven: The Sequel to Myst on our family computer at the time.. anyway, my friend says “I saw it!!  I saw it!!”  So anyway.. that’s what always creeps in my head when I see this movie title.  Cool story, I know",
+      "This movie is a slasher but it’s a little light on the slashing.  There’s a high schooler whose parents died when he was a baby, so he lives with his aunt.  This aunt is a little weird from the outset, but maybe not <em>quite</em> as weird as the aunt in <strong>Sleepaway Camp (1983)</strong>.  There is a killing and some cop who <em>really</em> wants the killer to be this main character.  The cop is also pretty homophobic.  There is another cop who I recognize from <strong>Silent Night, Deadly Night (1984)</strong> as the store owner.  Him being in this movie kind of makes me tie these two movies together.. they are of similar quality, they even have a main character named Billy.  The only thing is you don’t have the Christmas coziness here.  Anyway.. the movie is a bit slow if you’re looking for a straight-up slasher, but it still has entertainment value.  You get a bit of crazy aunt, a bit of good cop/bad cop and a bit of 80s high school movie so.. there you go.  Something for everyone.",
+      "6/10",
+    ],
+    date: "November 9, 2021",
+    id: 304,
+    tags: [TAGS.SLASH80S],
+    label: LABELS.CODE_RED,
+    format: FORMATS.BLU_RAY,
+  },
+  {
+    title: "Days of Listmas #3 – 80s Slashers – Happy Birthday to Me (1981)",
+    img: "https://einysrentals.files.wordpress.com/2021/11/pxl_20211105_200514410.jpg?w=800&h=600&crop=1",
+    content: [
+      "Let me first just talk about the blu-ray box art.  It’s supposed to look like a VHS box with the tape sliding out of it.. it’s cool in an ugly way.  Anyway, the movie itself is all right.  A bit too long, but it’s about what you’d expect from an earlier slasher.  Mystery around who the killer is, lots of potential killers, blah blah.  So in that sense, it’s what I expected.  But the characters aren’t too interesting and they are all kind of similar.. I kind of forgot who was who.  Not much else to say.. it’s interesting, decently made and a pretty straightforward slasher (after watching a more “meta” slasher and a serial killer movie), but it doesn’t stand out much to me among other slashers.",
+      "6/10",
+    ],
+    date: "November 7, 2021",
+    id: 303,
+    tags: [TAGS.SLASH80S],
+    label: LABELS.OTHER,
+    format: FORMATS.BLU_RAY,
+  },
+  {
+    title: "Days of Listmas #2 – 80s Slashers – Don’t Answer the Phone! (1980)",
+    img: "https://einysrentals.files.wordpress.com/2021/11/pxl_20211105_200500746.mp_.jpg?w=800&h=600&crop=1",
+    content: [
+      "“This guy are sick”.  But really, he is.  This is an interesting watch since I just happened to catch the movie <strong>Angel (1984)</strong> on the Last Drive-In a few weeks back and this has some similarities.  First, it’s about a real weird killer where you actually get to spend a little time with him, rather than him only appearing in the movie here and there for the kill scenes.  Second, it’s in LA and there is a bit of nighttime LA driving around (but not as much as <strong>Angel</strong>).  Finally, the detectives hunting the killer down is a bit similar as well.  Although in this movie, the cops are kind of the comedic relief.  Also, this killer is much more talkative but just as crazy.  It’s actually a pretty decent movie.. the comedic cops were sometimes a little more miss than hit, but the overall movie was actually surprisingly good for an 80s slasher.  And as far as it’s “80s slasher-ness”.. it’s more of a serial killer movie but there is a final girl and the standard detective(s) after the killer, so it’s basically a slasher but maybe not in it’s purest form.  Anyway, fun movie.",
+      "7/10",
+    ],
+    date: "November 6, 2021",
+    id: 302,
+    tags: [TAGS.SLASH80S],
+    label: LABELS.VINEGAR_SYNDROME,
+    format: FORMATS.BLU_RAY,
+  },
+  {
+    title: "Days of Listmas #1 – 80s Slashers – Effects (1980)",
+    img: "https://einysrentals.files.wordpress.com/2021/11/pxl_20211105_200441064.jpg?w=800&h=600&crop=1",
+    content: [
+      "Starting it off with one that kind of is and kind of isn’t a slasher.  At least, it doesn’t really have a lot of the tropes, but it does revolve around the making of a slasher-like movie so it still fits this category in my book.  Not knowing anything about this movie until popping it in today, I was surprised that it’s George Romero-adjacent.  Both Tom Savini and Joe Pilato are in it.. it’s basically made by friends of Romero.  Anyway, about the movie itself.. a guy is working on the movie and gets involved with a woman who is also working on the crew.  The guy starts noticing some weirdness with the director and other crew and so on and so on.  Am I weird for actually kind of liking this movie?  Maybe.. but it’s really not too bad.  Obviously not much budget, but it’s done decently well and the main character is actually likeable.  It’s fun but slow for most of it and then ramps up near the end.  I was pleasantly surprised since I went into it expecting just another run-of-the-mill slasher, but instead it’s actually something a little more unique.",
+      "",
+      "7/10",
+    ],
+    date: "November 5, 2021",
+    id: 301,
+    tags: [TAGS.SLASH80S],
+    label: LABELS.OTHER,
+    format: FORMATS.BLU_RAY,
+  },
+  {
     title:
       "Halloween 2021 #50 – Vincent Price – House of the Long Shadows (1983)",
     img: "https://einysrentals.files.wordpress.com/2021/10/pxl_20211017_140416508.portrait.jpg?w=800&h=600&crop=1",
@@ -1487,7 +1555,7 @@ const data = [
     title:
       "[Horror] Finish the Series #21 – The Hills Have Eyes Part II (1984)",
     content: [
-      "The “lightning round” continues into a new decade.  We’re going to spend some time in the 80s now, which is my happy place.  Well maybe THIS movie isn’t but, you know, in general.  This is just a two-movie series (not including remakes), so I don’t even nkow if that’s considered a series.  But I finished it anyway and it’s not great, but it’s got a lot of the typical slasher staples, so it’s kind of what you’d expect of an 80s slasher, for better or worse.  The characters and acting are not too great, of course, and the music really seems to ripoff the music from the <strong>Friday the 13th</strong> series.  So this feels like a Friday the 13th movie but in a completely different setting (desert) and with no Jason.  It can be a bit dumb at times, but for anyone looking for a typical 80s slasher with dirtbikes, this is it.",
+      "The “lightning round” continues into a new decade.  We’re going to spend some time in the 80s now, which is my happy place.  Well maybe THIS movie isn’t but, you know, in general.  This is just a two-movie series (not including remakes), so I don’t even know if that’s considered a series.  But I finished it anyway and it’s not great, but it’s got a lot of the typical slasher staples, so it’s kind of what you’d expect of an 80s slasher, for better or worse.  The characters and acting are not too great, of course, and the music really seems to ripoff the music from the <strong>Friday the 13th</strong> series.  So this feels like a Friday the 13th movie but in a completely different setting (desert) and with no Jason.  It can be a bit dumb at times, but for anyone looking for a typical 80s slasher with dirtbikes, this is it.",
       "5/10",
       "It’s been a couple years since I’ve seen the first movie, but I remember it being a little raw and a little messy.  It’s kind of considered a classic but I probably come in a little lower on it than most.  It’s definitely a scary concept though and it’s something that’s in the back of my mind when I think about road tripping anywhere near a desert.  The second movie is goofier and less “in-your-face”, so it probably doesn’t appeal to fans of the first so much.",
     ],

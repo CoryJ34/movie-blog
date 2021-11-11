@@ -10,6 +10,7 @@ export const CATEGORIES = {
   DECADES_OF_HORROR: "Decades of Horror",
   GENRE_SAMPLER: "Genre Sampler",
   HALLOWEEN_2021: "Halloween 2021",
+  DAYS_OF_LISTMAS: "Days of Listmas",
 };
 
 export interface SimpleMap {
@@ -28,6 +29,7 @@ export const CATEGORY_CLS_MAP: SimpleMap = {
   [CATEGORIES.DECADES_OF_HORROR]: "decades_of_horror",
   [CATEGORIES.GENRE_SAMPLER]: "genre_sampler",
   [CATEGORIES.HALLOWEEN_2021]: "halloween_2021",
+  [CATEGORIES.DAYS_OF_LISTMAS]: "days_of_listmas",
 };
 
 export const LABELS = {

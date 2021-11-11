@@ -209,6 +209,15 @@
         border: solid 2px rgb(160, 37, 0);
       }
 
+      &.days_of_listmas {
+        // background: linear-gradient(
+        //   to bottom,
+        //   rgb(221, 110, 31) 20%,
+        //   rgb(131, 64, 15) 100%
+        // );
+        border: solid 2px rgb(49, 102, 35);
+      }
+
       &:hover {
         filter: brightness(1.25);
       }

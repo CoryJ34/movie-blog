@@ -102,6 +102,11 @@ const Home = (props: Props) => {
               category={CATEGORIES.HALLOWEEN_2021}
               movies={movies}
             />
+            <FeaturedCard
+              loc="/daysoflistmas"
+              category={CATEGORIES.DAYS_OF_LISTMAS}
+              movies={movies}
+            />
           </Grid>
         </div>
         <div className="section-header">
