@@ -3,10 +3,9 @@ import {
   extractRating,
 } from "../util/TransferUtils";
 import { Movie } from "../models/Movie";
-import testData from "../data/test-data";
-import lboxData from "../data/lbox-data";
-import categoryMeta from "../data/category-meta";
-import milestoneData from "../data/milestones";
+// import lboxData from "../data/lbox-data";
+// import categoryMeta from "../data/category-meta";
+// import milestoneData from "../data/milestones";
 import {
   AvailableFilters,
   Filter,
@@ -58,6 +57,8 @@ const initialState: StateType = {
 export default function movieListReducer(state = initialState, action: any) {
   switch (action.type) {
     case "movies/load": {
+      const { lboxData, movieData, categoryData, milestoneData } =
+        action.payload;
       let lboxMap = {};
 
       lboxData.forEach((lb: any) => {
@@ -65,7 +66,7 @@ export default function movieListReducer(state = initialState, action: any) {
         lboxMap[lb.id] = lb;
       });
 
-      const allMovies = testData.map((original: any) => {
+      const allMovies = movieData.map((original: any) => {
         const rating = parseFloat(extractRating(original).split("/")[0].trim());
 
         // @ts-ignore
@@ -87,7 +88,7 @@ export default function movieListReducer(state = initialState, action: any) {
       let earliestMovieYear = 3000;
       let latestMovieYear = 1800;
 
-      allMovies.forEach((m) => {
+      allMovies.forEach((m: Movie) => {
         if (m.titleBreakout.rawYear < earliestMovieYear) {
           earliestMovieYear = m.titleBreakout.rawYear;
         }
@@ -102,7 +103,7 @@ export default function movieListReducer(state = initialState, action: any) {
         filteredMovies,
         availableFilters: gatherAvailableFilters(allMovies),
         chartData: buildChartData(filteredMovies),
-        categoryMeta,
+        categoryMeta: categoryData,
         references: findMovieReferences(allMovies),
         watchListRanges: makeWatchListRanges(filteredMovies),
         milestones: milestoneData.reverse(),

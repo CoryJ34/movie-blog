@@ -2,7 +2,6 @@ import { Dialog, MenuItem, Select } from "@material-ui/core";
 import { useState } from "react";
 import { connect } from "react-redux";
 import { extractRating } from "../../util/TransferUtils";
-import categoryMeta from "../../data/category-meta";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import {
@@ -68,6 +67,7 @@ const ListSummary = (props: Props) => {
     presetCategory,
     filters,
     availableFilters,
+    categoryMeta,
     filteredMovies,
     hideSort,
     earliestMovieYear,
@@ -103,6 +103,7 @@ const ListSummary = (props: Props) => {
   averageRating = averageRating / movies.length;
   const minsPerMovie = Math.round(totalRuntimeMins / movies.length);
 
+  // @ts-ignore
   const meta: SingleCategoryMeta = presetCategory
     ? // @ts-ignore
       categoryMeta[presetCategory || "none"]
@@ -287,6 +288,7 @@ const mapStateToProps = (state: any) => {
     filteredMovies: state.movieStore?.filteredMovies,
     earliestMovieYear: state.movieStore?.earliestMovieYear,
     latestMovieYear: state.movieStore?.latestMovieYear,
+    categoryMeta: state.movieStore?.categoryMeta,
   };
 };
 

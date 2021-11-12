@@ -12,21 +12,12 @@ interface Props {
 }
 
 function CategorizedList(props: Props) {
-  const {
-    categoryMeta,
-    filteredMovies,
-    presetCategory,
-    openDetail,
-  } = props;
+  const { categoryMeta, filteredMovies, presetCategory, openDetail } = props;
 
   return (
     <div className="movie-list">
       {!presetCategory && (
-        <ListSummary
-          movies={filteredMovies}
-          categoryMeta={categoryMeta}
-          presetCategory={presetCategory}
-        />
+        <ListSummary movies={filteredMovies} presetCategory={presetCategory} />
       )}
       <div className="movie-list">
         {filteredMovies.map((m) => (

@@ -14,7 +14,7 @@ interface Props {
 }
 
 function MovieList(props: Props) {
-  const { categoryMeta, filteredMovies, presetCategory, openDetail, resetFilters } = props;
+  const { filteredMovies, presetCategory, openDetail, resetFilters } = props;
 
   useEffect(() => {
     resetFilters();
@@ -26,11 +26,7 @@ function MovieList(props: Props) {
   return (
     <div className="movie-list">
       {!presetCategory && (
-        <ListSummary
-          movies={filteredMovies}
-          categoryMeta={categoryMeta}
-          presetCategory={presetCategory}
-        />
+        <ListSummary movies={filteredMovies} presetCategory={presetCategory} />
       )}
       <div className="movie-list">
         {filteredMovies.map((m) => (
@@ -48,8 +44,7 @@ function MovieList(props: Props) {
 
 const mapDispatchToProps = (dispatch: any) => {
   return {
-    resetFilters: () =>
-      dispatch({ type: "movies/resetFilter" })
+    resetFilters: () => dispatch({ type: "movies/resetFilter" }),
   };
 };
 

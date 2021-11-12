@@ -1,4 +1,4 @@
-import { FORMATS, LABELS } from "../common/constants";
+import { FORMATS, LABELS } from "../../../client/src/common/constants";
 
 const TAGS = {
   SLASH80S: "80s Slasher",

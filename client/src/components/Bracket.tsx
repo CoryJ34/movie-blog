@@ -9,7 +9,7 @@ import "./styles/Bracket.scss";
 interface Props {
   movies: any;
   bracketData: BracketData;
-  loadBracketData: () => void;
+  loadBracketData: (data: any) => void;
 }
 
 const MATCHUP_MARGIN = 20;
@@ -37,7 +37,7 @@ const calculateMarginTop = (
     (Math.pow(2, isLast ? roundNum - 1 : roundNum) - 1) *
     (TEAM_HEIGHT + (roundNum === 1 ? MATCHUP_MARGIN / 2 : MATCHUP_MARGIN / 6));
 
-  if(isLast) {
+  if (isLast) {
     calculated -= 16; // account for championship padding
   }
 
@@ -50,7 +50,11 @@ const Bracket = (props: Props) => {
   const [selectedMatchup, setSelectedMatchup] = useState<Matchup | null>(null);
 
   useEffect(() => {
-    loadBracketData();
+    fetch("/bracketdata")
+      .then((res) => res.json())
+      .then((data) => {
+        props.loadBracketData(data);
+      });
   }, []);
 
   if (!movies || !bracketData) {
@@ -195,7 +199,8 @@ const mapStateToProps = (state: any) => {
 
 const mapDispatchToProps = (dispatch: any) => {
   return {
-    loadBracketData: () => dispatch({ type: "bracket/load" }),
+    loadBracketData: (data: any) =>
+      dispatch({ type: "bracket/load", payload: data }),
   };
 };
 

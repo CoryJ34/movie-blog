@@ -7,7 +7,6 @@ import ListSummary from "./list/ListSummary";
 
 interface Props {
   movies: Movie[];
-  categoryMeta: CategoryMeta;
   hideSort?: boolean;
   presetCategory: string;
   applyFilter: (filter: Filter) => void;
@@ -15,22 +14,21 @@ interface Props {
 }
 
 const PageLayout = (props: Props) => {
-  const { movies, categoryMeta, presetCategory, applyFilter, hideSort } = props;
+  const { movies, presetCategory, applyFilter, hideSort } = props;
 
   useEffect(() => {
-    if(presetCategory) {
+    if (presetCategory) {
       applyFilter({
         type: FilterType.WATCHLIST,
         value: presetCategory,
       });
     }
   }, []);
-  
+
   return (
     <div className="page">
       <ListSummary
         movies={movies}
-        categoryMeta={categoryMeta}
         presetCategory={presetCategory}
         hideSort={hideSort}
       />
@@ -41,14 +39,14 @@ const PageLayout = (props: Props) => {
 
 const mapStateToProps = (state: any) => {
   return {
-    categoryMeta: state.movieStore?.categoryMeta
+    categoryMeta: state.movieStore?.categoryMeta,
   };
 };
 
 const mapDispatchToProps = (dispatch: any) => {
   return {
     applyFilter: (filter: Filter) =>
-      dispatch({ type: "movies/applyFilter", filter })
+      dispatch({ type: "movies/applyFilter", filter }),
   };
 };
 

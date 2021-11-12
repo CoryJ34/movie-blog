@@ -28,7 +28,7 @@ interface Props {
   filteredMovies: Movie[];
   selectedMovie: Movie;
   detailOpen: boolean;
-  loadMovies: () => void;
+  loadMovies: (movies: Movie[]) => void;
   removeFilter: (filter: Filter) => void;
   resetFilter: () => void;
   openDetail: (movie: Movie) => void;
@@ -41,13 +41,11 @@ interface CategoryMap {
 
 function App(props: Props) {
   useEffect(() => {
-    fetch("/api")
+    fetch("/getalldata")
       .then((res) => res.json())
       .then((data) => {
-        alert(data.message);
+        props.loadMovies(data);
       });
-    // Load movies on App load
-    props.loadMovies();
   }, []);
 
   const {
@@ -221,7 +219,11 @@ const mapStateToProps = (state: any) => {
 
 const mapDispatchToProps = (dispatch: any) => {
   return {
-    loadMovies: () => dispatch({ type: "movies/load" }),
+    loadMovies: (allData: any) =>
+      dispatch({
+        type: "movies/load",
+        payload: allData,
+      }),
     sort: (sortField: string, sortDir: string) =>
       dispatch({ type: "movies/sort", sortField, sortDir }),
     openDetail: (movie: Movie) =>
