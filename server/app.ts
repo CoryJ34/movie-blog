@@ -1,11 +1,11 @@
 import path from "path";
 import express from "express";
 const app = express();
-import movieData from "./data/test-data";
-import categoryData from "./data/category-meta";
-import lboxData from "./data/lbox-data";
-import marchMadnessData from "./data/march-madness-data";
-import milestoneData from "./data/milestones";
+import movieData from "./src/data/test-data";
+import categoryData from "./src/data/category-meta";
+import lboxData from "./src/data/lbox-data";
+import marchMadnessData from "./src/data/march-madness-data";
+import milestoneData from "./src/data/milestones";
 
 // Have Node serve the files for our built React app
 app.use(express.static(path.resolve(__dirname, "../client/build")));
@@ -31,7 +31,7 @@ app.get("/bracketdata", (_, res: any) => {
 });
 
 app.get("*", (_, res: any) => {
-  res.sendFile(path.resolve(__dirname, "../../client/build", "index.html"));
+  res.sendFile(path.resolve(__dirname, "../client/build", "index.html"));
 });
 
 const PORT = process.env.PORT || 3001;

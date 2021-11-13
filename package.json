@@ -46,8 +46,8 @@
     "webpack-cli": "^4.6.0"
   },
   "scripts": {
-    "dev": "ts-node-dev server/src/app.ts",
-    "start": "ts-node server/src/app.ts",
+    "dev": "ts-node-dev server/app.ts",
+    "start": "ts-node server/app.ts",
     "heroku-postbuild": "cd client && npm install && npm run build"
   },
   "engines": {
