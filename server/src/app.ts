@@ -31,7 +31,7 @@ app.get("/bracketdata", (_, res: any) => {
 });
 
 app.get("*", (_, res: any) => {
-  res.sendFile(path.resolve(__dirname, "../client/build", "index.html"));
+  res.sendFile(path.resolve(__dirname, "../../client/build", "index.html"));
 });
 
 const PORT = process.env.PORT || 3001;
