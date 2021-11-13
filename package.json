@@ -31,8 +31,7 @@
   },
   "scripts": {
     "dev": "ts-node-dev server/src/app.ts",
-    "startOLD": "ts-node server/src/app.ts",
-    "start": "ts-node-dev server/src/app.ts",
+    "start": "ts-node server/src/app.ts",
     "heroku-postbuild": "cd client && npm install && npm run build"
   },
   "engines": {
