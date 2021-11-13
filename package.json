@@ -26,12 +26,13 @@
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.3",
     "recharts": "^2.0.9",
+    "ts-node": "^10.4.0",
     "web-vitals": "^1.1.1"
   },
   "scripts": {
     "dev": "ts-node-dev server/src/app.ts",
-    "start": "node server/src/app.ts",
-    "oldBUILD": "cd client && npm install && npm run build",
+    "startOLD": "ts-node server/src/app.ts",
+    "start": "ts-node-dev server/src/app.ts",
     "heroku-postbuild": "cd client && npm install && npm run build"
   },
   "engines": {
