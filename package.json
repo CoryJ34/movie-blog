@@ -48,7 +48,7 @@
   },
   "scripts": {
     "dev": "ts-node-dev server/app.ts",
-    "start": "ts-node server/app.ts",
+    "start": "ts-node --optimize_for_size --max_old_space_size=460 server/app.ts",
     "heroku-postbuild": "cd client && npm install && npm run build"
   },
   "engines": {
