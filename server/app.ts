@@ -6,6 +6,13 @@ import categoryData from "./src/data/category-meta";
 import lboxData from "./src/data/lbox-data";
 import marchMadnessData from "./src/data/march-madness-data";
 import milestoneData from "./src/data/milestones";
+import AWS from "aws-sdk";
+
+AWS.config.update({
+  region: "us-east-2",
+});
+
+var dynamodb = new AWS.DynamoDB();
 
 // Have Node serve the files for our built React app
 app.use(express.static(path.resolve(__dirname, "../client/build")));
@@ -14,8 +21,20 @@ app.get("/api", (_, res: any) => {
   res.json({ message: "NOW IN TS" });
 });
 
-app.get("/getalldata", (_, res: any) => {
+app.get("/getalldata", async (_, res: any) => {
+  let listReq = new Promise((resolve, rej) => {
+    dynamodb.listTables({}, (err, data) => {
+      if (err) {
+        resolve(err);
+      }
+      resolve(data);
+    });
+  });
+
+  const listData = await listReq;
+
   res.json({
+    listData,
     movieData,
     categoryData,
     lboxData,
