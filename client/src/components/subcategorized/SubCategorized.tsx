@@ -7,7 +7,11 @@ import "./styles/SubCategorized.scss";
 
 const toCls = (raw: string) => {
   let fixed = raw.match(/^[0-9]+.*$/) ? `the-${raw}` : raw;
-  return fixed.replaceAll(" ", "-").replaceAll("/", "-").toLowerCase();
+  return fixed
+    .replaceAll(" ", "-")
+    .replaceAll("/", "-")
+    .replaceAll("&", "and")
+    .toLowerCase();
 };
 
 interface NumericMap {
