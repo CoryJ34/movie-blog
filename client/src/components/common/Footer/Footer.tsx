@@ -1,11 +1,18 @@
 import { Drawer, Icon, List, ListItem } from "@material-ui/core";
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { SimpleMap } from "../../../common/constants";
 import "./styles/Footer.scss";
 import Home from "@material-ui/icons/Home";
 import { MoreVert } from "@material-ui/icons";
+import { connect } from "react-redux";
 
-const Footer = () => {
+interface Props {
+  content: SimpleMap;
+}
+
+const Footer = (props: Props) => {
+  const { content } = props;
   const divider = () => {
     return <div className="divider" />;
   };
@@ -24,17 +31,12 @@ const Footer = () => {
     <div className="footer">
       <div className="links">
         <div className="full">
-          {link("/", "Home")}
-          {divider()}
-          {link("/movies", "All Movies")}
-          {divider()}
-          {link("/references", "Movie References")}
-          {divider()}
-          {link("/milestones", "Milestones")}
-          {divider()}
-          {link("/ratings", "Ratings")}
-          {divider()}
-          {link("/shelf", "Shelf")}
+          {Object.keys(content).map((k) => (
+            <>
+              {link(content[k], k)}
+              {divider()}
+            </>
+          ))}
         </div>
         <div className="condensed">
           <Link to={"/"}>
@@ -42,12 +44,19 @@ const Footer = () => {
           </Link>
           {divider()}
           <MoreVert onClick={() => setDrawerOpen(true)} />
-          <Drawer anchor="bottom" open={drawerOpen} onClose={() => setDrawerOpen(false)}>
+          <Drawer
+            anchor="bottom"
+            open={drawerOpen}
+            onClose={() => setDrawerOpen(false)}
+          >
             <List>
-              <ListItem onClick={() => setDrawerOpen(false)}>{link("/movies", "All Movies")}</ListItem>
-              <ListItem onClick={() => setDrawerOpen(false)}>{link("/references", "References")}</ListItem>
-              <ListItem onClick={() => setDrawerOpen(false)}>{link("/milestones", "Milestones")}</ListItem>
-              <ListItem onClick={() => setDrawerOpen(false)}>{link("/ratings", "Ratings")}</ListItem>
+              {Object.keys(content).map((k) => (
+                <>
+                  <ListItem key={k} onClick={() => setDrawerOpen(false)}>
+                    {link(content[k], k)}
+                  </ListItem>
+                </>
+              ))}
             </List>
           </Drawer>
         </div>
@@ -56,4 +65,10 @@ const Footer = () => {
   );
 };
 
-export default Footer;
+const mapStateToProps = (props: any) => {
+  return {
+    content: props.movieStore?.bottomNav || {},
+  };
+};
+
+export default connect(mapStateToProps)(Footer);

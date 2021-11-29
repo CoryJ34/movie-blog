@@ -18,6 +18,85 @@ const TAGS = {
 
 const data = [
   {
+    title: "Days of Listmas #21 – Random Sequels – Wolf Creek 2 (2013)",
+    img: "https://einysrentals.files.wordpress.com/2021/11/pxl_20211122_143311261.mp_.jpg?w=800&h=600&crop=1",
+    content: [
+      "Another psycho killer (qu’est-ce que c’est) movie, this time in the Australian outback.  For some reason, I thought this movie was more of a creature feature, but maybe I just confused the name “Wolf Creek” with <strong>Willow Creek (2013)</strong>, which is a bigfoot movie (though at the time of writing this, I’ve never seen it).  But no, it’s not that at all, just a straight-up crazy guy who seems to just stalk and kill foreigners in the outback.  Maybe some context from the first movie would help but.. this is “Random Sequels”, after all, so I haven’t seen that.  He is definitely an intimidating character, kind of disarming and brutal.  Most of the movie is a mix of a chase and a torture movie.. nothing too “new” but at least this guy is fun to watch.  I don’t know if I’ll get around to seeing the original but I might check it out some day if I catch it streaming or something since this one was decent.",
+      "6.5/10",
+      "That’s the last of the Random Sequels.. rankings:",
+      "<li><strong>Wolf Creek 2</strong> – I thought this wasn’t bad, but that’s not super high praise for the top of my ranking.  Just goes to show that sequels are typically not <em>great</em></li><li><strong>Hatchet III</strong> – Flat humor and kind of cheesy effects, but I do appreciate the horror fan vibe at least a little</li><li><strong>Outpost: Rise of the Spetsnaz</strong> – Could have been a lot more fun, but it wasn’t as terribly made movie as I expected</li><li><strong>Resident Evil: Afterlife</strong> – Technically ok but the writing, the characters, all that stuff.. meh</li><li><strong>Ninja III: The Domination</strong> – Pretty weak, but gets some points for effort and being 80s cheese</li><li><strong>Fright Night 2: New Blood</strong> – Unlikeable characters, pretty uninteresting.. just not my kind of movie</li>",
+      "Watching these didn’t make me think “oh man I gotta go check out the others in the series!” but that’s ok.  It was still a good experience.. I don’t think having the context of the previous movies really mattered.  Taking them for what they were, they were at least a bit entertaining.",
+    ],
+    date: "November 28, 2021",
+    id: 321,
+    label: LABELS.OTHER,
+    format: FORMATS.BLU_RAY,
+  },
+  {
+    title:
+      "Days of Listmas #20 – Random Sequels – Outpost: Rise of the Spetsnaz (2013)",
+    img: "https://einysrentals.files.wordpress.com/2021/11/pxl_20211122_143255162.mp_.jpg?w=800&h=600&crop=1",
+    content: [
+      "Nazi zombies.  It’s a weird sub-genre, but it can be fun, like in <strong>Dead Snow (2009)</strong>.  This is not really like that at all.  This is kind of overly serious for what it is and somehow manages to make Nazi zombies a little boring to me.  The movie is about some captured Russian soldiers being introduced to some Nazi experiment zombies and then the Russians trying to fight their way out of this facility.  Acting-wise.. it’s ok.  The Nazi leader actor seems like he’s having fun though.  My kind of zombie movie is more of the widespread zombie apocalypse and the focus on society and survival.  This one is not my kind of zombie movie, unfortunately.  I can’t say it was bad.. I expected worse, honestly, just based on the blu-ray cover.  But ultimately, this movie didn’t inspire me to want to go back and watch the first two in this series.  It’s a pretty forgettable zombie action movie.",
+      "5.5/10",
+    ],
+    date: "November 27, 2021",
+    id: 320,
+    label: LABELS.OTHER,
+    format: FORMATS.BLU_RAY,
+  },
+  {
+    title: "Days of Listmas #19 – Random Sequels – Hatchet III (2013)",
+    img: "https://einysrentals.files.wordpress.com/2021/11/pxl_20211122_143239519.mp_.jpg?w=800&h=600&crop=1",
+    content: [
+      "With this, I’ve <em>almost</em> scene all the Hatchet movies, except for <strong>Hatchet II (2010)</strong>.  I first saw <strong>Hatchet (2006)</strong> when I randomly saw it streaming somewhere a few years ago.. maybe it was Hulu?  Anyway, I had heard a lot about it as being a throwback to 80s slashers and it basically was but it seemed like it was trying a little too hard and the humor just wasn’t hitting for me.  Then just within the past year, I saw <strong>Victor Crowley (2017)</strong> on the Last Drive-In and it’s fun enough but, again, it’s just a bit goofy for me.  So onto this one and yeah, it’s more of the same.  What I do like about it is that there are a lot of horror actors and actresses.. Zach Galligan, Caroline Williams, Kane Hodder, Derek Mears, and, of course, Danielle Harris.  Plus a cameo as a racist shut-in by Sid Haig.  I remember catching just a bit of this on TV, I think in a hotel in Phoenix years back, but not enough to know what was really going on.  The main character from previous movies thought she killed Victor Crowley, went to the police station bloody with a gun and a scalp and, surprisingly, they think she might have killed someone.  So she is jailed, a journalist teams up with her and a deputy to try to do some kind of “mythical” solution to the Victor Crowley problem while others are getting killed by VC.  It’s ok as a slasher, but the patented “Hatchet Humor” just doesn’t quite do it for me.  The kill effects sometimes just seem a little too cheap and over-the-top.  But it’s fun enough for something nobody should take too seriously.  I’d come in at like a 5.5 but I’ll give it just a bit of a bump due to the obvious love of horror behind it.",
+      "6/10",
+    ],
+    date: "November 26, 2021",
+    id: 319,
+    label: LABELS.OTHER,
+    format: FORMATS.BLU_RAY,
+  },
+  {
+    title:
+      "Days of Listmas #18 – Random Sequels – Fright Night 2: New Blood (2013)",
+    img: "https://einysrentals.files.wordpress.com/2021/11/pxl_20211122_143227312.mp_.jpg?w=800&h=600&crop=1",
+    content: [
+      "Well.. this movie.  I’ll say right off the bat, I’m torn on this one.. between a 4 and a 4.5.  I gave <strong>Chernobyl Diaries (2012)</strong> a 4.5 and I feel this is fairly similar.. but maybe worse?  We’ll see what I talk myself into as I go through the process of writing this post.  As a “Random Sequel”, it’s kind of an interesting one because I’ve seen the OG <strong>Fright Night (1985)</strong>, which I liked.. but I never saw its sequel or the 2011 remake.  But I do at least recognize the names of some of the major characters here.. Charlie Brewster, Evil Ed and Peter Vincent.  This one takes place in Romania, some kind of study abroad type of thing and they meet a female vampire and vampirey stuff happens from that point forward.  That all seems fine enough, so why don’t I like the movie?  Ugh the characters.. Charlie is sort of boring and a little whiny.  Ed is the worst.. trying way too hard to be funny and it’s not working.  Peter Vincent is <em>ok</em> but just too cheesy in the end.  It’s just one of those movies where I feel a little embarrassed watching it when I see these characters interact.  Outside of that, it’s not a super interesting or original movie.  Lila from Dexter is the main vampire villain and she’s not too bad, basically just a female version of the seducer type vampire from the original 1985 version (and presumably 2011 remake).  So I’ll be a little more generous here and go with the 4.5 but I’m putting Fright Night 2 on notice: you were <em>this</em> close to a 4.",
+      "4.5/10",
+    ],
+    date: "November 24, 2021",
+    id: 318,
+    label: LABELS.OTHER,
+    format: FORMATS.BLU_RAY,
+  },
+  {
+    title:
+      "Days of Listmas #17 – Random Sequels – Resident Evil: Afterlife (2010)",
+    img: "https://einysrentals.files.wordpress.com/2021/11/pxl_20211122_143211528.jpg?w=800&h=600&crop=1",
+    content: [
+      "Another random sequel, but this time, I’ve at least seen one of them, which is the original: <strong>Resident Evil (2002)</strong>.  That one isn’t really my thing.. a lot of over-the-top action and not a lot of the creepiness and survival aspect from the original games.  This is even more over-the-top.  One of the cheesiest villains I’ve ever seen and a loooot of slow motion action scenes.  The action scenes are decently well-shot and choreographed, I guess, but most other things in the movie seem to be too… SyFy.   Characters are either too cool, too annoying, too bland or too weak without much in between.  Instead of going the “too cool” route, I think it could have been more enjoyable if they took themselves less seriously.  So it’s about what I’d expect the fourth movie in this series to be, but it still isn’t for me… but I can’t deny that it’s at least <em>ok</em> in some technical aspects.",
+      "5/10",
+    ],
+    date: "November 24, 2021",
+    id: 317,
+    label: LABELS.OTHER,
+    format: FORMATS.BLU_RAY,
+  },
+  {
+    title:
+      "Days of Listmas #16 – Random Sequels – Ninja III: The Domination (1984)",
+    img: "https://einysrentals.files.wordpress.com/2021/11/pxl_20211122_143156752.mp_.jpg?w=800&h=600&crop=1",
+    content: [
+      "The first of the random sequels.  I have no familiarity at all with this series, but since it was released as a Scream Factory Collector’s Edition, of course I had to get it.  So I just jumped right in at part three and.. it’s not too good.  I don’t think that this comes from me not having any context.. it’s just a typical cheap action movie with some clumsy martial arts.  A very 80s aerobics instructor and telephone repairwoman, I guess?, gets possessed by some ninja and begins to kill and there is some other ninja guy after this special sword.  Anyway, the story doesn’t <em>really</em> matter.. it’s that the fights aren’t very impressive, the overall movie is pretty cheesy and it’s not super interesting.  There is a lot of very 80s stuff in there though, which kind of adds that sentimental 80s feeling, but otherwise, it’s not very notable for me.  I give it a little credit because it feels like they at least made some effort, it’s just very amateurish.",
+      "5/10",
+    ],
+    date: "November 22, 2021",
+    id: 316,
+    label: LABELS.SCREAM_FACTORY_COLLECTORS,
+    format: FORMATS.BLU_RAY,
+  },
+  {
     title: "Days of Listmas #15 – Crime & Action – Split Second (1992)",
     img: "https://einysrentals.files.wordpress.com/2021/11/pxl_20211116_234453451.jpg?w=800&h=600&crop=1",
     content: [

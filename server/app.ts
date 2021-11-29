@@ -6,6 +6,7 @@ import categoryData from "./src/data/category-meta";
 import lboxData from "./src/data/lbox-data";
 import marchMadnessData from "./src/data/march-madness-data";
 import milestoneData from "./src/data/milestones";
+import bottomNav from "./src/data/bottom-nav";
 // import AWS from "aws-sdk";
 
 // AWS.config.update({
@@ -35,6 +36,9 @@ app.get("/getalldata", async (_, res: any) => {
 
   res.json({
     // listData,
+    content: {
+      bottomNav,
+    },
     movieData,
     categoryData,
     lboxData,

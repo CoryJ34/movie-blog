@@ -6,7 +6,7 @@ import SubCategorized from "./subcategorized/SubCategorized";
 
 const WEEK_MAP: any = {
   "Week 1": "80s Slashers",
-  "Week 2": "Action Thriller",
+  "Week 2": "Crime & Action",
   "Week 3": "Random Sequels",
   "Week 4": "Sci-Fi Cheese",
   "Week 5": "Horror Docs",

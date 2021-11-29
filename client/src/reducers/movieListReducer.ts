@@ -57,7 +57,7 @@ const initialState: StateType = {
 export default function movieListReducer(state = initialState, action: any) {
   switch (action.type) {
     case "movies/load": {
-      const { lboxData, movieData, categoryData, milestoneData } =
+      const { lboxData, movieData, categoryData, milestoneData, content } =
         action.payload;
       let lboxMap = {};
 
@@ -99,6 +99,7 @@ export default function movieListReducer(state = initialState, action: any) {
 
       return {
         ...state,
+        bottomNav: content.bottomNav,
         movies: allMovies,
         filteredMovies,
         availableFilters: gatherAvailableFilters(allMovies),

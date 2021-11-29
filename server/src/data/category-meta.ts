@@ -1,4 +1,15 @@
 const categoryMeta = {
+  "Days of Listmas": {
+    opening: {
+      title: "— Days of Listmas Watchlist —",
+      content: [
+        "What?  What does this title even mean?  Well, I’ll tell you.. instead of 12 Days of Christmas, this is 8 Days of Listmas.  Why 8 instead of 12?  Because 12 + 11 + 10 … + 2 + 1 is 78 and I don’t see myself getting 78 movies in by Christmas.  8 is much more reasonable.. that leads to 36 movies.  The way I’m doing this is similar to the 12 Days of Christmas song.. so first there will be 8 movies in a row of one category, then 7 movies of the next category, and so on until the final single movie.  What might be a little confusing is that these movies have nothing at all to do with Christmas.  They are not Christmas-themed in any way, I’m just stealing the idea of the song structure for this list.  The categories are:",
+        "<li><strong>80s Slashers (8)</strong> – Of course.  It’s a little hard to find so many of any one category in my collection, but there are plenty of 80s slashers so I just grabbed a group that look interesting to me</li><li><strong>Action/Crime Thrillers (7)</strong> – A little vague since I expect these won’t be so tightly related like 80s slashers, but basically it’s crime-related action/thrillers from mostly the 70s and early 80s</li><li><strong>Random Horror Sequels (6)</strong> – Back when I had the HorrorPack subscription, I’d get a lot of random movies sent to me that were sequels to movies that I either a) hadn’t seen or b) had only seen one of the movies in the series.  So I’m just going to watch these without the context of some previous movies.. what’s the worst that could happen?</li><li><strong>Cheesy Sci-Fi (5)</strong> – These are movies (mostly early 80s) that have a reputation for being so cheesy that they are beloved by some.  I think of these as ones that, if you grew up with them, you might think “oh yeah this movie was awesome” but if you come into it later in life.. maybe not so much.  And I’d be going into them later in life.. so, again, what’s the worst that could happen?</li><li><strong>Horror Documentaries (4)</strong> – I happen to have a few movies that are <em>about</em> horror films instead of actual horror narrative films themselves, so this seems like a good time to sit down and watch them</li><li><strong>Westerns (3)</strong> – Another familiar old genre.  I’m running a little low in my collection of westerns, but I can gather up three for this category</li><li><strong>Samurai (2)</strong> – I have exactly two samurai movies unwatched in my collection so that’s perfect</li><li><strong>Drama (1)</strong> – There is one movie I heard a lot of good things about in the past year or two, so I’ll make it the big finale</li>",
+        "There you go.. this is about as nerdy as it gets, but you gotta keep things fun in life.  I’ll get rolling on those 80s slashers here in the next day or two and plan to be finished before Christmas.  The way it goes for me, I’ll be done with plenty of time to spare.. ",
+      ],
+      date: "November 4, 2021",
+    },
+  },
   "Halloween 2021": {
     opening: {
       title: "— Halloween 2021 Watchlist —",
