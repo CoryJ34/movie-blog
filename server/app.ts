@@ -8,15 +8,38 @@ import marchMadnessData from "./src/data/march-madness-data";
 import milestoneData from "./src/data/milestones";
 import bottomNav from "./src/data/bottom-nav";
 import { DynamoDB, QueryCommand } from "@aws-sdk/client-dynamodb";
+import { buildSchema } from "graphql";
+import { graphqlHTTP } from "express-graphql";
 
 // AWS.config.update({
 //   region: "us-east-2",
 // });
 
-var dynamodb = new DynamoDB({ region: "us-east-2" });
+let dynamodb = new DynamoDB({ region: "us-east-2" });
+
+let schema = buildSchema(`
+  type Query {
+    hello(testVar: String!): String
+  }
+`);
+
+let root = {
+  hello: (args: any) => {
+    return "Hey, the value is " + args.testVar;
+  },
+};
 
 // Have Node serve the files for our built React app
 app.use(express.static(path.resolve(__dirname, "../client/build")));
+
+app.use(
+  "/graphql",
+  graphqlHTTP({
+    schema: schema,
+    rootValue: root,
+    graphiql: true,
+  })
+);
 
 app.get("/api", (_, res: any) => {
   res.json({ message: "NOW IN TS" });
