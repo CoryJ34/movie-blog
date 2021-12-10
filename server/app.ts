@@ -7,7 +7,7 @@ import lboxData from "./src/data/lbox-data";
 import marchMadnessData from "./src/data/march-madness-data";
 import milestoneData from "./src/data/milestones";
 import bottomNav from "./src/data/bottom-nav";
-import { DynamoDB } from "@aws-sdk/client-dynamodb";
+import { DynamoDB, QueryCommand } from "@aws-sdk/client-dynamodb";
 
 // AWS.config.update({
 //   region: "us-east-2",
@@ -32,10 +32,44 @@ app.get("/getalldata", async (_, res: any) => {
     });
   });
 
+  // let queryReq = new Promise((resolve, rej) => {
+  //   dynamodb.send(
+  //     new QueryCommand({
+  //       TableName: "FIRST_TEST",
+  //     }),
+  //     (err, data) => {
+  //       if (err) {
+  //         resolve(err);
+  //       }
+  //       resolve(data);
+  //     }
+  //   );
+  // });
+
+  let qData = {};
+
+  try {
+    // qData = await dynamodb.send(
+    //   new QueryCommand({
+    //     TableName: "FIRST_TEST",
+    //     KeyConditionExpression: "#123 = :123",
+    //   })
+    // );
+
+    qData = await dynamodb.scan({
+      TableName: "FIRST_TEST",
+    });
+  } catch (e) {
+    // @ts-ignore
+    qData = e;
+  }
+
   const listData = await listReq;
+  // const qData = await queryReq;
 
   res.json({
     listData,
+    qData,
     content: {
       bottomNav,
     },

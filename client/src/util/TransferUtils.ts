@@ -196,7 +196,9 @@ export const breakoutTitleYearAndCategory = (
   } else if (rawTitle.indexOf("Days of Listmas") === 0) {
     // Days of Listmas
     const parts = rawTitle.split("–");
-    const titleAndYear = extractTitleAndYear(parts[2].trim());
+    const lastParts = parts.splice(2, parts.length - 2);
+    const lastPart = lastParts.join(" - ");
+    const titleAndYear = extractTitleAndYear(lastPart.trim());
     const week = parts[1].trim();
     const num = parts[0].split("#")[1];
 
