@@ -65,7 +65,7 @@ export const list = async () => {
         tags: item.Tags ? item.Tags.SS : [],
         title: getString(item.Title),
         format: getString(item.Format),
-        year: getString(item.RawYear),
+        year: getInt(item.RawYear),
         category: getString(item.Category),
       };
     }

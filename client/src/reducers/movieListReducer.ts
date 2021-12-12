@@ -57,8 +57,14 @@ const initialState: StateType = {
 export default function movieListReducer(state = initialState, action: any) {
   switch (action.type) {
     case "movies/load": {
-      const { lboxData, movieData, categoryData, milestoneData, content } =
-        action.payload;
+      const {
+        lboxData,
+        movieData,
+        categoryData,
+        milestoneData,
+        content,
+        remoteMovieData,
+      } = action.payload;
       let lboxMap = {};
 
       lboxData.forEach((lb: any) => {
@@ -66,22 +72,39 @@ export default function movieListReducer(state = initialState, action: any) {
         lboxMap[lb.id] = lb;
       });
 
-      const allMovies = movieData.map((original: any) => {
-        const rating = parseFloat(extractRating(original).split("/")[0].trim());
-
-        // @ts-ignore
-        const lbox = lboxMap[original.id];
-
-        return {
-          ...original,
-          rating,
-          titleBreakout: breakoutTitleYearAndCategory(original.title),
-          lbox,
-          runtimeMins: parseInt(lbox.runtime.split(" ")[0]),
-          // @ts-ignore
-          ratingDiff: (rating - parseFloat(lbox.rating) * 2).toFixed(2),
-        };
-      });
+      const allMovies = remoteMovieData
+        .filter((m: any) => m.myRating)
+        .map((m: any) => {
+          return {
+            ...m,
+            date: m.watchedDate,
+            rating: m.myRating,
+            runtimeMins: m.runtime,
+            ratingDiff: (m.myRating - m.userRating).toFixed(2),
+            titleBreakout: {
+              title: m.title,
+              rawYear: m.year,
+              year: "(" + m.year + ")",
+              category: m.category,
+              categoryCls: m.categoryCls,
+              subCategory: m.subCategory,
+              order: m.order,
+            },
+            lbox: {
+              cast: m.cast,
+              directors: m.directors,
+              genres: m.genres,
+              id: m.id,
+              summary: m.summary,
+              runtime: m.runtime + " mins",
+              title: m.title,
+              year: m.year,
+              rating: m.userRating,
+              poster: m.poster,
+              backdrop: m.backdrop,
+            },
+          };
+        });
 
       const filteredMovies: Movie[] = [...allMovies];
 
