@@ -18,6 +18,35 @@ const TAGS = {
 
 const data = [
   {
+    title: "Days of Listmas #33 – Westerns – 4 Dollars of Revenge (1966)",
+    img: "https://einysrentals.files.wordpress.com/2021/12/pxl_20211208_160644337.mp_.jpg?w=800&h=600&crop=1",
+    content: [
+      "Back to this western two-pack blu-ray.  This one is similar in quality to the other, but a different type of story.  In this one, a well-liked Civil War captain is framed for treason, gets imprisoned, escapes and then gets his apparently 4 dollars worth of revenge on those responsible.  Simple enough, but it’s surprisingly kind of slow for a revenge premise.  Again, there’s the low technical quality, some awkward dubbing, all that kind of stuff.  I wouldn’t say I actively disliked it, just that there is nothing that really stands out.. no characters or actors, nothing stylish.  Just a really plain western, but sometimes that’s all you need.",
+      "5.5/10",
+      "Very quickly, the Westerns category is over",
+      "<li><strong>Major Dundee</strong> – Felt a little aimless sometimes, but it has pretty good production values and cast</li><li><strong>The Last Gun</strong> – A little plain but kind of fun.  The ugly villain guy is at least memorable</li><li><strong>4 Dollars of Revenge</strong> – Ok, but the kind of movie I’d forget after a bit</li>",
+      "After some westerns, it’s time to go over to it’s Japanese cousin, the Samurai movie!",
+    ],
+    date: "December 11, 2021",
+    id: 333,
+    tags: [TAGS.WESTERN],
+    label: LABELS.OTHER,
+    format: FORMATS.BLU_RAY,
+  },
+  {
+    title: "Days of Listmas #32 – Westerns – Major Dundee (1965)",
+    img: "https://einysrentals.files.wordpress.com/2021/12/pxl_20211208_160709881.jpg?w=1200&h=900&crop=1",
+    content: [
+      "This was a weird prequel to <strong>Crocodile Dundee (1986)</strong>.  I’m sure I’m not the first to make that lame joke.  Anyway, this is more of a Civil War movie but definitely a western.  Charlton Heston is a Union Major and he has a task to bring together a group and go after some Apache leader.  He has to gather up some Confederate soldiers who have basically no choice but to join and then hijinks ensue.  It’s got a little bit of that “building up a crew” element that I like, but most of the movie is them camping out, getting along then not getting along then getting along again, stuff like that.  There’s a small romance subplot that didn’t seem to necessary.  Overall, though, it’s ok as a western but it seemed to drag a lot for me, like it wanted to be an epic but just wasn’t.  Maybe that’s my fault, I watched the extended version instead of the theatrical.  Anyway, ok movie, good cast with a lot of recognizable faces, but didn’t really hit the right notes for me.",
+      "6.5/10",
+    ],
+    date: "December 10, 2021",
+    id: 332,
+    tags: [TAGS.WESTERN],
+    label: LABELS.ARROW,
+    format: FORMATS.BLU_RAY,
+  },
+  {
     title: "Days of Listmas #31 – Westerns – The Last Gun (1964)",
     img: "https://einysrentals.files.wordpress.com/2021/12/pxl_20211208_160644337.mp_.jpg?w=800&h=600&crop=1",
     content: [

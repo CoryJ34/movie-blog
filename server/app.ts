@@ -10,6 +10,7 @@ import bottomNav from "./src/data/bottom-nav";
 import { DynamoDB, QueryCommand } from "@aws-sdk/client-dynamodb";
 import { buildSchema } from "graphql";
 import { graphqlHTTP } from "express-graphql";
+import { list, migrateFromJson } from "./src/repository/MovieRepository";
 
 // AWS.config.update({
 //   region: "us-east-2",
@@ -55,44 +56,9 @@ app.get("/getalldata", async (_, res: any) => {
     });
   });
 
-  // let queryReq = new Promise((resolve, rej) => {
-  //   dynamodb.send(
-  //     new QueryCommand({
-  //       TableName: "FIRST_TEST",
-  //     }),
-  //     (err, data) => {
-  //       if (err) {
-  //         resolve(err);
-  //       }
-  //       resolve(data);
-  //     }
-  //   );
-  // });
-
-  let qData = {};
-
-  try {
-    // qData = await dynamodb.send(
-    //   new QueryCommand({
-    //     TableName: "FIRST_TEST",
-    //     KeyConditionExpression: "#123 = :123",
-    //   })
-    // );
-
-    qData = await dynamodb.scan({
-      TableName: "FIRST_TEST",
-    });
-  } catch (e) {
-    // @ts-ignore
-    qData = e;
-  }
-
-  const listData = await listReq;
-  // const qData = await queryReq;
+  const scanData: any = await list();
 
   res.json({
-    listData,
-    qData,
     content: {
       bottomNav,
     },
@@ -101,12 +67,21 @@ app.get("/getalldata", async (_, res: any) => {
     lboxData,
     marchMadnessData,
     milestoneData,
+    remoteMovieData: scanData,
   });
 });
 
 app.get("/bracketdata", (_, res: any) => {
   res.json({
     marchMadnessData,
+  });
+});
+
+app.get("/migrate", async (_, res: any) => {
+  const testResp = await migrateFromJson();
+
+  res.json({
+    test: testResp,
   });
 });
 

@@ -44,6 +44,13 @@ const Home = (props: Props) => {
     <div className="home">
       <div className="home-background" />
       <div className="home-content">
+        <div
+          onClick={() => {
+            fetch("/migrate");
+          }}
+        >
+          MIGRATE
+        </div>
         <div className="section-header">Featured</div>
         <div className="featured">
           <Grid container justify="center" spacing={2}>
