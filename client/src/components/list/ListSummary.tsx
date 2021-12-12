@@ -1,7 +1,6 @@
 import { Dialog, MenuItem, Select } from "@material-ui/core";
 import { useState } from "react";
 import { connect } from "react-redux";
-import { extractRating } from "../../util/TransferUtils";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import {
@@ -86,9 +85,8 @@ const ListSummary = (props: Props) => {
   let totalRuntimeMins: number = 0;
 
   movies.forEach((movie) => {
-    averageRating += parseFloat(extractRating(movie).split("/")[0].trim());
-    allCategories[movie.titleBreakout.categoryCls] =
-      movie.titleBreakout.category;
+    averageRating += parseFloat(movie.rating); //parseFloat(extractRating(movie).split("/")[0].trim());
+    allCategories[movie.categoryCls] = movie.category;
     if (movie.tags) {
       movie.tags.forEach((tag) => {
         if (!allTags.includes(tag)) {

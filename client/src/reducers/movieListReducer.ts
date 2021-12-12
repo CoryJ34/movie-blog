@@ -1,7 +1,3 @@
-import {
-  breakoutTitleYearAndCategory,
-  extractRating,
-} from "../util/TransferUtils";
 import { Movie } from "../models/Movie";
 // import lboxData from "../data/lbox-data";
 // import categoryMeta from "../data/category-meta";
@@ -57,20 +53,8 @@ const initialState: StateType = {
 export default function movieListReducer(state = initialState, action: any) {
   switch (action.type) {
     case "movies/load": {
-      const {
-        lboxData,
-        movieData,
-        categoryData,
-        milestoneData,
-        content,
-        remoteMovieData,
-      } = action.payload;
-      let lboxMap = {};
-
-      lboxData.forEach((lb: any) => {
-        // @ts-ignore
-        lboxMap[lb.id] = lb;
-      });
+      const { categoryData, milestoneData, content, remoteMovieData } =
+        action.payload;
 
       const allMovies = remoteMovieData
         .filter((m: any) => m.myRating)
@@ -80,29 +64,7 @@ export default function movieListReducer(state = initialState, action: any) {
             date: m.watchedDate,
             rating: m.myRating,
             runtimeMins: m.runtime,
-            ratingDiff: (m.myRating - m.userRating).toFixed(2),
-            titleBreakout: {
-              title: m.title,
-              rawYear: m.year,
-              year: "(" + m.year + ")",
-              category: m.category,
-              categoryCls: m.categoryCls,
-              subCategory: m.subCategory,
-              order: m.order,
-            },
-            lbox: {
-              cast: m.cast,
-              directors: m.directors,
-              genres: m.genres,
-              id: m.id,
-              summary: m.summary,
-              runtime: m.runtime + " mins",
-              title: m.title,
-              year: m.year,
-              rating: m.userRating,
-              poster: m.poster,
-              backdrop: m.backdrop,
-            },
+            ratingDiff: (m.myRating - m.userRating * 2).toFixed(2),
           };
         });
 
@@ -112,11 +74,11 @@ export default function movieListReducer(state = initialState, action: any) {
       let latestMovieYear = 1800;
 
       allMovies.forEach((m: Movie) => {
-        if (m.titleBreakout.rawYear < earliestMovieYear) {
-          earliestMovieYear = m.titleBreakout.rawYear;
+        if (m.year < earliestMovieYear) {
+          earliestMovieYear = m.year;
         }
-        if (m.titleBreakout.rawYear > latestMovieYear) {
-          latestMovieYear = m.titleBreakout.rawYear;
+        if (m.year > latestMovieYear) {
+          latestMovieYear = m.year;
         }
       });
 

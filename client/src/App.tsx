@@ -80,7 +80,7 @@ function App(props: Props) {
   let moviesByCategory: CategoryMap = {};
 
   movies.reverse().forEach((m) => {
-    const category = m.titleBreakout.category;
+    const category = m.category;
 
     if (!moviesByCategory[category]) {
       moviesByCategory[category] = [];

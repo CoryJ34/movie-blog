@@ -71,7 +71,7 @@ const Ratings = (props: {
                   {parseFloat(m.rating).toFixed(2)}
                 </TableCell>
                 <TableCell className="lbox">
-                  {(parseFloat(m.lbox.rating) * 2).toFixed(2)}
+                  {(m.userRating * 2).toFixed(2)}
                 </TableCell>
                 <TableCell className="diff">{m.ratingDiff}</TableCell>
               </TableRow>

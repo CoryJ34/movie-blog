@@ -53,3 +53,5 @@ export const FORMATS = {
   DVD: "DVD",
   VHS: "VHS",
 };
+
+export const RATING_REGEX = /^[0-9]*\.*[0-9]*\/[0-9]+$/;

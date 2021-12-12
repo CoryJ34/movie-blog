@@ -23,7 +23,7 @@ const makeWatchListRanges = (movies: Movie[]) => {
   for (let i = sortedByReverseID.length - 1; i >= 0; i--) {
     const currMovie = sortedByReverseID[i];
 
-    if (currMovie.titleBreakout.category !== currWL) {
+    if (currMovie.category !== currWL) {
       if (currWL) {
         watchListRanges[watchListRanges.length - 1].lastDate = offsetDate(
           sortedByReverseID[i + 1].date,
@@ -32,11 +32,11 @@ const makeWatchListRanges = (movies: Movie[]) => {
       }
 
       watchListRanges.push({
-        title: currMovie.titleBreakout.category,
+        title: currMovie.category,
         firstDate: currMovie.date,
       });
 
-      currWL = currMovie.titleBreakout.category;
+      currWL = currMovie.category;
     }
 
     if (i === 0) {

@@ -1,6 +1,6 @@
 import { Dialog, Grid } from "@material-ui/core";
 import React, { useState } from "react";
-import { RATING_REGEX } from "../../util/TransferUtils";
+import { RATING_REGEX } from "../../common/constants";
 import { Movie } from "../../models/Movie";
 
 import "./styles/SubCategorized.scss";
@@ -36,7 +36,7 @@ const SubCategorized = (props: Props) => {
   }
 
   const filtered = movies
-    .filter((m) => m.titleBreakout.category === category)
+    .filter((m) => m.category === category)
     .sort((a, b) => {
       return parseInt(a.id, 10) - parseInt(b.id, 10);
     });
@@ -44,11 +44,11 @@ const SubCategorized = (props: Props) => {
   let grouped: any = {};
 
   filtered.forEach((m) => {
-    if (!m.titleBreakout.subCategory) {
+    if (!m.subCategory) {
       return;
     }
 
-    const week = m.titleBreakout.subCategory;
+    const week = m.subCategory;
 
     if (!week) {
       return;
@@ -99,10 +99,8 @@ const SubCategorized = (props: Props) => {
         onClick={() => openDetail(movie)}
       >
         <img src={movie.img} />
-        <div className="movie-title">{movie.titleBreakout.title}</div>
-        <div className="movie-year">
-          {movie.titleBreakout.year.substr(1, 4)}
-        </div>
+        <div className="movie-title">{movie.title}</div>
+        <div className="movie-year">{movie.year}</div>
         <div className="movie-watched">{movie.date}</div>
       </Grid>
     );
@@ -147,7 +145,7 @@ const SubCategorized = (props: Props) => {
   };
 
   return (
-    <div className={`sub-categorized ${filtered[0].titleBreakout.categoryCls}`}>
+    <div className={`sub-categorized ${filtered[0].categoryCls}`}>
       {Object.keys(grouped).map((k) => renderWeek(grouped[k]))}
       <Dialog open={!!selectedWeek} onClose={() => setSelectedWeek(null)}>
         <div className="week-summary">

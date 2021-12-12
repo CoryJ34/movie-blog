@@ -1,6 +1,6 @@
 import { Dialog } from "@material-ui/core";
 import React from "react";
-import { RATING_REGEX } from "../util/TransferUtils";
+import { RATING_REGEX } from "../common/constants";
 import { Movie } from "../models/Movie";
 
 import "./styles/DetailDialog.scss";
@@ -44,21 +44,19 @@ const DetailDialog = (props: Props) => {
         <img src={selectedMovie?.img} />
       </div>
       <div className="detail-dialog-content backsplash">
-        <div className={`category ${selectedMovie?.titleBreakout.categoryCls}`}>
-          {selectedMovie?.titleBreakout.category}
+        <div className={`category ${selectedMovie?.categoryCls}`}>
+          {selectedMovie?.category}
         </div>
         <div className="rating">
           {parseFloat(selectedMovie?.rating).toFixed(1)}
         </div>
         <div className="detail-header">
-          <div className="title">{selectedMovie?.titleBreakout.title}</div>
-          <div className="year">{selectedMovie?.titleBreakout.year}</div>
-          {selectedMovie?.titleBreakout.subCategory && (
-            <div className="sub-category">
-              {selectedMovie?.titleBreakout.subCategory}
-            </div>
+          <div className="title">{selectedMovie?.title}</div>
+          <div className="year">{selectedMovie?.year}</div>
+          {selectedMovie?.subCategory && (
+            <div className="sub-category">{selectedMovie?.subCategory}</div>
           )}
-          {/* {selectedMovie?.titleBreakout.order && <div className="order">{selectedMovie?.titleBreakout.order}</div>} */}
+          {/* {selectedMovie?.order && <div className="order">{selectedMovie?.order}</div>} */}
         </div>
         <div className="watched">{`Watched: ${selectedMovie?.date}`}</div>
         <div className="detail-body">

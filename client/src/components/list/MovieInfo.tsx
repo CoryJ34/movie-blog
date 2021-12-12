@@ -1,5 +1,5 @@
 import react from "react";
-import { extractRating, RATING_REGEX } from "../../util/TransferUtils";
+import { RATING_REGEX } from "../../common/constants";
 import { Movie } from "../../models/Movie";
 
 import "./styles/MovieInfo.scss";
@@ -31,7 +31,7 @@ interface Props {
 
 const MovieInfo = (props: Props) => {
   const { movie, presetCategory, openDetail } = props;
-  const categoryInfo = movie.titleBreakout;
+  const categoryInfo = movie;
 
   const onCategoryClick = () => {
     // if (currentFilter) {
@@ -51,7 +51,7 @@ const MovieInfo = (props: Props) => {
     complexOrder = true;
   }
 
-  const ratingDisplay = extractRating(movie);
+  const ratingDisplay = parseFloat(movie.rating).toFixed(1);
   const ratingCls = `rating_${parseFloat(ratingDisplay) * 10}`;
 
   return (
@@ -85,7 +85,7 @@ const MovieInfo = (props: Props) => {
             <div className="movie-title">
               {`#${movie.id} ${categoryInfo?.title}`}
               <span className="movie-year">{categoryInfo?.year}</span>
-              <span className="movie-runtime">{movie.lbox.runtime}</span>
+              <span className="movie-runtime">{movie.runtime + " mins"}</span>
             </div>
           )}
           <div className="published-date">{movie.date}</div>

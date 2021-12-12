@@ -86,12 +86,12 @@ const VHS = (props: Props) => {
         <div
           className="box-top"
           style={{
-            backgroundImage: `url(${movie.lbox.poster})`,
+            backgroundImage: `url(${movie.poster})`,
           }}
         >
           {/* {inPreview && (
             <span style={{ color: `rgb(${r},${g},${b})` }}>
-              {movie.titleBreakout.title}
+              {movie.title}
             </span>
           )} */}
         </div>
@@ -101,7 +101,7 @@ const VHS = (props: Props) => {
               className="vhs-front"
               style={showFront ? {} : { display: "none" }}
             >
-              <img src={movie.lbox.poster} />
+              <img src={movie.poster} />
             </div>
           }
           {
@@ -111,15 +111,15 @@ const VHS = (props: Props) => {
             >
               <div className="top-section">
                 <div className="img-container">
-                  {movie.lbox.backdrop ? (
-                    <img className="lbox" src={movie.lbox.backdrop} />
+                  {movie.backdrop ? (
+                    <img className="lbox" src={movie.backdrop} />
                   ) : (
                     <img className="mine" src={movie.img} />
                   )}
                 </div>
               </div>
               <div className="bottom-section">
-                {movie.lbox.tagline && (
+                {movie.tagline && (
                   <div
                     className="tagline"
                     style={
@@ -127,9 +127,9 @@ const VHS = (props: Props) => {
                         ? { color: makeRandomRGB(180, undefined, 2) }
                         : {}
                     }
-                  >{`${movie.lbox.tagline}`}</div>
+                  >{`${movie.tagline}`}</div>
                 )}
-                {movie.lbox.summary && (
+                {movie.summary && (
                   <div
                     className="summary"
                     style={
@@ -138,12 +138,12 @@ const VHS = (props: Props) => {
                         : {}
                     }
                   >
-                    {movie.lbox.summary}
+                    {movie.summary}
                   </div>
                 )}
                 <div className="crew">
                   {subText("Starring")}
-                  {movie.lbox.cast.map((c, i) => {
+                  {movie.cast.map((c, i) => {
                     if (i >= 4) {
                       return;
                     }
@@ -152,7 +152,7 @@ const VHS = (props: Props) => {
                   })}
 
                   {subText("Genres")}
-                  {movie.lbox.genres.map((c, i) => {
+                  {movie.genres.map((c, i) => {
                     if (i >= 7) {
                       return;
                     }
@@ -161,7 +161,7 @@ const VHS = (props: Props) => {
                   })}
 
                   {subText("Directed by")}
-                  {movie.lbox.directors.map((c, i) => {
+                  {movie.directors.map((c, i) => {
                     if (i >= 7) {
                       return;
                     }
@@ -169,11 +169,11 @@ const VHS = (props: Props) => {
                     return superText(c);
                   })}
                   {subText("Year")}
-                  {superText(movie.titleBreakout.year.substring(1, 5))}
+                  {superText(movie.year.toString())}
                   {subText("Runtime")}
-                  {superText(movie.lbox.runtime)}
+                  {superText(movie.runtime + " mins")}
                   {subText("Ratings")}
-                  {superText(`${movie.lbox.rating}/5`)}
+                  {superText(`${movie.userRating}/5`)}
                 </div>
               </div>
             </div>

@@ -4,10 +4,10 @@ import dateFormat from "dateformat";
 const DAY_MS = 1000 * 60 * 60 * 24;
 
 export const buildChartData = (movies: Movie[]) => {
-  if(!movies.length) {
+  if (!movies.length) {
     return {};
   }
-  
+
   let chartData: any = {};
 
   let volumeByYear: any = {};
@@ -29,16 +29,15 @@ export const buildChartData = (movies: Movie[]) => {
   let maxYear = 0;
 
   movies.forEach((m) => {
-    const year = m.titleBreakout.year.substr(1, 4);
-    const decade = m.titleBreakout.year.substr(1, 3) + "0";
-    const yearNum = parseInt(year, 10);
+    const decade = m.year.toString().substr(0, 3) + "0";
+    const year = m.year;
     const watchDate = m.date;
 
-    if (yearNum < minYear) {
-      minYear = yearNum;
+    if (year < minYear) {
+      minYear = year;
     }
-    if (yearNum > maxYear) {
-      maxYear = yearNum;
+    if (year > maxYear) {
+      maxYear = year;
     }
 
     const rating = parseFloat(m.rating);
@@ -194,7 +193,7 @@ export const buildChartData = (movies: Movie[]) => {
 
       chartData.ratingAggByYear.push({
         year: index,
-        avg: 0
+        avg: 0,
       });
     }
 

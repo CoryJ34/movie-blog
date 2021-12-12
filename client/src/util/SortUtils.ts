@@ -5,10 +5,7 @@ const ratingComparator = (a: Movie, b: Movie): number => {
 };
 
 const yearComparator = (a: Movie, b: Movie): number => {
-  return (
-    parseInt(b.titleBreakout.year.substring(1, 5)) -
-    parseInt(a.titleBreakout.year.substring(1, 5))
-  );
+  return b.year - a.year;
 };
 
 const watchedDateComparator = (a: Movie, b: Movie): number => {

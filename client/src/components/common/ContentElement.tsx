@@ -1,4 +1,4 @@
-import { RATING_REGEX } from "../../util/TransferUtils";
+import { RATING_REGEX } from "../../common/constants";
 
 interface Props {
   content: string;

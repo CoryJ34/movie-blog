@@ -1,9 +1,7 @@
 import path from "path";
 import express from "express";
 const app = express();
-import movieData from "./src/data/test-data";
 import categoryData from "./src/data/category-meta";
-import lboxData from "./src/data/lbox-data";
 import marchMadnessData from "./src/data/march-madness-data";
 import milestoneData from "./src/data/milestones";
 import bottomNav from "./src/data/bottom-nav";
@@ -62,9 +60,7 @@ app.get("/getalldata", async (_, res: any) => {
     content: {
       bottomNav,
     },
-    movieData,
     categoryData,
-    lboxData,
     marchMadnessData,
     milestoneData,
     remoteMovieData: scanData,

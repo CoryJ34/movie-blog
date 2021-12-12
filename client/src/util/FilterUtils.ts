@@ -45,11 +45,11 @@ export const makeDefaultDateFilters = (movies: Movie[]): FilterMap => {
   let maxYear = 1800;
 
   sortedCopy.forEach((m) => {
-    if (m.titleBreakout.rawYear < minYear) {
-      minYear = m.titleBreakout.rawYear;
+    if (m.year < minYear) {
+      minYear = m.year;
     }
-    if (m.titleBreakout.rawYear > maxYear) {
-      maxYear = m.titleBreakout.rawYear;
+    if (m.year > maxYear) {
+      maxYear = m.year;
     }
   });
 
@@ -96,16 +96,16 @@ export const gatherAvailableFilters = (movies: Movie[]): AvailableFilters => {
 
     availableFilters[FilterType.WATCHLIST.toString()] = pushOrIncrement(
       availableFilters[FilterType.WATCHLIST.toString()] || [],
-      movie.titleBreakout.category,
+      movie.category,
       CATEGORY_CLS_MAP
     );
     availableFilters[FilterType.YEAR.toString()] = pushOrIncrement(
       availableFilters[FilterType.YEAR.toString()] || [],
-      movie.titleBreakout.year.substring(1, 5)
+      movie.year.toString()
     );
     availableFilters[FilterType.DECADE.toString()] = pushOrIncrement(
       availableFilters[FilterType.DECADE.toString()] || [],
-      movie.titleBreakout.year.substring(1, 4) + "0"
+      movie.year.toString().substring(0, 3) + "0"
     );
 
     availableFilters[FilterType.LABEL.toString()] = pushOrIncrement(
@@ -167,7 +167,7 @@ const filterMovies = (movies: Movie[], filters: FilterMap) => {
 
     Object.keys(filtersByType).forEach((k) => {
       if (k === FilterType.WATCHLIST.toString()) {
-        if (filtersByType[k].indexOf(m.titleBreakout.category) < 0) {
+        if (filtersByType[k].indexOf(m.category) < 0) {
           res = false;
         }
       }
@@ -199,17 +199,14 @@ const filterMovies = (movies: Movie[], filters: FilterMap) => {
       }
 
       if (k === FilterType.YEAR.toString()) {
-        if (
-          filtersByType[k].indexOf(m.titleBreakout.year.substring(1, 5)) < 0
-        ) {
+        if (filtersByType[k].indexOf(m.year.toString()) < 0) {
           res = false;
         }
       }
 
       if (k === FilterType.DECADE.toString()) {
         if (
-          filtersByType[k].indexOf(m.titleBreakout.year.substring(1, 4) + "0") <
-          0
+          filtersByType[k].indexOf(m.year.toString().substring(0, 3) + "0") < 0
         ) {
           res = false;
         }
@@ -231,14 +228,14 @@ const filterMovies = (movies: Movie[], filters: FilterMap) => {
 
       if (k === FilterType.YEAR_START.toString()) {
         // only one yearStart, assume 0 index
-        if (parseInt(filtersByType[k][0], 10) > m.titleBreakout.rawYear) {
+        if (parseInt(filtersByType[k][0], 10) > m.year) {
           res = false;
         }
       }
 
       if (k === FilterType.YEAR_END.toString()) {
         // only one yearEnd, assume 0 index
-        if (parseInt(filtersByType[k][0], 10) < m.titleBreakout.rawYear) {
+        if (parseInt(filtersByType[k][0], 10) < m.year) {
           res = false;
         }
       }
@@ -269,15 +266,15 @@ const filterMovies = (movies: Movie[], filters: FilterMap) => {
     //       return false;
     //     }
     //   } else if (f.type === FilterType.WATCHLIST) {
-    //     if (m.titleBreakout.category !== f.value) {
+    //     if (m.category !== f.value) {
     //       return false;
     //     }
     //   } else if (f.type === FilterType.YEAR) {
-    //     if (m.titleBreakout.year.substr(1, 4) !== f.value) {
+    //     if (m.year.substr(1, 4) !== f.value) {
     //       return false;
     //     }
     //   } else if (f.type === FilterType.DECADE) {
-    //     if (m.titleBreakout.year.substr(1, 3) !== f.value.substr(0, 3)) {
+    //     if (m.year.substr(1, 3) !== f.value.substr(0, 3)) {
     //       return false;
     //     }
     //   } else {

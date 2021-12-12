@@ -14,16 +14,14 @@ const FeaturedCard = (props: Props) => {
   const [randomImg, setRandomImg] = useState("");
 
   useEffect(() => {
-    const filtered = movies.filter(
-      (m) => category === m.titleBreakout.category
-    );
+    const filtered = movies.filter((m) => category === m.category);
     const randomIndex = Math.floor(Math.random() * filtered.length);
 
     setRandomImg(filtered[randomIndex].img);
   }, []);
 
   const filteredAndSorted = [...movies]
-    .filter((m) => m.titleBreakout.category === category)
+    .filter((m) => m.category === category)
     .sort((a, b) => parseInt(a.id, 10) - parseInt(b.id, 10));
 
   const firstDate = filteredAndSorted[0].date;
@@ -32,7 +30,7 @@ const FeaturedCard = (props: Props) => {
   return (
     <Link
       to={loc}
-      className={`featured-card ${filteredAndSorted[0].titleBreakout.categoryCls}`}
+      className={`featured-card ${filteredAndSorted[0].categoryCls}`}
     >
       {randomImg && (
         <div className="featured-card-backsplash">

@@ -1,5 +1,3 @@
-import TitleBreakout from "./TitleBreakout";
-
 export interface Movie {
   id: string;
   title: string;
@@ -7,7 +5,11 @@ export interface Movie {
   date: string;
   content: string[];
   rating: string;
-  titleBreakout: TitleBreakout;
+  year: number;
+  category: string;
+  categoryCls: string;
+  subCategory?: string;
+  order?: string;
   tags: string[];
   label: string;
   format: string;
@@ -24,4 +26,13 @@ export interface Movie {
     poster: string;
     backdrop: string;
   };
+  userRating: number;
+  cast: string[];
+  directors: string[];
+  genres: string[];
+  tagline: string;
+  summary: string;
+  runtime: string;
+  poster: string;
+  backdrop: string;
 }
