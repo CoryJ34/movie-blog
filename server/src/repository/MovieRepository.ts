@@ -80,15 +80,26 @@ export const list = async () => {
   return remoteMovieData;
 };
 
-export const migrateFromJson = async () => {
+export const migrateFromJson = async (data?: any) => {
   let testResp = [];
-  const ids = [126, 70, 249, 212, 186, 182, 179];
+  let ids: number[] = [];
   let i = 0;
 
   const mmap: any = {};
 
   for (const m of movieData) {
     mmap[m.id] = m;
+  }
+
+  // if given a specific data blob, do that
+  if (data) {
+    mmap[data.id] = data;
+    ids.push(data.id);
+  } else {
+    // otherwise, do all
+    for (const m of movieData) {
+      ids.push(m.id);
+    }
   }
 
   for (const lb of lboxData) {

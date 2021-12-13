@@ -30,6 +30,7 @@ let root = {
 
 // Have Node serve the files for our built React app
 app.use(express.static(path.resolve(__dirname, "../client/build")));
+app.use(express.json());
 
 app.use(
   "/graphql",
@@ -73,8 +74,12 @@ app.get("/bracketdata", (_, res: any) => {
   });
 });
 
-app.get("/migrate", async (_, res: any) => {
-  const testResp = await migrateFromJson();
+app.post("/migrate", async (req, res: any) => {
+  const testResp = {
+    test: req.body,
+  };
+
+  await migrateFromJson(JSON.parse(req.body.content));
 
   res.json({
     test: testResp,

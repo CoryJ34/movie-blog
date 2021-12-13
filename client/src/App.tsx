@@ -21,6 +21,7 @@ import Ratings from "./components/ratings/Ratings";
 import VHSShelf from "./components/vhs/VHSShelf";
 import Halloween2021 from "./components/Halloween2021";
 import DaysOfListmas from "./components/DaysOfListmas";
+import Migrater from "./components/Migrater";
 
 interface Props {
   movies: Movie[];
@@ -123,6 +124,9 @@ function App(props: Props) {
       <Router>
         <div className="page-content">
           <Switch>
+            <Route path="/migrate">
+              <Migrater />
+            </Route>
             <Route path="/movies">
               <MovieList
                 categoryMeta={categoryMeta}
