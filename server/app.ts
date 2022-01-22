@@ -75,15 +75,19 @@ app.get("/bracketdata", (_, res: any) => {
 });
 
 app.post("/migrate", async (req, res: any) => {
-  const testResp = {
-    test: req.body,
+  let finalJson: any = {
+    ...JSON.parse(req.body.content),
+    label: req.body.label,
+    format: req.body.format,
   };
 
-  await migrateFromJson(JSON.parse(req.body.content));
+  if (req.body.tags) {
+    finalJson.tags = [req.body.tags];
+  }
 
-  res.json({
-    test: testResp,
-  });
+  await migrateFromJson(finalJson);
+
+  res.json(finalJson);
 });
 
 app.get("*", (_, res: any) => {

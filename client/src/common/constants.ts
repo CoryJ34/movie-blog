@@ -11,6 +11,7 @@ export const CATEGORIES = {
   GENRE_SAMPLER: "Genre Sampler",
   HALLOWEEN_2021: "Halloween 2021",
   DAYS_OF_LISTMAS: "Days of Listmas",
+  BLOOD: "Blood!",
 };
 
 export interface SimpleMap {
@@ -30,9 +31,26 @@ export const CATEGORY_CLS_MAP: SimpleMap = {
   [CATEGORIES.GENRE_SAMPLER]: "genre_sampler",
   [CATEGORIES.HALLOWEEN_2021]: "halloween_2021",
   [CATEGORIES.DAYS_OF_LISTMAS]: "days_of_listmas",
+  [CATEGORIES.BLOOD]: "blood",
 };
 
-export const LABELS = {
+export const TAGS: any = {
+  SLASH80S: "80s Slasher",
+  GIALLO: "Giallo",
+  UNIVERSAL: "Universal",
+  JAPANESE: "Japanese",
+  WESTERN: "Western",
+  HAMMER: "Hammer",
+  VINCENT_PRICE: "Vincent Price",
+  SCI_FI: "Sci-Fi",
+  SCI_FI_HORROR: "Sci-Fi Horror",
+  ACTION: "Action",
+  DRAMA: "Drama",
+  COMEDY_HORROR: "Comedy Horror",
+  DOCUMENTARY: "Documentary",
+};
+
+export const LABELS: any = {
   ARROW: "Arrow",
   CRITERION: "Criterion",
   BLUE_UNDERGROUND: "Blue Underground",
@@ -48,7 +66,7 @@ export const LABELS = {
   OTHER: "Other",
 };
 
-export const FORMATS = {
+export const FORMATS: any = {
   BLU_RAY: "Blu Ray",
   DVD: "DVD",
   VHS: "VHS",

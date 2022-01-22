@@ -1,20 +1,4 @@
-import { FORMATS, LABELS } from "../../../client/src/common/constants";
-
-const TAGS = {
-  SLASH80S: "80s Slasher",
-  GIALLO: "Giallo",
-  UNIVERSAL: "Universal",
-  JAPANESE: "Japanese",
-  WESTERN: "Western",
-  HAMMER: "Hammer",
-  VINCENT_PRICE: "Vincent Price",
-  SCI_FI: "Sci-Fi",
-  SCI_FI_HORROR: "Sci-Fi Horror",
-  ACTION: "Action",
-  DRAMA: "Drama",
-  COMEDY_HORROR: "Comedy Horror",
-  DOCUMENTARY: "Documentary",
-};
+import { FORMATS, LABELS, TAGS } from "../../../client/src/common/constants";
 
 const data = [
   {

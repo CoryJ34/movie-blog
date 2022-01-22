@@ -7,10 +7,12 @@ import {
 } from "@material-ui/core";
 import { connect } from "react-redux";
 import { Movie } from "../../models/Movie";
+import ListSummary from "../list/ListSummary";
 import "./styles/Ratings.scss";
 
 const Ratings = (props: {
   movies: Movie[];
+  filteredMovies: Movie[];
   numWayUnder: number;
   numUnder: number;
   numBarelyUnder: number;
@@ -21,6 +23,7 @@ const Ratings = (props: {
 }) => {
   return (
     <div className="ratings-page">
+      <ListSummary movies={props.movies} />
       <div className="meta">
         <div className="item">
           <div className="label">Way Under</div>
@@ -62,7 +65,7 @@ const Ratings = (props: {
           </TableRow>
         </TableHead>
         <TableBody>
-          {props.movies.map((m, i) => {
+          {props.filteredMovies.map((m, i) => {
             return (
               <TableRow className="movie">
                 <TableCell className="num">{i + 1}</TableCell>
@@ -84,7 +87,8 @@ const Ratings = (props: {
 };
 
 const mapStateToProps = (state: any) => {
-  let sortedByRatingDiff = [...(state.movieStore?.movies || [])];
+  const allMovies = state.movieStore?.filteredMovies || [];
+  let sortedByRatingDiff = [...allMovies];
 
   sortedByRatingDiff.sort((a: Movie, b: Movie) => {
     return a.ratingDiff - b.ratingDiff;
@@ -117,7 +121,8 @@ const mapStateToProps = (state: any) => {
   });
 
   return {
-    movies: sortedByRatingDiff,
+    movies: allMovies,
+    filteredMovies: sortedByRatingDiff,
     numWayUnder,
     numUnder,
     numBarelyUnder,

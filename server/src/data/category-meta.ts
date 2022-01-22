@@ -1,4 +1,15 @@
 const categoryMeta = {
+  "Blood!": {
+    opening: {
+      title: "— Blood! Watchlist —",
+      content: [
+        "Christmas is over and Days of Listmas is Days of Listmas Past.  Time to start a new watchlist soon and this one is pretty simple… Blood!  Basically, movies with “blood” in their title in some form: “blood”, “bloody”, “bloodthirsty”, you get the idea.  When browsing over my list of unwatched movies, I noticed quite a few of them had that recurring blood title theme.  When I started organizing them into categories, I found there was a surprisingly even spread.  I had to drop one movie out and buy one movie to fit a category (a movie I guess I would have bought eventually anyway since I have all the others in that series), but after that little bit of adjusting, I ended up with seven categories of four movies each.  What are those categories?  I’m glad you asked:",
+        "<li><strong>90s VHS</strong> – When I went on a VHS buying spree on Ebay, I got a lot of random 90s horror.  Even though I’m an 80s horror man, 90s VHS tapes have a special place in my heart from my old high school days renting them with friends (or maybe they were DVDs by that time, but either way, they were 90s horror mostly).  I did a quick check to make sure that these VHS tapes actually still work and are watchable.. seemed ok to me!</li><li><strong>80s Slashers</strong> – OF COURSE.  For this list, I have one on VHS and then three on Blu Ray, so this will mostly be similar to the millions of other 80s slashers groups I’ve watched in past watchlists</li><li><strong>DVD Horror</strong> – I typically don’t buy DVDs anymore, it’s either VHS for collecting or Blu Ray all the way.  But over the years, I’ve picked up a few just for fun, some little multi-movie packs and things like that, so that conveniently left me with four “blood” movies to watch</li><li><strong>Exploitation</strong> – All those director-focused Blu Ray sets from Severin and Arrow have left me with a lot of exploitation films to get through and there happen to be a few with “blood” in the title</li><li><strong>Non-Horror</strong> – Among all these movies, I have some that may be similar to horror (by some of those exploitation filmmakers), but aren’t really in the horror category directly</li><li><strong>Phillippines</strong> – Thanks to a couple of Severin sets, there are a few movies from the Phillippines.  Don’t know much else about it and have no idea what to expect, but that’s what makes it fun</li><li><strong>…And the Rest!</strong> – Ok I don’t really have a category for these other four.  I just have one movie that I for sure want to end with and then three others that are just horror movies from various decades, so I pulled a Gilligan’s Island and just tossed them into the “and the rest” group</li>",
+        "28 movies and about a month and a half of time to watch them, so I guess I can go at a pretty leisurely pace.  My aim is to end just around mid-February and then roll on to March Madness 2!",
+      ],
+      date: "December 26, 2021",
+    },
+  },
   "Days of Listmas": {
     opening: {
       title: "— Days of Listmas Watchlist —",
@@ -8,6 +19,22 @@ const categoryMeta = {
         "There you go.. this is about as nerdy as it gets, but you gotta keep things fun in life.  I’ll get rolling on those 80s slashers here in the next day or two and plan to be finished before Christmas.  The way it goes for me, I’ll be done with plenty of time to spare.. ",
       ],
       date: "November 4, 2021",
+    },
+    closing: {
+      title: "— Days of Listmas Watchlist Summary —",
+      content: [
+        "As 2021 is winding down, that’s one more watchlist in the bag.  It was a fun format that just happened to work out because I had enough movies for some of those bigger categories to fill out the list.  It was a decent blend of genres, starting with a lot of horror and horror-adjacent crime/thriller type movies but then shifting to other types of movies.  How we got from 80s slashers to an artsy French drama, I’m not sure.  Anyway, let’s take a look back",
+        "<strong>Top</strong>",
+        "<li><strong>In Search of Darkness – Part II</strong> – Yeah maybe not the best “film” here, but definitely the one that was most interesting to me and kept me wanting more, even after like 4+ hours</li><li><strong>The Friends of Eddie Coyle</strong> – Just a classic crime movie with some interesting characters</li><li><strong>Portrait of a Lady on Fire</strong> – Well-made, well-acted and good, natural visuals</li><li><strong>Kagemusha</strong> – Interesting premise, likeable main character and also good visuals</li><li><strong>Vice Squad</strong> – The most interesting of the seedy LA crime movies that I watched recently</li>",
+        "Honorable mentions: <strong>Don’t Answer the Phone</strong>, <strong>Opera</strong>, <strong>Effects</strong>",
+        "<strong>Bottom</strong>",
+        "<li><strong>Fright Night 2: New Blood</strong> – Terrible characters and felt really bland</li><li><strong>Resident Evil: Afterlife</strong> – Felt like one step above SyFy, though the action sequences were decently shot</li><li><strong>Ninja III: The Domination</strong> – Seemed really cheap, even for 80s standards</li><li><strong>Moon in Scorpio</strong> – Again, kind of cheap, especially the Nam flashbacks..</li><li><strong>Darkroom</strong> – Not a terrible slasher but pretty forgettable</li>",
+        "Dishonorable mentions: <strong>4 Dollars of Revenge</strong>, <strong>Outpost: Rise of the Spetsnaz</strong>",
+        "It’s hard to compare numbers on the individual categories because the volume was so different.  So instead, I’ll just give brief thoughts about each one:",
+        "<li><strong>80s Slashers</strong> – Always fun for me and this one actually had a batch of decent ones</li><li><strong>Crime &amp; Action</strong> – These were pretty good but a little all over the place in style and tone</li><li><strong>Random Sequels</strong> – Not so great since sequels are generally not very good</li><li><strong>Sci-Fi Cheese</strong> – Definitely cheesy but a lot of fun</li><li><strong>Horror Docs</strong> – I’ll watch just about any horror doc, honestly</li><li><strong>Westerns</strong> – Not the most memorable western movies, but oh well</li><li><strong>Samurai</strong> – Both were decent-to-good, but not quite to that classic samurai movie level</li><li><strong>Drama</strong> – Well it was just one movie but hey.. it was pretty good</li>",
+        "And that’s that.  The 2021 watchlists are in the books.  I’ve got something ready to go for the next list, which I’ll probably start right as January starts, just for a clean start.  It should last me until early-mid February and then it might be time for some more March Madness (with special guest, Late February)",
+      ],
+      date: "December 21, 2021",
     },
   },
   "Halloween 2021": {

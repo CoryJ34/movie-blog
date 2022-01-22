@@ -211,6 +211,24 @@ export const breakoutTitleYearAndCategory = (
       subCategory: week,
       order: num,
     };
+  } else if (rawTitle.indexOf("Blood!") === 0) {
+    // Blood!
+    const parts = rawTitle.split("–");
+    const lastParts = parts.splice(2, parts.length - 2);
+    const lastPart = lastParts.join(" - ");
+    const titleAndYear = extractTitleAndYear(lastPart.trim());
+    const week = parts[1].trim();
+    const num = parts[0].split("#")[1];
+
+    return {
+      title: titleAndYear[0],
+      rawYear: getRawYear(titleAndYear[1]),
+      year: titleAndYear[1],
+      category: CATEGORIES.BLOOD,
+      categoryCls: "blood",
+      subCategory: week,
+      order: num,
+    };
   }
 
   return null;

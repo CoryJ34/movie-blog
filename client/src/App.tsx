@@ -22,6 +22,7 @@ import VHSShelf from "./components/vhs/VHSShelf";
 import Halloween2021 from "./components/Halloween2021";
 import DaysOfListmas from "./components/DaysOfListmas";
 import Migrater from "./components/Migrater";
+import Blood from "./components/Blood";
 
 interface Props {
   movies: Movie[];
@@ -190,6 +191,15 @@ function App(props: Props) {
                 hideSort={true}
               >
                 <DaysOfListmas movies={movies} openDetail={openDetail} />
+              </PageLayout>
+            </Route>
+            <Route path="/blood">
+              <PageLayout
+                movies={moviesByCategory[CATEGORIES.BLOOD]}
+                presetCategory={CATEGORIES.BLOOD}
+                hideSort={true}
+              >
+                <Blood movies={movies} openDetail={openDetail} />
               </PageLayout>
             </Route>
             <Route path="/references">
