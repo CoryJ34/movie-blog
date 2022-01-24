@@ -17,14 +17,76 @@ import { list, migrateFromJson } from "./src/repository/MovieRepository";
 let dynamodb = new DynamoDB({ region: "us-east-2" });
 
 let schema = buildSchema(`
+  enum Field {
+    TITLE,
+    YEAR
+  }
+
+  input Value {
+    test: String
+  }
+
+  input MovieFilter {
+    field: Field!
+    value: Value!
+  }
+
+  type Movie {
+    id: Int!
+    title: String!
+    year: Int!
+    genres: [String]
+    summary: String
+    backdrop: String
+    cast: [String]
+    poster: String
+    userRating: Float
+    runtime: Int
+    tagline: String
+    directors: [String]
+    myRating: Float
+    label: String
+    img: String
+    watchedDate: String
+    content: [String]
+    categoryCls: String
+    subCategory: String
+    order: String
+    tags: [String]
+    format: String
+    category: String
+  }
+
+  type ListResponse {
+    matches: [Movie],
+    count: Int!
+  }
+
   type Query {
     hello(testVar: String!): String
+    listMovies(filters: [MovieFilter]): ListResponse
   }
 `);
 
 let root = {
   hello: (args: any) => {
     return "Hey, the value is " + args.testVar;
+  },
+  listMovies: async (args: any) => {
+    const scanData: any = await list();
+
+    const mainFilter =
+      args.filters && args.filters.length > 0 && args.filters[0];
+
+    const matches = scanData.filter(
+      (m: any) =>
+        !mainFilter || m.title.toLowerCase().indexOf(mainFilter.value.test) >= 0
+    );
+
+    return {
+      matches,
+      count: matches.length,
+    };
   },
 };
 
@@ -46,16 +108,16 @@ app.get("/api", (_, res: any) => {
 });
 
 app.get("/getalldata", async (_, res: any) => {
-  let listReq = new Promise((resolve, rej) => {
-    dynamodb.listTables({}, (err, data) => {
-      if (err) {
-        resolve(err);
-      }
-      resolve(data);
-    });
-  });
+  // let listReq = new Promise((resolve, rej) => {
+  //   dynamodb.listTables({}, (err, data) => {
+  //     if (err) {
+  //       resolve(err);
+  //     }
+  //     resolve(data);
+  //   });
+  // });
 
-  const scanData: any = await list();
+  // const scanData: any = await list();
 
   res.json({
     content: {
@@ -64,7 +126,7 @@ app.get("/getalldata", async (_, res: any) => {
     categoryData,
     marchMadnessData,
     milestoneData,
-    remoteMovieData: scanData,
+    // remoteMovieData: scanData,
   });
 });
 

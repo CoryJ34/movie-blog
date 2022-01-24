@@ -37,30 +37,68 @@ interface Props {
   closeDetail: () => void;
 }
 
+const query = `query ListMovies {
+    listMovies {
+      count
+      matches {
+        id,
+        title
+        year,
+        genres,
+        summary,
+        backdrop,
+        cast,
+        poster,
+        userRating,
+        runtime,
+        tagline,
+        directors,
+        myRating,
+        label,
+        img,
+        watchedDate,
+        content,
+        categoryCls,
+        subCategory,
+        order,
+        tags,
+        format,
+        category
+      }
+    }
+  }`;
+
 interface CategoryMap {
   [key: string]: any;
 }
 
 function App(props: Props) {
   useEffect(() => {
-    fetch("/getalldata")
-      .then((res) => res.json())
-      .then((data) => {
-        props.loadMovies(data);
+    const doLoad = async () => {
+      const allDataResp = await fetch("/getalldata");
+
+      let allData = await allDataResp.json();
+
+      const movieList = await fetch("/graphql", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({ query }),
       });
 
-    const query = `query Hello($testVar: String!) {
-      hello(testVar: $testVar)
-    }`;
+      const listMoviesResp = await movieList.json();
 
-    fetch("/graphql", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        Accept: "application/json",
-      },
-      body: JSON.stringify({ query, variables: { testVar: "ABC" } }),
-    });
+      console.log(listMoviesResp.data.listMovies.matches);
+
+      props.loadMovies({
+        ...allData,
+        remoteMovieData: listMoviesResp.data.listMovies.matches,
+      });
+    };
+
+    doLoad();
   }, []);
 
   const {
