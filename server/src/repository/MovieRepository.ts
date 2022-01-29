@@ -6,6 +6,7 @@ import {
   breakoutTitleYearAndCategory,
 } from "../utils/TransferUtils";
 import { DynamoDB } from "@aws-sdk/client-dynamodb";
+import Cache from "./Cache";
 
 const DELIM = "#_#_#";
 
@@ -28,12 +29,20 @@ const getString = (field: any) => {
 };
 
 export const list = async () => {
+  console.log("Making list call...");
+
+  let remoteMovieData: any = [];
+
+  if (Cache.movies) {
+    console.log("Pulling from cache");
+    return Cache.movies;
+  }
+
+  console.log("Hitting DB for data");
+
   const scanData: any = await dynamodb.scan({
     TableName: "MOVIES",
   });
-
-  let remoteMovieData: any = [];
-  // TODO: Order scan data locally (can't do it through the API)
 
   scanData.Items.forEach((item: any) => {
     // TODO: Fill in the data, also need to modify data handling client-side
@@ -76,6 +85,8 @@ export const list = async () => {
   remoteMovieData.sort((a: any, b: any) => {
     return a.id - b.id;
   });
+
+  Cache.movies = remoteMovieData;
 
   return remoteMovieData;
 };

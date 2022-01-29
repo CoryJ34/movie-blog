@@ -9,6 +9,7 @@ import { DynamoDB, QueryCommand } from "@aws-sdk/client-dynamodb";
 import { buildSchema } from "graphql";
 import { graphqlHTTP } from "express-graphql";
 import { list, migrateFromJson } from "./src/repository/MovieRepository";
+import Cache, { clearMovieCache } from "./src/repository/Cache";
 
 // AWS.config.update({
 //   region: "us-east-2",
@@ -65,12 +66,22 @@ let schema = buildSchema(`
   type Query {
     hello(testVar: String!): String
     listMovies(filters: [MovieFilter]): ListResponse
+    refreshCache: String
   }
 `);
 
 let root = {
   hello: (args: any) => {
     return "Hey, the value is " + args.testVar;
+  },
+  refreshCache: () => {
+    clearMovieCache();
+
+    if (Cache.movies) {
+      return "Failure";
+    } else {
+      return "Success";
+    }
   },
   listMovies: async (args: any) => {
     const scanData: any = await list();

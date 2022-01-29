@@ -1,14 +1,17 @@
-import { Drawer, Icon, List, ListItem } from "@material-ui/core";
+import { Drawer, Icon, IconButton, List, ListItem } from "@material-ui/core";
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { SimpleMap } from "../../../common/constants";
 import "./styles/Footer.scss";
 import Home from "@material-ui/icons/Home";
-import { MoreVert } from "@material-ui/icons";
+import { MoreVert, Refresh } from "@material-ui/icons";
 import { connect } from "react-redux";
+import { loadMoviesFromServer } from "../../../actions/Actions";
+import { Movie } from "../../../models/Movie";
 
 interface Props {
   content: SimpleMap;
+  loadMovies: (movies: Movie[]) => void;
 }
 
 const Footer = (props: Props) => {
@@ -37,6 +40,14 @@ const Footer = (props: Props) => {
               {divider()}
             </>
           ))}
+          {divider()}
+          <IconButton
+            onClick={() => {
+              loadMoviesFromServer(props.loadMovies, true);
+            }}
+          >
+            <Refresh />
+          </IconButton>
         </div>
         <div className="condensed">
           <Link to={"/"}>
@@ -71,4 +82,14 @@ const mapStateToProps = (props: any) => {
   };
 };
 
-export default connect(mapStateToProps)(Footer);
+const mapDispatchToProps = (dispatch: any) => {
+  return {
+    loadMovies: (allData: any) =>
+      dispatch({
+        type: "movies/load",
+        payload: allData,
+      }),
+  };
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(Footer);

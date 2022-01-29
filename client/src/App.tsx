@@ -23,6 +23,7 @@ import Halloween2021 from "./components/Halloween2021";
 import DaysOfListmas from "./components/DaysOfListmas";
 import Migrater from "./components/Migrater";
 import Blood from "./components/Blood";
+import { loadMoviesFromServer } from "./actions/Actions";
 
 interface Props {
   movies: Movie[];
@@ -36,69 +37,13 @@ interface Props {
   openDetail: (movie: Movie) => void;
   closeDetail: () => void;
 }
-
-const query = `query ListMovies {
-    listMovies {
-      count
-      matches {
-        id,
-        title
-        year,
-        genres,
-        summary,
-        backdrop,
-        cast,
-        poster,
-        userRating,
-        runtime,
-        tagline,
-        directors,
-        myRating,
-        label,
-        img,
-        watchedDate,
-        content,
-        categoryCls,
-        subCategory,
-        order,
-        tags,
-        format,
-        category
-      }
-    }
-  }`;
-
 interface CategoryMap {
   [key: string]: any;
 }
 
 function App(props: Props) {
   useEffect(() => {
-    const doLoad = async () => {
-      const allDataResp = await fetch("/getalldata");
-
-      let allData = await allDataResp.json();
-
-      const movieList = await fetch("/graphql", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Accept: "application/json",
-        },
-        body: JSON.stringify({ query }),
-      });
-
-      const listMoviesResp = await movieList.json();
-
-      console.log(listMoviesResp.data.listMovies.matches);
-
-      props.loadMovies({
-        ...allData,
-        remoteMovieData: listMoviesResp.data.listMovies.matches,
-      });
-    };
-
-    doLoad();
+    loadMoviesFromServer(props.loadMovies, false);
   }, []);
 
   const {
