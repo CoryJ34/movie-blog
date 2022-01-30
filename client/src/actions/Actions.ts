@@ -1,9 +1,12 @@
+import { FilterMap, FilterType } from "../models/Filter";
 import { Movie } from "../models/Movie";
 import { ListMoviesQuery, RefreshCacheQuery } from "./Queries";
+import { gqlRequest } from "./Requests";
 
 export const loadMoviesFromServer = async (
   loadMovies: (movies: Movie[]) => void,
-  refreshCache: boolean
+  refreshCache: boolean,
+  filters?: FilterMap
 ) => {
   if (refreshCache) {
     await fetch("/graphql", {
@@ -20,18 +23,62 @@ export const loadMoviesFromServer = async (
 
   let allData = await allDataResp.json();
 
-  const movieList = await fetch("/graphql", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-      Accept: "application/json",
-    },
-    body: JSON.stringify({ query: ListMoviesQuery }),
+  console.log(filters);
+
+  let filtersAsList: any = [];
+
+  Object.keys(filters || {}).forEach((key) => {
+    // @ts-ignore
+    const f = filters[key];
+
+    let filterName = "";
+
+    switch (f.type) {
+      case FilterType.DECADE:
+        filterName = "DECADE";
+        break;
+      case FilterType.END_DATE:
+        filterName = "END_DATE";
+        break;
+      case FilterType.FORMAT:
+        filterName = "FORMAT";
+        break;
+      case FilterType.LABEL:
+        filterName = "LABEL";
+        break;
+      case FilterType.START_DATE:
+        filterName = "START_DATE";
+        break;
+      case FilterType.TAG:
+        filterName = "TAG";
+        break;
+      case FilterType.WATCHLIST:
+        filterName = "WATCHLIST";
+        break;
+      case FilterType.YEAR:
+        filterName = "YEAR";
+        break;
+      case FilterType.YEAR_END:
+        filterName = "YEAR_END";
+        break;
+      case FilterType.YEAR_START:
+        filterName = "YEAR_START";
+        break;
+    }
+
+    console.log(filterName);
+
+    filtersAsList.push({
+      field: filterName,
+      values: [f.value],
+    });
+  });
+
+  const movieList = await gqlRequest(ListMoviesQuery, {
+    filters: filtersAsList,
   });
 
   const listMoviesResp = await movieList.json();
-
-  console.log(listMoviesResp.data.listMovies.matches);
 
   loadMovies({
     ...allData,

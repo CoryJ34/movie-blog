@@ -19,17 +19,21 @@ let dynamodb = new DynamoDB({ region: "us-east-2" });
 
 let schema = buildSchema(`
   enum Field {
-    TITLE,
-    YEAR
-  }
-
-  input Value {
-    test: String
+    TAG,
+    YEAR,
+    DECADE,
+    WATCHLIST,
+    LABEL,
+    FORMAT,
+    START_DATE,
+    END_DATE,
+    YEAR_START,
+    YEAR_END,
   }
 
   input MovieFilter {
     field: Field!
-    value: Value!
+    values: [String!]
   }
 
   type Movie {
@@ -65,7 +69,7 @@ let schema = buildSchema(`
 
   type Query {
     hello(testVar: String!): String
-    listMovies(filters: [MovieFilter]): ListResponse
+    listMovies(test: String, filters: [MovieFilter]): ListResponse
     refreshCache: String
   }
 `);
@@ -86,13 +90,17 @@ let root = {
   listMovies: async (args: any) => {
     const scanData: any = await list();
 
-    const mainFilter =
-      args.filters && args.filters.length > 0 && args.filters[0];
+    console.log(args);
 
-    const matches = scanData.filter(
-      (m: any) =>
-        !mainFilter || m.title.toLowerCase().indexOf(mainFilter.value.test) >= 0
-    );
+    // const mainFilter =
+    //   args.filters && args.filters.length > 0 && args.filters[0];
+
+    // const matches = scanData.filter(
+    //   (m: any) =>
+    //     !mainFilter || m.title.toLowerCase().indexOf(mainFilter.values[0]) >= 0
+    // );
+
+    const matches = scanData;
 
     return {
       matches,

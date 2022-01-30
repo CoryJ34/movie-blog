@@ -27,6 +27,7 @@ import { loadMoviesFromServer } from "./actions/Actions";
 
 interface Props {
   movies: Movie[];
+  filters: FilterMap;
   categoryMeta: CategoryMeta;
   filteredMovies: Movie[];
   selectedMovie: Movie;
@@ -42,12 +43,9 @@ interface CategoryMap {
 }
 
 function App(props: Props) {
-  useEffect(() => {
-    loadMoviesFromServer(props.loadMovies, false);
-  }, []);
-
   const {
     movies,
+    filters,
     categoryMeta,
     filteredMovies,
     selectedMovie,
@@ -56,6 +54,14 @@ function App(props: Props) {
     openDetail,
     closeDetail,
   } = props;
+
+  useEffect(() => {
+    loadMoviesFromServer(props.loadMovies, false);
+  }, []);
+
+  useEffect(() => {
+    // loadMoviesFromServer(props.loadMovies, false, filters);
+  }, [filters]);
 
   if (!movies) {
     // TODO: Add cool loading widget, but right now, data is local so movies load too fast to see
@@ -220,6 +226,7 @@ function App(props: Props) {
 const mapStateToProps = (state: any) => {
   return {
     movies: state.movieStore?.movies,
+    filters: state.movieStore?.filters,
     categoryMeta: state.movieStore?.categoryMeta,
     filteredMovies: state.movieStore?.filteredMovies,
     selectedMovie: state.detailStore?.selectedMovie,

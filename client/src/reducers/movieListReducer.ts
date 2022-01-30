@@ -93,7 +93,9 @@ export default function movieListReducer(state = initialState, action: any) {
         references: findMovieReferences(allMovies),
         watchListRanges: makeWatchListRanges(filteredMovies),
         milestones: milestoneData.reverse(),
-        filters: makeDefaultDateFilters(allMovies),
+        filters: state.filters
+          ? state.filters
+          : makeDefaultDateFilters(allMovies),
         earliestMovieYear,
         latestMovieYear,
       };
@@ -135,6 +137,7 @@ export default function movieListReducer(state = initialState, action: any) {
       return {
         ...state,
         filters: existingFilters,
+        // TODO: Remove the bottom three and defer to loadMovies if doing server-side filtering
         filteredMovies: sort(filtered, state.sortField, state.sortDir),
         chartData: buildChartData(filtered),
         watchListRanges: makeWatchListRanges(filtered),
@@ -142,26 +145,32 @@ export default function movieListReducer(state = initialState, action: any) {
     }
     case "movies/removeFilter": {
       const { filter } = action;
-      let existingFilters = state.filters || {};
+      let newFilters: any = {};
 
-      // @ts-ignore
-      delete existingFilters[stringifyFilter(filter)];
+      Object.keys(state.filters || {}).forEach((f) => {
+        // add all but filter to be removed
+        if (stringifyFilter(filter) !== f) {
+          // @ts-ignore
+          newFilters[f] = state.filters[f];
+        }
+      });
 
       if (filter.type === FilterType.START_DATE) {
         const defaultFilters = makeDefaultDateFilters(state.movies || []);
         const firstKey = Object.keys(defaultFilters)[0];
-        existingFilters[firstKey] = defaultFilters[firstKey];
+        newFilters[firstKey] = defaultFilters[firstKey];
       } else if (filter.type === FilterType.END_DATE) {
         const defaultFilters = makeDefaultDateFilters(state.movies || []);
         const secondKey = Object.keys(defaultFilters)[1];
-        existingFilters[secondKey] = defaultFilters[secondKey];
+        newFilters[secondKey] = defaultFilters[secondKey];
       }
 
-      const filtered = filterMovies(state.movies || [], existingFilters);
+      const filtered = filterMovies(state.movies || [], newFilters);
 
       return {
         ...state,
-        filters: existingFilters,
+        filters: newFilters,
+        // TODO: Remove the bottom three and defer to loadMovies if doing server-side filtering
         filteredMovies: sort(filtered, state.sortField, state.sortDir),
         chartData: buildChartData(filtered),
         watchListRanges: makeWatchListRanges(filtered),

@@ -1,5 +1,5 @@
-export const ListMoviesQuery = `query ListMovies {
-    listMovies {
+export const ListMoviesQuery = `query ListMovies($filters: [MovieFilter]) {
+    listMovies(filters: $filters) {
       count
       matches {
         id,
