@@ -26,6 +26,31 @@ export const ListMoviesQuery = `query ListMovies($filters: [MovieFilter]) {
         format,
         category
       }
+      all {
+        id,
+        title
+        year,
+        genres,
+        summary,
+        backdrop,
+        cast,
+        poster,
+        userRating,
+        runtime,
+        tagline,
+        directors,
+        myRating,
+        label,
+        img,
+        watchedDate,
+        content,
+        categoryCls,
+        subCategory,
+        order,
+        tags,
+        format,
+        category
+      }
     }
   }`;
 

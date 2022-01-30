@@ -10,6 +10,7 @@ import { buildSchema } from "graphql";
 import { graphqlHTTP } from "express-graphql";
 import { list, migrateFromJson } from "./src/repository/MovieRepository";
 import Cache, { clearMovieCache } from "./src/repository/Cache";
+import { filterMovies } from "./src/utils/FilterUtils";
 
 // AWS.config.update({
 //   region: "us-east-2",
@@ -64,6 +65,7 @@ let schema = buildSchema(`
 
   type ListResponse {
     matches: [Movie],
+    all: [Movie],
     count: Int!
   }
 
@@ -100,9 +102,10 @@ let root = {
     //     !mainFilter || m.title.toLowerCase().indexOf(mainFilter.values[0]) >= 0
     // );
 
-    const matches = scanData;
+    const matches = filterMovies(scanData, args.filters);
 
     return {
+      all: scanData,
       matches,
       count: matches.length,
     };

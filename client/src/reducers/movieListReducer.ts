@@ -19,6 +19,7 @@ import filterMovies, {
 import findMovieReferences from "../util/ReferenceUtils";
 import makeWatchListRanges from "../util/WatchListRangeUtils";
 import { Milestone } from "../models/Milestone";
+import { USE_SERVER_SIDE_FILTERING } from "../configuration/Configuration";
 
 interface StateType {
   movies: Movie[] | null;
@@ -53,8 +54,13 @@ const initialState: StateType = {
 export default function movieListReducer(state = initialState, action: any) {
   switch (action.type) {
     case "movies/load": {
-      const { categoryData, milestoneData, content, remoteMovieData } =
-        action.payload;
+      const {
+        categoryData,
+        milestoneData,
+        content,
+        remoteMovieData,
+        remoteFilteredMovieData,
+      } = action.payload;
 
       const allMovies = remoteMovieData
         .filter((m: any) => m.myRating)
@@ -68,7 +74,19 @@ export default function movieListReducer(state = initialState, action: any) {
           };
         });
 
-      const filteredMovies: Movie[] = [...allMovies];
+      const filteredMovies = USE_SERVER_SIDE_FILTERING
+        ? remoteFilteredMovieData
+            .filter((m: any) => m.myRating)
+            .map((m: any) => {
+              return {
+                ...m,
+                date: m.watchedDate,
+                rating: m.myRating,
+                runtimeMins: m.runtime,
+                ratingDiff: (m.myRating - m.userRating * 2).toFixed(2),
+              };
+            })
+        : [...allMovies];
 
       let earliestMovieYear = 3000;
       let latestMovieYear = 1800;
@@ -132,16 +150,20 @@ export default function movieListReducer(state = initialState, action: any) {
 
       existingFilters[stringifyFilter(filter)] = filter;
 
-      const filtered = filterMovies(state.movies || [], existingFilters);
-
-      return {
+      let ret = {
         ...state,
         filters: existingFilters,
-        // TODO: Remove the bottom three and defer to loadMovies if doing server-side filtering
-        filteredMovies: sort(filtered, state.sortField, state.sortDir),
-        chartData: buildChartData(filtered),
-        watchListRanges: makeWatchListRanges(filtered),
       };
+
+      if (!USE_SERVER_SIDE_FILTERING) {
+        const filtered = filterMovies(state.movies || [], existingFilters);
+
+        ret.filteredMovies = sort(filtered, state.sortField, state.sortDir);
+        ret.chartData = buildChartData(filtered);
+        ret.watchListRanges = makeWatchListRanges(filtered);
+      }
+
+      return ret;
     }
     case "movies/removeFilter": {
       const { filter } = action;
@@ -165,16 +187,20 @@ export default function movieListReducer(state = initialState, action: any) {
         newFilters[secondKey] = defaultFilters[secondKey];
       }
 
-      const filtered = filterMovies(state.movies || [], newFilters);
-
-      return {
+      let ret = {
         ...state,
         filters: newFilters,
-        // TODO: Remove the bottom three and defer to loadMovies if doing server-side filtering
-        filteredMovies: sort(filtered, state.sortField, state.sortDir),
-        chartData: buildChartData(filtered),
-        watchListRanges: makeWatchListRanges(filtered),
       };
+
+      if (!USE_SERVER_SIDE_FILTERING) {
+        const filtered = filterMovies(state.movies || [], newFilters);
+
+        ret.filteredMovies = sort(filtered, state.sortField, state.sortDir);
+        ret.chartData = buildChartData(filtered);
+        ret.watchListRanges = makeWatchListRanges(filtered);
+      }
+
+      return ret;
     }
     case "movies/resetFilter": {
       const unfiltered = [...(state.movies || [])];

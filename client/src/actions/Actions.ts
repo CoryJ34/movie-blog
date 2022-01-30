@@ -82,6 +82,7 @@ export const loadMoviesFromServer = async (
 
   loadMovies({
     ...allData,
-    remoteMovieData: listMoviesResp.data.listMovies.matches,
+    remoteMovieData: listMoviesResp.data.listMovies.all,
+    remoteFilteredMovieData: listMoviesResp.data.listMovies.matches,
   });
 };

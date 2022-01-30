@@ -24,6 +24,7 @@ import DaysOfListmas from "./components/DaysOfListmas";
 import Migrater from "./components/Migrater";
 import Blood from "./components/Blood";
 import { loadMoviesFromServer } from "./actions/Actions";
+import { USE_SERVER_SIDE_FILTERING } from "./configuration/Configuration";
 
 interface Props {
   movies: Movie[];
@@ -60,7 +61,9 @@ function App(props: Props) {
   }, []);
 
   useEffect(() => {
-    // loadMoviesFromServer(props.loadMovies, false, filters);
+    if (USE_SERVER_SIDE_FILTERING) {
+      loadMoviesFromServer(props.loadMovies, false, filters);
+    }
   }, [filters]);
 
   if (!movies) {
