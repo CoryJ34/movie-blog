@@ -60,6 +60,7 @@ export default function movieListReducer(state = initialState, action: any) {
         content,
         remoteMovieData,
         remoteFilteredMovieData,
+        categories,
       } = action.payload;
 
       const allMovies = remoteMovieData
@@ -116,6 +117,7 @@ export default function movieListReducer(state = initialState, action: any) {
           : makeDefaultDateFilters(allMovies),
         earliestMovieYear,
         latestMovieYear,
+        categories,
       };
     }
     case "movies/applyFilter": {

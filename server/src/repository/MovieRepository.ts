@@ -5,28 +5,14 @@ import {
   extractRating,
   breakoutTitleYearAndCategory,
 } from "../utils/TransferUtils";
-import { DynamoDB } from "@aws-sdk/client-dynamodb";
 import Cache from "./Cache";
-
-const DELIM = "#_#_#";
-
-let dynamodb = new DynamoDB({ region: "us-east-2" });
-
-const getInt = (field: any) => {
-  return field ? parseInt(field.N, 10) : -1;
-};
-
-const getFloat = (field: any) => {
-  return field ? parseFloat(field.N) : -1.0;
-};
-
-const getStringArray = (field: any) => {
-  return field ? field.S.split(DELIM) : [];
-};
-
-const getString = (field: any) => {
-  return field ? field.S : undefined;
-};
+import {
+  dynamodb,
+  getFloat,
+  getInt,
+  getString,
+  getStringArray,
+} from "./RepositoryCommons";
 
 export const list = async () => {
   console.log("Making list call...");

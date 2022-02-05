@@ -5,76 +5,21 @@ import categoryData from "./src/data/category-meta";
 import marchMadnessData from "./src/data/march-madness-data";
 import milestoneData from "./src/data/milestones";
 import bottomNav from "./src/data/bottom-nav";
-import { DynamoDB, QueryCommand } from "@aws-sdk/client-dynamodb";
-import { buildSchema } from "graphql";
 import { graphqlHTTP } from "express-graphql";
 import { list, migrateFromJson } from "./src/repository/MovieRepository";
 import Cache, { clearMovieCache } from "./src/repository/Cache";
 import { filterMovies } from "./src/utils/FilterUtils";
+import schema from "./src/graphql/Schema";
+import { listCategories } from "./src/repository/CategoryRepository";
 
-// AWS.config.update({
-//   region: "us-east-2",
-// });
-
-let dynamodb = new DynamoDB({ region: "us-east-2" });
-
-let schema = buildSchema(`
-  enum Field {
-    TAG,
-    YEAR,
-    DECADE,
-    WATCHLIST,
-    LABEL,
-    FORMAT,
-    START_DATE,
-    END_DATE,
-    YEAR_START,
-    YEAR_END,
-  }
-
-  input MovieFilter {
-    field: Field!
-    values: [String!]
-  }
-
-  type Movie {
-    id: Int!
-    title: String!
-    year: Int!
-    genres: [String]
-    summary: String
-    backdrop: String
-    cast: [String]
-    poster: String
-    userRating: Float
-    runtime: Int
-    tagline: String
-    directors: [String]
-    myRating: Float
-    label: String
-    img: String
-    watchedDate: String
-    content: [String]
-    categoryCls: String
-    subCategory: String
-    order: String
-    tags: [String]
-    format: String
-    category: String
-  }
-
-  type ListResponse {
-    matches: [Movie],
-    all: [Movie],
-    count: Int!
-  }
-
-  type Query {
-    hello(testVar: String!): String
-    listMovies(test: String, filters: [MovieFilter]): ListResponse
-    refreshCache: String
-  }
-`);
+/*
+ * TODO
+ * 1) CategoryMeta - categoryName: String, title: String (opening, closing, misc), content: String[], date: String
+ * 2) Category - categoryName: String, type: SubCategorized, Bracket, etc, color: String (rgba or hex), subcategories?
+ * 3) Milestones - title: String, content: String[], date: String
+ * 4) BottomNav - order: Int, label: String, route: String
+ * 5) bracket config..?
+ */
 
 let root = {
   hello: (args: any) => {
@@ -92,22 +37,19 @@ let root = {
   listMovies: async (args: any) => {
     const scanData: any = await list();
 
-    console.log(args);
-
-    // const mainFilter =
-    //   args.filters && args.filters.length > 0 && args.filters[0];
-
-    // const matches = scanData.filter(
-    //   (m: any) =>
-    //     !mainFilter || m.title.toLowerCase().indexOf(mainFilter.values[0]) >= 0
-    // );
-
     const matches = filterMovies(scanData, args.filters);
 
     return {
       all: scanData,
       matches,
       count: matches.length,
+    };
+  },
+  listCategories: async (args: any) => {
+    const scanData: any = await listCategories();
+
+    return {
+      categories: scanData,
     };
   },
 };

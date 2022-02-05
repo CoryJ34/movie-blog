@@ -1,6 +1,10 @@
 import { FilterMap, FilterType } from "../models/Filter";
 import { Movie } from "../models/Movie";
-import { ListMoviesQuery, RefreshCacheQuery } from "./Queries";
+import {
+  ListCategoriesQuery,
+  ListMoviesQuery,
+  RefreshCacheQuery,
+} from "./Queries";
 import { gqlRequest } from "./Requests";
 
 export const loadMoviesFromServer = async (
@@ -23,7 +27,11 @@ export const loadMoviesFromServer = async (
 
   let allData = await allDataResp.json();
 
-  console.log(filters);
+  const categoriesRes = await gqlRequest(ListCategoriesQuery);
+
+  //   console.log(await categoriesRes.json());
+
+  //   console.log(filters);
 
   let filtersAsList: any = [];
 
@@ -84,5 +92,6 @@ export const loadMoviesFromServer = async (
     ...allData,
     remoteMovieData: listMoviesResp.data.listMovies.all,
     remoteFilteredMovieData: listMoviesResp.data.listMovies.matches,
+    categories: await categoriesRes.json(),
   });
 };

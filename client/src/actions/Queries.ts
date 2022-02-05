@@ -57,3 +57,22 @@ export const ListMoviesQuery = `query ListMovies($filters: [MovieFilter]) {
 export const RefreshCacheQuery = `query RefreshCache {
     refreshCache
   }`;
+
+export const ListCategoriesQuery = `query ListCategories {
+    listCategories {
+        categories {
+            name,
+            cls,
+            order,
+            hexColor,
+            type,
+            route,
+            subCategories {
+                size,
+                name,
+                hexColor,
+                fontHexColor
+            }
+        }
+    }
+}`;
