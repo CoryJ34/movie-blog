@@ -6,9 +6,7 @@ import { Movie } from "./models/Movie";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import DetailDialog from "./components/DetailDialog";
 import Bracket from "./components/Bracket";
-import Halloween2020 from "./components/Halloween2020";
 import SubCategorized from "./components/subcategorized/SubCategorized";
-import { CATEGORIES } from "./common/constants";
 import MovieList from "./components/list/MovieList";
 import { CategoryMeta } from "./models/CategoryMeta";
 import PageLayout from "./components/PageLayout";
@@ -19,12 +17,10 @@ import Milestones from "./components/milestones/Milestones";
 import Footer from "./components/common/Footer/Footer";
 import Ratings from "./components/ratings/Ratings";
 import VHSShelf from "./components/vhs/VHSShelf";
-import Halloween2021 from "./components/Halloween2021";
-import DaysOfListmas from "./components/DaysOfListmas";
 import Migrater from "./components/Migrater";
-import Blood from "./components/Blood";
 import { loadMoviesFromServer } from "./actions/Actions";
 import { USE_SERVER_SIDE_FILTERING } from "./configuration/Configuration";
+import { Category } from "./models/Category";
 
 interface Props {
   movies: Movie[];
@@ -32,6 +28,7 @@ interface Props {
   categoryMeta: CategoryMeta;
   filteredMovies: Movie[];
   selectedMovie: Movie;
+  categories: Category[];
   detailOpen: boolean;
   loadMovies: (movies: Movie[]) => void;
   removeFilter: (filter: Filter) => void;
@@ -48,6 +45,7 @@ function App(props: Props) {
     movies,
     filters,
     categoryMeta,
+    categories,
     filteredMovies,
     selectedMovie,
     detailOpen,
@@ -127,73 +125,53 @@ function App(props: Props) {
                 openDetail={openDetail}
               />
             </Route>
-            <Route path="/gamera">{categorizedPage(CATEGORIES.GAMERA)}</Route>
-            <Route path="/randomizer">
-              {categorizedPage(CATEGORIES.RANDOMIZER)}
-            </Route>
-            <Route path="/bracket">
-              <PageLayout
-                movies={moviesByCategory[CATEGORIES.MARCH_MADNESS]}
-                presetCategory={CATEGORIES.MARCH_MADNESS}
-                hideSort={true}
-              >
-                <Bracket />
-              </PageLayout>
-            </Route>
-            <Route path="/halloween2020">
-              <PageLayout
-                movies={moviesByCategory[CATEGORIES.HALLOWEEN_2020]}
-                presetCategory={CATEGORIES.HALLOWEEN_2020}
-                hideSort={true}
-              >
-                <Halloween2020 movies={movies} openDetail={openDetail} />
-              </PageLayout>
-            </Route>
-            <Route path="/halloween2021">
-              <PageLayout
-                movies={moviesByCategory[CATEGORIES.HALLOWEEN_2021]}
-                presetCategory={CATEGORIES.HALLOWEEN_2021}
-                hideSort={true}
-              >
-                <Halloween2021 movies={movies} openDetail={openDetail} />
-              </PageLayout>
-            </Route>
-            <Route path="/novdec2020">
-              {subCategorizedPage(CATEGORIES.NOV_DEC_2020)}
-            </Route>
-            <Route path="/genres">
-              {subCategorizedPage(CATEGORIES.GENRES)}
-            </Route>
-            <Route path="/finishtheserieshorror">
-              {categorizedPage(CATEGORIES.FINISH_THE_SERIES_HORROR)}
-            </Route>
-            <Route path="/finishtheseriesnonhorror">
-              {categorizedPage(CATEGORIES.FINISH_THE_SERIES_NON_HORROR)}
-            </Route>
-            <Route path="/decadesofhorror">
-              {categorizedPage(CATEGORIES.DECADES_OF_HORROR)}
-            </Route>
-            <Route path="/genresampler">
-              {categorizedPage(CATEGORIES.GENRE_SAMPLER)}
-            </Route>
-            <Route path="/daysoflistmas">
-              <PageLayout
-                movies={moviesByCategory[CATEGORIES.DAYS_OF_LISTMAS]}
-                presetCategory={CATEGORIES.DAYS_OF_LISTMAS}
-                hideSort={true}
-              >
-                <DaysOfListmas movies={movies} openDetail={openDetail} />
-              </PageLayout>
-            </Route>
-            <Route path="/blood">
-              <PageLayout
-                movies={moviesByCategory[CATEGORIES.BLOOD]}
-                presetCategory={CATEGORIES.BLOOD}
-                hideSort={true}
-              >
-                <Blood movies={movies} openDetail={openDetail} />
-              </PageLayout>
-            </Route>
+            {categories.map((c: Category) => {
+              // TODO: add all categories, also handle other types besides SubCategorized
+              if (c.type === "SubCategory") {
+                let weekMap: any = {};
+                let customWeekCounts: any = {};
+
+                for (var i = 0; i < c.subCategories.length; i++) {
+                  const weekNum = i + 1;
+                  const sc = c.subCategories[i];
+
+                  weekMap[`Week ${weekNum}`] = sc.name;
+                  customWeekCounts[sc.name] = sc.size;
+                }
+
+                return (
+                  <Route path={c.route}>
+                    <PageLayout
+                      movies={moviesByCategory[c.name]}
+                      presetCategory={c.name}
+                      hideSort={true}
+                    >
+                      <SubCategorized
+                        category={c.name}
+                        movies={movies}
+                        openDetail={openDetail}
+                        subCategoryMap={weekMap}
+                        customWeekCounts={customWeekCounts}
+                      />
+                    </PageLayout>
+                  </Route>
+                );
+              } else if (c.type === "Bracket") {
+                return (
+                  <Route path={c.route}>
+                    <PageLayout
+                      movies={moviesByCategory[c.name]}
+                      presetCategory={c.name}
+                      hideSort={true}
+                    >
+                      <Bracket />
+                    </PageLayout>
+                  </Route>
+                );
+              }
+
+              return <Route path={c.route}>{categorizedPage(c.name)}</Route>;
+            })}
             <Route path="/references">
               <References />
             </Route>
@@ -209,6 +187,7 @@ function App(props: Props) {
             <Route>
               <Home
                 movies={movies}
+                categories={categories}
                 openDetail={openDetail}
                 resetFilters={resetFilter}
               />
@@ -231,6 +210,7 @@ const mapStateToProps = (state: any) => {
     movies: state.movieStore?.movies,
     filters: state.movieStore?.filters,
     categoryMeta: state.movieStore?.categoryMeta,
+    categories: state.movieStore?.categories,
     filteredMovies: state.movieStore?.filteredMovies,
     selectedMovie: state.detailStore?.selectedMovie,
     detailOpen: state.detailStore?.detailOpen,

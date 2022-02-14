@@ -72,6 +72,18 @@ export const ListCategoriesQuery = `query ListCategories {
                 name,
                 hexColor,
                 fontHexColor
+            },
+            remarks {
+                opening {
+                    title,
+                    date,
+                    content
+                },
+                closing {
+                    title,
+                    date,
+                    content
+                }
             }
         }
     }

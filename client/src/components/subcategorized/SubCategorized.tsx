@@ -11,6 +11,8 @@ const toCls = (raw: string) => {
     .replaceAll(" ", "-")
     .replaceAll("/", "-")
     .replaceAll("&", "and")
+    .replaceAll(".", "")
+    .replaceAll("…", "")
     .toLowerCase();
 };
 
@@ -35,7 +37,7 @@ const SubCategorized = (props: Props) => {
     return <div>Loading...</div>;
   }
 
-  const filtered = movies
+  const filtered = [...movies]
     .filter((m) => m.category === category)
     .sort((a, b) => {
       return parseInt(a.id, 10) - parseInt(b.id, 10);
@@ -123,9 +125,11 @@ const SubCategorized = (props: Props) => {
                 2
               )}`}</div>
             </div>
-            <div className="summary-link">
-              <a onClick={() => setSelectedWeek(week)}>Summary</a>
-            </div>
+            {week.summaryBlocks && week.summaryBlocks.length > 0 ? (
+              <div className="summary-link">
+                <a onClick={() => setSelectedWeek(week)}>Summary</a>
+              </div>
+            ) : null}
           </div>
         </div>
         <div className="movies">

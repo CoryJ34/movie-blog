@@ -6,7 +6,12 @@ import marchMadnessData from "./src/data/march-madness-data";
 import milestoneData from "./src/data/milestones";
 import bottomNav from "./src/data/bottom-nav";
 import { graphqlHTTP } from "express-graphql";
-import { list, migrateFromJson } from "./src/repository/MovieRepository";
+import {
+  list,
+  migrateFromJson,
+  setupCategories,
+  TEMPinitLBOX,
+} from "./src/repository/MovieRepository";
 import Cache, { clearMovieCache } from "./src/repository/Cache";
 import { filterMovies } from "./src/utils/FilterUtils";
 import schema from "./src/graphql/Schema";
@@ -112,6 +117,8 @@ app.post("/migrate", async (req, res: any) => {
   }
 
   await migrateFromJson(finalJson);
+  // await TEMPinitLBOX();
+  // let setupRes = await setupCategories();
 
   res.json(finalJson);
 });

@@ -58,6 +58,17 @@ const schema = buildSchema(`
       fontHexColor: String
   }
 
+  type Remark {
+    title: String!,
+    date: String!,
+    content: [String!]!
+  }
+
+  type Remarks {
+    opening: Remark,
+    closing: Remark
+  }
+
   type Category {
       order: Int!,
       name: String!,
@@ -65,7 +76,8 @@ const schema = buildSchema(`
       route: String!,
       hexColor: String!,
       type: String!,
-      subCategories: [SubCategory!]!
+      subCategories: [SubCategory!]!,
+      remarks: Remarks
   }
 
   type ListCategoriesResponse {

@@ -1,3 +1,4 @@
+import { Category } from "../models/Category";
 import { FilterMap, FilterType } from "../models/Filter";
 import { Movie } from "../models/Movie";
 import {
@@ -87,11 +88,28 @@ export const loadMoviesFromServer = async (
   });
 
   const listMoviesResp = await movieList.json();
+  const categoriesJson = await categoriesRes.json();
+  let categories = categoriesJson.data.listCategories.categories;
+  let remoteMovies = listMoviesResp.data.listMovies.all;
+
+  remoteMovies.sort((a: any, b: any) => {
+    return a.id - b.id;
+  });
+
+  let remoteMovieMatches = listMoviesResp.data.listMovies.matches;
+
+  remoteMovieMatches.sort((a: any, b: any) => {
+    return a.id - b.id;
+  });
+
+  categories.sort((a: Category, b: Category) => {
+    return a.order - b.order;
+  });
 
   loadMovies({
     ...allData,
-    remoteMovieData: listMoviesResp.data.listMovies.all,
-    remoteFilteredMovieData: listMoviesResp.data.listMovies.matches,
-    categories: await categoriesRes.json(),
+    remoteMovieData: remoteMovies,
+    remoteFilteredMovieData: remoteMovieMatches,
+    categories,
   });
 };

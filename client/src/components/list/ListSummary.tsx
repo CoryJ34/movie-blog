@@ -21,10 +21,12 @@ import Sort from "./Sort";
 import "./styles/ListSummary.scss";
 import FilterSection from "./FilterSection";
 import { gatherAvailableFilters } from "../../util/FilterUtils";
+import { Category } from "../../models/Category";
 
 interface Props {
   movies: Movie[];
   categoryMeta: CategoryMeta;
+  categories: Category[];
   presetCategory?: string;
   filters: FilterMap;
   availableFilters: AvailableFilters;
@@ -67,6 +69,7 @@ const ListSummary = (props: Props) => {
     filters,
     availableFilters,
     categoryMeta,
+    categories,
     filteredMovies,
     hideSort,
     earliestMovieYear,
@@ -107,7 +110,10 @@ const ListSummary = (props: Props) => {
       categoryMeta[presetCategory || "none"]
     : null;
 
-  const availableFromFiltered = gatherAvailableFilters(filteredMovies);
+  const availableFromFiltered = gatherAvailableFilters(
+    filteredMovies,
+    categories
+  );
 
   let startDateFilterValue = new Date();
   let endDateFilterValue = new Date();
@@ -287,6 +293,7 @@ const mapStateToProps = (state: any) => {
     earliestMovieYear: state.movieStore?.earliestMovieYear,
     latestMovieYear: state.movieStore?.latestMovieYear,
     categoryMeta: state.movieStore?.categoryMeta,
+    categories: state.movieStore?.categories,
   };
 };
 

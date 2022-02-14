@@ -96,6 +96,19 @@ export const breakoutTitleYearAndCategory = (
       categoryCls: "randomizer",
       order: parts[0].split("#")[1],
     };
+  } else if (rawTitle.indexOf("March Madness 2") === 0) {
+    // March Madness 2
+    const parts = rawTitle.split("–");
+    const titleAndYear = extractTitleAndYear(parts[1].trim());
+
+    return {
+      title: titleAndYear[0],
+      rawYear: getRawYear(titleAndYear[1]),
+      year: titleAndYear[1],
+      category: CATEGORIES.MARCH_MADNESS_2,
+      categoryCls: "march_madness_2",
+      order: parts[0].split("#")[1],
+    };
   } else if (rawTitle.indexOf("March Madness") === 0) {
     // March Madness
     const parts = rawTitle.split("–");

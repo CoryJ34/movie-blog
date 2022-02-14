@@ -1,4 +1,5 @@
-import { CATEGORY_CLS_MAP, SimpleMap } from "../common/constants";
+import { SimpleMap } from "../common/constants";
+import { Category } from "../models/Category";
 import {
   AvailableFilters,
   Filter,
@@ -83,8 +84,17 @@ export const makeDefaultDateFilters = (movies: Movie[]): FilterMap => {
   };
 };
 
-export const gatherAvailableFilters = (movies: Movie[]): AvailableFilters => {
+export const gatherAvailableFilters = (
+  movies: Movie[],
+  categories: Category[]
+): AvailableFilters => {
   let availableFilters: AvailableFilters = {};
+
+  let categoryClsLookup: SimpleMap = {};
+
+  categories.forEach((c) => {
+    categoryClsLookup[c.name] = c.cls;
+  });
 
   movies.forEach((movie: Movie) => {
     (movie.tags || []).forEach((tag) => {
@@ -97,7 +107,7 @@ export const gatherAvailableFilters = (movies: Movie[]): AvailableFilters => {
     availableFilters[FilterType.WATCHLIST.toString()] = pushOrIncrement(
       availableFilters[FilterType.WATCHLIST.toString()] || [],
       movie.category,
-      CATEGORY_CLS_MAP
+      categoryClsLookup
     );
     availableFilters[FilterType.YEAR.toString()] = pushOrIncrement(
       availableFilters[FilterType.YEAR.toString()] || [],

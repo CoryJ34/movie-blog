@@ -4,6 +4,7 @@ export const CATEGORIES = {
   GAMERA: "Gamera",
   RANDOMIZER: "Randomizer",
   MARCH_MADNESS: "March Madness",
+  MARCH_MADNESS_2: "March Madness 2",
   GENRES: "Genres",
   FINISH_THE_SERIES_HORROR: "[Horror] Finish the Series",
   FINISH_THE_SERIES_NON_HORROR: "[Non-Horror] Finish the Series",
@@ -17,22 +18,6 @@ export const CATEGORIES = {
 export interface SimpleMap {
   [key: string]: string;
 }
-
-export const CATEGORY_CLS_MAP: SimpleMap = {
-  [CATEGORIES.HALLOWEEN_2020]: "halloween_2020",
-  [CATEGORIES.NOV_DEC_2020]: "nov_dec_2020",
-  [CATEGORIES.GAMERA]: "gamera",
-  [CATEGORIES.RANDOMIZER]: "randomizer",
-  [CATEGORIES.MARCH_MADNESS]: "march_madness",
-  [CATEGORIES.GENRES]: "genres",
-  [CATEGORIES.FINISH_THE_SERIES_HORROR]: "finish_the_series_horror",
-  [CATEGORIES.FINISH_THE_SERIES_NON_HORROR]: "finish_the_series_non_horror",
-  [CATEGORIES.DECADES_OF_HORROR]: "decades_of_horror",
-  [CATEGORIES.GENRE_SAMPLER]: "genre_sampler",
-  [CATEGORIES.HALLOWEEN_2021]: "halloween_2021",
-  [CATEGORIES.DAYS_OF_LISTMAS]: "days_of_listmas",
-  [CATEGORIES.BLOOD]: "blood",
-};
 
 export const TAGS: any = {
   SLASH80S: "80s Slasher",

@@ -106,7 +106,7 @@ export default function movieListReducer(state = initialState, action: any) {
         bottomNav: content.bottomNav,
         movies: allMovies,
         filteredMovies,
-        availableFilters: gatherAvailableFilters(allMovies),
+        availableFilters: gatherAvailableFilters(allMovies, categories),
         chartData: buildChartData(filteredMovies),
         categoryMeta: categoryData,
         references: findMovieReferences(allMovies),
@@ -118,6 +118,8 @@ export default function movieListReducer(state = initialState, action: any) {
         earliestMovieYear,
         latestMovieYear,
         categories,
+        sortField: state.sortField || "WatchedDate",
+        sortDir: state.sortDir || "ASC",
       };
     }
     case "movies/applyFilter": {

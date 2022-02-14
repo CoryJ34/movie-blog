@@ -16,6 +16,10 @@ export const getStringArray = (field: any) => {
   return field ? field.S.split(DELIM) : [];
 };
 
+export const getStringArrayFromList = (field: any) => {
+  return field && field.L ? field.L.map((item: any) => item.S) : [];
+};
+
 export const getString = (field: any) => {
   return field ? field.S : undefined;
 };

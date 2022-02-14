@@ -3,6 +3,8 @@ import {
   getInt,
   getObjectArray,
   getString,
+  getStringArray,
+  getStringArrayFromList,
 } from "./RepositoryCommons";
 
 import Cache from "./Cache";
@@ -40,6 +42,35 @@ export const listCategories = async () => {
           fontHexColor: getString(sc.FontHexColor),
         };
       });
+
+      const remarks: any = item.Remarks;
+
+      if (remarks) {
+        let remarksData: any = {};
+        const opening = remarks.M.Opening;
+
+        if (opening) {
+          remarksData.opening = {
+            title: getString(opening.M.Title),
+            date: getString(opening.M.Date),
+            content: getStringArrayFromList(opening.M.Content),
+          };
+        }
+
+        const closing = remarks.M.Closing;
+
+        if (closing) {
+          remarksData.closing = {
+            title: getString(closing.M.Title),
+            date: getString(closing.M.Date),
+            content: getStringArrayFromList(closing.M.Content),
+          };
+        }
+
+        // console.log(remarksData);
+
+        data.remarks = remarksData;
+      }
 
       data.subCategories = scs;
     }

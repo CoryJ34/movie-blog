@@ -3,6 +3,7 @@ import { Refresh } from "@material-ui/icons";
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { CATEGORIES } from "../../common/constants";
+import { Category } from "../../models/Category";
 import { Movie } from "../../models/Movie";
 import VHS from "../vhs/VHS";
 import FeaturedCard from "./FeaturedCard";
@@ -11,12 +12,13 @@ import "./styles/Home.scss";
 
 interface Props {
   movies: Movie[];
+  categories: Category[];
   openDetail: (movie: Movie) => void;
   resetFilters: () => void;
 }
 
 const Home = (props: Props) => {
-  const { movies, openDetail, resetFilters } = props;
+  const { movies, categories, openDetail, resetFilters } = props;
   const [previews, setPreviews] = useState<Movie[]>([]);
 
   const onRefreshPreviews = () => {
@@ -47,71 +49,16 @@ const Home = (props: Props) => {
         <div className="section-header">Featured</div>
         <div className="featured">
           <Grid container justify="center" spacing={2}>
-            <FeaturedCard
-              loc="/halloween2020"
-              category={CATEGORIES.HALLOWEEN_2020}
-              movies={movies}
-            />
-            <FeaturedCard
-              loc="/novdec2020"
-              category={CATEGORIES.NOV_DEC_2020}
-              movies={movies}
-            />
-            <FeaturedCard
-              loc="/gamera"
-              category={CATEGORIES.GAMERA}
-              movies={movies}
-            />
-            <FeaturedCard
-              loc="/randomizer"
-              category={CATEGORIES.RANDOMIZER}
-              movies={movies}
-            />
-            <FeaturedCard
-              loc="/bracket"
-              category={CATEGORIES.MARCH_MADNESS}
-              movies={movies}
-            />
-            <FeaturedCard
-              loc="/genres"
-              category={CATEGORIES.GENRES}
-              movies={movies}
-            />
-            <FeaturedCard
-              loc="/finishtheserieshorror"
-              category={CATEGORIES.FINISH_THE_SERIES_HORROR}
-              movies={movies}
-            />
-            <FeaturedCard
-              loc="/decadesofhorror"
-              category={CATEGORIES.DECADES_OF_HORROR}
-              movies={movies}
-            />
-            <FeaturedCard
-              loc="/finishtheseriesnonhorror"
-              category={CATEGORIES.FINISH_THE_SERIES_NON_HORROR}
-              movies={movies}
-            />
-            <FeaturedCard
-              loc="/genresampler"
-              category={CATEGORIES.GENRE_SAMPLER}
-              movies={movies}
-            />
-            <FeaturedCard
-              loc="/halloween2021"
-              category={CATEGORIES.HALLOWEEN_2021}
-              movies={movies}
-            />
-            <FeaturedCard
-              loc="/daysoflistmas"
-              category={CATEGORIES.DAYS_OF_LISTMAS}
-              movies={movies}
-            />
-            <FeaturedCard
-              loc="/blood"
-              category={CATEGORIES.BLOOD}
-              movies={movies}
-            />
+            {categories.map((c: Category) => {
+              return (
+                <FeaturedCard
+                  key={c.name}
+                  loc={c.route}
+                  category={c.name}
+                  movies={movies}
+                />
+              );
+            })}
           </Grid>
         </div>
         <div className="section-header">
