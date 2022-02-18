@@ -1,3 +1,5 @@
+import { Round } from "./BracketData";
+
 export interface Remark {
   title: string;
   date: string;
@@ -25,4 +27,5 @@ export interface Category {
   type: string;
   subCategories: [SubCategory];
   remarks: Remarks;
+  rounds: Round[];
 }

@@ -72,6 +72,31 @@ export const listCategories = async () => {
         data.remarks = remarksData;
       }
 
+      const rounds: any = item.Rounds;
+
+      if (rounds) {
+        let dataRounds: any = [];
+
+        rounds.L.forEach((r: any) => {
+          const round = getInt(r.M.Round);
+          const matchups = r.M.Matchups.L.map((m: any) => {
+            return {
+              a: getInt(m.M.A),
+              b: getInt(m.M.B),
+              winner: getInt(m.M.Winner),
+              blurb: getString(m.M.Blurb),
+            };
+          });
+
+          dataRounds.push({
+            round,
+            matchups,
+          });
+        });
+
+        data.rounds = dataRounds;
+      }
+
       data.subCategories = scs;
     }
 

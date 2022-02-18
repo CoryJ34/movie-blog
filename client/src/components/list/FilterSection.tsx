@@ -47,18 +47,23 @@ const FilterSection = (props: Props) => {
       <div className="section-label">{label}</div>
       <div className="filters">
         {availableFilters[filterType].map((v) => {
-          let matching = (availableForType || []).find((a) => a.value === v.value);
+          let matching = (availableForType || []).find(
+            (a) => a.value === v.value
+          );
 
           return (
             <div
               key={v.value}
-              className={`${cls || 'tag'} ${v.cls} ${
+              className={`${cls || "tag"} ${v.cls} ${
                 !!(filters || {})[
                   stringifyFilter({ type: filterType, value: v.value })
                 ]
                   ? "selected"
                   : ""
               } ${!availableForType || !matching ? "na" : ""}`}
+              style={{
+                backgroundColor: v.color,
+              }}
               onClick={() => onClick(v.value)}
             >
               <div className="filter-count">

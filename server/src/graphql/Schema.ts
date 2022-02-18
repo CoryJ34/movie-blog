@@ -69,6 +69,18 @@ const schema = buildSchema(`
     closing: Remark
   }
 
+  type Matchup {
+    a: Int!,
+    b: Int!,
+    winner: Int!,
+    blurb: String!
+  }
+
+  type Round {
+    round: Int!,
+    matchups: [Matchup!]!
+  }
+
   type Category {
       order: Int!,
       name: String!,
@@ -77,7 +89,8 @@ const schema = buildSchema(`
       hexColor: String!,
       type: String!,
       subCategories: [SubCategory!]!,
-      remarks: Remarks
+      remarks: Remarks,
+      rounds: [Round]
   }
 
   type ListCategoriesResponse {

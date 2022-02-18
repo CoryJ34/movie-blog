@@ -5,11 +5,12 @@ import { Movie } from "../../models/Movie";
 interface Props {
   loc: string;
   category: string;
+  hexColor: string;
   movies: Movie[];
 }
 
 const FeaturedCard = (props: Props) => {
-  const { loc, category, movies } = props;
+  const { loc, hexColor, category, movies } = props;
 
   const [randomImg, setRandomImg] = useState("");
 
@@ -31,6 +32,10 @@ const FeaturedCard = (props: Props) => {
     <Link
       to={loc}
       className={`featured-card ${filteredAndSorted[0].categoryCls}`}
+      style={{
+        borderLeft: `solid 5px ${hexColor}`,
+        borderRadius: "0",
+      }}
     >
       {randomImg && (
         <div className="featured-card-backsplash">

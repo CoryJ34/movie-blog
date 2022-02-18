@@ -84,6 +84,15 @@ export const ListCategoriesQuery = `query ListCategories {
                     date,
                     content
                 }
+            },
+            rounds {
+              round,
+              matchups {
+                a,
+                b,
+                winner,
+                blurb
+              }
             }
         }
     }

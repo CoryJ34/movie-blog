@@ -22,6 +22,7 @@ import "./styles/ListSummary.scss";
 import FilterSection from "./FilterSection";
 import { gatherAvailableFilters } from "../../util/FilterUtils";
 import { Category } from "../../models/Category";
+import { SimpleMap } from "../../common/constants";
 
 interface Props {
   movies: Movie[];

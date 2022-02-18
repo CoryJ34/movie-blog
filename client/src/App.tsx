@@ -164,7 +164,7 @@ function App(props: Props) {
                       presetCategory={c.name}
                       hideSort={true}
                     >
-                      <Bracket />
+                      <Bracket bracketData={c.rounds} />
                     </PageLayout>
                   </Route>
                 );

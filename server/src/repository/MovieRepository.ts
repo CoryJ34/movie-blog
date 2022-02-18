@@ -1,10 +1,7 @@
 import movieData from "../data/test-data";
 import lboxData from "../data/lbox-data";
 import TitleBreakout from "../../../client/src/models/TitleBreakout";
-import {
-  extractRating,
-  breakoutTitleYearAndCategory,
-} from "../utils/TransferUtils";
+import { extractRating } from "../utils/TransferUtils";
 import Cache from "./Cache";
 import {
   dynamodb,
@@ -14,6 +11,7 @@ import {
   getStringArray,
 } from "./RepositoryCommons";
 import categoryMeta from "../data/category-meta";
+import mmData from "../data/march-madness-data";
 
 const existingCats = [
   {
@@ -36,7 +34,7 @@ const existingCats = [
   },
   {
     order: 5,
-    hexColor: "#0a7421",
+    hexColor: "#243199",
     route: "/marchmadness",
     cls: "marchmadness",
     type: "Bracket",
@@ -338,7 +336,7 @@ export const setupCategories = async () => {
   let testResp: any = [];
 
   for (const cat of existingCats) {
-    if (cat.order !== 11) {
+    if (cat.order !== 5) {
       continue;
     }
 
@@ -351,6 +349,35 @@ export const setupCategories = async () => {
       data.Cls = { S: cat.cls };
       data.Type = { S: cat.type };
       data.Name = { S: cat.name };
+
+      console.log("checking...");
+
+      if (cat.type === "Bracket") {
+        console.log("is bracket");
+
+        data.Rounds = {
+          L: mmData.rounds.map((r) => {
+            return {
+              M: {
+                Round: { N: r.round },
+                Matchups: {
+                  L: r.matchups.map((m) => {
+                    return {
+                      M: {
+                        A: { N: m.a },
+                        B: { N: m.b },
+                        Winner: { N: m.winner },
+                        Blurb: { S: m.blurb },
+                      },
+                    };
+                  }),
+                },
+              },
+            };
+          }),
+        };
+      }
+
       data.Remarks = {
         M: {
           Opening: {
@@ -570,14 +597,10 @@ export const migrateFromJson = async (data?: any) => {
       const m = mmap[lb.id];
 
       if (m) {
-        const breakout: TitleBreakout | null = breakoutTitleYearAndCategory(
-          m.title
-        );
-
         data.IMG = { S: m.img };
         data.Label = { S: m.label };
         data.Format = { S: m.format };
-        data.Title = { S: breakout?.title || m.title };
+        data.Title = { S: m.title };
         data.WatchedDate = { S: m.date };
         data.Content = { S: m.content.join("#_#_#") };
         // @ts-ignore
@@ -587,24 +610,24 @@ export const migrateFromJson = async (data?: any) => {
           data.Tags = { SS: m.tags };
         }
 
-        if (breakout?.rawYear) {
-          data.RawYear = { N: breakout?.rawYear?.toString() };
+        if (m.rawYear) {
+          data.RawYear = { N: m.rawYear?.toString() };
         }
 
-        if (breakout?.category) {
-          data.Category = { S: breakout?.category };
+        if (m.category) {
+          data.Category = { S: m.category };
         }
 
-        if (breakout?.categoryCls) {
-          data.CategoryCls = { S: breakout?.categoryCls };
+        if (m.categoryCls) {
+          data.CategoryCls = { S: m.categoryCls };
         }
 
-        if (breakout?.subCategory) {
-          data.SubCategory = { S: breakout?.subCategory };
+        if (m.subCategory) {
+          data.SubCategory = { S: m.subCategory };
         }
 
-        if (breakout?.order) {
-          data.Order = { S: breakout?.order.trim() };
+        if (m.order) {
+          data.Order = { S: m.order.trim() };
         }
       }
 

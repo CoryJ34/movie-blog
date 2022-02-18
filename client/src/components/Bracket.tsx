@@ -1,15 +1,14 @@
 import { Dialog } from "@material-ui/core";
-import React, { ReactElement, useEffect, useState } from "react";
+import React, { ReactElement, useState } from "react";
 import { connect } from "react-redux";
-import { BracketData, Matchup, Round } from "../models/BracketData";
+import { Matchup, Round } from "../models/BracketData";
 import { Movie } from "../models/Movie";
 
 import "./styles/Bracket.scss";
 
 interface Props {
   movies: any;
-  bracketData: BracketData;
-  loadBracketData: (data: any) => void;
+  bracketData: Round[];
 }
 
 const MATCHUP_MARGIN = 20;
@@ -45,17 +44,9 @@ const calculateMarginTop = (
 };
 
 const Bracket = (props: Props) => {
-  const { movies, bracketData, loadBracketData } = props;
+  const { movies, bracketData } = props;
   const [blurbOpen, setBlurbOpen] = useState(false);
   const [selectedMatchup, setSelectedMatchup] = useState<Matchup | null>(null);
-
-  useEffect(() => {
-    fetch("/bracketdata")
-      .then((res) => res.json())
-      .then((data) => {
-        props.loadBracketData(data);
-      });
-  }, []);
 
   if (!movies || !bracketData) {
     return <div>Loading...</div>;
@@ -163,7 +154,7 @@ const Bracket = (props: Props) => {
 
   return (
     <div className="bracket-container">
-      {renderRoundRecur(movies, bracketData.rounds, 0)}
+      {renderRoundRecur(movies, bracketData, 0)}
       <Dialog
         open={blurbOpen}
         maxWidth="sm"
@@ -193,15 +184,7 @@ const mapStateToProps = (state: any) => {
 
   return {
     movies,
-    bracketData: state.bracketStore?.bracketData,
   };
 };
 
-const mapDispatchToProps = (dispatch: any) => {
-  return {
-    loadBracketData: (data: any) =>
-      dispatch({ type: "bracket/load", payload: data }),
-  };
-};
-
-export default connect(mapStateToProps, mapDispatchToProps)(Bracket);
+export default connect(mapStateToProps)(Bracket);

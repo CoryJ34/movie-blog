@@ -23,6 +23,7 @@ export interface FilterMap {
 export interface FilterMeta {
   value: string;
   cls: string;
+  color?: string;
   count: number;
 }
 

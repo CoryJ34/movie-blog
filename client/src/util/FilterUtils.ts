@@ -21,6 +21,7 @@ const metaComparator = (a: FilterMeta, b: FilterMeta) => {
 const pushOrIncrement = (
   existing: FilterMeta[],
   value: string,
+  color?: string,
   map?: SimpleMap
 ): FilterMeta[] => {
   let found = false;
@@ -33,7 +34,7 @@ const pushOrIncrement = (
   }
 
   if (!found) {
-    existing.push({ value, cls: map ? map[value] : value, count: 1 });
+    existing.push({ value, cls: map ? map[value] : value, color, count: 1 });
   }
 
   return existing;
@@ -91,9 +92,11 @@ export const gatherAvailableFilters = (
   let availableFilters: AvailableFilters = {};
 
   let categoryClsLookup: SimpleMap = {};
+  let categoryColorLookup: SimpleMap = {};
 
   categories.forEach((c) => {
     categoryClsLookup[c.name] = c.cls;
+    categoryColorLookup[c.name] = c.hexColor;
   });
 
   movies.forEach((movie: Movie) => {
@@ -107,6 +110,7 @@ export const gatherAvailableFilters = (
     availableFilters[FilterType.WATCHLIST.toString()] = pushOrIncrement(
       availableFilters[FilterType.WATCHLIST.toString()] || [],
       movie.category,
+      categoryColorLookup[movie.category],
       categoryClsLookup
     );
     availableFilters[FilterType.YEAR.toString()] = pushOrIncrement(

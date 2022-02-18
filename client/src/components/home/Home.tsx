@@ -55,6 +55,7 @@ const Home = (props: Props) => {
                   key={c.name}
                   loc={c.route}
                   category={c.name}
+                  hexColor={c.hexColor}
                   movies={movies}
                 />
               );
