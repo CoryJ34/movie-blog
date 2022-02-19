@@ -106,21 +106,21 @@ app.get("/bracketdata", (_, res: any) => {
 });
 
 app.post("/migrate", async (req, res: any) => {
-  // let finalJson: any = {
-  //   ...JSON.parse(req.body.content),
-  //   label: req.body.label,
-  //   format: req.body.format,
-  // };
+  let finalJson: any = {
+    ...JSON.parse(req.body.content),
+    label: req.body.label,
+    format: req.body.format,
+  };
 
-  // if (req.body.tags) {
-  //   finalJson.tags = [req.body.tags];
-  // }
+  if (req.body.tags) {
+    finalJson.tags = [req.body.tags];
+  }
 
-  // await migrateFromJson(finalJson);
+  await migrateFromJson(finalJson);
   // await TEMPinitLBOX();
-  let setupRes = await setupCategories();
+  // let setupRes = await setupCategories();
 
-  res.json(setupRes);
+  res.json(finalJson);
 });
 
 app.get("*", (_, res: any) => {

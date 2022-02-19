@@ -1,5 +1,6 @@
 import react, { ReactElement, useEffect } from "react";
 import { connect } from "react-redux";
+import { Category } from "../models/Category";
 import { CategoryMeta } from "../models/CategoryMeta";
 import { Filter, FilterType } from "../models/Filter";
 import { Movie } from "../models/Movie";
@@ -8,7 +9,7 @@ import ListSummary from "./list/ListSummary";
 interface Props {
   movies: Movie[];
   hideSort?: boolean;
-  presetCategory: string;
+  presetCategory: Category;
   applyFilter: (filter: Filter) => void;
   children: any;
 }
@@ -20,7 +21,7 @@ const PageLayout = (props: Props) => {
     if (presetCategory) {
       applyFilter({
         type: FilterType.WATCHLIST,
-        value: presetCategory,
+        value: presetCategory.name,
       });
     }
   }, []);

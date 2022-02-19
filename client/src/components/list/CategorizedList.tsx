@@ -3,11 +3,12 @@ import { Movie } from "../../models/Movie";
 import { CategoryMeta } from "../../models/CategoryMeta";
 import ListSummary from "./ListSummary";
 import MovieInfo from "./MovieInfo";
+import { Category } from "../../models/Category";
 
 interface Props {
   categoryMeta: CategoryMeta;
   filteredMovies: Movie[];
-  presetCategory: string;
+  presetCategory: Category;
   openDetail: (movie: Movie) => void;
 }
 
@@ -23,6 +24,7 @@ function CategorizedList(props: Props) {
         {filteredMovies.map((m) => (
           <MovieInfo
             movie={m}
+            category={presetCategory}
             presetCategory={presetCategory}
             openDetail={openDetail}
             key={m.title}

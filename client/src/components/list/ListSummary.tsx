@@ -28,7 +28,7 @@ interface Props {
   movies: Movie[];
   categoryMeta: CategoryMeta;
   categories: Category[];
-  presetCategory?: string;
+  presetCategory?: Category;
   filters: FilterMap;
   availableFilters: AvailableFilters;
   filteredMovies: Movie[];

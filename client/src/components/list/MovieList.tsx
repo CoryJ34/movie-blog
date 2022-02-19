@@ -4,17 +4,25 @@ import MovieInfo from "../list/MovieInfo";
 import { Movie } from "../../models/Movie";
 import { CategoryMeta } from "../../models/CategoryMeta";
 import { connect } from "react-redux";
+import { Category } from "../../models/Category";
 
 interface Props {
   categoryMeta: CategoryMeta;
+  categoryMap: any;
   filteredMovies: Movie[];
-  presetCategory?: string;
+  presetCategory?: Category;
   openDetail: (movie: Movie) => void;
   resetFilters: () => void;
 }
 
 function MovieList(props: Props) {
-  const { filteredMovies, presetCategory, openDetail, resetFilters } = props;
+  const {
+    filteredMovies,
+    presetCategory,
+    categoryMap,
+    openDetail,
+    resetFilters,
+  } = props;
 
   useEffect(() => {
     resetFilters();
@@ -32,6 +40,7 @@ function MovieList(props: Props) {
         {filteredMovies.map((m) => (
           <MovieInfo
             movie={m}
+            category={categoryMap[m.category]}
             presetCategory={presetCategory}
             openDetail={openDetail}
             key={m.title}
@@ -42,10 +51,23 @@ function MovieList(props: Props) {
   );
 }
 
+const mapStateToProps = (state: any) => {
+  let categoryMap: any = {};
+  const categories: Category[] = state.movieStore?.categories || [];
+
+  categories.forEach((c) => {
+    categoryMap[c.name] = c;
+  });
+
+  return {
+    categoryMap,
+  };
+};
+
 const mapDispatchToProps = (dispatch: any) => {
   return {
     resetFilters: () => dispatch({ type: "movies/resetFilter" }),
   };
 };
 
-export default connect(undefined, mapDispatchToProps)(MovieList);
+export default connect(mapStateToProps, mapDispatchToProps)(MovieList);

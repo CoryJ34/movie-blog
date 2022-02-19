@@ -81,9 +81,12 @@ function App(props: Props) {
     moviesByCategory[category].push(m);
   });
 
-  const categorizedPage = (category: string) => {
+  const categorizedPage = (category: Category) => {
     return (
-      <PageLayout movies={moviesByCategory[category]} presetCategory={category}>
+      <PageLayout
+        movies={moviesByCategory[category.name]}
+        presetCategory={category}
+      >
         <CategorizedList
           categoryMeta={categoryMeta}
           filteredMovies={filteredMovies}
@@ -94,10 +97,10 @@ function App(props: Props) {
     );
   };
 
-  const subCategorizedPage = (category: string) => {
+  const subCategorizedPage = (category: Category) => {
     return (
       <PageLayout
-        movies={moviesByCategory[category]}
+        movies={moviesByCategory[category.name]}
         presetCategory={category}
         hideSort={true}
       >
@@ -143,11 +146,11 @@ function App(props: Props) {
                   <Route path={c.route}>
                     <PageLayout
                       movies={moviesByCategory[c.name]}
-                      presetCategory={c.name}
+                      presetCategory={c}
                       hideSort={true}
                     >
                       <SubCategorized
-                        category={c.name}
+                        category={c}
                         movies={movies}
                         openDetail={openDetail}
                         subCategoryMap={weekMap}
@@ -161,7 +164,7 @@ function App(props: Props) {
                   <Route path={c.route}>
                     <PageLayout
                       movies={moviesByCategory[c.name]}
-                      presetCategory={c.name}
+                      presetCategory={c}
                       hideSort={true}
                     >
                       <Bracket bracketData={c.rounds} />
@@ -170,7 +173,7 @@ function App(props: Props) {
                 );
               }
 
-              return <Route path={c.route}>{categorizedPage(c.name)}</Route>;
+              return <Route path={c.route}>{categorizedPage(c)}</Route>;
             })}
             <Route path="/references">
               <References />

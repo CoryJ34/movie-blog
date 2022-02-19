@@ -1,6 +1,7 @@
 import { Dialog, Grid } from "@material-ui/core";
 import React, { useState } from "react";
 import { RATING_REGEX } from "../../common/constants";
+import { Category } from "../../models/Category";
 import { Movie } from "../../models/Movie";
 
 import "./styles/SubCategorized.scss";
@@ -21,7 +22,7 @@ interface NumericMap {
 }
 
 interface Props {
-  category: string;
+  category: Category;
   subCategoryMap?: any;
   movies: Movie[];
   customWeekCounts?: NumericMap;
@@ -38,7 +39,7 @@ const SubCategorized = (props: Props) => {
   }
 
   const filtered = [...movies]
-    .filter((m) => m.category === category)
+    .filter((m) => m.category === category.name)
     .sort((a, b) => {
       return parseInt(a.id, 10) - parseInt(b.id, 10);
     });

@@ -1,5 +1,6 @@
 import react from "react";
 import { RATING_REGEX } from "../../common/constants";
+import { Category } from "../../models/Category";
 import { Movie } from "../../models/Movie";
 
 import "./styles/MovieInfo.scss";
@@ -25,12 +26,13 @@ const makeContentElement = (content: string, index: number) => {
 
 interface Props {
   movie: Movie;
-  presetCategory?: string;
+  category: Category;
+  presetCategory?: Category;
   openDetail: (selectedMovie: Movie) => void;
 }
 
 const MovieInfo = (props: Props) => {
-  const { movie, presetCategory, openDetail } = props;
+  const { movie, presetCategory, category, openDetail } = props;
   const categoryInfo = movie;
 
   const onCategoryClick = () => {
@@ -65,6 +67,9 @@ const MovieInfo = (props: Props) => {
           {!presetCategory && (
             <div
               className={`category ${categoryInfo?.categoryCls}`}
+              style={{
+                backgroundColor: category.hexColor,
+              }}
               onClick={onCategoryClick}
             >
               {categoryInfo?.category}
