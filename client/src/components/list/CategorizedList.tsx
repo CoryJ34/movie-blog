@@ -1,19 +1,17 @@
 import React, { useEffect } from "react";
 import { Movie } from "../../models/Movie";
-import { CategoryMeta } from "../../models/CategoryMeta";
 import ListSummary from "./ListSummary";
 import MovieInfo from "./MovieInfo";
 import { Category } from "../../models/Category";
 
 interface Props {
-  categoryMeta: CategoryMeta;
   filteredMovies: Movie[];
   presetCategory: Category;
   openDetail: (movie: Movie) => void;
 }
 
 function CategorizedList(props: Props) {
-  const { categoryMeta, filteredMovies, presetCategory, openDetail } = props;
+  const { filteredMovies, presetCategory, openDetail } = props;
 
   return (
     <div className="movie-list">

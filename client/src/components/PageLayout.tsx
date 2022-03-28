@@ -1,7 +1,6 @@
 import react, { ReactElement, useEffect } from "react";
 import { connect } from "react-redux";
 import { Category } from "../models/Category";
-import { CategoryMeta } from "../models/CategoryMeta";
 import { Filter, FilterType } from "../models/Filter";
 import { Movie } from "../models/Movie";
 import ListSummary from "./list/ListSummary";
@@ -38,12 +37,6 @@ const PageLayout = (props: Props) => {
   );
 };
 
-const mapStateToProps = (state: any) => {
-  return {
-    categoryMeta: state.movieStore?.categoryMeta,
-  };
-};
-
 const mapDispatchToProps = (dispatch: any) => {
   return {
     applyFilter: (filter: Filter) =>
@@ -51,4 +44,4 @@ const mapDispatchToProps = (dispatch: any) => {
   };
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(PageLayout);
+export default connect(undefined, mapDispatchToProps)(PageLayout);

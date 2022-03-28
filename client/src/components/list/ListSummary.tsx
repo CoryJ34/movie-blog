@@ -4,11 +4,6 @@ import { connect } from "react-redux";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import {
-  CategoryMeta,
-  RemarkObject,
-  SingleCategoryMeta,
-} from "../../models/CategoryMeta";
-import {
   AvailableFilters,
   Filter,
   FilterMap,
@@ -21,12 +16,11 @@ import Sort from "./Sort";
 import "./styles/ListSummary.scss";
 import FilterSection from "./FilterSection";
 import { gatherAvailableFilters } from "../../util/FilterUtils";
-import { Category } from "../../models/Category";
+import { Category, Remark } from "../../models/Category";
 import { SimpleMap } from "../../common/constants";
 
 interface Props {
   movies: Movie[];
-  categoryMeta: CategoryMeta;
   categories: Category[];
   presetCategory?: Category;
   filters: FilterMap;
@@ -69,7 +63,6 @@ const ListSummary = (props: Props) => {
     presetCategory,
     filters,
     availableFilters,
-    categoryMeta,
     categories,
     filteredMovies,
     hideSort,
@@ -79,7 +72,7 @@ const ListSummary = (props: Props) => {
     removeFilter,
   } = props;
 
-  const [currentRemark, setCurrentRemark] = useState<RemarkObject | undefined>(
+  const [currentRemark, setCurrentRemark] = useState<Remark | undefined>(
     undefined
   );
 
@@ -105,11 +98,7 @@ const ListSummary = (props: Props) => {
   averageRating = averageRating / movies.length;
   const minsPerMovie = Math.round(totalRuntimeMins / movies.length);
 
-  // @ts-ignore
-  const meta: SingleCategoryMeta = presetCategory
-    ? // @ts-ignore
-      categoryMeta[presetCategory || "none"]
-    : null;
+  const meta = presetCategory?.remarks;
 
   const availableFromFiltered = gatherAvailableFilters(
     filteredMovies,
@@ -293,7 +282,6 @@ const mapStateToProps = (state: any) => {
     filteredMovies: state.movieStore?.filteredMovies,
     earliestMovieYear: state.movieStore?.earliestMovieYear,
     latestMovieYear: state.movieStore?.latestMovieYear,
-    categoryMeta: state.movieStore?.categoryMeta,
     categories: state.movieStore?.categories,
   };
 };

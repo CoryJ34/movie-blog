@@ -2,12 +2,10 @@ import React, { useEffect } from "react";
 import ListSummary from "../list/ListSummary";
 import MovieInfo from "../list/MovieInfo";
 import { Movie } from "../../models/Movie";
-import { CategoryMeta } from "../../models/CategoryMeta";
 import { connect } from "react-redux";
 import { Category } from "../../models/Category";
 
 interface Props {
-  categoryMeta: CategoryMeta;
   categoryMap: any;
   filteredMovies: Movie[];
   presetCategory?: Category;

@@ -1,30 +1,18 @@
 import path from "path";
 import express from "express";
 const app = express();
-import categoryData from "./src/data/category-meta";
-import marchMadnessData from "./src/data/march-madness-data";
 import milestoneData from "./src/data/milestones";
 import bottomNav from "./src/data/bottom-nav";
 import { graphqlHTTP } from "express-graphql";
 import {
   list,
   migrateFromJson,
-  setupCategories,
   TEMPinitLBOX,
 } from "./src/repository/MovieRepository";
 import Cache, { clearMovieCache } from "./src/repository/Cache";
 import { filterMovies } from "./src/utils/FilterUtils";
 import schema from "./src/graphql/Schema";
 import { listCategories } from "./src/repository/CategoryRepository";
-
-/*
- * TODO
- * 1) CategoryMeta - categoryName: String, title: String (opening, closing, misc), content: String[], date: String
- * 2) Category - categoryName: String, type: SubCategorized, Bracket, etc, color: String (rgba or hex), subcategories?
- * 3) Milestones - title: String, content: String[], date: String
- * 4) BottomNav - order: Int, label: String, route: String
- * 5) bracket config..?
- */
 
 let root = {
   hello: (args: any) => {
@@ -77,31 +65,11 @@ app.get("/api", (_, res: any) => {
 });
 
 app.get("/getalldata", async (_, res: any) => {
-  // let listReq = new Promise((resolve, rej) => {
-  //   dynamodb.listTables({}, (err, data) => {
-  //     if (err) {
-  //       resolve(err);
-  //     }
-  //     resolve(data);
-  //   });
-  // });
-
-  // const scanData: any = await list();
-
   res.json({
     content: {
       bottomNav,
     },
-    categoryData,
-    marchMadnessData,
     milestoneData,
-    // remoteMovieData: scanData,
-  });
-});
-
-app.get("/bracketdata", (_, res: any) => {
-  res.json({
-    marchMadnessData,
   });
 });
 

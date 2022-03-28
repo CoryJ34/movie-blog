@@ -8,7 +8,6 @@ import DetailDialog from "./components/DetailDialog";
 import Bracket from "./components/Bracket";
 import SubCategorized from "./components/subcategorized/SubCategorized";
 import MovieList from "./components/list/MovieList";
-import { CategoryMeta } from "./models/CategoryMeta";
 import PageLayout from "./components/PageLayout";
 import CategorizedList from "./components/list/CategorizedList";
 import { Filter, FilterMap } from "./models/Filter";
@@ -21,11 +20,11 @@ import Migrater from "./components/Migrater";
 import { loadMoviesFromServer } from "./actions/Actions";
 import { USE_SERVER_SIDE_FILTERING } from "./configuration/Configuration";
 import { Category } from "./models/Category";
+import { Box, CircularProgress } from "@material-ui/core";
 
 interface Props {
   movies: Movie[];
   filters: FilterMap;
-  categoryMeta: CategoryMeta;
   filteredMovies: Movie[];
   selectedMovie: Movie;
   categories: Category[];
@@ -44,7 +43,6 @@ function App(props: Props) {
   const {
     movies,
     filters,
-    categoryMeta,
     categories,
     filteredMovies,
     selectedMovie,
@@ -65,13 +63,25 @@ function App(props: Props) {
   }, [filters]);
 
   if (!movies) {
-    // TODO: Add cool loading widget, but right now, data is local so movies load too fast to see
-    return <div>Loading...</div>;
+    return (
+      <Box
+        display="flex"
+        width={"100%"}
+        height={"100vh"}
+        alignItems="center"
+        justifyContent="center"
+        sx={{
+          color: "#AA5522",
+        }}
+      >
+        <CircularProgress color="inherit" />
+      </Box>
+    );
   }
 
   let moviesByCategory: CategoryMap = {};
 
-  movies.reverse().forEach((m) => {
+  movies.forEach((m) => {
     const category = m.category;
 
     if (!moviesByCategory[category]) {
@@ -80,38 +90,6 @@ function App(props: Props) {
 
     moviesByCategory[category].push(m);
   });
-
-  const categorizedPage = (category: Category) => {
-    return (
-      <PageLayout
-        movies={moviesByCategory[category.name]}
-        presetCategory={category}
-      >
-        <CategorizedList
-          categoryMeta={categoryMeta}
-          filteredMovies={filteredMovies}
-          openDetail={openDetail}
-          presetCategory={category}
-        />
-      </PageLayout>
-    );
-  };
-
-  const subCategorizedPage = (category: Category) => {
-    return (
-      <PageLayout
-        movies={moviesByCategory[category.name]}
-        presetCategory={category}
-        hideSort={true}
-      >
-        <SubCategorized
-          category={category}
-          movies={movies}
-          openDetail={openDetail}
-        />
-      </PageLayout>
-    );
-  };
 
   return (
     <div className="App">
@@ -123,13 +101,12 @@ function App(props: Props) {
             </Route>
             <Route path="/movies">
               <MovieList
-                categoryMeta={categoryMeta}
                 filteredMovies={filteredMovies}
                 openDetail={openDetail}
               />
             </Route>
             {categories.map((c: Category) => {
-              // TODO: add all categories, also handle other types besides SubCategorized
+              // build routes for each category type (SubCategory, Bracket or Simple)
               if (c.type === "SubCategory") {
                 let weekMap: any = {};
                 let customWeekCounts: any = {};
@@ -173,7 +150,20 @@ function App(props: Props) {
                 );
               }
 
-              return <Route path={c.route}>{categorizedPage(c)}</Route>;
+              return (
+                <Route path={c.route}>
+                  <PageLayout
+                    movies={moviesByCategory[c.name]}
+                    presetCategory={c}
+                  >
+                    <CategorizedList
+                      filteredMovies={filteredMovies}
+                      openDetail={openDetail}
+                      presetCategory={c}
+                    />
+                  </PageLayout>
+                </Route>
+              );
             })}
             <Route path="/references">
               <References />
@@ -212,7 +202,6 @@ const mapStateToProps = (state: any) => {
   return {
     movies: state.movieStore?.movies,
     filters: state.movieStore?.filters,
-    categoryMeta: state.movieStore?.categoryMeta,
     categories: state.movieStore?.categories,
     filteredMovies: state.movieStore?.filteredMovies,
     selectedMovie: state.detailStore?.selectedMovie,

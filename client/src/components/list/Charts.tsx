@@ -40,6 +40,17 @@ const Charts = (props: Props) => {
     return null;
   }
 
+  // const renderCustomBarLabel =
+  //   (label: string) =>
+  //   // @ts-ignore
+  //   ({ payload, x, y, width, height, value }) => {
+  //     return (
+  //       <text x={x + width / 2} y={y} fill="#666" textAnchor="middle" dy={-6}>
+  //         {label}
+  //       </text>
+  //     );
+  //   };
+
   const refArea = (x1: string | number, x2: string | number, label: string) => {
     return (
       <ReferenceArea

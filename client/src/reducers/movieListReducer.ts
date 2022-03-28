@@ -1,7 +1,4 @@
 import { Movie } from "../models/Movie";
-// import lboxData from "../data/lbox-data";
-// import categoryMeta from "../data/category-meta";
-// import milestoneData from "../data/milestones";
 import {
   AvailableFilters,
   Filter,
@@ -55,7 +52,6 @@ export default function movieListReducer(state = initialState, action: any) {
   switch (action.type) {
     case "movies/load": {
       const {
-        categoryData,
         milestoneData,
         content,
         remoteMovieData,
@@ -108,7 +104,6 @@ export default function movieListReducer(state = initialState, action: any) {
         filteredMovies,
         availableFilters: gatherAvailableFilters(allMovies, categories),
         chartData: buildChartData(filteredMovies),
-        categoryMeta: categoryData,
         references: findMovieReferences(allMovies),
         watchListRanges: makeWatchListRanges(filteredMovies),
         milestones: milestoneData.reverse(),
