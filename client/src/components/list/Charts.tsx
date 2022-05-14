@@ -31,6 +31,8 @@ const CHARTS = {
   RATING_BY_WATCHED_DATE: "ratingByWatchedDate",
   CUMULATIVE_BY_WATCHED_DATE: "cumulativeByWatchedDate",
   RATING_HISTOGRAM: "ratingHistogram",
+  RATING_DIFF_BY_ORDER: "ratingDiffByOrder",
+  WEIGHTED_RATING_DIFF_BY_ORDER: "weightedRatingDiffByOrder",
 };
 
 const Charts = (props: Props) => {
@@ -164,6 +166,30 @@ const Charts = (props: Props) => {
           {refArea(9.0, 10.0, "Amazing")}
         </BarChart>
       );
+    } else if (chartTab === CHARTS.RATING_DIFF_BY_ORDER) {
+      return (
+        <LineChart data={chartData.ratingDiffByOrder}>
+          <Tooltip />
+          <YAxis />
+          <XAxis dataKey="order" />
+          <Line dataKey="diff" dot={false} />
+          {props.watchListRanges.map((range: any) =>
+            refArea(range.firstDate, range.lastDate, range.title)
+          )}
+        </LineChart>
+      );
+    } else if (chartTab === CHARTS.WEIGHTED_RATING_DIFF_BY_ORDER) {
+      return (
+        <LineChart data={chartData.weightedRatingDiffByOrder}>
+          <Tooltip />
+          <YAxis />
+          <XAxis dataKey="order" />
+          <Line dataKey="diff" dot={false} />
+          {props.watchListRanges.map((range: any) =>
+            refArea(range.firstDate, range.lastDate, range.title)
+          )}
+        </LineChart>
+      );
     }
 
     return <div>No chart selected</div>;
@@ -194,6 +220,11 @@ const Charts = (props: Props) => {
           label="Cumulative By Watch Date"
         />
         <Tab value={CHARTS.RATING_HISTOGRAM} label="Rating Histogram" />
+        <Tab value={CHARTS.RATING_DIFF_BY_ORDER} label="Rating Diff By Order" />
+        <Tab
+          value={CHARTS.WEIGHTED_RATING_DIFF_BY_ORDER}
+          label="Weighted Diff"
+        />
       </Tabs>
       <div className="chart-content">
         <ResponsiveContainer width="100%" height="100%">

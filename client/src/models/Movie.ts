@@ -13,7 +13,7 @@ export interface Movie {
   tags: string[];
   label: string;
   format: string;
-  ratingDiff: number;
+  ratingDiff: string;
   runtimeMins: number;
   lbox: {
     cast: string[];

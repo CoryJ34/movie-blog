@@ -91,7 +91,7 @@ const mapStateToProps = (state: any) => {
   let sortedByRatingDiff = [...allMovies];
 
   sortedByRatingDiff.sort((a: Movie, b: Movie) => {
-    return a.ratingDiff - b.ratingDiff;
+    return parseFloat(a.ratingDiff) - parseFloat(b.ratingDiff);
   });
 
   let numWayUnder = 0;
@@ -103,17 +103,18 @@ const mapStateToProps = (state: any) => {
   let numWayOver = 0;
 
   sortedByRatingDiff.forEach((m: Movie) => {
-    if (m.ratingDiff < -1.5) {
+    const rDiff = parseFloat(m.ratingDiff);
+    if (rDiff < -1.5) {
       numWayUnder++;
-    } else if (m.ratingDiff < -0.25) {
+    } else if (rDiff < -0.25) {
       numUnder++;
-    } else if (m.ratingDiff < -0.1) {
+    } else if (rDiff < -0.1) {
       numBarelyUnder++;
-    } else if (m.ratingDiff < 0.1) {
+    } else if (rDiff < 0.1) {
       numClose++;
-    } else if (m.ratingDiff < 0.25) {
+    } else if (rDiff < 0.25) {
       numBarelyOver++;
-    } else if (m.ratingDiff < 1.5) {
+    } else if (rDiff < 1.5) {
       numOver++;
     } else {
       numWayOver++;

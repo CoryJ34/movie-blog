@@ -253,6 +253,45 @@ const filterMovies = (movies: Movie[], filters: FilterMap) => {
           res = false;
         }
       }
+
+      if (k === FilterType.FREE_TEXT.toString()) {
+        const val = filtersByType[k][0].toLowerCase();
+        const parts = val.split(":");
+
+        if (val.trim() !== "") {
+          if (parts[0] === "title") {
+            if (m.title.toLowerCase().indexOf(parts[1]) < 0) {
+              res = false;
+            }
+          } else if (parts[0] === "desc") {
+            const hasAny =
+              m.content.filter((c) => c.toLowerCase().indexOf(parts[1]) >= 0)
+                .length > 0;
+
+            if (!hasAny) {
+              res = false;
+            }
+          } else {
+            let match = false;
+
+            if (m.title.toLowerCase().indexOf(val) >= 0) {
+              match = true;
+            }
+
+            const hasAny =
+              m.content.filter((c) => c.toLowerCase().indexOf(val) >= 0)
+                .length > 0;
+
+            if (hasAny) {
+              match = true;
+            }
+
+            if (!match) {
+              res = false;
+            }
+          }
+        }
+      }
     });
 
     return res;

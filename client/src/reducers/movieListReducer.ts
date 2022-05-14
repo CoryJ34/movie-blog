@@ -142,6 +142,10 @@ export default function movieListReducer(state = initialState, action: any) {
           if (filtersFromState[fk].type !== FilterType.YEAR_END) {
             existingFilters[fk] = filtersFromState[fk];
           }
+        } else if (filter.type === FilterType.FREE_TEXT) {
+          if (filtersFromState[fk].type !== FilterType.FREE_TEXT) {
+            existingFilters[fk] = filtersFromState[fk];
+          }
         } else {
           existingFilters[fk] = filtersFromState[fk];
         }

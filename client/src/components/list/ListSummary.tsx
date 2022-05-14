@@ -18,6 +18,7 @@ import FilterSection from "./FilterSection";
 import { gatherAvailableFilters } from "../../util/FilterUtils";
 import { Category, Remark } from "../../models/Category";
 import { SimpleMap } from "../../common/constants";
+import DelayedTextInput from "../common/DelayedTextInput";
 
 interface Props {
   movies: Movie[];
@@ -80,6 +81,10 @@ const ListSummary = (props: Props) => {
   let allCategories: any = {};
   let allTags: string[] = [];
   let totalRuntimeMins: number = 0;
+
+  if (!movies) {
+    return <div>No movies yet..</div>;
+  }
 
   movies.forEach((movie) => {
     averageRating += parseFloat(movie.rating); //parseFloat(extractRating(movie).split("/")[0].trim());
@@ -242,6 +247,16 @@ const ListSummary = (props: Props) => {
             </Select>
           </div>
         </div>
+      )}
+      {!presetCategory && (
+        <DelayedTextInput
+          onChange={(value: string) => {
+            applyFilter({
+              type: FilterType.FREE_TEXT,
+              value,
+            });
+          }}
+        />
       )}
       {!presetCategory && (
         <div className="filters">

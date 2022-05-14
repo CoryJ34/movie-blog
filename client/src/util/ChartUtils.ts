@@ -28,7 +28,16 @@ export const buildChartData = (movies: Movie[]) => {
   let minYear = 3000;
   let maxYear = 0;
 
-  movies.forEach((m) => {
+  const sortedMovies = [...movies].sort(
+    (a: Movie, b: Movie) => parseInt(a.id, 10) - parseInt(b.id)
+  );
+
+  let runningBinaryDiff = 0;
+  let runningTotalDiff = 0.0;
+  chartData.ratingDiffByOrder = [];
+  chartData.weightedRatingDiffByOrder = [];
+
+  sortedMovies.forEach((m, i) => {
     const decade = m.year.toString().substr(0, 3) + "0";
     const year = m.year;
     const watchDate = m.date;
@@ -42,6 +51,35 @@ export const buildChartData = (movies: Movie[]) => {
 
     const rating = parseFloat(m.rating);
     ratingHist[rating]++;
+
+    // chartData.ratingAggByWatchDate.push({
+    //   date: formatted,
+    //   avg: (
+    //     ratingAggByWatchDate[formatted] / volumeByWatchDate[formatted]
+    //   ).toFixed(2),
+    // });
+
+    if (m.rating) {
+      // const theirRating = parseFloat(m.lbox.rating) * 2;
+      const ratingDiff = parseFloat(m.ratingDiff); //rating - theirRating;
+      if (ratingDiff > 0) {
+        runningBinaryDiff++;
+      } else if (ratingDiff < 0) {
+        runningBinaryDiff--;
+      }
+
+      runningTotalDiff += ratingDiff;
+
+      chartData.ratingDiffByOrder.push({
+        order: i,
+        diff: runningBinaryDiff,
+      });
+
+      chartData.weightedRatingDiffByOrder.push({
+        order: i,
+        diff: runningTotalDiff,
+      });
+    }
 
     if (volumeByYear[year]) {
       volumeByYear[year]++;
@@ -68,9 +106,6 @@ export const buildChartData = (movies: Movie[]) => {
     }
   });
 
-  const sortedMovies = [...movies].sort(
-    (a: Movie, b: Movie) => parseInt(a.id, 10) - parseInt(b.id)
-  );
   const earliestWatched = sortedMovies[0].date;
   const latestWatched = sortedMovies[sortedMovies.length - 1].date;
   let timeCounter = new Date(earliestWatched).getTime() + 1000 * 60 * 60 * 4;

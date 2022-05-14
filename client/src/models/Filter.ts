@@ -9,6 +9,7 @@ export enum FilterType {
   END_DATE,
   YEAR_START,
   YEAR_END,
+  FREE_TEXT,
 }
 
 export interface Filter {
