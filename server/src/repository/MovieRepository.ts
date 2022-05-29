@@ -25,15 +25,39 @@ export const list = async () => {
 
   console.log("Hitting DB for data");
 
-  const scanData: any = await dynamodb.scan({
-    TableName: "MOVIES",
-  });
+  /**
+   * Use paginated strategy to continually retrieve since we've started to hit return size limits
+   */
+  let lastEvaluatedKey = null;
+  let allItems: any[] = [];
 
-  scanData.Items.forEach((item: any) => {
+  while (true) {
+    let resp;
+    if (lastEvaluatedKey == null) {
+      resp = await dynamodb.scan({
+        TableName: "MOVIES",
+      });
+    } else {
+      resp = await dynamodb.scan({
+        TableName: "MOVIES",
+        ExclusiveStartKey: lastEvaluatedKey,
+      });
+    }
+
+    allItems = allItems.concat(resp.Items);
+
+    if (resp["LastEvaluatedKey"]) {
+      lastEvaluatedKey = resp["LastEvaluatedKey"];
+    } else {
+      break;
+    }
+  }
+
+  allItems.forEach((item: any) => {
     if (!item.MyRating) {
       return;
     }
-    // TODO: Fill in the data, also need to modify data handling client-side
+
     let data: any = {
       id: getInt(item.WatchedIndex),
       genres: getStringArray(item.Genres),
@@ -65,6 +89,8 @@ export const list = async () => {
         year: getInt(item.RawYear),
         category: getString(item.Category),
       };
+    } else {
+      console.log("NO RATING: " + item.title);
     }
 
     remoteMovieData.push(data);

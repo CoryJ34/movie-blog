@@ -20,6 +20,9 @@ const Ratings = (props: {
   numBarelyOver: number;
   numOver: number;
   numWayOver: number;
+  totalDiff: string;
+  totalDev: string;
+  diffAvg: string;
 }) => {
   return (
     <div className="ratings-page">
@@ -52,6 +55,18 @@ const Ratings = (props: {
         <div className="item">
           <div className="label">Way Over</div>
           <div className="value">{props.numWayOver}</div>
+        </div>
+        <div className="item">
+          <div className="label">Total Diff</div>
+          <div className="value">{props.totalDiff}</div>
+        </div>
+        <div className="item">
+          <div className="label">Avg Diff</div>
+          <div className="value">{props.diffAvg}</div>
+        </div>
+        <div className="item">
+          <div className="label">Dev</div>
+          <div className="value">{props.totalDev}</div>
         </div>
       </div>
       <Table className="ratings-container">
@@ -102,6 +117,9 @@ const mapStateToProps = (state: any) => {
   let numOver = 0;
   let numWayOver = 0;
 
+  let total = 0.0;
+  let deviation = 0.0;
+
   sortedByRatingDiff.forEach((m: Movie) => {
     const rDiff = parseFloat(m.ratingDiff);
     if (rDiff < -1.5) {
@@ -119,6 +137,9 @@ const mapStateToProps = (state: any) => {
     } else {
       numWayOver++;
     }
+
+    total += rDiff;
+    deviation += Math.pow(rDiff, 2);
   });
 
   return {
@@ -131,6 +152,9 @@ const mapStateToProps = (state: any) => {
     numBarelyOver,
     numOver,
     numWayOver,
+    totalDiff: total.toFixed(2),
+    totalDev: (deviation / sortedByRatingDiff.length).toFixed(2),
+    diffAvg: (total / sortedByRatingDiff.length).toFixed(2),
   };
 };
 

@@ -1,0 +1,39 @@
+.list-pager {
+  width: fit-content;
+  margin: 2rem auto;
+
+  li {
+    display: inline;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    border-radius: 0.25rem;
+    padding-top: 0.25rem;
+    padding-bottom: 0.35rem;
+
+    a {
+      padding-left: 0.75rem;
+      padding-right: 0.75rem;
+      font-size: 1.2rem;
+      cursor: pointer;
+    }
+
+    &:hover {
+      background-color: #777;
+    }
+
+    &.selected {
+      //   background-color: #1943a2;
+      border: solid 2px white;
+      cursor: initial;
+
+      &:hover {
+        background-color: transparent;
+      }
+    }
+
+    &.disabled {
+      color: #aaa;
+      cursor: initial;
+    }
+  }
+}

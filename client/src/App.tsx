@@ -102,6 +102,7 @@ function App(props: Props) {
             <Route path="/movies">
               <MovieList
                 filteredMovies={filteredMovies}
+                filters={filters}
                 openDetail={openDetail}
               />
             </Route>
