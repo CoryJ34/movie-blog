@@ -27,12 +27,19 @@ const makeContentElement = (content: string, index: number) => {
 interface Props {
   movie: Movie;
   category: Category;
+  order: number;
   presetCategory?: Category;
   openDetail: (selectedMovie: Movie) => void;
 }
 
 const MovieInfo = (props: Props) => {
-  const { movie, presetCategory, category, openDetail } = props;
+  const {
+    movie,
+    presetCategory,
+    category,
+    order: movieOrder,
+    openDetail,
+  } = props;
   const categoryInfo = movie;
 
   const onCategoryClick = () => {
@@ -59,6 +66,7 @@ const MovieInfo = (props: Props) => {
   return (
     <div className="movie-info">
       <div className="movie-header">
+        <div className="order">{movieOrder}</div>
         <div className="col">
           <img className="thumb" src={movie.img} onClick={onImgClick} />
         </div>

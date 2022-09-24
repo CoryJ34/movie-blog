@@ -29,11 +29,15 @@ const makeWatchListRanges = (movies: Movie[]) => {
           sortedByReverseID[i + 1].date,
           true
         );
+
+        watchListRanges[watchListRanges.length - 1].lastID =
+          sortedByReverseID.length - 1 - i;
       }
 
       watchListRanges.push({
         title: currMovie.category,
         firstDate: currMovie.date,
+        firstID: sortedByReverseID.length - 1 - i,
       });
 
       currWL = currMovie.category;
@@ -44,6 +48,9 @@ const makeWatchListRanges = (movies: Movie[]) => {
         currMovie.date,
         true
       );
+
+      watchListRanges[watchListRanges.length - 1].lastID =
+        sortedByReverseID.length - 1 - i;
     }
   }
 

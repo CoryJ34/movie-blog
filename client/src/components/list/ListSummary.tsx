@@ -17,7 +17,6 @@ import "./styles/ListSummary.scss";
 import FilterSection from "./FilterSection";
 import { gatherAvailableFilters } from "../../util/FilterUtils";
 import { Category, Remark } from "../../models/Category";
-import { SimpleMap } from "../../common/constants";
 import DelayedTextInput from "../common/DelayedTextInput";
 
 interface Props {
@@ -30,9 +29,27 @@ interface Props {
   hideSort?: boolean;
   earliestMovieYear: number;
   latestMovieYear: number;
+  allDirectors: string[];
+  allCast: string[];
+  allGenres: string[];
   applyFilter: (filter: Filter) => void;
   removeFilter: (filter: Filter) => void;
 }
+
+const YEAR_SELECTIONS: any = {
+  "Year 1": {
+    startDate: new Date("August 30, 2020"),
+    endDate: new Date("August 26, 2021"),
+  },
+  "Year 2": {
+    startDate: new Date("August 27, 2021"),
+    endDate: new Date("August 25, 2022"),
+  },
+  "Year 3": {
+    startDate: new Date("August 26, 2022"),
+    endDate: new Date("August 28, 2023"),
+  },
+};
 
 const FILTERABLES: { type: FilterType; label: string; cls?: string }[] = [
   {
@@ -69,6 +86,9 @@ const ListSummary = (props: Props) => {
     hideSort,
     earliestMovieYear,
     latestMovieYear,
+    allDirectors,
+    allCast,
+    allGenres,
     applyFilter,
     removeFilter,
   } = props;
@@ -76,6 +96,8 @@ const ListSummary = (props: Props) => {
   const [currentRemark, setCurrentRemark] = useState<Remark | undefined>(
     undefined
   );
+
+  const [yearSelection, setYearSelection] = useState("All");
 
   let averageRating = 0.0;
   let allCategories: any = {};
@@ -116,6 +138,9 @@ const ListSummary = (props: Props) => {
   let endDateFilter: Filter | null = null;
   let minYearFilterValue = 1800;
   let maxYearFilterValue = 3000;
+  let directorFilter: any = null;
+  let castFilter: any = null;
+  let genreFilter: any = null;
 
   Object.keys(filters).forEach((fk) => {
     if (filters[fk].type === FilterType.START_DATE) {
@@ -128,6 +153,12 @@ const ListSummary = (props: Props) => {
       minYearFilterValue = parseInt(filters[fk].value, 10);
     } else if (filters[fk].type === FilterType.YEAR_END) {
       maxYearFilterValue = parseInt(filters[fk].value, 10);
+    } else if (filters[fk].type === FilterType.DIRECTOR) {
+      directorFilter = filters[fk];
+    } else if (filters[fk].type === FilterType.CAST) {
+      castFilter = filters[fk];
+    } else if (filters[fk].type === FilterType.GENRE) {
+      genreFilter = filters[fk];
     }
   });
 
@@ -210,6 +241,46 @@ const ListSummary = (props: Props) => {
             >
               Reset
             </a>
+            <span className="year-selector-container">
+              <Select
+                value={yearSelection}
+                label="Year..."
+                onChange={(event: any) => {
+                  const selectedYear = event.target.value;
+                  setYearSelection(selectedYear);
+
+                  if (selectedYear === "All") {
+                    if (startDateFilter) {
+                      removeFilter(startDateFilter);
+                    }
+                    if (endDateFilter) {
+                      removeFilter(endDateFilter);
+                    }
+
+                    return;
+                  }
+
+                  applyFilter({
+                    type: FilterType.START_DATE,
+                    value: YEAR_SELECTIONS[selectedYear].startDate
+                      .getTime()
+                      .toString(),
+                  });
+
+                  applyFilter({
+                    type: FilterType.END_DATE,
+                    value: YEAR_SELECTIONS[selectedYear].endDate
+                      .getTime()
+                      .toString(),
+                  });
+                }}
+              >
+                <MenuItem value={"All"}>All</MenuItem>
+                {Object.keys(YEAR_SELECTIONS).map((ys: string) => (
+                  <MenuItem value={ys}>{ys}</MenuItem>
+                ))}
+              </Select>
+            </span>
           </div>
         </div>
       )}
@@ -258,6 +329,63 @@ const ListSummary = (props: Props) => {
           }}
         />
       )}
+      <span className="year-selector-container">
+        <Select
+          value={directorFilter ? directorFilter.value : ""}
+          label="Director"
+          onChange={(event: any) => {
+            if (directorFilter) {
+              removeFilter(directorFilter);
+            }
+            applyFilter({
+              type: FilterType.DIRECTOR,
+              value: event.target.value.toString(),
+            });
+          }}
+        >
+          {allDirectors.map((v) => (
+            <MenuItem value={v}>{v}</MenuItem>
+          ))}
+        </Select>
+      </span>
+      <span className="year-selector-container">
+        <Select
+          value={castFilter ? castFilter.value : ""}
+          label="Cast"
+          onChange={(event: any) => {
+            if (castFilter) {
+              removeFilter(castFilter);
+            }
+            applyFilter({
+              type: FilterType.CAST,
+              value: event.target.value.toString(),
+            });
+          }}
+        >
+          {allCast.map((v) => (
+            <MenuItem value={v}>{v}</MenuItem>
+          ))}
+        </Select>
+      </span>
+      <span className="year-selector-container">
+        <Select
+          value={genreFilter ? genreFilter.value : ""}
+          label="Genre"
+          onChange={(event: any) => {
+            if (genreFilter) {
+              removeFilter(genreFilter);
+            }
+            applyFilter({
+              type: FilterType.GENRE,
+              value: event.target.value.toString(),
+            });
+          }}
+        >
+          {allGenres.map((v) => (
+            <MenuItem value={v}>{v}</MenuItem>
+          ))}
+        </Select>
+      </span>
       {!presetCategory && (
         <div className="filters">
           {FILTERABLES.map((f) => (
@@ -298,6 +426,9 @@ const mapStateToProps = (state: any) => {
     earliestMovieYear: state.movieStore?.earliestMovieYear,
     latestMovieYear: state.movieStore?.latestMovieYear,
     categories: state.movieStore?.categories,
+    allDirectors: state.movieStore?.allDirectors,
+    allCast: state.movieStore?.allCast,
+    allGenres: state.movieStore?.allGenres,
   };
 };
 

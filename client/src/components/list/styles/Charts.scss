@@ -1,21 +1,23 @@
 .charts {
-    padding: 10px;
+  padding: 10px;
 
-    .chart-title {
-        margin: 10px;
-        font-weight: bold;
-        font-size: 18px;
-    }
+  .chart-title {
+    margin: 10px;
+    font-weight: bold;
+    font-size: 18px;
+  }
 
-    .chart-content {
-        padding-top: 20px;
-        height: 200px;
-    }
+  .chart-content {
+    padding-top: 20px;
+    height: 200px;
+  }
 
-    .recharts-reference-area {
-        text {
-            fill: white;
-            font-size: 12px;
-        }
+  .recharts-reference-area {
+    text {
+      fill: white;
+      font-size: 10px;
+      writing-mode: vertical-lr;
+      opacity: 0.2;
     }
+  }
 }

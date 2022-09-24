@@ -2,6 +2,7 @@ body {
   background-color: #242022;
   color: white;
   font-family: "Noto Sans KR", sans-serif !important;
+  overflow: hidden;
 }
 
 body .recharts-tooltip-label {

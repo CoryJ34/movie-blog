@@ -64,6 +64,26 @@ const DetailDialog = (props: Props) => {
             makeContentElement(content, index)
           )}
         </div>
+        <div className="cast">
+          <div className="crew-title">Director</div>
+          <div className="members">
+            {selectedMovie?.directors?.map((cm) => (
+              <span className="individual">{cm}</span>
+            ))}
+          </div>
+          <div className="crew-title">Cast</div>
+          <div className="members">
+            {selectedMovie?.cast?.map((cm) => (
+              <span className="individual">{cm}</span>
+            ))}
+          </div>
+          <div className="crew-title">Genres</div>
+          <div className="members">
+            {selectedMovie?.genres?.map((cm) => (
+              <span className="individual">{cm}</span>
+            ))}
+          </div>
+        </div>
       </div>
     </Dialog>
   );

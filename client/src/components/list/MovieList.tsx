@@ -54,12 +54,13 @@ function MovieList(props: Props) {
         <ListSummary movies={filteredMovies} presetCategory={presetCategory} />
       )}
       <div className="movie-list">
-        {filteredMovies.slice(offset, offset + PAGE_SIZE).map((m) => (
+        {filteredMovies.slice(offset, offset + PAGE_SIZE).map((m, i) => (
           <MovieInfo
             movie={m}
             category={categoryMap[m.category]}
             presetCategory={presetCategory}
             openDetail={openDetail}
+            order={offset + i + 1}
             key={m.title}
           />
         ))}

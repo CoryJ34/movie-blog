@@ -88,6 +88,10 @@ export default function movieListReducer(state = initialState, action: any) {
       let earliestMovieYear = 3000;
       let latestMovieYear = 1800;
 
+      let castSet = new Set();
+      let directorSet = new Set();
+      let genreSet = new Set();
+
       allMovies.forEach((m: Movie) => {
         if (m.year < earliestMovieYear) {
           earliestMovieYear = m.year;
@@ -95,6 +99,10 @@ export default function movieListReducer(state = initialState, action: any) {
         if (m.year > latestMovieYear) {
           latestMovieYear = m.year;
         }
+
+        m.directors?.forEach((d) => directorSet.add(d));
+        m.cast?.forEach((d) => castSet.add(d));
+        m.genres?.forEach((d) => genreSet.add(d));
       });
 
       return {
@@ -115,6 +123,9 @@ export default function movieListReducer(state = initialState, action: any) {
         categories,
         sortField: state.sortField || "WatchedDate",
         sortDir: state.sortDir || "ASC",
+        allDirectors: Array.from(directorSet).sort(),
+        allCast: Array.from(castSet).sort(),
+        allGenres: Array.from(genreSet).sort(),
       };
     }
     case "movies/applyFilter": {
@@ -153,17 +164,33 @@ export default function movieListReducer(state = initialState, action: any) {
 
       existingFilters[stringifyFilter(filter)] = filter;
 
-      let ret = {
+      let castSet = new Set();
+      let directorSet = new Set();
+      let genreSet = new Set();
+
+      let ret: any = {
         ...state,
         filters: existingFilters,
+        // allDirectors: [],
+        // allCast: [],
+        // allGenres: [],
       };
 
       if (!USE_SERVER_SIDE_FILTERING) {
         const filtered = filterMovies(state.movies || [], existingFilters);
 
+        filtered.forEach((m) => {
+          m.directors?.forEach((d) => directorSet.add(d));
+          m.cast?.forEach((d) => castSet.add(d));
+          m.genres?.forEach((d) => genreSet.add(d));
+        });
+
         ret.filteredMovies = sort(filtered, state.sortField, state.sortDir);
         ret.chartData = buildChartData(filtered);
         ret.watchListRanges = makeWatchListRanges(filtered);
+        // ret.allDirectors = Array.from(directorSet).sort();
+        // ret.allCast = Array.from(castSet).sort();
+        // ret.allGenres = Array.from(genreSet).sort();
       }
 
       return ret;

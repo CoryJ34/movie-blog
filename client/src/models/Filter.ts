@@ -10,6 +10,9 @@ export enum FilterType {
   YEAR_START,
   YEAR_END,
   FREE_TEXT,
+  DIRECTOR,
+  CAST,
+  GENRE,
 }
 
 export interface Filter {

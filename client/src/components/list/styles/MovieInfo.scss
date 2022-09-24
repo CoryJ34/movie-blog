@@ -2,12 +2,21 @@
   padding: 10px;
   padding-top: 8px;
   padding-bottom: 4px;
+  padding-left: 0;
   margin: 10px;
   /* border-bottom: solid 1px #555; */
   // border-left: solid 3px #ccc;
 
   background: #333;
   box-shadow: 1px 2px 3px #000;
+
+  .order {
+    font-size: 60px;
+    // padding: 0 14px 0 6px;
+    width: 120px;
+    text-align: center;
+    color: #777;
+  }
 
   .my-rating {
     display: inline-block;

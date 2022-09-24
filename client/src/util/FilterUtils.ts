@@ -292,6 +292,24 @@ const filterMovies = (movies: Movie[], filters: FilterMap) => {
           }
         }
       }
+
+      if (k === FilterType.DIRECTOR.toString()) {
+        if (!m.directors?.includes(filtersByType[k][0])) {
+          res = false;
+        }
+      }
+
+      if (k === FilterType.CAST.toString()) {
+        if (!m.cast?.includes(filtersByType[k][0])) {
+          res = false;
+        }
+      }
+
+      if (k === FilterType.GENRE.toString()) {
+        if (!m.genres?.includes(filtersByType[k][0])) {
+          res = false;
+        }
+      }
     });
 
     return res;

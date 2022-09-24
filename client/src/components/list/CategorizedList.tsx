@@ -19,12 +19,13 @@ function CategorizedList(props: Props) {
         <ListSummary movies={filteredMovies} presetCategory={presetCategory} />
       )}
       <div className="movie-list">
-        {filteredMovies.map((m) => (
+        {filteredMovies.map((m, i) => (
           <MovieInfo
             movie={m}
             category={presetCategory}
             presetCategory={presetCategory}
             openDetail={openDetail}
+            order={i}
             key={m.title}
           />
         ))}

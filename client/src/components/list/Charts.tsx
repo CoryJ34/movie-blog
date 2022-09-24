@@ -166,6 +166,23 @@ const Charts = (props: Props) => {
           {refArea(9.0, 10.0, "Amazing")}
         </BarChart>
       );
+      // } else if (chartTab === CHARTS.RATING_HISTOGRAM_COMPARISON) {
+      //   return (
+      //     <LineChart data={chartData.ratingsHistogram}>
+      //       <Tooltip />
+      //       <YAxis />
+      //       <XAxis dataKey="rating" />
+      //       <Line dataKey="count" dot={false} />
+      //       {refArea(0, 2.0, "Woah..")}
+      //       {refArea(2.0, 3.0, "Awful")}
+      //       {refArea(3.0, 4.0, "Bad")}
+      //       {refArea(4.0, 5.5, "Average")}
+      //       {refArea(5.5, 6.5, "Decent")}
+      //       {refArea(6.5, 7.5, "Good")}
+      //       {refArea(7.5, 8.5, "Great")}
+      //       {refArea(8.5, 10.0, "Amazing")}
+      //     </LineChart>
+      //   );
     } else if (chartTab === CHARTS.RATING_DIFF_BY_ORDER) {
       return (
         <LineChart data={chartData.ratingDiffByOrder}>
@@ -174,7 +191,7 @@ const Charts = (props: Props) => {
           <XAxis dataKey="order" />
           <Line dataKey="diff" dot={false} />
           {props.watchListRanges.map((range: any) =>
-            refArea(range.firstDate, range.lastDate, range.title)
+            refArea(range.firstID, range.lastID, range.title)
           )}
         </LineChart>
       );
@@ -186,7 +203,7 @@ const Charts = (props: Props) => {
           <XAxis dataKey="order" />
           <Line dataKey="diff" dot={false} />
           {props.watchListRanges.map((range: any) =>
-            refArea(range.firstDate, range.lastDate, range.title)
+            refArea(range.firstID, range.lastID, range.title)
           )}
         </LineChart>
       );

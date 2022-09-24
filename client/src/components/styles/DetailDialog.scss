@@ -118,5 +118,27 @@
       opacity: 0.8;
       margin-bottom: 6px;
     }
+
+    .cast {
+      margin-top: 20px;
+
+      .crew-title {
+        font-weight: bold;
+        margin: 10px 0;
+        font-size: 12px;
+      }
+
+      .members {
+        .individual {
+          border-radius: 3px;
+          border: solid 1px #555;
+          padding: 3px;
+          margin-right: 6px;
+          margin-bottom: 6px;
+          font-size: 11px;
+          display: inline-block;
+        }
+      }
+    }
   }
 }
