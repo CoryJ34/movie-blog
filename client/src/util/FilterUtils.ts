@@ -8,6 +8,7 @@ import {
   FilterType,
 } from "../models/Filter";
 import { Movie } from "../models/Movie";
+import { CollectedFilterData } from "../types/MovieTypes";
 import sort from "./SortUtils";
 
 export const stringifyFilter = (f: Filter): string => {
@@ -444,6 +445,53 @@ export const removeFilter = (
   }
 
   return newFilters;
+};
+
+export const collectFilterInfo = (filters: {
+  [key: string]: Filter;
+}): CollectedFilterData => {
+  let startDateFilterValue = new Date();
+  let endDateFilterValue = new Date();
+  let startDateFilter: Filter | null = null;
+  let endDateFilter: Filter | null = null;
+  let minYearFilterValue = 1800;
+  let maxYearFilterValue = 3000;
+  let directorFilter: Filter | null = null;
+  let castFilter: Filter | null = null;
+  let genreFilter: Filter | null = null;
+
+  // collect filter values
+  Object.keys(filters).forEach((fk) => {
+    if (filters[fk].type === FilterType.START_DATE) {
+      startDateFilterValue = new Date(parseInt(filters[fk].value, 10));
+      startDateFilter = filters[fk];
+    } else if (filters[fk].type === FilterType.END_DATE) {
+      endDateFilterValue = new Date(parseInt(filters[fk].value, 10));
+      endDateFilter = filters[fk];
+    } else if (filters[fk].type === FilterType.YEAR_START) {
+      minYearFilterValue = parseInt(filters[fk].value, 10);
+    } else if (filters[fk].type === FilterType.YEAR_END) {
+      maxYearFilterValue = parseInt(filters[fk].value, 10);
+    } else if (filters[fk].type === FilterType.DIRECTOR) {
+      directorFilter = filters[fk];
+    } else if (filters[fk].type === FilterType.CAST) {
+      castFilter = filters[fk];
+    } else if (filters[fk].type === FilterType.GENRE) {
+      genreFilter = filters[fk];
+    }
+  });
+
+  return {
+    startDateFilterValue,
+    endDateFilterValue,
+    startDateFilter,
+    endDateFilter,
+    minYearFilterValue,
+    maxYearFilterValue,
+    directorFilter,
+    castFilter,
+    genreFilter,
+  };
 };
 
 export default filterMovies;

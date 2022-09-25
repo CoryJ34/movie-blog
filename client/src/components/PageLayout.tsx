@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 import { Category } from "../models/Category";
 import { Filter, FilterType } from "../models/Filter";
 import { Movie } from "../models/Movie";
-import ListSummary from "./list/ListSummary";
+import ListSummary from "./list/summary/ListSummary";
 
 interface Props {
   movies: Movie[];

@@ -1,5 +1,9 @@
 import { Movie } from "../models/Movie";
-import { CollectedMovieData, MovieDataItem } from "../types/MovieTypes";
+import {
+  CollectedMovieData,
+  MovieDataItem,
+  MovieSummaryInfo,
+} from "../types/MovieTypes";
 
 /**
  * Takes raw movieData received from the server and converts it into a list of Movie objects
@@ -84,5 +88,43 @@ export const collectMovieData = (movies: Movie[]): CollectedMovieData => {
     topCast: makeTopList(castMap),
     topDirectors: makeTopList(directorMap),
     topGenres: makeTopList(genreMap),
+  };
+};
+
+/**
+ * Collects things like average rating/runtime and all referenced categories/tags from a list of movies
+ *
+ * @param movies    Current list of movies
+ * @returns         Info object containing all relevant data
+ */
+export const collectSummaryInfo = (movies: Movie[]): MovieSummaryInfo => {
+  let averageRating = 0.0;
+  let allCategories: { [key: string]: string } = {};
+  let allTags: string[] = [];
+  let totalRuntimeMins: number = 0;
+
+  movies.forEach((movie) => {
+    averageRating += parseFloat(movie.rating);
+    allCategories[movie.categoryCls] = movie.category;
+    if (movie.tags) {
+      movie.tags.forEach((tag) => {
+        if (!allTags.includes(tag)) {
+          allTags.push(tag);
+        }
+      });
+    }
+
+    totalRuntimeMins += movie.runtimeMins;
+  });
+
+  averageRating = averageRating / movies.length;
+  const minsPerMovie = Math.round(totalRuntimeMins / movies.length);
+
+  return {
+    averageRating,
+    totalRuntimeMins,
+    minsPerMovie,
+    allCategories,
+    allTags,
   };
 };

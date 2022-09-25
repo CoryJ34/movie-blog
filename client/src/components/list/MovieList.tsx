@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import ListSummary from "../list/ListSummary";
+import ListSummary from "../list/summary/ListSummary";
 import MovieInfo from "../list/MovieInfo";
 import { Movie } from "../../models/Movie";
 import { connect } from "react-redux";

@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { Movie } from "../../models/Movie";
-import ListSummary from "./ListSummary";
+import ListSummary from "./summary/ListSummary";
 import MovieInfo from "./MovieInfo";
 import { Category } from "../../models/Category";
 

@@ -7,7 +7,7 @@ import {
 } from "@material-ui/core";
 import { connect } from "react-redux";
 import { Movie } from "../../models/Movie";
-import ListSummary from "../list/ListSummary";
+import ListSummary from "../list/summary/ListSummary";
 import "./styles/Ratings.scss";
 
 const Ratings = (props: {
