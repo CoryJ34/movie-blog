@@ -357,4 +357,93 @@ const filterMovies = (movies: Movie[], filters: FilterMap) => {
   });
 };
 
+/**
+ * Add a specified filter to the filters from state
+ *
+ * Note: Has to handle replacing some single-value only filters (like start/end date/year)
+ * Other filters can have multiple values, but not those
+ *
+ * @param filter  Filter to add
+ * @param filters Existing filters from state
+ * @returns       New filterMap with filter added
+ */
+export const addFilter = (filter: Filter, filters: FilterMap): FilterMap => {
+  let existingFilters: FilterMap = {};
+  const filtersFromState = filters || {};
+
+  // collect filters from state into a new filter map
+  Object.keys(filtersFromState).forEach((fk) => {
+    // special case to ensure only one start/end date
+    // remove start dates or end dates if a new one is coming in
+    // otherwise just add the filters normally to existingFilters
+    if (filter.type === FilterType.START_DATE) {
+      if (filtersFromState[fk].type !== FilterType.START_DATE) {
+        existingFilters[fk] = filtersFromState[fk];
+      }
+    } else if (filter.type === FilterType.END_DATE) {
+      if (filtersFromState[fk].type !== FilterType.END_DATE) {
+        existingFilters[fk] = filtersFromState[fk];
+      }
+    } else if (filter.type === FilterType.YEAR_START) {
+      if (filtersFromState[fk].type !== FilterType.YEAR_START) {
+        existingFilters[fk] = filtersFromState[fk];
+      }
+    } else if (filter.type === FilterType.YEAR_END) {
+      if (filtersFromState[fk].type !== FilterType.YEAR_END) {
+        existingFilters[fk] = filtersFromState[fk];
+      }
+    } else if (filter.type === FilterType.FREE_TEXT) {
+      if (filtersFromState[fk].type !== FilterType.FREE_TEXT) {
+        existingFilters[fk] = filtersFromState[fk];
+      }
+    } else {
+      existingFilters[fk] = filtersFromState[fk];
+    }
+  });
+
+  // add the newly applied filter to the filter map
+  existingFilters[stringifyFilter(filter)] = filter;
+
+  return existingFilters;
+};
+
+/**
+ * Given a filter and the existing filterMap and movie list, remove the specified filter
+ *
+ * Note: Has to account for resetting some filters to the default value instead of just
+ * blank after removal (like start/end dates)
+ *
+ * @param filter  Filter to remove
+ * @param filters Existing filter map from state
+ * @param movies  Current list of movies from state
+ * @returns       New filter map with the filter removed
+ */
+export const removeFilter = (
+  filter: Filter,
+  filters: FilterMap,
+  movies: Movie[]
+): FilterMap => {
+  let newFilters: FilterMap = {};
+
+  Object.keys(filters || {}).forEach((f) => {
+    // add all but filter to be removed
+    if (stringifyFilter(filter) !== f) {
+      newFilters[f] = filters[f];
+    }
+  });
+
+  // reset start/end date filters to default if those are the ones being removed
+  if (filter.type === FilterType.START_DATE) {
+    const defaultFilters = makeDefaultDateFilters(movies || []);
+    const firstKey = Object.keys(defaultFilters)[0];
+    newFilters[firstKey] = defaultFilters[firstKey];
+  } else if (filter.type === FilterType.END_DATE) {
+    const defaultFilters = makeDefaultDateFilters(movies || []);
+    const secondKey = Object.keys(defaultFilters)[1];
+    newFilters[secondKey] = defaultFilters[secondKey];
+  }
+
+  return newFilters;
+};
+
 export default filterMovies;

@@ -1,4 +1,4 @@
-import { Dialog, MenuItem, Select } from "@material-ui/core";
+import { Dialog, Grid, MenuItem, Select } from "@material-ui/core";
 import { useState } from "react";
 import { connect } from "react-redux";
 import DatePicker from "react-datepicker";
@@ -18,6 +18,7 @@ import FilterSection from "./FilterSection";
 import { gatherAvailableFilters } from "../../util/FilterUtils";
 import { Category, Remark } from "../../models/Category";
 import DelayedTextInput from "../common/DelayedTextInput";
+import { MovieDataItem } from "../../types/MovieTypes";
 
 interface Props {
   movies: Movie[];
@@ -32,6 +33,9 @@ interface Props {
   allDirectors: string[];
   allCast: string[];
   allGenres: string[];
+  topCast: MovieDataItem[];
+  topDirectors: MovieDataItem[];
+  topGenres: MovieDataItem[];
   applyFilter: (filter: Filter) => void;
   removeFilter: (filter: Filter) => void;
 }
@@ -89,6 +93,9 @@ const ListSummary = (props: Props) => {
     allDirectors,
     allCast,
     allGenres,
+    topCast,
+    topDirectors,
+    topGenres,
     applyFilter,
     removeFilter,
   } = props;
@@ -168,6 +175,17 @@ const ListSummary = (props: Props) => {
     availableYears.push(i);
   }
 
+  const renderMovieDataItems = (label: string, data: MovieDataItem[]) => {
+    return (
+      <Grid item>
+        <div className="movie-data-item-header">{label}</div>
+        {(data || []).map((c) => (
+          <div className="movie-data-item">{`${c.name} (${c.count})`}</div>
+        ))}
+      </Grid>
+    );
+  };
+
   return (
     <div className="list-summary">
       <div className="header">
@@ -193,14 +211,21 @@ const ListSummary = (props: Props) => {
           </span>
         )}
       </div>
-      <div>{`Total movies: ${movies.length}`}</div>
-      <div>{`Average rating: ${averageRating.toFixed(2)}`}</div>
-      <div>{`Total runtime: ${Math.floor(totalRuntimeMins / 60)} hr ${
-        totalRuntimeMins % 60
-      } min`}</div>
-      <div>{`Average runtime: ${Math.floor(minsPerMovie / 60)} hr ${
-        minsPerMovie % 60
-      } min`}</div>
+      <Grid container spacing={6}>
+        <Grid item>
+          <div>{`Total movies: ${movies.length}`}</div>
+          <div>{`Average rating: ${averageRating.toFixed(2)}`}</div>
+          <div>{`Total runtime: ${Math.floor(totalRuntimeMins / 60)} hr ${
+            totalRuntimeMins % 60
+          } min`}</div>
+          <div>{`Average runtime: ${Math.floor(minsPerMovie / 60)} hr ${
+            minsPerMovie % 60
+          } min`}</div>
+        </Grid>
+        {renderMovieDataItems("Top Cast", topCast)}
+        {renderMovieDataItems("Top Directors", topDirectors)}
+        {renderMovieDataItems("Top Genres", topGenres)}
+      </Grid>
       {!presetCategory && (
         <div className="filter-section">
           <div className="section-label">Watched Date</div>
@@ -429,6 +454,9 @@ const mapStateToProps = (state: any) => {
     allDirectors: state.movieStore?.allDirectors,
     allCast: state.movieStore?.allCast,
     allGenres: state.movieStore?.allGenres,
+    topCast: state.movieStore?.topCast,
+    topDirectors: state.movieStore?.topDirectors,
+    topGenres: state.movieStore?.topGenres,
   };
 };
 

@@ -1,22 +1,19 @@
 import { Movie } from "../models/Movie";
-import {
-  AvailableFilters,
-  Filter,
-  FilterMap,
-  FilterType,
-} from "../models/Filter";
+import { AvailableFilters, FilterMap } from "../models/Filter";
 import ReferenceMap from "../models/ReferenceMap";
 import { buildChartData } from "../util/ChartUtils";
 import sort from "../util/SortUtils";
 import filterMovies, {
+  addFilter,
   gatherAvailableFilters,
   makeDefaultDateFilters,
-  stringifyFilter,
+  removeFilter,
 } from "../util/FilterUtils";
 import findMovieReferences from "../util/ReferenceUtils";
 import makeWatchListRanges from "../util/WatchListRangeUtils";
 import { Milestone } from "../models/Milestone";
 import { USE_SERVER_SIDE_FILTERING } from "../configuration/Configuration";
+import { collectMovieData, convertToViewModel } from "../util/DataUtils";
 
 interface StateType {
   movies: Movie[] | null;
@@ -59,52 +56,23 @@ export default function movieListReducer(state = initialState, action: any) {
         categories,
       } = action.payload;
 
-      const allMovies = remoteMovieData
-        .filter((m: any) => m.myRating)
-        .map((m: any) => {
-          return {
-            ...m,
-            date: m.watchedDate,
-            rating: m.myRating,
-            runtimeMins: m.runtime,
-            ratingDiff: (m.myRating - m.userRating * 2).toFixed(2),
-          };
-        });
-
+      const allMovies = convertToViewModel(remoteMovieData);
       const filteredMovies = USE_SERVER_SIDE_FILTERING
-        ? remoteFilteredMovieData
-            .filter((m: any) => m.myRating)
-            .map((m: any) => {
-              return {
-                ...m,
-                date: m.watchedDate,
-                rating: m.myRating,
-                runtimeMins: m.runtime,
-                ratingDiff: (m.myRating - m.userRating * 2).toFixed(2),
-              };
-            })
+        ? convertToViewModel(remoteFilteredMovieData)
         : [...allMovies];
 
-      let earliestMovieYear = 3000;
-      let latestMovieYear = 1800;
+      const {
+        earliestMovieYear,
+        latestMovieYear,
+        castSet,
+        directorSet,
+        genreSet,
+        topCast,
+        topDirectors,
+        topGenres,
+      } = collectMovieData(filteredMovies);
 
-      let castSet = new Set();
-      let directorSet = new Set();
-      let genreSet = new Set();
-
-      allMovies.forEach((m: Movie) => {
-        if (m.year < earliestMovieYear) {
-          earliestMovieYear = m.year;
-        }
-        if (m.year > latestMovieYear) {
-          latestMovieYear = m.year;
-        }
-
-        m.directors?.forEach((d) => directorSet.add(d));
-        m.cast?.forEach((d) => castSet.add(d));
-        m.genres?.forEach((d) => genreSet.add(d));
-      });
-
+      // build state
       return {
         ...state,
         bottomNav: content.bottomNav,
@@ -126,47 +94,14 @@ export default function movieListReducer(state = initialState, action: any) {
         allDirectors: Array.from(directorSet).sort(),
         allCast: Array.from(castSet).sort(),
         allGenres: Array.from(genreSet).sort(),
+        topCast,
+        topDirectors,
+        topGenres,
       };
     }
     case "movies/applyFilter": {
       const { filter } = action;
-      let existingFilters: FilterMap = {};
-      const filtersFromState = state.filters || {};
-
-      Object.keys(filtersFromState).forEach((fk) => {
-        // special case to ensure only one start/end date
-        // remove start dates or end dates if a new one is coming in
-        // otherwise just add the filters normally to existingFilters
-        if (filter.type === FilterType.START_DATE) {
-          if (filtersFromState[fk].type !== FilterType.START_DATE) {
-            existingFilters[fk] = filtersFromState[fk];
-          }
-        } else if (filter.type === FilterType.END_DATE) {
-          if (filtersFromState[fk].type !== FilterType.END_DATE) {
-            existingFilters[fk] = filtersFromState[fk];
-          }
-        } else if (filter.type === FilterType.YEAR_START) {
-          if (filtersFromState[fk].type !== FilterType.YEAR_START) {
-            existingFilters[fk] = filtersFromState[fk];
-          }
-        } else if (filter.type === FilterType.YEAR_END) {
-          if (filtersFromState[fk].type !== FilterType.YEAR_END) {
-            existingFilters[fk] = filtersFromState[fk];
-          }
-        } else if (filter.type === FilterType.FREE_TEXT) {
-          if (filtersFromState[fk].type !== FilterType.FREE_TEXT) {
-            existingFilters[fk] = filtersFromState[fk];
-          }
-        } else {
-          existingFilters[fk] = filtersFromState[fk];
-        }
-      });
-
-      existingFilters[stringifyFilter(filter)] = filter;
-
-      let castSet = new Set();
-      let directorSet = new Set();
-      let genreSet = new Set();
+      let existingFilters = addFilter(filter, state.filters || {});
 
       let ret: any = {
         ...state,
@@ -177,13 +112,8 @@ export default function movieListReducer(state = initialState, action: any) {
       };
 
       if (!USE_SERVER_SIDE_FILTERING) {
+        // apply sorting/filtering and collect movie data
         const filtered = filterMovies(state.movies || [], existingFilters);
-
-        filtered.forEach((m) => {
-          m.directors?.forEach((d) => directorSet.add(d));
-          m.cast?.forEach((d) => castSet.add(d));
-          m.genres?.forEach((d) => genreSet.add(d));
-        });
 
         ret.filteredMovies = sort(filtered, state.sortField, state.sortDir);
         ret.chartData = buildChartData(filtered);
@@ -193,31 +123,25 @@ export default function movieListReducer(state = initialState, action: any) {
         // ret.allGenres = Array.from(genreSet).sort();
       }
 
+      const { topCast, topDirectors, topGenres } = collectMovieData(
+        ret.filteredMovies
+      );
+
+      ret.topCast = topCast;
+      ret.topDirectors = topDirectors;
+      ret.topGenres = topGenres;
+
       return ret;
     }
     case "movies/removeFilter": {
       const { filter } = action;
-      let newFilters: any = {};
+      const newFilters = removeFilter(
+        filter,
+        state.filters || {},
+        state.movies || []
+      );
 
-      Object.keys(state.filters || {}).forEach((f) => {
-        // add all but filter to be removed
-        if (stringifyFilter(filter) !== f) {
-          // @ts-ignore
-          newFilters[f] = state.filters[f];
-        }
-      });
-
-      if (filter.type === FilterType.START_DATE) {
-        const defaultFilters = makeDefaultDateFilters(state.movies || []);
-        const firstKey = Object.keys(defaultFilters)[0];
-        newFilters[firstKey] = defaultFilters[firstKey];
-      } else if (filter.type === FilterType.END_DATE) {
-        const defaultFilters = makeDefaultDateFilters(state.movies || []);
-        const secondKey = Object.keys(defaultFilters)[1];
-        newFilters[secondKey] = defaultFilters[secondKey];
-      }
-
-      let ret = {
+      let ret: any = {
         ...state,
         filters: newFilters,
       };
@@ -230,10 +154,20 @@ export default function movieListReducer(state = initialState, action: any) {
         ret.watchListRanges = makeWatchListRanges(filtered);
       }
 
+      const { topCast, topDirectors, topGenres } = collectMovieData(
+        ret.filteredMovies
+      );
+
+      ret.topCast = topCast;
+      ret.topDirectors = topDirectors;
+      ret.topGenres = topGenres;
+
       return ret;
     }
     case "movies/resetFilter": {
       const unfiltered = [...(state.movies || [])];
+
+      const { topCast, topDirectors, topGenres } = collectMovieData(unfiltered);
 
       return {
         ...state,
@@ -241,6 +175,9 @@ export default function movieListReducer(state = initialState, action: any) {
         filteredMovies: unfiltered,
         chartData: buildChartData(unfiltered),
         watchListRanges: makeWatchListRanges(state.movies || []),
+        topCast,
+        topDirectors,
+        topGenres,
       };
     }
     case "movies/sort": {
