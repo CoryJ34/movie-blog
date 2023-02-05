@@ -1,4 +1,5 @@
 import { MenuItem, Select } from "@material-ui/core";
+import { Category } from "../../../models/Category";
 import { Filter, FilterType } from "../../../models/Filter";
 
 interface Props {
@@ -8,6 +9,7 @@ interface Props {
   allCast: string[];
   genreFilter?: Filter;
   allGenres: string[];
+  presetCategory?: Category;
   applyFilter: (filter: Filter) => void;
   removeFilter: (filter: Filter) => void;
 }
@@ -20,69 +22,54 @@ const MovieInfoSelection = (props: Props) => {
     allCast,
     genreFilter,
     allGenres,
+    presetCategory,
     applyFilter,
     removeFilter,
   } = props;
 
+  if (presetCategory) {
+    return null;
+  }
+
+  const renderItemSelect = (
+    selectedFilter: Filter | undefined,
+    allValues: string[],
+    label: string,
+    filterType: FilterType
+  ) => {
+    return (
+      <span className="year-selector-container">
+        <Select
+          value={selectedFilter ? selectedFilter.value : ""}
+          label={label}
+          onChange={(event: any) => {
+            if (selectedFilter) {
+              removeFilter(selectedFilter);
+            }
+            applyFilter({
+              type: filterType,
+              value: event.target.value.toString(),
+            });
+          }}
+        >
+          {allValues.map((v) => (
+            <MenuItem value={v}>{v}</MenuItem>
+          ))}
+        </Select>
+      </span>
+    );
+  };
+
   return (
     <>
-      <span className="year-selector-container">
-        <Select
-          value={directorFilter ? directorFilter.value : ""}
-          label="Director"
-          onChange={(event: any) => {
-            if (directorFilter) {
-              removeFilter(directorFilter);
-            }
-            applyFilter({
-              type: FilterType.DIRECTOR,
-              value: event.target.value.toString(),
-            });
-          }}
-        >
-          {allDirectors.map((v) => (
-            <MenuItem value={v}>{v}</MenuItem>
-          ))}
-        </Select>
-      </span>
-      <span className="year-selector-container">
-        <Select
-          value={castFilter ? castFilter.value : ""}
-          label="Cast"
-          onChange={(event: any) => {
-            if (castFilter) {
-              removeFilter(castFilter);
-            }
-            applyFilter({
-              type: FilterType.CAST,
-              value: event.target.value.toString(),
-            });
-          }}
-        >
-          {allCast.map((v) => (
-            <MenuItem value={v}>{v}</MenuItem>
-          ))}
-        </Select>
-      </span>
-      <span className="year-selector-container">
-        <Select
-          value={genreFilter ? genreFilter.value : ""}
-          label="Genre"
-          onChange={(event: any) => {
-            if (genreFilter) {
-              removeFilter(genreFilter);
-            }
-            applyFilter({
-              type: FilterType.GENRE,
-              value: event.target.value.toString(),
-            });
-          }}
-        >
-          {allGenres.map((v) => (
-            <MenuItem value={v}>{v}</MenuItem>
-          ))}
-        </Select>
-      </span>
+      {renderItemSelect(
+        directorFilter,
+        allDirectors,
+        "Director",
+        FilterType.DIRECTOR
+      )}
+      {renderItemSelect(castFilter, allCast, "Cast", FilterType.CAST)}
+      {renderItemSelect(genreFilter, allGenres, "Genre", FilterType.GENRE)}
     </>
   );
 };

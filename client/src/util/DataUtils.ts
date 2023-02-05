@@ -44,8 +44,21 @@ export const collectMovieData = (movies: Movie[]): CollectedMovieData => {
   let castMap = new Map<string, number>();
   let directorMap = new Map<string, number>();
   let genreMap = new Map<string, number>();
+  let wordCountMap: { [key: string]: number } = {};
 
   movies.forEach((m: Movie) => {
+    let currCount = 0;
+    m.content.forEach((content) => {
+      const split = content.split(" ");
+      split.forEach((s) => {
+        if (s.trim()) {
+          currCount++;
+        }
+      });
+    });
+
+    wordCountMap[m.id] = currCount;
+
     if (m.year < earliestMovieYear) {
       earliestMovieYear = m.year;
     }
@@ -76,7 +89,7 @@ export const collectMovieData = (movies: Movie[]): CollectedMovieData => {
       .sort(comparator)
       .map((i) => ({ name: i[0], count: i[1] }))
       .filter((i) => i.name !== "Show All…")
-      .slice(0, 10);
+      .slice(0, 25);
   };
 
   return {
@@ -88,6 +101,7 @@ export const collectMovieData = (movies: Movie[]): CollectedMovieData => {
     topCast: makeTopList(castMap),
     topDirectors: makeTopList(directorMap),
     topGenres: makeTopList(genreMap),
+    wordCountMap,
   };
 };
 

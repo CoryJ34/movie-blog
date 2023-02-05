@@ -14,6 +14,7 @@ export interface CollectedMovieData {
   topDirectors: MovieDataItem[];
   topCast: MovieDataItem[];
   topGenres: MovieDataItem[];
+  wordCountMap: { [key: string]: number };
 }
 
 export interface MovieSummaryInfo {

@@ -70,6 +70,7 @@ export default function movieListReducer(state = initialState, action: any) {
         topCast,
         topDirectors,
         topGenres,
+        wordCountMap,
       } = collectMovieData(filteredMovies);
 
       // build state
@@ -97,6 +98,7 @@ export default function movieListReducer(state = initialState, action: any) {
         topCast,
         topDirectors,
         topGenres,
+        wordCountMap,
       };
     }
     case "movies/applyFilter": {
@@ -123,13 +125,13 @@ export default function movieListReducer(state = initialState, action: any) {
         // ret.allGenres = Array.from(genreSet).sort();
       }
 
-      const { topCast, topDirectors, topGenres } = collectMovieData(
-        ret.filteredMovies
-      );
+      const { topCast, topDirectors, topGenres, wordCountMap } =
+        collectMovieData(ret.filteredMovies);
 
       ret.topCast = topCast;
       ret.topDirectors = topDirectors;
       ret.topGenres = topGenres;
+      ret.wordCountMap = wordCountMap;
 
       return ret;
     }
@@ -154,20 +156,21 @@ export default function movieListReducer(state = initialState, action: any) {
         ret.watchListRanges = makeWatchListRanges(filtered);
       }
 
-      const { topCast, topDirectors, topGenres } = collectMovieData(
-        ret.filteredMovies
-      );
+      const { topCast, topDirectors, topGenres, wordCountMap } =
+        collectMovieData(ret.filteredMovies);
 
       ret.topCast = topCast;
       ret.topDirectors = topDirectors;
       ret.topGenres = topGenres;
+      ret.wordCountMap = wordCountMap;
 
       return ret;
     }
     case "movies/resetFilter": {
       const unfiltered = [...(state.movies || [])];
 
-      const { topCast, topDirectors, topGenres } = collectMovieData(unfiltered);
+      const { topCast, topDirectors, topGenres, wordCountMap } =
+        collectMovieData(unfiltered);
 
       return {
         ...state,
@@ -178,6 +181,7 @@ export default function movieListReducer(state = initialState, action: any) {
         topCast,
         topDirectors,
         topGenres,
+        wordCountMap,
       };
     }
     case "movies/sort": {

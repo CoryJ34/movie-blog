@@ -2,12 +2,14 @@ import { Filter, FilterType } from "../../../models/Filter";
 import DatePicker from "react-datepicker";
 import { MenuItem, Select } from "@material-ui/core";
 import { useState } from "react";
+import { Category } from "../../../models/Category";
 
 interface Props {
   startDateFilterValue: Date;
   startDateFilter?: Filter;
   endDateFilterValue: Date;
   endDateFilter?: Filter;
+  presetCategory?: Category;
   applyFilter: (filter: Filter) => void;
   removeFilter: (filter: Filter) => void;
 }
@@ -33,54 +35,60 @@ const WatchedDateRange = (props: Props) => {
     startDateFilter,
     endDateFilterValue,
     endDateFilter,
+    presetCategory,
     applyFilter,
     removeFilter,
   } = props;
 
   const [yearSelection, setYearSelection] = useState("All");
 
+  if (presetCategory) {
+    return null;
+  }
+
+  const renderDatePicker = (
+    filterValue: Date,
+    filterType: FilterType,
+    dateFilter: Filter | undefined
+  ) => {
+    return (
+      <>
+        <DatePicker
+          selected={filterValue}
+          onChange={(d: Date) =>
+            applyFilter({
+              type: filterType,
+              value: d.getTime().toString(),
+            })
+          }
+        />
+        <a
+          onClick={() => {
+            if (dateFilter) {
+              removeFilter(dateFilter);
+            }
+          }}
+        >
+          Reset
+        </a>
+      </>
+    );
+  };
+
   return (
     <div className="filter-section">
-      {/* Watched Date range selectors */}
       <div className="section-label">Watched Date</div>
       <div className="date-range-container">
-        <DatePicker
-          selected={startDateFilterValue}
-          onChange={(d: Date) =>
-            applyFilter({
-              type: FilterType.START_DATE,
-              value: d.getTime().toString(),
-            })
-          }
-        />
-        <a
-          onClick={() => {
-            if (startDateFilter) {
-              removeFilter(startDateFilter);
-            }
-          }}
-        >
-          Reset
-        </a>
-        <DatePicker
-          selected={endDateFilterValue}
-          onChange={(d: Date) =>
-            applyFilter({
-              type: FilterType.END_DATE,
-              value: d.getTime().toString(),
-            })
-          }
-        />
-        <a
-          onClick={() => {
-            if (endDateFilter) {
-              removeFilter(endDateFilter);
-            }
-          }}
-        >
-          Reset
-        </a>
-        {/* Year selector (Year 1, Year 2, etc) */}
+        {renderDatePicker(
+          startDateFilterValue,
+          FilterType.START_DATE,
+          startDateFilter
+        )}
+        {renderDatePicker(
+          endDateFilterValue,
+          FilterType.END_DATE,
+          endDateFilter
+        )}
         <span className="year-selector-container">
           <Select
             value={yearSelection}

@@ -113,9 +113,11 @@ export const TEMPinitLBOX = async () => {
   for (const lb of lboxDataCurr) {
     i++;
 
-    // if (i !== 374) {
-    //   continue;
-    // }
+    if (i < 28) {
+      continue;
+    }
+
+    console.log("trying..");
 
     let putReq = new Promise((resolve, rej) => {
       let data: any = {};
@@ -287,7 +289,10 @@ export const migrateFromJson = async (data?: any) => {
         },
         (err: any, respData: any) => {
           if (err) {
+            console.log(err);
             resolve(err.message);
+          } else {
+            console.log("NO ERROR?");
           }
           resolve(respData);
         }

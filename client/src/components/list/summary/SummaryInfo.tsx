@@ -5,10 +5,24 @@ interface Props {
   averageRating: number;
   totalRuntimeMins: number;
   minsPerMovie: number;
+  wordCountMap: { [key: string]: number };
 }
 
 const SummaryInfo = (props: Props) => {
-  const { movies, averageRating, totalRuntimeMins, minsPerMovie } = props;
+  const {
+    movies,
+    averageRating,
+    totalRuntimeMins,
+    minsPerMovie,
+    wordCountMap,
+  } = props;
+
+  let totalWords = 0.0;
+  Object.values(wordCountMap).forEach((currCount) => {
+    totalWords += currCount;
+  });
+
+  const avgWordsPerPost = totalWords / Object.keys(wordCountMap).length;
 
   return (
     <>
@@ -20,6 +34,8 @@ const SummaryInfo = (props: Props) => {
       <div>{`Average runtime: ${Math.floor(minsPerMovie / 60)} hr ${
         minsPerMovie % 60
       } min`}</div>
+      <div>{`Total words: ${totalWords}`}</div>
+      <div>{`Average words per post: ${avgWordsPerPost.toFixed(2)}`}</div>
     </>
   );
 };

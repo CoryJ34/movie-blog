@@ -12,6 +12,7 @@ import {
   Bar,
   ReferenceArea,
   ResponsiveContainer,
+  CartesianGrid,
 } from "recharts";
 import { Movie } from "../../models/Movie";
 import "./styles/Charts.scss";
@@ -29,6 +30,7 @@ const CHARTS = {
   RATING_BY_DECADE: "ratingByDecade",
   VOL_BY_WATCHED_DATE: "volByWatchedDate",
   RATING_BY_WATCHED_DATE: "ratingByWatchedDate",
+  RATING_BY_ORDER: "ratingByOrder",
   CUMULATIVE_BY_WATCHED_DATE: "cumulativeByWatchedDate",
   RATING_HISTOGRAM: "ratingHistogram",
   RATING_DIFF_BY_ORDER: "ratingDiffByOrder",
@@ -137,6 +139,19 @@ const Charts = (props: Props) => {
           )}
         </BarChart>
       );
+    } else if (chartTab === CHARTS.RATING_BY_ORDER) {
+      return (
+        <LineChart data={chartData.ratingByOrder}>
+          <Tooltip />
+          <CartesianGrid horizontalFill={["#333", "#252525"]} />
+          <YAxis domain={[0, 10]} ticks={[0, 3, 6, 10]} />
+          <XAxis dataKey="order" />
+          <Line dataKey="rating" dot={false} fill="#5566AA" />
+          {props.watchListRanges.map((range: any) =>
+            refArea(range.firstDate, range.lastDate, range.title)
+          )}
+        </LineChart>
+      );
     } else if (chartTab === CHARTS.CUMULATIVE_BY_WATCHED_DATE) {
       return (
         <LineChart data={chartData.aggVolumeByWatchDate}>
@@ -228,6 +243,7 @@ const Charts = (props: Props) => {
         <Tab value={CHARTS.VOL_BY_DECADE} label="Volume By Decade" />
         <Tab value={CHARTS.RATING_BY_DECADE} label="Rating By Decade" />
         <Tab value={CHARTS.VOL_BY_WATCHED_DATE} label="Volume By Watch Date" />
+        <Tab value={CHARTS.RATING_BY_ORDER} label="Rating By Order" />
         <Tab
           value={CHARTS.RATING_BY_WATCHED_DATE}
           label="Rating By Watch Date"

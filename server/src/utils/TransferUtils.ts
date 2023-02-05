@@ -2,6 +2,7 @@
 import { Movie } from "../../../client/src/models/Movie";
 // import TitleBreakout from "../../../client/src/models/TitleBreakout";
 
+// handle <br>?
 export const RATING_REGEX = /^[0-9]*\.*[0-9]*\/[0-9]+$/;
 
 export const extractRating = (movie: Movie) => {

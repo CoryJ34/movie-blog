@@ -6,6 +6,14 @@ import {
   TableRow,
 } from "@material-ui/core";
 import { connect } from "react-redux";
+import {
+  Bar,
+  BarChart,
+  ResponsiveContainer,
+  Tooltip,
+  XAxis,
+  YAxis,
+} from "recharts";
 import { Movie } from "../../models/Movie";
 import ListSummary from "../list/summary/ListSummary";
 import "./styles/Ratings.scss";
@@ -67,6 +75,29 @@ const Ratings = (props: {
         <div className="item">
           <div className="label">Dev</div>
           <div className="value">{props.totalDev}</div>
+        </div>
+        <div
+          className="rating-type-distribution"
+          style={{ width: "100%", height: "150px", marginTop: "30px" }}
+        >
+          <ResponsiveContainer width="100%" height="100%">
+            <BarChart
+              data={[
+                { type: "Way Under", count: props.numWayUnder },
+                { type: "Under", count: props.numUnder },
+                { type: "Barely Under", count: props.numBarelyUnder },
+                { type: "Close", count: props.numClose },
+                { type: "Barely Over", count: props.numBarelyOver },
+                { type: "Over", count: props.numOver },
+                { type: "Way Over", count: props.numWayOver },
+              ]}
+            >
+              <Tooltip />
+              <YAxis />
+              <XAxis dataKey="type" />
+              <Bar dataKey="count" fill="#5566AA" />
+            </BarChart>
+          </ResponsiveContainer>
         </div>
       </div>
       <Table className="ratings-container">

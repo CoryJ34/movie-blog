@@ -39,6 +39,7 @@ interface Props {
   topCast: MovieDataItem[];
   topDirectors: MovieDataItem[];
   topGenres: MovieDataItem[];
+  wordCountMap: { [key: string]: number };
   applyFilter: (filter: Filter) => void;
   removeFilter: (filter: Filter) => void;
 }
@@ -60,6 +61,7 @@ const ListSummary = (props: Props) => {
     topCast,
     topDirectors,
     topGenres,
+    wordCountMap,
     applyFilter,
     removeFilter,
   } = props;
@@ -88,6 +90,7 @@ const ListSummary = (props: Props) => {
             averageRating={summaryInfo.averageRating}
             totalRuntimeMins={summaryInfo.totalRuntimeMins}
             minsPerMovie={summaryInfo.minsPerMovie}
+            wordCountMap={wordCountMap}
           />
         </Grid>
         <Grid item>
@@ -100,26 +103,27 @@ const ListSummary = (props: Props) => {
           <TopMovieItems label="Top Genres" data={topGenres} />
         </Grid>
       </Grid>
-      {!presetCategory && (
-        <WatchedDateRange
-          startDateFilterValue={filterInfo.startDateFilterValue}
-          startDateFilter={filterInfo.startDateFilter || undefined}
-          endDateFilterValue={filterInfo.endDateFilterValue}
-          endDateFilter={filterInfo.endDateFilter || undefined}
-          applyFilter={applyFilter}
-          removeFilter={removeFilter}
-        />
-      )}
-      {!presetCategory && (
-        <ReleaseYearRange
-          applyFilter={applyFilter}
-          minYearFilterValue={filterInfo.minYearFilterValue}
-          maxYearFilterValue={filterInfo.maxYearFilterValue}
-          earliestMovieYear={earliestMovieYear}
-          latestMovieYear={latestMovieYear}
-        />
-      )}
-      {!presetCategory && <FreeTextSearch applyFilter={applyFilter} />}
+      <WatchedDateRange
+        startDateFilterValue={filterInfo.startDateFilterValue}
+        startDateFilter={filterInfo.startDateFilter || undefined}
+        endDateFilterValue={filterInfo.endDateFilterValue}
+        endDateFilter={filterInfo.endDateFilter || undefined}
+        presetCategory={presetCategory}
+        applyFilter={applyFilter}
+        removeFilter={removeFilter}
+      />
+      <ReleaseYearRange
+        applyFilter={applyFilter}
+        minYearFilterValue={filterInfo.minYearFilterValue}
+        maxYearFilterValue={filterInfo.maxYearFilterValue}
+        earliestMovieYear={earliestMovieYear}
+        latestMovieYear={latestMovieYear}
+        presetCategory={presetCategory}
+      />
+      <FreeTextSearch
+        applyFilter={applyFilter}
+        presetCategory={presetCategory}
+      />
       <MovieInfoSelection
         allCast={allCast}
         castFilter={filterInfo.castFilter || undefined}
@@ -127,18 +131,18 @@ const ListSummary = (props: Props) => {
         directorFilter={filterInfo.directorFilter || undefined}
         allGenres={allGenres}
         genreFilter={filterInfo.genreFilter || undefined}
+        presetCategory={presetCategory}
         applyFilter={applyFilter}
         removeFilter={removeFilter}
       />
-      {!presetCategory && (
-        <Filters
-          filters={filters}
-          availableFilters={availableFilters}
-          availableFromFiltered={availableFromFiltered}
-          applyFilter={applyFilter}
-          removeFilter={removeFilter}
-        />
-      )}
+      <Filters
+        filters={filters}
+        availableFilters={availableFilters}
+        availableFromFiltered={availableFromFiltered}
+        presetCategory={presetCategory}
+        applyFilter={applyFilter}
+        removeFilter={removeFilter}
+      />
       {!hideSort && <Sort />}
       <Charts />
     </div>
@@ -159,6 +163,7 @@ const mapStateToProps = (state: any) => {
     topCast: state.movieStore?.topCast,
     topDirectors: state.movieStore?.topDirectors,
     topGenres: state.movieStore?.topGenres,
+    wordCountMap: state.movieStore?.wordCountMap,
   };
 };
 

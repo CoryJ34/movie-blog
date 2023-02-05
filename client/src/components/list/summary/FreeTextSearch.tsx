@@ -1,12 +1,18 @@
+import { Category } from "../../../models/Category";
 import { Filter, FilterType } from "../../../models/Filter";
 import DelayedTextInput from "../../common/DelayedTextInput";
 
 interface Props {
+  presetCategory?: Category;
   applyFilter: (filter: Filter) => void;
 }
 
 const FreeTextSearch = (props: Props) => {
-  const { applyFilter } = props;
+  const { presetCategory, applyFilter } = props;
+
+  if (presetCategory) {
+    return null;
+  }
 
   return (
     <DelayedTextInput

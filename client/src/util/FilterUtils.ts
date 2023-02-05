@@ -256,7 +256,7 @@ const filterMovies = (movies: Movie[], filters: FilterMap) => {
       }
 
       if (k === FilterType.FREE_TEXT.toString()) {
-        const val = filtersByType[k][0].toLowerCase();
+        const val = filtersByType[k][0]; //.toLowerCase();
         const parts = val.split(":");
 
         if (val.trim() !== "") {
@@ -270,6 +270,47 @@ const filterMovies = (movies: Movie[], filters: FilterMap) => {
                 .length > 0;
 
             if (!hasAny) {
+              res = false;
+            }
+          } else if (parts[0] === "director") {
+            const hasAny =
+              m.directors.filter(
+                (c) =>
+                  c.toLowerCase().indexOf((parts[1] || "").toLowerCase()) >= 0
+              ).length > 0;
+
+            if (!hasAny) {
+              res = false;
+            }
+          } else if (parts[0] === "actor" || parts[0] === "cast") {
+            const hasAny =
+              m.cast.filter(
+                (c) =>
+                  c.toLowerCase().indexOf((parts[1] || "").toLowerCase()) >= 0
+              ).length > 0;
+
+            if (!hasAny) {
+              res = false;
+            }
+          } else if (parts[0] === "genre") {
+            const hasAny =
+              m.genres.filter(
+                (c) =>
+                  c.toLowerCase().indexOf((parts[1] || "").toLowerCase()) >= 0
+              ).length > 0;
+
+            if (!hasAny) {
+              res = false;
+            }
+          } else if (parts.length > 1) {
+            // @ts-ignore
+            const textToSearch = m[parts[0]];
+
+            if (
+              (textToSearch || "")
+                .toLowerCase()
+                .indexOf((parts[1] || "").toLowerCase()) < 0
+            ) {
               res = false;
             }
           } else {

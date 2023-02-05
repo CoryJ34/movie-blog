@@ -37,9 +37,11 @@ const Migrater = () => {
                   label="Tags"
                   onChange={(event: any) => setTags(event.target.value)}
                 >
-                  {Object.keys(TAGS).map((t: string) => (
-                    <MenuItem value={TAGS[t]}>{TAGS[t]}</MenuItem>
-                  ))}
+                  {Object.keys(TAGS)
+                    .sort()
+                    .map((t: string) => (
+                      <MenuItem value={TAGS[t]}>{TAGS[t]}</MenuItem>
+                    ))}
                 </Select>
               </FormControl>
             </Grid>
@@ -51,9 +53,11 @@ const Migrater = () => {
                   label="Label"
                   onChange={(event: any) => setLabel(event.target.value)}
                 >
-                  {Object.keys(LABELS).map((l: string) => (
-                    <MenuItem value={LABELS[l]}>{LABELS[l]}</MenuItem>
-                  ))}
+                  {Object.keys(LABELS)
+                    .sort()
+                    .map((l: string) => (
+                      <MenuItem value={LABELS[l]}>{LABELS[l]}</MenuItem>
+                    ))}
                 </Select>
               </FormControl>
             </Grid>
@@ -65,9 +69,11 @@ const Migrater = () => {
                   label="Format"
                   onChange={(event: any) => setFormat(event.target.value)}
                 >
-                  {Object.keys(FORMATS).map((f: string) => (
-                    <MenuItem value={FORMATS[f]}>{FORMATS[f]}</MenuItem>
-                  ))}
+                  {Object.keys(FORMATS)
+                    .sort()
+                    .map((f: string) => (
+                      <MenuItem value={FORMATS[f]}>{FORMATS[f]}</MenuItem>
+                    ))}
                 </Select>
               </FormControl>
             </Grid>
@@ -91,6 +97,25 @@ const Migrater = () => {
           }}
         >
           Migrate
+        </Button>
+        <Button
+          style={{ background: "#49A", width: "100%" }}
+          onClick={() => {
+            fetch("/convert", {
+              method: "POST",
+              body: JSON.stringify({
+                content,
+                tags,
+                label,
+                format,
+              }),
+              headers: {
+                "Content-Type": "application/json",
+              },
+            });
+          }}
+        >
+          LBOX Convert
         </Button>
       </div>
     </Grid>

@@ -1,3 +1,4 @@
+import { Category } from "../../../models/Category";
 import { AvailableFilters, Filter, FilterType } from "../../../models/Filter";
 import FilterSection from "../FilterSection";
 
@@ -5,6 +6,7 @@ interface Props {
   filters: { [key: string]: Filter };
   availableFilters: AvailableFilters;
   availableFromFiltered: AvailableFilters;
+  presetCategory?: Category;
   applyFilter: (filter: Filter) => void;
   removeFilter: (filter: Filter) => void;
 }
@@ -38,9 +40,14 @@ const Filters = (props: Props) => {
     filters,
     availableFilters,
     availableFromFiltered,
+    presetCategory,
     applyFilter,
     removeFilter,
   } = props;
+
+  if (presetCategory) {
+    return null;
+  }
 
   return (
     <div className="filters">

@@ -34,6 +34,7 @@ export const buildChartData = (movies: Movie[]) => {
 
   let runningBinaryDiff = 0;
   let runningTotalDiff = 0.0;
+  chartData.ratingByOrder = [];
   chartData.ratingDiffByOrder = [];
   chartData.weightedRatingDiffByOrder = [];
 
@@ -67,6 +68,11 @@ export const buildChartData = (movies: Movie[]) => {
       } else if (ratingDiff < 0) {
         runningBinaryDiff--;
       }
+
+      chartData.ratingByOrder.push({
+        order: i,
+        rating: m.rating,
+      });
 
       runningTotalDiff += ratingDiff;
 
