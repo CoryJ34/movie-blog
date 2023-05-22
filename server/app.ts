@@ -88,7 +88,7 @@ app.post("/migrate", async (req, res: any) => {
   // await TEMPinitLBOX();
   // let setupRes = await setupCategories();
 
-  console.log(resp);
+  // console.log(resp);
 
   res.json(finalJson);
 });
