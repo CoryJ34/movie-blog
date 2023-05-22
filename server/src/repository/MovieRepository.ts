@@ -113,9 +113,9 @@ export const TEMPinitLBOX = async () => {
   for (const lb of lboxDataCurr) {
     i++;
 
-    if (i < 28) {
-      continue;
-    }
+    // if (i < 28) {
+    //   continue;
+    // }
 
     console.log("trying..");
 
