@@ -1,15 +1,15 @@
 import { Movie } from "../models/Movie";
 
 const ratingComparator = (a: Movie, b: Movie): number => {
-  return parseFloat(b.rating) - parseFloat(a.rating);
+  return parseFloat(a.rating) - parseFloat(b.rating);
 };
 
 const yearComparator = (a: Movie, b: Movie): number => {
-  return b.year - a.year;
+  return a.year - b.year;
 };
 
 const watchedDateComparator = (a: Movie, b: Movie): number => {
-  return parseInt(b.id, 10) - parseInt(a.id, 10);
+  return parseInt(a.id, 10) - parseInt(b.id, 10);
 };
 
 const sort = (
@@ -33,7 +33,8 @@ const sort = (
     comparator = watchedDateComparator;
   }
 
-  let sorted = [...(movies || [])].sort(comparator);
+  let sorted = [...(movies || [])];
+  sorted.sort(comparator);
 
   if (sortDir === "DESC") {
     sorted = sorted.reverse();

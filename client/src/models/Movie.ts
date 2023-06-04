@@ -15,17 +15,17 @@ export interface Movie {
   format: string;
   ratingDiff: string;
   runtimeMins: number;
-  lbox: {
-    cast: string[];
-    directors: string[];
-    genres: string[];
-    rating: string;
-    tagline: string;
-    summary: string;
-    runtime: string;
-    poster: string;
-    backdrop: string;
-  };
+  // lbox: {
+  //   cast: string[];
+  //   directors: string[];
+  //   genres: string[];
+  //   rating: string;
+  //   tagline: string;
+  //   summary: string;
+  //   runtime: string;
+  //   poster: string;
+  //   backdrop: string;
+  // };
   userRating: number;
   cast: string[];
   directors: string[];

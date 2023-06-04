@@ -9,6 +9,17 @@ const offsetDate = (date: string, add: boolean) => {
   return dateFormat(newDate, "mmmm d, yyyy");
 };
 
+/**
+ * Break out date ranges for watchlists.  Say there are watchlists: Halloween 2020, Winter 2021, Sequels
+ * in that order.  Given a list of movies in those watchlists, this organizes the watchlists by [start, end] dates
+ * ie:
+ * Halloween 2020 - [August 30, 2020 - October 27, 2020]
+ * Winter 2021 - [January 10, 2021 - February 15, 2021]
+ * Sequels - [March 19, 2021 - May 5, 2021]
+ *
+ * @param movies
+ * @returns
+ */
 const makeWatchListRanges = (movies: Movie[]) => {
   const watchListRanges: any[] = [];
   const sortedByReverseID = [...movies];

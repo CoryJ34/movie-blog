@@ -25,7 +25,7 @@ export interface Category {
   cls: string;
   hexColor: string;
   type: string;
-  subCategories: [SubCategory];
-  remarks: Remarks;
-  rounds: Round[];
+  subCategories?: [SubCategory];
+  remarks?: Remarks;
+  rounds?: Round[];
 }

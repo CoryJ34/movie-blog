@@ -112,9 +112,9 @@ function App(props: Props) {
                 let weekMap: any = {};
                 let customWeekCounts: any = {};
 
-                for (var i = 0; i < c.subCategories.length; i++) {
+                for (var i = 0; i < (c.subCategories || []).length; i++) {
                   const weekNum = i + 1;
-                  const sc = c.subCategories[i];
+                  const sc = (c.subCategories || [])[i];
 
                   weekMap[`Week ${weekNum}`] = sc.name;
                   customWeekCounts[sc.name] = sc.size;
@@ -145,7 +145,7 @@ function App(props: Props) {
                       presetCategory={c}
                       hideSort={true}
                     >
-                      <Bracket bracketData={c.rounds} />
+                      <Bracket bracketData={c.rounds || []} />
                     </PageLayout>
                   </Route>
                 );

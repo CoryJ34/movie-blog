@@ -10,7 +10,14 @@ import {
 import { Movie } from "../models/Movie";
 import { CollectedFilterData } from "../types/MovieTypes";
 import sort from "./SortUtils";
+import FilterHandlerFactory from "./filters/FilterHandlerFactory";
 
+/**
+ * Generate simple encoding of a filter value to use as a key/identifier
+ *
+ * @param f
+ * @returns
+ */
 export const stringifyFilter = (f: Filter): string => {
   return f.type + "_-_" + f.value;
 };
@@ -41,6 +48,12 @@ const pushOrIncrement = (
   return existing;
 };
 
+/**
+ * Provides default start/end date filters by checking movies for earliest/latest release/watched dates
+ *
+ * @param movies
+ * @returns
+ */
 export const makeDefaultDateFilters = (movies: Movie[]): FilterMap => {
   const sortedCopy = sort(movies, "id", null) || [];
 
@@ -86,6 +99,13 @@ export const makeDefaultDateFilters = (movies: Movie[]): FilterMap => {
   };
 };
 
+/**
+ * Given a list of movies and categories, generate the list of filters that can be applied
+ *
+ * @param movies
+ * @param categories
+ * @returns
+ */
 export const gatherAvailableFilters = (
   movies: Movie[],
   categories: Category[]
@@ -175,227 +195,17 @@ const filterMovies = (movies: Movie[], filters: FilterMap) => {
     // each movie needs to match all filter types:
     // (filter type 1 value A || value B ..) && (filter type 2 value A || value B)
     // if filter type has no values => true
-
-    const keys = Object.keys(filters);
-
     let res = true;
 
     Object.keys(filtersByType).forEach((k) => {
-      if (k === FilterType.WATCHLIST.toString()) {
-        if (filtersByType[k].indexOf(m.category) < 0) {
-          res = false;
-        }
-      }
+      const handler = FilterHandlerFactory(k);
 
-      if (k === FilterType.FORMAT.toString()) {
-        if (filtersByType[k].indexOf(m.format) < 0) {
-          res = false;
-        }
-      }
-
-      if (k === FilterType.LABEL.toString()) {
-        if (filtersByType[k].indexOf(m.label) < 0) {
-          res = false;
-        }
-      }
-
-      if (k === FilterType.TAG.toString()) {
-        let hasTag = false;
-
-        (m.tags || []).forEach((tag) => {
-          if (filtersByType[k].indexOf(tag) >= 0) {
-            hasTag = true;
-          }
-        });
-
-        if (!hasTag) {
-          res = false;
-        }
-      }
-
-      if (k === FilterType.YEAR.toString()) {
-        if (filtersByType[k].indexOf(m.year.toString()) < 0) {
-          res = false;
-        }
-      }
-
-      if (k === FilterType.DECADE.toString()) {
-        if (
-          filtersByType[k].indexOf(m.year.toString().substring(0, 3) + "0") < 0
-        ) {
-          res = false;
-        }
-      }
-
-      if (k === FilterType.START_DATE.toString()) {
-        // only one startDate, assume 0 index
-        if (parseInt(filtersByType[k][0]) > new Date(m.date).getTime()) {
-          res = false;
-        }
-      }
-
-      if (k === FilterType.END_DATE.toString()) {
-        // only one endDate, assume 0 index
-        if (parseInt(filtersByType[k][0]) < new Date(m.date).getTime()) {
-          res = false;
-        }
-      }
-
-      if (k === FilterType.YEAR_START.toString()) {
-        // only one yearStart, assume 0 index
-        if (parseInt(filtersByType[k][0], 10) > m.year) {
-          res = false;
-        }
-      }
-
-      if (k === FilterType.YEAR_END.toString()) {
-        // only one yearEnd, assume 0 index
-        if (parseInt(filtersByType[k][0], 10) < m.year) {
-          res = false;
-        }
-      }
-
-      if (k === FilterType.FREE_TEXT.toString()) {
-        const val = filtersByType[k][0]; //.toLowerCase();
-        const parts = val.split(":");
-
-        if (val.trim() !== "") {
-          if (parts[0] === "title") {
-            if (m.title.toLowerCase().indexOf(parts[1]) < 0) {
-              res = false;
-            }
-          } else if (parts[0] === "desc") {
-            const hasAny =
-              m.content.filter((c) => c.toLowerCase().indexOf(parts[1]) >= 0)
-                .length > 0;
-
-            if (!hasAny) {
-              res = false;
-            }
-          } else if (parts[0] === "director") {
-            const hasAny =
-              m.directors.filter(
-                (c) =>
-                  c.toLowerCase().indexOf((parts[1] || "").toLowerCase()) >= 0
-              ).length > 0;
-
-            if (!hasAny) {
-              res = false;
-            }
-          } else if (parts[0] === "actor" || parts[0] === "cast") {
-            const hasAny =
-              m.cast.filter(
-                (c) =>
-                  c.toLowerCase().indexOf((parts[1] || "").toLowerCase()) >= 0
-              ).length > 0;
-
-            if (!hasAny) {
-              res = false;
-            }
-          } else if (parts[0] === "genre") {
-            const hasAny =
-              m.genres.filter(
-                (c) =>
-                  c.toLowerCase().indexOf((parts[1] || "").toLowerCase()) >= 0
-              ).length > 0;
-
-            if (!hasAny) {
-              res = false;
-            }
-          } else if (parts.length > 1) {
-            // @ts-ignore
-            const textToSearch = m[parts[0]];
-
-            if (
-              (textToSearch || "")
-                .toLowerCase()
-                .indexOf((parts[1] || "").toLowerCase()) < 0
-            ) {
-              res = false;
-            }
-          } else {
-            let match = false;
-
-            if (m.title.toLowerCase().indexOf(val) >= 0) {
-              match = true;
-            }
-
-            const hasAny =
-              m.content.filter((c) => c.toLowerCase().indexOf(val) >= 0)
-                .length > 0;
-
-            if (hasAny) {
-              match = true;
-            }
-
-            if (!match) {
-              res = false;
-            }
-          }
-        }
-      }
-
-      if (k === FilterType.DIRECTOR.toString()) {
-        if (!m.directors?.includes(filtersByType[k][0])) {
-          res = false;
-        }
-      }
-
-      if (k === FilterType.CAST.toString()) {
-        if (!m.cast?.includes(filtersByType[k][0])) {
-          res = false;
-        }
-      }
-
-      if (k === FilterType.GENRE.toString()) {
-        if (!m.genres?.includes(filtersByType[k][0])) {
-          res = false;
-        }
+      if (handler && !handler.matches(m, filtersByType[k])) {
+        res = false;
       }
     });
 
     return res;
-
-    // if(filters[FilterType.WATCHLIST]) {
-    //   if(filters[FilterType.WATCHLIST].
-    // }
-
-    // for (let i = 0; i < keys.length; i++) {
-    //   const key = keys[i];
-    //   const f = filters[key];
-
-    //   let res = true;
-
-    //   if (f.type === FilterType.TAG) {
-    //     if ((m.tags || []).indexOf(f.value) < 0) {
-    //       return false;
-    //     }
-    //   } else if (f.type === FilterType.LABEL) {
-    //     if (m.label !== f.value) {
-    //       return false;
-    //     }
-    //   } else if (f.type === FilterType.FORMAT) {
-    //     if (m.format !== f.value) {
-    //       return false;
-    //     }
-    //   } else if (f.type === FilterType.WATCHLIST) {
-    //     if (m.category !== f.value) {
-    //       return false;
-    //     }
-    //   } else if (f.type === FilterType.YEAR) {
-    //     if (m.year.substr(1, 4) !== f.value) {
-    //       return false;
-    //     }
-    //   } else if (f.type === FilterType.DECADE) {
-    //     if (m.year.substr(1, 3) !== f.value.substr(0, 3)) {
-    //       return false;
-    //     }
-    //   } else {
-    //     return false;
-    //   }
-    // }
-
-    // return true;
   });
 };
 
@@ -488,9 +298,7 @@ export const removeFilter = (
   return newFilters;
 };
 
-export const collectFilterInfo = (filters: {
-  [key: string]: Filter;
-}): CollectedFilterData => {
+export const collectFilterInfo = (filters: FilterMap): CollectedFilterData => {
   let startDateFilterValue = new Date();
   let endDateFilterValue = new Date();
   let startDateFilter: Filter | null = null;
