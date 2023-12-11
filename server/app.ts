@@ -84,11 +84,11 @@ app.post("/migrate", async (req, res: any) => {
     finalJson.tags = [req.body.tags];
   }
 
-  // const resp = await migrateFromJson(finalJson);
+  const resp = await migrateFromJson(finalJson);
   // await TEMPinitLBOX();
   // let setupRes = await setupCategories();
 
-  // console.log(resp);
+  console.log(resp);
 
   res.json(finalJson);
 });

@@ -1,8 +1,10 @@
 import { DynamoDB } from "@aws-sdk/client-dynamodb";
+import { S3 } from "@aws-sdk/client-s3";
 
 const DELIM = "#_#_#";
 
 export const dynamodb = new DynamoDB({ region: "us-east-2" });
+export const s3 = new S3({ region: "us-east-2" });
 
 export const getInt = (field: any) => {
   return field ? parseInt(field.N, 10) : -1;

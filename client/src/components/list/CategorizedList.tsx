@@ -25,8 +25,8 @@ function CategorizedList(props: Props) {
             category={presetCategory}
             presetCategory={presetCategory}
             openDetail={openDetail}
-            order={i}
-            key={m.title}
+            order={i + 1}
+            key={`${m.title}-${i}`}
           />
         ))}
       </div>

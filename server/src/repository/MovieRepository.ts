@@ -10,11 +10,23 @@ import {
   getInt,
   getString,
   getStringArray,
+  // s3,
 } from "./RepositoryCommons";
 import mmData from "../data/march-madness-data";
 
 export const list = async () => {
   console.log("Making list call...");
+
+  // const s3Test = await s3.listObjects({
+  //   Bucket: "einymovies.com",
+  // });
+
+  // const s3ImgTest = await s3.getObject({
+  //   Bucket: "einymovies.com",
+  //   Key: "PXL_20230506_212154205.jpg",
+  // });
+
+  // console.log(s3ImgTest.B);
 
   let remoteMovieData: any = [];
 
@@ -113,11 +125,15 @@ export const TEMPinitLBOX = async () => {
   for (const lb of lboxDataCurr) {
     i++;
 
-    // if (i < 28) {
+    // if (i !== 23) {
     //   continue;
     // }
 
-    console.log("trying..");
+    // if (lb.id !== 675 && lb.id !== 676 && lb.id !== 688) {
+    //   continue;
+    // }
+
+    console.log("trying.." + lb.id);
 
     let putReq = new Promise((resolve, rej) => {
       let data: any = {};
