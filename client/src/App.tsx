@@ -98,9 +98,11 @@ function App(props: Props) {
       <Router>
         <div className="page-content">
           <Switch>
-            <Route path="/migrate">
-              <Migrater />
-            </Route>
+            {process.env.NODE_ENV === "development" && (
+              <Route path="/migrate">
+                <Migrater />
+              </Route>
+            )}
             <Route path="/post/edit">
               <PostEditor />
             </Route>
