@@ -21,6 +21,8 @@ import { loadMoviesFromServer } from "./actions/Actions";
 import { USE_SERVER_SIDE_FILTERING } from "./configuration/Configuration";
 import { Category } from "./models/Category";
 import { Box, CircularProgress } from "@material-ui/core";
+import PostEditor from "./components/editor/PostEditor";
+import WatchListEditor from "./components/editor/WatchListEditor";
 
 interface Props {
   movies: Movie[];
@@ -98,6 +100,12 @@ function App(props: Props) {
           <Switch>
             <Route path="/migrate">
               <Migrater />
+            </Route>
+            <Route path="/post/edit">
+              <PostEditor />
+            </Route>
+            <Route path="/watchlist/edit">
+              <WatchListEditor />
             </Route>
             <Route path="/movies">
               <MovieList

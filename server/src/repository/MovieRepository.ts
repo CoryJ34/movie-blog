@@ -3,6 +3,7 @@ import lboxData from "../data/lbox-data";
 import lboxDataCurr from "../data/lbox-data-CURR";
 import TitleBreakout from "../../../client/src/models/TitleBreakout";
 import { extractRating } from "../utils/TransferUtils";
+import Movie from "../../types/Movie";
 import Cache from "./Cache";
 import {
   dynamodb,
@@ -44,16 +45,24 @@ export const list = async () => {
   let allItems: any[] = [];
 
   while (true) {
-    let resp;
+    let resp: any = {};
     if (lastEvaluatedKey == null) {
-      resp = await dynamodb.scan({
-        TableName: "MOVIES",
-      });
+      try {
+        resp = await dynamodb.scan({
+          TableName: "MOVIES",
+        });
+      } catch (e) {
+        console.log(e);
+      }
     } else {
-      resp = await dynamodb.scan({
-        TableName: "MOVIES",
-        ExclusiveStartKey: lastEvaluatedKey,
-      });
+      try {
+        resp = await dynamodb.scan({
+          TableName: "MOVIES",
+          ExclusiveStartKey: lastEvaluatedKey,
+        });
+      } catch (e) {
+        console.log(e);
+      }
     }
 
     allItems = allItems.concat(resp.Items);
@@ -118,11 +127,15 @@ export const list = async () => {
 };
 
 export const TEMPinitLBOX = async () => {
+  return saveMovieList(lboxDataCurr);
+};
+
+export const saveMovieList = async (movieList: Movie[]) => {
   let testResp = [];
   let i = 0;
 
   // for (const lb of lboxData) {
-  for (const lb of lboxDataCurr) {
+  for (const lb of movieList) {
     i++;
 
     // if (i !== 23) {
@@ -179,9 +192,15 @@ export const TEMPinitLBOX = async () => {
         },
         (err: any, respData: any) => {
           if (err) {
-            resolve(err.message);
+            resolve({
+              status: "error",
+              result: err.message,
+            });
           }
-          resolve(respData);
+          resolve({
+            status: "success",
+            result: respData,
+          });
         }
       );
     });
@@ -297,6 +316,8 @@ export const migrateFromJson = async (data?: any) => {
           data.Order = { S: m.order.trim() };
         }
       }
+
+      console.log(data);
 
       dynamodb.putItem(
         {

@@ -9,6 +9,35 @@ import {
 
 import Cache from "./Cache";
 
+export const saveWatchlist = async (watchlistData: any) => {
+  let putReq = new Promise((resolve, rej) => {
+    console.log(watchlistData.Rounds[0]);
+    dynamodb.putItem(
+      {
+        TableName: "CATEGORIES",
+        Item: watchlistData,
+      },
+      (err: any, respData: any) => {
+        if (err) {
+          console.log(err);
+          resolve({
+            status: "error",
+            result: err.message,
+          });
+        }
+        resolve({
+          status: "success",
+          result: respData,
+        });
+      }
+    );
+  });
+
+  const res = await putReq;
+
+  return res;
+};
+
 export const listCategories = async () => {
   let categoryItems: any = [];
 

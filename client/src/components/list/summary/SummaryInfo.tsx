@@ -6,6 +6,8 @@ interface Props {
   totalRuntimeMins: number;
   minsPerMovie: number;
   wordCountMap: { [key: string]: number };
+  earliestDate?: Date;
+  latestDate?: Date;
 }
 
 const SummaryInfo = (props: Props) => {
@@ -15,6 +17,8 @@ const SummaryInfo = (props: Props) => {
     totalRuntimeMins,
     minsPerMovie,
     wordCountMap,
+    earliestDate,
+    latestDate,
   } = props;
 
   let totalWords = 0.0;
@@ -23,6 +27,16 @@ const SummaryInfo = (props: Props) => {
   });
 
   const avgWordsPerPost = totalWords / Object.keys(wordCountMap).length;
+  let days = 0;
+  let timePerDay = "0";
+  let moviesPerDay = "0";
+
+  if (earliestDate && latestDate) {
+    const diffMs = latestDate.getTime() - earliestDate.getTime();
+    days = Math.floor(diffMs / (24 * 60 * 60 * 1000));
+    timePerDay = (totalRuntimeMins / days).toFixed(2);
+    moviesPerDay = (movies.length / days).toFixed(2);
+  }
 
   return (
     <>
@@ -36,6 +50,9 @@ const SummaryInfo = (props: Props) => {
       } min`}</div>
       <div>{`Total words: ${totalWords}`}</div>
       <div>{`Average words per post: ${avgWordsPerPost.toFixed(2)}`}</div>
+      <div>{`Number of days: ${days}`}</div>
+      <div>{`Time per day: ${timePerDay}`}</div>
+      <div>{`Movies per day: ${moviesPerDay}`}</div>
     </>
   );
 };

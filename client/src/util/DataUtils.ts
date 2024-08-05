@@ -116,6 +116,8 @@ export const collectSummaryInfo = (movies: Movie[]): MovieSummaryInfo => {
   let allCategories: { [key: string]: string } = {};
   let allTags: string[] = [];
   let totalRuntimeMins: number = 0;
+  let earliestDate: Date | undefined = undefined;
+  let latestDate: Date | undefined = undefined;
 
   movies.forEach((movie) => {
     averageRating += parseFloat(movie.rating);
@@ -129,6 +131,15 @@ export const collectSummaryInfo = (movies: Movie[]): MovieSummaryInfo => {
     }
 
     totalRuntimeMins += movie.runtimeMins;
+
+    const date = new Date(movie.date);
+
+    if (!earliestDate || earliestDate.getTime() > date.getTime()) {
+      earliestDate = date;
+    }
+    if (!latestDate || latestDate.getTime() < date.getTime()) {
+      latestDate = date;
+    }
   });
 
   averageRating = averageRating / movies.length;
@@ -140,5 +151,7 @@ export const collectSummaryInfo = (movies: Movie[]): MovieSummaryInfo => {
     minsPerMovie,
     allCategories,
     allTags,
+    earliestDate,
+    latestDate,
   };
 };

@@ -7,12 +7,16 @@ import { graphqlHTTP } from "express-graphql";
 import {
   list,
   migrateFromJson,
+  saveMovieList,
   TEMPinitLBOX,
 } from "./src/repository/MovieRepository";
 import Cache, { clearMovieCache } from "./src/repository/Cache";
 import { filterMovies } from "./src/utils/FilterUtils";
 import schema from "./src/graphql/Schema";
-import { listCategories } from "./src/repository/CategoryRepository";
+import {
+  listCategories,
+  saveWatchlist,
+} from "./src/repository/CategoryRepository";
 
 let root = {
   hello: (args: any) => {
@@ -91,6 +95,20 @@ app.post("/migrate", async (req, res: any) => {
   console.log(resp);
 
   res.json(finalJson);
+});
+
+app.post("/saveWatchlist", async (req, res: any) => {
+  const watchlistData = req.body.content;
+  const resp = await saveWatchlist(watchlistData);
+
+  res.json(resp);
+});
+
+app.post("/saveMovies", async (req, res: any) => {
+  const movieList = JSON.parse(req.body.content);
+  const resp = await saveMovieList(movieList);
+
+  res.json(resp);
 });
 
 app.post("/convert", async (req, res: any) => {

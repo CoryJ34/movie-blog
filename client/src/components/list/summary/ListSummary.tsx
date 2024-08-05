@@ -91,6 +91,8 @@ const ListSummary = (props: Props) => {
             totalRuntimeMins={summaryInfo.totalRuntimeMins}
             minsPerMovie={summaryInfo.minsPerMovie}
             wordCountMap={wordCountMap}
+            earliestDate={summaryInfo.earliestDate}
+            latestDate={summaryInfo.latestDate}
           />
         </Grid>
         <Grid item>

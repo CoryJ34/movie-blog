@@ -23,6 +23,8 @@ export interface MovieSummaryInfo {
   allTags: string[];
   totalRuntimeMins: number;
   minsPerMovie: number;
+  earliestDate?: Date;
+  latestDate?: Date;
 }
 
 export interface CollectedFilterData {

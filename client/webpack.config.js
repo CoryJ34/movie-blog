@@ -15,6 +15,7 @@ module.exports = {
   },
   module: {
     rules: [
+      { test: /\.mjs$/, use: "esbuild-loader" },
       {
         test: /\.js$/,
         loader: "babel-loader",
