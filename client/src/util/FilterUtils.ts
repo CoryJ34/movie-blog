@@ -173,7 +173,10 @@ export const gatherAvailableFilters = (
 };
 
 interface FiltersByTag {
-  [key: string]: string[];
+  [key: string]: {
+    values: string[];
+    negation?: boolean;
+  };
 }
 
 const filterMovies = (movies: Movie[], filters: FilterMap) => {
@@ -185,10 +188,13 @@ const filterMovies = (movies: Movie[], filters: FilterMap) => {
     const f = filters[keys[i]];
 
     if (!filtersByType[f.type.toString()]) {
-      filtersByType[f.type.toString()] = [];
+      filtersByType[f.type.toString()] = {
+        values: [],
+        negation: f.negation,
+      };
     }
 
-    filtersByType[f.type.toString()].push(f.value);
+    filtersByType[f.type.toString()].values.push(f.value);
   }
 
   return movies.filter((m: Movie) => {
@@ -199,9 +205,16 @@ const filterMovies = (movies: Movie[], filters: FilterMap) => {
 
     Object.keys(filtersByType).forEach((k) => {
       const handler = FilterHandlerFactory(k);
+      let isNegation = !!filtersByType[k].negation;
 
-      if (handler && !handler.matches(m, filtersByType[k])) {
-        res = false;
+      if (isNegation) {
+        if (handler && handler.matches(m, filtersByType[k].values)) {
+          res = false;
+        }
+      } else {
+        if (handler && !handler.matches(m, filtersByType[k].values)) {
+          res = false;
+        }
       }
     });
 

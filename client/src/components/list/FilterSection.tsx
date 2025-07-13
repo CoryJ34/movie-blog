@@ -30,13 +30,19 @@ const FilterSection = (props: Props) => {
     removeFilter,
   } = props;
 
-  const onClick = (val: string) => {
+  const onClick = (val: string, event: any) => {
     const exists = !!filters[stringifyFilter({ type: filterType, value: val })];
 
     if (exists) {
       removeFilter({ type: filterType, value: val });
     } else {
-      applyFilter({ type: filterType, value: val });
+      // TODO: Add an alternative click that can apply a negation filter
+
+      if (!!event.ctrlKey) {
+        applyFilter({ type: filterType, value: val, negation: true });
+      } else {
+        applyFilter({ type: filterType, value: val, negation: false });
+      }
     }
   };
 
@@ -64,7 +70,7 @@ const FilterSection = (props: Props) => {
               style={{
                 backgroundColor: v.color,
               }}
-              onClick={() => onClick(v.value)}
+              onClick={(event) => onClick(v.value, event)}
             >
               <div className="filter-count">
                 {matching ? matching.count : 0}

@@ -7,47 +7,57 @@ const FreeTextFilter: FilterHandler = {
     const parts = val.split(":");
 
     if (val.trim() !== "") {
-      if (parts[0] === "title") {
+      let isNegation = false;
+      let facet = parts[0];
+
+      if (val.charAt(0) == "-") {
+        isNegation = true;
+        facet = parts[0].substring(1);
+      }
+
+      if (facet === "title") {
         if (m.title.toLowerCase().indexOf(parts[1]) < 0) {
+          return isNegation;
+        } else if (isNegation) {
           return false;
         }
-      } else if (parts[0] === "desc") {
+      } else if (facet === "desc") {
         const hasAny =
           m.content.filter((c) => c.toLowerCase().indexOf(parts[1]) >= 0)
             .length > 0;
 
-        return hasAny;
-      } else if (parts[0] === "director") {
+        return isNegation ? !hasAny : hasAny;
+      } else if (facet === "director") {
         const hasAny =
           m.directors.filter(
             (c) => c.toLowerCase().indexOf((parts[1] || "").toLowerCase()) >= 0
           ).length > 0;
 
-        return hasAny;
-      } else if (parts[0] === "actor" || parts[0] === "cast") {
+        return isNegation ? !hasAny : hasAny;
+      } else if (facet === "actor" || facet === "cast") {
         const hasAny =
           m.cast.filter(
             (c) => c.toLowerCase().indexOf((parts[1] || "").toLowerCase()) >= 0
           ).length > 0;
 
-        return hasAny;
-      } else if (parts[0] === "genre") {
+        return isNegation ? !hasAny : hasAny;
+      } else if (facet === "genre") {
         const hasAny =
           m.genres.filter(
             (c) => c.toLowerCase().indexOf((parts[1] || "").toLowerCase()) >= 0
           ).length > 0;
 
-        return hasAny;
+        return isNegation ? !hasAny : hasAny;
       } else if (parts.length > 1) {
         // @ts-ignore
-        const textToSearch = m[parts[0]];
+        const textToSearch = m[facet];
 
         if (
           (textToSearch || "")
             .toLowerCase()
             .indexOf((parts[1] || "").toLowerCase()) < 0
         ) {
-          return false;
+          return isNegation;
         }
       } else {
         let match = false;
@@ -63,7 +73,7 @@ const FreeTextFilter: FilterHandler = {
           match = true;
         }
 
-        return match;
+        return isNegation ? !match : match;
       }
     }
 

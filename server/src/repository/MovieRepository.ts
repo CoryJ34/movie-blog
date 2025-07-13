@@ -14,6 +14,7 @@ import {
   // s3,
 } from "./RepositoryCommons";
 import mmData from "../data/march-madness-data";
+import { PutRequest } from "@aws-sdk/client-dynamodb";
 
 export const list = async () => {
   console.log("Making list call...");
@@ -134,11 +135,13 @@ export const saveMovieList = async (movieList: Movie[]) => {
   let testResp = [];
   let i = 0;
 
+  let putReqs: PutRequest[] = [];
+
   // for (const lb of lboxData) {
   for (const lb of movieList) {
     i++;
 
-    // if (i !== 23) {
+    // if (lb.id < 810) {
     //   continue;
     // }
 
@@ -185,6 +188,10 @@ export const saveMovieList = async (movieList: Movie[]) => {
         data.Title = { S: lb.title };
       }
 
+      putReqs.push({
+        Item: data,
+      });
+
       dynamodb.putItem(
         {
           TableName: "MOVIES",
@@ -192,11 +199,14 @@ export const saveMovieList = async (movieList: Movie[]) => {
         },
         (err: any, respData: any) => {
           if (err) {
+            console.log("FAILED");
+            console.log(err);
             resolve({
               status: "error",
               result: err.message,
             });
           }
+          console.log("SUCCEEDED");
           resolve({
             status: "success",
             result: respData,
@@ -209,6 +219,30 @@ export const saveMovieList = async (movieList: Movie[]) => {
 
     testResp.push(resp);
   }
+
+  // TODO: Limit of 25?
+  // const resp = await dynamodb.batchWriteItem(
+  //   {
+  //     RequestItems: {
+  //       MOVIES: putReqs.map((pr) => {
+  //         return {
+  //           PutRequest: pr,
+  //         };
+  //       }),
+  //     },
+  //   },
+  //   (err: any, data: any) => {
+  //     if (err) {
+  //       console.log("FAILED");
+  //       console.log(err);
+  //     } else {
+  //       console.log("SUCCESS");
+  //       console.log(data);
+  //     }
+  //   }
+  // );
+
+  // testResp.push(resp);
 
   return testResp;
 };
@@ -238,8 +272,8 @@ export const migrateFromJson = async (data?: any) => {
   for (const lb of lboxDataCurr) {
     i++;
 
-    // if (i > 5) {
-    //   break;
+    // if (lb.id !== 770) {
+    //   continue;
     // }
 
     if (!ids.includes(lb.id)) {

@@ -18,6 +18,7 @@ export enum FilterType {
 export interface Filter {
   type: FilterType;
   value: string;
+  negation?: boolean;
 }
 
 export interface FilterMap {

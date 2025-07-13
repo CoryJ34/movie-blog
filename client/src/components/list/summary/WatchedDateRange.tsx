@@ -31,6 +31,10 @@ const YEAR_SELECTIONS: any = {
     startDate: new Date("August 31, 2023"),
     endDate: new Date("August 28, 2024"),
   },
+  "Year 5": {
+    startDate: new Date("August 29, 2024"),
+    endDate: new Date("August 28, 2025"),
+  },
 };
 
 const WatchedDateRange = (props: Props) => {
