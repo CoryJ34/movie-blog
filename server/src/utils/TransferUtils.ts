@@ -1,5 +1,11 @@
 // import { CATEGORIES } from "../../../client/src/common/constants";
 import { Movie } from "../../../client/src/models/Movie";
+import {
+  getFloat,
+  getInt,
+  getString,
+  getStringArray,
+} from "../repository/RepositoryCommons";
 // import TitleBreakout from "../../../client/src/models/TitleBreakout";
 
 // handle <br>?
@@ -24,6 +30,45 @@ export const extractRating = (movie: Movie) => {
   }
 
   return rating;
+};
+
+export const convertMovieFromDynamoDBtoData = (dynamoDBMovie: any): Movie => {
+  let data: any = {
+    id: getInt(dynamoDBMovie.WatchedIndex),
+    genres: getStringArray(dynamoDBMovie.Genres),
+    summary: getString(dynamoDBMovie.Summary),
+    backdrop: getString(dynamoDBMovie.Backdrop),
+    cast: getStringArray(dynamoDBMovie.Cast),
+    poster: getString(dynamoDBMovie.Poster),
+    userRating: getFloat(dynamoDBMovie.UserRating),
+    runtime: getInt(dynamoDBMovie.Runtime),
+    tagline: getString(dynamoDBMovie.Tagline),
+    directors: getStringArray(dynamoDBMovie.Directors),
+    title: getString(dynamoDBMovie.Title),
+  };
+
+  if (dynamoDBMovie.MyRating) {
+    data = {
+      ...data,
+      myRating: getFloat(dynamoDBMovie.MyRating),
+      label: getString(dynamoDBMovie.Label),
+      img: getString(dynamoDBMovie.IMG),
+      watchedDate: getString(dynamoDBMovie.WatchedDate),
+      content: getStringArray(dynamoDBMovie.Content),
+      categoryCls: getString(dynamoDBMovie.CategoryCls),
+      subCategory: getString(dynamoDBMovie.SubCategory),
+      cast: getStringArray(dynamoDBMovie.Cast),
+      order: getString(dynamoDBMovie.Order),
+      tags: dynamoDBMovie.Tags ? dynamoDBMovie.Tags.SS : [],
+      format: getString(dynamoDBMovie.Format),
+      year: getInt(dynamoDBMovie.RawYear),
+      category: getString(dynamoDBMovie.Category),
+    };
+  } else {
+    console.log("NO RATING: " + dynamoDBMovie.title);
+  }
+
+  return data;
 };
 
 // const extractTitleAndYear = (rawTitle: string): string[] => {

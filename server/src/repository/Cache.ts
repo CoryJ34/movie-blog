@@ -1,4 +1,4 @@
-const Cache = {
+const Cache: { movies: any[] | null; categories: any[] | null } = {
   movies: null,
   categories: null,
 };

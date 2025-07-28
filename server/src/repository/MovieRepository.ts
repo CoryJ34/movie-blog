@@ -2,7 +2,10 @@ import movieData from "../data/test-data";
 import lboxData from "../data/lbox-data";
 import lboxDataCurr from "../data/lbox-data-CURR";
 import TitleBreakout from "../../../client/src/models/TitleBreakout";
-import { extractRating } from "../utils/TransferUtils";
+import {
+  convertMovieFromDynamoDBtoData,
+  extractRating,
+} from "../utils/TransferUtils";
 import Movie from "../../types/Movie";
 import Cache from "./Cache";
 import {
@@ -15,6 +18,10 @@ import {
 } from "./RepositoryCommons";
 import mmData from "../data/march-madness-data";
 import { PutRequest } from "@aws-sdk/client-dynamodb";
+
+function sleep(ms: number) {
+  return new Promise((resolve) => setTimeout(resolve, ms));
+}
 
 export const list = async () => {
   console.log("Making list call...");
@@ -44,11 +51,13 @@ export const list = async () => {
    */
   let lastEvaluatedKey = null;
   let allItems: any[] = [];
+  var count = 1;
 
   while (true) {
     let resp: any = {};
     if (lastEvaluatedKey == null) {
       try {
+        console.log("Making first DB call..");
         resp = await dynamodb.scan({
           TableName: "MOVIES",
         });
@@ -57,6 +66,7 @@ export const list = async () => {
       }
     } else {
       try {
+        console.log(`Making first DB call #${++count}`);
         resp = await dynamodb.scan({
           TableName: "MOVIES",
           ExclusiveStartKey: lastEvaluatedKey,
@@ -67,12 +77,15 @@ export const list = async () => {
     }
 
     allItems = allItems.concat(resp.Items);
+    console.log(`Size of fetched item list=${allItems.length}`);
 
     if (resp["LastEvaluatedKey"]) {
       lastEvaluatedKey = resp["LastEvaluatedKey"];
     } else {
       break;
     }
+
+    await sleep(3000);
   }
 
   allItems.forEach((item: any) => {
@@ -80,42 +93,7 @@ export const list = async () => {
       return;
     }
 
-    let data: any = {
-      id: getInt(item.WatchedIndex),
-      genres: getStringArray(item.Genres),
-      summary: getString(item.Summary),
-      backdrop: getString(item.Backdrop),
-      cast: getStringArray(item.Cast),
-      poster: getString(item.Poster),
-      userRating: getFloat(item.UserRating),
-      runtime: getInt(item.Runtime),
-      tagline: getString(item.Tagline),
-      directors: getStringArray(item.Directors),
-      title: getString(item.Title),
-    };
-
-    if (item.MyRating) {
-      data = {
-        ...data,
-        myRating: getFloat(item.MyRating),
-        label: getString(item.Label),
-        img: getString(item.IMG),
-        watchedDate: getString(item.WatchedDate),
-        content: getStringArray(item.Content),
-        categoryCls: getString(item.CategoryCls),
-        subCategory: getString(item.SubCategory),
-        cast: getStringArray(item.Cast),
-        order: getString(item.Order),
-        tags: item.Tags ? item.Tags.SS : [],
-        format: getString(item.Format),
-        year: getInt(item.RawYear),
-        category: getString(item.Category),
-      };
-    } else {
-      console.log("NO RATING: " + item.title);
-    }
-
-    remoteMovieData.push(data);
+    remoteMovieData.push(convertMovieFromDynamoDBtoData(item));
   });
 
   remoteMovieData.sort((a: any, b: any) => {
@@ -373,6 +351,37 @@ export const migrateFromJson = async (data?: any) => {
     const resp = await putReq;
 
     testResp.push(resp);
+  }
+
+  if (data) {
+    // if provided a single item to migrate, add it to the cache
+    console.log(`Fetching newly added item ${data.id.toString()}`);
+    let getReq = new Promise((resolve, rej) => {
+      dynamodb.getItem(
+        {
+          TableName: "MOVIES",
+          Key: {
+            WatchedIndex: {
+              N: data.id.toString(),
+            },
+          },
+        },
+        (err: any, respData: any) => {
+          if (err) {
+            console.log(err);
+            resolve(err.message);
+          } else {
+            console.log("Adding to cache...");
+            if (Cache.movies != null) {
+              Cache.movies.push(convertMovieFromDynamoDBtoData(respData.Item));
+            }
+          }
+          resolve(respData);
+        }
+      );
+    });
+
+    await getReq;
   }
 
   return testResp;
