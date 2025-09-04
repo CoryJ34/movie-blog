@@ -33,6 +33,7 @@ export const TAGS: any = {
   DRAMA: "Drama",
   COMEDY_HORROR: "Comedy Horror",
   DOCUMENTARY: "Documentary",
+  FOLK_HORROR: "Folk Horror",
 };
 
 export const LABELS: any = {
